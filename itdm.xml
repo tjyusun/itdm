@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext>
+ <book xml:id="MAT202notes">
+ 	<title> Introduction to Discrete Mathematics</title>
+  
+
+    <chapter xml:id="review-mat102">
+		<title>Review of MAT102</title>
+		<introduction>
+		<p>
+			The word <i>discrete</i> in the title of our course means <i>separate</i>; something that is <i>not smooth</i>.
+		</p>
+
+		<p>
+			In the study of discrete mathematics we will typically concern ourselves with discrete objects such as the integers, graphs, finite and countable sets. (In contrast, excluded from this are objects that may vary continuously, such as those ones covered in trigonometry, calculus, and Euclidean geometry.)
+		</p>
+
+		<p>
+			Many of the concepts you learned in your MAT102 course will be useful in MAT202; in this chapter we briefly review some definitions and results, and present some exercises to warm up for the rest of the course! Material in this chapter is based on <i>MAT102H5 Introduction to Mathematical Proofs} by Shay Fuchs.</i>
+		</p>
+		</introduction>
+	<section xml:id="review-mat102-sets">
+		<title> Sets and Functions </title>
+
+		<p> 
+			A <term>set</term> is is just a collection of objects (where the order in which the objects are listed does not matter). The following set operations should be familiar to you: intersection <m>A \cap B</m>, union <m>A \cup B</m>, complement <m>A^c</m>, difference <m>A \ \backslash \ B</m>, and Cartesian product <m>A \times B</m>.
+		</p>
+
+		<p>
+			We also recall that proving the set <m>A</m> is a subset of the set <m>B</m> simply necessitates showing that any element of <m>A</m> can also be found in <m>B</m>.
+		</p>
+		
+		<p>
+			<definition xml:id="def-set-inclusion-equality">
+				<title> Set Inclusion and Equality</title>
+				<statement>
+					<P> If <m>A</m> and <m>B</m> are sets in some universe <m>U</m>, then we say <m>A</m> <term>is a subset of </term> <m>B</m>, denoted by <m>A \subseteq B</m>, if
+					<me> (\forall x \in U)(x \in A \Rightarrow x \in B).</me>
+					We say that <m>A</m> and <m>B</m> are <term>equal</term> as sets if <m>A \subseteq B</m> and <m>B \subseteq A</m> both hold. 
+					This means that <me>(\forall x \in U)(x \in A \Leftrightarrow x \in B).</me>
+					</P>
+				</statement>
+			</definition>
+		</p>
+
+		<p>
+			<exercise>
+				<statement>
+					Define <me> A = \{k \in \mathbb{Z} : k = 6s + 3 \text{ for some } s \in \mathbb{Z}\}
+					\text{ and } B = \{m \in \mathbb{Z} : m = 3t \text{ for some } t \in \mathbb{Z}\}.</me>
+					Prove that <m>A \subseteq B</m> holds.
+				</statement>
+			</exercise>
+		</p>
+	</section>
+
+    </chapter>
+
+<chapter xml:id="section-multiple-paragraph">
+	<title>Endings</title>
+
+	<p>
+		This is a longer sentence that is followed by another sentence.
+		Two sentences, and a second paragraph to follow.
+	</p>
+
+	<p>
+		Let's end with some mathematics.
+	</p>
+
+    <p>
+    	If the two sides of a right triangle have lengths <m>a</m> and <m>b</m> and the hypotenuse has length <m>c</m>, then the equation <me> a^2 + b^2 = c^2</me> will always hold.
+    </p>
+
+
+</chapter>
+ </book>
+</pretext>
