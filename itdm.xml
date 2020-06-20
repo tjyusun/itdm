@@ -16,7 +16,7 @@
 		</p>
 
 		<p>
-			Many of the concepts you learned in your MAT102 course will be useful in MAT202; in this chapter we briefly review some definitions and results, and present some exercises to warm up for the rest of the course! Material in this chapter is based on <i>MAT102H5 Introduction to Mathematical Proofs} by Shay Fuchs.</i>
+			Many of the concepts you learned in your MAT102 course will be useful in MAT202; in this chapter we briefly review some definitions and results, and present some exercises to warm up for the rest of the course! Material in this chapter is based on <em>MAT102H5 Introduction to Mathematical Proofs} by Shay Fuchs.</em>
 		</p>
 		</introduction>
 	<section xml:id="review-mat102-sets">
@@ -30,28 +30,92 @@
 			We also recall that proving the set <m>A</m> is a subset of the set <m>B</m> simply necessitates showing that any element of <m>A</m> can also be found in <m>B</m>.
 		</p>
 		
+		
+		<definition xml:id="def-set-inclusion-equality">
+			<title> Set Inclusion and Equality</title>
+			<statement>
+				<P> If <m>A</m> and <m>B</m> are sets in some universe <m>U</m>, then we say <m>A</m> <term>is a subset of </term> <m>B</m>, denoted by <m>A \subseteq B</m>, if
+				<me> (\forall x \in U)(x \in A \Rightarrow x \in B).</me>
+				We say that <m>A</m> and <m>B</m> are <term>equal</term> as sets if <m>A \subseteq B</m> and <m>B \subseteq A</m> both hold. 
+				This means that <me>(\forall x \in U)(x \in A \Leftrightarrow x \in B).</me>
+				</P>				
+			</statement>
+		</definition>
+		
+		<exercise xml:id="exe-set-inclusion">
+			<statement>
+				<p> Define
+					<me> A = \{k \in \mathbb{Z} : k = 6s + 3 \text{ for some } s \in \mathbb{Z}\}</me> and 
+					<me>B = \{m \in \mathbb{Z} : m = 3t \text{ for some } t \in \mathbb{Z}\}.</me>
+					Prove that <m>A \subseteq B</m> holds.
+				</p>
+			</statement>
+			<hint>
+				<p>
+					Pick an arbitrary element in <m>A</m>, call it <m>x</m>.
+					Then you know <m>x = 6s + 3</m> for some integer <m>s</m>.
+					Can you express <m>x</m> in the form <m>3t</m> where <m>t</m> is an integer?
+				</p>
+			</hint>
+		</exercise>
+	
 		<p>
-			<definition xml:id="def-set-inclusion-equality">
-				<title> Set Inclusion and Equality</title>
-				<statement>
-					<P> If <m>A</m> and <m>B</m> are sets in some universe <m>U</m>, then we say <m>A</m> <term>is a subset of </term> <m>B</m>, denoted by <m>A \subseteq B</m>, if
-					<me> (\forall x \in U)(x \in A \Rightarrow x \in B).</me>
-					We say that <m>A</m> and <m>B</m> are <term>equal</term> as sets if <m>A \subseteq B</m> and <m>B \subseteq A</m> both hold. 
-					This means that <me>(\forall x \in U)(x \in A \Leftrightarrow x \in B).</me>
-					</P>
-				</statement>
-			</definition>
+			We will use the standard notation for these sets of numbers:
+			<md>
+				<mrow> \mathbb{N} \amp = \{1,2,3,\ldots,\}</mrow>
+				<mrow> \mathbb{Z} \amp = \{\ldots,-2,-1,0,1,2,\ldots\}</mrow>
+				<mrow> \mathbb{Q} \amp = \left\{\dfrac{p}{q} : p,q \in \mathbb{Z}\right\}</mrow>
+				<mrow> \mathbb{R} \amp = (-\infty,\infty), \text{ the set of real numbers.}</mrow>
+			</md>
+			Intervals of real numbers are denoted by <m>(a,b), [a,b],</m> and other combinations, with <m>-\infty</m> or <m>\infty</m> as one of both of the endpoints.
 		</p>
 
-		<p>
-			<exercise>
-				<statement>
-					Define <me> A = \{k \in \mathbb{Z} : k = 6s + 3 \text{ for some } s \in \mathbb{Z}\}
-					\text{ and } B = \{m \in \mathbb{Z} : m = 3t \text{ for some } t \in \mathbb{Z}\}.</me>
-					Prove that <m>A \subseteq B</m> holds.
-				</statement>
-			</exercise>
-		</p>
+		<remark>
+			<p>
+				Interval notation is used to refer to sets of real numbers.
+				It is <em>incorrect</em>, for instance, to say that <m>(-2,4) = \{-1,0,1,2,3\}</m>, or that <m>\{0,1,2,3,\ldots\} = [0,\infty)</m>.
+				Watch your notation!
+			</p>
+		</remark>
+
+		<definition xml:id="def-function">
+			<title> Function </title>
+			<p>
+				A <term> function </term> <me>f: A \rightarrow B</me> is a rule that takes elements from its <term>domain</term> <m>A</m> and assigns to each one an element from the <term>codomain</term> <m>B</m>.
+			</p>
+		</definition>
+
+		<definition xml:id="def-injective">
+			<title>	Injective, surjective, bijective </title>
+			<p>
+				A function <m>f: A \rightarrow B</m> is 
+				<ul>
+					<li> <term>injective</term> if for every <m>x_1 \ne x_2 \in A</m>, <m>f(x_1) \ne f(x_2)</m>. </li>
+					<li> <term>surjective</term> if for every <m>y \in B</m>, there exists an <m>x \in A</m> so that <m>f(x) = y</m>. </li>
+					<li> <term>bijective</term> if for every <m>x_1 \ne x_2 \in A</m>, <m>f(x_1) \ne f(x_2)</m>. </li>
+				</ul>
+			</p>
+		</definition>
+
+		<exercise>
+			<statement>
+				<p> For each function, determine if it is injective, surjective, bijective, or none of these:
+				</p>
+				<ol>
+					<li><m>f: \mathbb{R} \rightarrow (0,+\infty)</m>, <m>f(x) = \sqrt{x^2+1}</m></li>
+					<li><m>g: \mathbb{N} \rightarrow \mathbb{N}</m>, <m>g(m) = 3m + 7m^2</m></li>
+					<li><m>h: \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}</m>, <m>h(a,b) = \dfrac{ab(b-1)}{2}</m></li>
+				</ol>
+			</statement>
+			<answer>
+				1. none, 2. injective, 3. surjective.
+			</answer>
+		</exercise>
+
+
+		<definition xml:id="def-composition">
+			<p>Given two functions <m>f: A \rightarrow B</m> and <m>g: B \rightarrow C</m>, the <term>composition</term> <m>g \circ f: A \rightarrow C</m> is defined as the function <me>(g \circ f)(x) = g(f(x))</me> for all <m>x \in A</m>.
+			</p></definition>
 	</section>
 
     </chapter>
