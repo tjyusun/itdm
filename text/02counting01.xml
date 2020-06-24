@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-basic-counting">
+    <title>The Basic Counting Principles</title>
+    <p>
+        In this chapter we will develop techniques for counting!
+        When you hear the word <em>count</em> you probably think about <em>listing</em> or <em>enumerating</em> objects.
+        
+        For example:
+        
+        <ul>
+            <li>How many siblings do you have?</li>
+            <li>Count the number of students enrolled in MAT202 this term.</li>
+            <li>How many buildings are there on the UTM campus?</li>
+        </ul>
+
+    Often we are also interested in counting the number of different ways some given scenario or condition can happen. For instance, consider the following example:
+    </p>
+
+    <example xml:id="eg-counting-kiss-marry-kill">
+        <title>First Counting Example</title>
+            <statement>
+            <p>
+                In the game <em>Kiss, Marry, Kill</em>,<fn>You may know this game by a different name.</fn> you are given three different names, and you must decide which one among them to kiss/marry/kill (with the understanding that you can't kiss the person you marry, and the person you kiss, you can only kiss one time).
+            </p>
+            <p>
+                How many possible ways can you answer?
+            </p>
+            </statement>
+            <solution>
+                <p>
+                Suppose the three names are A, B, and C.
+                We can just list all possibilities to find that there are 6 ways:
+                <table>
+                <tabular>
+                    <row>
+                        <cell right="medium">Kiss</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell right="medium">Marry</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>A</cell>
+                        <cell>C</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell right="medium">Kill</cell>
+                        <cell>C</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>A</cell>
+                    </row>
+                </tabular>
+                </table>
+                </p>
+            </solution>
+    </example>
+
+    <p>
+    Example <xref ref="eg-counting-kiss-marry-kill"/> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?
+    </p>
+
+    <exercise xml:id="ex-counting-coldplay">
+        <title>Concert Seating</title>
+        <statement>
+            <p>
+                Three friends (Mina, Lisa, and Wendy) were able to get three seats together in a row at a Coldplay concert.
+                <ol label="(a)">
+                    <li>How many ways can they choose to sit?</li>
+                    <li>How many ways can they sit if Lisa insists on sitting in the middle?</li>
+                </ol>
+            </p>
+        </statement>
+        <answer><p>6</p></answer>
+    </exercise>
+
+    <p>
+        The techniques we will develop will help us count when the number of possibilities is too large that we can't simply list them all!
+        Here is one example where listing all possibilities seems like a <em>bad idea</em>:
+    </p>
+
+    <example xml:id="eg-counting-dogs">
+        <title>Dog Adoption</title>
+        <statement>
+        <p>
+            There are 10 dogs up for adoption at your local animal shelter.
+            You and 9 other friends decide to adopt one dog each.
+
+            How many ways can you assign dogs to people?
+        </p>
+        
+        <p><alert>Solution (but not really)</alert>
+            If we first fix you and your friends in some specified order (human 1, human 2, human 3, and so on) and name the dogs A, B, C, up to J, then each adoption arrangement corresponds to an <em>ordering of the letters A to J in a list</em>, where the position of each letter corresponds to the person adopting that dog.
+        </p>
+        <p>
+            For example, the arrangement 
+            <table>
+            <tabular>
+                <row>
+                    <cell>J</cell>
+                    <cell>I</cell>
+                    <cell>H</cell>
+                    <cell>G</cell>
+                    <cell>F</cell>
+                    <cell>E</cell>
+                    <cell>D</cell>
+                    <cell>C</cell>
+                    <cell>B</cell>
+                    <cell>A</cell>
+                </row>
+                <row>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                    <cell><m>\uparrow</m></cell>
+                </row>
+                <row>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                    <cell>5</cell>
+                    <cell>6</cell>
+                    <cell>7</cell>
+                    <cell>8</cell>
+                    <cell>9</cell>
+                    <cell>10</cell>
+                </row>
+            </tabular>
+            </table>
+        </p>
+        <p>
+            means that dog J is assigned to human 1, dog I is assigned to human 2, and so on, while the arrangement DJABECIHGF means dog D is assigned to human 1, dog J to human 2, and so on<ellipsis />
+        </p>
+        <p>
+            You should quickly realize there are too many combinations to list!
+        </p>
+        </statement>
+    </example>
+    <p>
+        When possible, it is a good idea to <em>exploit the structure</em> of what we are counting!
+        Two rules for counting will help us get started: the Sum Rule and the Product Rule.
+        Think about the following checkpoint, which is similar to something you might have seen in grade school:
+    </p>
+    <exercise xml:id="ex-counting-socks">
+        <title>Socks!</title>
+        <statement>
+        <p>
+            You plan to move to a new apartment by the end of the month, and while packing your clothes, you note that you have 3 pairs of black socks, 4 pairs of white socks, and 2 pairs of blue socks.
+        </p>
+        <p>
+            How many pairs of socks do you have in total?
+        </p>
+        </statement>
+        <answer><p>9</p></answer>
+        <solution><p>It's not a trick question. <m>3 + 4 + 2 = 9</m>.</p></solution>
+    </exercise>
+    <exercise xml:id="ex-counting-test-papers">
+        <title>Exam Counts</title>
+        <statement>
+        <p>
+            After an in-person term test or final exam, the course instructor and TAs get together and first verify that the number of papers handed in matches the number of students who wrote the test.
+        </p>
+        <p>
+          
+                <image source="figs/test-papers.jpg" width="50%" />
+            <!--    <caption> So many papers to grade<ellipsis /></caption>
+            -->
+            Can you think of an efficient way to count the papers?            
+        </p>
+        <hint>
+            <p>You wouldn't just count them one by one<ellipsis /></p>
+        </hint>
+    </statement>
+    </exercise>
+    <p>
+        In Checkpoint <xref ref="ex-counting-socks"/> the problem of counting the total number of pairs of socks had a straightforward solution. 
+        Since the socks were already separated by colour, and you knew how many of each colour you had, you just had to add the number of pairs for each colour to get the total.
+    </p>
+    <p>
+        For the test papers in Checkpoint <xref ref="ex-counting-test-papers" /> there are certainly multiple ways to do this.
+        One method that TAs use is to form piles of ten, and count how many piles are produced.
+        This is actually more similar to the socks example than you might think.
+        Separating the huge pile of papers into groups of 10 has the same goal as separating socks by colour: one just has to add the numbers in each pile together in the end (which, if all piles have 10, is an easy calculation). 
+    </p>
+    <p>
+        This is the <term>Sum Rule</term> in action.
+    </p>
+    <definition xml:id="def-partition">
+        <title>Partition</title>
+        <statement>
+            <p>
+                Let <m>A</m> be a finite set.
+                We say that <m>B_1,B_2,\ldots,B_m</m> form a <term>partition</term> of <m>A</m> if
+                <ul>
+                    <li><m>B_i \cap B_j = \varnothing</m> for all <m>i \ne j</m>, and</li>
+                    <li><m>B_1 \cup B_2 \cup \cdots \cup B_m = A</m>.</li>
+                </ul>
+            </p>
+        </statement>
+    </definition>
+
+    <principle xml:id="prin-sum-rule">
+        <title>Sum Rule</title>
+        <statement>
+            <p>
+                If <m>B_1,B_2,\ldots,B_m</m> form a partition of <m>A</m>, then
+                <me> |A| = \sum_{i=1}^n |B_i| = |B_1| + |B_2| + \cdots + |B_m|</me>.
+            </p>
+        </statement>
+    </principle>
+
+    <p>
+        The <xref text="custom" ref="prin-sum-rule">Sum Rule</xref> essentially tells us that in order to count a set of objects, we can break these objects up into disjoint cases, count each case separately, then add them all together in the end.
+        Sounds reasonable, right?
+    </p>
+    <exercise xml:id="ex-counting-twitter">
+        <title>Twitter Followers</title>
+        <statement>
+            <p>
+                TJ is an avid Twitter user, where he manages the following accounts:
+                <ul> 
+                    <li>A <url href="https://twitter.com/tjyusun">personal account</url> with 200 followers;</li>
+                    <li>A K-pop stan Twitter account with 2500 followers;</li>
+                    <li>A third account with 12000 followers that tweets a picture of a puppy every hour.</li>
+                </ul>
+                Can you determine the total number of unique followers TJ has?
+                Explain whether or not the <xref text="custom" ref="prin-sum-rule">Sum Rule</xref> is applicable to this problem.
+            </p>
+        </statement>
+        <hint>
+            <p>To apply the Sum Rule, one needs to have a partition.</p>
+        </hint>
+        <solution>
+            <p>
+                If all followers among TJ's three accounts are different people, then we could just add <m>200 + 2500 + 12000 = 14700</m> to get the total number of unique followers.
+                However this is very possibly not the case!
+            </p>
+            <p>
+                For instance, if we knew that a hundred of TJ's followers on his personal account also followed the puppy auto-tweeter, then the number of unique followers among all three accounts is no more than 14600. 
+                This is lower if there is more overlap.
+            </p>
+            <p>
+                The <xref text="custom" ref="prin-sum-rule">Sum Rule</xref>does not apply becase the three sets of followers do not form a <xref text="custom" ref="def-partition">partition</xref> of the set we want to count (the first condition fails).
+            </p>
+        </solution>
+    </exercise>
+
+    <principle xml:id="prin-prod-rule">
+    <title>Product Rule</title>
+        <statement>
+            <p>
+                If a certain operation takes <m>k</m> steps to accomplish, and if there are:
+                <ul>
+                    <li><m>r_1</m> ways of performing step 1,</li>
+                    <li><m>r_2</m> ways of performing step 2 (regardless of how step 1 was performed),</li>
+                    <li><m>r_3</m> ways of performing step 3 (regardless of how step 2 was performed),</li>
+                    <li>and so on<ellipsis/></li>
+                </ul>
+                Then, there are <me>\prod_{i=1}^k r_i = r_1 \cdot r_2 \cdot \ldots \cdot r_k</me> ways of performing steps 1 to <m>k</m>.
+            </p>
+        </statement>
+    </principle>
+
+
+
+<solutions inline="solution">
+    <title>Solutions to Checkpoints</title>
+</solutions>
+</section>

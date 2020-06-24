@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-review-mat102">
+<title>Review of MAT102</title>
+	<introduction>
+        <p>
+            The word <em>discrete</em> in the title of our course means <em>separate</em>; something that is <em>not smooth</em>.
+        </p>
+        <p>
+            In the study of discrete mathematics we will typically concern ourselves with discrete objects such as the integers, graphs, finite and countable sets. (In contrast, excluded from this are objects that may vary continuously, such as those ones covered in trigonometry, calculus, and Euclidean geometry.)
+        </p>
+        <p>
+            Many of the concepts you learned in your MAT102 course will be useful in MAT202; in this chapter we briefly review some definitions and results, and present some exercises to warm up for the rest of the course! Material in this chapter is based on <em>MAT102H5 Introduction to Mathematical Proofs</em> by <em>Shay Fuchs.</em>
+        </p>
+    </introduction>
+
+
+<xi:include href="./01review01.xml" />
+<xi:include href="./01review02.xml" />
+<xi:include href="./01review03.xml" />
+<xi:include href="./01review04.xml" />
+
+<!--
+<section>
+<title>More Integration Examples</title>
+<introduction />
+
+
+<xi:include href="../problems/prob_s1.13.xml" />
+
+</section>
+-->
+
+</chapter>

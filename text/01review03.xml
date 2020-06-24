@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-integers-divisibility">
+<title>Integers and Divisibility</title>
+
+<p> For completeness we restate here the definition of divisibility and the Division Algorithm.</p>
+
+<definition xml:id="def-divisibility">
+    <statement>
+        <p>
+            Let <m>a \in \mathbb{Z}</m> and <m>b \in \mathbb{Z} \setminus \{0\}</m>.
+            We say that <m>a</m> <term> is divisible by</term> <m>b</m>, or <m>b</m> <term>divides</term> <m>a</m>, denoted by <me>b \mid a</me>, if there exists <m>m \in \mathbb{Z}</m> such that <m>a = mb</m>.
+        </p>
+        <p>
+            If <m>b</m> is not divisible by <m>a</m>, then we write <m>b \nmid a</m>.
+        </p>
+        <p>
+            We say that the natural number <m>p</m> is a <term>prime number</term> if the only natural numbers that divide <m>p</m> are <m>1</m> and <m>p</m>.
+        </p>
+    </statement>
+</definition>
+
+<theorem xml:id="thm-division-algorithm">
+    <statement>
+        <p>
+            Let <m>a,b \in \mathbb{N}</m>.
+            Then there exist unique <m>q</m> and <m>r</m> that satisfy all of the following:
+            <me> a = qb + r, q \geq 0, 0 \leq r \lt b</me>.
+        </p>
+    </statement>
+</theorem>
+
+<exercise xml:id="exe-review-division-algorithm">
+    <statement>
+        <p>
+            Find <m>q</m> and <m>r</m> that satisfy the Division Algorithm for the following pairs of numbers <m>a</m> and <m>b</m>:
+            <ol label="(a)">
+                <li><m>a = 140, b = 22</m></li>
+                <li><m>a = 22, b = 140</m></li>
+                <li><m>a = 735, b = 21</m></li>
+            </ol>
+        </p>
+    </statement>
+</exercise>
+
+<definition xml:id="def-gcd">
+    <title>GCD</title>
+    <statement>
+        <p>
+            Given integers <m>a</m> and <m>b</m> not both zero, their <term>greatest common divisor</term>, denoted by <me>\gcd(a,b)</me>, is the largest integer that divides both numbers.
+        </p>
+        <p>
+            We say that <m>a</m> and <m>b</m> are <term>relatively prime</term> if <m>\gcd(a,b) = 1</m>.
+        </p>
+    </statement>
+</definition>
+
+<p> There are a number of ways to determine the GCD of two numbers <m>a</m> and <m>b</m>:
+<ul>
+    <li>Listing all factors of <m>a</m> and <m>b</m>, then finding the largest one they have in common;</li>
+    <li>Writing out the prime factorizations of <m>a</m> and <m>b</m>, then collecting all common prime factors;</li>
+    <li>The Euclidean Algorithm (repeated division).</li>
+</ul>
+</p>
+
+<exercise xml:id="exe-review-gcd">
+    <statement>
+        <p>
+            Apply the three techniques above to compute <m>\gcd(220,360)</m>.
+        </p>
+    </statement>
+    <answer>
+        <p>The GCD is 20.</p>
+    </answer>
+    <solution>
+        <p>The Euclidean Algorithm performs the following steps:
+        <md>
+            <mrow> 360 \amp = 1 \cdot 220 + 140 </mrow>
+            <mrow> 220 \amp = 1 \cdot 140 + 80 </mrow>
+            <mrow> 140 \amp = 1 \cdot 80 + 60 </mrow>
+            <mrow> 80 \amp = 1 \cdot 60 + 20 </mrow>
+            <mrow> 60 \amp = 3 \cdot 20 + 0 </mrow>
+        </md>
+        The GCD is the divisor in the last line (where the remainder becomes zero).
+        </p>
+    </solution>
+
+</exercise>
+
+<theorem xml:id="thm-bezout">
+    <title>Bezout's Identity</title>
+    <statement>
+        <p>
+            Let <m>a,b \in \mathbb{Z}</m>, not both zero.
+            Then there exist <m>m,n \in \mathbb{Z}</m> such that <m>am + bn = \gcd(a,b)</m>.
+        </p>
+    </statement>
+</theorem>
+
+<exercise xml:id="exe-review-bezout">
+    <statement>
+        <p>
+            Find a pair of integers <m>x</m> and <m>y</m> such that <me>13x + 11y = 2</me>.
+
+            Then explain why the equation <m>13x + 11y = 2</m> has infinitely many solutions.
+            Can you characterize all such solutions?
+        </p>
+    </statement>
+</exercise>
+
+<exercise xml:id="exe-review-bezout-no-solution">
+    <statement>
+        <p>
+            Prove that the equation <me>14x - 35y = 9</me> has no integer solutions.
+        </p>
+    </statement>
+</exercise>
+
+<exercise xml:id="exe-review-bezout-gcd">
+    <statement>
+        <p>
+            Let <m>a, b, d, \in \mathbb{N}</m>.
+            Prove that <m>ax + by = d</m> has integer solutions <m>x</m> and <m>y</m> if and only if <m>\gcd(a,b) \mid d</m>.
+        </p>
+    </statement>
+</exercise>
+
+<lemma xml:id="lem-euclid">
+    <title>Euclid's Lemma</title>
+    <statement>
+        <p>
+            If <m>p</m> is prime, and <m>a</m> and <m>b</m> are integers such that <m>p \mid ab</m>, then either <m>p \mid a</m> or <m>p \mid b</m> (or both).
+        </p>
+    </statement>
+</lemma>
+
+<exercise xml:id="exe-review-euclid-proof">
+    <statement>
+        <p>
+            Prove Lemma <xref ref="lem-euclid" /> using Theorem <xref ref="thm-bezout" />.
+        </p>
+    </statement>
+</exercise>
+
+<exercise xml:id="exe-review-bezout-euclid">
+    <statement>
+        <p>
+            Let <m>m,a,b \in \mathbb{N}</m>.
+            Using Theorem <xref ref="thm-bezout" />, prove that if <m>m \mid ab</m> and <m>\gcd(a,m) = 1</m>, then <m>m \mid b</m>.
+        </p>
+    </statement>
+</exercise>
+
+</section>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-reading-writing-proofs">
+<title>Reading and Writing Proofs</title>
+
+<p>Proofs are a form of communication. They are used to argue (that a claim holds true); and sometimes explain (<em>why</em> a claim is true).</p>
+
+<activity>
+    <p>
+    When writing proofs, one needs to be <em>clear</em>, <em>complete</em>, and <em>correct</em>.
+    Comment on the three proofs below of the statement
+    <me>\text{Let } m \in \mathbb{Z}\text{. Then }m\text{ is even if and only if } m^3 \text{\ is even}</me>.
+    Which one(s) is/are
+    <ul cols="2">
+        <li>convincing?</li>
+        <li>missing steps?</li>
+        <li>easiest to read?</li>
+        <li>correct?</li>
+    </ul>
+    </p>            
+    
+    <p>
+        <alert>Proof 1</alert>
+        (<m>\Rightarrow</m>)
+        <m>m = 2k \Rightarrow m^3 = 8k^3 = 2(4k^3)</m>, so <m>m^3</m> is even.
+    </p>
+    <p>
+        (<m>\Leftarrow</m>)
+        By contradiction. Assume <m>m^3</m> is even but <m>m</m> is odd.
+        Then <m>m = 2k + 1 \Rightarrow m^3 =(2k+1)^3 = 8k^3 + 12k^2 + 6k + 1</m>, which is odd.
+    </p>
+    <p>
+        Contradiction, so <m>m</m> must be even.
+        So <m>m</m> even <m>\Leftrightarrow</m> <m>m^3</m> even.
+    </p>
+    
+    <p>
+        <alert>Proof 2</alert>
+        <me>m \text{ even } \Leftrightarrow m = 2k \Leftrightarrow m^3 = 8k^3 \Leftrightarrow  m^3 = 2(4k^3) \Leftrightarrow  m^3 \text{ even}</me>, hence proven.
+    </p>
+    
+    <p>
+        <alert>Proof 3</alert>
+        We want to prove that <me>m \text{ is even if and only if } m^3 \text{ is even}</me>.
+    </p>
+    <p>
+        (<m>\Rightarrow</m>) First, we show <m>m</m> even <m>\Rightarrow</m> <m>m^3</m> even.
+
+        If <m>m</m> is even, then we can write <m>m = 2k</m> for some <m>k \in \mathbb{Z}</m>.
+        Then,
+        <md>
+            <mrow>m^3 \amp = (2k)^3</mrow>
+            <mrow>\amp = 8k^3</mrow>
+            <mrow>\amp = 2(4k^3)</mrow>
+        </md>.
+        Since <m>k \in \mathbb{Z}</m>, then <m>4k^3 \in \mathbb{Z}</m> as well, and so <m>m^3</m> is even.
+    </p>
+    <p>
+        (<m>\Leftarrow</m>)
+        Next, we prove that <m>m^3</m> even <m>\Rightarrow</m> <m>m</m> even.
+        To do this we prove the contrapositive: If <m>m</m> is odd, then <m>m^3</m> is odd.
+    </p>
+    <p>
+        If <m>m</m> is odd, then there is a <m>k \in \mathbb{Z}</m> such that <m>m = 2k + 1</m>.
+        Then
+        <md>
+            <mrow>m^3 \amp = (2k+1)^3</mrow>
+            <mrow>\amp = 8k^3 + 12k^2 + 6k + 1</mrow>
+            <mrow>\amp = 2(4k^3 + 6k^2 + 3k) + 1</mrow>
+        </md>.
+        Since <m>k \in \mathbb{Z}</m>, then <m>4k^3 + 6k^2 + 3k \in \mathbb{Z}</m> as well.
+        Therefore <m>m^3</m> is odd.
+
+        This completes the proof. 
+    </p>
+
+</activity>
+
+<p>
+    The use of English words makes proofs more approachable and understandable. Here are some commonly-used phrases in mathematical proofs. Note the use of the plural <em>we</em> instead of the singular <em>I</em>.
+</p>
+<sidebyside widths="50% 50%" margins="auto" valign="middle">
+    <p>
+    <alert>Declare intentions</alert>
+    <ul>
+        <li>We will prove...</li>
+        <li>We want to show that...</li>
+        <li>In order to prove... we...</li>
+        <li>At this point we need to find...</li>
+        <li>We consider the following cases...</li>
+    </ul>
+    </p>
+    <p>
+    <alert>Clarify implications</alert>
+    <ul>
+        <li>Since... then...</li>
+        <li>Because..., we have...</li>
+        <li>Therefore/thus/hence...</li>
+        <li>This means that...</li>
+        <li>The previous statement implies...</li>
+    </ul>
+    </p>
+</sidebyside>
+
+<p><alert>Explain steps</alert>
+<ul>
+    <li>By assumption, we know that...</li>
+    <li>By simplication/manipulation,rearranging,...</li>
+    <li>Because of property/theorem/definition, we have...</li>
+</ul>
+</p>
+
+<activity xml:id="exe-review-proof-writing">
+    <p>Write a complete and convincing proof of the following claim that uses the mathematical statements given below (in some order). Note that this is a proof by contradiction.
+    </p>
+    <p>
+        <alert>Claim</alert>: Let <m>A, B</m> be subsets of some universal set <m>U</m>.
+        Prove that if <m>(A \cup B)^c = A^c \cup B^c</m>, then <m>A \subseteq B</m>.
+    </p>
+    <p>
+        <md>
+            <mrow>\amp x \in A \amp \amp x \in A^c \cup B^c</mrow>
+            <mrow>\amp x \not\in B \amp \amp x \in A \cup B</mrow>
+            <mrow>\amp x \in B^c \amp \amp x \not\in (A \cup B)^c</mrow>
+        </md>
+    </p>
+</activity>
+
+
+</section>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<exercises>
+
+<exercisegroup><title>Hello</title><introduction/>
+
+<exercise>
+<statement><p>
+
+        This is a longer sentence that is followed by another sentence.
+        Two sentences, and a second paragraph to follow.
+    </p>
+</statement>
+<solution>
+	<p>Test</p>
+</solution>
+</exercise>
+
+
+
+</exercisegroup>
+
+<solutions divisional="solution">
+    <title>Solutions to Exercises</title>
+</solutions>
+
+</exercises>

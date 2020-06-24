@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-counting">
+    <title>Counting Techniques</title>
+    <objectives>
+        <ul>
+            <li>State the Sum Rule and the Product Rule, and use them to solve counting problems.</li>
+            <li>Derive the formulas for permutations and combinations (of <m>n</m> objects taken <m>k</m> at a time), multi-permutations, and permutations and combinations with repetition allowed.</li>
+            <li>Given a word problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
+            <li>Prove simple combinatorial identities.</li>
+        </ul>
+    </objectives>
+    
+    
+    
+
+
+<xi:include href="./02counting01.xml" />
+<xi:include href="./02counting02.xml" />
+<xi:include href="./02counting03.xml" />
+<xi:include href="./02counting04.xml" />
+<xi:include href="./02counting05.xml" />
+<xi:include href="./02counting-ex.xml" />
+
+
+
+<!--
+<section>
+<title>More Integration Examples</title>
+<introduction />
+
+
+<xi:include href="../problems/prob_s1.13.xml" />
+
+</section>
+-->
+
+</chapter>

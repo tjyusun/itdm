@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pretext>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <docinfo>
-    <cross-references text="type-global"/>
-    <rename element="note" xml:lang="en-US">Best Practice</rename>
+    <!-- "global" option so cross-refs are on numbers only.
+    default is "type-global" for stem and number. -->
+    <cross-references text="global"/>
+    <!-- change Identity to Principle -->
+    <!-- <rename element="identity" xml:lang="en-US">Principle</rename> -->
     <!-- a demonstration in Basic Reference -->
-    <latex-image-preamble>
+    <latex-image-preamble xmlns:xi="http://www.w3.org/2001/XInclude">
         \usepackage{tikz}
+        \usepackage{calculator}
         \usepackage{pgfplots}
-        \pgfplotsset{compat=1.15}
+        \pgfplotsset{compat=1.15, tick label style={font=\scriptsize}}
+        \usetikzlibrary{shapes, patterns, snakes}
         \usetikzlibrary{arrows,arrows.meta,decorations.markings}
         \usetikzlibrary{graphs,graphs.standard}
-        \usepackage{makecell}
-        \usepackage{setspace}
-        \usepackage{mdframed}
-        \usepackage{venndiagram}
+        \tikzstyle{vertex}=[shape=circle, minimum size=2mm, inner sep=0, fill]
+        \tikzstyle{opendot}=[shape=circle, minimum size=2mm, inner sep=0, fill=white, draw]
+    </latex-image-preamble>
+    
+    <latex-preamble>
+        <package>makecell</package>
+        <package>setspace</package>
+        <package>mdframed</package>
+        <package>venndiagram</package>
+    </latex-preamble>
+    
+    <macros>
         \DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
         \DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
         \DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
-        
+            
         \newcommand{\vheart}{\textcolor{red}{\varheart}}
         \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
         \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
         \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
-    </latex-image-preamble>
+        
+        \newcommand{\st}{ {\mbox{ s.t. }} }
+        \newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+        
+        \newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+        \newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+        \newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+        
+        \newcommand{\limp}{ {\;\Rightarrow\;} }
+        \newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+        \newcommand{\liff}{ {\;\Leftrightarrow\;} }
+        \newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+        
+        \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+        \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+        \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
+        <!-- fixes \color{}{} vs \textcolor{}{} mathjax vs latex issue -->
+        \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+    </macros>
     <!-- There does not need to be a trailing / on the URL -->
     <!-- NB This is likely to change, it should be a publisher option -->
     <!--
@@ -31,668 +67,24 @@
         <baseurl href="https://tjyusun.com/itdm/MAT202notes.html"/>
     </html>
     -->
+    <feedback>
+        <url>mailto:tj.yusun@utoronto.ca?subject=mat202-pretext</url>
+        <!-- <text>Feedback</text> -->
+    </feedback>
 </docinfo>
 
 <book xml:id="MAT202notes">
 <title>MAT202: Introduction to Discrete Mathematics</title>
 
-
-<frontmatter xml:id="front" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <titlepage>
-        <author>
-            <personname>TJ Yusun</personname>
-            <department>Department of Mathematical and Computational Sciences</department>
-            <institution>
-                <line>University of Toronto Mississauga</line>
-                <line>Mississauga, ON, Canada</line>
-            </institution>
-            <email>tj.yusun@utoronto.ca</email>
-        </author>
-        <date><today /></date>
-    </titlepage>
-    <colophon xml:id="colophon">
-
-        <edition>Fall/Winter 2020-2021</edition>
-
-        <website>
-            <name><c>tjyusun.com/itdm</c></name>
-            <address>https://tjyusun.com/itdm/MAT202notes</address>
-        </website>
-
-        <copyright>
-            <year>2020</year>
-            <holder>Timothy Yusun</holder>
-            <shortlicense>
-                Permission is granted to copy, distribute, and/or modify this document under the terms of the etc etc etc.
-            </shortlicense>
-        </copyright>
-    </colophon>
-    <preface>
-        <p>
-            The word <em>discrete</em> in the title of our course means <em>separate</em>; something that is <em>not smooth</em>.
-        
-            In the study of discrete mathematics we will typically concern ourselves with discrete objects such as the integers, graphs, finite and countable sets. (In contrast, excluded from this are objects that may vary continuously, such as those ones covered in trigonometry, calculus, and Euclidean geometry.)
-        </p>
-    </preface>
-</frontmatter>  
-
-<chapter xml:id="chap-review-mat102">
-    <title>Review of MAT102</title>
-        <introduction>
-        <p>
-            Many of the concepts you learned in your MAT102 course will be useful in MAT202; in this chapter we briefly review some definitions and results, and present some exercises to warm up for the rest of the course! Material in this chapter is based on <em>MAT102H5 Introduction to Mathematical Proofs</em> by <em>Shay Fuchs.</em>
-        </p>
-        </introduction>
-    <section xml:id="sec-sets-and-functions">
-        <title> Sets and Functions </title>
-
-        <p> 
-            A <term>set</term> is is just a collection of objects (where the order in which the objects are listed does not matter). The following set operations should be familiar to you: intersection <m>A \cap B</m>, union <m>A \cup B</m>, complement <m>A^c</m>, difference <m>A \ \backslash \ B</m>, and Cartesian product <m>A \times B</m>.
-        </p>
-
-        <p>
-            We also recall that proving the set <m>A</m> is a subset of the set <m>B</m> simply necessitates showing that any element of <m>A</m> can also be found in <m>B</m>.
-        </p>
-        
-        
-        <definition xml:id="def-set-inclusion-equality">
-            <title> Set Inclusion and Equality</title>
-            <statement>
-                <p> If <m>A</m> and <m>B</m> are sets in some universe <m>U</m>, then we say <m>A</m> <term>is a subset of </term> <m>B</m>, denoted by <m>A \subseteq B</m>, if
-                <me> (\forall x \in U)(x \in A \Rightarrow x \in B)</me>.
-                We say that <m>A</m> and <m>B</m> are <term>equal</term> as sets if <m>A \subseteq B</m> and <m>B \subseteq A</m> both hold. 
-                This means that <me>(\forall x \in U)(x \in A \Leftrightarrow x \in B)</me>.
-                </p>                
-            </statement>
-        </definition>
-        
-        <exercise xml:id="exe-review-set-inclusion">
-            <statement>
-                <p> Define
-                    <me> A = \{k \in \mathbb{Z} : k = 6s + 3 \text{ for some } s \in \mathbb{Z}\}</me> and 
-                    <me>B = \{m \in \mathbb{Z} : m = 3t \text{ for some } t \in \mathbb{Z}\}</me>.
-                    Prove that <m>A \subseteq B</m> holds.
-                </p>
-            </statement>
-            <hint>
-                <p>
-                    Pick an arbitrary element in <m>A</m>, call it <m>x</m>.
-                    Then you know <m>x = 6s + 3</m> for some integer <m>s</m>.
-                    Can you express <m>x</m> in the form <m>3t</m> where <m>t</m> is an integer?
-                </p>
-            </hint>
-        </exercise>
+    <xi:include href="frontmatter.xml" />
+    <xi:include href="text/01review00.xml" />
+    <xi:include href="text/02counting00.xml" />
     
-        <p>
-            We will use the standard notation for these sets of numbers:
-            <md>
-                <mrow> \mathbb{N} \amp = \{1,2,3,\ldots,\}</mrow>
-                <mrow> \mathbb{Z} \amp = \{\ldots,-2,-1,0,1,2,\ldots\}</mrow>
-                <mrow> \mathbb{Q} \amp = \left\{\dfrac{p}{q} : p,q \in \mathbb{Z}\right\}</mrow>
-                <mrow> \mathbb{R} \amp = (-\infty,\infty), \text{ the set of real numbers.}</mrow>
-            </md>
-            Intervals of real numbers are denoted by <m>(a,b), [a,b],</m> and other combinations, with <m>-\infty</m> or <m>\infty</m> as one of both of the endpoints.
-        </p>
-
-        <remark>
-            <p>
-                Interval notation is used to refer to sets of real numbers.
-                It is <em>incorrect</em>, for instance, to say that <m>(-2,4) = \{-1,0,1,2,3\}</m>, or that <m>\{0,1,2,3,\ldots\} = [0,\infty)</m>.
-                Watch your notation!
-            </p>
-        </remark>
-
-        <definition xml:id="def-function">
-            <title> Function </title>
-            <statement>
-            <p>
-                A <term> function </term> <me>f: A \rightarrow B</me> is a rule that takes elements from its <term>domain</term> <m>A</m> and assigns to each one an element from the <term>codomain</term> <m>B</m>.
-            </p>
-            </statement>
-        </definition>
-
-        <definition xml:id="def-injective">
-            <title> Injective, surjective, bijective </title>
-            <statement>
-            <p>
-                A function <m>f: A \rightarrow B</m> is 
-                <ul>
-                    <li> <term>injective</term> if for every <m>x_1 \ne x_2 \in A</m>, <m>f(x_1) \ne f(x_2)</m>. </li>
-                    <li> <term>surjective</term> if for every <m>y \in B</m>, there exists an <m>x \in A</m> so that <m>f(x) = y</m>. </li>
-                    <li> <term>bijective</term> if for every <m>x_1 \ne x_2 \in A</m>, <m>f(x_1) \ne f(x_2)</m>. </li>
-                </ul>
-            </p>
-            </statement>
-        </definition>
-
-        <exercise>
-            <statement>
-                <p> For each function, determine if it is injective, surjective, bijective, or none of these:
-                </p>
-                <ol label="(a)">
-                    <li><m>f: \mathbb{R} \rightarrow (0,+\infty)</m>, <m>f(x) = \sqrt{x^2+1}</m></li>
-                    <li><m>g: \mathbb{N} \rightarrow \mathbb{N}</m>, <m>g(m) = 3m + 7m^2</m></li>
-                    <li><m>h: \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}</m>, <m>h(a,b) = \dfrac{ab(b-1)}{2}</m></li>
-                </ol>
-            </statement>
-            <answer>
-                <p>1. none, 2. injective, 3. surjective.</p>
-            </answer>
-        </exercise>
-
-
-        <definition xml:id="def-composition">
-            <title>Composition</title>
-            <statement>
-                <p>
-                    Given two functions <m>f: A \rightarrow B</m> and <m>g: B \rightarrow C</m>, the <term>composition</term> <m>g \circ f: A \rightarrow C</m> is defined as the function <me>(g \circ f)(x) = g(f(x))</me> for all <m>x \in A</m>.
-                </p>
-            </statement>
-        </definition>
-
-        
-        <theorem xml:id="thm-composition-of-bijections">
-            <statement>
-                <p>
-                    The composition of two (injections, surjections, bijections) is a(n) (injection, surjection, bijection).
-                </p>
-            </statement>
-        </theorem>
-        
-
-        <exercise>
-            <statement>
-                <p> Prove <xref ref="thm-composition-of-bijections"/>.</p>
-            </statement>
-        </exercise>
-
-        <p>Later in the course we will learn techniques for counting objects and proving that two sets have the same number of elements; the notion of cardinality will be a useful tool to remember.
-        </p>
-
-        <definition xml:id="def-cardinality">
-            <statement>
-                <p>Two sets <m>A</m> and <m>B</m> are said to have the <term>same cardinality</term>, written as <me>|A| = |B|</me>, if there exists a bijection between them.
-                </p>
-
-                <p>We also say <m>A</m> has cardinality <term>less than or equal to</term> the cardinality of <m>B</m>, written as <me>|A| \leq |B|</me>, if there exists an injective function from <m>A</m> to <m>B</m>.</p>
-            </statement>
-        </definition>
-
-        <exercise>
-            <statement>
-                <p> Prove that the set of odd integers <me>O = \{\ldots,-3,-1,1,3,\ldots\}</me> has the same cardinality as <m>\mathbb{N}</m>.</p>
-            </statement>
-            <hint>
-                <p> Construct a bijection from <m>O</m> to <m>\mathbb{N}</m>.
-                </p>
-            </hint>
-        </exercise>
-
-        <definition xml:id="def-power-set">
-            <title>Power Set</title>
-            <statement>
-                <p> Let <m>A</m> be a set. The <term>power set</term> of <m>A</m>, denoted by <m>P(A)</m>, is the set <me>P(A) = \{X : X \subseteq A\}</me>, that is, it contains all subsets of <m>A</m>.
-                </p>
-            </statement>
-        </definition>
-
-        <exercise>
-            <statement>
-                <p> Prove that if <m>A</m> is finite, then <me>|P(A)| = 2^{|A|}</me>.</p>
-            </statement>
-        </exercise>
-    </section>
-
-    <section xml:id="sec-logic-and-proof-techniques">
-        <title> Logic and Proof Techniques </title>
-        <p>
-            Mathematical statements can typically be phrased as an implication <m>P \Rightarrow Q</m>,  read as <em>if <m>P</m>, then <m>Q</m></em>,
-            where <m>P</m> or <m>Q</m> may be complex statements themselves that involve conjunctions (and), disjunctions (or), negations, quantifiers, even implications.
-            There are various ways in which an implication can be proven true, and there is no hard and fast rule that dictates which proof method to use given a particular problem.
-            In MAT102 you were introduced to the following proof techniques:
-        </p>
-
-        <p>
-            <ul>
-                <li> Direct proof: Assume <m>P</m> is true, then prove <m>Q</m> is true.</li>
-                <li> Contrapositive: Assume <m>\neg Q</m> is true, then prove <m>\neg P</m> is true.</li>
-                <li> Contradiction: Assume the conclusion is false, then use this to arrive at a statement that contradicts one of the assumptions.</li>
-            </ul>
-        </p>
-        <activity xml:id="exe-review-proofs">
-            <statement>
-                <p>
-                    Prove each statement, noting which proof technique you used.
-                    Explain all your steps clearly, as if you are writing for the current batch of MAT102 students.
-                    <ol label="(a)">
-                        <li> The sum of two odd numbers is even.</li>
-                        <li> The square of an even number is divisible by 4.</li>
-                        <li> The equation <m>x^3 + x + 1 = 0</m> has no rational solutions.</li>
-                        <li> For integer <m>n</m>, if <m>n^3 + 5</m> is odd, then <m>n</m> is even.</li>
-                        <li> There is no smallest positive rational number.</li>
-                        <li> Every multiple of 4 can be written as <m>1 + (-1)^n(2n-1)</m> for some <m>n \in \mathbb{N}</m>.</li>
-                        <li> The sum of a rational number and an irrational number is irrational.</li>
-                        <li> A three-digit natural number is divisible by 9 if and only if the sum of its digits is divisible by 9.</li>
-                        <li> If <m>A</m> and <m>B</m> are defined as in <xref ref="exe-review-set-inclusion" />, then <m>B \not\subseteq A</m>.</li>
-                    </ol>
-                </p>
-            </statement>
-        </activity>
-
-        <p>
-            Many of these statements are <em>quantified</em> universally, which means it involves some variable (say <m>n</m>), and you need to prove the claim holds for all relevant values of the variable (say <m>n \in \mathbb{N}</m>). 
-            For 1, 2, and 4, for example, the relevant quantities are integers; the statements need to be proven for all integers.
-        </p>
-        <p>
-            We can use mathematical induction to prove that a statement is true for all natural numbers.
-        </p>
-
-        <theorem xml:id="thm-induction">
-            <title> Principle of Mathematical Induction </title>
-            <p>
-                Let <m>P(n)</m> be a predicate defined for <m>n \in \mathbb{N}</m>.
-                If the following conditions hold:
-                <ol label="(a)">
-                    <li><m>P(1)</m> is true;</li>
-                    <li> For all <m> k \in \mathbb{N}</m>, <m>P(k) \Rightarrow P(k+1)</m> is true.</li>
-                </ol>
-                then <m>P(n)</m> is true for all <m>n \in \mathbb{N}</m>.
-            </p>
-
-            <p>
-                One can also replace the second condition with the following:
-            </p>
-            <p>
-                b.* For all <m>k \in \mathbb{N}</m>, <m>[P(1) \wedge P(2) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)</m> is true.
-            </p>
-            <p>
-                This is called <term>strong induction</term>, where one assumes the induction step holds for all natural numbers from 1 to <m>k</m> in order to prove the claim for <m>k+1</m>.
-            </p>
-        </theorem>
-
-        <p>
-            Depending on what is being proved, one may need to make slight modifications to the standard technique: e.g. changing/adding to the base case, or <q>skipping</q> from <m>k</m> to <m>k+2</m> in the case when one only has to prove the claim for every other natural number starting from the base case.
-        </p>
-
-        <exercise xml:id="exe-review-induction">
-            <statement>
-                <p>
-                Prove the following statements using induction:
-                </p>
-                <ol label ="(a)">
-                    <li> <m>1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{1}{6}n(n+1)(2n+1)</m> for all <m> n \in \mathbb{N}</m>.</li>
-                    <li> <m>2^n \geq n^2</m> for all <m>n \in \mathbb{N}, n \geq 4</m>.</li>
-                    <li> <m>4^{2n} -1</m> is divisible by 5 for every <m>n \in \mathbb{N}</m>.</li>
-                </ol>
-            </statement>
-        </exercise>
-
-        <exercise xml:id="exe-review-induction-fibonacci">
-            <statement>
-                <p>
-                    The <term>Fibonacci sequence</term> <m>\{F_n\}</m> is defined recursively as
-                    <me>\begin{cases} F_n = F_{n-1} + F_{n-2}, n \geq 3 \\
-                        F_1 = F_2 = 1 \end{cases}</me>.
-                    Prove that
-                    <me> F_n = \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n</me> using strong induction.
-                </p>
-            </statement>
-        </exercise>
-
-        <exercise xml:id="exe-review-induction-tiling">
-            <statement>
-                <p>
-                    Let <m>T_n</m> be the number of ways one can tile a <m>2 \times n</m> grid with <m>1 \times 2</m> rectangles.
-                    For example, <m>T_2 = 2</m> since there are two tilings of a <m>2 \times 2</m> grid using only <m>1 \times 2</m> rectangles.
-                </p>
-
-                <figure xml:id="exe-tiling-fig">
-                    <caption>The two tilings of a two-by-two grid.</caption>
-                    <image xml:id="exe-tiling-img" width ="50%">
-                        <description>Two tilings of a 2-by-2 grid by 1-by-2 rectangles.</description>
-                        <latex-image>
-                        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
-                        <![CDATA[
-                        \begin{tikzpicture}
-                        \draw[-,color=black,dashed] (0,0) grid (2,2);
-                        \draw[-,thick] (0.05,0.05)--(1,0.05)--(1.95,0.05)--(1.95,0.95)--(1,0.95)--(0.05,0.95)--(0.05,0.05);
-                        \draw[-,thick] (0.05,1.05)--(1,1.05)--(1.95,1.05)--(1.95,1.95)--(1,1.95)--(0.05,1.95)--(0.05,1.05);
-                        \draw[-,color=black,dashed] (3,0) grid (5,2);
-                        \draw[-,thick] (3.05,0.05)--(3.05,1)--(3.05,1.95)--(3.95,1.95)--(3.95,1)--(3.95,0.05)--(3.05,0.05);
-                        \draw[-,thick] (4.05,0.05)--(4.05,1)--(4.05,1.95)--(4.95,1.95)--(4.95,1)--(4.95,0.05)--(4.05,0.05);
-                        \end{tikzpicture}
-                        ]]>
-                        </latex-image>
-                    </image>
-                </figure>
-                <p>
-                    Find a recurrence relation for <m>T_n</m> and prove that <m> T_n = F_{n+1}</m> as defined in <xref ref="exe-review-induction-fibonacci" />.
-                </p>
-            </statement>
-        </exercise>
-    
-    </section>
-
-    <section xml:id="sec-integers-divisibility">
-        <title>Integers and Divisibility</title>
-
-        <p> For completeness we restate here the definition of divisibility and the Division Algorithm.</p>
-
-        <definition xml:id="def-divisibility">
-            <statement>
-                <p>
-                    Let <m>a \in \mathbb{Z}</m> and <m>b \in \mathbb{Z} \setminus \{0\}</m>.
-                    We say that <m>a</m> <term> is divisible by</term> <m>b</m>, or <m>b</m> <term>divides</term> <m>a</m>, denoted by <me>b \mid a</me>, if there exists <m>m \in \mathbb{Z}</m> such that <m>a = mb</m>.
-                </p>
-                <p>
-                    If <m>b</m> is not divisible by <m>a</m>, then we write <m>b \nmid a</m>.
-                </p>
-                <p>
-                    We say that the natural number <m>p</m> is a <term>prime number</term> if the only natural numbers that divide <m>p</m> are <m>1</m> and <m>p</m>.
-                </p>
-            </statement>
-        </definition>
-
-        <theorem xml:id="thm-division-algorithm">
-            <statement>
-                <p>
-                    Let <m>a,b \in \mathbb{N}</m>.
-                    Then there exist unique <m>q</m> and <m>r</m> that satisfy all of the following:
-                    <me> a = qb + r, q \geq 0, 0 \leq r \lt b</me>.
-                </p>
-            </statement>
-        </theorem>
-
-        <exercise xml:id="exe-review-division-algorithm">
-            <statement>
-                <p>
-                    Find <m>q</m> and <m>r</m> that satisfy the Division Algorithm for the following pairs of numbers <m>a</m> and <m>b</m>:
-                    <ol label="(a)">
-                        <li><m>a = 140, b = 22</m></li>
-                        <li><m>a = 22, b = 140</m></li>
-                        <li><m>a = 735, b = 21</m></li>
-                    </ol>
-                </p>
-            </statement>
-        </exercise>
-
-        <definition xml:id="def-gcd">
-            <title>GCD</title>
-            <statement>
-                <p>
-                    Given integers <m>a</m> and <m>b</m> not both zero, their <term>greatest common divisor</term>, denoted by <me>\gcd(a,b)</me>, is the largest integer that divides both numbers.
-                </p>
-                <p>
-                    We say that <m>a</m> and <m>b</m> are <term>relatively prime</term> if <m>\gcd(a,b) = 1</m>.
-                </p>
-            </statement>
-        </definition>
-
-        <p> There are a number of ways to determine the GCD of two numbers <m>a</m> and <m>b</m>:
-        <ul>
-            <li>Listing all factors of <m>a</m> and <m>b</m>, then finding the largest one they have in common;</li>
-            <li>Writing out the prime factorizations of <m>a</m> and <m>b</m>, then collecting all common prime factors;</li>
-            <li>The Euclidean Algorithm (repeated division).</li>
-        </ul>
-        </p>
-
-        <exercise xml:id="exe-review-gcd">
-            <statement>
-                <p>
-                    Apply the three techniques above to compute <m>\gcd(220,360)</m>.
-                </p>
-            </statement>
-            <answer>
-                <p>The GCD is 20.</p>
-            </answer>
-            <solution>
-                <p>The Euclidean Algorithm performs the following steps:
-                <md>
-                    <mrow> 360 \amp = 1 \cdot 220 + 140 </mrow>
-                    <mrow> 220 \amp = 1 \cdot 140 + 80 </mrow>
-                    <mrow> 140 \amp = 1 \cdot 80 + 60 </mrow>
-                    <mrow> 80 \amp = 1 \cdot 60 + 20 </mrow>
-                    <mrow> 60 \amp = 3 \cdot 20 + 0 </mrow>
-                </md>
-                The GCD is the divisor in the last line (where the remainder becomes zero).
-                </p>
-            </solution>
-
-        </exercise>
-
-        <theorem xml:id="thm-bezout">
-            <title>Bezout's Identity</title>
-            <statement>
-                <p>
-                    Let <m>a,b \in \mathbb{Z}</m>, not both zero.
-                    Then there exist <m>m,n \in \mathbb{Z}</m> such that <m>am + bn = \gcd(a,b)</m>.
-                </p>
-            </statement>
-        </theorem>
-
-        <exercise xml:id="exe-review-bezout">
-            <statement>
-                <p>
-                    Find a pair of integers <m>x</m> and <m>y</m> such that <me>13x + 11y = 2</me>.
-
-                    Then explain why the equation <m>13x + 11y = 2</m> has infinitely many solutions.
-                    Can you characterize all such solutions?
-                </p>
-            </statement>
-        </exercise>
-
-        <exercise xml:id="exe-review-bezout-no-solution">
-            <statement>
-                <p>
-                    Prove that the equation <me>14x - 35y = 9</me> has no integer solutions.
-                </p>
-            </statement>
-        </exercise>
-
-        <exercise xml:id="exe-review-bezout-gcd">
-            <statement>
-                <p>
-                    Let <m>a, b, d, \in \mathbb{N}</m>.
-                    Prove that <m>ax + by = d</m> has integer solutions <m>x</m> and <m>y</m> if and only if <m>\gcd(a,b) \mid d</m>.
-                </p>
-            </statement>
-        </exercise>
-
-        <lemma xml:id="lem-euclid">
-            <title>Euclid's Lemma</title>
-            <statement>
-                <p>
-                    If <m>p</m> is prime, and <m>a</m> and <m>b</m> are integers such that <m>p \mid ab</m>, then either <m>p \mid a</m> or <m>p \mid b</m> (or both).
-                </p>
-            </statement>
-        </lemma>
-
-        <exercise xml:id="exe-review-euclid-proof">
-            <statement>
-                <p>
-                    Prove <xref ref="lem-euclid" /> using <xref ref="thm-bezout" />.
-                </p>
-            </statement>
-        </exercise>
-
-        <exercise xml:id="exe-review-bezout-euclid">
-            <statement>
-                <p>
-                    Let <m>m,a,b \in \mathbb{N}</m>.
-                    Using <xref ref="thm-bezout" />, prove that if <m>m \mid ab</m> and <m>\gcd(a,m) = 1</m>, then <m>m \mid b</m>.
-                </p>
-            </statement>
-        </exercise>
-
-    </section>
-
-    <section xml:id="sec-reading-writing-proofs">
-        <title>Reading and Writing Proofs</title>
-
-        <p>Proofs are a form of communication. They are used to argue (that a claim holds true); and sometimes explain (<em>why</em> a claim is true).</p>
-
-        <activity>
-            <p>
-            When writing proofs, one needs to be <em>clear</em>, <em>complete</em>, and <em>correct</em>.
-            Comment on the three proofs below of the statement
-            <me>\text{Let } m \in \mathbb{Z}\text{. Then }m\text{ is even if and only if } m^3 \text{\ is even}</me>.
-            Which one(s) is/are
-            <ul cols="2">
-                <li>convincing?</li>
-                <li>missing steps?</li>
-                <li>easiest to read?</li>
-                <li>correct?</li>
-            </ul>
-            </p>            
-            
-            <p>
-                <alert>Proof 1</alert>
-                (<m>\Rightarrow</m>)
-                <m>m = 2k \Rightarrow m^3 = 8k^3 = 2(4k^3)</m>, so <m>m^3</m> is even.
-            </p>
-            <p>
-                (<m>\Leftarrow</m>)
-                By contradiction. Assume <m>m^3</m> is even but <m>m</m> is odd.
-                Then <m>m = 2k + 1 \Rightarrow m^3 =(2k+1)^3 = 8k^3 + 12k^2 + 6k + 1</m>, which is odd.
-            </p>
-            <p>
-                Contradiction, so <m>m</m> must be even.
-                So <m>m</m> even <m>\Leftrightarrow</m> <m>m^3</m> even.
-            </p>
-            
-            <p>
-                <alert>Proof 2</alert>
-                <me>m \text{ even } \Leftrightarrow m = 2k \Leftrightarrow m^3 = 8k^3 \Leftrightarrow  m^3 = 2(4k^3) \Leftrightarrow  m^3 \text{ even}</me>, hence proven.
-            </p>
-            
-            <p>
-                <alert>Proof 3</alert>
-                We want to prove that <me>m \text{ is even if and only if } m^3 \text{ is even}</me>.
-            </p>
-            <p>
-                (<m>\Rightarrow</m>) First, we show <m>m</m> even <m>\Rightarrow</m> <m>m^3</m> even.
-
-                If <m>m</m> is even, then we can write <m>m = 2k</m> for some <m>k \in \mathbb{Z}</m>.
-                Then,
-                <md>
-                    <mrow>m^3 \amp = (2k)^3</mrow>
-                    <mrow>\amp = 8k^3</mrow>
-                    <mrow>\amp = 2(4k^3)</mrow>
-                </md>.
-                Since <m>k \in \mathbb{Z}</m>, then <m>4k^3 \in \mathbb{Z}</m> as well, and so <m>m^3</m> is even.
-            </p>
-            <p>
-                (<m>\Leftarrow</m>)
-                Next, we prove that <m>m^3</m> even <m>\Rightarrow</m> <m>m</m> even.
-                To do this we prove the contrapositive: If <m>m</m> is odd, then <m>m^3</m> is odd.
-            </p>
-            <p>
-                If <m>m</m> is odd, then there is a <m>k \in \mathbb{Z}</m> such that <m>m = 2k + 1</m>.
-                Then
-                <md>
-                    <mrow>m^3 \amp = (2k+1)^3</mrow>
-                    <mrow>\amp = 8k^3 + 12k^2 + 6k + 1</mrow>
-                    <mrow>\amp = 2(4k^3 + 6k^2 + 3k) + 1</mrow>
-                </md>.
-                Since <m>k \in \mathbb{Z}</m>, then <m>4k^3 + 6k^2 + 3k \in \mathbb{Z}</m> as well.
-                Therefore <m>m^3</m> is odd.
-
-                This completes the proof. 
-            </p>
-
-        </activity>
-
-        <p>
-            The use of English words makes proofs more approachable and understandable. Here are some commonly-used phrases in mathematical proofs. Note the use of the plural <em>we</em> instead of the singular <em>I</em>.
-        </p>
-        <sidebyside widths="50% 50%" margins="auto" valign="middle">
-            <p>
-            <alert>Declare intentions</alert>
-            <ul>
-                <li>We will prove...</li>
-                <li>We want to show that...</li>
-                <li>In order to prove... we...</li>
-                <li>At this point we need to find...</li>
-                <li>We consider the following cases...</li>
-            </ul>
-            </p>
-            <p>
-            <alert>Clarify implications</alert>
-            <ul>
-                <li>Since... then...</li>
-                <li>Because..., we have...</li>
-                <li>Therefore/thus/hence...</li>
-                <li>This means that...</li>
-                <li>The previous statement implies...</li>
-            </ul>
-            </p>
-        </sidebyside>
-
-        <p><alert>Explain steps</alert>
-        <ul>
-            <li>By assumption, we know that...</li>
-            <li>By simplication/manipulation,rearranging,...</li>
-            <li>Because of property/theorem/definition, we have...</li>
-        </ul>
-        </p>
-
-        <activity xml:id="exe-review-proof-writing">
-            <p>Write a complete and convincing proof of the following claim that uses the mathematical statements given below (in some order). Note that this is a proof by contradiction.
-            </p>
-            <p>
-                <alert>Claim</alert>: Let <m>A, B</m> be subsets of some universal set <m>U</m>.
-                Prove that if <m>(A \cup B)^c = A^c \cup B^c</m>, then <m>A \subseteq B</m>.
-            </p>
-            <p>
-                <md>
-                    <mrow>\amp x \in A \amp \amp x \in A^c \cup B^c</mrow>
-                    <mrow>\amp x \not\in B \amp \amp x \in A \cup B</mrow>
-                    <mrow>\amp x \in B^c \amp \amp x \not\in (A \cup B)^c</mrow>
-                </md>
-            </p>
-        </activity>
-
-
-    </section>
-
-</chapter>
-
-<chapter xml:id="chap-counting">
-    <title>Counting Techniques</title>
-    <objectives>
-        <ul>
-            <li>State the Sum Rule and the Product Rule, and use them to solve counting problems.</li>
-            <li>Derive the formulas for permutations and combinations (of <m>n</m> objects taken <m>k</m> at a time), multi-permutations, and permutations and combinations with repetition allowed.</li>
-            <li>Given a word problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
-            <li>Prove simple combinatorial identities.</li>
-        </ul>
-    </objectives>
-    
-    
-    <section xml:id="sec-basic-counting">
-    <title>The Basic Counting Principles</title>
-    <p>
-        This is a longer sentence that is followed by another sentence.
-        Two sentences, and a second paragraph to follow.
-    </p>
-
     <!--
     <figure>
     <caption>Sample video</caption>
     <video youtube="MBdVXkSdhwU" />
     </figure>
     -->
-
-    <p>
-        Let's end with some mathematics.
-    </p>
-
-    <p>
-        If the two sides of a right triangle have lengths <m>a</m> and <m>b</m> and the hypotenuse has length <m>c</m>, then the equation <me> a^2 + b^2 = c^2</me> will always hold.
-    </p>
-
-    </section>
-
-</chapter>
 </book>
 </pretext>
