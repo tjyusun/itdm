@@ -1,0 +1,4 @@
+C:\itdm\itdm\itdm.xml:81:42: error: element "xi:include" not allowed anywhere; expected element "chapter", "frontmatter", "idx", "part", "shorttitle" or "subtitle"
+C:\itdm\itdm\itdm.xml:82:46: error: element "xi:include" not allowed anywhere; expected element "chapter", "frontmatter", "idx", "part", "shorttitle" or "subtitle"
+C:\itdm\itdm\itdm.xml:83:48: error: element "xi:include" not allowed anywhere; expected element "chapter", "frontmatter", "idx", "part", "shorttitle" or "subtitle"
+C:\itdm\itdm\itdm.xml:91:8: error: element "book" incomplete; expected element "chapter", "frontmatter", "idx", "part", "shorttitle" or "subtitle"

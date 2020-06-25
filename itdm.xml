@@ -8,7 +8,7 @@
 <docinfo>
     <!-- "global" option so cross-refs are on numbers only.
     default is "type-global" for stem and number. -->
-    <cross-references text="global"/>
+    <cross-references text="type-global"/>
     <!-- change Identity to Principle -->
     <!-- <rename element="identity" xml:lang="en-US">Principle</rename> -->
     <!-- a demonstration in Basic Reference -->
@@ -67,13 +67,15 @@
         <baseurl href="https://tjyusun.com/itdm/MAT202notes.html"/>
     </html>
     -->
+    <!--
     <feedback>
         <url>mailto:tj.yusun@utoronto.ca?subject=mat202-pretext</url>
-        <!-- <text>Feedback</text> -->
+        <text>Feedback</text>
     </feedback>
+    -->
 </docinfo>
 
-<book xml:id="MAT202notes">
+<book xml:id="MAT202">
 <title>MAT202: Introduction to Discrete Mathematics</title>
 
     <xi:include href="frontmatter.xml" />

@@ -7,91 +7,52 @@
     <titlepage>
         <author>
             <personname>TJ Yusun</personname>
-            <department>Department of Mathematical and Computational Sciences</department>
+            <department><url href="https://www.utm.utoronto.ca/math-cs-stats/home">Department of Mathematical and Computational Sciences</url></department>
             <institution>
-                <line>University of Toronto Mississauga</line>
+                <line><url href="https://www.utm.utoronto.ca/">University of Toronto Mississauga</url></line>
                 <line>Mississauga, ON, Canada</line>
             </institution>
             <email>tj.yusun@utoronto.ca</email>
         </author>
         <date><today /></date>
     </titlepage>
-    <colophon xml:id="colophon">
-
-        <edition>Introduction to Discrete Mathematics: September 2020</edition>
-
-        <website>
-            <name><c>itdm</c></name>
-            <address>https://tjyusun.com/</address>
-            <!-- Update to git later -->
-        </website>
-
-        <copyright>
-            <year>2019<ndash/>2020</year>
-            <holder>Timothy Yusun</holder>
-            <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
-			<shortlicense>
-				This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You can view a copy of the license <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">here</url>.
-            
-                    <image source = "figs/by-nc-sa" width="25%"/>
-
-            </shortlicense>
-        </copyright>
-
-		<credit>
-			<role>Source files</role>
-			<entity>
-				The source files for this document can be found at <url href="http://github.com/">this git repository</url>. The sources are licensed under the <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 License</url>.
-		</entity>
-		</credit>
-
-    </colophon>
-    <preface>
-    	<p>
-    		These notes are being developed by TJ Yusun for the MAT202: Introduction to Discrete Mathematics course at the University of Toronto Mississauga.
-    		This is an ongoing project, and so the text may contain errors or typos.
-    		Errata will be posted in the Quercus course container for MAT202 as they are found; students are also encouraged to email <url href="mailto:tj.yusun@utoronto.ca?subject=202notes-pretext"><c>tj.yusun@utoronto.ca</c></url> if you find any errors or would like to provide feedback about these notes.
-		</p>
-		<p>
-			When emailing, please include the following:
-			<ul>
-				<li>Description of error</li>
-				<li>URL of error (if in the online version)</li>
-				<li>page number of error (if in the PDF version), and compile date on the front page of the pdf.</li>
-			</ul>
-		</p>
-
-<!--
-		<attribution>
-			<line>
-				TJ Yusun
-			</line>
-		</attribution>
--->
-    </preface>
+   
+   
 
     <preface xml:id="front-welcome">
-        <title>Welcome to the Course!</title>
+        <title>Welcome Message</title>
         <p>
             <alert>September 2020</alert>
         </p>
+        <sidebyside widths="70%">
+        <image source="figs/TJ.jpg"><description>TJ posing with a "V" sign on vacation in an Asian country</description></image>
+        </sidebyside>
         <p>
-            Hello all! <em>waves</em>
-            My name is <alert>TJ</alert>, and this semester I will be joining you in your journey to discover and learn about discrete mathematics.
+            Hello all!
         </p>
+        <p>
+            My name is <alert>TJ</alert>, and this semester I will be joining you in your journey to discover and learn about discrete mathematics.
+            I did my PhD at <url href="https://sfu.ca">Simon Fraser University</url>, in the area of operations research.
+            You can call me Professor/Prof. Yusun, Dr. Yusun, or simply TJ.
+            My pronouns are he/him/his.
+        </p>
+                
         <p>
             It's been a wild ride this year, and we're only 2/3 of the way through!
-            We have all been affected in different ways by many different events, and it is understandable that you may not be in the best mindset to study, especially since you are doing this from your homes.
-            You also miss seeing people, hanging out with your friends, going to the library on campus<ellipsis/>I mean, you probably miss waiting for your <em>Thai Express</em> order from the Davis Food Court!
+            We have all been affected in different ways by many different events, and it is understandable that you may not be in the optimal mindset to study, especially since you'll be doing this from your homes, dorms, residences.
+            I guess you also miss seeing people, hanging out with your friends, going to the library on campus<ellipsis/>I mean, you probably miss waiting for your <em>Thai Express</em> order from the Davis Food Court!
         </p>
+        <sidebyside widths="70%">
+            <image source="figs/UTMfall.jpg"><description>Yellowing trees in the Fall lining the pathway to Deerfield Hall at the UTM campus.</description></image>
+        </sidebyside>
         <p>
-            I hear you, and I personally would like nothing else but to be able to see your faces in person this Fall term. 
+            I hear you, and I personally would like nothing more than to be able to see your faces in person this Fall term. 
             Unfortunately we've had to make some adjustments, and here we are<mdash/>meeting each other through words on a screen instead.
         </p>
         <p>
-            In recognition of the unusual position we're all in, I'd like to make a number of commitments to the class:
+            In recognition of the unusual position we're all in, I'd like to make a number of commitments to you:
             <ul>
-                <li>In all aspects of the course, I will be clear and organized, and reduce as many barriers to access and learning that I can.</li>
+                <li>In all aspects of the course, I will be clear and organized, and reduce as many barriers to your access and learning that I can.</li>
                 <li>I will be reasonably available to help you with your learning.</li>
                 <li>I will do my best to listen when you speak. Your voices are important to me.</li>
                 <li>I will treat you with respect and dignity, and make our class a safe learning environment for you and your peers.</li>
@@ -110,7 +71,76 @@
             (In the Winter I had to cancel a class because my internet went out for one whole day.)
             This is to be expected, and we will manage.
         </p>
+        <p>
+            Finally, let me reiterate that <em>I want you to succeed</em>, and I will try my best to facilitate this.
+            But also remember that your success depends on the actions you take. 
+            We are in this together.
+        </p>
+        <p>
+            <em>TJ</em>
+        </p>
+                    
     </preface>
+    <preface xml:id="front-how-to-use">
+        <title>How to Use This Resource</title>
+        <p>
+            Read it
+        </p>
+    </preface>
+    <preface xml:id="front-feedback">
+        <title>Feedback</title>
+        <p>
+            These notes are being developed by TJ Yusun for the Fall and Winter 2020-2021 offerings of MAT202: Introduction to Discrete Mathematics course at the University of Toronto Mississauga.
+            This is an ongoing project, and so the text may contain errors or typos.
+            Errata will be posted in the Quercus course container for MAT202 as they are found; students are also encouraged to email <url href="mailto:tj.yusun@utoronto.ca?subject=202notes-pretext"><c>tj.yusun@utoronto.ca</c></url> if you find any errors or would like to provide feedback about these notes.
+        </p>
+        <p>
+            When emailing, please include the following:
+            <ul>
+                <li>Description of error</li>
+                <li>URL of error (if in the online version)</li>
+                <li>page number of error (if in the PDF version), and compile date on the front page of the pdf.</li>
+            </ul>
+        </p>
+
+<!--
+        <attribution>
+            <line>
+                TJ Yusun
+            </line>
+        </attribution>
+-->
+    </preface>
+    <colophon xml:id="colophon">
+
+        <edition>Introduction to Discrete Mathematics: September 2020</edition>
+
+        <website>
+            <name><c>itdm</c></name>
+            <address>https://tjyusun.com/</address>
+            <!-- Update to git later -->
+        </website>
+
+        <copyright>
+            <year>2019<ndash/>2020</year>
+            <holder>Timothy Yusun</holder>
+            <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
+            <shortlicense>
+                This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You can view a copy of the license <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">here</url>.
+            
+                    <image source = "figs/by-nc-sa" width="25%"/>
+
+            </shortlicense>
+        </copyright>
+
+        <credit>
+            <role>Source files</role>
+            <entity>
+                The source files for this document can be found at <url href="http://github.com/">this git repository</url>. The sources are licensed under the <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 License</url>.
+        </entity>
+        </credit>
+
+    </colophon>
 </frontmatter>  
 
 

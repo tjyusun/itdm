@@ -6,6 +6,7 @@
 
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-counting">
     <title>Counting Techniques</title>
+    <!--
     <objectives>
         <ul>
             <li>State the Sum Rule and the Product Rule, and use them to solve counting problems.</li>
@@ -14,8 +15,12 @@
             <li>Prove simple combinatorial identities.</li>
         </ul>
     </objectives>
-    
-    
+    -->
+    <introduction>
+        <p>
+            Short intro here
+        </p>
+    </introduction>
     
 
 

@@ -33,7 +33,7 @@
                 <li> Every multiple of 4 can be written as <m>1 + (-1)^n(2n-1)</m> for some <m>n \in \mathbb{N}</m>.</li>
                 <li> The sum of a rational number and an irrational number is irrational.</li>
                 <li> A three-digit natural number is divisible by 9 if and only if the sum of its digits is divisible by 9.</li>
-                <li> If <m>A</m> and <m>B</m> are defined as in Checkpoint <xref ref="exe-review-set-inclusion" />, then <m>B \not\subseteq A</m>.</li>
+                <li> If <m>A</m> and <m>B</m> are defined as in <xref ref="exe-review-set-inclusion" />, then <m>B \not\subseteq A</m>.</li>
             </ol>
         </p>
     </statement>
@@ -126,7 +126,7 @@
             </image>
         </figure>
         <p>
-            Find a recurrence relation for <m>T_n</m> and prove that <m> T_n = F_{n+1}</m> as defined in Checkpoint <xref ref="exe-review-induction-fibonacci" />.
+            Find a recurrence relation for <m>T_n</m> and prove that <m> T_n = F_{n+1}</m> as defined in <xref ref="exe-review-induction-fibonacci" />.
         </p>
     </statement>
 </exercise>

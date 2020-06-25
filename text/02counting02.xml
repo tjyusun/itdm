@@ -5,8 +5,290 @@
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-permutations-combinations">
     <title>Permutations and Combinations</title>
+        <objectives>
+        <ul>
+            <li>Derive the formulas for permutations and combinations (of <m>n</m> objects taken <m>k</m> at a time), multi-permutations, and permutations with repetitions allowed.</li>
+            <li>Given a word problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
+        </ul>
+    </objectives>
     <p>
-        This is a longer sentence that is followed by another sentence.
-        Two sentences, and a second paragraph to follow.
+        In this section we get a little bit fancier and define some special quantities that show up frequently when counting objects or rearrangements.
+        First, recall that the <xref text="custom" ref="def-factorial">factorial</xref> of <m>n</m> is shorthand for the product <me>n! = n \times (n-1) \times \cdots \times 1</me>, which as we saw in the previous section, can be used to count the number of ways to sit <m>n</m> people in a row for a concert.
     </p>
+    <definition xml:id="def-permutation">
+    	<title>Permutation</title>
+    	<statement>
+    		<p>
+    			A <term>permutation</term> is a bijection from a finite set <m>S</m> to itself.
+    		</p>
+    	</statement>
+    </definition>
+    <remark xml:id="remark-permutation">
+    	<statement> 
+    		<p>
+    			If <m>|S| = n</m>, then there are <m>n!</m> bijections <m>S \rightarrow S</m>.
+				Equivalently,
+				<ul>
+					<li>There are <m>n!</m> ways to arrange <m>n</m> <em>distinct</em> objects in a row.</li>
+					<li>There are <m>n!</m> rearrangements of a word with <m>n</m> <em>distinct</em> letters. Each rearrangement is said to be a <em>permutation</em> of the <m>n</m> letters.</li>
+				</ul>
+			</p>
+		</statement>
+	</remark>
+	<example xml:id="eg-counting-bijections">
+		<title>Counting Bijections</title>
+		<statement>
+			<p>
+				Let <m>S = \{a,b,c,d\}</m>.
+				Then the function <m>f: S \rightarrow S</m> defined by
+				<me> f(a) = b, f(b) = d, f(c) = c, f(d) = a</me>
+				is one example of a bijection from <m>S</m> to <m>S</m>.
+				Since <m>|S| = 4</m>, there are a total of <m>4! = 24</m> bijections from <m>S</m> to itself.
+			</p>
+		</statement>
+	</example>
+
+	What if we wanted to rearrange <m>k</m> of the <m>n</m> distinct objects (i.e. only a subset)?
+
+	<exercise xml:id="ex-counting-EQUATION">
+		<title>EQUATION</title>
+		<statement>
+			<p>
+				How many four-letter words can be formed using the letters of the word 
+			</p>
+				<sidebyside width="20%" margins="auto"><p>EQUATION?</p></sidebyside>
+		</statement>
+		<hint>
+			How many choices do you have for the first letter? the second? the others?
+			Then use the <xref text="custom" ref="prin-prod-rule">Product Rule</xref>.
+		</hint>
+	</exercise>
+
+	<exploration xml:id="ex-counting-Pnk">
+		<statement>
+			<p>
+				Let <m>k \leq n</m>.
+				Use the <xref text="custom" ref="prin-prod-rule">Product Rule</xref> to count the number of ways to arrange <m>k</m> objects in a row, taking from a set of <m>n</m> distinct objects.
+			</p>
+			<p>
+				Then express your answer in terms of factorials, and complete the statement of <xref ref="prop-Pnk"/> below.
+			</p>
+		</statement>
+	</exploration>
+	<proposition xml:id="prop-Pnk">
+		<title><m>k</m>-permutation of an <m>n</m>-set</title>
+		<statement>
+			<p>
+				If <m>k \leq n</m>, then the number of permutations of <m>k</m> distinct elements from a set of size <m>n</m> is <fillin characters="20" />.
+			</p>
+		</statement>
+	</proposition>
+
+	<remark xml:id="remark-Pnk-notation">
+		<statement>
+			<p>
+				In some textbooks the above quantity is denoted by <m>P(n,k)</m> or <m>_nP_k</m>. When solving problems you may use either notation and leave your answer in that form.
+			</p>
+		</statement>
+	</remark>
+
+	<example xml:id="eg-counting-student-council">
+		<title>Student Council Representatives</title>
+		<statement>
+			<p>
+				How many ways can a class of 45 students elect a president, vice-president, and secretary to represent them on student council?
+			</p>
+		</statement>
+		<solution>
+			<p>
+				This corresponds to the number of permutations of 45 objects taken 3 at a time, so the total is <me>45 \cdot 44 \cdot 43 = 85140</me>.
+			</p>
+			<p>
+				One can also imagine the solution using the <xref text="custom" ref="prin-prod-rule">Product Rule</xref>: there are three steps to this operation:
+			</p>
+			<tabular>
+				<row>
+					<cell>elect a president:</cell>
+					<cell>45 choices</cell>
+				</row>
+				<row>
+					<cell>elect a vice-president:</cell>
+					<cell>44 choices</cell>
+				</row>
+				<row>
+					<cell>elect a secretary:</cell>
+					<cell>43 choices</cell>
+				</row>
+			</tabular>
+			<p>
+				Then the number of ways to do so is <m>45 \cdot 44 \cdot 43</m>.
+			</p>
+		</solution>
+	</example>
+
+	<exercise xml:id="ex-counting-ZAHLEN">
+		<title>ZAHLEN</title>
+		<statement>
+			<p>
+				<ol label="(a)">
+					<li>Count the number of three-letter words that can be formed from the letters of the word ZAHLEN.</li>
+					<li>How many of the words from (a) contain <alert>only consonants</alert>?</li>
+					<li>How many of the words from (a) contain <alert>contain exactly one vowel</alert>?</li>
+				</ol>
+			</p>
+		</statement>
+		<hint>
+			For part c., try using the <xref text="custom" ref="prin-prod-rule">Product Rule</xref>.
+			What steps need to be performed to form a word that satisfies the given condition?
+		</hint>
+		<answer>
+			<p>a. 120</p>
+			<p>b. 24</p>
+			<p>c. 72</p>
+		</answer>
+		<solution>
+			c. First, pick two consonants out of the four: <m>_4P_2</m> two-letter words can be formed.
+			Then, pick a vowel (2 choices), and insert it into the two-letter word (3 possible slots) to form the required three-letter word with exactly one vowel.
+			Thus the total number of such words is 
+			<me> _4P_2 \times 2 \times 3 = 72</me>.
+		</solution>
+	</exercise>
+
+	<p>
+		The next example shows that having <em>distinct</em> objects is crucial in the statement of <xref  ref="def-permutation"/>.
+	</p>
+	<example xml:id="eg-counting-YEET">
+		<title>Repeated Letters</title>
+		<statement>
+			<p>
+				Count the number of arrangements of the letters in the word YEET.
+			</p>
+			<p>
+				<alert>Solution</alert>
+				A misguided attempt to apply <xref ref="def-permutation" /> will yield <m>4! = 24</m> possible arrangements of the word YEET.
+				However, we see that there are only 12 possibilities when we list them all:
+			</p>
+				<sidebyside width="60%" margins="auto">
+				<tabular>
+					<row>
+						<cell>YEET</cell>
+						<cell>YETE</cell>
+						<cell>YTEE</cell>
+						<cell>TYEE</cell>
+						<cell>TEYE</cell>
+						<cell>TEEY</cell>
+					</row>
+					<row>
+						<cell>EETY</cell>
+						<cell>EEYT</cell>
+						<cell>ETYE</cell>
+						<cell>ETEY</cell>
+						<cell>EYET</cell>
+						<cell>EYTE</cell>
+					</row>
+				</tabular>
+				</sidebyside>
+			<p>
+				This is because the letters in the word YEET are <em>not</em> distinct!
+				If we distinguish each letter E in the word by calling them E<m>_1</m> and E<m>_2</m>, then we see that each arrangement above actually came from <alert>two</alert> arrangements, for instance:
+			</p>
+				<sidebyside width="70%" margins="auto">
+				<tabular>
+					<row>
+						<cell>YE<m>_1</m>E<m>_2</m>T and YE<m>_2</m>E<m>_1</m>T <m>\rightarrow</m> YEET</cell>
+					</row>
+					<row>
+						<cell>YE<m>_1</m>TE<m>_2</m> and YE<m>_2</m>TE<m>_1</m> <m>\rightarrow</m> YETE</cell>
+					</row>
+				</tabular>
+				</sidebyside>
+			<p>
+				Thus while <xref ref="def-permutation"/> predicts <m>4! = 24</m> arrangements of the four letters Y, E<m>_1</m>, E<m>_2</m>, and T, we see that for each arrangement either E<m>_1</m> is somewhere to the left, or somewhere to the right of E<m>_2</m>.
+				Hence we dividing by two to account for this overcounting, which gives the correct number, <m>4!/2 = 12</m>.
+			</p>
+
+		</statement>
+
+	</example>
+
+	<p>
+		What if three letter E's are repeated?
+		Following the same reasoning, we can distinguish them first as E<m>_1</m>, E<m>_2</m>, and E<m>_3</m>, then apply <xref ref="def-permutation"/>.
+		We will get a number that overcounts the actual answer by a factor of 6 this time, since there are <m>3! = 6</m> ways to arrange the three E's:
+	</p>
+		<sidebyside widths="12% 12% 12% 12% 12% 12%" margins="auto">
+		<p>E<m>_1</m>E<m>_2</m>E<m>_3</m></p>
+		<p>E<m>_1</m>E<m>_3</m>E<m>_2</m></p>
+		<p>E<m>_2</m>E<m>_1</m>E<m>_3</m></p>
+		<p>E<m>_2</m>E<m>_3</m>E<m>_1</m></p>
+		<p>E<m>_3</m>E<m>_1</m>E<m>_2</m></p>
+		<p>E<m>_3</m>E<m>_2</m>E<m>_1</m></p>
+		</sidebyside>
+	<p>
+		We generalize this to <xref ref="prop-perm-repeat"/>, which gives a way to count rearrangements of words when some letters are repeated. (We say the letters are elements of a <term>multiset</term>, which generalizes sets to allow for multiple instances of elements.)
+	</p>
+
+	<proposition xml:id="prop-perm-repeat">
+		<title>Permutations of a multiset</title>
+		<statement>
+			<p>
+				Let <m>S</m> be a set with <m>n</m> (not necessarily distinct) objects, such that there are <m>n_1</m> objects of type 1, <m>n_2</m> objects of type 2, <m>\ldots</m>, and <m>n_k</m> objects of type <m>k</m>, where <m>n_1 + n_2 + \cdots + n_k = n</m>.
+				Then the number of arrangements of these objects is
+				<me> \dfrac{n!}{n_1! n_2! \cdots n_k!}</me>.
+			</p>
+		</statement>
+	</proposition>
+
+	<exercise xml:id="ex-counting-MISSISSAUGA">
+		<title>MISSISSAUGA</title>
+		<statement>
+			<p>
+				How many arrangements can be formed using the letters of the word 
+			</p>
+			<sidebyside width="25%" margins="auto">
+				<p>MISSISSAUGA?</p>
+			</sidebyside>
+		</statement>
+		<answer><m>\dfrac{11!}{1!\ 2!\ 4!\ 2!\ 1!\ 1!} = \dfrac{11!}{2!\ 4!\ 2!} = 415800.</m></answer>
+	</exercise>
+
+	<exercise xml:id="ex-counting-MATHEMATICS">
+		<title>MATHEMATICS</title>
+		<statement>
+			<p>
+				Count the number of ways the letters of the word MATHEMATICS can be arranged so that
+				<ol label="(a)">
+					<li>The two M's are beside each other.</li>
+					<li>The two M's are <em>not</em> beside each other.</li>
+					<li>The word MATH appears somewhere in the arrangement.</li>
+				</ol>
+			</p>
+		</statement>
+		<hint>a. Treat <sq>MM</sq> as a single object.</hint>
+		<hint>b. How are parts a. and b. related?</hint>
+		<hint>c. Treat <sq>MATH</sq> as a single object.</hint>
+		<solution>
+			<p>
+				c. Treating <sq>MATH</sq> as a single object, we reduce the problem to counting the number of arrangements of eight distinct objects:
+			</p>
+			<sidebyside widths="13% 7% 7% 7% 7% 7% 7% 7%" margins="auto">
+				<p><sq>MATH</sq></p>
+				<p>E</p>
+				<p>M</p>
+				<p>A</p>
+				<p>T</p>
+				<p>I</p>
+				<p>C</p>
+				<p>S</p>
+			</sidebyside>
+			<p>
+				Hence there are <m>8!</m> rearrangements of MATHEMATICS where the word MATH appears.
+			</p>
+		</solution>
+	</exercise>
+
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+
 </section>

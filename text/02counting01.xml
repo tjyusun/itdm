@@ -5,8 +5,15 @@
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-basic-counting">
     <title>The Basic Counting Principles</title>
+        <objectives>
+        <ul>
+            <li>State the Sum Rule and the Product Rule, and explain how the Product Rule derives from the Sum Rule.</li>
+            <li>Given a counting problem, partition the objects being counted into subsets that facilitate the use of the Sum Rule.</li>
+            <li>Given a counting problem, describe the steps necessary to form the object or scenario being counted, and apply the Product Rule.</li>
+        </ul>
+    </objectives>
     <p>
-        In this chapter we will develop techniques for counting!
+        In this section (and chapter) we will develop techniques for counting!
         When you hear the word <em>count</em> you probably think about <em>listing</em> or <em>enumerating</em> objects.
         
         For example:
@@ -70,7 +77,7 @@
     </example>
 
     <p>
-    Example <xref ref="eg-counting-kiss-marry-kill"/> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?
+    <xref ref="eg-counting-kiss-marry-kill"/> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?
     </p>
 
     <exercise xml:id="ex-counting-coldplay">
@@ -84,12 +91,33 @@
                 </ol>
             </p>
         </statement>
-        <answer><p>6</p></answer>
+        <answer><p>a. 6; b. 2</p></answer>
+        <solution>
+            <p>
+                a. Listing all possibilities yields 6 ways without any restrictions:
+                
+                    <tabular>
+                        <row>
+                            <cell>(Mina, Lisa, Wendy)</cell>
+                            <cell>(Lisa, Wendy, Mina)</cell>
+                            <cell>(Wendy, Mina, Lisa)</cell>
+                        </row>
+                        <row>
+                            <cell>(Mina, Wendy, Lisa)</cell>
+                            <cell>(Lisa, Mina, Wendy)</cell>
+                            <cell>(Wendy, Lisa, Mina)</cell>
+                        </row>
+                    </tabular>
+            </p>
+            <p>
+                b. Exactly two of these seating arrangements has Lisa in the middle seat.
+            </p>
+        </solution>
     </exercise>
 
     <p>
         The techniques we will develop will help us count when the number of possibilities is too large that we can't simply list them all!
-        Here is one example where listing all possibilities seems like a <em>bad idea</em>:
+        For instance, the next example is one where listing all possibilities seems like a bad idea.
     </p>
 
     <example xml:id="eg-counting-dogs">
@@ -180,24 +208,26 @@
         <p>
             After an in-person term test or final exam, the course instructor and TAs get together and first verify that the number of papers handed in matches the number of students who wrote the test.
         </p>
-        <p>
-          
-                <image source="figs/test-papers.jpg" width="50%" />
+        
+            <sidebyside widths="50%">
+                <image source="figs/test-papers.jpg" width="50%"><description>Five piles of test papers on a brown desk.</description></image>
             <!--    <caption> So many papers to grade<ellipsis /></caption>
             -->
+            </sidebyside>
+            <p>
             Can you think of an efficient way to count the papers?            
         </p>
+        </statement>
         <hint>
             <p>You wouldn't just count them one by one<ellipsis /></p>
         </hint>
-    </statement>
     </exercise>
     <p>
-        In Checkpoint <xref ref="ex-counting-socks"/> the problem of counting the total number of pairs of socks had a straightforward solution. 
+        In <xref ref="ex-counting-socks"/> the problem of counting the total number of pairs of socks had a straightforward solution. 
         Since the socks were already separated by colour, and you knew how many of each colour you had, you just had to add the number of pairs for each colour to get the total.
     </p>
     <p>
-        For the test papers in Checkpoint <xref ref="ex-counting-test-papers" /> there are certainly multiple ways to do this.
+        For the test papers in <xref ref="ex-counting-test-papers" /> there are certainly multiple ways to do this.
         One method that TAs use is to form piles of ten, and count how many piles are produced.
         This is actually more similar to the socks example than you might think.
         Separating the huge pile of papers into groups of 10 has the same goal as separating socks by colour: one just has to add the numbers in each pile together in the end (which, if all piles have 10, is an easy calculation). 
@@ -205,6 +235,7 @@
     <p>
         This is the <term>Sum Rule</term> in action.
     </p>
+      
     <definition xml:id="def-partition">
         <title>Partition</title>
         <statement>
@@ -231,7 +262,7 @@
 
     <p>
         The <xref text="custom" ref="prin-sum-rule">Sum Rule</xref> essentially tells us that in order to count a set of objects, we can break these objects up into disjoint cases, count each case separately, then add them all together in the end.
-        Sounds reasonable, right?
+        Sounds reasonable!
     </p>
     <exercise xml:id="ex-counting-twitter">
         <title>Twitter Followers</title>
@@ -252,11 +283,11 @@
         </hint>
         <solution>
             <p>
-                If all followers among TJ's three accounts are different people, then we could just add <m>200 + 2500 + 12000 = 14700</m> to get the total number of unique followers.
+                If all followers among TJ's three accounts are different people, then we could just add <me>200 + 2500 + 12000 = 14700</me> to get the total number of unique followers.
                 However this is very possibly not the case!
             </p>
             <p>
-                For instance, if we knew that a hundred of TJ's followers on his personal account also followed the puppy auto-tweeter, then the number of unique followers among all three accounts is no more than 14600. 
+                For instance, if we knew that a hundred of TJ's followers on his personal account also follow the puppy auto-tweeter, then the number of unique followers among all three accounts is no more than 14600. 
                 This is lower if there is more overlap.
             </p>
             <p>
@@ -265,6 +296,11 @@
         </solution>
     </exercise>
 
+    <p>
+        When we need to count objects that are constructed by performing <em>successive steps</em> or operations that are independent, we use the <alert>Product Rule</alert>.
+    </p>
+    
+    
     <principle xml:id="prin-prod-rule">
     <title>Product Rule</title>
         <statement>
@@ -280,10 +316,111 @@
             </p>
         </statement>
     </principle>
+    
+    <exercise xml:id="ex-counting-outfit">
+        <title>Counting Outfits</title>
+        <statement>
+            <p>
+            You are deciding what outfit to wear to your Zoom class today. You have been putting off doing laundry, so you only have 3 clean shirts and 3 clean pairs of pants. Also, you have 8 pairs of socks to choose from.
 
+            How many different outfits can you wear to school today? (Assume you cannot go to school shirtless, but you can go pantless or barefoot<mdash/>no one will see!)
+            </p>
+        </statement>
+        <solution>
+            <p>
+            The operation of <em>picking an outfit to wear to school</em> can be broken down into the following steps:
+            <ol>
+                <li>Pick a shirt (3 choices)</li>
+                <li>Pick a pair of pants (4 choices, including no pants; regardless of which shirt you picked)</li>
+                <li>Pick a pair of socks (9 choices, including barefoot; regardless of which shirt/pants you wear)</li>
+            </ol>
+            So it takes 3 steps to decide on an outfit, where <m>r_1 = 3</m>, <m>r_2 = 4</m>, and <m>r_3 = 9</m>.
+            By the Product Rule, there are <m>3 \cdot 4 \cdot 9 = 108</m> different outfits you can choose to wear.
+            </p>
+        </solution>
+    </exercise>
 
+    <exercise xml:id="ex-counting-prove-product">
+        <title>Proof of the Product Rule</title>
+        <statement>
+            <p>
+                Use the <xref text="custom" ref="prin-sum-rule">Sum Rule</xref> to prove the <xref text="custom" ref="prin-prod-rule">Product Rule</xref>.
+            </p>
+        </statement>
+        <hint><p>Induction on <m>k</m>.</p></hint>
+    </exercise>
+    <example xml:id="eg-counting-mcq">
+        <title>Multiple Choice Exam</title>
+        <statement>
+            <p>
+                A multiple-choice exam has 20 questions and four choices for each question.
+                How many possible combinations of responses are there?
+            </p>
+            <sidebyside widths="30%">
+            <image source="figs/mcq1.png" width = "30%"><description>Multiple-choice bubble sheet with five questions and four boxes each for choices A, B, C, D.</description></image>            
+            </sidebyside>
+            </statement>
+            <solution>
+            <p>
+                Answering the whole test takes 20 individual, independent steps: picking one answer to each question.
+                If we assume each question needs to have one answer, then in the statement of the <xref ref="prin-prod-rule" text="custom">Product Rule</xref>, <m>r_1 = 4</m>, <m>r_2 = 4</m>, and so on until <m>r_{20} = 4</m>, giving a total of <me>\underbrace{4 \times 4 \times \cdots \times 4}_{\text{20 times}} = 4^{20}=1099511627776</me> possible answer combinations.
+            </p>
+            <p>
+                In other words, pure guessing as a strategy will on average result in a perfect score once every one trillion tries.
+                In comparison, the odds of matching six numbers in Lotto 6/49 is much better: one in 14 million.
+            </p>
+            <p>
+                If we allow questions to be left unanswered, then there are <m>5^{20}=95367431640625</m>, around 96 trillion possible ways to answer the test. 
+            </p>
+        </solution>
+    </example>
+    
+    <exercise xml:id="ex-counting-coldplay2">
+        <title>Concert Seating with <m>n</m> people</title>
+        <statement>
+            <p>
+                Apply the Product Rule to answer (a) and (b) of <xref ref="ex-counting-coldplay" />, then generalize this method to count the number of ways to sit <m>n</m> people in a row of <m>n</m> seats.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We can generalize <xref ref="ex-counting-coldplay"/>as follows: if <m>n</m> people want to sit in a row of <m>n</m> seats (with no restriction), then the whole operation of assigning seats to people takes <m>n</m> steps, where the first person has <m>n</m> seats to choose from, the next person has <m>n-1</m>, and so on, until 1 seat is left for the last person.
+                The Product Rule then gives a total number of
+                <me>n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2 \cdot 1</me> ways that <m>n</m> people can sit in <m>n</m> seats in a row.
+            </p>
+        </solution>
+    </exercise>
+    <p>
+        Because the following operation frequently turns up in counting problems, we have a special name for it.
+    </p>
+
+    <definition xml:id="def-factorial">
+        <title>Factorial</title>
+        <statement>
+            <p>
+            For integer <m>n \geq 0</m>, the <term>factorial</term> of <m>n</m>, denoted by <m>n!</m>, is 
+            <me> n! = \prod_{i=1}^n i = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2 \cdot 1</me>.
+            By convention we define <m>0! = 1</m>.
+            </p>
+        </statement>
+    </definition>
+    <remark xml:id="remark-factorial">
+        <statement>
+            <p>
+                For problems where the answer involves a factorial, it is fine to leave the factorial in your answer without computing the actual value.
+            </p>
+        </statement>
+    </remark>
+    <example xml:id="eg-counting-dogs-again">
+        <title>Dog Adoption, again</title>
+        <statement>
+        <p>
+            <xref ref="eg-counting-dogs"/> had too many combinations to list, but using the <xref text="custom" ref="prin-prod-rule">Product Rule</xref> we see that there are a total of <me>10! = 10 \times 9 \times 8 \times \cdots \times 1 = 3628800 \text{ combinations}</me>.
+        </p>
+        </statement>
+    </example>
 
 <solutions inline="solution">
-    <title>Solutions to Checkpoints</title>
+    <title>Solutions to Selected Checkpoints</title>
 </solutions>
 </section>

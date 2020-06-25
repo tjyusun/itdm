@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-24T17:52:40-04:00    *-->
+<!--*    on 2020-06-25T03:59:26-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -87,7 +87,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="MAT202notes.html"><span class="title">MAT202: Introduction to Discrete Mathematics</span></a></h1>
+<h1 class="heading"><a href="MAT202.html"><span class="title">MAT202: Introduction to Discrete Mathematics</span></a></h1>
 <p class="byline">TJ Yusun</p>
 </div>
 </div></div>
@@ -103,9 +103,10 @@ MathJax.Hub.Config({
 <nav id="toc"><ul>
 <li class="link frontmatter">
 <a href="front.html" data-scroll="front"><span class="title">Front Matter</span></a><ul>
+<li><a href="front-welcome.html" data-scroll="front-welcome">Welcome Message</a></li>
+<li><a href="front-how-to-use.html" data-scroll="front-how-to-use">How to Use This Resource</a></li>
+<li><a href="front-feedback.html" data-scroll="front-feedback">Feedback</a></li>
 <li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
-<li><a href="front-welcome.html" data-scroll="front-welcome">Welcome to the Course!</a></li>
 </ul>
 </li>
 <li class="link">
@@ -126,16 +127,16 @@ MathJax.Hub.Config({
 <li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="feedback-link" href="mailto:tj.yusun@utoronto.ca?subject=mat202-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-reading-writing-proofs"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Reading and Writing Proofs</span>
 </h2>
-<p id="p-66">Proofs are a form of communication. They are used to argue (that a claim holds true); and sometimes explain (<em class="emphasis">why</em> a claim is true).</p>
+<p id="p-70">Proofs are a form of communication. They are used to argue (that a claim holds true); and sometimes explain (<em class="emphasis">why</em> a claim is true).</p>
 <article class="activity project-like" id="activity-2"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-67">When writing proofs, one needs to be <em class="emphasis">clear</em>, <em class="emphasis">complete</em>, and <em class="emphasis">correct</em>. Comment on the three proofs below of the statement</p>
+<p id="p-71">When writing proofs, one needs to be <em class="emphasis">clear</em>, <em class="emphasis">complete</em>, and <em class="emphasis">correct</em>. Comment on the three proofs below of the statement</p>
 <div class="displaymath">
 \begin{equation*}
 \text{Let } m \in \mathbb{Z}\text{. Then }m\text{ is even if and only if } m^3 \text{\ is even}\text{.}
@@ -148,23 +149,23 @@ MathJax.Hub.Config({
 <li id="li-44">easiest to read?</li>
 <li id="li-45">correct?</li>
 </ul>
-<p id="p-68"><em class="alert">Proof 1</em> (\(\Rightarrow\)) \(m = 2k \Rightarrow m^3 = 8k^3 = 2(4k^3)\text{,}\) so \(m^3\) is even.</p>
-<p id="p-69">(\(\Leftarrow\)) By contradiction. Assume \(m^3\) is even but \(m\) is odd. Then \(m = 2k + 1 \Rightarrow m^3 =(2k+1)^3 = 8k^3 + 12k^2 + 6k + 1\text{,}\) which is odd.</p>
-<p id="p-70">Contradiction, so \(m\) must be even. So \(m\) even \(\Leftrightarrow\) \(m^3\) even.</p>
-<p id="p-71"><em class="alert">Proof 2</em></p>
+<p id="p-72"><em class="alert">Proof 1</em> (\(\Rightarrow\)) \(m = 2k \Rightarrow m^3 = 8k^3 = 2(4k^3)\text{,}\) so \(m^3\) is even.</p>
+<p id="p-73">(\(\Leftarrow\)) By contradiction. Assume \(m^3\) is even but \(m\) is odd. Then \(m = 2k + 1 \Rightarrow m^3 =(2k+1)^3 = 8k^3 + 12k^2 + 6k + 1\text{,}\) which is odd.</p>
+<p id="p-74">Contradiction, so \(m\) must be even. So \(m\) even \(\Leftrightarrow\) \(m^3\) even.</p>
+<p id="p-75"><em class="alert">Proof 2</em></p>
 <div class="displaymath">
 \begin{equation*}
 m \text{ even } \Leftrightarrow m = 2k \Leftrightarrow m^3 = 8k^3 \Leftrightarrow  m^3 = 2(4k^3) \Leftrightarrow  m^3 \text{ even}\text{,}
 \end{equation*}
 </div>
 <p data-braille="continuation">hence proven.</p>
-<p id="p-72"><em class="alert">Proof 3</em> We want to prove that</p>
+<p id="p-76"><em class="alert">Proof 3</em> We want to prove that</p>
 <div class="displaymath">
 \begin{equation*}
 m \text{ is even if and only if } m^3 \text{ is even}\text{.}
 \end{equation*}
 </div>
-<p id="p-73">(\(\Rightarrow\)) First, we show \(m\) even \(\Rightarrow\) \(m^3\) even. If \(m\) is even, then we can write \(m = 2k\) for some \(k \in \mathbb{Z}\text{.}\) Then,</p>
+<p id="p-77">(\(\Rightarrow\)) First, we show \(m\) even \(\Rightarrow\) \(m^3\) even. If \(m\) is even, then we can write \(m = 2k\) for some \(k \in \mathbb{Z}\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{align*}
 m^3 \amp = (2k)^3\\
@@ -173,8 +174,8 @@ m^3 \amp = (2k)^3\\
 \end{align*}
 </div>
 <p data-braille="continuation">Since \(k \in \mathbb{Z}\text{,}\) then \(4k^3 \in \mathbb{Z}\) as well, and so \(m^3\) is even.</p>
-<p id="p-74">(\(\Leftarrow\)) Next, we prove that \(m^3\) even \(\Rightarrow\) \(m\) even. To do this we prove the contrapositive: If \(m\) is odd, then \(m^3\) is odd.</p>
-<p id="p-75">If \(m\) is odd, then there is a \(k \in \mathbb{Z}\) such that \(m = 2k + 1\text{.}\) Then</p>
+<p id="p-78">(\(\Leftarrow\)) Next, we prove that \(m^3\) even \(\Rightarrow\) \(m\) even. To do this we prove the contrapositive: If \(m\) is odd, then \(m^3\) is odd.</p>
+<p id="p-79">If \(m\) is odd, then there is a \(k \in \mathbb{Z}\) such that \(m = 2k + 1\text{.}\) Then</p>
 <div class="displaymath">
 \begin{align*}
 m^3 \amp = (2k+1)^3\\
@@ -182,10 +183,10 @@ m^3 \amp = (2k+1)^3\\
 \amp = 2(4k^3 + 6k^2 + 3k) + 1\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Since \(k \in \mathbb{Z}\text{,}\) then \(4k^3 + 6k^2 + 3k \in \mathbb{Z}\) as well. Therefore \(m^3\) is odd. This completes the proof.</p></article><p id="p-76">The use of English words makes proofs more approachable and understandable. Here are some commonly-used phrases in mathematical proofs. Note the use of the plural <em class="emphasis">we</em> instead of the singular <em class="emphasis">I</em>.</p>
+<p data-braille="continuation">Since \(k \in \mathbb{Z}\text{,}\) then \(4k^3 + 6k^2 + 3k \in \mathbb{Z}\) as well. Therefore \(m^3\) is odd. This completes the proof.</p></article><p id="p-80">The use of English words makes proofs more approachable and understandable. Here are some commonly-used phrases in mathematical proofs. Note the use of the plural <em class="emphasis">we</em> instead of the singular <em class="emphasis">I</em>.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:50%;justify-content:center;">
-<p id="p-77"><em class="alert">Declare intentions</em></p>
+<p id="p-81"><em class="alert">Declare intentions</em></p>
 <ul class="disc">
 <li id="li-46">We will prove...</li>
 <li id="li-47">We want to show that...</li>
@@ -195,7 +196,7 @@ m^3 \amp = (2k+1)^3\\
 </ul>
 </div>
 <div class="sbspanel" style="width:50%;justify-content:center;">
-<p id="p-78"><em class="alert">Clarify implications</em></p>
+<p id="p-82"><em class="alert">Clarify implications</em></p>
 <ul class="disc">
 <li id="li-51">Since... then...</li>
 <li id="li-52">Because..., we have...</li>
@@ -205,7 +206,7 @@ m^3 \amp = (2k+1)^3\\
 </ul>
 </div>
 </div></div>
-<p id="p-79"><em class="alert">Explain steps</em></p>
+<p id="p-83"><em class="alert">Explain steps</em></p>
 <ul class="disc">
 <li id="li-56">By assumption, we know that...</li>
 <li id="li-57">By simplication/manipulation,rearranging,...</li>
@@ -214,9 +215,9 @@ m^3 \amp = (2k+1)^3\\
 <article class="activity project-like" id="exe-review-proof-writing"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-80">Write a complete and convincing proof of the following claim that uses the mathematical statements given below (in some order). Note that this is a proof by contradiction.</p>
-<p id="p-81"><em class="alert">Claim</em>: Let \(A, B\) be subsets of some universal set \(U\text{.}\) Prove that if \((A \cup B)^c = A^c \cup B^c\text{,}\) then \(A \subseteq B\text{.}\)</p>
-<div class="displaymath" id="p-82">
+<p id="p-84">Write a complete and convincing proof of the following claim that uses the mathematical statements given below (in some order). Note that this is a proof by contradiction.</p>
+<p id="p-85"><em class="alert">Claim</em>: Let \(A, B\) be subsets of some universal set \(U\text{.}\) Prove that if \((A \cup B)^c = A^c \cup B^c\text{,}\) then \(A \subseteq B\text{.}\)</p>
+<div class="displaymath" id="p-86">
 \begin{align*}
 \amp x \in A \amp \amp x \in A^c \cup B^c\\
 \amp x \not\in B \amp \amp x \in A \cup B\\

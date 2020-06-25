@@ -140,7 +140,7 @@
 <exercise xml:id="exe-review-euclid-proof">
     <statement>
         <p>
-            Prove Lemma <xref ref="lem-euclid" /> using Theorem <xref ref="thm-bezout" />.
+            Prove <xref ref="lem-euclid" /> using <xref ref="thm-bezout" />.
         </p>
     </statement>
 </exercise>
@@ -149,7 +149,7 @@
     <statement>
         <p>
             Let <m>m,a,b \in \mathbb{N}</m>.
-            Using Theorem <xref ref="thm-bezout" />, prove that if <m>m \mid ab</m> and <m>\gcd(a,m) = 1</m>, then <m>m \mid b</m>.
+            Using <xref ref="thm-bezout" />, prove that if <m>m \mid ab</m> and <m>\gcd(a,m) = 1</m>, then <m>m \mid b</m>.
         </p>
     </statement>
 </exercise>
