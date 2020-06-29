@@ -17,7 +17,36 @@
         <date><today /></date>
     </titlepage>
    
-   
+        <colophon xml:id="colophon">
+
+        <edition>Introduction to Discrete Mathematics: September 2020</edition>
+
+        <website>
+            <name><c>itdm</c></name>
+            <address>https://tjyusun.com/</address>
+            <!-- Update to git later -->
+        </website>
+
+        <copyright>
+            <year>2019<ndash/>2020</year>
+            <holder>Timothy Yusun</holder>
+            <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
+            <shortlicense>
+                This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You can view a copy of the license <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">here</url>.
+            
+                    <image source = "figs/by-nc-sa" width="25%"/>
+
+            </shortlicense>
+        </copyright>
+
+        <credit>
+            <role>Source files</role>
+            <entity>
+                The source files for this document can be found at <url href="http://github.com/">this git repository</url>. The sources are licensed under the <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 License</url>.
+        </entity>
+        </credit>
+
+    </colophon>
 
     <preface xml:id="front-welcome">
         <title>Welcome Message</title>
@@ -111,36 +140,7 @@
         </attribution>
 -->
     </preface>
-    <colophon xml:id="colophon">
 
-        <edition>Introduction to Discrete Mathematics: September 2020</edition>
-
-        <website>
-            <name><c>itdm</c></name>
-            <address>https://tjyusun.com/</address>
-            <!-- Update to git later -->
-        </website>
-
-        <copyright>
-            <year>2019<ndash/>2020</year>
-            <holder>Timothy Yusun</holder>
-            <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
-            <shortlicense>
-                This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You can view a copy of the license <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">here</url>.
-            
-                    <image source = "figs/by-nc-sa" width="25%"/>
-
-            </shortlicense>
-        </copyright>
-
-        <credit>
-            <role>Source files</role>
-            <entity>
-                The source files for this document can be found at <url href="http://github.com/">this git repository</url>. The sources are licensed under the <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 License</url>.
-        </entity>
-        </credit>
-
-    </colophon>
 </frontmatter>  
 
 

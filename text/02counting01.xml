@@ -41,7 +41,8 @@
                 <p>
                 Suppose the three names are A, B, and C.
                 We can just list all possibilities to find that there are 6 ways:
-                <table>
+                </p>
+                <sidebyside width="60%" margins="auto">
                 <tabular>
                     <row>
                         <cell right="medium">Kiss</cell>
@@ -71,8 +72,7 @@
                         <cell>A</cell>
                     </row>
                 </tabular>
-                </table>
-                </p>
+                </sidebyside>
             </solution>
     </example>
 
@@ -95,7 +95,8 @@
         <solution>
             <p>
                 a. Listing all possibilities yields 6 ways without any restrictions:
-                
+            </p>
+                    <sidebyside width="80%" margins="auto">
                     <tabular>
                         <row>
                             <cell>(Mina, Lisa, Wendy)</cell>
@@ -108,7 +109,7 @@
                             <cell>(Wendy, Lisa, Mina)</cell>
                         </row>
                     </tabular>
-            </p>
+                </sidebyside>
             <p>
                 b. Exactly two of these seating arrangements has Lisa in the middle seat.
             </p>
@@ -135,7 +136,8 @@
         </p>
         <p>
             For example, the arrangement 
-            <table>
+        </p>
+            <sidebyside width="80%" margins="auto">
             <tabular>
                 <row>
                     <cell>J</cell>
@@ -174,8 +176,7 @@
                     <cell>10</cell>
                 </row>
             </tabular>
-            </table>
-        </p>
+            </sidebyside>
         <p>
             means that dog J is assigned to human 1, dog I is assigned to human 2, and so on, while the arrangement DJABECIHGF means dog D is assigned to human 1, dog J to human 2, and so on<ellipsis />
         </p>
@@ -401,15 +402,17 @@
             For integer <m>n \geq 0</m>, the <term>factorial</term> of <m>n</m>, denoted by <m>n!</m>, is 
             <me> n! = \prod_{i=1}^n i = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2 \cdot 1</me>.
             By convention we define <m>0! = 1</m>.
+            <notation>
+                <usage>n!</usage>
+                <description>factorial</description>
+            </notation>
             </p>
         </statement>
     </definition>
     <remark xml:id="remark-factorial">
-        <statement>
             <p>
                 For problems where the answer involves a factorial, it is fine to leave the factorial in your answer without computing the actual value.
             </p>
-        </statement>
     </remark>
     <example xml:id="eg-counting-dogs-again">
         <title>Dog Adoption, again</title>

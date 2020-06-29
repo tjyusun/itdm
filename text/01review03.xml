@@ -9,8 +9,13 @@
 <p> For completeness we restate here the definition of divisibility and the Division Algorithm.</p>
 
 <definition xml:id="def-divisibility">
+    <title>Divisibility and Primes</title>
     <statement>
         <p>
+            <notation>
+                <usage>b \mid a</usage>
+                <description>divides; divisible by</description>
+            </notation>
             Let <m>a \in \mathbb{Z}</m> and <m>b \in \mathbb{Z} \setminus \{0\}</m>.
             We say that <m>a</m> <term> is divisible by</term> <m>b</m>, or <m>b</m> <term>divides</term> <m>a</m>, denoted by <me>b \mid a</me>, if there exists <m>m \in \mathbb{Z}</m> such that <m>a = mb</m>.
         </p>
@@ -24,6 +29,7 @@
 </definition>
 
 <theorem xml:id="thm-division-algorithm">
+    <title>Division Algorithm</title>
     <statement>
         <p>
             Let <m>a,b \in \mathbb{N}</m>.
@@ -50,6 +56,10 @@
     <title>GCD</title>
     <statement>
         <p>
+            <notation>
+                <usage>\gcd(a,b)</usage>
+                <description>greatest common divisor</description>
+            </notation>
             Given integers <m>a</m> and <m>b</m> not both zero, their <term>greatest common divisor</term>, denoted by <me>\gcd(a,b)</me>, is the largest integer that divides both numbers.
         </p>
         <p>

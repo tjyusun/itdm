@@ -1,0 +1,62 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-06-28T22:00:53-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example example-like"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Picking Bridesmaids.</span>
+</h6>
+<p>Adele is getting married soon, and due to space constraints at the venue, needs to pick exactly two of her five best friends (Mel B., Mel C., Emma, Geri, and Victoria) to be her bridesmaids. How many possible combinations are there?</p>
+<p><em class="alert">Solution</em> Each combination of bridesmaids corresponds to a rearrangement of the symbols \(\circ \circ \times \times \times\text{,}\) given a <em class="emphasis">fixed</em> arrangement of the five names in a row; for instance, the arrangement</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Mel B.</td>
+<td class="l m b0 r0 l0 t0 lines">Mel C.</td>
+<td class="l m b0 r0 l0 t0 lines">Emma</td>
+<td class="l m b0 r0 l0 t0 lines">Gerri</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Victoria</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\times\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\times\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\times\)</td>
+</tr>
+</table></div></div></div>
+<p>means that Mel B. and Gerri will be bridesmaids, while</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Mel B.</td>
+<td class="l m b0 r0 l0 t0 lines">Mel C.</td>
+<td class="l m b0 r0 l0 t0 lines">Emma</td>
+<td class="l m b0 r0 l0 t0 lines">Gerri</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Victoria</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\times\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\times\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\times\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\circ\)</td>
+</tr>
+</table></div></div></div>
+<p>corresponds to Geri and Victoria being chosen. Applying <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a> to the three \(\times\)'s and two \(\circ\)'s, we see that there are exactly \(\dfrac{5!}{2! 3!} = 10\) possible combinations.</p>
+<p><em class="alert">Note</em> When the usual formula for \(k\)-permutations from an \(n\)-set (<a class="xref" data-knowl="./knowl/prop-Pnk.html" title="Proposition 2.2.5: \(k\)-permutation of an \(n\)-set">Proposition 2.2.5</a>)) is applied to the previous example, we get a total of \(\dfrac{5!}{(5-3)!} = 60\text{,}\) which is incorrect. The reason is that this formula treats the pairs</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;">
+<div class="sbspanel" style="width:41.6666666666667%;justify-content:flex-start;"><p>(Geri, Victoria)</p></div>
+<div class="sbspanel" style="width:16.6666666666667%;justify-content:flex-start;"><p>and</p></div>
+<div class="sbspanel" style="width:41.6666666666667%;justify-content:flex-start;"><p>(Victoria, Geri)</p></div>
+</div></div>
+<p>as different outcomes, while for this example they both correspond to the same combination of \(\{\text{Geri}, \text{Victoria}\}\) being chosen as bridesmaids, since the order doesn't matter.</p></article><span class="incontext"><a href="sec-permutations-combinations.html#eg-counting-bridesmaids">in-context</a></span>
+</body>
+</html>

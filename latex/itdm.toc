@@ -1,0 +1,28 @@
+\hypertarget {x:book:MAT202}{}
+\contentsline {chapter}{Welcome Message}{v}{chapter*.1}%
+\contentsline {chapter}{How to Use This Resource}{vii}{chapter*.2}%
+\contentsline {chapter}{Feedback}{viii}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Review of MAT102}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sets and Functions}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Logic and Proof Techniques}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Integers and Divisibility}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Reading and Writing Proofs}{6}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Counting Techniques}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Basic Counting Principles}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Solutions to Selected Checkpoints}{13}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Permutations and Combinations}{14}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Solutions to Selected Checkpoints}{20}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Binomial Coefficients}{21}{section.2.3}%
+\contentsline {section}{\numberline {2.4}The Balls in Bins Formula}{21}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Combinatorial Arguments}{21}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Exercises}{21}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Pigeonhole and Inclusion-Exclusion}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The Pigeonhole Principle}{23}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Principle of Inclusion-Exclusion}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Exercises}{23}{section.3.3}%
+\vspace {\normalbaselineskip }
+\contentsline {chapter}{\numberline {A}Notation}{24}{appendix.A}%
+\contentsline {chapter}{\numberline {B}List of Results}{25}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Solutions to Selected Exercises}{27}{appendix.C}%
+\contentsline {chapter}{References}{28}{appendix*.76}%
+\contentsfinish 

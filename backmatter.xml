@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<backmatter xml:id="back" xmlns:xi="http://www.w3.org/2001/XInclude">
+    
+    <appendix xml:id="app-notation">
+    	<title>Notation</title>
+    	<notation-list />
+    </appendix>
+
+	<appendix xml:id="app-definitions-theorems">
+		<title>List of Results</title>
+    	<list-of elements="definition theorem proposition lemma" divisions="section" />
+    </appendix>
+    
+
+    <solutions divisional="solution">
+    <title>Solutions to Selected Exercises</title>
+    </solutions>
+
+<references>
+
+
+<biblio xml:id="bib-fuchs-102">
+	Fuchs, S., 2017. MAT102H5 Introduction to Mathematical Proofs. (Course Notes)
+</biblio>
+<biblio xml:id="bib-kolachana-2019">
+	Kolachana, A., Mahesh, K., Ramasubramanian, K., 2019. <url href="https://doi.org/10.1007/978-981-13-7326-8_18">Use of permutations and combinations in India</url>, in: Kolachana, A., Mahesh, K., Ramasubramanian, K. (Eds.), Studies in Indian Mathematics and Astronomy: Selected Articles of Kripa Shankar Shukla. Springer Singapore, Singapore, pp. 356–376. 
+</biblio>
+
+<biblio xml:id="bib-wilson-2015">
+	Wilson, R., Watkins, J.J., 2013. Combinatorics: Ancient &amp; Modern. OUP Oxford.
+</biblio>
+
+</references>
+
+</backmatter>
+
+
+

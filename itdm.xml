@@ -16,12 +16,16 @@
         \usepackage{tikz}
         \usepackage{calculator}
         \usepackage{pgfplots}
+        \usepackage{ascii}
         \pgfplotsset{compat=1.15, tick label style={font=\scriptsize}}
         \usetikzlibrary{shapes, patterns, snakes}
         \usetikzlibrary{arrows,arrows.meta,decorations.markings}
         \usetikzlibrary{graphs,graphs.standard}
         \tikzstyle{vertex}=[shape=circle, minimum size=2mm, inner sep=0, fill]
         \tikzstyle{opendot}=[shape=circle, minimum size=2mm, inner sep=0, fill=white, draw]
+        \DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+        \DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+        \DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
     </latex-image-preamble>
     
     <latex-preamble>
@@ -32,9 +36,7 @@
     </latex-preamble>
     
     <macros>
-        \DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
-        \DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
-        \DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+
             
         \newcommand{\vheart}{\textcolor{red}{\varheart}}
         \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
@@ -81,7 +83,10 @@
     <xi:include href="frontmatter.xml" />
     <xi:include href="text/01review00.xml" />
     <xi:include href="text/02counting00.xml" />
+    <xi:include href="text/03principles00.xml" />
+
     
+    <xi:include href="backmatter.xml" />
     <!--
     <figure>
     <caption>Sample video</caption>

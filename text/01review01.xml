@@ -18,7 +18,12 @@
     <definition xml:id="def-set-inclusion-equality">
         <title> Set Inclusion and Equality</title>
         <statement>
-            <p> If <m>A</m> and <m>B</m> are sets in some universe <m>U</m>, then we say <m>A</m> <term>is a subset of </term> <m>B</m>, denoted by <m>A \subseteq B</m>, if
+            <p>
+            <notation>
+                <usage>A \subseteq B</usage>
+                <description>set inclusion</description>
+            </notation>
+            If <m>A</m> and <m>B</m> are sets in some universe <m>U</m>, then we say <m>A</m> <term>is a subset of </term> <m>B</m>, denoted by <m>A \subseteq B</m>, if
             <me> (\forall x \in U)(x \in A \Rightarrow x \in B)</me>.
             We say that <m>A</m> and <m>B</m> are <term>equal</term> as sets if <m>A \subseteq B</m> and <m>B \subseteq A</m> both hold. 
             This means that <me>(\forall x \in U)(x \in A \Leftrightarrow x \in B)</me>.
@@ -27,7 +32,7 @@
     </definition>
     
     <exercise xml:id="exe-review-set-inclusion">
-        <title>TEST</title>
+        <title>Prove Set Inclusion</title>
         <statement>
             <p> Define
                 <me> A = \{k \in \mathbb{Z} : k = 6s + 3 \text{ for some } s \in \mathbb{Z}\}</me> and 
@@ -46,6 +51,26 @@
 
     <p>
         We will use the standard notation for these sets of numbers:
+            <notation>
+                <usage>\mathbb{N}</usage>
+                <description>natural numbers</description>
+            </notation>
+            <notation>
+                <usage>\mathbb{Z}</usage>
+                <description>integers</description>
+            </notation>
+            <notation>
+                <usage>\mathbb{Q}</usage>
+                <description>rational numbers</description>
+            </notation>
+            <notation>
+                <usage>\mathbb{R}</usage>
+                <description>real numbers</description>
+            </notation>
+             <notation>
+                <usage>(a,b), [a,b], \text{etc.}</usage>
+                <description>intervals of real numbers</description>
+            </notation>
         <md>
             <mrow> \mathbb{N} \amp = \{1,2,3,\ldots,\}</mrow>
             <mrow> \mathbb{Z} \amp = \{\ldots,-2,-1,0,1,2,\ldots\}</mrow>
@@ -67,6 +92,10 @@
         <title> Function </title>
         <statement>
         <p>
+            <notation>
+                <usage>f: A \rightarrow B</usage>
+                <description>function</description>
+            </notation>
             A <term> function </term> <me>f: A \rightarrow B</me> is a rule that takes elements from its <term>domain</term> <m>A</m> and assigns to each one an element from the <term>codomain</term> <m>B</m>.
         </p>
         </statement>
@@ -87,6 +116,7 @@
     </definition>
 
     <exercise>
+        <title>Injective, surjective, bijective, or none?</title>
         <statement>
             <p> For each function, determine if it is injective, surjective, bijective, or none of these:
             </p>
@@ -106,6 +136,10 @@
         <title>Composition</title>
         <statement>
             <p>
+            <notation>
+                <usage>(g \circ f)(x)</usage>
+                <description>function composition</description>
+            </notation>
                 Given two functions <m>f: A \rightarrow B</m> and <m>g: B \rightarrow C</m>, the <term>composition</term> <m>g \circ f: A \rightarrow C</m> is defined as the function <me>(g \circ f)(x) = g(f(x))</me> for all <m>x \in A</m>.
             </p>
         </statement>
@@ -113,6 +147,7 @@
 
     
     <theorem xml:id="thm-composition-of-bijections">
+        <title>Properties of Compositions</title>
         <statement>
             <p>
                 The composition of two (injections, surjections, bijections) is a(n) (injection, surjection, bijection).
@@ -131,15 +166,26 @@
     </p>
 
     <definition xml:id="def-cardinality">
+        <title>Cardinality Relations</title>
         <statement>
-            <p>Two sets <m>A</m> and <m>B</m> are said to have the <term>same cardinality</term>, written as <me>|A| = |B|</me>, if there exists a bijection between them.
+            <p>
+            <notation>
+                <usage>|A| = |B|</usage>
+                <description>cardinality, equal</description>
+            </notation>
+            <notation>
+                <usage>|A| \leq |B|</usage>
+                <description>cardinality, less than</description>
+            </notation>
+            Two sets <m>A</m> and <m>B</m> are said to have the <term>same cardinality</term>, written as <me>|A| = |B|</me>, if there exists a <em>bijection</em> between them.
             </p>
 
-            <p>We also say <m>A</m> has cardinality <term>less than or equal to</term> the cardinality of <m>B</m>, written as <me>|A| \leq |B|</me>, if there exists an injective function from <m>A</m> to <m>B</m>.</p>
+            <p>We also say <m>A</m> has cardinality <term>less than or equal to</term> the cardinality of <m>B</m>, written as <me>|A| \leq |B|</me>, if there exists an <em>injective</em> function from <m>A</m> to <m>B</m>.</p>
         </statement>
     </definition>
 
     <exercise>
+        <title>There are as many natural numbers as odd integers</title>
         <statement>
             <p> Prove that the set of odd integers <me>O = \{\ldots,-3,-1,1,3,\ldots\}</me> has the same cardinality as <m>\mathbb{N}</m>.</p>
         </statement>
@@ -152,7 +198,12 @@
     <definition xml:id="def-power-set">
         <title>Power Set</title>
         <statement>
-            <p> Let <m>A</m> be a set. The <term>power set</term> of <m>A</m>, denoted by <m>P(A)</m>, is the set <me>P(A) = \{X : X \subseteq A\}</me>, that is, it contains all subsets of <m>A</m>.
+            <p>
+            <notation>
+                <usage>P(A)</usage>
+                <description>power set</description>
+            </notation>
+                Let <m>A</m> be a set. The <term>power set</term> of <m>A</m>, denoted by <m>P(A)</m>, is the set <me>P(A) = \{X : X \subseteq A\}</me>, that is, it contains all subsets of <m>A</m>.
             </p>
         </statement>
     </definition>

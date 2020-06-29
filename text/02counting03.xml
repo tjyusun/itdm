@@ -5,8 +5,214 @@
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-binomial-coefficients">
     <title>Binomial Coefficients</title>
+    <objectives>
+        <ul>
+            <li>Prove the Binomial Theorem and apply it to find coefficients of terms in expansions.</li>
+            <li>Describe and prove simple identities involving binomial coefficients possibly in relation to Pascal's Triangle.</li>
+        </ul>
+    </objectives>
     <p>
-        This is a longer sentence that is followed by another sentence.
-        Two sentences, and a second paragraph to follow.
+        In this section we discuss the quantity <m>\displaystyle\binom{n}{k}</m> in more detail and explore some nice related identities and applications.
     </p>
+
+
+    <exploration xml:id="expl-pingala">
+    	<title>The Meru Prastaara (The Holy Mountain)</title>
+    	<introduction>
+    		<p>
+    		</p>
+    		<sidebyside width="65%" margins="auto">
+    			<image source="figs/meru-prastaara.png" width="60%"><description>The Meru Prastaara. Numbers in boxes arranged in a triangular shape.</description></image>
+    		</sidebyside>
+    		<p>
+    			The Indian mathematician and writer <url href="https://en.wikipedia.org/wiki/Pingala">Piṅgala</url> (200 <bc />) in his text the <pubtitle>Chandaḥśāstra</pubtitle> studied variations in poetic metres when using only either long (<em>g</em>, for <em>guru</em>) and short (<em>l</em>, for <em>laghu</em>) syllables.
+    			<aside>
+    				This exposition is based on <xref ref="bib-kolachana-2019"/>, p. 390.
+    			</aside>
+    			He explained that monosyllabic (or one-syllable) metres have two variations<mdash/>either <em>g</em> or <em>l</em><mdash/>while disyllabic metres have four different kinds: 
+    		</p>
+    		<sidebyside width="30%" margins = "auto">
+    			<p><em>gg</em>, <em>gl</em>, <em>lg</em>, or <em>ll</em>.</p>
+    		</sidebyside>
+    		<p>
+    			Or, one with no <em>l</em>'s, two with one <em>l</em>, and one with two <em>l</em>'s.
+    		</p>
+			<p>
+				Piṅgala observed that each two-syllable variant could be obtained from the one-syllable variants using the following scheme, appending on the right:
+			</p>
+    		<sidebyside width="70%" margins="auto">
+    			<tabular>
+    				<row>
+    					<cell>monosyllabic</cell>
+    					<cell></cell>
+    					<cell><em>(g</em></cell>
+    					<cell><em>l)</em></cell>
+    					<cell></cell>
+    					<cell><em>(g</em></cell>
+    					<cell><em>l)</em></cell>
+    				</row>
+    				<row bottom="medium">
+    					<cell>append</cell>
+    					<cell></cell>
+    					<cell colspan="2" halign="center"><em>g</em></cell>
+    					<cell></cell>
+    					<cell colspan="2" halign="center"><em>l</em></cell>
+					</row>
+					<row>
+						<cell>disyllabic</cell>
+						<cell></cell>
+						<cell><em>gg</em></cell>
+						<cell><em>lg</em></cell>
+						<cell></cell>
+						<cell><em>gl</em></cell>
+						<cell><em>ll</em></cell>
+					</row>
+				</tabular>
+			</sidebyside>
+			<p>
+				The same can be done going from two to three syllables.
+			</p>
+    		<sidebyside width="70%" margins="auto">
+    			<tabular>
+    				<row>
+    					<cell>disyllabic</cell>
+    					<cell></cell>
+    					<cell><em>(gg</em></cell>
+    					<cell><em>lg</em></cell>
+    					<cell><em>gl</em></cell>
+    					<cell><em>ll)</em></cell>
+    					<cell></cell>
+    					<cell><em>(gg</em></cell>
+    					<cell><em>lg</em></cell>
+    					<cell><em>gl</em></cell>
+    					<cell><em>ll)</em></cell>
+    				</row>
+    				<row bottom="medium">
+    					<cell>append</cell>
+    					<cell></cell>
+    					<cell colspan="4" halign="center"><em>g</em></cell>
+    					<cell></cell>
+    					<cell colspan="4" halign="center"><em>l</em></cell>
+					</row>
+					<row>
+						<cell>trisyllabic</cell>
+						<cell></cell>
+						<cell><em>ggg</em></cell>
+						<cell><em>lgg</em></cell>
+						<cell><em>glg</em></cell>
+						<cell><em>llg</em></cell>
+						<cell></cell>
+						<cell><em>ggl</em></cell>
+						<cell><em>lgl</em></cell>
+						<cell><em>gll</em></cell>
+						<cell><em>lll</em></cell>
+					</row>
+				</tabular>
+			</sidebyside>
+			</introduction>
+    	<task>
+    		<statement>
+			<p>
+				Of the three trisyllabic variants with two <em>l</em>'s (<em>llg</em>, <em>lgl</em>, and <em>gll</em>), one comes from the first group (ending with <em>g</em>), and two from the second (ending with <em>l</em>).
+				Explain how this demonstrates that <me>\binom{3}{2} = \binom{2}{2} + \binom{2}{1}</me>.
+			</p>
+			</statement>
+		</task>
+		<task>
+			<statement>
+				<p>
+					Construct the table for the four-syllable forms in a similar way: appending <em>g</em>'s to all trisyllabic forms, then appending <em>l</em>'s. You should get a total of 16.
+					In the same manner as (a), find an identity involving <me>\displaystyle\binom{4}{2}</me> by looking at the two possible endings of the four-syllable forms.
+				</p>
+			</statement>
+			<hint>
+				<p>
+					There are six strings involving <em>g</em>'s and <em>l</em>'s that have exactly two <em>l</em>'s.
+					How many of them end with <em>g</em>? <em>l</em>?
+				</p>
+			</hint>
+		</task>
+		<task>
+			<statement>
+				<p>
+					Generalize the arguments above to a formula involving <me>\binom{n}{k}</me>.
+				</p>
+			</statement>
+			<hint>
+				<p>
+					Separate into two cases depending on the last syllable (<em>g</em> or <em>l</em>). 
+					These cases are described by the questions:
+					How many of the <m>(n-1)</m>-syllable variants already have <m>k</m> <em>l</em>'s? How many have <m>(k-1)</m> <m>l</m>'s and need one more?
+				</p>
+			</hint>
+		</task>
+    </exploration>
+
+    <p>
+    	In <xref ref="expl-pingala"/> we saw how 
+    </p>
+
+
+    <definition xml:id="def-binomial-coefficient">
+    	<title>Binomial Coefficient</title>
+    	<statement>
+    		<p>
+    			For <m>k \leq n</m>, the quantities <me>\binom{n}{k}</me> are called <term>binomial coefficients</term>.
+    		</p>
+    	</statement>
+    </definition>
+
+
+
+    <theorem xml:id="thm-binomial">
+    	<title>Binomial Theorem</title>
+    	<statement>
+    		<p>
+    			For <m>k \leq n</m>, the quantity <m>\displaystyle\binom{n}{k}</m> is equal to the coefficient of <m>x^{n-k}y^k</m> in the expansion of <m>(x+y)^n</m>.
+				That is,
+				<me> (x+y)^n = \underbrace{(x+y)(x+y)\cdots(x+y)}_\text{$n$ times} = \displaystyle\sum_{k=0}^n \binom{n}{k}x^{n-k}y^k</me>.
+    		</p>
+    	</statement>
+    	<proof>
+    		<p>
+	    		Each factor in the product <m>(x+y)^n = (x+y)(x+y)\cdots(x+y)</m> contributes either an <m>x</m> or a <m>y</m> in the resulting expansion.
+				We can express each term in the answer as a sequence of <m>n</m> symbols, each either an <m>x</m> or a <m>y</m>; for example, picking <m>x</m> from each <m>(x+y)</m> term gives <m>\underbrace{xx\cdots x}_\text{$n$ times}=x^n</m>.
+			</p>
+			<p>
+				Hence the number of times <m>x^{n-k}y^k</m> appears in the final expansion is precisely the number of rearrangements of the word 
+				<me> \underbrace{x\ x\cdots x}_\text{$n-k$ times}\underbrace{y\ y\cdots y}_\text{$k$ times},</me>
+				which is exactly equal to <m>\frac{n!}{(n-k)!k!} = \binom{n}{k}</m> by <xref ref="prop-perm-repeat" />.
+			</p>
+		</proof>
+    </theorem>
+
+    <exercise xml:id="ex-counting-coefficient-1">
+    	<title>Coefficient of <m>x^4y^7</m> in <m>(x+y)^{11}</m></title>
+    	<statement>
+    		<p>
+    			Determine the coefficient of <m>x^4y^7</m> in the product <m>(x+y)^{11}</m>.
+    		</p>
+    	</statement>
+    </exercise>
+
+    <exercise xml:id="ex-counting-coefficient-2">
+    	<title>Coefficient of <m>a^2b^3</m></title>
+    	<statement>
+    		<p>
+    			Determine the coefficient of <m>a^2b^3</m> in each product:
+    			<ol label="(a)">
+    				<li><m>(a+b)^5</m></li>
+    				<li><m>(a-b)^5</m></li>
+    				<li><m>(3a+2b)^5</m></li>
+				</ol>
+    		</p>
+    	</statement>
+    	<hint>
+    		<p>b. and c. What are <m>x</m> and <m>y</m> in the statement of <xref ref="thm-binomial"/>?</p>
+    	</hint>
+    </exercise>
+
+
+
+
 </section>

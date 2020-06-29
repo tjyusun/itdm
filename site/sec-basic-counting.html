@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-25T03:59:26-04:00    *-->
+<!--*    on 2020-06-28T22:00:51-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -54,11 +54,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
-\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
-\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
-    
-\newcommand{\vheart}{\textcolor{red}{\varheart}}
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
 \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
 \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
 \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
@@ -103,10 +99,10 @@ MathJax.Hub.Config({
 <nav id="toc"><ul>
 <li class="link frontmatter">
 <a href="front.html" data-scroll="front"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
 <li><a href="front-welcome.html" data-scroll="front-welcome">Welcome Message</a></li>
 <li><a href="front-how-to-use.html" data-scroll="front-how-to-use">How to Use This Resource</a></li>
 <li><a href="front-feedback.html" data-scroll="front-feedback">Feedback</a></li>
-<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
 </ul>
 </li>
 <li class="link">
@@ -124,9 +120,21 @@ MathJax.Hub.Config({
 <li><a href="sec-binomial-coefficients.html" data-scroll="sec-binomial-coefficients">Binomial Coefficients</a></li>
 <li><a href="sec-balls-in-bins.html" data-scroll="sec-balls-in-bins">The Balls in Bins Formula</a></li>
 <li><a href="sec-combinatorial-arguments.html" data-scroll="sec-combinatorial-arguments">Combinatorial Arguments</a></li>
-<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+<li><a href="exercises-counting.html" data-scroll="exercises-counting">Exercises</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="chap-principles.html" data-scroll="chap-principles"><span class="codenumber">3</span> <span class="title">Pigeonhole and Inclusion-Exclusion</span></a><ul>
+<li><a href="sec-pigeonhole.html" data-scroll="sec-pigeonhole">The Pigeonhole Principle</a></li>
+<li><a href="sec-inclusion-exclusion.html" data-scroll="sec-inclusion-exclusion">Principle of Inclusion-Exclusion</a></li>
+<li><a href="exercises-principles.html" data-scroll="exercises-principles">Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">B</span> <span class="title">List of Results</span></a></li>
+<li class="link"><a href="solutions-3.html" data-scroll="solutions-3"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-basic-counting"><h2 class="heading hide-type">
@@ -150,7 +158,9 @@ MathJax.Hub.Config({
 <div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">You may know this game by a different name.</div></div>
 <p id="p-90">How many possible ways can you answer?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-91">Suppose the three names are A, B, and C. We can just list all possibilities to find that there are 6 ways: <figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.2<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-91">Suppose the three names are A, B, and C. We can just list all possibilities to find that there are 6 ways:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="l m b0 r2 l0 t0 lines">Kiss</td>
 <td class="l m b0 r0 l0 t0 lines">A</td>
@@ -178,11 +188,12 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines">B</td>
 <td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">A</td>
 </tr>
-</table></figure></p></div></div>
+</table></div></div></div>
+</div></div>
 </div></article></div>
 <p id="p-92"><a class="xref" data-knowl="./knowl/eg-counting-kiss-marry-kill.html" title="Example 2.1.1: First Counting Example">Example 2.1.1</a> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?</p>
 <article class="exercise exercise-like" id="ex-counting-coldplay"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-coldplay"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coldplay"><article class="exercise exercise-like"><p id="p-93">Three friends (Mina, Lisa, and Wendy) were able to get three seats together in a row at a Coldplay concert.</p>
 <ol class="lower-alpha">
 <li id="li-65">How many ways can they choose to sit?</li>
@@ -193,10 +204,11 @@ MathJax.Hub.Config({
 </div></article></div>
 <p id="p-97">The techniques we will develop will help us count when the number of possibilities is too large that we can't simply list them all! For instance, the next example is one where listing all possibilities seems like a bad idea.</p>
 <article class="example example-like" id="eg-counting-dogs"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-dogs"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Dog Adoption.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Dog Adoption.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-dogs"><article class="example example-like"><p id="p-98">There are 10 dogs up for adoption at your local animal shelter. You and 9 other friends decide to adopt one dog each. How many ways can you assign dogs to people?</p>
 <p id="p-99"><em class="alert">Solution (but not really)</em> If we first fix you and your friends in some specified order (human 1, human 2, human 3, and so on) and name the dogs A, B, C, up to J, then each adoption arrangement corresponds to an <em class="emphasis">ordering of the letters A to J in a list</em>, where the position of each letter corresponds to the person adopting that dog.</p>
-<p id="p-100">For example, the arrangement <figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.5<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<p id="p-100">For example, the arrangement</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">J</td>
 <td class="l m b0 r0 l0 t0 lines">I</td>
@@ -233,59 +245,59 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines">9</td>
 <td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">10</td>
 </tr>
-</table></figure></p>
+</table></div></div></div>
 <p id="p-101">means that dog J is assigned to human 1, dog I is assigned to human 2, and so on, while the arrangement DJABECIHGF means dog D is assigned to human 1, dog J to human 2, and so on…</p>
 <p id="p-102">You should quickly realize there are too many combinations to list!</p></article></div>
 <p id="p-103">When possible, it is a good idea to <em class="emphasis">exploit the structure</em> of what we are counting! Two rules for counting will help us get started: the Sum Rule and the Product Rule. Think about the following checkpoint, which is similar to something you might have seen in grade school:</p>
 <article class="exercise exercise-like" id="ex-counting-socks"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-socks"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Socks!</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Socks!</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-socks"><article class="exercise exercise-like"><p id="p-104">You plan to move to a new apartment by the end of the month, and while packing your clothes, you note that you have 3 pairs of black socks, 4 pairs of white socks, and 2 pairs of blue socks.</p>
 <p id="p-105">How many pairs of socks do you have in total?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-106">9</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="ex-counting-test-papers"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-test-papers"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Exam Counts.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Exam Counts.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-test-papers"><article class="exercise exercise-like"><p id="p-108">After an in-person term test or final exam, the course instructor and TAs get together and first verify that the number of papers handed in matches the number of students who wrote the test.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="figs/test-papers.jpg" style="width: 100%; height: auto;" alt="Five piles of test papers on a brown desk."></div></div></div>
 <p id="p-109">Can you think of an efficient way to count the papers?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-110">You wouldn't just count them one by one…</p></div></div>
 </div></article></div>
-<p id="p-111">In <a class="xref" data-knowl="./knowl/ex-counting-socks.html" title="Checkpoint 2.1.6: Socks!">Checkpoint 2.1.6</a> the problem of counting the total number of pairs of socks had a straightforward solution. Since the socks were already separated by colour, and you knew how many of each colour you had, you just had to add the number of pairs for each colour to get the total.</p>
-<p id="p-112">For the test papers in <a class="xref" data-knowl="./knowl/ex-counting-test-papers.html" title="Checkpoint 2.1.7: Exam Counts">Checkpoint 2.1.7</a> there are certainly multiple ways to do this. One method that TAs use is to form piles of ten, and count how many piles are produced. This is actually more similar to the socks example than you might think. Separating the huge pile of papers into groups of 10 has the same goal as separating socks by colour: one just has to add the numbers in each pile together in the end (which, if all piles have 10, is an easy calculation).</p>
+<p id="p-111">In <a class="xref" data-knowl="./knowl/ex-counting-socks.html" title="Checkpoint 2.1.4: Socks!">Checkpoint 2.1.4</a> the problem of counting the total number of pairs of socks had a straightforward solution. Since the socks were already separated by colour, and you knew how many of each colour you had, you just had to add the number of pairs for each colour to get the total.</p>
+<p id="p-112">For the test papers in <a class="xref" data-knowl="./knowl/ex-counting-test-papers.html" title="Checkpoint 2.1.5: Exam Counts">Checkpoint 2.1.5</a> there are certainly multiple ways to do this. One method that TAs use is to form piles of ten, and count how many piles are produced. This is actually more similar to the socks example than you might think. Separating the huge pile of papers into groups of 10 has the same goal as separating socks by colour: one just has to add the numbers in each pile together in the end (which, if all piles have 10, is an easy calculation).</p>
 <p id="p-113">This is the <dfn class="terminology">Sum Rule</dfn> in action.</p>
 <article class="definition definition-like" id="def-partition"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Partition.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Partition.</span>
 </h6>
 <p id="p-114">Let \(A\) be a finite set. We say that \(B_1,B_2,\ldots,B_m\) form a <dfn class="terminology">partition</dfn> of \(A\) if</p>
 <ul class="disc">
 <li id="li-67">\(B_i \cap B_j = \varnothing\) for all \(i \ne j\text{,}\) and</li>
 <li id="li-68">\(B_1 \cup B_2 \cup \cdots \cup B_m = A\text{.}\)</li>
 </ul></article><article class="principle theorem-like" id="prin-sum-rule"><h6 class="heading">
-<span class="type">Principle</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Sum Rule.</span>
+<span class="type">Principle</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sum Rule.</span>
 </h6>
 <p id="p-115">If \(B_1,B_2,\ldots,B_m\) form a partition of \(A\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 |A| = \sum_{i=1}^n |B_i| = |B_1| + |B_2| + \cdots + |B_m|\text{.}
 \end{equation*}
-</div></article><p id="p-116">The <a class="xref" data-knowl="./knowl/prin-sum-rule.html" title="Principle 2.1.9: Sum Rule">Sum Rule</a> essentially tells us that in order to count a set of objects, we can break these objects up into disjoint cases, count each case separately, then add them all together in the end. Sounds reasonable!</p>
+</div></article><p id="p-116">The <a class="xref" data-knowl="./knowl/prin-sum-rule.html" title="Principle 2.1.7: Sum Rule">Sum Rule</a> essentially tells us that in order to count a set of objects, we can break these objects up into disjoint cases, count each case separately, then add them all together in the end. Sounds reasonable!</p>
 <article class="exercise exercise-like" id="ex-counting-twitter"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-twitter"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Twitter Followers.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Twitter Followers.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-twitter"><article class="exercise exercise-like"><p id="p-117">TJ is an avid Twitter user, where he manages the following accounts:</p>
 <ul class="disc">
 <li id="li-69">A <a class="external" href="https://twitter.com/tjyusun" target="_blank">personal account</a> with 200 followers;</li>
 <li id="li-70">A K-pop stan Twitter account with 2500 followers;</li>
 <li id="li-71">A third account with 12000 followers that tweets a picture of a puppy every hour.</li>
 </ul>
-<p data-braille="continuation">Can you determine the total number of unique followers TJ has? Explain whether or not the <a class="xref" data-knowl="./knowl/prin-sum-rule.html" title="Principle 2.1.9: Sum Rule">Sum Rule</a> is applicable to this problem.</p>
+<p data-braille="continuation">Can you determine the total number of unique followers TJ has? Explain whether or not the <a class="xref" data-knowl="./knowl/prin-sum-rule.html" title="Principle 2.1.7: Sum Rule">Sum Rule</a> is applicable to this problem.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-118">To apply the Sum Rule, one needs to have a partition.</p></div></div>
 </div></article></div>
 <p id="p-122">When we need to count objects that are constructed by performing <em class="emphasis">successive steps</em> or operations that are independent, we use the <em class="alert">Product Rule</em>.</p>
 <article class="principle theorem-like" id="prin-prod-rule"><h6 class="heading">
-<span class="type">Principle</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Product Rule.</span>
+<span class="type">Principle</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Product Rule.</span>
 </h6>
 <p id="p-123">If a certain operation takes \(k\) steps to accomplish, and if there are:</p>
 <ul class="disc">
@@ -301,21 +313,21 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p data-braille="continuation">ways of performing steps 1 to \(k\text{.}\)</p></article><article class="exercise exercise-like" id="ex-counting-outfit"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-outfit"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Outfits.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Outfits.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-outfit"><article class="exercise exercise-like"><p id="p-124">You are deciding what outfit to wear to your Zoom class today. You have been putting off doing laundry, so you only have 3 clean shirts and 3 clean pairs of pants. Also, you have 8 pairs of socks to choose from. How many different outfits can you wear to school today? (Assume you cannot go to school shirtless, but you can go pantless or barefoot—no one will see!)</p></article></div>
 <article class="exercise exercise-like" id="ex-counting-prove-product"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-prove-product"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Proof of the Product Rule.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-prove-product"><article class="exercise exercise-like"><p id="p-126">Use the <a class="xref" data-knowl="./knowl/prin-sum-rule.html" title="Principle 2.1.9: Sum Rule">Sum Rule</a> to prove the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.11: Product Rule">Product Rule</a>.</p>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Proof of the Product Rule.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-prove-product"><article class="exercise exercise-like"><p id="p-126">Use the <a class="xref" data-knowl="./knowl/prin-sum-rule.html" title="Principle 2.1.7: Sum Rule">Sum Rule</a> to prove the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-127">Induction on \(k\text{.}\)</p></div></div>
 </div></article></div>
 <article class="example example-like" id="eg-counting-mcq"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-mcq"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Multiple Choice Exam.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Multiple Choice Exam.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-mcq"><article class="example example-like"><p id="p-128">A multiple-choice exam has 20 questions and four choices for each question. How many possible combinations of responses are there?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="figs/mcq1.png" style="width: 100%; height: auto;" alt="Multiple-choice bubble sheet with five questions and four boxes each for choices A, B, C, D."></div></div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
-<p id="p-129">Answering the whole test takes 20 individual, independent steps: picking one answer to each question. If we assume each question needs to have one answer, then in the statement of the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.11: Product Rule">Product Rule</a>, \(r_1 = 4\text{,}\) \(r_2 = 4\text{,}\) and so on until \(r_{20} = 4\text{,}\) giving a total of</p>
+<p id="p-129">Answering the whole test takes 20 individual, independent steps: picking one answer to each question. If we assume each question needs to have one answer, then in the statement of the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>, \(r_1 = 4\text{,}\) \(r_2 = 4\text{,}\) and so on until \(r_{20} = 4\text{,}\) giving a total of</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{4 \times 4 \times \cdots \times 4}_{\text{20 times}} = 4^{20}=1099511627776
@@ -327,11 +339,11 @@ MathJax.Hub.Config({
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="ex-counting-coldplay2"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-coldplay2"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating with \(n\) people.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coldplay2"><article class="exercise exercise-like"><p id="p-132">Apply the Product Rule to answer (a) and (b) of <a class="xref" data-knowl="./knowl/ex-counting-coldplay.html" title="Checkpoint 2.1.3: Concert Seating">Checkpoint 2.1.3</a>, then generalize this method to count the number of ways to sit \(n\) people in a row of \(n\) seats.</p></article></div>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating with \(n\) people.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coldplay2"><article class="exercise exercise-like"><p id="p-132">Apply the Product Rule to answer (a) and (b) of <a class="xref" data-knowl="./knowl/ex-counting-coldplay.html" title="Checkpoint 2.1.2: Concert Seating">Checkpoint 2.1.2</a>, then generalize this method to count the number of ways to sit \(n\) people in a row of \(n\) seats.</p></article></div>
 <p id="p-134">Because the following operation frequently turns up in counting problems, we have a special name for it.</p>
 <article class="definition definition-like" id="def-factorial"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Factorial.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Factorial.</span>
 </h6>
 <p id="p-135">For integer \(n \geq 0\text{,}\) the <dfn class="terminology">factorial</dfn> of \(n\text{,}\) denoted by \(n!\text{,}\) is</p>
 <div class="displaymath">
@@ -339,12 +351,12 @@ MathJax.Hub.Config({
 n! = \prod_{i=1}^n i = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2 \cdot 1\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">By convention we define \(0! = 1\text{.}\)</p></article><article class="remark remark-like" id="remark-factorial"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.17</span><span class="period">.</span>
+<p data-braille="continuation">By convention we define \(0! = 1\text{.}\) </p></article><article class="remark remark-like" id="remark-factorial"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.15</span><span class="period">.</span>
 </h6>
 <p id="p-136">For problems where the answer involves a factorial, it is fine to leave the factorial in your answer without computing the actual value.</p></article><article class="example example-like" id="eg-counting-dogs-again"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-dogs-again"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Dog Adoption, again.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-dogs-again"><article class="example example-like"><p id="p-137"><a class="xref" data-knowl="./knowl/eg-counting-dogs.html" title="Example 2.1.4: Dog Adoption">Example 2.1.4</a> had too many combinations to list, but using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.11: Product Rule">Product Rule</a> we see that there are a total of</p>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Dog Adoption, again.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-dogs-again"><article class="example example-like"><p id="p-137"><a class="xref" data-knowl="./knowl/eg-counting-dogs.html" title="Example 2.1.3: Dog Adoption">Example 2.1.3</a> had too many combinations to list, but using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> we see that there are a total of</p>
 <div class="displaymath">
 \begin{equation*}
 10! = 10 \times 9 \times 8 \times \cdots \times 1 = 3628800 \text{ combinations}\text{.}
@@ -354,21 +366,21 @@ n! = \prod_{i=1}^n i = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2 \cdot 1\te
 <span class="type">Solutions</span> <span class="codenumber">2.1.1</span> <span class="title">Solutions to Selected Checkpoints</span>
 </h3>
 <article class="exercise-like"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-3-hidden.html" title="Solution 2.1.3.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Socks!</span>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-3-hidden.html" title="Solution 2.1.2.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Socks!</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-4-hidden.html" title="Solution 2.1.6.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Twitter Followers.</span>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-4-hidden.html" title="Solution 2.1.4.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Twitter Followers.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-5-hidden.html" title="Solution 2.1.10.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Outfits.</span>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-5-hidden.html" title="Solution 2.1.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Outfits.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-6-hidden.html" title="Solution 2.1.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating with \(n\) people.</span>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-6-hidden.html" title="Solution 2.1.10.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating with \(n\) people.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-8-hidden.html" title="Solution 2.1.15.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-8-hidden.html" title="Solution 2.1.13.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
 </div>
 </body>
 </html>

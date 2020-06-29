@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+
+
+<exercises xml:id="exercises-principles">
+<introduction>
+<p>Hello</p>
+</introduction>
+
+<exercise>
+<statement><p>
+
+        Pigeonhole stuff
+    </p>
+</statement>
+<solution>
+	<p>Lol</p>
+</solution>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Second question
+	</p>
+</statement>
+<hint>
+	<p>LOL</p>
+</hint>
+<solution>
+	<p>Joke</p>
+</solution>
+</exercise>
+
+
+</exercises>
+
+
+
