@@ -34,6 +34,11 @@
 				</ul>
 			</p>
 	</remark>
+	<!--
+	<sidebyside width="60%" margins="auto">
+		<video xml:id="test-youtube" youtube = "XJnIdRXUi7A"/>
+	</sidebyside>
+	-->
 	<example xml:id="eg-counting-bijections">
 		<title>Counting Bijections</title>
 		<statement>
@@ -210,7 +215,7 @@
 				</sidebyside>
 			<p>
 				Thus while <xref ref="def-permutation"/> predicts <m>4! = 24</m> arrangements of the four letters Y, E<m>_1</m>, E<m>_2</m>, and T, we see that for each arrangement either E<m>_1</m> is somewhere to the left, or somewhere to the right of E<m>_2</m>.
-				Hence we dividing by two to account for this overcounting, which gives the correct number, <m>4!/2 = 12</m>.
+				Hence we divide by two to account for this overcounting, which gives the correct number, <m>4!/2 = 12</m>.
 			</p>
 
 		</statement>
@@ -222,13 +227,19 @@
 		Following the same reasoning, we can distinguish them first as E<m>_1</m>, E<m>_2</m>, and E<m>_3</m>, then apply <xref ref="def-permutation"/>.
 		We will get a number that overcounts the actual answer by a factor of 6 this time, since there are <m>3! = 6</m> ways to arrange the three E's:
 	</p>
-		<sidebyside widths="15% 15% 15% 15% 15% 15%" margins="auto">
-		<p>E<m>_1</m>E<m>_2</m>E<m>_3</m></p>
-		<p>E<m>_1</m>E<m>_3</m>E<m>_2</m></p>
-		<p>E<m>_2</m>E<m>_1</m>E<m>_3</m></p>
-		<p>E<m>_2</m>E<m>_3</m>E<m>_1</m></p>
-		<p>E<m>_3</m>E<m>_1</m>E<m>_2</m></p>
-		<p>E<m>_3</m>E<m>_2</m>E<m>_1</m></p>
+		<sidebyside width="80%" margins="auto">
+			<tabular>
+				<row>
+					<cell>E<m>_1</m>E<m>_2</m>E<m>_3</m></cell>
+					<cell>E<m>_1</m>E<m>_3</m>E<m>_2</m></cell>
+					<cell>E<m>_2</m>E<m>_1</m>E<m>_3</m></cell>
+				</row>
+				<row>
+					<cell>E<m>_2</m>E<m>_3</m>E<m>_1</m></cell>
+					<cell>E<m>_3</m>E<m>_1</m>E<m>_2</m></cell>
+					<cell>E<m>_3</m>E<m>_2</m>E<m>_1</m></cell>
+				</row>
+			</tabular>
 		</sidebyside>
 	<p>
 		We generalize this to <xref ref="prop-perm-repeat"/>, which gives a way to count rearrangements of words when some letters are repeated. (We say the letters are elements of a <term>multiset</term>, which generalizes sets to allow for multiple instances of elements.)
@@ -334,7 +345,7 @@
 				How many possible combinations are there?
 			</p>
 			<p><alert>Solution</alert>
-				Each combination of bridesmaids corresponds to a rearrangement of the symbols <m>\circ \circ \times \times \times</m>, given a <em>fixed</em> arrangement of the five names in a row; for instance, the arrangement
+				Each combination of bridesmaids corresponds to a rearrangement of three X's and two O's, given a <em>fixed</em> arrangement of the five names in a row; for instance, the arrangement
 			</p>
 				<sidebyside width="55%" margins="auto">
 				<tabular>
@@ -346,11 +357,11 @@
 						<cell>Victoria</cell>
 					</row>
 					<row>
-						<cell><m>\circ</m></cell>
-						<cell><m>\times</m></cell>
-						<cell><m>\times</m></cell>
-						<cell><m>\circ</m></cell>
-						<cell><m>\times</m></cell>
+						<cell>O</cell>
+						<cell>X</cell>
+						<cell>X</cell>
+						<cell>O</cell>
+						<cell>X</cell>
 					</row>
 				</tabular>
 				</sidebyside>
@@ -367,17 +378,17 @@
 						<cell>Victoria</cell>
 					</row>
 					<row>
-						<cell><m>\times</m></cell>						
-						<cell><m>\times</m></cell>
-						<cell><m>\times</m></cell>
-						<cell><m>\circ</m></cell>
-						<cell><m>\circ</m></cell>
+						<cell>X</cell>
+						<cell>X</cell>
+						<cell>X</cell>
+						<cell>O</cell>
+						<cell>O</cell>
 					</row>
 				</tabular>
 				</sidebyside>
 			<p>
 				corresponds to Geri and Victoria being chosen.
-				Applying <xref ref="prop-perm-repeat"/> to the three <m>\times</m>'s and two <m>\circ</m>'s, we see that there are exactly <m>\dfrac{5!}{2! 3!} = 10</m> possible combinations.
+				Applying <xref ref="prop-perm-repeat"/> to the three X's and two O's, we see that there are exactly <m>\dfrac{5!}{2! 3!} = 10</m> possible combinations.
 			</p>
 			<p><alert>Note</alert>
 				When the usual formula for <m>k</m>-permutations from an <m>n</m>-set (<xref ref="prop-Pnk"/>)) is applied to the previous example, we get a total of <m>\dfrac{5!}{(5-3)!} = 60</m>, which is incorrect.
@@ -556,7 +567,7 @@
 					<attribution><pubtitle>Suśruta-saṃhitā</pubtitle> lxiii, as cited in <xref ref="bib-kolachana-2019"/>, p. 358</attribution>
 				</blockquote>
 				<p>
-					Explain how this computation shows that <m>\displaystyle\binom{6}{2} = 15</m>.
+					Explain how this computes <m>\displaystyle\binom{6}{2}</m>.
 				</p>
 			</statement>
 		</task>
@@ -567,20 +578,12 @@
 				</p>
 				<blockquote>
 					<p>
-						<q>What is the direct arrangement? Dharmāstikāya, Adharmāstikāya,
-						Ākāśāstikāya, Jīvāstikāya, Pudgalāstikāya and Addhāsamaya<mdash/>this
-						is the direct arrangement. What is the reverse arrangement? Ad-
-						dhāsamaya, Pudgalāstikāya, Jīvāstikāya, Ākāśāstikāya, Adharmā-
-						stikāya, and Dharmāstikāya<mdash/>this is the reverse arrangement. What
-						are the mixed arrangements? From the series of numbers begin-
-						ning with one and increasing by one up to six terms. The mutual
-						products of these minus 2 will give the number of mixed arrange-
-						ments.</q>
+						<q>What is the direct arrangement? Dharmāstikāya, Adharmāstikāya, Ākāśāstikāya, Jīvāstikāya, Pudgalāstikāya and Addhāsamaya<mdash/>this is the direct arrangement. What is the reverse arrangement? Addhāsamaya, Pudgalāstikāya, Jīvāstikāya, Ākāśāstikāya, Adharmāstikāya, and Dharmāstikāya<mdash/>this is the reverse arrangement. What are the mixed arrangements? From the series of numbers beginning with one and increasing by one up to six terms. The mutual products of these minus 2 will give the number of mixed arrangements.</q>
 					</p>
 					<attribution><pubtitle>Anuyogadvāra-sūtra</pubtitle>, Sūtra 97, as cited in <xref ref="bib-kolachana-2019"/>, p. 363.</attribution>
 				</blockquote>
 				<p>
-					Discuss what <em>mixed arrangement</em> refers to and how the computation is carried out.
+					Discuss what <em>mixed arrangement</em> refers to and how the computation of <m>6!</m> is carried out.
 				</p>
 			</statement>
 		</task>

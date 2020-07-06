@@ -13,22 +13,33 @@
     </objectives>
     <p>
         In this section we discuss the quantity <m>\displaystyle\binom{n}{k}</m> in more detail and explore some nice related identities and applications.
+        First, we give a name to the quantity; the reason for the name will be made clear in the main theorem of this section.
     </p>
+
+
+    <definition xml:id="def-binomial-coefficient">
+    	<title>Binomial Coefficient</title>
+    	<statement>
+    		<p>
+    			For <m>k \leq n</m>, the quantities <me>\binom{n}{k}</me> are called <term>binomial coefficients</term>.
+    		</p>
+    	</statement>
+    </definition>
 
 
     <exploration xml:id="expl-pingala">
     	<title>The Meru Prastaara (The Holy Mountain)</title>
     	<introduction>
-    		<p>
-    		</p>
     		<sidebyside width="65%" margins="auto">
     			<image source="figs/meru-prastaara.png" width="60%"><description>The Meru Prastaara. Numbers in boxes arranged in a triangular shape.</description></image>
     		</sidebyside>
     		<p>
     			The Indian mathematician and writer <url href="https://en.wikipedia.org/wiki/Pingala">Piṅgala</url> (200 <bc />) in his text the <pubtitle>Chandaḥśāstra</pubtitle> studied variations in poetic metres when using only either long (<em>g</em>, for <em>guru</em>) and short (<em>l</em>, for <em>laghu</em>) syllables.
+    		</p>
     			<aside>
-    				This exposition is based on <xref ref="bib-kolachana-2019"/>, p. 390.
+    				<p>This exposition is based on <xref ref="bib-kolachana-2019"/>, p. 390.</p>
     			</aside>
+    		<p>
     			He explained that monosyllabic (or one-syllable) metres have two variations<mdash/>either <em>g</em> or <em>l</em><mdash/>while disyllabic metres have four different kinds: 
     		</p>
     		<sidebyside width="30%" margins = "auto">
@@ -38,7 +49,7 @@
     			Or, one with no <em>l</em>'s, two with one <em>l</em>, and one with two <em>l</em>'s.
     		</p>
 			<p>
-				Piṅgala observed that each two-syllable variant could be obtained from the one-syllable variants using the following scheme, appending on the right:
+				Piṅgala also observed that each two-syllable variant could be obtained from the one-syllable variants using the following scheme, appending on the right:
 			</p>
     		<sidebyside width="70%" margins="auto">
     			<tabular>
@@ -128,7 +139,7 @@
 			<hint>
 				<p>
 					There are six strings involving <em>g</em>'s and <em>l</em>'s that have exactly two <em>l</em>'s.
-					How many of them end with <em>g</em>? <em>l</em>?
+					How many of them end with <em>g</em>? How many with <em>l</em>?
 				</p>
 			</hint>
 		</task>
@@ -141,28 +152,107 @@
 			<hint>
 				<p>
 					Separate into two cases depending on the last syllable (<em>g</em> or <em>l</em>). 
-					These cases are described by the questions:
-					How many of the <m>(n-1)</m>-syllable variants already have <m>k</m> <em>l</em>'s? How many have <m>(k-1)</m> <m>l</m>'s and need one more?
 				</p>
 			</hint>
+			<hint>
+			<p>
+				How many of the <m>(n-1)</m>-syllable variants already have <m>k</m> <em>l</em>'s? How many have <m>(k-1)</m> <m>l</m>'s and need one more?
+			</p>
+		</hint>
+		<answer>
+			<p>
+				Right-hand side is <m>\displaystyle\binom{n-1}{k} + \binom{n-1}{k-1}</m>.
+			</p>
+		</answer>
 		</task>
     </exploration>
 
     <p>
-    	In <xref ref="expl-pingala"/> we saw how 
+    	In <xref ref="expl-pingala"/> we saw how the binomial coefficient <m>\displaystyle\binom{n}{k}</m> can be expressed as the <em>sum</em> of two binomial coefficients involving <m>(n-1)</m>:
+    	<me>\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}</me>.
+    	This rule is known as <url href="https://en.wikipedia.org/wiki/Pascal%27s_rule">Pascal's Formula</url>, after mathematician <url href="https://en.wikipedia.org/wiki/Blaise_Pascal">Blaise Pascal</url>, who formalized many of the results and identities about the binomial coefficients.
     </p>
-
-
-    <definition xml:id="def-binomial-coefficient">
-    	<title>Binomial Coefficient</title>
+    <theorem xml:id="thm-pascals-formula">
+    	<title>Pascal's Formula</title>
     	<statement>
     		<p>
-    			For <m>k \leq n</m>, the quantities <me>\binom{n}{k}</me> are called <term>binomial coefficients</term>.
+				If <m>n \geq 1</m>, then <me> \binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}</me>.
     		</p>
     	</statement>
-    </definition>
+    </theorem>
+    <p>
+    	<xref ref="thm-pascals-formula" /> generates an intuitive visualization of the binomial coefficients that you may have seen before, widely known as Pascal's Triangle.
+	</p>
+    	<aside><p>Pascal was not the first to discover this mathematical object, which was simply called the <term>arithmetical triangle</term> beforehand.
+	</p>
+	<p>
+    	This triangle and its relations to combinatorial problems was known to several other mathematicians: Piṅgala, and several others in India; Chinese mathematicians <url href="https://en.wikipedia.org/wiki/Jia_Xian">Jia Xian</url> and <url href="https://en.wikipedia.org/wiki/Yang_Hui">Yang Hui</url>; <url href="https://en.wikipedia.org/wiki/Ahmad_ibn_Munim_al-Abdari">Ahmad Ibn Mun'im</url>, who taught in Marrakesh; <url href="https://en.wikipedia.org/wiki/Niccol%C3%B2_Fontana_Tartaglia">Niccolò Tartaglia</url> and <url href="https://en.wikipedia.org/wiki/Gerolamo_Cardano">Gerolamo Cardano</url> (Italy); <url href="https://en.wikipedia.org/wiki/Michael_Stifel">Michael Stifel</url> (Germany); and <url href="https://en.wikipedia.org/wiki/Marin_Mersenne">Marin Mersenne</url>, who met and did mathematics with Pascal.</p>
+    	<p>For more details check out <xref ref="bib-wilson-2013"/> for an excellent resource.
+    	</p></aside>
+    <p>
+    	We start by placing a 1 in the 0th row, and two 1's in the 1st row.
+		Then each new row starts and ends with a 1, while each value in between is obtained by adding the numbers to its upper left and upper right.
+    </p>
 
+    <figure xml:id="fig-pascals-triangle">
+        <caption>The first five rows of Pascal's Triangle, for <m>n = 0</m> to <m>4</m>.</caption>
+    	<image xml:id="img-pascals-triangle" width="40%">
+        <description>The first five rows of Pascal's triangle.</description>
+		    <latex-image>
+				\begin{tikzpicture}[scale=0.6]
+				%\draw[-,color=black,dashed] (0,0) grid (5,4);
+				\draw[->,thick] (-1.8,8.6) -- (-1.1,8);
+				\draw[->,thick] (-0.2,8.6) -- (-0.9,8);
+				%\fill[thick] (0,0) circle[radius=3pt];
+				%\fill[thick] (4,2) circle[radius=3pt];
+				\node[label={1}] at (0,10){};
+				\node[label={1}] at (-1,9){};
+				\node[label={1}] at (1,9){};
+				\node[label={1}] at (-2,8){};
+				\node[label={2}] at (0,8){};
+				\node[label={1}] at (2,8){};
+				\node[label={1}] at (-3,7){};
+				\node[label={3}] at (-1,7){};
+				\node[label={3}] at (1,7){};
+				\node[label={1}] at (3,7){};
+				\node[label={1}] at (-4,6){};
+				\node[label={4}] at (-2,6){};
+				\node[label={6}] at (0,6){};
+				\node[label={4}] at (2,6){};
+				\node[label={1}] at (4,6){};
+				%\node[label={$\cdot^{\cdot^{\cdot}}$}] at (-5,5){};
+				%\node[label={\large $\mathstrut^{.^{.^{.}}}$}] at (-5,5){};
+				%\node[label={$\vdots$}] at (-4,5){};
+				%\node[label={$\vdots$}] at (4,5){};
+				%\node[label={\footnotesize coefficients of}] at (7,10){};
+				%\node[label={\footnotesize $(x+y)^1$}] at (7,9){};
+				%\node[label={\footnotesize $(x+y)^2$}] at (7,8){};
+				%\node[label={\footnotesize $(x+y)^3$}] at (7,7){};
+				%\node[label={\footnotesize $(x+y)^4$}] at (7,6){};
+				%\draw[->,dashed] (1.5,9.75) -- (5.5,9.75);
+				%\draw[->,dashed] (2.5,8.75) -- (5.5,8.75);
+				%\draw[->,dashed] (3.5,7.75) -- (5.5,7.75);
+				%\draw[->,dashed] (4.5,6.7) -- (5.5,6.7);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</figure>
+	<p>
+		The <m>k</m>th entry in the <m>n</m>th row of this triangle (starting with <m>n=0</m>) is exactly <m>\displaystyle\binom{n}{k}</m>, while <xref ref="thm-pascals-formula" /> shows how to recursively generate its rows.
+	</p>
 
+	<exercise xml:id="ex-counting-pascal-complete">
+		<title>Continue the Triangle</title>
+		<statement>
+			<p>
+				Complete Pascal's Triangle up to the 9th row and use it to determine the value of <m>\displaystyle\binom{9}{3}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		The reason for the term <em>binomial coefficient</em> is clarified in the next theorem.
+	</p>
 
     <theorem xml:id="thm-binomial">
     	<title>Binomial Theorem</title>
@@ -185,6 +275,11 @@
 			</p>
 		</proof>
     </theorem>
+
+	<p>
+    	Observe that the proof of <xref ref="thm-binomial"/> simply counts the number of <m>n</m>-letter strings of <m>x</m>'s and <m>y</m>'s that contain <m>k</m> number of <m>x</m>'s.
+    	This is the same thing as counting <m>n</m>-syllable forms in <xref ref="expl-pingala" />, and in fact, <xref ref="thm-binomial"/> can also be proven using the same recursive argument in <xref ref="expl-pingala" /> part (c).
+    </p>
 
     <exercise xml:id="ex-counting-coefficient-1">
     	<title>Coefficient of <m>x^4y^7</m> in <m>(x+y)^{11}</m></title>
@@ -210,7 +305,176 @@
     	<hint>
     		<p>b. and c. What are <m>x</m> and <m>y</m> in the statement of <xref ref="thm-binomial"/>?</p>
     	</hint>
+    	<solution>
+    		<p>
+    			b. Take <m>x = a</m> and <m>y = -b</m> with <m>n = 5</m> in <xref ref="thm-binomial"/>.
+    			The term <m>a^2b^3</m> corresponds to the index <m>k = 3</m>, which is
+    			<me>\binom{5}{3}a^{5-3}(-b)^3 = -\binom{5}{3}a^2b^3</me>, and so its coefficient is <m>-\displaystyle\binom{5}{3} = -10</m>.
+    		</p>
+    	</solution>
     </exercise>
+
+
+	<exercise xml:id="ex-counting-binomial-identity">
+		<title>Prove that <m>\displaystyle\sum_{k=0}^n \binom{n}{k} = 2^n</m></title>
+		<statement>
+			<p>
+				Prove that <m>\displaystyle\sum_{k=0}^n \binom{n}{k} = 2^n</m> for <m>n \geq 0</m>.
+			</p>
+		</statement>
+		<hint><p>Stare at <xref ref="thm-binomial"/> until you see it.</p></hint>
+		<solution><p>The result follows from substituting <m>x = 1</m> and <m>y = 1</m> into the statement of <xref ref="thm-binomial"/>.</p></solution>
+	</exercise>
+
+    <p>
+    	We end this section with a nice application where binomial coefficients appear.
+    </p>
+
+    <example xml:id="eg-counting-lattice-path">
+    	<title>Lattice Paths</title>
+    	<statement>
+    		<p>
+    			On the <m>xy</m>-plane, a <term>lattice path</term> is a path that moves from integer point to integer point by taking only steps of length one to the right or upwards. For instance, the following are three different paths to the point <m>(4,2)</m>, starting at the origin <m>(0,0)</m>:
+    		</p>
+
+		    <sidebyside widths="30% 30% 30%" margins="auto">
+		        <!--<caption>Three lattice paths from <m>(0,0)</m> to <m>(4,2)</m>.</caption>-->
+		    	<image xml:id="img-lattice-paths-1">
+		        <description>A lattice path from (0,0) to (4,2).</description>
+				    <latex-image>
+						<![CDATA[
+				    	\begin{tikzpicture}[scale=0.7]
+						\draw (4,2);
+						\draw[-,color=black,dashed] (0,0) grid (5,4);
+						\draw[-,color=blue,very thick] (0,0)--(1,0)--(2,0);
+						\draw[-,color=red,very thick] (2,0)--(2,1)--(2,2);
+						\draw[-,color=blue,very thick] (2,2)--(3,2)--(4,2);
+						\fill[thick] (0,0) circle[radius=3pt];
+						\fill[thick] (4,2) circle[radius=3pt];
+						\node[label={\footnotesize$(0,0)$}] at (0.6,-1.2){};
+						\node[label={\footnotesize$(4,2)$}] at (4.5,1.8){};
+						\end{tikzpicture}
+						]]>
+					</latex-image>
+				</image>
+						
+				<image xml:id="img-lattice-paths-2">
+		        <description>A lattice path from (0,0) to (4,2).</description>
+				    <latex-image>
+				    	<![CDATA[
+						\begin{tikzpicture}[scale=0.7]
+						\draw[-,color=black,dashed] (0,0) grid (5,4);
+						\draw[-,color=red,very thick] (0,0)--(0,1)--(0,2);
+						\draw[-,color=blue,very thick] (0,2)--(1,2)--(2,2)--(3,2)--(4,2);
+						\fill[thick] (0,0) circle[radius=3pt];
+						\fill[thick] (4,2) circle[radius=3pt];
+						\end{tikzpicture}
+						]]>
+					</latex-image>
+				</image>
+
+				<image xml:id="img-lattice-paths-3">
+		        <description>A lattice path from (0,0) to (4,2).</description>
+				    <latex-image>
+				    	<![CDATA[
+						\begin{tikzpicture}[scale=0.7]
+						\draw[-,color=black,dashed] (0,0) grid (5,4);
+						\draw[-,color=blue,very thick] (0,0)--(1,0)--(2,0)--(3,0);
+						\draw[-,color=red,very thick] (3,0)--(3,1);
+						\draw[-,color=blue,very thick] (3,1)--(4,1);
+						\draw[-,color=red,very thick] (4,1)--(4,2);
+						\fill[thick] (0,0) circle[radius=3pt];
+						\fill[thick] (4,2) circle[radius=3pt];
+						\end{tikzpicture}
+						]]>
+					</latex-image>
+				</image>
+			</sidebyside>
+
+			<p>
+				Each path above can be represented as a sequence of 4 R's and 2 U's:
+			</p>
+				<sidebyside widths="15% 15% 15%" margins="auto">
+					<p>RRUURR</p>
+					<p>UURRRR</p>
+					<p>RRRURU</p>
+				</sidebyside>
+
+			<p>
+				so the total number of lattice paths from <m>(0,0)</m> to <m>(4,2)</m> is the same as the number of such sequences, which is <me>\binom{6}{4} = \frac{6!}{2! \ 4!}</me>.
+			</p>
+    	</statement>
+	</example>
+
+	<p>
+		<xref ref="eg-counting-lattice-path"/> illustrates a useful technique in counting problems: by representing what is being counted (lattice paths) in a different way (sequences of R's and U's), we can uncover the combinatorial structure of these objects, making them easier to count.
+	</p>
+
+	<exercise xml:id="ex-counting-lattice-1">
+		<title>Lattice Paths to <m>(a,b)</m></title>
+		<statement>
+			<p>
+				Count the number of lattice paths ending at <m>(a,b)</m> for integer <m>a,b \geq 0</m>.
+			</p>
+		</statement>
+		<answer>
+			<p><m>\displaystyle\binom{a+b}{a}</m> or <m>\displaystyle\binom{a+b}{b}</m></p>
+		</answer>
+		<solution>
+			<p>
+				The number of lattice paths to the point <m>(a,b)</m> is the same as the number of strings of length <m>a+b</m> with <m>a</m> R's and <m>b</m> U's, and this is equal to <me>\dfrac{(a+b)!}{a! \ b!} = \binom{a+b}{a} = \binom{a+b}{b}</me> by <xref ref="prop-perm-repeat"/>.
+			</p>
+		</solution>
+
+	</exercise>
+
+	<exercise xml:id="ex-counting-lattice-2">
+		<title>Lattice Paths, specific numbers</title>
+		<statement>
+			<p>
+				Determine the number of lattice paths that end at:				
+				<ol label="(a)">
+					<li><m>(5,4)</m></li>
+					<li><m>(4,4)</m></li>
+					<li><m>(5,3)</m></li>
+				</ol>
+				Simplify your answers to arrive at a single number for each part.
+				How are your answers related?
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-counting-lattice-pascal">
+		<title>Lattice Paths and Pascal's Formula</title>
+		<statement>
+			<p>
+				Prove <xref ref="thm-pascals-formula"/> using lattice paths and an idea from <xref ref="ex-counting-lattice-2"/>.
+			</p>
+		</statement>
+		<hint>
+			<p>Count the number of lattice paths to <m>(k,n-k)</m>.</p>
+		</hint>
+		<solution>
+			<p>
+				Any lattice path from <m>(0,0)</m> to the point <m>(k,n-k)</m> either passes through the point <m>(k-1,n-k)</m> (and takes one last step to the Right) or the point <m>(k,n-k-1)</m> (and takes one last step Upwards).
+				This is a partition of the set of lattice paths to <m>(k,n-k)</m>.
+				We also know from <xref ref="ex-counting-lattice-1"/> that there are <m>\displaystyle\binom{n}{k}</m> lattice paths to <m>(k,n-k)</m>.
+			</p>
+			<p>
+				Furthermore, by <xref ref="ex-counting-lattice-1"/> there are <m>\displaystyle\binom{n-1}{k-1}</m> lattice paths to <m>(k-1,n-k)</m> and there are <m>\displaystyle\binom{n-1}{k}</m> lattice paths to <m>(k,n-k-1)</m>.
+			</p>
+			<p>
+				Hence by <xref ref="prin-sum-rule" />, we must have
+				<me>\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}</me>, as desired.
+			</p>
+		</solution>
+	</exercise>
+
+	
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+
 
 
 

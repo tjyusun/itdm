@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T22:00:52-04:00    *-->
+<!--*    on 2020-07-05T23:56:29-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -89,10 +89,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="app-notation.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="back.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="solutions-3.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="app-notation.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="back.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="solutions-5.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="app-notation.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="back.html" title="Up">Up</a><a class="next-button button toolbar-item" href="solutions-3.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="app-notation.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="back.html" title="Up">Up</a><a class="next-button button toolbar-item" href="solutions-5.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -127,13 +127,24 @@ MathJax.Hub.Config({
 <a href="chap-principles.html" data-scroll="chap-principles"><span class="codenumber">3</span> <span class="title">Pigeonhole and Inclusion-Exclusion</span></a><ul>
 <li><a href="sec-pigeonhole.html" data-scroll="sec-pigeonhole">The Pigeonhole Principle</a></li>
 <li><a href="sec-inclusion-exclusion.html" data-scroll="sec-inclusion-exclusion">Principle of Inclusion-Exclusion</a></li>
+<li><a href="sec-derangements.html" data-scroll="sec-derangements">Application: Derangements</a></li>
 <li><a href="exercises-principles.html" data-scroll="exercises-principles">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-congruence.html" data-scroll="chap-congruence"><span class="codenumber">4</span> <span class="title">Congruence Modulo \(n\)</span></a><ul>
+<li><a href="sec-equivalence.html" data-scroll="sec-equivalence">Equivalence Relations</a></li>
+<li><a href="sec-congruence.html" data-scroll="sec-congruence">Congruences</a></li>
+<li><a href="sec-euler.html" data-scroll="sec-euler">Euler's Theorem</a></li>
+<li><a href="sec-chinese-remainder.html" data-scroll="sec-chinese-remainder">The Chinese Remainder Theorem</a></li>
+<li><a href="sec-RSA.html" data-scroll="sec-RSA">The RSA Cryptosystem</a></li>
+<li><a href="exercises-congruence.html" data-scroll="exercises-congruence">Exercises</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
 <li class="link active"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">B</span> <span class="title">List of Results</span></a></li>
-<li class="link"><a href="solutions-3.html" data-scroll="solutions-3"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
+<li class="link"><a href="solutions-5.html" data-scroll="solutions-5"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -201,7 +212,40 @@ MathJax.Hub.Config({
 <div>
 <a class="xref" data-knowl="./knowl/def-binomial-coefficient.html" title="Definition 2.3.1: Binomial Coefficient">Definition 2.3.1</a> Binomial Coefficient</div>
 <div>
-<a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.2: Binomial Theorem">Theorem 2.3.2</a> Binomial Theorem</div></section></div></main>
+<a class="xref" data-knowl="./knowl/thm-pascals-formula.html" title="Theorem 2.3.2: Pascal's Formula">Theorem 2.3.2</a> Pascal's Formula</div>
+<div>
+<a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> Binomial Theorem</div>
+<h5 class="heading" title="Section 2.4: The Balls in Bins Formula">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">The Balls in Bins Formula</span>
+</h5>
+<div>
+<a class="xref" data-knowl="./knowl/prop-perm-repetition.html" title="Proposition 2.4.2: Permutations with repetition">Proposition 2.4.2</a> Permutations with repetition</div>
+<div>
+<a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a> Balls in Bins</div>
+<div>
+<a class="xref" data-knowl="./knowl/prop-nonnegative.html" title="Proposition 2.4.8: Nonnegative integer solutions">Proposition 2.4.8</a> Nonnegative integer solutions</div>
+<h5 class="heading" title="Section 2.5: Combinatorial Arguments">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Combinatorial Arguments</span>
+</h5>
+<div>
+<a class="xref" data-knowl="./knowl/thm-chairperson.html" title="Theorem 2.5.2: Chairperson Identity">Theorem 2.5.2</a> Chairperson Identity</div>
+<h5 class="heading" title="Section 3.1: The Pigeonhole Principle">
+<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">The Pigeonhole Principle</span>
+</h5>
+<div>
+<a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> Pigeonhole Principle (PHP)</div>
+<h5 class="heading" title="Section 3.2: Principle of Inclusion-Exclusion">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Principle of Inclusion-Exclusion</span>
+</h5>
+<div>
+<a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> Principle of Inclusion-Exclusion</div>
+<h5 class="heading" title="Section 3.3: Application: Derangements">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Application: Derangements</span>
+</h5>
+<div>
+<a class="xref" data-knowl="./knowl/def-derangement.html" title="Definition 3.3.1: Derangement">Definition 3.3.1</a> Derangement</div>
+<div>
+<a class="xref" data-knowl="./knowl/thm-derangement.html" title="Theorem 3.3.3: Number \(D_n\) of Derangements">Theorem 3.3.3</a> Number \(D_n\) of Derangements</div></section></div></main>
 </div>
 </body>
 </html>

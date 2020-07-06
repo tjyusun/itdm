@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-derangements">
+    <title>Application: Derangements</title>
+    <objectives>
+        <ul>
+            <li>Define derangements and use the Principle of Inclusion-Exclusion to derive a general formula for them.</li>
+            <li>Recognize scenarios where derangements apply and use them to solve problems.</li>
+        </ul>
+    </objectives>
+	<p>
+		Recall that the permutations of a set <m>S</m> are the bijective functions from <m>S</m> to itself.
+		We have a special name for those permutations that leave no element fixed:
+	</p>	
+
+	<definition xml:id="def-derangement">
+		<title>Derangement</title>
+		<statement>
+			<p>
+				A <term>derangement</term> is a permutation on <m>\{1,2,\ldots,n\}</m> such that no element is mapped to itself.
+			</p>
+		</statement>
+	</definition>
+
+	<example xml:id="eg-derangement-34">
+		<title>Derangements of 3- and 4-sets</title>
+		<statement>
+			<p>
+				The permutation on <m>\{1,2,3\}</m> that takes <m>1</m> to <m>3</m>, <m>2</m> to <m>1</m>, and <m>3</m> to <m>2</m> is a derangement; we can also denote it as the string 312.
+			</p>
+			<p>
+				There are only two derangements on <m>\{1,2,3\}</m>: 231 and 312.
+			</p>
+			<p>
+				The permutation 3241 on <m>\{1,2,3,4\}</m> is <em>not</em> a derangement since 2 is sent to itself.
+				We call 2 a <term>fixed point</term> of the permutation.
+			</p>
+			<p>
+				(Try listing all derangements of <m>\{1,2,3,4\}</m>.)
+			</p>
+		</statement>
+	</example>
+
+	<exploration xml:id="expl-derangement-Dn">
+		<title>Deriving <m>D_n</m></title>
+		<introduction>
+			<p>
+				Count the number of derangements <m>D_n</m> of the set <m>\{1,2,\ldots,n\}</m> using <xref ref="thm-pie"/>, by following these steps:
+				<notation>
+					<usage>D_n</usage>
+					<description>Number of derangements of <m>\{1,2,\ldots,n\}</m></description>
+				</notation>
+			</p>
+		</introduction>
+		<task>
+			<p>
+				Define <m>A_i</m> to be the set of permutations of <m>\{1,2,\ldots,n\}</m> for which <m>i</m> is a fixed point. (There are no restrictions on the other elements; there may be other fixed points.)
+			</p>
+			<p>
+				Then, express <m>D_n</m> as the cardinality of a set involving the <m>A_i</m>'s.
+			</p>
+		</task>
+		<task>
+			<p>
+				If <m>S \subseteq \{1,2,\ldots,n\}</m> with <m>|S| = k</m>, find a formula for <m>\left|\displaystyle\bigcap_{i \in S} A_i\right|</m>.
+			</p>
+		</task>
+		<task>
+			<p>
+				Combine with <xref ref="thm-pie"/> to derive a formula for <m>D_n</m>, then fill in the statement of the result below.
+			</p>
+		</task>
+	</exploration>
+
+	<theorem xml:id="thm-derangement">
+		<title>Number <m>D_n</m> of Derangements</title>
+		<statement>
+			<p>
+				The number of derangements <m>D_n</m> of the set <m>\{1,2,\ldots,n\}</m> is 
+				<me>D_n = <fillin characters="20"/></me>.
+			</p>
+		</statement>
+	</theorem>
+
+	<remark xml:id="remark-Dn-notation">
+		<statement>
+			<p>
+				For problems where it is relevant, you may leave your answers in terms of <m>D_n</m>. (You don't have to compute exact values unless asked.)
+			</p>
+		</statement>
+	</remark>
+
+	<exercise xml:id="ex-derangement-D4">
+		<title>Compute <m>D_4</m></title>
+		<statement>
+			<p>
+				Evaluate <m>D_4</m> and verify that it is the correct number by listing all derangements of <m>\{1,2,3,4\}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-derangement-ratio">
+		<title>The Ratio <m>D_n/n!</m></title>
+		<statement>
+			<p>
+				Using a computer, evaluate the ratio <me>\frac{D_n}{n!}</me> of derangements to all permutations of <m>\{1,2,\ldots,n\}</m> for <m>n</m> increasingly large.
+			</p>
+			<p>
+				Verify that the ratios approach the value of <m>\frac{1}{e}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+</section>
+

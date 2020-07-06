@@ -5,8 +5,319 @@
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-balls-in-bins">
     <title>The Balls in Bins Formula</title>
+    <objectives>
+        <ul>
+            <li>Derive the formulas for permutations and combinations with repetition (Balls in Bins Formula).</li>
+            <li>Given a counting problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
+        </ul>
+    </objectives>
     <p>
-        This is a longer sentence that is followed by another sentence.
-        Two sentences, and a second paragraph to follow.
+        Consider the following example similar to <xref ref="eg-counting-mcq"/>.
+	</p>
+    <example xml:id="eg-counting-mcq-again">
+    	<title>Multiple Choice, again</title>
+    	<statement>
+    		<p>
+				A standardized multiple-choice test for high school students has 40 questions and 5 choices each (A to E). How many possible ways can the test be answered?
+			</p>
+		</statement>
+		<solution>
+			<p>
+				For each question, there are 5 options, so using <xref ref="prin-prod-rule" />, there are a total of <m>5^{40}</m> possible ways to complete the test.
+			</p>
+		</solution>
+	</example>
+	
+	<p>
+		The operation in <xref ref="eg-counting-mcq-again"/> is called a permutation where <em>repetition</em> or <em>replacement is allowed</em>, since 
+		<ul>
+			<li> The order in which the answers are picked matters (<ie/> A-B-A is different from B-A-A); and</li>
+			<li> Answers can be repeated. Imagine a bag with five balls labeled A to E; for each question we draw a ball from the bag, record the answer, and put it back.</li>
+		</ul>
+		We formalize this in the next result.
     </p>
+
+    <proposition xml:id="prop-perm-repetition">
+    	<title>Permutations with repetition</title>
+    	<statement>
+    		<p>
+    			If repetition is allowed, the number of permutations of <m>k</m> objects taken from a set of size <m>n</m> is <m>n^k</m>.
+    		</p>
+    	</statement>
+    	<proof>
+    		<p>
+    			By <xref ref="prin-prod-rule"/>, since there are <m>n</m> possibilities for each of the <m>k</m> choices, the total number of ways to do so is <m>n^k</m>.
+    		</p>
+    	</proof>
+    </proposition>
+
+    <p>
+    	There is also a counterpart for combinations in which the order does not matter, which the next example illustrates.
+    </p>
+
+    <example xml:id="eg-counting-rice">
+    	<title>Rice Advice</title>
+    	<statement>
+    		<p>
+    			Ten participants are recruited to join a focus group discussion on rice, after which they are asked to indicate their preferred type of rice among the following options:
+    			<ul>
+    				<li><url href="https://en.wikipedia.org/wiki/Arborio_rice">Arborio</url></li>
+    				<li><url href="https://en.wikipedia.org/wiki/Basmati">Basmati</url></li>
+    				<li><url href="https://en.wikipedia.org/wiki/Jasmine_rice">Jasmine</url></li>
+    				<li><url href="https://en.wikipedia.org/wiki/Koshihikari">Koshihikari</url></li>
+    				<li><url href="https://en.wikipedia.org/wiki/Glutinous_rice">Malagkit</url></li>
+    			</ul>
+    			The participants gave their preferences anonymously so the researchers only know how many participants responded with each option.
+				How many combinations of answers can the researchers obtain from the study?
+    		</p>	
+    		<p>
+    			<alert>Solution</alert>
+    			Since we are only concerned with the survey results, outcomes look like the following, where we only record how many respondents picked the corresponding option:
+    		</p>
+    		<sidebyside width="75%" margins="auto">
+    			<p>Arborio -- 3, Basmati -- 5, Jasmine -- 2</p>
+    		</sidebyside>
+    		<p>
+    			and
+    		</p>
+    		<sidebyside width="75%" margins="auto">
+    			<p>Koshihikari -- 9, Milagrosa -- 1</p>
+    		</sidebyside>
+    		<p>
+				are examples of possible outcomes; we need to count how many there are in total.
+			</p>
+			<p>
+				Note that we cannot simply take permutations and then divide by an overcounting factor since how much we overcount by depends on the actual distribution of answers.
+			</p>
+			<p>
+				Instead, we envision the process of collecting survey responses as placing balls into bins with labels `Arborio,' `Basmati,' and so on. (Imagine the participants physically placing their survey forms into one of five ballot boxes!)
+			</p>
+			<p>
+				For example, the outcome [Arborio -- 3, Basmati -- 5, Jasmine -- 2] corresponds to the following distribution of balls into bins:
+			</p>
+			<sidebyside width="90%" margins="auto">
+				<tabular halign="center">
+					<row bottom="minor">
+						<cell><m>\bullet \bullet \bullet</m></cell>
+						<cell><m>\bullet \bullet \bullet \bullet \bullet</m></cell>
+						<cell><m>\bullet \bullet</m></cell>
+						<cell></cell>
+						<cell></cell>
+					</row>
+					<row>
+						<cell>Arborio</cell>
+						<cell>Basmati</cell>
+						<cell>Jasmine</cell>
+						<cell>Koshihikari</cell>
+						<cell>Malagkit</cell>
+					</row>
+				</tabular>
+			</sidebyside>
+			<p>
+				This can also be represented concisely as the pattern 
+				<me>\bullet \bullet \bullet \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \, \bullet \mid \, \mid</me>
+				where the four vertical lines denote <sq>dividers</sq> in between each pair of adjacent bins. 
+				Hence the problem of counting the number of possible outcomes is reduced to counting the number of arrangements of 10 <m>\bullet</m> and 4 <m>\mid</m> symbols, which is <me>\frac{14!}{10!\ 4!} = \binom{14}{4}</me>
+				by <xref ref="prop-perm-repeat"/>.
+			</p>
+
+    	</statement>
+    </example>
+
+    <exercise xml:id="ex-counting-rice-1">
+    	<title>Rice Advice Exercise</title>
+    	<statement>
+    		<p>
+				Following <xref ref="eg-counting-rice"/>, express each survey outcome as a pattern of dots <m>\bullet</m> and bars <m>\mid</m>, or vice-versa.
+				<ol label="(a)">
+					<li>Jasmine -- 3, Basmati -- 3, Arborio -- 1, Malagkit -- 3</li>
+					<li>Koshihikari -- 10</li>
+					<li><m>\bullet \ \bullet \mid \mid \bullet \bullet \bullet \bullet \bullet \ \bullet \mid \mid \bullet \ \bullet</m></li>
+					<li><m>\mid \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \mid \bullet \bullet \bullet \ \bullet</m></li>
+				</ol>
+    		</p>
+    	</statement>
+    	<hint>
+    		<p>Make sure the bins are in the right order!</p>
+    	</hint>
+    </exercise>
+
+    <p>
+    	This is called a <em>combination where repetition is allowed</em>, since
+    	<ul>
+    		<li>The order in which objects are picked <em>does not matter</em> (i.e.~A-B-A is the same as B-A-A); and</li>
+    		<li>Objects can be repeated.</li>
+    	</ul>
+    	As we saw in <xref ref="eg-counting-rice"/>, the number of <m>k</m>-combinations taken from a set of size <m>n</m> when repetition is allowed is equal to the number of ways we can distribute <m>k</m> balls into <m>n</m> bins.
+		This gives the following formula:
+    </p>
+
+    <theorem xml:id="thm-comb-replace">
+    	<title>Balls in Bins</title>
+    	<statement>
+    		<p>
+    			If repetition is allowed, the number of combinations of <m>k</m> objects taken from a set of size <m>n</m> is 
+    			<me>\binom{n+k-1}{k} = \binom{n+k-1}{n-1}</me>.
+				This is also equal to the number of ways one can distribute <m>k</m> indistinguishable balls into <m>n</m> bins.
+    		</p>
+    	</statement>
+    	<proof>
+    		<p>
+    			The total number of these combinations is equal to the number of ways to arrange <m>k</m> bullets (<m>\bullet</m> symbols; one for each object), and <m>n-1</m> bars (<m>\mid</m> symbols; to delineate bins):
+				<me> \underbrace{\bullet \ \bullet \ \cdots \ \bullet}_{k \text{ copies}}\ \underbrace{\mid \ \mid \ \cdots \ \mid}_{n-1 \text{ copies}}</me>,
+				which is <m>\displaystyle\binom{k+n-1}{k}</m> or <m>\binom{k+n-1}{n-1}</m> by <xref ref="prop-perm-repeat"/>.
+			</p>
+		</proof>
+    </theorem>
+
+    <remark xml:id="remark-stars-bars">
+    	<title>Stars and Bars</title>
+    	<p>
+    		Some textbooks refer to <xref ref="thm-comb-replace"/> as the <em>Stars and Bars Formula</em>, replacing the bullet symbols with stars, <ie/>
+    		<me> \underbrace{\star \ \star \ \cdots \ \star}_{k \text{ copies}}\ \underbrace{\mid \ \mid \ \cdots \ \mid}_{n-1 \text{ copies}}</me>.
+    	</p>
+    </remark>
+
+	<exercise xml:id="ex-counting-apples">
+		<title>Apples to Students</title>
+		<statement>
+			<p>
+				A teacher has 20 apples that are to be handed out to 9 students.
+				<ol label="(a)">
+					<li>How many different ways are there of distributing the apples?</li>
+					<li>How many different ways are there of distributing the apples so that <em>each student receives at least one apple</em>?</li>
+				</ol>
+			</p>
+		</statement>
+		<hint>
+			<p>
+				b. Give one apple to each student to begin, then distribute the rest.
+			</p>
+		</hint>
+	</exercise>
+
+	<p>
+		A nice application of the <xref ref="thm-comb-replace" text="custom">Balls in Bins Formula</xref> is counting the number of nonnegative integer solutions to equations of the form <me>x_1 + x_2 + \cdots + x_n = k</me>.
+	</p>
+
+
+	<exploration xml:id="eg-counting-nonnegative">
+		<title>Nonnegative integer solutions</title>
+		<introduction>
+			<p>
+				Consider the following equation: <men xml:id="equation-nonnegative">x_1 + x_2 + \cdots + x_5 = 10</men>,
+				and suppose we're interested in its nonnegative integer solutions.
+			</p>
+		</introduction>
+		<task>
+			<p>
+				Verify that <m>(x_1,x_2,x_3,x_4,x_5) = (3,5,2,0,0)</m> is a nonnegative integer solution to <xref ref="equation-nonnegative"/>.
+				Then explain how we can view this solution as an assignment of balls into labeled bins.
+			</p>
+		</task>
+		<task>
+			<p>
+				Using <xref ref="thm-comb-replace"/>, count the number of nonnegative integer solutions to <xref ref="equation-nonnegative"/>.
+			</p>
+		</task>
+		<task>
+			<p>
+				Generalize the above argument to count the number of nonnegative integer solutions to <me>x_1 + x_2 + \cdots + x_n = k</me>.
+				State explicitly what the balls and the bins are.
+			</p>
+		</task>
+		<!--
+			<p>
+				The number of solutions is equal to the number of ways to distribute <m>k = 10</m> balls into <m>n = 5</m> bins, labeled <m>x_1</m> to <m>x_5</m>.
+				For example, the solution <me>(x_1,x_2,x_3,x_4,x_5) = (3,5,2,0,0)</me> corresponds to the pattern <me>\bullet \bullet \bullet \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \, \bullet \mid \, \mid</me>.
+				Hence the total is <m>\binom{10 + 5 - 1}{10}</m>.
+				(Note the similarities with <xref ref="eg-counting-rice"/>.)
+			</p>
+		</solution>
+		-->
+	</exploration>
+
+	<proposition xml:id="prop-nonnegative">
+		<title>Nonnegative integer solutions</title>
+		<statement>
+			<p>
+				The number of nonnegative integer solutions to <m>x_1 + x_2 + \cdots + x_n = k</m> is <me>\displaystyle\binom{n+k-1}{k}</me>.
+			</p>
+		</statement>
+	</proposition>
+
+	<exercise xml:id="ex-counting-nonnegative-1">
+		<statement>
+			<p>
+				Determine the number of integer solutions to the system 
+				<me>
+					\begin{cases}
+					x_1 + x_2 + x_3 + x_4 + x_5 + x_6 = 15 \amp \\ x_1, x_2, x_3, x_4, x_5, x_6 \geq 0 \amp
+					\end{cases}
+				</me>
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-counting-nonnegative-2">
+		<title>Nonnegative integer solutions with additional constraints</title>
+		<statement>
+			<p>
+				Determine the number of integer solutions to the equation <me>x_1 + x_2 + x_3 + x_4 = 77</me> such that:
+				<ol labeled="(a)">
+					<li><m>x_1, x_2, x_3, x_4</m> are nonnegative.</li>
+					<li><m>x_1 \geq 4</m>, <m>x_2 \geq 0</m>, <m>x_3 \geq 12</m>, and <m>x_4 \geq 9</m>.</li>
+					<li><m>0 \leq x_1 \leq 30</m>, and <m>x_2, x_3, x_4 \geq 0</m>.</li>
+				</ol>
+			</p>
+		</statement>
+		<hint>
+			<p>
+				b. Look at part (b) of <xref ref="ex-counting-apples"/>. 
+			</p>
+		</hint>
+		<hint>
+			<p>
+				c. Solve the problem with <m>x_1 \geq 31</m> first then subtract from part (a).
+			</p>
+		</hint>
+		<solution>
+			<p>
+				b. In the context of <xref ref="ex-counting-apples"/>, <m>x_1 \geq 4</m> means that the first student must get at least 4 apples, so we start off by giving 4 to the variable <m>x_1</m>.
+				We can model this by defining a new variable
+				<me>y_1 = x_1 - 4</me>,
+				where <m>y_1</m> represents <em>how many more apples</em> above 4 we assign to <m>x_1</m>.
+			</p>
+			<p>
+				We can rearrange to get <m>x_1 = y_1 + 4</m> and substitute this into the original equation to get the new system
+					<me>
+						\begin{cases}
+						y_1 + x_2 + x_3 + x_4 = 73 \amp \\ y_1 \geq 0, x_2 \geq 0, x_3 \geq 12, x_4 \geq 9 \amp
+						\end{cases}
+					</me>
+				Then the same process can be repeated for <m>x_3</m> and <m>x_4</m>, resulting in the system
+					<me>
+						\begin{cases}
+						y_1 + x_2 + y_3 + y_4 = 52 \amp \\ y_1 \geq 0, x_2 \geq 0, y_3 \geq 0, y_4 \geq 0 \amp
+						\end{cases}
+					</me>.
+				</p>
+				<p>
+					At this point it is the same kind of system as in <xref ref="prop-nonnegative"/>, hence we can apply it directly to get the desired number, <m>\displaystyle\binom{56}{53}</m>.
+				</p>
+			</solution>
+
+	</exercise>
+
+	
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+
+
+
+
+
 </section>
+
+

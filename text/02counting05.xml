@@ -5,8 +5,284 @@
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-combinatorial-arguments">
     <title>Combinatorial Arguments</title>
+    <objectives>
+        <ul>
+            <li>Prove simple combinatorial identities by counting a set in two ways. (The set may or may not be given.)</li>
+        </ul>
+    </objectives>
     <p>
-        This is a longer sentence that is followed by another sentence.
-        Two sentences, and a second paragraph to follow.
+        The <xref ref="thm-binomial" text="custom">Binomial Theorem</xref> and <xref ref="thm-pascals-formula" text="custom">Pascal's Formula</xref> are examples of <term>combinatorial identities</term>.
+		These are identities or equations that involve the binomial coefficients.
+	</p>
+	<p>
+		We've seen two possible proofs of <xref ref="thm-pascals-formula" text="custom">Pascal's Formula</xref> <me>\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}</me> in <xref ref="expl-pingala"/> and <xref ref="ex-counting-lattice-pascal"/>. One can prove this a third way using algebra.
     </p>
+
+    <exercise xml:id="ex-counting-pascal-algebra">
+    	<title>Pascal's Formula, again</title>
+    	<statement>
+    		<p>
+    			Prove <xref ref="thm-pascals-formula"/> by manipulating the right-hand side algebraically, and showing that it simplifies to the left-hand side.
+    		</p>
+    	</statement>
+    </exercise>
+
+    <p>
+    	Proofs by algebra are easy to follow, but often provide little information about <em>why</em> the statement is true. 
+		The first two proofs of <xref ref="thm-pascals-formula"/>, in contrast, provide insights about the quantities involved in the identity.
+		Let's look at another example.
+	</p>
+
+	<theorem xml:id="thm-chairperson">
+		<title>Chairperson Identity</title>
+		<statement>
+			<p>
+				For integers <m>0 \leq k \leq n</m>, <me>k\binom{n}{k} = n\binom{n-1}{k-1}</me>.
+			</p>
+		</statement>
+	</theorem>
+
+	<exercise xml:id="ex-chairperson-algebra">
+		<title>Chairperson by Algebra</title>
+		<statement>
+			<p>
+				Prove <xref ref="thm-chairperson"/> using algebra.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Now we prove <xref ref="thm-chairperson"/> a second way, with what we call a <term>combinatorial argument</term> or a <term>combinatorial proof</term>.
+		This typically involves counting one set in two different ways, thus showing that the two quantities obtained (from each way of counting) are equal.
+	</p>
+
+	<example xml:id="ex-chairperson-comb">
+		<title>Chairperson by Combinatorial Proof</title>
+		<statement>
+			<p>
+				Prove <xref ref="thm-chairperson"/> by counting a set in two ways.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				Our goal is to show that <men xml:id="equation-chairperson">k\binom{n}{k} = n\binom{n-1}{k-1}</men>
+				given integers <m>0 \leq k \leq n</m>.
+			</p>
+			<p>
+				To do this, we count the number of ways to form a committee of <m>k</m> members from <m>n</m> people, and then elect a chair of the committee.
+			</p>
+			<p>
+				Suppose that from a group of <m>n</m> people, we want to 
+				<ol>
+					<li>Form a committee of <m>k</m> people; and</li>
+					<li>Elect a chair of the committee.</li>
+				</ol>
+				By <xref ref="prin-prod-rule"/>, we can count the number of ways we can do this by multiplying.
+				<ol>
+					<li>There are <m>\binom{n}{k}</m> ways to form a committee of <m>k</m> people from a group of <m>n</m>.</li>
+					<li>From the <m>k</m> people in the committee, we need to choose a chair, and there are <m>k</m> choices.</li>
+				</ol>
+				Hence we count a total of <me>\binom{n}{k} \times k</me> ways to do this.
+				Note that this is the left-hand side of what we're proving, <xref ref="equation-chairperson"/>.
+			</p>
+			<p>
+				Now let's count the number of such committee-chair selections in a different way: by first selecting the chair.
+				<ol>
+					<li>Elect a chair of the committee; then</li>
+					<li>Complete the committee by adding members.</li>
+				</ol>
+				Again, we use <xref ref="prin-prod-rule"/>, noting that the number of choices in the second step is independent of who is picked for the first.
+				<ol>
+					<li>There are <m>n</m> people in the original group, so we have <m>n</m> choices for committee chair.</li>
+					<li>From the remaining <m>n-1</m> people, we need to select <m>k-1</m> members to fill out the committee. There are <m>\binom{n-1}{k-1}</m> ways to do this.</li>
+				</ol>
+				Therefore we can select a chair and form the committee a total of <me>n\binom{n-1}{k-1}</me> ways. This is the right-hand side of <xref ref="equation-chairperson"/>!
+			</p>
+			<p>
+				We just showed that the left-hand side and the right-hand side of the given identity are two different ways of counting the committee-chair possibilities, and hence, they must be equal.
+			</p>
+		</solution>
+	</example>
+
+	<p>
+		The following diagrams illustrate the two ways of selecting a committee of size <m>k = 4</m> and a chairperson given a group of <m>n = 9</m> people.
+	</p>
+	<p>
+		First way of counting:
+	</p>
+	<sidebyside widths="15% 16% 18%" margins="auto">
+		<image xml:id="img-chairperson-1a">
+			<description>Nine dots in a three by three grid.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.4]
+				\draw[fill=black] (0,0) circle (0.7ex);
+				\draw[fill=black] (0,2) circle (0.7ex);
+				\draw[fill=black] (0,4) circle (0.7ex);
+				\draw[fill=black] (2,0) circle (0.7ex);
+				\draw[fill=black] (2,2) circle (0.7ex);
+				\draw[fill=black] (2,4) circle (0.7ex);
+				\draw[fill=black] (4,0) circle (0.7ex);
+				\draw[fill=black] (4,2) circle (0.7ex);
+				\draw[fill=black] (4,4) circle (0.7ex);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+
+		<image xml:id="img-chairperson-1b">
+			<description>Nine dots in a three by three grid, four are bigger and colored blue.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.4]
+				\draw[fill=black] (0,0) circle (0.7ex);
+				\draw[fill=blue] (0,2) circle (1.3ex);
+				\draw[fill=black] (0,4) circle (0.7ex);
+				\draw[fill=blue] (2,0) circle (1.3ex);
+				\draw[fill=black] (2,2) circle (0.7ex);
+				\draw[fill=black] (2,4) circle (0.7ex);
+				\draw[fill=blue] (4,0) circle (1.3ex);
+				\draw[fill=blue] (4,2) circle (1.3ex);
+				\draw[fill=black] (4,4) circle (0.7ex);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+
+		<image xml:id="img-chairperson-1c">
+			<description>Nine dots in a three by three grid, of the four blue dots one has been colored red and emphasized.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.4]
+				\draw[-,thick,dashed] (3,-1)--(5,-1)--(5,1)--(3,1)--(3,-1);
+				\draw[fill=black] (0,0) circle (0.7ex);
+				\draw[fill=blue] (0,2) circle (1.3ex);
+				\draw[fill=black] (0,4) circle (0.7ex);
+				\draw[fill=blue] (2,0) circle (1.3ex);
+				\draw[fill=black] (2,2) circle (0.7ex);
+				\draw[fill=black] (2,4) circle (0.7ex);
+				\draw[fill=red] (4,0) circle (2ex);
+				\draw[fill=blue] (4,2) circle (1.3ex);
+				\draw[fill=black] (4,4) circle (0.7ex);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+	
+	<sidebyside widths="15% 16% 18%" margins="auto">
+		<p>From nine people</p>
+		<p>pick four members</p>
+		<p>then elect a chair.</p>
+	</sidebyside>
+
+	<p>
+		Second way:
+	</p>
+
+	<sidebyside widths="15% 17% 17%" margins="auto">
+		<image xml:id="img-chairperson-2a">
+			<description>Nine dots in a three by three grid.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.4]
+				\draw[fill=black] (0,0) circle (0.7ex);
+				\draw[fill=black] (0,2) circle (0.7ex);
+				\draw[fill=black] (0,4) circle (0.7ex);
+				\draw[fill=black] (2,0) circle (0.7ex);
+				\draw[fill=black] (2,2) circle (0.7ex);
+				\draw[fill=black] (2,4) circle (0.7ex);
+				\draw[fill=black] (4,0) circle (0.7ex);
+				\draw[fill=black] (4,2) circle (0.7ex);
+				\draw[fill=black] (4,4) circle (0.7ex);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+
+		<image xml:id="img-chairperson-2b">
+			<description>Nine dots in a three by three grid, four are bigger and colored blue.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.4]
+				\draw[-,thick,dashed] (3,-1)--(5,-1)--(5,1)--(3,1)--(3,-1);
+				\draw[fill=black] (0,0) circle (0.7ex);
+				\draw[fill=black] (0,2) circle (0.7ex);
+				\draw[fill=black] (0,4) circle (0.7ex);
+				\draw[fill=black] (2,0) circle (0.7ex);
+				\draw[fill=black] (2,2) circle (0.7ex);
+				\draw[fill=black] (2,4) circle (0.7ex);
+				\draw[fill=red] (4,0) circle (2ex);
+				\draw[fill=black] (4,2) circle (0.7ex);
+				\draw[fill=black] (4,4) circle (0.7ex);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+
+		<image xml:id="img-chairperson-2c">
+			<description>Nine dots in a three by three grid, of the four blue dots one has been colored red and emphasized.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.4]
+				\draw[-,thick,dashed] (3,-1)--(5,-1)--(5,1)--(3,1)--(3,-1);
+				\draw[fill=black] (0,0) circle (0.7ex);
+				\draw[fill=blue] (0,2) circle (1.3ex);
+				\draw[fill=black] (0,4) circle (0.7ex);
+				\draw[fill=blue] (2,0) circle (1.3ex);
+				\draw[fill=black] (2,2) circle (0.7ex);
+				\draw[fill=black] (2,4) circle (0.7ex);
+				\draw[fill=red] (4,0) circle (2ex);
+				\draw[fill=blue] (4,2) circle (1.3ex);
+				\draw[fill=black] (4,4) circle (0.7ex);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+
+	<sidebyside widths="15% 17% 17%" margins="auto">
+		<p>From nine people</p>
+		<p>elect a chair</p>
+		<p>then pick three more members.</p>
+	</sidebyside>
+
+	<p>
+		While the combinatorial proof of the Chairperson Identity is no more correct than the algebraic method, it offers a concrete, meaningful way to explain why the two quantities are always equal. 
+		Proving combinatorial identities in this manner requires creativity, especially if one is not told <em>what set</em> is being counted.
+	</p>
+
+	<p>
+		In general:
+		<ul>
+			<li>If the identity involves addition, this means the objects being counted will likely be broken up into disjoint cases (and <xref ref="prin-sum-rule"/> is used).</li>
+			<li>If the identity involves multiplication, there may be multiple interpretations depending on the use of <xref ref="prin-prod-rule"/>. 
+			For instance, <m>2^n</m> may represent the number of subsets of <m>\{1,2,\ldots,n\}</m> or the number of binary strings of length <m>n</m>.</li>
+		</ul>
+	</p>
+
+	<exercise xml:id="ex-counting-comb-proof-1">
+		<title>Prove <m>n^2 = 2\binom{n}{2} + n</m></title>
+		<statement>
+			<p>
+				Using algebra it is a straightforward manipulation to show that <me>n^2 = 2\binom{n}{2} + n</me> for <m>n \in \mathbb{N}</m>.
+				Write a complete combinatorial proof of this statement.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				First think what objects are counted by <m>n^2</m>. Then, break them up into two distinct cases for the right-hand side
+			</p>
+		</hint>
+	</exercise>
+
+	<exercise xml:id="ex-counting-comb-proof-2">
+		<title>Another proof of <xref ref="ex-counting-binomial-identity"/></title>
+		<statement>
+			<p>
+				Prove the statement in <xref ref="ex-counting-binomial-identity"/> by counting the number of subsets of <m>\{1,2,\ldots,n\}</m> in two ways.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Partition subsets by cardinality.
+			</p>
+		</hint>
+	</exercise>
+<!--
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+-->
+
+
+
 </section>

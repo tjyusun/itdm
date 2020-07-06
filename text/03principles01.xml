@@ -5,8 +5,331 @@
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-pigeonhole">
     <title>The Pigeonhole Principle</title>
+    <objectives>
+        <ul>
+            <li>State the Pigeonhole Principle and prove the generalized version.</li>
+            <li>Identify the pigeons and pigeonholes in a given problem and apply the Pigeonhole Principle to come to a conclusion.</li>
+        </ul>
+    </objectives>
     <p>
-        This is a longer sentence that is followed by another sentence.
-        Two sentences, and a second paragraph to follow.
-    </p>
+    	The Pigeonhole Principle is not a <em>counting</em> technique <em>per se</em>, but a way to prove that a set of objects satisfies some existence or extremal property.
+		Before we state the principle formally let's look at two examples.
+	</p>
+
+	<example xml:id="eg-php-pizza">
+		<title>Splitting a Pizza</title>
+		<statement>
+			<p>
+				If six friends order and finish eating a pizza that is divided into 8 slices, show that one of them gets at least 2 slices.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				Towards a contradiction, suppose that each person gets at most one slice only.
+				Then they will eat at most only 6 slices among them, leaving the pizza unfinished.
+				This is a contradiction, so there must be one person who eats at least two slices.
+			</p>
+			
+			<p>
+				Observe that this proof does not deny the possibility of multiple people getting two slices: it is quite possible that four of the friends ate a slice each, and the two others ate two slices each.
+				It is also possible that one person ate three slices, while the five remaining friends ate a slice each.
+			</p>
+			<p>
+				In either case, one person ate at least two slices.
+			</p>
+		</solution>
+	</example>
+	<p>
+	</p>
+		<sidebyside width="35%" margins="auto">
+			<image xml:id="img-php-pizza">
+				<description>A pizza cut into eight slices and six mini-people around the pizza.</description>
+			    <latex-image>
+			    	\begin{tikzpicture}[scale=0.7]
+					\draw (0,0) circle (2cm);
+					\draw[very thick,fill=gray!10] (0,0) --  (45:2) arc(45:0:2) -- cycle;
+					\draw[very thick,fill=gray!10] (0,0) --  (90:2) arc(90:45:2) -- cycle;
+					\draw[very thick,fill=gray!10] (0,0) --  (135:2) arc(135:90:2) -- cycle;
+					\draw[very thick,fill=gray!10] (0,0) --  (180:2) arc(180:135:2) -- cycle;
+					\draw[very thick,fill=gray!10] (0,0) --  (225:2) arc(225:180:2) -- cycle;
+					\draw[very thick,fill=gray!10] (0,0) --  (270:2) arc(270:225:2) -- cycle;
+					\draw[very thick,fill=gray!10] (0,0) --  (315:2) arc(315:270:2) -- cycle;
+					\draw[very thick,fill=gray!10] (0,0) --  (360:2) arc(360:315:2) -- cycle;
+					\node[] at (-3,-2) {\Huge \Ladiesroom};
+					\node[] at (-4,0) {\Huge \Ladiesroom};
+					\node[] at (-3,2) {\Huge \Ladiesroom};
+					\node[] at (3,-2) {\Huge \Ladiesroom};
+					\node[] at (4,0) {\Huge \Ladiesroom};
+					\node[] at (3,2) {\Huge \Ladiesroom};
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+		<sidebyside width="27%" margins="auto">
+			<p><em>That's one big pizza!</em></p>
+		</sidebyside>
+
+	<example xml:id="eg-php-quiz-scores">
+		<title>Quiz Scores</title>
+		<statement>
+			<p>
+				A class of 20 students got their quiz scores back, and their instructor told them the average for the test was 8 out of a maximum of 10.
+				Prove that someone in the class must have scored at least an 8/10.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				Denote the scores of the students by <m>x_1</m>, <m>x_2</m>, and so on until <m>x_{20}</m>.
+			</p>
+			<p>
+				Assume that nobody scored at least an 8/10; that is, <m>x_i \lt 8</m> for all <m>i = 1,2,\ldots, 20</m>.
+				Adding all these inequalities and dividing by 20, we obtain 
+				<md> <mrow>x_1 + x_2 + \cdots + x_{20} \amp \lt 160</mrow>
+ 					<mrow>\Rightarrow \dfrac{x_1+x_2+\cdots+x_{20}}{20} \amp \lt \dfrac{160}{20}</mrow>
+ 					<mrow>\Rightarrow \text{class average } \amp \lt 8</mrow></md>,
+ 				which contradicts the assumption that the average was 8 out of 10.
+ 			</p>
+ 		</solution>
+	</example>
+
+	<p>
+		For both the previous examples, we argued that <em>there is no other way</em> but for the required property to hold, regardless of how the pizza slices/points are actually distributed among people.
+		We call this kind of proof a <term>non-constructive proof</term> or an <term>existence proof</term>, since it shows that the property holds without actually giving an example (or an algorithm to create an example).
+		This is typical of proofs that utilize the Pigeonhole Principle.
+	</p>
+
+	<theorem xml:id="thm-php">
+		<title>Pigeonhole Principle (PHP)</title>
+		<statement>
+			<p>
+				Placing more than <m>kn</m> objects (pigeons) into <m>n</m> classes (pigeonholes) puts more than <m>k</m> objects into some class.
+			</p>
+		</statement>
+	</theorem>
+
+	<exercise xml:id="ex-php-proof">
+		<title>Prove the PHP</title>
+		<statement>
+			<p>
+				Prove <xref ref="thm-php"/> following the proofs of <xref ref="eg-php-pizza"/> and <xref ref="eg-php-quiz-scores"/>.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Setting <m>k = 1</m> in the statement of the principle results in the classic version:
+	</p>
+
+	<corollary xml:id="cor-php">
+		<title>Pigeonhole Principle with <m>k=1</m></title>
+		<statement>
+			<p>
+				If more than <m>n</m> objects are placed into <m>n</m> classes, then some class must have at least 2 objects.
+			</p>
+		</statement>
+	</corollary>
+
+
+	<exercise xml:id="ex-php-last-digit">
+		<title>Same Last Digit</title>
+		<statement>
+			<p>
+				Given any set of eleven natural numbers, prove that there must be two of them with the same last digit.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				How many digits are possible?
+			</p>
+		</hint>
+	</exercise>
+
+
+	<exercise xml:id="ex-php-difference-divisible">
+		<title>Difference Divisible by 10</title>
+		<statement>
+			<p>
+				Given any set of eleven natural numbers, prove that there must be a pair of elements whose difference is divisible by 10.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Use <xref ref="ex-php-last-digit"/>.
+			</p>
+		</hint>
+	</exercise>
+
+	<p>
+		Often it is not immediately obvious what the pigeons and pigeonholes should be when we attempt to apply <xref ref="thm-php"/> to a problem.
+		Moreover one needs also to give a rule that assigns pigeons to pigeonholes, such that:
+		<ul>
+			<li>There are fewer pigeonholes (<m>n</m>) than pigeons (<m>\gt kn</m>).</li>
+			<li>The desired property is satisfied when more than <m>k</m> objects is put into any class.</li>
+		</ul>
+		When using <xref ref="thm-php"/> one must explicitly state what the pigeons and pigeonholes are, and explain how the assignment is done.
+	</p>
+
+	<example xml:id="eg-php-sum-to-8">
+		<title>Sum to 8</title>
+		<statement>
+			<p>
+				If five numbers are selected from the set <m>\{1,2,3,4,5,6,7\}</m>, prove that two of these numbers must sum to 8.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				Define pigeonholes to be the sets <m>\{1,7\}</m>, <m>\{2,6\}</m>, <m>\{3,5\}</m>, <m>\{4\}</m>, and pigeons to be the five numbers selected.
+				Then picking five numbers from <m>\{1,2,\ldots,7\}</m> is the same as placing 5 pigeons into these 4 pigeonholes.
+			</p>
+			<sidebyside width="80%" margins="auto">
+				<tabular>
+					<row>
+						<cell><fillin characters="8"/></cell>
+						<cell><fillin characters="8"/></cell>
+						<cell><fillin characters="8"/></cell>
+						<cell><fillin characters="8"/></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>\{1,7\}</m></cell>
+						<cell halign="center"><m>\{2,6\}</m></cell>
+						<cell halign="center"><m>\{3,5\}</m></cell>
+						<cell halign="center"><m>\{4\}</m></cell>
+					</row>
+				</tabular>
+			</sidebyside>
+			<p>
+				Note that the last pigeonhole by definition can only contain at most one pigeon<mdash/>this does not affect the proof.
+				By PHP, there is a pigeonhole with two pigeons.
+				That is, two numbers are selected from one of these sets; these two numbers must sum to 8.
+			</p>
+		</solution>
+	</example>
+
+	<p>
+		We say that the number five is <term>best possible</term> in <xref ref="eg-php-sum-to-8"/> since it is possible to select four numbers and not have any pair sum to 8 (for instance, pick 1, 2, 3, and 4).
+		But selecting <em>any</em> five numbers from <m>\{1,2,\ldots,7\}</m> guarantees the property is satisfied.
+	</p>
+
+	<exercise xml:id="ex-php-sum-to-2n">
+		<title>Sum to <m>2n</m></title>
+		<statement>
+			<p>
+				Generalize <xref ref="eg-php-sum-to-8"/>. That is, if <m>n+1</m> numbers are selected from the set <m>\{1,2,\ldots,2n-1\}</m>, prove that two of these numbers must sum to <m>2n</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		The next example is slightly different in that we're not given a fixed set of numbers to work with. Instead, the result being proven holds for any set of six integers.
+		(Convince yourself it works and try proving it yourself first before expanding the solution!)
+	</p>
+
+	<example xml:id="eg-php-sum-diff-8">
+		<title>Sum or Difference Divisible by 8</title>
+		<statement>
+			<p>
+				Given <em>any</em> set of six integers, show that there is a pair among them whose sum <em>or</em> difference is divisible by 8.
+			</p>
+		</statement>
+		<hint>
+			<p>Use remainders modulo 8.</p>
+		</hint>
+		<solution>
+			<p>
+				If a pair of integers <m>a, b</m> among the six have the same remainder when dividing by 8, then their difference <m>a-b</m> is divisible by 8, and we are done.
+			</p>
+			<p>
+				So assume that all six integers have distinct remainders when dividing by 8.
+				Construct the five pigeonholes <m>\{0\},\{1,7\},\{2,6\},\{3,5\},\{4\}</m> and place each of the six numbers in the pigeonhole corresponding to its remainder.
+			</p>
+			<p>
+				By PHP, one of these pigeonholes must have two numbers.
+				That is, summing those two numbers gives a sum that is divisible by 8.
+			</p>
+		</solution>
+	</example>
+
+	<exercise xml:id="ex-php-sum-diff-8-best">
+		<title>Six is Best Possible</title>
+		<statement>
+			<p>
+				Show that <xref ref="eg-php-sum-diff-8"/> is best possible by constructing a set of five integers for which <em>no pair</em> has sum or difference divisible by 8.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				The set <m>\{0,1,2,3,4\}</m> (or any set with the same remainders modulo 8<mdash/><eg/> <m>\{9,16,19,26,28\}</m>) has no pair that satisfies the desired property.
+			</p>
+		</solution>
+	</exercise>	
+
+	<exercise xml:id="ex-php-sum-diff-2n">
+		<title>Sum or Difference Divisible by <m>2n</m></title>
+		<statement>
+			<p>
+				Prove this generalization of <xref ref="eg-php-sum-diff-8"/>:
+			</p>
+			<p>
+				Given any set of <m>n+2</m> integers, there is a pair among them whose sum or difference is divisible by <m>2n</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		A few more applications to conclude this section.
+	</p>
+
+	<example xml:id="ex-php-friends">
+		<title>Number of Friends</title>
+		<statement>
+			<p>
+				Prove that in any group of people, there must be two of them with the same number of friends in the group.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				Suppose there are <m>n</m> people in the group.
+				Then each person can have <m>0, 1, \ldots, \text{ or } n-1</m> friends among the group. 
+				This is still <m>n</m> pigeonholes, so we cannot apply PHP yet.
+			</p>
+			<p>
+				Observe that it cannot happen that someone has no friends, and someone else has <m>n-1</m> friends.
+				(If a person has <m>n-1</m> friends, then every other person has at least one friend.)
+				Hence there are only <m>n-1</m> possible numbers of friends among the <m>n</m> people, which means two of them must have the same number of friends, by the PHP.
+			</p>
+		</solution>
+	</example>
+
+	<exercise xml:id="ex-php-divides">
+		<title>One Divides Another</title>
+		<statement>
+			<p>
+				Prove that any <m>(n+1)</m>-subset of <m>\{1,2,\ldots,2n\}</m> contains two numbers such that one divides the other.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Pigeonholes are <m>\{1\},\{3\},\{5\},\ldots,\{2n-1\}</m>; assign each number to the pigeonhole that contains its largest odd divisor. If two numbers are in the same pigeonhole, why should one divide the other?
+			</p>
+		</hint>
+	</exercise>
+
+	<exercise xml:id="ex-php-shower">
+		<title>Tracking Showers</title>
+		<statement>
+			<p>
+				Over a two-week period (14 days), you kept track of how many showers you took.
+				Your records show that you showered at least once every day, and that you showered a total of 17 times.
+			</p>
+			<p>
+				By following the steps below, prove that there was a period of consecutive days during which you showered exactly 10 times.
+				<ol label="(a)">
+					<li>Define variables <m>x_i</m> to be the number of times you took a shower on day <m>i</m> (<m>1 \leq i \leq 14</m>), and define <m>y_i = x_1 + x_2 + \cdots + x_i</m> to be the partial sums. Explain why it suffices to prove <m>y_i = y_j + 10</m> for some <m>i,j</m>.</li>
+					<li>Explain why the set <me>\{y_1,y_2,\ldots,y_{14},y_1+10,y_2+10,\ldots,y_{14}+10\}</me> can only contain numbers from 1 to 27.</li>
+					<li>Apply <xref ref="thm-php"/> to prove the desired property. What are the pigeons and pigeonholes?</li>
+				</ol>
+			</p>
+		</statement>
+	</exercise>
+
 </section>

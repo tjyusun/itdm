@@ -1,0 +1,26 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-05T18:31:19-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="exercise exercise-like"><p>Given \(n \in \mathbb{N}\) and \(\{p_1,p_2,\ldots,p_k\}\) its set of prime factors, we will prove the following formula for the number of natural numbers less than \(n\) (denoted by \(\phi(n)\)) that are also relatively prime with \(n\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\phi(n) = \sum_{S \subseteq \{1,2,\ldots,k\}}(-1)^{|S|}\dfrac{n}{\prod_{i\in S} p_i}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">(This is known as <dfn class="terminology">Euler's totient function</dfn>.) </p>
+<ol class="lower-alpha">
+<li>Define \(A_i\) to be the set of natural numbers less than \(n\) that are divisible by \(p_i\text{.}\)</li>
+<li>For any set \(S \subseteq \{1,2,\ldots,k\}\text{,}\) compute the value of \(\left|\bigcap_{i\in S} A_i \right|\text{.}\)</li>
+<li>Apply <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>.</li>
+</ol></article></body>
+</html>

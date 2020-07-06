@@ -17,6 +17,7 @@
         \usepackage{calculator}
         \usepackage{pgfplots}
         \usepackage{ascii}
+        \usepackage{marvosym}
         \pgfplotsset{compat=1.15, tick label style={font=\scriptsize}}
         \usetikzlibrary{shapes, patterns, snakes}
         \usetikzlibrary{arrows,arrows.meta,decorations.markings}
@@ -84,6 +85,7 @@
     <xi:include href="text/01review00.xml" />
     <xi:include href="text/02counting00.xml" />
     <xi:include href="text/03principles00.xml" />
+    <xi:include href="text/04congruence00.xml" />
 
     
     <xi:include href="backmatter.xml" />

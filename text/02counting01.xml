@@ -423,6 +423,25 @@
         </statement>
     </example>
 
+    <exercise xml:id="ex-counting-party-leaders">
+        <title>Trip Planning</title>
+        <statement>
+            <p>
+                Four friends (Andrew, Jagmeet, Yves-François, and Jo-Ann) are planning a trip to Ottawa, and they need to assign tasks (booking flights, booking hotel rooms, and making an itinerary) to three people. Andrew cannot be trusted to make an itinerary; also, either Jagmeet or Jo-Ann must book hotel rooms. How many ways can they assign tasks?
+            </p>
+            <p>
+                Think carefully about which counting principle(s) to apply here.
+                Explain your method of calculation properly.
+            </p>
+        </statement>
+        <hint>
+            <p> 
+               
+                A diagram would be useful.
+            </p>
+        </hint>
+    </exercise>
+
 <solutions inline="solution">
     <title>Solutions to Selected Checkpoints</title>
 </solutions>

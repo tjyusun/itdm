@@ -12,7 +12,7 @@
     <p>
     When writing proofs, one needs to be <em>clear</em>, <em>complete</em>, and <em>correct</em>.
     Comment on the three proofs below of the statement
-    <me>\text{Let } m \in \mathbb{Z}\text{. Then }m\text{ is even if and only if } m^3 \text{\ is even}</me>.
+    <me>\text{Let } m \in \mathbb{Z}\text{. Then }m\text{ is even if and only if } m^3 \text{ is even}</me>.
     Which one(s) is/are
     <ul cols="2">
         <li>convincing?</li>

@@ -5,8 +5,339 @@
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-inclusion-exclusion">
     <title>Principle of Inclusion-Exclusion</title>
+    <objectives>
+        <ul>
+            <li>State the Principle of Inclusion-Exclusion and apply it to problems to compute set cardinalities (for combinations of two to four sets).</li>
+        </ul>
+    </objectives>
     <p>
-        This is a longer sentence that is followed by another sentence.
-        Two sentences, and a second paragraph to follow.
+    	We first recall that in order to count the number of elements of a set <m>U</m> that <em>don't</em> satisfy a given condition, one can first count the number of elements that <em>do</em>, and then subtract from the cardinality of <m>U</m>.
     </p>
+
+    <example xml:id="eg-pie-divisible-3">
+    	<title>Not Divisible by 3</title>
+    	<statement>
+    		<p>
+    			How many integers in <m>U = \{1,2,\ldots,25\}</m> are <em>not</em> divisible by 3?
+    		</p>
+    		<p><alert>Solution</alert>
+    		   			<notation>
+                	<usage>\lfloor n \rfloor</usage>
+                	<description>floor function</description>
+            	</notation>
+    			We first count the number of integers in the set that are divisible by 3: there are <me>\left\lfloor \frac{25}{3}\right\rfloor = 8</me> of them.
+    		</p>
+    		<p>   		
+    			Note that the notation <m>\lfloor n \rfloor</m> denotes the <term>floor function</term>, which returns the largest integer that is less than or equal to <m>n</m>.
+    		</p>
+    		<p>
+				Subtracting, we get <m>25 - 8 = 17</m> integers in the set <m>U</m> that are not divisible by 3.
+				(Check that this is the correct number!)
+			</p>
+		
+		</statement>
+    </example>
+
+    <p>
+		Note that this solution can be expressed in terms of sets: if <m>U = \{1,2,\ldots,25\}</m> is the universe, and <m>A</m> is the set of integers in <m>U</m> divisible by 3, then the desired quantity is <m>|A^c|</m>, and <me>|A^c| = |U| - |A|</me>.
+	</p>
+	<p>
+		What if we added a second condition to avoid?
+	</p>
+
+	<example xml:id="eg-pie-divisible-3-4">
+		<title>Not Divisible by 3 or 4</title>
+		<statement>
+			<p>
+				How many numbers in <m>U = \{1,2,\ldots,25\}</m> are not divisible by 3 or 4?
+			</p>
+		</statement>
+		<solution>
+			<p>
+				Following the previous example, there are <m>8</m> integers in <m>U</m> that are divisible by 3.
+				Also, there are <m>\lfloor \frac{25}{4} \rfloor = 6</m> integers in <m>U</m> not divisible by 4.
+			</p>
+			<p>
+				However, after subtracting <m>25 - 8 - 6 = 11</m>, we've actually removed some numbers twice: those numbers that are divisible by <em>both</em> 3 and 4 (<ie/> divisible by 12).
+				This means we need to <sq>add them back in</sq> again.
+			</p>
+			<p>
+				There are <m>\lfloor \frac{25}{12} \rfloor = 2</m> of these numbers, so the correct total is <me>20 - 8 - 6 + 2 = 13</me> integers in the set that are neither divisible by 3 nor by 4.
+			</p>
+		</solution>
+	</example>
+
+	<p>
+		We can again write the solution to <xref ref="eg-pie-divisible-3-4"/> in terms of sets:
+		<ul>
+			<li><m>U = \{1,2,\ldots,25\}</m></li>
+			<li><m>A_1 = </m> integers in <m>U</m> divisible by 3 <m> = \{3,6,9,12,15,18,21,24\}</m></li>
+			<li><m>A_2 = </m> integers in <m>U</m> divisible by 4 <m> = \{4,8,12,16,20,24\}</m></li>
+			<li><m>A_1 \cup A_2 = </m> integers in <m>U</m> divisible by either 3 or 4 <m> = \{3,4,6,8,9,12,15,16,18,20,21,24\}</m></li>
+			<li>Desired set: <m>(A_1 \cup A_2)^c = </m> integers in <m>U</m> divisible by neither 3 nor 4.</li>
+		</ul>
+	</p>
+
+	<sidebyside width="50%" margins="auto">
+	<image xml:id="img-divisible-3-4" halign="center">
+		<description>Venn diagram.</description>
+	    <latex-image>
+			\begin{tikzpicture}
+			% left hand
+			\fill[gray] (-3,-2.5) rectangle (3,2.5) node [text=black,above] {\footnotesize $U$};
+			\fill[white] (1,0) circle (1.5);
+			\fill[white] (-1,0) circle (1.5);
+			\draw (-1,0) circle (1.5) (-1,1.5) node [text=black,above] {\footnotesize $A_1$};
+			\draw (1,0) circle (1.5) (1,1.5) node [text=black,above] {\footnotesize $A_2$};
+			\node[] at (0,-2) {\footnotesize 1 2 5 7 10 11 13 14 17 19 22 23 25};
+			\node[] at (-1.3,0.7) {\footnotesize 3 6 9};
+			\node[] at (-1.5,0) {\footnotesize 15 18};
+			\node[] at (-1.5,-0.7) {\footnotesize 21};
+			\node[] at (0,0.3) {\footnotesize 12};
+			\node[] at (0,-0.4) {\footnotesize 24};
+			\node[] at (1.2,0.4) {\footnotesize 4 8};
+			\node[] at (1.6,-0.3) {\footnotesize 16 20};
+			\end{tikzpicture}
+		</latex-image>
+	</image>
+	</sidebyside>
+	<p>
+		Observe that when we subtract <m>|A_1|</m> and <m>|A_2|</m> from <m>|U|</m>, we are subtracting the elements in the intersection <m>A_1 \cap A_2 = \{12, 24\}</m> two times.
+		So to determine the quantity <m>|(A_1 \cup A_2)^c|</m> we computed:
+		<me> |(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2|</me>.
+	</p>
+
+	<remark xml:id="remark-setminus">
+		<statement>
+			<p>
+				Do not confuse the operations <m>|A| - |B|</m> and <m>A \setminus B</m>. The first is a difference of two numbers, while the second is a set operation that also results in a set. 
+				In fact, it is not the case that <m>|A| - |B| = |A \setminus B|</m> in general. (Can you come up with a counterexample?)
+			</p>
+		</statement>
+	</remark>
+
+	<exercise xml:id="ex-pie-divisible-7-11">
+		<title>Not Divisible by 7 or 11</title>
+		<statement>
+			<p>
+				How many integers in <m>\{1,2,3,\ldots,2020\}</m> are not divisible by 7 or 11?
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Now suppose we add a third condition to avoid, that is, a third set <m>A_3</m> to remove.
+		Consider the problem of determining the number of elements in the set <m>(A_1 \cup A_2 \cup A_3)^c</m>.
+	</p>
+
+	<sidebyside width="35%" margins="auto">
+		<image xml:id="img-pie-3-sets" halign="center">
+			<description>Venn diagram illustrating the complement of the union of three sets.</description>
+		    <latex-image>
+				\begin{tikzpicture}
+				\fill[gray] (-3,-3) rectangle (3,3) node [text=black,above] {\footnotesize $U$};
+				\fill[white] (1,0.5) circle (1.5);
+				\fill[white] (-1,0.5) circle (1.5);
+				\fill[white] (0,-1) circle (1.5);
+				\draw (-1,0.5) circle (1.5) (-1,2) node [text=black,above] {\footnotesize $A_1$};
+				\draw (1,0.5) circle (1.5) (1,2) node [text=black,above] {\footnotesize $A_2$};
+				\draw (0,-1) circle (1.5) (0,-2.5) node [text=black,below] {\footnotesize $A_3$};
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+
+	<p>
+		The idea now is to replicate the 2-set scenario by first subtracting <m>|A_1| + |A_2| + |A_3|</m> from <m>|U|</m>, then to add back what was removed more than once.
+		This means we have to add back <m>|A_1 \cap A_2|</m>, <m>|A_1 \cap A_3|</m>, and <m>|A_2 \cap A_3|</m>.
+	</p>
+	<p>
+		However, elements in the intersection of all three sets <m>A_1 \cap A_2 \cap A_3</m> have been removed three times and added back three times at this point.
+		This means we should subtract <me>|A_1 \cap A_2 \cap A_3|</me> one more time so that we remove all the elements we need to remove.
+	</p>
+	<p>
+		To summarize: (note the alternating signs)
+		<md>
+			<mrow> |(A_1 \cup A_2 \cup A_3)^c| = |U| \amp \underbrace{- |A_1| - |A_2| - |A_3|}_{\text{single sets}} </mrow>
+			<mrow> \amp \underbrace{+ |A_1 \cap A_2| + |A_1 \cap A_3| + |A_2 \cap A_3|}_{\text{intersections of pairs}}</mrow>
+			<mrow> \amp \underbrace{- |A_1 \cap A_2 \cap A_3|}_{\text{intersection of all three}}</mrow>
+		</md>.
+	</p>
+
+
+	<exercise xml:id="ex-pie-divisible-3-7-11">
+		<title>Not Divisible by 3, 7, or 11</title>
+		<statement>
+			<p>
+				How many integers in <m>\{1,2,\ldots,2020\}</m> are not divisible by 3, 7, or 11?
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Now we can state the Principle of Inclusion-Exclusion (or PIE) in full generality.
+		There are a number of ways to prove this, but the usual method is to show that each item belonging to none of the <m>A_i</m>'s contribute 1 to the total; while all other items contribute 0 to the total.
+	</p>
+
+	<theorem xml:id="thm-pie">
+		<title>Principle of Inclusion-Exclusion</title>
+		<statement>
+			<p>
+				Given a universe <m>U</m> of items and subsets <m>A_1,A_2,\ldots,A_n</m> of the items, the number <m>N</m> of items belonging to <em>none of these subsets</em> is given by
+				<md>
+					<mrow> N \amp = \sum_{S \subseteq \{1,2,\ldots,n\}} (-1)^{|S|} \left| \bigcap_{i\in S} A_i\right|</mrow>
+					<mrow>\amp  = |U| - \sum_{i = 1}^n |A_i| + \sum_{1 \leq i \lt j \leq n} |A_i \cap A_j| - \sum_{1 \leq i \lt j \lt k \leq n} |A_i \cap A_j \cap A_k| + \cdots </mrow>
+				</md>
+			</p>
+		</statement>
+		<proof>
+			<p>
+				Suppose that the element <m>x</m> is in none of the <m>A_i</m>'s.
+				Then it is counted exactly once in the sum, in the first term <m>|U|</m>.
+			</p>
+			<p>
+				Now suppose that the element <m>y</m> is in some collection of <m>A_i</m>'s.
+				Let <m>T = \{i : y \in A_i\}</m> be the set of indices of sets that contain <m>y</m>.
+				(For example, if <m>y</m> is in <m>A_1</m>, <m>A_3</m>, and <m>A_4</m>, then <m>T = \{1,3,4\}</m>.)
+				Then for each subset <m>S</m> of <m>T</m>, there is a corresponding term in the formula above.
+			</p>
+			<p>
+				Note that the formula contributes a <m>+1</m> for intersections of even numbers of sets (or for <m>|S|</m> even); and a <m>-1</m> for intersections of odd numbers of sets (for <m>|S|</m> odd).
+				Hence the total contribution for the element <m>y</m> is 
+				<me>\sum_{S \subseteq T} (-1)^{|S|} = \sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k}</me>.
+				Applying <xref ref="thm-binomial"/>, we see that this is equal to
+				<me>\sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k} = \sum_{k=0}^{|T|} (1)^{|T|-k}(-1)^k\binom{|T|}{k} = \left( 1 + (-1) \right)^{|T|} = 0</me>,
+				which is what we needed to prove.
+			</p>
+		</proof>
+	</theorem>
+
+	<exercise xml:id="ex-pie-4sets">
+		<title>PIE for Four Sets</title>
+		<statement>
+			<p>
+				Given a universe <m>U</m> and four sets <m>A_1, A_2, A_3, A_4</m> in <m>U</m>, write out the complete formula for <m>|(A_1 \cup A_2 \cup A_3 \cup A_4)^c|</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<example xml:id="eg-pie-EQUATION">
+		<title>Word Rearragements</title>
+		<statement>
+			<p>
+				Count the number of arrangements of the letters in the word 
+			</p>
+			<p halign="center">
+				EQUATION
+			</p>
+			<p>
+			such that
+			<ul>
+				<li>vowels are <em>not</em> in alphabetical order when read left-to-right; <alert>and</alert></li>
+				<li>consontants are <em>not</em> in alphabetical order when read left-to-right.</li>
+			</ul>
+		</p>
+		</statement>
+		<solution>
+			<p>
+				Let <m>A_1</m> be the set of arrangements where vowels are in alphabetical order, and <m>A_2</m> the set of arrangements where consonants are in alphabetical order.
+				Then the desired number is <m>|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2|</m>, by <xref ref="thm-pie"/>.
+			</p>
+			<p>
+				We compute each quantity:
+				<ul>
+					<li><m>|U| = 8!</m>, the number of permutations of the letters.</li>
+					<li><m>|A_1| = 3! \cdot \binom{8}{3}</m> (permute the consonants first, then insert among vowels using the Balls in Bins Formula)</li>
+					<li><m>|A_2| = 5! \cdot \binom{8}{5}</m> (permute the vowels first, then insert among consontants)</li>
+					<li><m>|A_1 \cap A_2| = \binom{8}{5}</m> (vowels and consonants are in a fixed order; just pick 5 slots for vowels to be in and the rest follows)</li>
+				</ul>
+			</p>
+			<p>
+				Hence <m>|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2| = 8! - 3!\binom{8}{3} - 5!\binom{8}{5} + \binom{8}{5}</m>, or 33320.
+			</p>
+		</solution>
+	</example>
+
+	<exercise xml:id="ex-pie-relatively-prime">
+		<title>Relatively Prime Numbers</title>
+		<statement>
+			<p>
+				Use <xref ref="thm-pie"/> to determine how many natural numbers less than 120 are relatively prime with 120.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Consider prime factors of 120.
+			</p>
+		</hint>
+	</exercise>
+
+	<exploration xml:id="expl-pie-euler-totient">
+		<title>Euler's Totient Function</title>
+		<introduction>
+			<p>
+				Given <m>n \in \mathbb{N}</m> and <m>\{p_1,p_2,\ldots,p_k\}</m> its set of prime factors, we will prove the following formula for the number of natural numbers less than <m>n</m> (denoted by <m>\phi(n)</m>) that are also relatively prime with <m>n</m>:
+				<me> \phi(n) = \sum_{S \subseteq \{1,2,\ldots,k\}}(-1)^{|S|}\dfrac{n}{\prod_{i\in S} p_i}</me>.
+				(This is known as <term>Euler's totient function</term>.)
+				<notation>
+					<usage>\phi(n)</usage>
+					<description>Euler's totient function</description>
+				</notation>
+			</p>
+		</introduction>
+		<task>
+			<p>
+				Define <m>A_i</m> to be the set of natural numbers less than <m>n</m> that are divisible by <m>p_i</m>.
+				Compute the value of <m>|A_i|</m>.
+			</p>
+			<hint>
+				<p><xref ref="eg-pie-divisible-3"/>.</p>
+			</hint>
+		</task>
+		<task>
+			<p>
+				For any set <m>S \subseteq \{1,2,\ldots,k\}</m>, compute the value of <m>\left|\displaystyle\bigcap_{i\in S} A_i \right|</m>.
+			</p>
+		</task>
+		<task>
+			<p>
+				Express <m>\phi(n)</m> as a combination of the sets <m>A_i</m> and apply <xref ref="thm-pie"/> to obtain the desired formula.
+			</p>
+		</task>
+	</exploration>
+
+	<exercise xml:id="ex-pie-apply-totient">
+		<title>Compute <m>\phi(100)</m> and <m>\phi(135)</m></title>
+		<statement>
+			<p>
+				Use the formula in <xref ref="expl-pie-euler-totient"/> to compute <m>\phi(100)</m> and <m>\phi(135)</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-pie-cards">
+		<title>One Card of Each Suit</title>
+		<statement>
+			<p>
+				Use <xref ref="thm-pie"/> to determine how many five-card hands can be drawn from a standard deck of cards such that there is at least one card of each suit.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-pie-nonnegative">
+		<title>Nonnegative Integer Solutions</title>
+		<statement>
+			<p>
+				Use <xref ref="thm-pie"/> to determine how many nonnegative integer solutions there are to <m>x_1 + x_2 + x_3 = 10</m>, <m>x_1 \leq 3</m>, <m>x_2 \leq 4</m>, <m>x_3 \leq 8</m>.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Define <m>A_1</m> to be the set of solutions such that <m>x_1 > 3</m>, etc.
+			</p>
+		</hint>
+	</exercise>
+
+
 </section>
+

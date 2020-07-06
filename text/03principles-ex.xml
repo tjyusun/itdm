@@ -7,33 +7,245 @@
 
 <exercises xml:id="exercises-principles">
 <introduction>
-<p>Hello</p>
+<p>Additional Exercises for <xref ref="chap-principles"/></p>
 </introduction>
 
 <exercise>
-<statement><p>
-
-        Pigeonhole stuff
+<statement>
+	<p>
+		Prove that any <m>(n+1)</m>-subset of <m>\{1,2,\ldots,2n\}</m> has a pair of consecutive numbers.
+	</p>
+	<p>
+		Why does this imply that any <m>(n+1)</m>-subset must have a pair of relatively prime numbers?
     </p>
 </statement>
 <solution>
-	<p>Lol</p>
+	<p>
+		Define pigeonholes to be <m>\{1,2\}</m>, <m>\{3,4\}</m>, and so on.
+	</p>
 </solution>
 </exercise>
 
 <exercise>
 <statement>
 	<p>
-		Second question
+		Prove that any <m>(2n+1)</m>-subset of <m>\{1,2,\ldots,3n\}</m> has three consecutive numbers.
 	</p>
 </statement>
-<hint>
-	<p>LOL</p>
-</hint>
-<solution>
-	<p>Joke</p>
-</solution>
 </exercise>
+
+<exercise>
+<statement>
+	<p>
+		The numbers 1 to 10 are placed in some order around a circle. Prove that some set of three consecutive numbers sums to at least 17.
+    </p>
+</statement>
+<hint>
+	<p>
+		What should the average of all the three-sums be?
+	</p>
+</hint>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Jungkook has 6 friends; over several days he invites some of them over to his home to eat lamb skewers for dinner, so that the company never repeats (<ie/> a different set of friends comes every night).
+		If he has at least one friend over every day, how many days can he follow this rule?
+    </p>
+</statement>
+</exercise>
+<p>
+</p>
+
+<sidebyside widths="15% 82%" margins="auto">
+<image xml:id="img-php-square-2cm" halign="center">
+	<description>A two by two grid.</description>
+    <latex-image>
+		\begin{tikzpicture}
+		\draw[-,thick] (0,0)--(2,0)--(2,2)--(0,2)--(0,0);
+		\draw[-,dashed] (1,0)--(1,2);
+		\draw[-,dashed] (0,1)--(2,1);
+		\end{tikzpicture}
+	</latex-image>
+</image>
+<exercise>
+<statement>
+	<p>
+		Place 5 points inside (or on the boundary) of a square with side length 2 cm. 
+		Show that there is a pair of points no more than <m>\sqrt{2}</m> cm apart.
+    </p>
+</statement>
+</exercise>
+</sidebyside>
+
+<exercise>
+<statement>
+	<p>
+		Recall that the <term>midpoint</term> of the segment joining points <m>(a,b)</m> and <m>(c,d)</m> on the plane has coordinates <me>\left(\frac{a+c}{2},\frac{b+d}{2}\right)</me>.
+
+		Show that given five integer points (<ie/> points with integer coordinates) on the plane, the midpoint of the segment joining some pair of them is also an integer point.
+    </p>
+</statement>
+<hint>
+	<p>
+		Consider parity.	
+	</p>
+</hint>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		If we select 38 subsets of size at most three from the set <m>S = \{1,2,\ldots,13\}</m>, show that two of these subsets must have the same sum.
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		The UTM e-sports team <em>Eagle Geniuses</em> is training for an Ontario e-sports tournament called <em>The Provincial</em>, which is 30 days away.
+		They are scheduled to play at least one scrim (practice game) with another university team every day for the next 30 days; their coach tells them they will be playing a total of 42 games.
+	</p>
+	<p>
+		Prove that there was a period of consecutive days during which the team scrimmed exactly 17 times.
+    </p>
+</statement>
+<hint>
+	<p>
+		Similar to <xref ref="ex-php-shower"/>.	
+	</p>
+</hint>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Fall 2020 course data about 1000 first-year students at a college reveal that:
+		<ul>
+			<li>800 are taking calculus</li>
+			<li>750 are taking linear algebra</li>
+			<li>550 are taking an intro to proofs course</li>
+			<li>650 are taking calculus and linear algebra</li>
+			<li>500 are taking linear algebra and proofs</li>
+			<li>500 are taking calculus and proofs</li>
+			<li>450 are taking all three</li>
+		</ul>
+		<ol label="(a)">
+			<li>How many students are taking none of these courses? </li>
+			<li>How many students are taking only linear algebra?</li>
+			<li>Draw a venn diagram and indicate the number of students for each part of the diagram.</li>
+		</ol>
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		How many ways are there to place 11 distinct people into 3 distinct rooms?
+	</p>
+	<p>
+		How many ways are there to place 11 distinct people into 3 distinct rooms such that each room has at least one person?
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Twenty students in a class exchange quiz papers for peer evaluation. 
+		How many ways can this be done so that no student gets their own paper?
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Count the number of 5-letter arrangements that can be formed from the letters of the word
+	</p>
+	<sidebyside width="30%" margins="auto" halign="center">
+		<p>EUPHORIA</p>
+	</sidebyside>
+	<p>
+		such that the string EAR does not appear, and there is at least one vowel.
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Count the number of integer solutions to the system
+		<me> \begin{cases} x_1 + x_2 + x_3 + x_4 = 25 \amp \\ 
+			2 \leq x_1 \leq 9 \amp \\
+			3 \leq x_2 \leq 9 \amp \\
+			-1 \leq x_3 \leq 11 \amp \\
+			5 \leq x_4 \ \ \amp \end{cases}</me>
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Count the number of <xref ref="eg-counting-lattice-path" text="custom">lattice paths</xref> from <m>(0,0)</m> to <m>(6,4)</m> that pass through <em>at least one</em> of the points <m>(2,3)</m>, <m>(3,1)</m>, and <m>(5,4)</m>.
+    </p>
+</statement>
+</exercise>
+
+<p>
+</p>
+
+<sidebyside width="40%" margins="auto">
+<image xml:id="img-pie-lattice-path" halign="center">
+	<description>A six by four grid.</description>
+    <latex-image>
+		\begin{tikzpicture}
+		\draw[-,color=black,dashed] (0,0) grid (6,4);
+		\fill[thick] (0,0) circle[radius=3pt];
+		\fill[] (2,3) circle[radius=2.5pt];
+		\fill[] (3,1) circle[radius=2.5pt];
+		\fill[] (5,4) circle[radius=2.5pt];
+		\fill[thick] (6,4) circle[radius=3pt];
+		\node[label={\footnotesize$(6,4)$}] at (6.7,3.6){};
+		\node[label={\footnotesize$(0,0)$}] at (-0.7,-0.4){};
+		\end{tikzpicture}
+	</latex-image>
+</image>
+</sidebyside>
+
+
+<exercise>
+<statement>
+	<p>
+		Consider a set of <m>n</m> cats and <m>n</m> dogs; suppose we want to pair them up for an afternoon playdate.
+		Derive formulas for the number of ways this can be done, such that:
+		<ol label="(a)">
+			<li>For each <m>i</m>, the <m>i</m>th heaviest cat is <em>not</em> paired up with the <m>i</m>th heaviest dog (but pairs can have two dogs or two cats).</li>
+			<li>Same condition as (a), but also each pair has exactly one cat and one dog.</li>
+		</ol>
+    </p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Suppose that four friends have two pets each<mdash/>a cat and a dog<mdash/>and they all meet up at the park.
+		They decide to form four groups of one human, one cat, and one dog each.
+		Count the number of ways they can do this, such that:
+		<ol label="(a)">
+			<li>No human is with their dog.</li>
+			<li>No human is with either of their pets.</li>
+			<li>Each human is grouped with at most one of their pets.</li>
+		</ol>
+    </p>
+</statement>
+</exercise>
+
 
 
 </exercises>

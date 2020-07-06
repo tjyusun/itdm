@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-05T23:56:33-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>Our goal is to show that</p>
+<div class="displaymath">
+\begin{equation}
+k\binom{n}{k} = n\binom{n-1}{k-1}\tag{2.5.1}
+\end{equation}
+</div>
+<p data-braille="continuation">given integers \(0 \leq k \leq n\text{.}\)</p>
+<p>To do this, we count the number of ways to form a committee of \(k\) members from \(n\) people, and then elect a chair of the committee.</p>
+<p>Suppose that from a group of \(n\) people, we want to</p>
+<ol class="decimal">
+<li>Form a committee of \(k\) people; and</li>
+<li>Elect a chair of the committee.</li>
+</ol>
+<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, we can count the number of ways we can do this by multiplying.</p>
+<ol class="decimal">
+<li>There are \(\binom{n}{k}\) ways to form a committee of \(k\) people from a group of \(n\text{.}\)</li>
+<li>From the \(k\) people in the committee, we need to choose a chair, and there are \(k\) choices.</li>
+</ol>
+<p data-braille="continuation">Hence we count a total of</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n}{k} \times k
+\end{equation*}
+</div>
+<p data-braille="continuation">ways to do this. Note that this is the left-hand side of what we're proving, <a class="xref" data-knowl="./knowl/equation-chairperson.html" title="Equation 2.5.1">(2.5.1)</a>.</p>
+<p>Now let's count the number of such committee-chair selections in a different way: by first selecting the chair.</p>
+<ol class="decimal">
+<li>Elect a chair of the committee; then</li>
+<li>Complete the committee by adding members.</li>
+</ol>
+<p data-braille="continuation">Again, we use <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, noting that the number of choices in the second step is independent of who is picked for the first.</p>
+<ol class="decimal">
+<li>There are \(n\) people in the original group, so we have \(n\) choices for committee chair.</li>
+<li>From the remaining \(n-1\) people, we need to select \(k-1\) members to fill out the committee. There are \(\binom{n-1}{k-1}\) ways to do this.</li>
+</ol>
+<p data-braille="continuation">Therefore we can select a chair and form the committee a total of</p>
+<div class="displaymath">
+\begin{equation*}
+n\binom{n-1}{k-1}
+\end{equation*}
+</div>
+<p data-braille="continuation">ways. This is the right-hand side of <a class="xref" data-knowl="./knowl/equation-chairperson.html" title="Equation 2.5.1">(2.5.1)</a>!</p>
+<p>We just showed that the left-hand side and the right-hand side of the given identity are two different ways of counting the committee-chair possibilities, and hence, they must be equal.</p>
+</div></body>
+</html>

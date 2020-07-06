@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-28T22:00:51-04:00    *-->
+<!--*    on 2020-07-05T23:56:28-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -127,20 +127,222 @@ MathJax.Hub.Config({
 <a href="chap-principles.html" data-scroll="chap-principles"><span class="codenumber">3</span> <span class="title">Pigeonhole and Inclusion-Exclusion</span></a><ul>
 <li><a href="sec-pigeonhole.html" data-scroll="sec-pigeonhole">The Pigeonhole Principle</a></li>
 <li><a href="sec-inclusion-exclusion.html" data-scroll="sec-inclusion-exclusion">Principle of Inclusion-Exclusion</a></li>
+<li><a href="sec-derangements.html" data-scroll="sec-derangements">Application: Derangements</a></li>
 <li><a href="exercises-principles.html" data-scroll="exercises-principles">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-congruence.html" data-scroll="chap-congruence"><span class="codenumber">4</span> <span class="title">Congruence Modulo \(n\)</span></a><ul>
+<li><a href="sec-equivalence.html" data-scroll="sec-equivalence">Equivalence Relations</a></li>
+<li><a href="sec-congruence.html" data-scroll="sec-congruence">Congruences</a></li>
+<li><a href="sec-euler.html" data-scroll="sec-euler">Euler's Theorem</a></li>
+<li><a href="sec-chinese-remainder.html" data-scroll="sec-chinese-remainder">The Chinese Remainder Theorem</a></li>
+<li><a href="sec-RSA.html" data-scroll="sec-RSA">The RSA Cryptosystem</a></li>
+<li><a href="exercises-congruence.html" data-scroll="exercises-congruence">Exercises</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
 <li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">B</span> <span class="title">List of Results</span></a></li>
-<li class="link"><a href="solutions-3.html" data-scroll="solutions-3"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
+<li class="link"><a href="solutions-5.html" data-scroll="solutions-5"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-balls-in-bins"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">The Balls in Bins Formula</span>
 </h2>
-<p id="p-259">This is a longer sentence that is followed by another sentence. Two sentences, and a second paragraph to follow.</p></section></div></main>
+<article class="objectives goal-like" id="objectives-4"><h6 class="heading"><span class="type">Objectives</span></h6>
+<ul class="disc">
+<li id="li-108">Derive the formulas for permutations and combinations with repetition (Balls in Bins Formula).</li>
+<li id="li-109">Given a counting problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
+</ul></article><p id="p-290">Consider the following example similar to <a class="xref" data-knowl="./knowl/eg-counting-mcq.html" title="Example 2.1.12: Multiple Choice Exam">Example 2.1.12</a>.</p>
+<article class="example example-like" id="eg-counting-mcq-again"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-mcq-again"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Multiple Choice, again.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-mcq-again"><article class="example example-like"><p id="p-291">A standardized multiple-choice test for high school students has 40 questions and 5 choices each (A to E). How many possible ways can the test be answered?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><p id="p-292">For each question, there are 5 options, so using <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, there are a total of \(5^{40}\) possible ways to complete the test.</p></div></div>
+</div></article></div>
+<p id="p-293">The operation in <a class="xref" data-knowl="./knowl/eg-counting-mcq-again.html" title="Example 2.4.1: Multiple Choice, again">Example 2.4.1</a> is called a permutation where <em class="emphasis">repetition</em> or <em class="emphasis">replacement is allowed</em>, since</p>
+<ul class="disc">
+<li id="li-110">The order in which the answers are picked matters (i.e. A-B-A is different from B-A-A); and</li>
+<li id="li-111">Answers can be repeated. Imagine a bag with five balls labeled A to E; for each question we draw a ball from the bag, record the answer, and put it back.</li>
+</ul>
+<p data-braille="continuation">We formalize this in the next result.</p>
+<article class="proposition theorem-like" id="prop-perm-repetition"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Permutations with repetition.</span>
+</h6>
+<p id="p-294">If repetition is allowed, the number of permutations of \(k\) objects taken from a set of size \(n\) is \(n^k\text{.}\)</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-295">By <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, since there are \(n\) possibilities for each of the \(k\) choices, the total number of ways to do so is \(n^k\text{.}\)</p></article></div>
+<p id="p-296">There is also a counterpart for combinations in which the order does not matter, which the next example illustrates.</p>
+<article class="example example-like" id="eg-counting-rice"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-rice"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Rice Advice.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-rice"><article class="example example-like"><p id="p-297">Ten participants are recruited to join a focus group discussion on rice, after which they are asked to indicate their preferred type of rice among the following options:</p>
+<ul class="disc">
+<li id="li-112"><a class="external" href="https://en.wikipedia.org/wiki/Arborio_rice" target="_blank">Arborio</a></li>
+<li id="li-113"><a class="external" href="https://en.wikipedia.org/wiki/Basmati" target="_blank">Basmati</a></li>
+<li id="li-114"><a class="external" href="https://en.wikipedia.org/wiki/Jasmine_rice" target="_blank">Jasmine</a></li>
+<li id="li-115"><a class="external" href="https://en.wikipedia.org/wiki/Koshihikari" target="_blank">Koshihikari</a></li>
+<li id="li-116"><a class="external" href="https://en.wikipedia.org/wiki/Glutinous_rice" target="_blank">Malagkit</a></li>
+</ul>
+<p data-braille="continuation">The participants gave their preferences anonymously so the researchers only know how many participants responded with each option. How many combinations of answers can the researchers obtain from the study?</p>
+<p id="p-298"><em class="alert">Solution</em> Since we are only concerned with the survey results, outcomes look like the following, where we only record how many respondents picked the corresponding option:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-299">Arborio -- 3, Basmati -- 5, Jasmine -- 2</p></div></div></div>
+<p id="p-300">and</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-301">Koshihikari -- 9, Milagrosa -- 1</p></div></div></div>
+<p id="p-302">are examples of possible outcomes; we need to count how many there are in total.</p>
+<p id="p-303">Note that we cannot simply take permutations and then divide by an overcounting factor since how much we overcount by depends on the actual distribution of answers.</p>
+<p id="p-304">Instead, we envision the process of collecting survey responses as placing balls into bins with labels `Arborio,' `Basmati,' and so on. (Imagine the participants physically placing their survey forms into one of five ballot boxes!)</p>
+<p id="p-305">For example, the outcome [Arborio -- 3, Basmati -- 5, Jasmine -- 2] corresponds to the following distribution of balls into bins:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">\(\bullet \bullet \bullet\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\bullet \bullet \bullet \bullet \bullet\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\bullet \bullet\)</td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Arborio</td>
+<td class="c m b0 r0 l0 t0 lines">Basmati</td>
+<td class="c m b0 r0 l0 t0 lines">Jasmine</td>
+<td class="c m b0 r0 l0 t0 lines">Koshihikari</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">Malagkit</td>
+</tr>
+</table></div></div></div>
+<p id="p-306">This can also be represented concisely as the pattern</p>
+<div class="displaymath">
+\begin{equation*}
+\bullet \bullet \bullet \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \, \bullet \mid \, \mid
+\end{equation*}
+</div>
+<p data-braille="continuation">where the four vertical lines denote ‘dividers’ in between each pair of adjacent bins. Hence the problem of counting the number of possible outcomes is reduced to counting the number of arrangements of 10 \(\bullet\) and 4 \(\mid\) symbols, which is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{14!}{10!\ 4!} = \binom{14}{4}
+\end{equation*}
+</div>
+<p data-braille="continuation">by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p></article></div>
+<article class="exercise exercise-like" id="ex-counting-rice-1"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-rice-1"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Rice Advice Exercise.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-rice-1"><article class="exercise exercise-like"><p id="p-307">Following <a class="xref" data-knowl="./knowl/eg-counting-rice.html" title="Example 2.4.3: Rice Advice">Example 2.4.3</a>, express each survey outcome as a pattern of dots \(\bullet\) and bars \(\mid\text{,}\) or vice-versa.</p>
+<ol class="lower-alpha">
+<li id="li-117">Jasmine -- 3, Basmati -- 3, Arborio -- 1, Malagkit -- 3</li>
+<li id="li-118">Koshihikari -- 10</li>
+<li id="li-119">\(\displaystyle \bullet \ \bullet \mid \mid \bullet \bullet \bullet \bullet \bullet \ \bullet \mid \mid \bullet \ \bullet\)</li>
+<li id="li-120">\(\displaystyle \mid \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \mid \bullet \bullet \bullet \ \bullet\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like"><p id="p-308">Make sure the bins are in the right order!</p></div></div>
+</div></article></div>
+<p id="p-309">This is called a <em class="emphasis">combination where repetition is allowed</em>, since</p>
+<ul class="disc">
+<li id="li-121">The order in which objects are picked <em class="emphasis">does not matter</em> (i.e.~A-B-A is the same as B-A-A); and</li>
+<li id="li-122">Objects can be repeated.</li>
+</ul>
+<p data-braille="continuation">As we saw in <a class="xref" data-knowl="./knowl/eg-counting-rice.html" title="Example 2.4.3: Rice Advice">Example 2.4.3</a>, the number of \(k\)-combinations taken from a set of size \(n\) when repetition is allowed is equal to the number of ways we can distribute \(k\) balls into \(n\) bins. This gives the following formula:</p>
+<article class="theorem theorem-like" id="thm-comb-replace"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Balls in Bins.</span>
+</h6>
+<p id="p-310">If repetition is allowed, the number of combinations of \(k\) objects taken from a set of size \(n\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n+k-1}{k} = \binom{n+k-1}{n-1}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">This is also equal to the number of ways one can distribute \(k\) indistinguishable balls into \(n\) bins.</p></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-311">The total number of these combinations is equal to the number of ways to arrange \(k\) bullets (\(\bullet\) symbols; one for each object), and \(n-1\) bars (\(\mid\) symbols; to delineate bins):</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\bullet \ \bullet \ \cdots \ \bullet}_{k \text{ copies}}\ \underbrace{\mid \ \mid \ \cdots \ \mid}_{n-1 \text{ copies}}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which is \(\displaystyle\binom{k+n-1}{k}\) or \(\binom{k+n-1}{n-1}\) by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p></article></div>
+<article class="remark remark-like" id="remark-stars-bars"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Stars and Bars.</span>
+</h6>
+<p id="p-312">Some textbooks refer to <a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a> as the <em class="emphasis">Stars and Bars Formula</em>, replacing the bullet symbols with stars, i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{\star \ \star \ \cdots \ \star}_{k \text{ copies}}\ \underbrace{\mid \ \mid \ \cdots \ \mid}_{n-1 \text{ copies}}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="ex-counting-apples"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-apples"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Apples to Students.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-apples"><article class="exercise exercise-like"><p id="p-313">A teacher has 20 apples that are to be handed out to 9 students.</p>
+<ol class="lower-alpha">
+<li id="li-123">How many different ways are there of distributing the apples?</li>
+<li id="li-124">How many different ways are there of distributing the apples so that <em class="emphasis">each student receives at least one apple</em>?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><p id="p-314">b. Give one apple to each student to begin, then distribute the rest.</p></div></div>
+</div></article></div>
+<p id="p-315">A nice application of the <a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Balls in Bins Formula</a> is counting the number of nonnegative integer solutions to equations of the form</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 + x_2 + \cdots + x_n = k\text{.}
+\end{equation*}
+</div>
+<article class="exploration project-like" id="eg-counting-nonnegative"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Nonnegative integer solutions.</span>
+</h6>
+<div class="introduction" id="introduction-5">
+<p id="p-316">Consider the following equation:</p>
+<div class="displaymath">
+\begin{equation}
+x_1 + x_2 + \cdots + x_5 = 10\text{,}\label{equation-nonnegative}\tag{2.4.1}
+\end{equation}
+</div>
+<p data-braille="continuation">and suppose we're interested in its nonnegative integer solutions.</p>
+</div>
+<article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-317">Verify that \((x_1,x_2,x_3,x_4,x_5) = (3,5,2,0,0)\) is a nonnegative integer solution to <a class="xref" data-knowl="./knowl/equation-nonnegative.html" title="Equation 2.4.1">(2.4.1)</a>. Then explain how we can view this solution as an assignment of balls into labeled bins.</p></article><article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-318">Using <a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a>, count the number of nonnegative integer solutions to <a class="xref" data-knowl="./knowl/equation-nonnegative.html" title="Equation 2.4.1">(2.4.1)</a>.</p></article><article class="task exercise-like" id="task-8"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-319">Generalize the above argument to count the number of nonnegative integer solutions to</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 + x_2 + \cdots + x_n = k\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">State explicitly what the balls and the bins are.</p></article></article><article class="proposition theorem-like" id="prop-nonnegative"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Nonnegative integer solutions.</span>
+</h6>
+<p id="p-320">The number of nonnegative integer solutions to \(x_1 + x_2 + \cdots + x_n = k\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\displaystyle\binom{n+k-1}{k}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="ex-counting-nonnegative-1"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-nonnegative-1"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-nonnegative-1"><article class="exercise exercise-like"><p id="p-321">Determine the number of integer solutions to the system</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{cases}
+x_1 + x_2 + x_3 + x_4 + x_5 + x_6 = 15 \amp \\ x_1, x_2, x_3, x_4, x_5, x_6 \geq 0 \amp
+\end{cases}
+\end{equation*}
+</div></article></div>
+<article class="exercise exercise-like" id="ex-counting-nonnegative-2"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-nonnegative-2"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Nonnegative integer solutions with additional constraints.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-nonnegative-2"><article class="exercise exercise-like"><p id="p-322">Determine the number of integer solutions to the equation</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 + x_2 + x_3 + x_4 = 77
+\end{equation*}
+</div>
+<p data-braille="continuation">such that:</p>
+<ol class="decimal">
+<li id="li-125">\(x_1, x_2, x_3, x_4\) are nonnegative.</li>
+<li id="li-126">\(x_1 \geq 4\text{,}\) \(x_2 \geq 0\text{,}\) \(x_3 \geq 12\text{,}\) and \(x_4 \geq 9\text{.}\)</li>
+<li id="li-127">\(0 \leq x_1 \leq 30\text{,}\) and \(x_2, x_3, x_4 \geq 0\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><p id="p-323">b. Look at part (b) of <a class="xref" data-knowl="./knowl/ex-counting-apples.html" title="Checkpoint 2.4.7: Apples to Students">Checkpoint 2.4.7</a>.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-24" id="hint-24"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-24"><div class="hint solution-like"><p id="p-324">c. Solve the problem with \(x_1 \geq 31\) first then subtract from part (a).</p></div></div>
+</div></article></div>
+<section class="solutions" id="solutions-4"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">2.4.1</span> <span class="title">Solutions to Selected Checkpoints</span>
+</h3>
+<article class="exercise-like"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Nonnegative integer solutions with additional constraints.</span>
+</h6>
+<div class="solutions"><a class="original" data-knowl="./knowl/solution-18-hidden.html" title="Solution 2.4.10.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
 </div>
 </body>
 </html>

@@ -7,13 +7,120 @@
 
 <exercises xml:id="exercises-counting">
 <introduction>
-<p>Hello</p>
+<p>Additional Exercises for <xref ref="chap-counting"/> </p>
 </introduction>
+
 
 <exercise>
 <statement>
 	<p>
-		A <term>straight</term> is a hand of five different ranks in consecutive order.
+		The latest album release from the worldwide famous Kpop group <em>ONCE</em> has four different versions for sale: versions L, O, V, and E.
+		Preorder numbers by version as reported by Korean newspaper <em>Dispatched</em> are as follows:
+		<ul>
+			<li>L: 20,000</li>
+			<li>O: 25,000</li>
+			<li>V: 22,500</li>
+			<li>E: 30,000</li>
+		</ul>
+    	How many units did <em>ONCE</em>'s album move in preorders, total? Can we also determine how many <em>people</em> preordered the album?
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		The local bank <em>Factorial Financials</em> enforces the following restrictions on its online banking passwords:
+		<ul>
+			<li>Should only contain alphanumeric characters (A-Z, 0-9);</li>
+			<li>Should be exactly 8 characters in length; and</li>
+			<li>Should start and end with a letter.</li>
+		</ul>
+		How many possible passwords can be created? 
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		A new format for passenger vehicle licence plates issued in the province is being proposed, that adheres to the following conditions:
+		<ul>
+			<li>Pattern is AB123-4CD (or letter-letter-digit-digit-digit--digit-letter-letter).</li>
+			<li>The letters G, I, O, Q and U cannot be used.</li>
+			<li>The first digit cannot be a zero.</li>
+			<li>The last two letters must be different.</li>
+		</ul>
+		How many licence plates combinations are possible that satisfy all these conditions?
+	</p>
+</statement>
+</exercise>
+
+
+<exercise>
+<statement>
+	<p>
+		How many arrangements of the word PANINI 
+		<ol label="(a)">
+			<li>end with the letter P?</li>
+			<li>start with three vowels?</li>
+			<li>have all letters in alphabetical order?</li>
+			<li>have all <em>vowels</em> in alphabetical order (but not necessarily beside each other)?</li>
+		</ol>
+	</p>
+</statement>
+<solution>
+	<p>
+		b. The rearrangement should start A, I, and I in some order, and end with P, N, and N in some order. These two decisions are independent of each other, so using <xref ref="prin-prod-rule"/> and <xref ref="prop-perm-repeat"/> we count a total of <me>\dfrac{3!}{2!} \times \dfrac{3!}{2!} = 9</me> rearrangements.
+		(Try listing them all!)
+	</p>
+</solution>
+</exercise>
+
+
+<exercise>
+<statement>
+	<p>
+		Consider the following quote:
+	</p>
+		<blockquote>
+		<p>
+			<q>You can't spell awesome without me.</q>
+		</p>
+		<attribution>Taylor Swift ft. Brendon Urie (2019)</attribution>
+		</blockquote>
+	<p>
+		How many arrangements of the word AWESOME <em>do not</em> have the string ME?
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Write your own problem where the <alert>answer</alert> is <m>\displaystyle\binom{7}{2}</m>. Be as creative as you can!
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Determine the coefficient of the term <m>x^3y^2</m> in each product:
+		<ol label="(a)">
+			<li><m>(x+y)^5</m></li>
+			<li><m>(3x+2y)^5</m></li>
+			<li><m>(2x-y)^5</m></li>
+			<li><m>(7x + 7y)^5</m></li>
+		</ol>
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Given a standard deck of cards (see <xref ref="eg-counting-standard-deck"/>), a <term>straight</term> is a hand of five different ranks in consecutive order.
 		For example: 
 	</p>
 	<sidebyside width="40%" margins="auto">
@@ -59,6 +166,280 @@
 	<p>Hmmmm...</p>
 </solution>
 </exercise>
+
+<exercise>
+<statement>
+	<p>
+		A <term>full house</term> is a five-card hand with three cards of the same rank, plus two other cards of the same rank.
+		For example, the five-card hand
+		<sidebyside width="40%" margins="auto">
+			<p>
+				7<m>\heartsuit</m> 7<m>\diamondsuit</m> 7<m>\clubsuit</m> J<m>\heartsuit</m> J<m>\spadesuit</m>
+			</p>
+		</sidebyside>
+		is a full house.
+	</p>
+	<p>
+		How many five-card hands are full houses?
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		How many ways are there to draw a three-card hand from a standard deck of cards such that: 
+		<ol label="(a)">
+			<li>all of them are face cards (J, Q, K)?</li>
+			<li>there are at least two numbered cards?</li>
+			<li>there are at least two numbered cards, and exactly two red cards?</li>
+		</ol>
+	</p>
+</statement>
+</exercise>
+
+<exercise xml:id="divex-3x3-grid">
+<statement>
+	<p>
+		Count the number of rectangles that can be formed using the edges of a <m>3 \times 3</m> grid with <m>(0,0)</m> as one of its vertices. Here are some examples:
+	</p>
+	<sidebyside widths="15% 15% 15%" margins="auto">
+		<image xml:id="img-rectangle-1a">
+			<description>Example of a rectangle.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.7]
+				\draw[-,color=black,dashed] (0,0) grid (3,3);
+				\draw[-,thick,fill=gray,fill opacity=0.2] (0,0)--(1,0)--(2,0)--(2,1)--(1,1)--(0,1)--(0,0);
+				\fill[thick] (0,0) circle[radius=2pt];
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+		<image xml:id="img-rectangle-1b">
+			<description>Example of a rectangle.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.7]
+				\draw[-,color=black,dashed] (0,0) grid (3,3);
+				\draw[-,thick,fill=gray,fill opacity=0.2] (0,0)--(1,0)--(1,1)--(1,2)--(1,3)--(0,3)--(0,2)--(0,1)--(0,0);
+				\fill[thick] (0,0) circle[radius=2pt];
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+		<image xml:id="img-rectangle-1c">
+			<description>Example of a rectangle.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.7]
+				\draw[-,color=black,dashed] (0,0) grid (3,3);
+				\draw[-,thick,fill=gray,fill opacity=0.2] (0,0)--(1,0)--(2,0)--(2,1)--(2,2)--(1,2)--(0,2)--(0,1)--(0,0);
+				\fill[thick] (0,0) circle[radius=2pt];
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Generalize <xref ref="divex-3x3-grid"/> to an <m>m \times n</m> grid.
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Count the number of rectangles that can be formed using the edges of an <m>m \times n</m> grid (with no restrictions on the vertices). For example, if <m>m = 2</m> and <m>n = 1</m>, there are 3 possible rectangles:
+	</p>
+		<sidebyside widths="15% 15% 15%" margins="auto">
+		<image xml:id="img-rectangle-2a">
+			<description>Example of a rectangle.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.7]
+				\draw[-,color=black,dashed] (0,0) grid (2,1);
+				\draw[-,thick,fill=gray,fill opacity=0.2] (0,0)--(1,0)--(2,0)--(2,1)--(1,1)--(0,1)--(0,0);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+		<image xml:id="img-rectangle-2b">
+			<description>Example of a rectangle.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.7]
+				\draw[-,color=black,dashed] (0,0) grid (2,1);
+				\draw[-,thick,fill=gray,fill opacity=0.2] (0,0)--(1,0)--(1,1)--(0,1)--(0,0);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+		<image xml:id="img-rectangle-2c">
+			<description>Example of a rectangle.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.7]
+				\draw[-,color=black,dashed] (0,0) grid (2,1);
+				\draw[-,thick,fill=gray,fill opacity=0.2] (1,0)--(2,0)--(2,1)--(1,1)--(1,0);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+</statement>
+</exercise>
+
+
+<exercise>
+<statement>
+	<p>
+		Count the number of lattice paths from <m>(0,0)</m> to <m>(5,4)</m> that: 
+		<ol label="(a)">
+			<li>Pass through the point <m>(2,2)</m>.</li>
+			<li>Avoid the point <m>(3,3)</m>.</li>
+			<li>Pass through the point <m>(2,2)</m> <em>and</em> avoid the point <em>(3,3)</em>.</li>
+		</ol>
+	</p>
+	<sidebyside width="40%" margins="auto">
+		<image xml:id="divex-img-lattice-paths">
+			<description>Example of a rectangle.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.7]
+		    	\draw[-,color=black,dashed] (0,0) grid (5,4);
+				\fill[thick] (0,0) circle[radius=3pt];
+				\fill[thick] (5,4) circle[radius=3pt];
+				\node[label={\footnotesize$(5,4)$}] at (5.7,3.6){};
+				\node[label={\footnotesize$(0,0)$}] at (-0.7,-0.4){};
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		The Greater Toronto Area has a population of about 6 million.
+		Suppose that each resident has a jar with 100 coins, consisting of nickels, dimes, quarters, loonies ($1), and toonies ($2).
+		Prove that two residents must have identical jars.
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Count the number of ways to distribute 30 identical balls into 9 different boxes so that each box is nonempty.
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Count the number of ways <m>2n</m> people can be grouped into pairs. 
+	</p>
+	<p>
+		For example, when <m>n = 2</m> and there are four people A, B, C, and D, then there are three ways to pair them up: AB/CD, AC/BD, AD/BC.
+	</p>
+</statement>
+</exercise>
+
+<exercisegroup>
+	<introduction>
+		<p>
+			Find the number of integer solutions to each system:
+		</p>
+	</introduction>
+<exercise>
+<statement>
+	<p>
+		<m>x_1 + x_2 + x_3 = 30</m>, <m>x_1, x_2, x_3 \geq 0</m>.
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		<m>x_1 + x_2 + x_3 + x_4 = 2020</m>, <m>x_1 \geq 30</m>, <m>x_2 \geq 40</m>, <m>x_3 \geq 50</m>, <m>x_4 \geq 100</m>
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		<m>x_1 + x_2 + x_3 + x_4 = 2020</m>, <m>x_1 \geq 300</m>, <m>x_2 \geq 400</m>, <m>x_3 \geq 500</m>, <m>x_4 \geq 1000</m>
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		<m>x_1 + x_2 + x_3 = 12</m>, <m>3 \leq x_1 \leq 5</m>, <m>1 \leq x_2</m>, <m>1 \leq x_3 \leq 7</m>
+	</p>
+</statement>
+</exercise>
+</exercisegroup>
+
+<exercise>
+<statement>
+	<p>
+		Find the number of integer solutions to <me>x_1 + x_2 - x_3 = -4</me> such that <m>x_1, x_2, x_3 \geq 0</m> and <m>x_3 \leq 10</m>.
+	</p>
+</statement>
+<hint>
+	<p>
+		Let <m>y_3 = 10 - x_3</m>.
+	</p>
+</hint>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Find the number of nonnegative integer solutions to <m>x_1 + x_2 + \cdots + x_k \leq n</m>.
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		Prove the identity <me>\sum_{k=0}^n \binom{n}{k}^2 = \binom{2n}{n}</me> by counting the number of subsets of size <m>n</m> of the set <m>\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}</m>.
+	</p>
+</statement>
+</exercise>
+
+<exercisegroup>
+	<introduction>
+		<p>
+			Prove the following identities <alert>using combinatorial arguments</alert>.
+			Clearly explain which sets or objects you are counting in two ways.
+		</p>
+	</introduction>
+
+<exercise>
+<statement>
+	<p>
+		<m>\displaystyle\sum_{i=1}^n (i-1) = \binom{n}{2}</m>
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		<m>\displaystyle\binom{2n}{n} = 2\binom{2n-1}{n-1}</m>
+	</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+	<p>
+		<m>\displaystyle b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b</m>
+	</p>
+</statement>
+</exercise>
+</exercisegroup>
 
 
 </exercises>
