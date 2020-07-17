@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:27-04:00    *-->
+<!--*    on 2020-07-16T22:45:50-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -99,10 +99,10 @@ MathJax.Hub.Config({
 <nav id="toc"><ul>
 <li class="link frontmatter">
 <a href="front.html" data-scroll="front"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
 <li><a href="front-welcome.html" data-scroll="front-welcome">Welcome Message</a></li>
 <li><a href="front-how-to-use.html" data-scroll="front-how-to-use">How to Use This Resource</a></li>
-<li><a href="front-feedback.html" data-scroll="front-feedback">Feedback</a></li>
+<li><a href="front-feedback.html" data-scroll="front-feedback">Feedback and Acknowledgements</a></li>
+<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
 </ul>
 </li>
 <li class="link">
@@ -120,6 +120,7 @@ MathJax.Hub.Config({
 <li><a href="sec-binomial-coefficients.html" data-scroll="sec-binomial-coefficients">Binomial Coefficients</a></li>
 <li><a href="sec-balls-in-bins.html" data-scroll="sec-balls-in-bins">The Balls in Bins Formula</a></li>
 <li><a href="sec-combinatorial-arguments.html" data-scroll="sec-combinatorial-arguments">Combinatorial Arguments</a></li>
+<li><a href="sec-counting-summary.html" data-scroll="sec-counting-summary">Summary</a></li>
 <li><a href="exercises-counting.html" data-scroll="exercises-counting">Exercises</a></li>
 </ul>
 </li>
@@ -134,25 +135,35 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="chap-congruence.html" data-scroll="chap-congruence"><span class="codenumber">4</span> <span class="title">Congruence Modulo \(n\)</span></a><ul>
 <li><a href="sec-equivalence.html" data-scroll="sec-equivalence">Equivalence Relations</a></li>
-<li><a href="sec-congruence.html" data-scroll="sec-congruence">Congruences</a></li>
+<li><a href="sec-congruence.html" data-scroll="sec-congruence">Congruences and their Properties</a></li>
+<li><a href="sec-congruence-solving.html" data-scroll="sec-congruence-solving">Solving Congruences</a></li>
 <li><a href="sec-euler.html" data-scroll="sec-euler">Euler's Theorem</a></li>
 <li><a href="sec-chinese-remainder.html" data-scroll="sec-chinese-remainder">The Chinese Remainder Theorem</a></li>
-<li><a href="sec-RSA.html" data-scroll="sec-RSA">The RSA Cryptosystem</a></li>
 <li><a href="exercises-congruence.html" data-scroll="exercises-congruence">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-graph.html" data-scroll="chap-graph"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec-graph-modeling.html" data-scroll="sec-graph-modeling">Modeling with Graphs</a></li>
+<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Definitions and Eulerian Graphs</a></li>
+<li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Isomorphisms and Subgraphs</a></li>
+<li><a href="sec-graph-trees.html" data-scroll="sec-graph-trees">Connectedness and Trees</a></li>
+<li><a href="sec-graph-bipartite.html" data-scroll="sec-graph-bipartite">Bipartite and Hamiltonian Graphs</a></li>
+<li><a href="exercises-graph.html" data-scroll="exercises-graph">Exercises</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
 <li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">B</span> <span class="title">List of Results</span></a></li>
-<li class="link"><a href="solutions-5.html" data-scroll="solutions-5"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
+<li class="link"><a href="solutions-8.html" data-scroll="solutions-8"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-logic-and-proof-techniques"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Logic and Proof Techniques</span>
 </h2>
-<p id="p-37">Mathematical statements can typically be phrased as an implication \(P \Rightarrow Q\text{,}\)  read as <em class="emphasis">if \(P\text{,}\) then \(Q\)</em>, where \(P\) or \(Q\) may be complex statements themselves that involve conjunctions (and), disjunctions (or), negations, quantifiers, even implications. There are various ways in which an implication can be proven true, and there is no hard and fast rule that dictates which proof method to use given a particular problem. In MAT102 you were introduced to the following proof techniques:</p>
-<ul id="p-38" class="disc">
+<p id="p-38">Mathematical statements can typically be phrased as an implication \(P \Rightarrow Q\text{,}\)  read as <em class="emphasis">if \(P\text{,}\) then \(Q\)</em>, where \(P\) or \(Q\) may be complex statements themselves that involve conjunctions (and), disjunctions (or), negations, quantifiers, even implications. There are various ways in which an implication can be proven true, and there is no hard and fast rule that dictates which proof method to use given a particular problem. In MAT102 you were introduced to the following proof techniques:</p>
+<ul id="p-39" class="disc">
 <li id="li-19">Direct proof: Assume \(P\) is true, then prove \(Q\) is true.</li>
 <li id="li-20">Contrapositive: Assume \(\neg Q\) is true, then prove \(\neg P\) is true.</li>
 <li id="li-21">Contradiction: Assume the conclusion is false, then use this to arrive at a statement that contradicts one of the assumptions.</li>
@@ -160,7 +171,7 @@ MathJax.Hub.Config({
 <article class="activity project-like" id="exe-review-proofs"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-39">Prove each statement, noting which proof technique you used. Explain all your steps clearly, as if you are writing for the current batch of MAT102 students.</p>
+<p id="p-40">Prove each statement, noting which proof technique you used. Explain all your steps clearly, as if you are writing for the current batch of MAT102 students.</p>
 <ol class="lower-alpha">
 <li id="li-22">The sum of two odd numbers is even.</li>
 <li id="li-23">The square of an even number is divisible by 4.</li>
@@ -171,23 +182,23 @@ MathJax.Hub.Config({
 <li id="li-28">The sum of a rational number and an irrational number is irrational.</li>
 <li id="li-29">A three-digit natural number is divisible by 9 if and only if the sum of its digits is divisible by 9.</li>
 <li id="li-30">If \(A\) and \(B\) are defined as in <a class="xref" data-knowl="./knowl/exe-review-set-inclusion.html" title="Checkpoint 1.1.2: Prove Set Inclusion">Checkpoint 1.1.2</a>, then \(B \not\subseteq A\text{.}\)</li>
-</ol></article><p id="p-40">Many of these statements are <em class="emphasis">quantified</em> universally, which means it involves some variable (say \(n\)), and you need to prove the claim holds for all relevant values of the variable (say \(n \in \mathbb{N}\)). For 1, 2, and 4, for example, the relevant quantities are integers; the statements need to be proven for all integers.</p>
-<p id="p-41">We can use mathematical induction to prove that a statement is true for all natural numbers.</p>
+</ol></article><p id="p-41">Many of these statements are <em class="emphasis">quantified</em> universally, which means it involves some variable (say \(n\)), and you need to prove the claim holds for all relevant values of the variable (say \(n \in \mathbb{N}\)). For 1, 2, and 4, for example, the relevant quantities are integers; the statements need to be proven for all integers.</p>
+<p id="p-42">We can use mathematical induction to prove that a statement is true for all natural numbers.</p>
 <article class="theorem theorem-like" id="thm-induction"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of Mathematical Induction.</span>
 </h6>
-<p id="p-42">Let \(P(n)\) be a predicate defined for \(n \in \mathbb{N}\text{.}\) If the following conditions hold:</p>
+<p id="p-43">Let \(P(n)\) be a predicate defined for \(n \in \mathbb{N}\text{.}\) If the following conditions hold:</p>
 <ol class="lower-alpha">
 <li id="li-31">\(P(1)\) is true;</li>
 <li id="li-32">For all \(k \in \mathbb{N}\text{,}\) \(P(k) \Rightarrow P(k+1)\) is true.</li>
 </ol>
 <p data-braille="continuation">then \(P(n)\) is true for all \(n \in \mathbb{N}\text{.}\)</p>
-<p id="p-43">One can also replace the second condition with the following:</p>
-<p id="p-44">b.* For all \(k \in \mathbb{N}\text{,}\) \([P(1) \wedge P(2) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)\) is true.</p>
-<p id="p-45">This is called <dfn class="terminology">strong induction</dfn>, where one assumes the induction step holds for all natural numbers from 1 to \(k\) in order to prove the claim for \(k+1\text{.}\)</p></article><p id="p-46">Depending on what is being proved, one may need to make slight modifications to the standard technique: e.g. changing/adding to the base case, or “skipping” from \(k\) to \(k+2\) in the case when one only has to prove the claim for every other natural number starting from the base case.</p>
+<p id="p-44">One can also replace the second condition with the following:</p>
+<p id="p-45">b.* For all \(k \in \mathbb{N}\text{,}\) \([P(1) \wedge P(2) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)\) is true.</p>
+<p id="p-46">This is called <dfn class="terminology">strong induction</dfn>, where one assumes the induction step holds for all natural numbers from 1 to \(k\) in order to prove the claim for \(k+1\text{.}\)</p></article><p id="p-47">Depending on what is being proved, one may need to make slight modifications to the standard technique: e.g. changing/adding to the base case, or “skipping” from \(k\) to \(k+2\) in the case when one only has to prove the claim for every other natural number starting from the base case.</p>
 <article class="exercise exercise-like" id="exe-review-induction"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-induction"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction"><article class="exercise exercise-like"><p id="p-47">Prove the following statements using induction:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction"><article class="exercise exercise-like"><p id="p-48">Prove the following statements using induction:</p>
 <ol class="lower-alpha">
 <li id="li-33">\(1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{1}{6}n(n+1)(2n+1)\) for all \(n \in \mathbb{N}\text{.}\)</li>
 <li id="li-34">\(2^n \geq n^2\) for all \(n \in \mathbb{N}, n \geq 4\text{.}\)</li>
@@ -195,7 +206,7 @@ MathJax.Hub.Config({
 </ol></article></div>
 <article class="exercise exercise-like" id="exe-review-induction-fibonacci"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-induction-fibonacci"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction-fibonacci"><article class="exercise exercise-like"><p id="p-48">The <dfn class="terminology">Fibonacci sequence</dfn> \(\{F_n\}\) is defined recursively as</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction-fibonacci"><article class="exercise exercise-like"><p id="p-49">The <dfn class="terminology">Fibonacci sequence</dfn> \(\{F_n\}\) is defined recursively as</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} F_n = F_{n-1} + F_{n-2}, n \geq 3 \\
@@ -211,9 +222,9 @@ F_n = \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}
 <p data-braille="continuation">using strong induction.</p></article></div>
 <article class="exercise exercise-like" id="exe-review-induction-tiling"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-induction-tiling"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction-tiling"><article class="exercise exercise-like"><p id="p-49">Let \(T_n\) be the number of ways one can tile a \(2 \times n\) grid with \(1 \times 2\) rectangles. For example, \(T_2 = 2\) since there are two tilings of a \(2 \times 2\) grid using only \(1 \times 2\) rectangles.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction-tiling"><article class="exercise exercise-like"><p id="p-50">Let \(T_n\) be the number of ways one can tile a \(2 \times n\) grid with \(1 \times 2\) rectangles. For example, \(T_2 = 2\) since there are two tilings of a \(2 \times 2\) grid using only \(1 \times 2\) rectangles.</p>
 <figure class="figure figure-like" id="exe-tiling-fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/exe-tiling-img.svg" style="width: 100%; height: auto;" alt="Two tilings of a 2-by-2 grid by 1-by-2 rectangles."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span>The two tilings of a two-by-two grid.</figcaption></figure><p id="p-50">Find a recurrence relation for \(T_n\) and prove that \(T_n = F_{n+1}\) as defined in <a class="xref" data-knowl="./knowl/exe-review-induction-fibonacci.html" title="Checkpoint 1.2.3">Checkpoint 1.2.3</a>.</p></article></div></section></div></main>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span>The two tilings of a two-by-two grid.</figcaption></figure><p id="p-51">Find a recurrence relation for \(T_n\) and prove that \(T_n = F_{n+1}\) as defined in <a class="xref" data-knowl="./knowl/exe-review-induction-fibonacci.html" title="Checkpoint 1.2.3">Checkpoint 1.2.3</a>.</p></article></div></section></div></main>
 </div>
 </body>
 </html>

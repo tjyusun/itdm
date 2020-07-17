@@ -3,16 +3,305 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-RSA">
-    <title>The RSA Cryptosystem</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-chinese-remainder">
+    <title>The Chinese Remainder Theorem</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>State the Chinese Remainder Theorem and use it to solve systems of congruences and related problems.</li>            
         </ul>
     </objectives>
 
+    <p>
+    	The Chinese Remainder Theorem is a result in number theory about solving simultaneous systems of several linear congruences.
+		In this section we explore its origins and give methods to solve these systems.
+	</p>
 
+	<exploration xml:id="expl-sunzi">
+		<title>Sun Zi's Problem</title>
+		<introduction>
+			<p>
+				Sun Zi (<foreign xml:lang="zh">孙子</foreign>) was a Chinese mathematician who in his text <url href="https://en.wikipedia.org/wiki/Sunzi_Suanjing"><pubtitle>Sunzi Suanjing</pubtitle></url><foreign xml:lang="zh">《孙子算经》</foreign> (3rd to 5th century <ad/>) is said to have written the earliest known reference to systems of linear congruences.
+				In it he writes:
+			</p>
+			<blockquote>
+				<p>
+				<sq><foreign xml:lang="zh">今有物，不知其数。三、三数之，剩二；五、五数之，剩三；七、七数之，剩二。问物几何？</foreign></sq>
+				</p>
+				<attribution><foreign xml:lang="zh">孙子。《孙子算经》。</foreign></attribution>
+			</blockquote>
+			<blockquote>
+				<p>
+				<sq>A number is repeatedly divided by 3, the remainder is 2; divided by 5, the remainder is 3; and by 7, the remainder is 2. What will the number be?</sq>
+				</p>
+				<attribution>Sun Zi, <pubtitle>Sunzi Suanjing</pubtitle>, Vol. 3, Problem 26 (as cited in <xref ref="bib-kangsheng-1988"/>)</attribution>
+			</blockquote>
+			<p>
+				We follow Sun Zi's method of solving this system.
+			</p>
+		</introduction>
+		<task>
+			<p>
+				The first condition in Sun Zi's problem can be written as <me>x \equiv 2 \Mod{3}</me>.
+				Write all three conditions as a system of linear congruences.
+			</p>
+			<answer>
+				<p>
+					<me>\begin{cases} x \equiv 2 \Mod{3} \\ x \equiv 3 \Mod{5} \\ x \equiv 2 \Mod{7} \end{cases}</me>
+				</p>
+			</answer>
+		</task>
+		<task>
+			<p>
+				Since the integers 3, 5, and 7 are pairwise relatively prime, then <m>35^{-1} \Mod{3}</m> exists. 
+				Compute this quantity.
+			</p>
+			<p>
+				Similarly, compute <m>21^{-1} \Mod{5}</m> and <m>15^{-1} \Mod{7}</m>.
+			</p>
+		</task>
+		<task>
+			<p>
+				Explain why each of the following congruences hold:
+				<me>\begin{cases} 2 \cdot 35^{-1} \cdot 35 \equiv 2 \Mod{3} \\ 3 \cdot 21^{-1} \cdot 21 \equiv 3 \Mod{5} \\ 2 \cdot 15^{-1} \cdot 15 \equiv 2 \Mod{7} \end{cases}</me>.
+			</p>
+		</task>
+		<task>
+			<p>
+				Explain why we can conclude that 
+				<me>x \equiv 2 \cdot 35^{-1} \cdot 35 + 3 \cdot 21^{-1} \cdot 21 + 2 \cdot 15^{-1} \cdot 15 \Mod{105}</me> is a solution to the original system of congruences, and using your answers from (b) simplify this expression to get an answer modulo 105.
+			</p>
+			<p>
+				Finally, verify that the answer satisfies all three conditions.
+			</p>
+			<answer>
+				<p><m>x \equiv 233 \equiv 23 \Mod{105}</m>.</p>
+			</answer>
+		</task>
+	</exploration>
 
+	<p>
+		The method outlined in <xref ref="expl-sunzi"/> actually works for the general case, as long as the moduli in the system are pairwise relatively prime. 
+		Before stating our main theorems let's look at a smaller examples, one with only two congruences.
+	</p>
+
+	<exercise xml:id="ex-crt-small">
+		<title>Two Congruences</title>
+		<statement>
+			<p>
+				Find a natural number <m>x</m> that leaves a remainder of 3 when divided by 5, and a remainder of 1 when divided by 7.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				What are the numbers that satisfy the first condition? Among these, find one satisfying the second as well.
+			</p>
+		</hint>
+		<solution>
+			<p>
+				Natural numbers satisfying the first congruence are <m>\{3, 8, 13, 18, 23, 28, \ldots\}</m>. 
+				The number 8 works.
+			</p>
+			<p>
+				Also verify that the number 43 works.
+				In fact, check that any integer of the form <m>8 + 35k</m> for <m>k \in \mathbb{Z}</m> will work!
+			</p>
+		</solution>
+	</exercise>
+
+	<p>
+		The solution to <xref ref="ex-crt-small"/> did <em>not</em> use the same method as <xref ref="expl-sunzi"/> and instead just relied on listing numbers.
+		This won't be efficient for larger systems, so let's try to proceed more systematically.
+	</p>
+	
+	<theorem xml:id="thm-crt-2">
+		<title>Solution to a system of two congruences</title>
+		<p>
+			Let <m>m_1,m_2 \in \mathbb{N}</m> and <m>\gcd(m_1,m_2) = 1</m>, and consider the system
+			<me>\begin{cases} x \equiv a \Mod{m_1} \\ x \equiv b \Mod{m_2} \end{cases}</me>.
+			Perform the following steps:
+			<ul>
+				<li>Find the multiplicative inverse of <m>m_2</m> modulo <m>m_1</m>, call it <m>t</m>.</li>
+				<li>Find the multiplicative inverse of <m>m_1</m> modulo <m>m_2</m>, call it <m>s</m>.</li>
+			</ul>
+			A solution to the given system is <me>x \equiv atm_2 + bsm_1 \Mod{m_1m_2}</me>, and this is unique modulo <m>M = m_1m_2</m>.
+		</p>
+	</theorem>
+	
+
+	<exercise xml:id="ex-crt-small-again">
+		<title>Two Congruences, again</title>
+		<statement>
+			<p>
+				Solve <xref ref="ex-crt-small"/> by writing its two conditions as a system of two congruences and apply the method in <xref ref="thm-crt-2"/>.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		<xref ref="thm-crt-2"/> speaks to the existence and uniqueness of a solution to the given system. Try proving it yourself in the next two exercises!
+	</p>
+
+	<exercise xml:id="ex-crt-2-prove-existence">
+		<title><xref ref="thm-crt-2"/>, existence</title>
+		<statement>
+			<p>
+				Prove that <m>x \equiv atm_2 + bsm_1 \Mod{m_1m_2}</m> satisfies both congruences in the given system.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-crt-2-prove-uniqueness">
+		<title><xref ref="thm-crt-2"/>, uniqueness</title>
+		<statement>
+			<p>
+				Prove that <m>x \equiv atm_2 + bsm_1 \Mod{m_1m_2}</m> is the only solution to the given system modulo <m>m_1m_2</m>.
+			</p>
+		</statement>
+		<solution>
+			<p>
+
+			</p>
+		</solution>
+	</exercise>
+
+	<p>
+		Finally we state a method for a general system of congruences.
+	</p>
+
+	<theorem xml:id="thm-crt-n">
+		<title>Solution to a general system of congruences</title>
+		<p>
+			Let <m>m_1,m_2,\ldots,m_n \in \mathbb{N}</m> and <m>\gcd(m_i,m_j) = 1</m> for <m>i \ne j</m>, and consider the system
+			<me>\begin{cases} x \equiv a_1 \Mod{m_1} \\ x \equiv a_2 \Mod{m_2} \\ \vdots \\ x \equiv a_n \Mod{m_n} \end{cases}</me>
+			Perform the following steps:
+			<ul>
+				<li>Let <m>M = m_1m_2\cdots m_n</m>.</li>
+				<li><p>For each <m>i = 1,2,\ldots,n</m>:
+				<ul>
+					<li>Define <m>b_i = M/m_i</m> (the product of all moduli other than <m>m_i</m>).</li>
+					<li>Find the multiplicative inverse of <m>b_i</m> modulo <m>m_i</m>, call it <m>t_i</m>.</li>
+				</ul>
+				</p>
+				</li>
+			</ul>
+			A solution to the given system is <me>x \equiv a_1b_1t_1 + a_2b_2t_2 + \cdots + a_nb_nt_n \Mod{M}\equiv \sum_{i=1}^n a_ib_it_i \Mod{M}</me>, and this is unique modulo <m>M</m>.
+		</p>
+	</theorem>
+
+	<exercise xml:id="ex-crt-sun-zi">
+		<title>Sun Zi's System</title>
+		<statement>
+			<p>
+				Verify that the method outlined in <xref ref="thm-crt-n"/> produces the same steps and answer as in <xref ref="expl-sunzi"/>.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-crt-n">
+		<title>Practice</title>
+		<statement>
+			<p>
+				Solve the system of congruences
+				<me>\begin{cases} x \equiv 4 \Mod{5} \\ x \equiv 5 \Mod{6} \\ x \equiv 6 \Mod{7} \end{cases}</me>
+				using the method in <xref ref="thm-crt-n"/>.
+			</p>
+		</statement>
+	</exercise>
     
+	<p>
+		One consequence of <xref ref="thm-crt-n"/> is that there is a bijection between n-tuples <me>(a_1,a_2,\ldots,a_n) \in \mathbb{Z}_{m_1} \times \mathbb{Z}_{m_2} \times \cdots \times \mathbb{Z}_{m_n}</me> and congruence classes modulo <m>M = \prod_{i=1}^n m_i</m>, as long as the moduli <m>m_i</m> are pairwise relatively prime.
+	</p>
+	<p>
+		That is, any number in <m>\{0,1,\ldots,M\}</m> has a unique representation as a collection of remainders <m>a_i</m> for each modulus <m>m_i</m>.
+	</p>
+
+	<example xml:id="eg-crt-bijection">
+		<title>From <m>\mathbb{Z}_{10}</m> to <m>\mathbb{Z}_2 \times \mathbb{Z}_5</m></title>
+		<statement>
+			<p>
+				Let <m>x \equiv 1 \Mod{2}</m> and <m>x \equiv 2 \Mod{5}</m>.
+				Then <xref ref="thm-crt-n"/> tells us that the solution <m>x \equiv 7 \Mod{10}</m> is unique.
+			</p>
+			<p>
+				In fact for any pair of remainders modulo 2 and 5, we get a unique congruence class modulo 10 as a solution to the system
+				<me>\begin{cases} x \equiv a_1 \Mod{2} \\ x \equiv a_2 \Mod{5}\end{cases}</me>
+				Verify that we have a bijection between <m>\mathbb{Z}_2 \times \mathbb{Z}_5</m> and <m>\mathbb{Z}_{10}</m>:
+			</p>
+			<sidebyside widths="30% 30%" margins="15%">
+				<tabular>
+					<row>
+						<cell halign="center"><m>\mathbb{Z}_2 \times \mathbb{Z}_5</m></cell>
+						<cell halign="center"><m>\mathbb{Z}_{10}</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(0,0)</m></cell>
+						<cell halign="center"><m>0</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(0,1)</m></cell>
+						<cell halign="center"><m>6</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(0,2)</m></cell>
+						<cell halign="center"><m>2</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(0,3)</m></cell>
+						<cell halign="center"><m>8</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(0,4)</m></cell>
+						<cell halign="center"><m>4</m></cell>
+					</row>
+				</tabular>
+				<tabular>
+					<row>
+						<cell halign="center"><m>\mathbb{Z}_2 \times \mathbb{Z}_5</m></cell>
+						<cell halign="center"><m>\mathbb{Z}_{10}</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(1,0)</m></cell>
+						<cell halign="center"><m>5</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(1,1)</m></cell>
+						<cell halign="center"><m>1</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(1,2)</m></cell>
+						<cell halign="center"><m>7</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(1,3)</m></cell>
+						<cell halign="center"><m>3</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>(1,4)</m></cell>
+						<cell halign="center"><m>9</m></cell>
+					</row>
+				</tabular>
+			</sidebyside>
+		</statement>
+	</example>
+
+
+	<exercise xml:id="ex-crt-bijection-power">
+		<title>Computing large powers</title>
+		<statement>
+			<p>
+				Verify that 19 is a solution to the system
+				<me>\begin{cases} x \equiv 1 \Mod{3} \\ x \equiv 5 \Mod{7}\end{cases}</me>
+			</p>
+			<p>
+				Then, use this fact to compute <m>19^{20} \mmod{21}</m>.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Instead of computing large powers of 19, compute large powers of 1 and 5 (with respective moduli) then use <xref ref="thm-crt-2"/>.
+			</p>
+		</hint>
+	</exercise>
+
+
 </section>

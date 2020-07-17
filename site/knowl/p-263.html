@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:32-04:00    *-->
+<!--*    on 2020-07-16T22:45:58-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Each factor in the product \((x+y)^n = (x+y)(x+y)\cdots(x+y)\) contributes either an \(x\) or a \(y\) in the resulting expansion. We can express each term in the answer as a sequence of \(n\) symbols, each either an \(x\) or a \(y\text{;}\) for example, picking \(x\) from each \((x+y)\) term gives \(\underbrace{xx\cdots x}_\text{$n$ times}=x^n\text{.}\)</p>
+<p>For \(k \leq n\text{,}\) the quantity \(\displaystyle\binom{n}{k}\) is equal to the coefficient of \(x^{n-k}y^k\) in the expansion of \((x+y)^n\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+(x+y)^n = \underbrace{(x+y)(x+y)\cdots(x+y)}_\text{$n$ times} = \displaystyle\sum_{k=0}^n \binom{n}{k}x^{n-k}y^k\text{.}
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec-binomial-coefficients.html#p-263">in-context</a></span>
 </body>
 </html>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.6.21)  26 JUN 2020 22:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.6.21)  16 JUL 2020 23:05
 entering extended mode
 **./itdm.tex
 (itdm.tex
@@ -628,22 +628,65 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \c@tcb@cnt@subdisplay=\count301
 \Oldarrayrulewidth=\skip60
 
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/qrcode\qrcode.sty
+Package: qrcode 2015/01/08 v1.51 QR code generation
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
+)
+\XKV@depth=\count302
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@qr@i=\count303
+\c@qr@j=\count304
+\qr@a=\count305
+\qr@b=\count306
+\qr@c=\count307
+\qr@for@depth=\count308
+\qr@for@maxdepth=\count309
+\qr@for@start=\count310
+\qr@for@end=\count311
+\qr@for@step=\count312
+\qr@newforcount=\count313
+\qr@newforcount=\count314
+\qr@desiredheight=\skip61
+\qr@modulesize=\skip62
+\qr@minipagewidth=\skip63
+\c@maski=\count315
+\c@maskj=\count316
+\c@totalones=\count317
+\c@penaltyi=\count318
+\c@penaltyii=\count319
+\c@penaltyiii=\count320
+\c@penaltyiv=\count321
+\c@qr@hexchars=\count322
+\qr@newforcount=\count323
+\c@qr@divisionsremaining=\count324
+)
+\qrsize=\skip64
+\previewwidth=\skip65
+
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\multicol.sty"
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count302
+\c@tracingmulticols=\count325
 \mult@box=\box74
 \multicol@leftmargin=\dimen273
-\c@unbalance=\count303
-\c@collectmore=\count304
-\doublecol@number=\count305
-\multicoltolerance=\count306
-\multicolpretolerance=\count307
+\c@unbalance=\count326
+\c@collectmore=\count327
+\doublecol@number=\count328
+\multicoltolerance=\count329
+\multicolpretolerance=\count330
 \full@width=\dimen274
 \page@free=\dimen275
 \premulticols=\dimen276
 \postmulticols=\dimen277
-\multicolsep=\skip61
-\multicolbaselineskip=\skip62
+\multicolsep=\skip66
+\multicolbaselineskip=\skip67
 \partial@page=\box75
 \last@line=\box76
 \maxbalancingoverflow=\dimen278
@@ -688,44 +731,46 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box115
 \@tempa=\box116
 \@tempa=\box117
-\c@minrows=\count308
-\c@columnbadness=\count309
-\c@finalcolumnbadness=\count310
+\c@minrows=\count331
+\c@columnbadness=\count332
+\c@finalcolumnbadness=\count333
 \last@try=\dimen279
 \multicolovershoot=\dimen280
 \multicolundershoot=\dimen281
 \mult@nat@firstbox=\box118
 \colbreak@box=\box119
-\mc@col@check@num=\count311
+\mc@col@check@num=\count334
 )
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip63
+\labelindent=\skip68
 \enit@outerparindent=\dimen282
-\enit@toks=\toks43
+\enit@toks=\toks45
 \enit@inbox=\box120
-\enit@count@id=\count312
-\enitdp@description=\count313
+\enit@count@id=\count335
+\enitdp@description=\count336
 )
-\enitdp@referencelist=\count314
+\enitdp@referencelist=\count337
+\egindent=\skip69
+\exggap=\skip70
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\longtable.sty"
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip64
-\LTright=\skip65
-\LTpre=\skip66
-\LTpost=\skip67
-\LTchunksize=\count315
+\LTleft=\skip71
+\LTright=\skip72
+\LTpre=\skip73
+\LTpost=\skip74
+\LTchunksize=\count338
 \LTcapwidth=\dimen283
 \LT@head=\box121
 \LT@firsthead=\box122
 \LT@foot=\box123
 \LT@lastfoot=\box124
-\LT@cols=\count316
-\LT@rows=\count317
-\c@LT@tables=\count318
-\c@LT@chunks=\count319
-\LT@p@ftn=\toks44
+\LT@cols=\count339
+\LT@rows=\count340
+\c@LT@tables=\count341
+\c@LT@chunks=\count342
+\LT@p@ftn=\toks46
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
@@ -766,8 +811,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen284
-\Hy@linkcounter=\count320
-\Hy@pagecounter=\count321
+\Hy@linkcounter=\count343
+\Hy@pagecounter=\count344
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
@@ -780,7 +825,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count322
+\Hy@SavedSpaceFactor=\count345
 Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4421.
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
@@ -789,7 +834,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count323
+\c@Hy@tempcnt=\count346
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
@@ -806,7 +851,7 @@ y
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count324
+\Fld@menulength=\count347
 \Field@Width=\dimen286
 \Fld@charsize=\dimen287
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -822,8 +867,8 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/generic/atbegshi\atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count325
-\c@Item=\count326
+\Hy@abspage=\count348
+\c@Item=\count349
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -833,8 +878,8 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/atveryend\atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 )
-\Fld@listcount=\count327
-\c@bookmark@seq@number=\count328
+\Fld@listcount=\count350
+\c@bookmark@seq@number=\count351
 
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/rerunfilecheck\rerunfilech
 eck.sty
@@ -847,9 +892,9 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip68
+\Hy@SectionHShift=\skip75
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 698.
+Package hyperref Info: Option `colorlinks' set `true' on input line 768.
 
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/calculator\calculator.sty
 Package: calculator 2014/02/20 v.2.0
@@ -862,12 +907,12 @@ Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots\pgfplots.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots\pgfplotscore.code.tex"
-\t@pgfplots@toka=\toks45
-\t@pgfplots@tokb=\toks46
-\t@pgfplots@tokc=\toks47
+\t@pgfplots@toka=\toks47
+\t@pgfplots@tokb=\toks48
+\t@pgfplots@tokc=\toks49
 \pgfplots@tmpa=\dimen291
-\c@pgfplots@coordindex=\count329
-\c@pgfplots@scanlineindex=\count330
+\c@pgfplots@coordindex=\count352
+\c@pgfplots@scanlineindex=\count353
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.
 tex"))
@@ -884,14 +929,14 @@ ructure.code.tex")
 ructureext.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/liststructure\pgfplotsarray.
 code.tex"
-\c@pgfplotsarray@tmp=\count331
+\c@pgfplotsarray@tmp=\count354
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/liststructure\pgfplotsmatrix
 .code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/numtable\pgfplotstableshared
 .code.tex"
-\c@pgfplotstable@counta=\count332
-\t@pgfplotstable@a=\toks48
+\c@pgfplotstable@counta=\count355
+\t@pgfplotstable@a=\toks50
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/liststructure\pgfplotsdeque.
 code.tex")
@@ -903,7 +948,7 @@ e.tex"))
 tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/libs\pgflibrarypgfplots.surf
 shading.code.tex"
-\c@pgfplotslibrarysurf@no=\count333
+\c@pgfplotslibrarysurf@no=\count356
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfs
 hading.pgfsys-pdftex.def")))
@@ -935,7 +980,7 @@ librarydecorations.code.tex"
 \pgfdecoratedinputsegmentcompleteddistance=\dimen294
 \pgfdecoratedinputsegmentremainingdistance=\dimen295
 \pgf@decorate@distancetomove=\dimen296
-\pgf@decorate@repeatstate=\count334
+\pgf@decorate@repeatstate=\count357
 \pgfdecorationsegmentamplitude=\dimen297
 \pgfdecorationsegmentlength=\dimen298
 )
@@ -949,7 +994,7 @@ ecorations.pathmorphing.code.tex"))
 librarydecorations.pathreplacing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
-\pgfplots@numplots=\count335
+\pgfplots@numplots=\count358
 \pgfplots@xmin@reg=\dimen299
 \pgfplots@xmax@reg=\dimen300
 \pgfplots@ymin@reg=\dimen301
@@ -970,6 +1015,21 @@ File: ascii.sty 2006/05/30 v2.0 Package `ascii.sty'
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ))
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/marvosym\marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+
+
+! LaTeX Error: Command \Cross already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 \newcommand\Cross{\mvchr{134}}
+                                    
+? 
+)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 libraryshapes.code.tex"
 File: tikzlibraryshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -1083,8 +1143,8 @@ ecorations.markings.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries/grap
 hs\tikzlibrarygraphs.code.tex"
 File: tikzlibrarygraphs.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\tikz@lib@auto@number=\count336
-\tikz@qnode@count=\count337
+\tikz@lib@auto@number=\count359
+\tikz@qnode@count=\count360
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries/grap
 hs\tikzlibrarygraphs.standard.code.tex"
@@ -1105,9 +1165,9 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count338
+\g_MT_multlinerow_int=\count361
 \l_MT_multwidth_dim=\dimen310
-\origjot=\skip69
+\origjot=\skip76
 \l_MT_shortvdotswithinadjustabove_dim=\dimen311
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen312
 \l_MT_above_intertext_sep=\dimen313
@@ -1126,8 +1186,8 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/makecell\makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen318
-\c@nlinenum=\count339
-\TeXr@lab=\toks49
+\c@nlinenum=\count362
+\TeXr@lab=\toks51
 )
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -1144,53 +1204,53 @@ Package zref Info: New property list: main on input line 763.
 Package zref Info: New property: default on input line 764.
 Package zref Info: New property: page on input line 765.
 )
-\c@abspage=\count340
+\c@abspage=\count363
 Package zref Info: New property: abspage on input line 66.
 )
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/needspace\needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip70
-\c@mdf@globalstyle@cnt=\count341
-\mdf@skipabove@length=\skip71
-\mdf@skipbelow@length=\skip72
-\mdf@leftmargin@length=\skip73
-\mdf@rightmargin@length=\skip74
-\mdf@innerleftmargin@length=\skip75
-\mdf@innerrightmargin@length=\skip76
-\mdf@innertopmargin@length=\skip77
-\mdf@innerbottommargin@length=\skip78
-\mdf@splittopskip@length=\skip79
-\mdf@splitbottomskip@length=\skip80
-\mdf@outermargin@length=\skip81
-\mdf@innermargin@length=\skip82
-\mdf@linewidth@length=\skip83
-\mdf@innerlinewidth@length=\skip84
-\mdf@middlelinewidth@length=\skip85
-\mdf@outerlinewidth@length=\skip86
-\mdf@roundcorner@length=\skip87
-\mdf@footenotedistance@length=\skip88
-\mdf@userdefinedwidth@length=\skip89
-\mdf@needspace@length=\skip90
-\mdf@frametitleaboveskip@length=\skip91
-\mdf@frametitlebelowskip@length=\skip92
-\mdf@frametitlerulewidth@length=\skip93
-\mdf@frametitleleftmargin@length=\skip94
-\mdf@frametitlerightmargin@length=\skip95
-\mdf@shadowsize@length=\skip96
-\mdf@extratopheight@length=\skip97
-\mdf@subtitleabovelinewidth@length=\skip98
-\mdf@subtitlebelowlinewidth@length=\skip99
-\mdf@subtitleaboveskip@length=\skip100
-\mdf@subtitlebelowskip@length=\skip101
-\mdf@subtitleinneraboveskip@length=\skip102
-\mdf@subtitleinnerbelowskip@length=\skip103
-\mdf@subsubtitleabovelinewidth@length=\skip104
-\mdf@subsubtitlebelowlinewidth@length=\skip105
-\mdf@subsubtitleaboveskip@length=\skip106
-\mdf@subsubtitlebelowskip@length=\skip107
-\mdf@subsubtitleinneraboveskip@length=\skip108
-\mdf@subsubtitleinnerbelowskip@length=\skip109
+\mdf@templength=\skip77
+\c@mdf@globalstyle@cnt=\count364
+\mdf@skipabove@length=\skip78
+\mdf@skipbelow@length=\skip79
+\mdf@leftmargin@length=\skip80
+\mdf@rightmargin@length=\skip81
+\mdf@innerleftmargin@length=\skip82
+\mdf@innerrightmargin@length=\skip83
+\mdf@innertopmargin@length=\skip84
+\mdf@innerbottommargin@length=\skip85
+\mdf@splittopskip@length=\skip86
+\mdf@splitbottomskip@length=\skip87
+\mdf@outermargin@length=\skip88
+\mdf@innermargin@length=\skip89
+\mdf@linewidth@length=\skip90
+\mdf@innerlinewidth@length=\skip91
+\mdf@middlelinewidth@length=\skip92
+\mdf@outerlinewidth@length=\skip93
+\mdf@roundcorner@length=\skip94
+\mdf@footenotedistance@length=\skip95
+\mdf@userdefinedwidth@length=\skip96
+\mdf@needspace@length=\skip97
+\mdf@frametitleaboveskip@length=\skip98
+\mdf@frametitlebelowskip@length=\skip99
+\mdf@frametitlerulewidth@length=\skip100
+\mdf@frametitleleftmargin@length=\skip101
+\mdf@frametitlerightmargin@length=\skip102
+\mdf@shadowsize@length=\skip103
+\mdf@extratopheight@length=\skip104
+\mdf@subtitleabovelinewidth@length=\skip105
+\mdf@subtitlebelowlinewidth@length=\skip106
+\mdf@subtitleaboveskip@length=\skip107
+\mdf@subtitlebelowskip@length=\skip108
+\mdf@subtitleinneraboveskip@length=\skip109
+\mdf@subtitleinnerbelowskip@length=\skip110
+\mdf@subsubtitleabovelinewidth@length=\skip111
+\mdf@subsubtitlebelowlinewidth@length=\skip112
+\mdf@subsubtitleaboveskip@length=\skip113
+\mdf@subsubtitlebelowskip@length=\skip114
+\mdf@subsubtitleinneraboveskip@length=\skip115
+\mdf@subsubtitleinnerbelowskip@length=\skip116
 
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/mdframed\md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
@@ -1200,90 +1260,81 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@splitbox@one=\box149
 \mdf@splitbox@two=\box150
 \mdf@splitbox@save=\box151
-\mdfsplitboxwidth=\skip110
-\mdfsplitboxtotalwidth=\skip111
-\mdfsplitboxheight=\skip112
-\mdfsplitboxdepth=\skip113
-\mdfsplitboxtotalheight=\skip114
-\mdfframetitleboxwidth=\skip115
-\mdfframetitleboxtotalwidth=\skip116
-\mdfframetitleboxheight=\skip117
-\mdfframetitleboxdepth=\skip118
-\mdfframetitleboxtotalheight=\skip119
-\mdffootnoteboxwidth=\skip120
-\mdffootnoteboxtotalwidth=\skip121
-\mdffootnoteboxheight=\skip122
-\mdffootnoteboxdepth=\skip123
-\mdffootnoteboxtotalheight=\skip124
-\mdftotallinewidth=\skip125
-\mdfboundingboxwidth=\skip126
-\mdfboundingboxtotalwidth=\skip127
-\mdfboundingboxheight=\skip128
-\mdfboundingboxdepth=\skip129
-\mdfboundingboxtotalheight=\skip130
-\mdf@freevspace@length=\skip131
-\mdf@horizontalwidthofbox@length=\skip132
-\mdf@verticalmarginwhole@length=\skip133
-\mdf@horizontalspaceofbox=\skip134
-\mdfsubtitleheight=\skip135
-\mdfsubsubtitleheight=\skip136
-\c@mdfcountframes=\count342
+\mdfsplitboxwidth=\skip117
+\mdfsplitboxtotalwidth=\skip118
+\mdfsplitboxheight=\skip119
+\mdfsplitboxdepth=\skip120
+\mdfsplitboxtotalheight=\skip121
+\mdfframetitleboxwidth=\skip122
+\mdfframetitleboxtotalwidth=\skip123
+\mdfframetitleboxheight=\skip124
+\mdfframetitleboxdepth=\skip125
+\mdfframetitleboxtotalheight=\skip126
+\mdffootnoteboxwidth=\skip127
+\mdffootnoteboxtotalwidth=\skip128
+\mdffootnoteboxheight=\skip129
+\mdffootnoteboxdepth=\skip130
+\mdffootnoteboxtotalheight=\skip131
+\mdftotallinewidth=\skip132
+\mdfboundingboxwidth=\skip133
+\mdfboundingboxtotalwidth=\skip134
+\mdfboundingboxheight=\skip135
+\mdfboundingboxdepth=\skip136
+\mdfboundingboxtotalheight=\skip137
+\mdf@freevspace@length=\skip138
+\mdf@horizontalwidthofbox@length=\skip139
+\mdf@verticalmarginwhole@length=\skip140
+\mdf@horizontalspaceofbox=\skip141
+\mdfsubtitleheight=\skip142
+\mdfsubsubtitleheight=\skip143
+\c@mdfcountframes=\count365
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count343
-\c@mdf@env@i=\count344
-\c@mdf@env@ii=\count345
-\c@mdf@zref@counter=\count346
+\mdf@envdepth=\count366
+\c@mdf@env@i=\count367
+\c@mdf@env@ii=\count368
+\c@mdf@zref@counter=\count369
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/venndiagram\venndiagram.st
 y
 Package: venndiagram 2018/06/07 v1.2 (NLCT) Venn diagrams
- ("C:\Program Files\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty"
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex"
-("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
-\XKV@toks=\toks50
-\XKV@tempa@toks=\toks51
+\@venn@Ax=\skip144
+\@venn@Ay=\skip145
+\@venn@Bx=\skip146
+\@venn@By=\skip147
+\@venn@Cx=\skip148
+\@venn@Cy=\skip149
+\@venn@w=\skip150
+\@venn@h=\skip151
+\@venn@intersect@i@x=\skip152
+\@venn@intersect@i@y=\skip153
+\@venn@intersect@ii@x=\skip154
+\@venn@intersect@ii@y=\skip155
+) (itdm.aux
+<Reading QR code for "/video-1.html" at level 1-M from aux file.>
 )
-\XKV@depth=\count347
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-\@venn@Ax=\skip137
-\@venn@Ay=\skip138
-\@venn@Bx=\skip139
-\@venn@By=\skip140
-\@venn@Cx=\skip141
-\@venn@Cy=\skip142
-\@venn@w=\skip143
-\@venn@h=\skip144
-\@venn@intersect@i@x=\skip145
-\@venn@intersect@i@y=\skip146
-\@venn@intersect@ii@x=\skip147
-\@venn@intersect@ii@y=\skip148
-) (itdm.aux)
 \openout1 = `itdm.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 779.
-LaTeX Font Info:    ... okay on input line 779.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 850.
+LaTeX Font Info:    ... okay on input line 850.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1321,16 +1372,16 @@ LaTeX Font Info:    ... okay on input line 779.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count348
+\scratchcounter=\count370
 \scratchdimen=\dimen319
 \scratchbox=\box152
-\nofMPsegments=\count349
-\nofMParguments=\count350
+\nofMPsegments=\count371
+\nofMParguments=\count372
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count351
+\MPscratchCnt=\count373
 \MPscratchDim=\dimen320
-\MPnumerator=\count352
-\makeMPintoPDFobject=\count353
+\MPnumerator=\count374
+\makeMPintoPDFobject=\count375
 \everyMPtoPDFconversion=\toks53
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1339,7 +1390,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box153
-Package hyperref Info: Link coloring ON on input line 779.
+Package hyperref Info: Link coloring ON on input line 850.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1351,11 +1402,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count354
+\c@section@level=\count376
 )
-LaTeX Info: Redefining \ref on input line 779.
-LaTeX Info: Redefining \pageref on input line 779.
-LaTeX Info: Redefining \nameref on input line 779.
+LaTeX Info: Redefining \ref on input line 850.
+LaTeX Info: Redefining \pageref on input line 850.
+LaTeX Info: Redefining \nameref on input line 850.
  (itdm.out) (itdm.out)
 \@outlinefile=\write6
 \openout6 = `itdm.out'.
@@ -1374,20 +1425,20 @@ enefit from \pgfplotsset{compat=1.17} (current compat level: 1.15).
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
-14.
+85.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Trying to load font information for TS1+iwona on input line
- 815.
+ 886.
 
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\ts1iwona.fd
 File: ts1iwona.fd 2008/07/22 v0.995 font definition file for TS1/iwona (MW)
 )
-<figs/by-nc-sa.pdf, id=117, 96.36pt x 33.726pt>
+<figs/by-nc-sa.pdf, id=180, 96.36pt x 33.726pt>
 File: figs/by-nc-sa.pdf Graphic file (type pdf)
 <use figs/by-nc-sa.pdf>
-Package pdftex.def Info: figs/by-nc-sa.pdf  used on input line 817.
+Package pdftex.def Info: figs/by-nc-sa.pdf  used on input line 888.
 (pdftex.def)             Requested size: 85.6pt x 29.95993pt.
 
 [4
@@ -1396,15 +1447,15 @@ Package pdftex.def Info: figs/by-nc-sa.pdf  used on input line 817.
 ************************************************
 Preface Welcome Message
 ************************************************
-<figs/TJ.jpg, id=128, 1022.31938pt x 1022.31938pt>
+<figs/TJ.jpg, id=191, 1022.31938pt x 1022.31938pt>
 File: figs/TJ.jpg Graphic file (type jpg)
 <use figs/TJ.jpg>
-Package pdftex.def Info: figs/TJ.jpg  used on input line 833.
+Package pdftex.def Info: figs/TJ.jpg  used on input line 904.
 (pdftex.def)             Requested size: 238.59897pt x 238.59155pt.
-<figs/UTMfall.jpg, id=130, 4047.12pt x 3035.34pt>
+<figs/UTMfall.jpg, id=193, 4047.12pt x 3035.34pt>
 File: figs/UTMfall.jpg Graphic file (type jpg)
 <use figs/UTMfall.jpg>
-Package pdftex.def Info: figs/UTMfall.jpg  used on input line 844.
+Package pdftex.def Info: figs/UTMfall.jpg  used on input line 915.
 (pdftex.def)             Requested size: 238.59897pt x 178.91676pt.
 [5
 
@@ -1415,17 +1466,64 @@ Preface How to Use This Resource
 ************************************************
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 879.
+(Font)              using `T1/iwona/m/it' instead on input line 950.
 
 [6 <./figs/UTMfall.jpg>]
 ************************************************
-Preface Feedback
+Preface Feedback and Acknowledgements
 ************************************************
 [7
 
 ] [8
 
-] (itdm.toc [9
+] (itdm.toc
+LaTeX Font Info:    Trying to load font information for OT1+iwonam on input lin
+e 27.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\ot1iwonam.fd
+File: ot1iwonam.fd 2005/10/05 v1.2 font definition file for OT1/iwonam (MW)
+)
+LaTeX Font Info:    Trying to load font information for OML+iwona on input line
+ 27.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\omliwona.fd
+File: omliwona.fd 2008/07/22 v0.995 font definition file for OML/iwona (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMS+iwona on input line
+ 27.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\omsiwona.fd
+File: omsiwona.fd 2008/07/22 v0.995 font definition file for OMS/iwona (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMX+iwona on input line
+ 27.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\omxiwona.fd
+File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+zavm on input line 27
+.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/arev\uzavm.fd
+File: uzavm.fd 2006/05/30 Fontinst v1.929 font definitions for U/zavm.
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
+7.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/stmaryrd\ustmry.fd)
+[9
 
 ])
 \tf@toc=\write7
@@ -1434,7 +1532,7 @@ Preface Feedback
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 905.
+(Font)              using `T1/iwona/m/it' instead on input line 978.
 
 [10]
 ************************************************
@@ -1443,70 +1541,25 @@ Chapter 1 Review of MAT102
 Chapter 1.
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 918.
+(Font)              using `T1/iwona/m/it' instead on input line 991.
 
 ************************************************
 Section 1.1 Sets and Functions
 ************************************************
 LaTeX Font Info:    Trying to load font information for U+ifgeo on input line 9
-26.
+99.
 (C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/fonts/ifsym\uifgeo.fd)
 
 LaTeX Font Warning: Font shape `U/ifgeo/b/n' undefined
-(Font)              using `U/ifgeo/m/n' instead on input line 926.
+(Font)              using `U/ifgeo/m/n' instead on input line 999.
 
-LaTeX Font Info:    Trying to load font information for OT1+iwonam on input lin
-e 927.
-(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\ot1iwonam.fd
-File: ot1iwonam.fd 2005/10/05 v1.2 font definition file for OT1/iwonam (MW)
-)
-LaTeX Font Info:    Trying to load font information for OML+iwona on input line
- 927.
-
-(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\omliwona.fd
-File: omliwona.fd 2008/07/22 v0.995 font definition file for OML/iwona (MW)
-)
-LaTeX Font Info:    Trying to load font information for OMS+iwona on input line
- 927.
-
-(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\omsiwona.fd
-File: omsiwona.fd 2008/07/22 v0.995 font definition file for OMS/iwona (MW)
-)
-LaTeX Font Info:    Trying to load font information for OMX+iwona on input line
- 927.
-
-(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\omxiwona.fd
-File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 927
-.
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 927
-.
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+zavm on input line 92
-7.
-
-(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/arev\uzavm.fd
-File: uzavm.fd 2006/05/30 Fontinst v1.929 font definitions for U/zavm.
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 9
-27.
-
-(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/stmaryrd\ustmry.fd)
 [1
 
 
 ]
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1004.
+(Font)              using `T1/iwona/m/it' instead on input line 1072.
 
 [2]
 ************************************************
@@ -1514,41 +1567,41 @@ Section 1.2 Logic and Proof Techniques
 ************************************************
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1063.
+(Font)              using `T1/iwona/m/it' instead on input line 1128.
 
 [3]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bl
 ock.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1083 ...l Induction.}{}{x:theorem:thm-induction}
+l.1148 ...l Induction.}{}{x:theorem:thm-induction}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1098 ...cise}{}{x:exercise:exe-review-induction}
+l.1163 ...cise}{}{x:exercise:exe-review-induction}
                                                   %
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1106.
+(Font)              using `T1/iwona/m/it' instead on input line 1171.
 
 [4]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bl
 ock.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1107 ...exercise:exe-review-induction-fibonacci}
+l.1172 ...exercise:exe-review-induction-fibonacci}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1119 ...{x:exercise:exe-review-induction-tiling}
+l.1184 ...{x:exercise:exe-review-induction-tiling}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1121 ...by-two grid.}{x:figure:exe-tiling-fig}{}
+l.1186 ...by-two grid.}{x:figure:exe-tiling-fig}{}
                                                   %
 ************************************************
 Section 1.3 Integers and Divisibility
@@ -1557,77 +1610,77 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1147 ... Primes.}{x:definition:def-divisibility}
+l.1212 ... Primes.}{x:definition:def-divisibility}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1159 ...hm.}{}{x:theorem:thm-division-algorithm}
+l.1223 ...hm.}{}{x:theorem:thm-division-algorithm}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1166 ...:exercise:exe-review-division-algorithm}
+l.1230 ...:exercise:exe-review-division-algorithm}
                                                   %
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1174.
+(Font)              using `T1/iwona/m/it' instead on input line 1238.
 
 [5]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bl
 ock.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1175 ...{definition}{GCD.}{x:definition:def-gcd}
+l.1239 ...{definition}{GCD.}{x:definition:def-gcd}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1192 ...neexercise}{}{x:exercise:exe-review-gcd}
+l.1255 ...neexercise}{}{x:exercise:exe-review-gcd}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1197 ...out's Identity.}{}{x:theorem:thm-bezout}
+l.1258 ...out's Identity.}{}{x:theorem:thm-bezout}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1200 ...xercise}{}{x:exercise:exe-review-bezout}
+l.1261 ...exercise}{}{x:exercise:ex-review-bezout}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1207 ...:exercise:exe-review-bezout-no-solution}
+l.1268 ...x:exercise:ex-review-bezout-no-solution}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1214 ...ise}{}{x:exercise:exe-review-bezout-gcd}
+l.1275 ...cise}{}{x:exercise:ex-review-bezout-gcd}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1217 ...}{Euclid's Lemma.}{}{x:lemma:lem-euclid}
+l.1278 ...}{Euclid's Lemma.}{}{x:lemma:lem-euclid}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1220 ...e}{}{x:exercise:exe-review-euclid-proof}
+l.1281 ...se}{}{x:exercise:ex-review-euclid-proof}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1223 ...}{}{x:exercise:exe-review-bezout-euclid}
+l.1284 ...e}{}{x:exercise:ex-review-bezout-euclid}
                                                   %
 ************************************************
 Section 1.4 Reading and Writing Proofs
@@ -1636,16 +1689,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proje
 ct-distinct.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1235 \begin{activity}{}{g:activity:id248178}
+l.1296 \begin{activity}{}{g:activity:id449782}
                                               %
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1286.
+(Font)              using `T1/iwona/m/it' instead on input line 1347.
 
 [6]
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1313.
+(Font)              using `T1/iwona/m/it' instead on input line 1374.
 
 [7]
 ************************************************
@@ -1653,7 +1706,7 @@ Chapter 2 Counting Techniques
 ************************************************
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1342.
+(Font)              using `T1/iwona/m/it' instead on input line 1403.
 
 [8]
 Chapter 2.
@@ -1664,116 +1717,116 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1368 ...}{x:example:eg-counting-kiss-marry-kill}
+l.1429 ...}{x:example:eg-counting-kiss-marry-kill}
                                                   % [9
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bloc
 k.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1390 ...ating.}{x:exercise:ex-counting-coldplay}
+l.1451 ...ating.}{x:exercise:ex-counting-coldplay}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1401 ...g Adoption.}{x:example:eg-counting-dogs}
+l.1460 ...g Adoption.}{x:example:eg-counting-dogs}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1426 ...e}{Socks!}{x:exercise:ex-counting-socks}
+l.1485 ...e}{Socks!}{x:exercise:ex-counting-socks}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1433 ...ts.}{x:exercise:ex-counting-test-papers}
+l.1490 ...ts.}{x:exercise:ex-counting-test-papers}
                                                   %
-<figs/test-papers.jpg, id=349, 839.2956pt x 472.164pt>
+<figs/test-papers.jpg, id=443, 839.2956pt x 472.164pt>
 File: figs/test-papers.jpg Graphic file (type jpg)
 <use figs/test-papers.jpg>
-Package pdftex.def Info: figs/test-papers.jpg  used on input line 1437.
+Package pdftex.def Info: figs/test-papers.jpg  used on input line 1494.
 (pdftex.def)             Requested size: 170.90001pt x 96.13861pt.
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1444.
+(Font)              using `T1/iwona/m/it' instead on input line 1501.
 
 [10]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
 lock.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1450 ...{Partition.}{x:definition:def-partition}
+l.1507 ...{Partition.}{x:definition:def-partition}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1458 ...{Sum Rule.}{}{x:principle:prin-sum-rule}
+l.1515 ...{Sum Rule.}{}{x:principle:prin-sum-rule}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1466 ...lowers.}{x:exercise:ex-counting-twitter}
+l.1523 ...lowers.}{x:exercise:ex-counting-twitter}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1478 ...uct Rule.}{}{x:principle:prin-prod-rule}
+l.1535 ...uct Rule.}{}{x:principle:prin-prod-rule}
                                                   %
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1491.
+(Font)              using `T1/iwona/m/it' instead on input line 1548.
 
 [11 <./figs/test-papers.jpg>]pdfTeX warning (ext4): destination with the same i
 dentifier (name{tcb@cnt@block.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1492 ...Outfits.}{x:exercise:ex-counting-outfit}
+l.1549 ...Outfits.}{x:exercise:ex-counting-outfit}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1495 ....}{x:exercise:ex-counting-prove-product}
+l.1552 ....}{x:exercise:ex-counting-prove-product}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1500 ...Choice Exam.}{x:example:eg-counting-mcq}
+l.1557 ...Choice Exam.}{x:example:eg-counting-mcq}
                                                   %
-<figs/mcq1.png, id=380, 228.855pt x 221.628pt>
+<figs/mcq1.png, id=472, 228.855pt x 221.628pt>
 File: figs/mcq1.png Graphic file (type png)
 <use figs/mcq1.png>
-Package pdftex.def Info: figs/mcq1.png  used on input line 1504.
+Package pdftex.def Info: figs/mcq1.png  used on input line 1561.
 (pdftex.def)             Requested size: 93.21156pt x 90.26611pt.
-pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
-.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1518 ...ople.}{x:exercise:ex-counting-coldplay2}
-                                                  %
+
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1520.
+(Font)              using `T1/iwona/m/it' instead on input line 1574.
 
-[12 <./figs/mcq1.png>]
+[12 <./figs/mcq1.png>]pdfTeX warning (ext4): destination with the same identifi
+er (name{tcb@cnt@block.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1575 ...ople.}{x:exercise:ex-counting-coldplay2}
+                                                  %
 ************************************************
 Solutions 2.1.1 Solutions to Selected Checkpoints
 ************************************************
 
-Overfull \hbox (20.22838pt too wide) in paragraph at lines 1553--1558
+Overfull \hbox (20.22838pt too wide) in paragraph at lines 1616--1621
  [][] 
  []
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1586.
+(Font)              using `T1/iwona/m/it' instead on input line 1640.
 
 [13]
 ************************************************
@@ -1783,159 +1836,169 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1615 ...mutation.}{x:definition:def-permutation}
+l.1679 ...mutation.}{x:definition:def-permutation}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1618 ...n{remark}{}{x:remark:remark-permutation}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.1626 ...ions.}{x:example:eg-counting-bijections}
+l.1682 ...n{remark}{}{x:remark:remark-permutation}
                                                   %
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1632.
+(Font)              using `T1/iwona/m/it' instead on input line 1689.
 
 [14]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
-lock.4}) has been already used, duplicate ignored
+lock.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1634 ...ATION.}{x:exercise:ex-counting-EQUATION}
+l.1690 ...ions.}{x:example:eg-counting-bijections}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.1698 ...ATION.}{x:exercise:ex-counting-EQUATION}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1647 ...an \(n\)-set.}{}{x:proposition:prop-Pnk}
+l.1711 ...an \(n\)-set.}{}{x:proposition:prop-Pnk}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1650 ...{remark}{}{x:remark:remark-Pnk-notation}
+l.1718 ...{remark}{}{x:remark:remark-Pnk-notation}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1653 ...}{x:example:eg-counting-student-council}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
-duplicate ignored
+l.1721 ...}{x:example:eg-counting-student-council}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 1746.
+
+[15]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1679 ...{ZAHLEN.}{x:exercise:ex-counting-ZAHLEN}
+l.1747 ...{ZAHLEN.}{x:exercise:ex-counting-ZAHLEN}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1697 ...ed Letters.}{x:example:eg-counting-YEET}
+l.1759 ...ed Letters.}{x:example:eg-counting-YEET}
                                                   %
-Overfull \hbox (35.57675pt too wide) in paragraph at lines 1705--1710
+Overfull \hbox (35.57675pt too wide) in paragraph at lines 1767--1772
  [][] 
  []
 
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1807 ...iset.}{}{x:proposition:prop-perm-repeat}
+                                                  %
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1729.
+(Font)              using `T1/iwona/m/it' instead on input line 1813.
 
-[15]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
-lock.10}) has been already used, duplicate ignored
+[16]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1758 ...iset.}{}{x:proposition:prop-perm-repeat}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.1765 ...GA.}{x:exercise:ex-counting-MISSISSAUGA}
+l.1814 ...GA.}{x:exercise:ex-counting-MISSISSAUGA}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1775 ...CS.}{x:exercise:ex-counting-MATHEMATICS}
-                                                  %
-
-LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1789.
-
-[16]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
-lock.13}) has been already used, duplicate ignored
+l.1822 ...CS.}{x:exercise:ex-counting-MATHEMATICS}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
+ duplicate ignored
 <to be read again> 
                    \relax 
-l.1790 ...nament.}{x:exercise:ex-counting-esports}
+l.1837 ...nament.}{x:exercise:ex-counting-esports}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.14}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1811 ...ids.}{x:example:eg-counting-bridesmaids}
+l.1858 ...ids.}{x:example:eg-counting-bridesmaids}
                                                   %
-Overfull \hbox (27.9226pt too wide) in paragraph at lines 1819--1824
+Overfull \hbox (27.9226pt too wide) in paragraph at lines 1866--1871
  [][] 
  []
 
 
-Overfull \hbox (27.9226pt too wide) in paragraph at lines 1833--1838
+Overfull \hbox (27.9226pt too wide) in paragraph at lines 1880--1885
  [][] 
  []
 
 
-Overfull \hbox (0.25743pt too wide) in paragraph at lines 1844--1845
+Overfull \hbox (0.25743pt too wide) in paragraph at lines 1891--1892
 []\T1/iwona/b/it/10 Note \T1/iwona/m/n/10 When the usual for-mula for $\OML/iwo
 na/m/it/10 k$\T1/iwona/m/n/10 -permutations from an $\OML/iwona/m/it/10 n$\T1/i
 wona/m/n/10 -set ([][]Propo-
  []
 
 
-Overfull \hbox (3.2314pt too wide) in paragraph at lines 1844--1845
+Overfull \hbox (3.2314pt too wide) in paragraph at lines 1891--1892
 \T1/iwona/m/n/10 si-tion [][]2.2.5[][][][])) is ap-plied to the pre-vi-ous ex-a
 m-ple, we get a to-tal of $[] \OT1/iwonam/m/n/10 =
  []
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1860.
+(Font)              using `T1/iwona/m/it' instead on input line 1907.
 
 [17]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
 lock.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1880 ...bination.}{x:definition:def-combination}
+l.1927 ...bination.}{x:definition:def-combination}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 1929.
+
+[18]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1930 ...n \(n\)-set.}{}{x:proposition:prop-comb}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.16}) has been already used,
+nation with the same identifier (name{tcb@cnt@block.17}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1883 ...n \(n\)-set.}{}{x:proposition:prop-comb}
+l.1937 ...s.}{x:example:eg-counting-standard-deck}
                                                   %
-Underfull \hbox (badness 1231) in paragraph at lines 1918--1919
+Underfull \hbox (badness 1231) in paragraph at lines 1965--1966
 []\T1/iwona/m/n/10 Step 2: Pick three black
  []
 
 
-LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1927.
-
-[18]
-Overfull \hbox (4.28125pt too wide) in paragraph at lines 1928--1930
+Overfull \hbox (4.28125pt too wide) in paragraph at lines 1975--1977
 []\T1/iwona/b/n/10 Checkpoint 2.2.18  Es-ports Tour-na-ment, again. []\T1/iwona
 /m/n/10 Solve part a. of [][]Check-point [][]2.2.13[][][][]
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proje
-ct-distinct.1}) has been already used, duplicate ignored
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 1979.
+
+[19]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@p
+roject-distinct.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1935 ...binatorics.}{x:exploration:expl-susruta}
+l.1989 ...binatorics.}{x:exploration:expl-susruta}
                                                   %
 
 ! Package inputenc Error: Unicode character ṅ (U+1E45)
@@ -1945,13 +2008,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1936 ...alled \emph{vikalpa} and \emph{bhaṅga}
+l.1990 ...alled \emph{vikalpa} and \emph{bhaṅga}
                                                   , respectively, they were ...
 
 ? 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1940.
+(Font)              using `T1/iwona/m/it' instead on input line 1994.
 
 
 ! Package inputenc Error: Unicode character ṃ (U+1E43)
@@ -1961,19 +2024,19 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1940 ...Samhita}{\pubtitle{Suśruta-saṃhitā}}
+l.1994 ...Samhita}{\pubtitle{Suśruta-saṃhitā}}
                                                   , (est. 500 BC) an ancient...
 
 ? 
 
-Overfull \hbox (1.44342pt too wide) in paragraph at lines 1940--1941
+Overfull \hbox (1.44342pt too wide) in paragraph at lines 1994--1995
 []\T1/iwona/m/n/10 The [][]\T1/iwona/m/it/10 Su�ruta-sahit	a[][]\T1/iwona/m/n/1
 0 , (est. 500 BC) an an-cient Hindu text on medicine
  []
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1945.
+(Font)              using `T1/iwona/m/it' instead on input line 1999.
 
 
 ! Package inputenc Error: Unicode character ṃ (U+1E43)
@@ -1983,174 +2046,2313 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1945 \pubtitle{Suśruta-saṃhitā}
+l.1999 \pubtitle{Suśruta-saṃhitā}
                                       lxiii, as cited in \hyperlink{x:biblio...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1944--1946
+Underfull \hbox (badness 10000) in paragraph at lines 1998--2000
 
  []
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1949.
+(Font)              using `T1/iwona/m/it' instead on input line 2003.
 
 
-Overfull \hbox (16.43944pt too wide) in paragraph at lines 1951--1952
-\T1/iwona/m/n/10 is the re-verse ar-range-ment? Ad- dh	asamaya, Pud-gal	astik	a
-ya,
+Overfull \hbox (10.12946pt too wide) in paragraph at lines 2005--2006
+\T1/iwona/m/n/10 is the re-verse ar-range-ment? Addh	asamaya, Pud-gal	astik	aya
+,
  []
 
 
-Overfull \hbox (57.26326pt too wide) in paragraph at lines 1951--1952
-\T1/iwona/m/n/10 J	v	astik	aya, []Ak	a�	astik	aya, Ad-harm	a- stik	aya, and Dh
-arm	astik	ayathis
- []
-
-
-LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1954.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1953--1955
-
+Overfull \hbox (50.95328pt too wide) in paragraph at lines 2005--2006
+\T1/iwona/m/n/10 J	v	astik	aya, []Ak	a�	astik	aya, Ad-harm	astik	aya, and Dhar
+m	astik	ayathis
  []
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 1959.
+(Font)              using `T1/iwona/m/it' instead on input line 2008.
 
-[19]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2007--2009
+
+ []
+
 ************************************************
 Solutions 2.2.1 Solutions to Selected Checkpoints
 ************************************************
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 2026.
+(Font)              using `T1/iwona/m/it' instead on input line 2027.
 
 [20]
 ************************************************
 Section 2.3 Binomial Coefficients
 ************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2098 ...}{x:definition:def-binomial-coefficient}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2105 ... Mountain).}{x:exploration:expl-pingala}
+                                                  %
+<figs/meru-prastaara.png, id=640, 922.44624pt x 485.815pt>
+File: figs/meru-prastaara.png Graphic file (type png)
+<use figs/meru-prastaara.png>
+Package pdftex.def Info: figs/meru-prastaara.png  used on input line 2108.
+(pdftex.def)             Requested size: 201.25446pt x 105.99007pt.
+
+
+! Package inputenc Error: Unicode character ṅ (U+1E45)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2112 ...n.wikipedia.org/wiki/Pingala}{Piṅgala}
+                                                   (200 BC) in his text the ...
+
+? 
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2112.
+
+
+! Package inputenc Error: Unicode character ḥ (U+1E25)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2112 ...is text the \pubtitle{Chandaḥśāstra}
+                                                   studied variations in poe...
+
+? 
+
+! Package inputenc Error: Unicode character ṅ (U+1E45)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2125 Piṅ
+            gala also observed that each two-syllable variant could be obtai...
+
+? 
+
+Overfull \hbox (58.25923pt too wide) in paragraph at lines 2145--2151
+ [][] 
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2179.
+
+[21]
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2179.
+
+[22 <./figs/meru-prastaara.png>]pdfTeX warning (ext4): destination with the sam
+e identifier (name{tcb@cnt@block.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2185 ...rmula.}{}{x:theorem:thm-pascals-formula}
+                                                  %
+
+! Package inputenc Error: Unicode character ṅ (U+1E45)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2196 ...n to several other mathematicians: Piṅ
+                                                  gala, and several others i...
+
+? 
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2201 ...\(4\).}{x:figure:fig-pascals-triangle}{}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2244 ...{x:exercise:ex-counting-pascal-complete}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2246.
+
+[23]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2248 ...mial Theorem.}{}{x:theorem:thm-binomial}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2265 ....}{x:exercise:ex-counting-coefficient-1}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2268 ....}{x:exercise:ex-counting-coefficient-2}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2279 ...:exercise:ex-counting-binomial-identity}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2285 ...hs.}{x:example:eg-counting-lattice-path}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2349.
+
+[24]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2351 ...b)\).}{x:exercise:ex-counting-lattice-1}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.2354 ...bers.}{x:exercise:ex-counting-lattice-2}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.2363 ...}{x:exercise:ex-counting-lattice-pascal}
+                                                  %
+************************************************
+Solutions 2.3.1 Solutions to Selected Checkpoints
+************************************************
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2381.
+
+[25]
 ************************************************
 Section 2.4 The Balls in Bins Formula
+************************************************
+
+Overfull \hbox (1.52945pt too wide) in paragraph at lines 2415--2416
+[]\T1/iwona/m/n/10 Derive the for-mu-las for per-mu-ta-tions and com-bi-na-tion
+s with rep-e-ti-tion (Balls
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2420 ...again.}{x:example:eg-counting-mcq-again}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2428.
+
+[26]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2431 ....}{}{x:proposition:prop-perm-repetition}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2438 ...ice Advice.}{x:example:eg-counting-rice}
+                                                  %
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family iwona in TS1 encoding.
+            Default family used instead on input line 2467.
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family iwona in TS1 encoding.
+            Default family used instead on input line 2467.
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2492.
+
+[27]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2493 ...xercise.}{x:exercise:ex-counting-rice-1}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2511 ... in Bins.}{}{x:theorem:thm-comb-replace}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2525 ...s and Bars.}{x:remark:remark-stars-bars}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2531.
+
+[28]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2532 ...tudents.}{x:exercise:ex-counting-apples}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2547 ...}{x:exploration:eg-counting-nonnegative}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2563 ...ions.}{}{x:proposition:prop-nonnegative}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2570 ...{}{x:exercise:ex-counting-nonnegative-1}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.2579 ....}{x:exercise:ex-counting-nonnegative-2}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2595.
+
+[29]
+************************************************
+Solutions 2.4.1 Solutions to Selected Checkpoints
 ************************************************
 ************************************************
 Section 2.5 Combinatorial Arguments
 ************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2648 ...}{x:exercise:ex-counting-pascal-algebra}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2650.
+
+[30]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2652 ... Identity.}{}{x:theorem:thm-chairperson}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2659 ...bra.}{x:exercise:ex-chairperson-algebra}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2663 ...l Proof.}{x:example:ex-chairperson-comb}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2707.
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 2761--2762
+[]\T1/iwona/m/n/10 From nine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2765--2766
+[]\T1/iwona/m/n/10 pick four
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 2769--2770
+[]\T1/iwona/m/n/10 then elect a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2825--2826
+[]\T1/iwona/m/n/10 From nine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2833--2834
+[]\T1/iwona/m/n/10 then pick
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2833--2834
+\T1/iwona/m/n/10 three more
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2845 ...).}{x:exercise:ex-counting-comb-proof-1}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2853.
+
+[32]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2854 ...}.}{x:exercise:ex-counting-comb-proof-2}
+                                                  %
 ************************************************
-Exercises 2.6 Exercises
+Section 2.6 Summary
 ************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2870 ...ques}}{x:table:table-summary-counting}{}
+                                                  %
+Overfull \hbox (29.25952pt too wide) in paragraph at lines 2870--2880
+ [] 
+ []
+
 ************************************************
-Chapter 3 Pigeonhole and Inclusion-Exclusion
+Exercises 2.7 Exercises
 ************************************************
 
-Underfull \hbox (badness 10000) in paragraph at lines 2094--2103
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 2910.
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2938
 
  []
 
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 2103.
+(Font)              using `T1/iwona/m/it' instead on input line 2983.
 
-[21]
+[34]
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 2103.
+(Font)              using `T1/iwona/m/it' instead on input line 3108.
 
-[22]
+[35]
+Overfull \hbox (32.53362pt too wide) in paragraph at lines 3136--3138
+\T1/iwona/m/n/10 by count-ing the num-ber of sub-sets of size $\OML/iwona/m/it/
+10 n$ \T1/iwona/m/n/10 of the set $\OMS/iwona/m/n/10 f\OML/iwona/m/it/10 a[]; a
+[]; [] ; a[]; b[]; b[]; [] ; b[]\OMS/iwona/m/n/10 g$\T1/iwona/m/n/10 . 
+ []
+
+************************************************
+Chapter 3 Pigeonhole and Inclusion-Exclusion
+************************************************
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3162.
+
+[36]
 Chapter 3.
 ************************************************
 Section 3.1 The Pigeonhole Principle
 ************************************************
+
+LaTeX Warning: File `images/video-1.jpg' not found on input line 3197.
+
+
+! Package pdftex.def Error: File `images/video-1.jpg' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3197 ...ize,keepaspectratio]{images/video-1.jpg}
+                                                  %
+? 
+
+
+<QR code requested for "/video-1.html" in version 0-M.>
+
+<Copying the QR code for "/video-1.html" in version 1-M as previously calculate
+d.>
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3207 ...itting a Pizza.}{x:example:eg-php-pizza}
+                                                  % [37
+
+]
+LaTeX Font Info:    Trying to load font information for U+mvs on input line 323
+7.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/marvosym\umvs.fd)pdfTeX wa
+rning (ext4): destination with the same identifier (name{tcb@cnt@block.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3245 ...z Scores.}{x:example:eg-php-quiz-scores}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3259 ...e Principle (PHP).}{}{x:theorem:thm-php}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3262 ...Prove the PHP.}{x:exercise:ex-php-proof}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3264.
+
+[38]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3266 ...le with \(k=1\).}{}{x:corollary:cor-php}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3269 ...st Digit.}{x:exercise:ex-php-last-digit}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3274 ...{x:exercise:ex-php-difference-divisible}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3285 ...e}{Sum to 8.}{x:example:eg-php-sum-to-8}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3305 ...to \(2n\).}{x:exercise:ex-php-sum-to-2n}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3309 ...ible by 8.}{x:example:eg-php-sum-diff-8}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3319.
+
+[39]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3320 ...ble.}{x:exercise:ex-php-sum-diff-8-best}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3323 ... \(2n\).}{x:exercise:ex-php-sum-diff-2n}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3329 ...r of Friends.}{x:example:ex-php-friends}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.14}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3336 ...des Another.}{x:exercise:ex-php-divides}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.15}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3341 ...king Showers.}{x:exercise:ex-php-shower}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3355.
+
+[40]
 ************************************************
 Section 3.2 Principle of Inclusion-Exclusion
 ************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3372 ...ble by 3.}{x:example:eg-pie-divisible-3}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3392 ...3 or 4.}{x:example:eg-pie-divisible-3-4}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3407.
+
+[41]
+Overfull \hbox (53.26775pt too wide) in paragraph at lines 3410--3411
+[]$\OML/iwona/m/it/10 A[] \OMS/iwona/m/n/10 [ \OML/iwona/m/it/10 A[] \OT1/iwona
+m/m/n/10 =$ \T1/iwona/m/n/10 in-te-gers in $\OML/iwona/m/it/10 U$ \T1/iwona/m/n
+/10 di-vis-i-ble by ei-ther 3 or 4 $\OT1/iwonam/m/n/10 = \OMS/iwona/m/n/10 f\OT
+1/iwonam/m/n/10 3\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 4\OML/iwona/m/it/10 ; 
+\OT1/iwonam/m/n/10 6\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 8\OML/iwona/m/it/10
+ ; \OT1/iwonam/m/n/10 9\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 12\OML/iwona/m/i
+t/10 ; \OT1/iwonam/m/n/10 15\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 16\OML/iwon
+a/m/it/10 ; \OT1/iwonam/m/n/10 18\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 20\OML
+/iwona/m/it/10 ; \OT1/iwonam/m/n/10 21\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 2
+4\OMS/iwona/m/n/10 g$ 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3442 \begin{remark}{}{x:remark:remark-setminus}
+                                                 %pdfTeX warning (ext4): destin
+ation with the same identifier (name{tcb@cnt@block.4}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.3445 ...r 11.}{x:exercise:ex-pie-divisible-7-11}
+                                                  %
+Overfull \hbox (16.31578pt too wide) in paragraph at lines 3445--3447
+[]\T1/iwona/b/n/10 Checkpoint 3.2.4  Not Di-vis-i-ble by 7 or 11. []\T1/iwona/m
+/n/10 How many in-te-gers in $\OMS/iwona/m/n/10 f\OT1/iwonam/m/n/10 1\OML/iwona
+/m/it/10 ; \OT1/iwonam/m/n/10 2\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 3\OML/iw
+ona/m/it/10 ; [] ; \OT1/iwonam/m/n/10 2020\OMS/iwona/m/n/10 g$
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3468.
+
+[42]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3480 ...11.}{x:exercise:ex-pie-divisible-3-7-11}
+                                                  %
+Overfull \hbox (19.95316pt too wide) in paragraph at lines 3480--3482
+[]\T1/iwona/b/n/10 Checkpoint 3.2.5  Not Di-vis-i-ble by 3, 7, or 11. []\T1/iwo
+na/m/n/10 How many in-te-gers in $\OMS/iwona/m/n/10 f\OT1/iwonam/m/n/10 1\OML/i
+wona/m/it/10 ; \OT1/iwonam/m/n/10 2\OML/iwona/m/it/10 ; [] ; \OT1/iwonam/m/n/10
+ 2020\OMS/iwona/m/n/10 g$
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3484 ...clusion-Exclusion.}{}{x:theorem:thm-pie}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3507 ...for Four Sets.}{x:exercise:ex-pie-4sets}
+                                                  %
+Overfull \hbox (8.73816pt too wide) in paragraph at lines 3507--3509
+[]\T1/iwona/b/n/10 Checkpoint 3.2.7  PIE for Four Sets. []\T1/iwona/m/n/10 Give
+n a uni-verse $\OML/iwona/m/it/10 U$ \T1/iwona/m/n/10 and four sets $\OML/iwona
+/m/it/10 A[]; A[]; A[]; A[]$
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3509.
+
+[43]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3510 ...arragements.}{x:example:eg-pie-EQUATION}
+                                                  %
+Overfull \hbox (3.78653pt too wide) in paragraph at lines 3514--3515
+[]\T1/iwona/m/n/10 EQUATION 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3538 ...rs.}{x:exercise:ex-pie-relatively-prime}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3543 ....}{x:exploration:expl-pie-euler-totient}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3557 ...35)\).}{x:exercise:ex-pie-apply-totient}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3559.
+
+[44]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3560 ... of Each Suit.}{x:exercise:ex-pie-cards}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3563 ...lutions.}{x:exercise:ex-pie-nonnegative}
+                                                  %
 ************************************************
-Exercises 3.3 Exercises
+Section 3.3 Application: Derangements
+************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3584 ...angement.}{x:definition:def-derangement}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3587 ...nd 4-sets.}{x:example:eg-derangement-34}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3596 ...n\).}{x:exploration:expl-derangement-Dn}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3606 ...angements.}{}{x:theorem:thm-derangement}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3612.
+
+[45]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3613 ...n{remark}{}{x:remark:remark-Dn-notation}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3616 ... \(D_4\).}{x:exercise:ex-derangement-D4}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3619 ...n/n!\)}{x:exercise:ex-derangement-ratio}
+                                                  %
+************************************************
+Exercises 3.4 Exercises
+************************************************
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3679.
+
+[46]
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3756.
+
+[47]
+************************************************
+Chapter 4 Congruence Modulo \(n\)
+************************************************
+
+Underfull \hbox (badness 10000) in paragraph at lines 3773--3782
+
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3782.
+
+[48]
+Chapter 4.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3782.
+
+************************************************
+Section 4.1 Equivalence Relations
+************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3800 ...n}{Relation.}{x:definition:def-relation}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3805 ...e Relation.}{x:example:eg-cong-relation}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3814 ...ons.}{x:exercise:ex-cong-relation-count}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3819 ...s.}{x:exercise:ex-cong-relation-count-2}
+                                                  % [49
+
+]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bloc
+k.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3828 ...}{x:definition:def-equivalence-relation}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3837 ...?}{x:exercise:ex-cong-equivalence-check}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3849 ...ss.}{x:definition:def-equivalence-class}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3859 ....}{x:exercise:ex-cong-equivalence-class}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3867 ...ass.}{}{x:lemma:lemma-equivalence-class}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3883.
+
+[50]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3884 ...}{}{x:theorem:thm-equivalence-partition}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3892 ...e:ex-cong-equivalence-partition-proof-a}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3895 ...e:ex-cong-equivalence-partition-proof-b}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3900 ...I.}{x:exercise:ex-cong-equivalence-mod3}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.14}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3907 ...{x:exercise:ex-cong-equivalence-largest}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.15}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3914 ...}{x:exercise:ex-cong-euivalence-example}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.16}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3923 ...remark-cong-equivalence-representatives}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.17}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3926 ...es.}{x:example:eg-cong-equivalence-even}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3944.
+
+[51]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3946 ...rcise:ex-cong-euivalence-prove-property}
+                                                  %
+************************************************
+Solutions 4.1.1 Solutions to Selected Checkpoints
+************************************************
+************************************************
+Section 4.2 Congruences and their Properties
+************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3977 ...ongruence.}{x:definition:def-congruence}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3984 ...ple Example.}{x:example:eg-cong-example}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 3988.
+
+[52]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3989 ...emainder.}{x:exercise:ex-cong-remainder}
+                                                  %
+
+! LaTeX Error: Unknown graphics extension: .svg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3999 ...h=\linewidth]{figs/noun_week_247256.svg}
+                                                  
+? 
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4002 ...ys of the Week.}{x:example:eg-cong-week}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4009 ...elationship.}{x:exercise:eg-cong-week-2}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4012 ...ass.}{x:definition:def-congruence-class}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4019 ...mple}{Modulo 5.}{x:example:eg-cong-mod5}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4031.
+
+[53]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4033 ...roposition:prop-cong-modular-arithmetic}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4042 ...ercise:ex-cong-prove-modular-arithmetic}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4046 ....}{x:example:eg-cong-modular-arithmetic}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4053 ...peration.}{x:definition:def-cong-modulo}
+                                                  %
+LaTeX Font Info:    Trying to load font information for OT1+iwona on input line
+ 4056.
+
+(C:\Users\tjyus\AppData\Roaming\MiKTeX\2.9\tex/latex/iwona\ot1iwona.fd
+File: ot1iwona.fd 2008/07/22 v0.995 font definition file for OT1/iwona (MW)
+)
+LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <10> not available
+(Font)              Font shape `OT1/iwona/b/n' tried instead on input line 4056
+.
+LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <7> not available
+(Font)              Font shape `OT1/iwona/b/n' tried instead on input line 4056
+.
+LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <5> not available
+(Font)              Font shape `OT1/iwona/b/n' tried instead on input line 4056
+.
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4060 ....}{x:exercise:ex-cong-compute-remainder}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4070 ...{x:example:eg-cong-dividing-doesnt-work}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.14}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4081 ...ce.}{}{x:proposition:prop-cong-division}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4093.
+
+[54]
+Overfull \hbox (5.8557pt too wide) in paragraph at lines 4106--4108
+\T1/iwona/m/n/10 Since $[] [] \OT1/iwonam/m/n/10 = 1$\T1/iwona/m/n/10 , we can 
+ap-ply the re-sult of [][]Check-point [][]1.3.12[][][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4115 ...t.}{x:exercise:ex-cong-division-explain}
+                                                  %
+************************************************
+Solutions 4.2.1 Solutions to Selected Checkpoints
+************************************************
+************************************************
+Section 4.3 Solving Congruences
+************************************************
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4148.
+
+[55]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4149 ...\).}{x:example:eg-cong-solve-congruence}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4163 ...xample:eg-cong-solve-congruence-express}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4180 ...ruence.}{x:exercise:ex-cong-solve-for-x}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4189 ...er One.}{x:exercise:ex-cong-trial-error}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4199.
+
+[56]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4203 ...x:definition:def-multiplicative-inverse}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4217 ...exercise:ex-cong-multiplicative-inverse}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4224 ...x:exercise:ex-cong-prove-inverse-unique}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4229 ...s.}{x:exercise:ex-cong-rel-prime-unique}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4242 ....}{x:exercise:ex-cong-solve-congruences}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4250.
+
+[57]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4251 ...}{x:exercise:ex-cong-how-many-solutions}
+                                                  %
+************************************************
+Solutions 4.3.1 Solutions to Selected Checkpoints
+************************************************
+************************************************
+Section 4.4 Euler's Theorem
+************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4287 ...nction.}{x:definition:def-euler-totient}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4295 ...\(\phi(8)\).}{x:example:eg-cong-totient}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4300 ...mall \(n\).}{x:exercise:ex-cong-totient}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4302 ...}}{x:table:table-euler-totient-values}{}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4331.
+
+[58]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4333 ...{x:proposition:prop-euler-totient-prime}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4336 ...se:ex-cong-euler-totient-prime-converse}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4341 ...rcise:ex-cong-euler-totient-prime-power}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4344 ...ise:ex-cong-euler-totient-prime-product}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4350 ...Euler's Theorem.}{}{x:theorem:thm-euler}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4357 ...tle Theorem (FLT).}{}{x:theorem:thm-flt}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4366.
+
+[59]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4368 ...euler}}.}{x:example:eg-cong-euler-apply}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4375 ...der.}{x:example:eg-cong-euler-remainder}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4388 ...er.}{x:exercise:ex-cong-euler-remainder}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.14}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.4398 ...}{x:example:eg-cong-euler-proof-example}
+                                                  %
+Overfull \hbox (7.98428pt too wide) in paragraph at lines 4398--4400
+\T1/iwona/m/n/10 Let $\OML/iwona/m/it/10 a \OT1/iwonam/m/n/10 = 4$ \T1/iwona/m/
+n/10 and $\OML/iwona/m/it/10 m \OT1/iwonam/m/n/10 = 9$\T1/iwona/m/n/10 . Then $
+\OML/iwona/m/it/10 \OT1/iwonam/m/n/10 (9) = 6$\T1/iwona/m/n/10 , since the in-
+te-gers $\OML/iwona/m/it/10 S \OT1/iwonam/m/n/10 = \OMS/iwona/m/n/10 f\OT1/iwon
+am/m/n/10 1\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 2\OML/iwona/m/it/10 ; \OT1/i
+wonam/m/n/10 4\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 5\OML/iwona/m/it/10 ; \OT
+1/iwonam/m/n/10 7\OML/iwona/m/it/10 ; \OT1/iwonam/m/n/10 8\OMS/iwona/m/n/10 g$
+ []
+
+
+Overfull \hbox (21.09636pt too wide) in paragraph at lines 4406--4414
+ [][] 
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4429.
+
+[60]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4430 ...rcise:ex-cong-euler-proof-example-again}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4475 ....}{x:exploration:expl-primality-testing}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4489.
+
+[61]
+************************************************
+Section 4.5 The Chinese Remainder Theorem
+************************************************
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proje
+ct-distinct.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4505 ...Zi's Problem.}{x:exploration:expl-sunzi}
+                                                  %
+
+! Package inputenc Error: Unicode character 孙 (U+5B59)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 Sun Zi (\text{\textit{孙子}}
+                                     ) was a Chinese mathematician who in hi...
+
+? 
+
+! Package inputenc Error: Unicode character 子 (U+5B50)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 Sun Zi (\text{\textit{孙子}}
+                                     ) was a Chinese mathematician who in hi...
+
+? 
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4506.
+
+
+! Package inputenc Error: Unicode character 《 (U+300A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 ...jing}}\text{\textit{《孙子算经》}}
+                                                   (3rd to 5th century AD) i...
+
+? 
+
+! Package inputenc Error: Unicode character 孙 (U+5B59)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 ...jing}}\text{\textit{《孙子算经》}}
+                                                   (3rd to 5th century AD) i...
+
+? 
+
+! Package inputenc Error: Unicode character 子 (U+5B50)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 ...jing}}\text{\textit{《孙子算经》}}
+                                                   (3rd to 5th century AD) i...
+
+? 
+
+! Package inputenc Error: Unicode character 算 (U+7B97)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 ...jing}}\text{\textit{《孙子算经》}}
+                                                   (3rd to 5th century AD) i...
+
+? 
+
+! Package inputenc Error: Unicode character 经 (U+7ECF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 ...jing}}\text{\textit{《孙子算经》}}
+                                                   (3rd to 5th century AD) i...
+
+? 
+
+! Package inputenc Error: Unicode character 》 (U+300B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4506 ...jing}}\text{\textit{《孙子算经》}}
+                                                   (3rd to 5th century AD) i...
+
+? 
+
+! Package inputenc Error: Unicode character 今 (U+4ECA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 有 (U+6709)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 物 (U+7269)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 不 (U+4E0D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 知 (U+77E5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 其 (U+5176)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 。 (U+3002)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 三 (U+4E09)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 、 (U+3001)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 三 (U+4E09)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 之 (U+4E4B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 剩 (U+5269)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 二 (U+4E8C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character ； (U+FF1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 五 (U+4E94)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 、 (U+3001)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 五 (U+4E94)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 之 (U+4E4B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 剩 (U+5269)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 三 (U+4E09)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character ； (U+FF1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 七 (U+4E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 、 (U+3001)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 七 (U+4E03)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 数 (U+6570)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 之 (U+4E4B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 剩 (U+5269)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 二 (U+4E8C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 。 (U+3002)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 问 (U+95EE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 物 (U+7269)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 几 (U+51E0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 何 (U+4F55)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character ？ (U+FF1F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4508 ...��七数之，剩二。问物几何？}}
+                                                  '%
+? 
+
+! Package inputenc Error: Unicode character 孙 (U+5B59)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 子 (U+5B50)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 。 (U+3002)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 《 (U+300A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 孙 (U+5B59)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 子 (U+5B50)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 算 (U+7B97)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 经 (U+7ECF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 》 (U+300B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+! Package inputenc Error: Unicode character 。 (U+3002)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4511 ...\textit{孙子。《孙子算经》。}}
+                                                  
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 4510--4512
+
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4518.
+
+
+Overfull \hbox (2.43759pt too wide) in paragraph at lines 4517--4519
+[] \T1/iwona/m/n/10 [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4517--4519
+
+ []
+
+
+Overfull \hbox (21.42712pt too wide) in paragraph at lines 4547--4549
+[]\T1/iwona/m/n/10 Finally, ver-ify that the an-swer sat-is-fies all three con-
+di-tions.\T1/iwona/b/n/10 Answer\T1/iwona/m/n/10 .[] $\OML/iwona/m/it/10 x \OMS
+/iwona/m/n/10 
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4550.
+
+[62]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4552 ...o Congruences.}{x:exercise:ex-crt-small}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4558 ...two congruences.}{}{x:theorem:thm-crt-2}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4574 ..., again.}{x:exercise:ex-crt-small-again}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4578 ...e.}{x:exercise:ex-crt-2-prove-existence}
+                                                  %
+Overfull \hbox (20.56342pt too wide) in paragraph at lines 4578--4580
+[]\T1/iwona/b/n/10 Checkpoint 4.5.4  The-o-rem 4.5.2[], ex-is-tence. []\T1/iwon
+a/m/n/10 Prove that $\OML/iwona/m/it/10 x \OMS/iwona/m/n/10  \OML/iwona/m/it/1
+0 atm[] \OT1/iwonam/m/n/10 + \OML/iwona/m/it/10 bsm[]  []$
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4580.
+
+[63]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4581 ....}{x:exercise:ex-crt-2-prove-uniqueness}
+                                                  %
+Overfull \hbox (29.36342pt too wide) in paragraph at lines 4581--4583
+[]\T1/iwona/b/n/10 Checkpoint 4.5.5  The-o-rem 4.5.2[], unique-ness. []\T1/iwon
+a/m/n/10 Prove that $\OML/iwona/m/it/10 x \OMS/iwona/m/n/10  \OML/iwona/m/it/1
+0 atm[] \OT1/iwonam/m/n/10 + \OML/iwona/m/it/10 bsm[]  []$
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4585 ... of congruences.}{}{x:theorem:thm-crt-n}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4606 ... Zi's System.}{x:exercise:ex-crt-sun-zi}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4609 ...xercise}{Practice.}{x:exercise:ex-crt-n}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.4623 ...hbb{Z}_5\).}{x:example:eg-crt-bijection}
+                                                  %
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4661.
+
+[64]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4662 ...ers.}{x:exercise:ex-crt-bijection-power}
+                                                  %
+************************************************
+Exercises 4.6 Exercises
+************************************************
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4713.
+
+[65]
+Overfull \hbox (1.0493pt too wide) in paragraph at lines 4747--4749
+[] [][]\T1/iwona/m/n/10 Solve the fol-low-ing con-gru-ences. Ex-press your an-s
+wer as con-gru-ence classes
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4785.
+
+[66]
+************************************************
+Chapter 5 Graph Theory
+************************************************
+
+Underfull \hbox (badness 10000) in paragraph at lines 4806--4815
+
+ []
+
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4815.
+
+[67]
+Chapter 5.
+************************************************
+Section 5.1 Modeling with Graphs
+************************************************
+************************************************
+Section 5.2 Definitions and Eulerian Graphs
+************************************************
+************************************************
+Section 5.3 Isomorphisms and Subgraphs
+************************************************
+************************************************
+Section 5.4 Connectedness and Trees
+************************************************
+************************************************
+Section 5.5 Bipartite and Hamiltonian Graphs
+************************************************
+[68
+
+]
+************************************************
+Exercises 5.6 Exercises
 ************************************************
 ************************************************
 Appendix A Notation
 ************************************************
-[23
 
-]
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 4914.
+
+[69]
 Appendix A.
+
+LaTeX Warning: Reference `g:notation:id424083' on page 70 undefined on input li
+ne 4924.
+
+
+LaTeX Warning: Reference `g:notation:id450080' on page 70 undefined on input li
+ne 4925.
+
+
+LaTeX Warning: Reference `g:notation:id450066' on page 70 undefined on input li
+ne 4926.
+
+
+LaTeX Warning: Reference `g:notation:id450081' on page 70 undefined on input li
+ne 4927.
+
+
+LaTeX Warning: Reference `g:notation:id450111' on page 70 undefined on input li
+ne 4928.
+
+
+LaTeX Warning: Reference `g:notation:id450094' on page 70 undefined on input li
+ne 4929.
+
+
+LaTeX Warning: Reference `g:notation:id450142' on page 70 undefined on input li
+ne 4930.
+
+
+LaTeX Warning: Reference `g:notation:id450282' on page 70 undefined on input li
+ne 4931.
+
+
+LaTeX Warning: Reference `g:notation:id450343' on page 70 undefined on input li
+ne 4932.
+
+
+LaTeX Warning: Reference `g:notation:id450324' on page 70 undefined on input li
+ne 4933.
+
+
+LaTeX Warning: Reference `g:notation:id450421' on page 70 undefined on input li
+ne 4934.
+
+
+LaTeX Warning: Reference `g:notation:id450816' on page 70 undefined on input li
+ne 4935.
+
+
+LaTeX Warning: Reference `g:notation:id449019' on page 70 undefined on input li
+ne 4936.
+
+
+LaTeX Warning: Reference `g:notation:id441865' on page 70 undefined on input li
+ne 4937.
+
+
+LaTeX Warning: Reference `g:notation:id440227' on page 70 undefined on input li
+ne 4938.
+
+
+LaTeX Warning: Reference `g:notation:id417644' on page 70 undefined on input li
+ne 4939.
+
+
+LaTeX Warning: Reference `g:notation:id438305' on page 70 undefined on input li
+ne 4940.
+
+
+LaTeX Warning: Reference `g:notation:id435957' on page 70 undefined on input li
+ne 4941.
+
+
+LaTeX Warning: Reference `g:notation:id444339' on page 70 undefined on input li
+ne 4942.
+
+
+LaTeX Warning: Reference `g:notation:id444838' on page 70 undefined on input li
+ne 4943.
+
+
+LaTeX Warning: Reference `g:notation:id444993' on page 70 undefined on input li
+ne 4944.
+
+
+LaTeX Warning: Reference `g:notation:id445197' on page 70 undefined on input li
+ne 4945.
+
+
+LaTeX Warning: Reference `g:notation:id221341' on page 70 undefined on input li
+ne 4946.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table A.0 on input line 4947.
+
 ************************************************
 Appendix B List of Results
 ************************************************
-[24
+[70
 
 ]
 Appendix B.
-[25
+[71
 
 ]
+
+LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
+(Font)              using `T1/iwona/m/it' instead on input line 5029.
+
+[72]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table B.0 on input line 5029.
+
 ************************************************
 Appendix C Solutions to Selected Exercises
 ************************************************
 
 LaTeX Font Warning: Font shape `T1/iwona/m/sl' undefined
-(Font)              using `T1/iwona/m/it' instead on input line 2232.
+(Font)              using `T1/iwona/m/it' instead on input line 5037.
 
-[26]
+[73]
 Appendix C.
-[27
+[74
 
 ]
 ************************************************
 References References
 ************************************************
-[28
+[75
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2269.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2269.
- (itdm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2269.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2269.
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5078.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5078.
+(itdm.aux <Reading QR code for "/video-1.html" at level 1-M from aux file.>
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5078.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5078.
 
 Package rerunfilecheck Info: File `itdm.out' has not changed.
-(rerunfilecheck)             Checksum: 8AD2215B8D661BC7C259E53612C2B0A2;1447.
+(rerunfilecheck)             Checksum: 0496D0841D43C9047889A01EA76395C1;2528.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 40418 strings out of 480931
- 960562 string characters out of 2909581
- 1430237 words of memory out of 3000000
- 55287 multiletter control sequences out of 15000+200000
- 613404 words of font info for 87 fonts, out of 3000000 for 9000
+ 43666 strings out of 480931
+ 1010612 string characters out of 2909581
+ 1481158 words of memory out of 3000000
+ 58041 multiletter control sequences out of 15000+200000
+ 638371 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,13n,119p,800b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{x:biblio:bib-kolachana-2019} has been referenced 
+ 70i,15n,119p,1125b,1782s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{x:biblio:bib-kangsheng-1988} has been referenced 
 but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{x:biblio:bib-euler-271} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{x:biblio:bib-euler-54} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{x:biblio:bib-wilson-2013} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{x:biblio:bib-kolachana-2019} has been referenced bu
+t does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{x:biblio:bib-fuchs-102} has been referenced but doe
 s not exist, replaced by a fixed one
 
 {C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/ts1-iwona.enc}
-{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/ex-iwona.enc}{
-C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/rm-iwona.enc}{C
-:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/sy-iwona.enc}{C:
-/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/mi-iwona.enc} <C:
-\Users\tjyus\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/ifsym/dpi540\ifgeo
-10.pk>{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/ec-iwona
-.enc}{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/ec-iwona-
-sc.enc} <C:\Users\tjyus\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
-i600\ectt1000.pk><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki
-/iwona/iwonab.pfb><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowack
-i/iwona/iwonabi.pfb><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowa
-cki/iwona/iwonar.pfb><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/type1/now
-acki/iwona/iwonari.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb>
-Output written on itdm.pdf (38 pages, 9976854 bytes).
+{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/rm-iwona.enc} 
+<C:\Users\tjyus\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1000.pk>{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/ex-iw
+ona.enc}{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona/sy-iwo
+na.enc} <C:\Users\tjyus\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/ifsym/d
+pi540\ifgeo10.pk>{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwo
+na/mi-iwona.enc}{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwon
+a/ec-iwona.enc}{C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/iwona
+/ec-iwona-sc.enc} <C:\Users\tjyus\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ectt1000.pk><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/typ
+e1/nowacki/iwona/iwonab.pfb><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/ty
+pe1/nowacki/iwona/iwonabi.pfb><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts/
+type1/nowacki/iwona/iwonar.pfb><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fonts
+/type1/nowacki/iwona/iwonari.pfb><C:/Users/tjyus/AppData/Roaming/MiKTeX/2.9/fon
+ts/type1/public/marvosym/marvosym.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on itdm.pdf (85 pages, 11290840 bytes).
 PDF statistics:
- 752 PDF objects out of 1000 (max. 8388607)
- 242 named destinations out of 1000 (max. 500000)
- 234 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1899 PDF objects out of 2073 (max. 8388607)
+ 702 named destinations out of 1000 (max. 500000)
+ 367 words of extra memory for PDF output out of 10000 (max. 10000000)
 

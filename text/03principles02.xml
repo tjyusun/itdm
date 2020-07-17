@@ -8,6 +8,7 @@
     <objectives>
         <ul>
             <li>State the Principle of Inclusion-Exclusion and apply it to problems to compute set cardinalities (for combinations of two to four sets).</li>
+            <li>Sketch Venn Diagrams that correspond to a given scenario or problem.</li>
         </ul>
     </objectives>
     <p>
@@ -79,7 +80,7 @@
 	</p>
 
 	<sidebyside width="50%" margins="auto">
-	<image xml:id="img-divisible-3-4" halign="center">
+	<image xml:id="img-divisible-3-4">
 		<description>Venn diagram.</description>
 	    <latex-image>
 			\begin{tikzpicture}
@@ -108,12 +109,10 @@
 	</p>
 
 	<remark xml:id="remark-setminus">
-		<statement>
 			<p>
 				Do not confuse the operations <m>|A| - |B|</m> and <m>A \setminus B</m>. The first is a difference of two numbers, while the second is a set operation that also results in a set. 
 				In fact, it is not the case that <m>|A| - |B| = |A \setminus B|</m> in general. (Can you come up with a counterexample?)
 			</p>
-		</statement>
 	</remark>
 
 	<exercise xml:id="ex-pie-divisible-7-11">
@@ -131,7 +130,7 @@
 	</p>
 
 	<sidebyside width="35%" margins="auto">
-		<image xml:id="img-pie-3-sets" halign="center">
+		<image xml:id="img-pie-3-sets">
 			<description>Venn diagram illustrating the complement of the union of three sets.</description>
 		    <latex-image>
 				\begin{tikzpicture}
@@ -227,9 +226,9 @@
 			<p>
 				Count the number of arrangements of the letters in the word 
 			</p>
-			<p halign="center">
-				EQUATION
-			</p>
+			<sidebyside width="15%" margins="auto">
+				<p>EQUATION</p>
+			</sidebyside>
 			<p>
 			such that
 			<ul>
@@ -279,17 +278,16 @@
 				Given <m>n \in \mathbb{N}</m> and <m>\{p_1,p_2,\ldots,p_k\}</m> its set of prime factors, we will prove the following formula for the number of natural numbers less than <m>n</m> (denoted by <m>\phi(n)</m>) that are also relatively prime with <m>n</m>:
 				<me> \phi(n) = \sum_{S \subseteq \{1,2,\ldots,k\}}(-1)^{|S|}\dfrac{n}{\prod_{i\in S} p_i}</me>.
 				(This is known as <term>Euler's totient function</term>.)
-				<notation>
-					<usage>\phi(n)</usage>
-					<description>Euler's totient function</description>
-				</notation>
+
 			</p>
 		</introduction>
 		<task>
-			<p>
+			<statement>
+				<p>
 				Define <m>A_i</m> to be the set of natural numbers less than <m>n</m> that are divisible by <m>p_i</m>.
 				Compute the value of <m>|A_i|</m>.
-			</p>
+				</p>
+			</statement>
 			<hint>
 				<p><xref ref="eg-pie-divisible-3"/>.</p>
 			</hint>

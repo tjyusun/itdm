@@ -4,15 +4,278 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-congruence">
-    <title>Congruences</title>
+    <title>Congruences and their Properties</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Define congruence modulo <m>n</m> and show it is an equivalence relation.</li>
+            <li>Prove properties about congruence relations.</li>
         </ul>
     </objectives>
 
+	<p>
+		In part (d) of <xref ref="ex-cong-equivalence-check"/> you would have proven that <m>\equiv</m> was an equivalence relation on the integers.
+		This is an important relation that has several applications, so it is given a name.
+	</p>
+
+	<definition xml:id="def-congruence">
+		<title>Congruence</title>
+		<statement>
+			<p>
+				Let <m>n</m> be a natural number. 
+				We say that two integers <m>a</m> and <m>b</m> are <term>congruent modulo <m>n</m></term> if <m>n \mid (a-b)</m>.
+				We denote this by writing
+				<me>a \equiv b \Mod{n}</me>.
+				The number <m>n</m> is called the <term>modulus</term>.
+				<notation>
+					<usage>a \equiv b \Mod{n}</usage>
+					<description>congruence modulo <m>n</m></description>
+				</notation>
+			</p>
+		</statement>
+	</definition>
 
 
+	<example xml:id="eg-cong-example">
+		<title>Simple Example</title>
+		<statement>
+			<p>
+				Since <m>6 \mid (55-13)</m>, 55 and 13 are congruent modulo 6, and we write <m>55 \equiv 13 \Mod{6}</m>.
+			</p>
+			<p>
+				However <m>6 \nmid (30-11)</m> so 30 and 11 are <em>not</em> congruent modulo 6, or <m>30 \not\equiv 11 \Mod{6}</m>.
+			</p>
+		</statement>
+	</example>
+
+
+	<exercise xml:id="ex-cong-remainder">
+		<title>Congruent iff Same Remainder </title>
+		<statement>
+			<p>
+				Show that two integers <m>a</m> and <m>b</m> are congruent modulo <m>n</m> if and only if they have the same remainder when divided by <m>n</m>.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Use <xref ref="thm-division-algorithm"/>.
+			</p>
+		</hint>
+	</exercise>
+
+
+	
+
+	<sidebyside widths="50% 13%" margins="5% 32%" valign="middle">
+		<p>
+			One real-life example is that of computing what day of the week it is, which uses congruence modulo <m>7</m>.
+		</p>
+		<image source="figs/noun_week_247256.svg">
+		<description>week by Rohit Arun Rao from the Noun Project</description>
+		</image>
+	</sidebyside>
+
+	<example xml:id="eg-cong-week">
+		<title>Days of the Week</title>
+		<statement>
+			<p>
+				Modulo 7, the numbers 26 and 47 are congruent because <m>7 \mid (26-47)</m>.
+				This means 26 and 47 are <sq>equivalent</sq> under this particular relation.
+			</p>
+			<p>
+				One way to see this is the fact that if today were Sunday, then 26 days from today it will be Friday, and 47 days from today is also a Friday.
+				Abstracting only the property we care about (remainder when divided by 7) allows us to generate conclusions like this without having to manually count 47 days forward.
+			</p>
+			<p>
+				As another example, if today were Sunday, then we can confidently claim that 2020 days from today, it will be Thursday.
+				This is because <m>2020 \equiv 4 \Mod{7}</m>, and four days after Sunday is Thursday. (We've effectively removed as many 7's as possible to reduce the calculation.)
+			</p>
+		</statement>
+	</example>
+
+	<exercise xml:id="eg-cong-week-2">
+		<title>New Relationship</title>
+		<statement>
+			<p>
+				Today, two of your friends bought each other matching couple shirts to celebrate being in a relationship for 100 days.
+				If today is Wednesday, what day did their relationship begin?
+			</p>
+		</statement>
+	</exercise>
+
+	<definition xml:id="def-congruence-class">
+		<title>Congruence Class</title>
+		<statement>
+			<p>
+				The equivalence classes of congruence modulo <m>n</m> are called <term>congruence classes</term> or <term>remainder classes</term>, and they are the sets
+				<me>\mathbb{Z}_n = \{[0],[1],[2],\ldots,[n-1]\}</me>,
+				corresponding to the possible remainders when dividing by <m>n</m>.
+				<notation>
+					<usage>\mathbb{Z}_n</usage>
+					<description>Set of congruence classes mod <m>n</m></description>
+				</notation>
+			</p>
+		</statement>
+	</definition>
+
+	<example xml:id="eg-cong-mod5">
+		<title>Modulo 5</title>
+		<statement>
+			<p>
+				Modulo 5, the congruence classes are 
+				<md>
+				<mrow>[0] \amp = \{\ldots,-10,-5,0,5,10,\ldots\}</mrow>
+				<mrow>[1] \amp = \{\ldots,-9,-4,1,6,11,\ldots\}</mrow>
+				<mrow>[2] \amp = \{\ldots,-8,-3,2,7,12,\ldots\}</mrow>
+				<mrow>[3] \amp = \{\ldots,-7,-2,3,8,13,\ldots\}</mrow>
+				<mrow>[4] \amp = \{\ldots,-6,-1,4,9,14,\ldots\}</mrow>
+				</md>
+			</p>
+		</statement>
+	</example>
+
+	<p>
+		Observe that if two numbers <m>a</m> and <m>b</m> are congruent modulo <m>n</m>, then their difference <m>a-b</m> is congruent to 0 modulo <m>n</m>.
+		This is because <m>a</m> and <m>b</m> are essentially <em>the same</em> when working modulo <m>n</m> (the remainder is all that matters), so subtracting them will give <sq>0</sq> in that framework.
+	</p>
+	<p>
+		We can perform addition and multiplication modulo $n$ as well.
+	</p>
     
+	<proposition xml:id="prop-cong-modular-arithmetic">
+		<title>Modular Arithmetic</title>
+		<statement>
+			<p>
+				Let <m>n</m> be a natural number, and <m>a, b, r, s</m> integers such that <m>a \equiv r \Mod{n}</m> and <m>b \equiv s \Mod{n}</m>. Then:
+				<ol label="(a)">
+					<li><m>a + b \equiv r + s \Mod{n}</m>.</li>
+					<li><m>ab \equiv rs \Mod{n}</m>.</li>
+					<li><m>a^k \equiv r^k \Mod{n}</m> for any <m>k \in \mathbb{N}</m>.</li>
+				</ol>
+			</p>
+		</statement>
+	</proposition>
+
+	<exercise xml:id="ex-cong-prove-modular-arithmetic">
+		<title>prove <xref ref="prop-cong-modular-arithmetic"/></title>
+		<statement>
+			<p>
+				Prove <xref ref="prop-cong-modular-arithmetic"/>.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Importantly, <xref ref="prop-cong-modular-arithmetic"/> implies that in any congruence, we can replace any number with another number it is congruent to, and obtain an equivalent statement.
+	</p>
+
+
+	<example xml:id="eg-cong-modular-arithmetic">
+		<title>Substituting Congruent Numbers</title>
+		<statement>
+			<p>
+				Suppose we wanted to compute the remainder when 4133 is divided by 4.
+				We first write <m>4133 = 4000 + 100 + 30 + 3</m>, so that
+				<me> 4000 + 100 + 30 + 3 \equiv 0 + 0 + 2 + 3 \Mod{4} \equiv 1 \Mod{4}</me>.
+				Hence the remainder when 4133 is divided by 4 is 1.
+			</p>
+		</statement>
+	</example>
+
+	<definition xml:id="def-cong-modulo">
+		<title>The Modulo Operation</title>
+		<statement>
+			<p>
+				Given two integers <m>a</m> and <m>m</m>, with <m>m \ne 0</m>, the <term>modulo operation</term> denoted by <me>a \mmod{m}</me>, read as <em><m>a</m> modulo <m>m</m></em>, is the remainder obtained from <xref ref="thm-division-algorithm"/> when <m>a</m> is divided by <m>m</m>.
+				<notation>
+					<usage>a \ \mathrm{\bf mod} \ m</usage>
+					<description>modulo operation</description>
+				</notation>
+			</p>
+		</statement>
+	</definition>
+
+	<exercise xml:id="ex-cong-compute-remainder">
+		<title>Compute Remainders</title>
+		<statement>
+			<p>
+				Compute the following:
+				<ol label="(a)">
+					<li><m>2139138 \mmod 9</m></li>
+					<li><m>2^{1000} \mmod 7</m></li>
+					<li><m>10! \mmod 17</m></li>
+				</ol>
+			</p>
+		</statement>
+	</exercise>
+
+
+	<p>
+		While <xref ref="prop-cong-modular-arithmetic"/> allows us to perform addition, subtraction and multiplication, when we try dividing we find that we run into some issues.
+	</p>
+
+	<example xml:id="eg-cong-dividing-doesnt-work">
+		<title>Division is not as Nice</title>
+		<statement>
+			<p>
+				We know that <me>39 \equiv 123 \Mod{12}</me>.
+				If we divide both sides by 3, we would get <me>13 \equiv 41 \Mod{12}</me>, which is <em>false</em>.
+				However <m>13 \equiv 41 \Mod{4}</m> is true.
+			</p>
+		</statement>
+	</example>
+
+	<proposition xml:id="prop-cong-division">
+		<title>Dividing both sides of a Congruence</title>
+		<statement>
+			<p>
+				Let <m>n \in \mathbb{N}</m> and <m>a,b,d \in \mathbb{Z}</m>.
+				If <m>ad \equiv bd \Mod{n}</m>, then <me>a \equiv b \Mod{\dfrac{n}{\gcd(d,n)}}</me>.
+			</p>
+			<p>
+				If <m>d</m> and <m>n</m> are relatively prime, then <m>ad \equiv bd \Mod{n}</m> implies <me>a \equiv b \Mod{n}</me>.
+			</p>
+		</statement>
+		<proof>
+			<p>
+				Suppose that <m>ad \equiv bd \Mod{n}</m>.
+				This means <m>ad = bd + kn</m> for some <m>k \in \mathbb{Z}</m>.
+			</p>
+			<p>
+				Since <m>\gcd(d,n)</m> divides both <m>d</m> and <m>n</m>, we can divide through to get 
+				<me>a\cdot \dfrac{d}{\gcd(d,n)} = b\cdot \dfrac{d}{\gcd(d,n)} + k \cdot\dfrac{n}{\gcd(d,n)}</me>.
+			</p>
+			<p>
+				This is equivalent to <me>\dfrac{n}{\gcd(d,n)} \ \Biggl\vert \ (a-b)\left(\dfrac{d}{\gcd(d,n)}\right)</me>.
+				Since <m>\gcd\left(\dfrac{d}{\gcd(d,n)},\dfrac{n}{\gcd(d,n)}\right) = 1</m>, we can apply the result of <xref ref="ex-review-bezout-euclid"/> to obtain
+				<me>\dfrac{n}{\gcd(d,n)} \ \Biggl\vert \ (a-b)</me>,
+				or that <m>a \equiv b \Mod{\dfrac{n}{\gcd(d,n)}}</m>, as desired.
+			</p>
+			<p>
+				If <m>\gcd(d,n) = 1</m>, the statement reduces to <m>a \equiv b \Mod{n}</m>.
+			</p>
+		</proof>
+	</proposition>
+
+	<exercise xml:id="ex-cong-division-explain">
+		<title>Justify It</title>
+		<statement>
+			<p>
+				Explain why <me>\gcd\left(\dfrac{d}{\gcd(d,n)},\dfrac{n}{\gcd(d,n)}\right) = 1</me> in the proof of <xref ref="prop-cong-division"/>.
+			</p>
+		</statement>
+		<hint>
+			<p>Contradiction.</p>
+		</hint>
+	</exercise>
+
+
+	<p>
+		The second statement of <xref ref="prop-cong-division"/> is also called the <alert>cancellation law</alert>, since it gives a condition under which one can divide both sides of a congruence by a number.
+	</p>
+
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+
+
 </section>

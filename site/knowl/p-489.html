@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:36-04:00    *-->
+<!--*    on 2020-07-16T22:46:04-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Recall that the permutations of a set \(S\) are the bijective functions from \(S\) to itself. We have a special name for those permutations that leave no element fixed:</p>
-<span class="incontext"><a href="sec-derangements.html#p-489">in-context</a></span>
+<p>Given \(n \in \mathbb{N}\) and \(\{p_1,p_2,\ldots,p_k\}\) its set of prime factors, we will prove the following formula for the number of natural numbers less than \(n\) (denoted by \(\phi(n)\)) that are also relatively prime with \(n\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\phi(n) = \sum_{S \subseteq \{1,2,\ldots,k\}}(-1)^{|S|}\dfrac{n}{\prod_{i\in S} p_i}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">(This is known as <dfn class="terminology">Euler's totient function</dfn>.)</p>
+<span class="incontext"><a href="sec-inclusion-exclusion.html#p-489">in-context</a></span>
 </body>
 </html>

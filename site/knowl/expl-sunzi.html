@@ -1,0 +1,57 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-16T22:46:09-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="exploration project-like"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sun Zi's Problem.</span>
+</h6>
+<div class="introduction">
+<p>Sun Zi (<i class="foreign" lang="zh">孙子</i>) was a Chinese mathematician who in his text <a class="external" href="https://en.wikipedia.org/wiki/Sunzi_Suanjing" target="_blank"><span class="booktitle">Sunzi Suanjing</span></a><i class="foreign" lang="zh">《孙子算经》</i> (3rd to 5th century AD) is said to have written the earliest known reference to systems of linear congruences. In it he writes:</p>
+<blockquote class="blockquote">
+<p>‘<i class="foreign" lang="zh">今有物，不知其数。三、三数之，剩二；五、五数之，剩三；七、七数之，剩二。问物几何？</i>’</p>
+<cite class="attribution">―<i class="foreign" lang="zh">孙子。《孙子算经》。</i></cite>
+</blockquote>
+<blockquote class="blockquote">
+<p>‘A number is repeatedly divided by 3, the remainder is 2; divided by 5, the remainder is 3; and by 7, the remainder is 2. What will the number be?’</p>
+<cite class="attribution">―Sun Zi, <span class="booktitle">Sunzi Suanjing</span>, Vol. 3, Problem 26 (as cited in <a class="xref" data-knowl="./knowl/bib-kangsheng-1988.html" title="Bibliographic Entry 4">[4]</a>)</cite>
+</blockquote>
+<p>We follow Sun Zi's method of solving this system.</p>
+</div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p>The first condition in Sun Zi's problem can be written as</p>
+<div class="displaymath">
+\begin{equation*}
+x \equiv 2 \Mod{3}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Write all three conditions as a system of linear congruences.</p>
+<a class="original" data-knowl="./knowl/answer-10-hidden.html" title="Answer 4.5.1.a.1"><span class="type">Answer</span></a></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>Since the integers 3, 5, and 7 are pairwise relatively prime, then \(35^{-1} \Mod{3}\) exists. Compute this quantity.</p>
+<p>Similarly, compute \(21^{-1} \Mod{5}\) and \(15^{-1} \Mod{7}\text{.}\)</p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>Explain why each of the following congruences hold:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{cases} 2 \cdot 35^{-1} \cdot 35 \equiv 2 \Mod{3} \\ 3 \cdot 21^{-1} \cdot 21 \equiv 3 \Mod{5} \\ 2 \cdot 15^{-1} \cdot 15 \equiv 2 \Mod{7} \end{cases}\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p>Explain why we can conclude that</p>
+<div class="displaymath">
+\begin{equation*}
+x \equiv 2 \cdot 35^{-1} \cdot 35 + 3 \cdot 21^{-1} \cdot 21 + 2 \cdot 15^{-1} \cdot 15 \Mod{105}
+\end{equation*}
+</div>
+<p data-braille="continuation">is a solution to the original system of congruences, and using your answers from (b) simplify this expression to get an answer modulo 105.</p>
+<p>Finally, verify that the answer satisfies all three conditions.</p>
+<a class="original" data-knowl="./knowl/answer-11-hidden.html" title="Answer 4.5.1.d.1"><span class="type">Answer</span></a></article></article><span class="incontext"><a href="sec-chinese-remainder.html#expl-sunzi">in-context</a></span>
+</body>
+</html>

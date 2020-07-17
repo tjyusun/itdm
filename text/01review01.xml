@@ -175,7 +175,7 @@
             </notation>
             <notation>
                 <usage>|A| \leq |B|</usage>
-                <description>cardinality, less than</description>
+                <description>cardinality, less than or equal</description>
             </notation>
             Two sets <m>A</m> and <m>B</m> are said to have the <term>same cardinality</term>, written as <me>|A| = |B|</me>, if there exists a <em>bijection</em> between them.
             </p>

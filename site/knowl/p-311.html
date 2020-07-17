@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:33-04:00    *-->
+<!--*    on 2020-07-16T22:46:00-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The total number of these combinations is equal to the number of ways to arrange \(k\) bullets (\(\bullet\) symbols; one for each object), and \(n-1\) bars (\(\mid\) symbols; to delineate bins):</p>
+<p>If repetition is allowed, the number of combinations of \(k\) objects taken from a set of size \(n\) is</p>
 <div class="displaymath">
 \begin{equation*}
-\underbrace{\bullet \ \bullet \ \cdots \ \bullet}_{k \text{ copies}}\ \underbrace{\mid \ \mid \ \cdots \ \mid}_{n-1 \text{ copies}}\text{,}
+\binom{n+k-1}{k} = \binom{n+k-1}{n-1}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">which is \(\displaystyle\binom{k+n-1}{k}\) or \(\binom{k+n-1}{n-1}\) by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p>
+<p data-braille="continuation">This is also equal to the number of ways one can distribute \(k\) indistinguishable balls into \(n\) bins.</p>
 <span class="incontext"><a href="sec-balls-in-bins.html#p-311">in-context</a></span>
 </body>
 </html>

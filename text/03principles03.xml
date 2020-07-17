@@ -86,11 +86,9 @@
 	</theorem>
 
 	<remark xml:id="remark-Dn-notation">
-		<statement>
 			<p>
 				For problems where it is relevant, you may leave your answers in terms of <m>D_n</m>. (You don't have to compute exact values unless asked.)
 			</p>
-		</statement>
 	</remark>
 
 	<exercise xml:id="ex-derangement-D4">

@@ -81,7 +81,7 @@
     			and
     		</p>
     		<sidebyside width="75%" margins="auto">
-    			<p>Koshihikari -- 9, Milagrosa -- 1</p>
+    			<p>Koshihikari -- 9, Malagkit -- 1</p>
     		</sidebyside>
     		<p>
 				are examples of possible outcomes; we need to count how many there are in total.
@@ -264,7 +264,7 @@
 		<statement>
 			<p>
 				Determine the number of integer solutions to the equation <me>x_1 + x_2 + x_3 + x_4 = 77</me> such that:
-				<ol labeled="(a)">
+				<ol label="(a)">
 					<li><m>x_1, x_2, x_3, x_4</m> are nonnegative.</li>
 					<li><m>x_1 \geq 4</m>, <m>x_2 \geq 0</m>, <m>x_3 \geq 12</m>, and <m>x_4 \geq 9</m>.</li>
 					<li><m>0 \leq x_1 \leq 30</m>, and <m>x_2, x_3, x_4 \geq 0</m>.</li>

@@ -13,12 +13,223 @@
 <exercise>
 <statement>
 	<p>
-		T
+		Let <me>R = \{(1,1),(2,2),(1,2),(2,1),(1,3),(3,3),(3,1),(4,4)\}</me> be a relation on the set <m>\{1,2,3,4\}</m>.
+		Is <m>R</m> an equivalence relation? Which properties (reflexive, symmetric, transitive) hold/fail?
     </p>
 </statement>
 </exercise>
 
+<exercise>
+	<statement>
+		<p>
+			Let <m>S</m> be the set of differentiable functions from <m>\mathbb{R}</m> to <m>\mathbb{R}</m>, and let <m>\star</m> be the relation
+			<me> f \star g \Leftrightarrow f'(x) = g'(x)</me>.
+			Is <m>\star</m> an equivalence relation?
+			If it is, describe its equivalence classes.
+		</p>
+	</statement>
+</exercise>
 
+<exercise>
+	<statement>
+		<p>
+			Let <m>\sim</m> be the following relation on <m>\mathbb{Z}</m>:
+			<me> m \sim n \Leftrightarrow 4 \mid (m^2 - n^2)</me>.
+			Is <m>\sim</m> an equivalence relation?
+			If it is, describe its equivalence classes.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Let <m>A_1, A_2, \ldots, A_k</m> form a partition of <m>S</m>.
+			Show that the relation <me>R = \{(x,y) : x \text{ and } y \text{ are in the same $A_i$}\}</me>
+			is an equivalence relation on <m>S</m>.
+		</p>
+		<p>
+			What are the equivalence classes of $R$?
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			If <m>R</m> is an equivalence relation on the set <m>S</m>, and <m>a, b \in S</m> such that <m>a \in [b]</m>, show that <m>[a] = [b]</m>. 
+			Do not use <xref ref="lemma-equivalence-class"/> or <xref ref="thm-equivalence-partition"/>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Compute the remainder when
+			<ol label="(a)">
+				<li><m>3^{333}</m> is divided by <m>100</m></li>
+				<li><m>5^{444}</m> is divided by <m>11</m></li>
+				<li><m>2^{888}</m> is divided by <m>8</m></li>
+				<li><m>9^{999}</m> is divided by <m>99</m></li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Show that <m>(3 + 3^3 + 3^5 + 3^7 + 3^9 + 3^{11}) \mmod{10} = 0</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<title>April 2018 Final</title>
+	<statement>
+		<p>
+			Without using induction, prove that <m>11^{n+2} + 12^{2n+1}</m> is divisible by <m>133</m> for any <m>n \in \mathbb{N}</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Let <m>N</m> be the product of any <m>k</m> consecutive natural numbers. 
+			Prove <m>k! \mid N</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find the multiplicative inverse of each integer <m>b</m> modulo <m>m</m>:
+			<ol label="(a)">
+				<li><m>b = 4, m = 5</m></li>
+				<li><m>b = 13, m = 76</m></li>
+				<li><m>b = 33, m = 7</m></li>
+				<li><m>b = 10, m = 9</m></li>
+				<li><m>b = 100, m = 999</m></li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Solve the following congruences.
+			Express your answer as congruence classes of the original modulus.
+			<ol label="(a)">
+				<li><m>4x \equiv 8 \Mod{5}</m></li>
+				<li><m>4x \equiv 3 \Mod{5}</m></li>
+				<li><m>2x \equiv 10 \Mod{8}</m></li>
+				<li><m>33x + 4 \equiv 2 \Mod{7}</m></li>
+				<li><m>100x - 23 \equiv 11 \Mod{99}</m></li>
+				<li><m>31 - 11x \equiv 4x + 8 \Mod{44}</m></li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Prove that if <m>\gcd(a,n) \nmid b</m>, then <m>ax \equiv b \Mod{n}</m> has no solutions.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Let <m>a \in \mathbb{N}</m> and suppose <m>p</m> is prime.
+			Prove that <m>a^2 \equiv 1 \Mod{p}</m> if and only if <m>a \equiv 1 \Mod{p}</m> or <m>a \equiv -1 \Mod{p}</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-cong-power-two">
+	<statement>
+		<p>
+			If <m>m = 2^k</m> is a power of 2, explain how you could use repeated squaring to compute <m>a^m \mmod{n}</m> for any <m>n</m>.
+			Then apply your method to compute <m>10^{32} \mmod 41</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			If <m>m</m> is <em>not</em> a power of 2, explain how you could use the results of <xref ref="ex-cong-power-two"/> to compute <m>a^m \mmod{n}</m>for any <m>n</m>.
+			Then apply your method to compute <m>17^{26} \mmod 44</m>.
+		</p>
+	</statement>
+	<hint>
+		<p>
+			Express <m>m</m> as a sum of powers of two.
+		</p>
+	</hint>
+</exercise>
+
+<exercise xml:id="ex-cong-phi-prime-power-prod">
+	<statement>
+		<p>
+			Prove <m>\phi(p^kq^l) = \left(p^k-p^{k-1}\right)\left(q^l - q^{l-1}\right)</m> for primes <m>p</m> and <m>q</m>, and <m>k,l\in\mathbb{N}</m>.
+		</p>
+	</statement>
+	<hint>
+		<p>
+			<xref ref="ex-cong-euler-totient-prime-power"/> and <xref ref="ex-cong-euler-totient-prime-product"/>.
+		</p>
+	</hint>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find the smallest positive integer <m>y</m> such that
+			<ul>
+				<li><m>y</m> divided by 9 leaves a remainder of 7, and</li>
+				<li><m>y</m> divided by 10 leaves a remainder of 9.</li>
+			</ul>
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Solve the system of congruences 
+			<me>\begin{cases} x \equiv 2 \Mod{3} \\
+			x \equiv 2 \Mod{7} \\
+			x \equiv 1 \Mod{13} \end{cases}</me>
+			using the method outlined in <xref ref="thm-crt-n"/>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Compute each quantity:
+			<ol label="(a)">
+				<li><m>2^{2020} \mmod{5}</m></li>
+				<li><m>2^{2020} \mmod{7}</m></li>
+				<li><m>2^{2020} \mmod{11}</m></li>
+				<li><m>2^{2020} \mmod{385}</m></li>
+			</ol>
+		</p>
+	</statement>
+	<hint>
+		<p>
+			<m>385 = 5 \cdot 7 \cdot 11</m>.
+		</p>
+	</hint>
+</exercise>
 
 </exercises>
 

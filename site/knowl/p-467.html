@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:35-04:00    *-->
+<!--*    on 2020-07-16T22:46:03-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Given a universe \(U\) of items and subsets \(A_1,A_2,\ldots,A_n\) of the items, the number \(N\) of items belonging to <em class="emphasis">none of these subsets</em> is given by</p>
+<p>Observe that when we subtract \(|A_1|\) and \(|A_2|\) from \(|U|\text{,}\) we are subtracting the elements in the intersection \(A_1 \cap A_2 = \{12, 24\}\) two times. So to determine the quantity \(|(A_1 \cup A_2)^c|\) we computed:</p>
 <div class="displaymath">
-\begin{align*}
-N \amp = \sum_{S \subseteq \{1,2,\ldots,n\}} (-1)^{|S|} \left| \bigcap_{i\in S} A_i\right|\\
-\amp  = |U| - \sum_{i = 1}^n |A_i| + \sum_{1 \leq i \lt j \leq n} |A_i \cap A_j| - \sum_{1 \leq i \lt j \lt k \leq n} |A_i \cap A_j \cap A_k| + \cdots 
-\end{align*}
+\begin{equation*}
+|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2|\text{.}
+\end{equation*}
 </div>
 <span class="incontext"><a href="sec-inclusion-exclusion.html#p-467">in-context</a></span>
 </body>

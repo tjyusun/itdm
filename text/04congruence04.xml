@@ -3,16 +3,654 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-chinese-remainder">
-    <title>The Chinese Remainder Theorem</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-euler">
+    <title>Euler's Theorem</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Define Euler's totient function <m>\phi(n)</m>, compute its values for small <m>n</m>, and prove general statements about <m>\phi(n)</m>.</li>
+            <li>State and apply Euler's Theorem and Fermat's Little Theorem to solve congruences and prove other results.</li>           
+            <li>Apply Fermat's Little Theorem to primality testing.</li>
         </ul>
     </objectives>
 
+    <p>
+    	First, let's restate the definition of Euler's totient function (introduced in <xref ref="expl-pie-euler-totient"/>).
+    </p>
+
+    <definition xml:id="def-euler-totient">
+    	<title>Euler's Totient Function</title>
+    	<statement>
+    		<p>
+    			<term>Euler's totient function</term> (or <term>Euler's phi-function</term>) is the function <m>\phi: \mathbb{N} \rightarrow \mathbb{N}</m> defined by
+				<me> \phi(m) = \bigl|\{k \in \mathbb{N} : 1 \leq k \leq m, \gcd(k,m) = 1\}\bigr|</me>.
+    		</p>
+			<notation>
+				<usage>\phi(n)</usage>
+				<description>Euler's totient function</description>
+			</notation>
+    	</statement>
+    </definition>
+
+    <example xml:id="eg-cong-totient">
+    	<title><m>\phi(1)</m> and <m>\phi(8)</m></title>
+    	<statement>
+    		<p>
+    			We have <m>\phi(1) = 1</m> since <m>1</m> is the only integer in <m>\{1\}</m> relatively prime with 1.
+    		</p>
+    		<p>
+				Also <m>\phi(8) = 4</m>, since there are four numbers in the set <m>\{1,2,\ldots,8\}</m> relatively prime with 8: they are 1, 3, 5, and 7.
+    		</p>
+    	</statement>
+    </example>
+
+    <exercise xml:id="ex-cong-totient">
+    	<title><m>\phi(n)</m> for small <m>n</m></title>
+    	<statement>
+    		<p>
+    			The table below lists values of <m>\phi(m)</m> for small values of <m>m</m>.
+				Complete the table for <m>m = 11, 12, \ldots, 20</m>.
+    		</p>
+    		<table xml:id="table-euler-totient-values">
+			    <tabular halign="center">
+			        <row>
+			            <cell>
+			                <m>m</m>
+			            </cell>
+			            <cell>
+			                integers <m>1 \leq k \leq m</m>
+			            </cell>
+			            <cell>
+			                <m>\phi(m)</m>
+			            </cell>
+			        </row>
+			        <row bottom="medium">
+			            <cell>
+			            </cell>
+			            <cell>
+			                such that <m>\gcd(k,m)=1</m>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                1
+			            </cell>
+			            <cell>
+			                1
+			            </cell>
+			            <cell>
+			                1
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                2
+			            </cell>
+			            <cell>
+			                1
+			            </cell>
+			            <cell>
+			                1
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                3
+			            </cell>
+			            <cell>
+			                1, 2
+			            </cell>
+			            <cell>
+			                2
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                4
+			            </cell>
+			            <cell>
+			                1, 3
+			            </cell>
+			            <cell>
+			                2
+			            </cell>
+			        </row>
+			        <row bottom="medium">
+			            <cell>
+			                5
+			            </cell>
+			            <cell>
+			                1, 2, 3, 4
+			            </cell>
+			            <cell>
+			                4
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                6
+			            </cell>
+			            <cell>
+			                1, 5
+			            </cell>
+			            <cell>
+			                2
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                7
+			            </cell>
+			            <cell>
+			                1, 2, 3, 4, 5, 6
+			            </cell>
+			            <cell>
+			                6
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                8
+			            </cell>
+			            <cell>
+			                1, 3, 5, 7
+			            </cell>
+			            <cell>
+			                4
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                9
+			            </cell>
+			            <cell>
+			                1, 2, 4, 5, 7, 8
+			            </cell>
+			            <cell>
+			                6
+			            </cell>
+			        </row>
+			        <row bottom="medium">
+			            <cell>
+			                10
+			            </cell>
+			            <cell>
+			                1, 3, 7, 9
+			            </cell>
+			            <cell>
+			                4
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                11
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                12
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                13
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                14
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row bottom="medium">
+			            <cell>
+			                15
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                16
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                17
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                18
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                19
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			        <row bottom="medium">
+			            <cell>
+			                20
+			            </cell>
+			            <cell>
+			            </cell>
+			            <cell>
+			            </cell>
+			        </row>
+			    </tabular>
+			</table>
+    	</statement>
+    </exercise>
+
+    <p>
+    	If <m>p</m> is prime, then by definition all integers from <m>1</m> to <m>p-1</m> are relatively prime with <m>p</m>.
+		This implies the following result:
+	</p>
+
+	<proposition xml:id="prop-euler-totient-prime">
+		<title><m>\phi(p)</m></title>
+		<statement>
+			<p>
+				If <m>p</m> is prime, then <m>\phi(p) = p-1</m>.
+			</p>
+		</statement>
+	</proposition>
+
+	<exercise xml:id="ex-cong-euler-totient-prime-converse">
+		<title>Converse of <xref ref="prop-euler-totient-prime"/></title>
+		<statement>
+			<p>
+				Is the converse of the above statement true?
+				That is, if <m>m \gt 2</m> is an integer such that <m>\phi(m) = m-1</m>, does it necessarily follow that <m>m</m> is prime?
+			</p>
+			<p>
+				Justify your answer.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-cong-euler-totient-prime-power">
+		<title><m>\phi(p^k)</m></title>
+		<statement>
+			<p>
+				If <m>p</m> is prime and <m>k \in \mathbb{N}</m>, prove that <m>\phi(p^k) = p^k - p^{k-1}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-cong-euler-totient-prime-product">
+		<title><m>\phi(pq)</m></title>
+		<statement>
+			<p>
+				If <m>p</m> and <m>q</m> are prime, prove that <m>\phi(pq) = (p-1)(q-1)</m>.
+			</p>
+		</statement>
+		<hint>
+			<p><xref ref="thm-pie"/></p>
+		</hint>
+	</exercise>
+
+	<p>
+		Now we can state Euler's Theorem then prove Fermat's Little Theorem, which is a special case.
+	</p>
+
+	<theorem xml:id="thm-euler">
+		<title>Euler's Theorem</title>
+		<statement>
+			<p>
+				If <m>a, m \in \mathbb{N}</m> with <m>\gcd(a,m) = 1</m>, then <me>a^{\phi(m)} \equiv 1 \Mod{m}</me>.
+			</p>
+		</statement>
+	</theorem>
+
+	<theorem xml:id="thm-flt">
+		<title>Fermat's Little Theorem (FLT)</title>
+		<statement>
+			<p>
+				If <m>a \in \mathbb{N}</m> and <m>p</m> is prime such that <m>p \nmid a</m>, then <me>a^{p-1} \equiv 1 \Mod{p}</me>.
+			</p>
+		</statement>
+		<proof>
+			<p>
+				If <m>p</m> is prime with <m>p \nmid a</m>, we have <m>\gcd(a,p) = 1</m>.
+				So we can use <xref ref="thm-euler"/> on <m>a</m> and <m>m = p</m>.
+				Since <m>\phi(p) = p-1</m> by <xref ref="prop-euler-totient-prime"/>, the result follows.
+			</p>
+		</proof>
+	</theorem>
+
+	<p>
+		Although <xref ref="thm-flt"/> is a special case of <xref ref="thm-euler"/>, it was <xref ref="thm-flt"/> that was actually proven first<mdash/>in 1736, also by Euler <xref ref="bib-euler-54"/>. Only in 1763 did Euler publish the generalization that is Euler's Theorem <xref ref="bib-euler-271"/>.
+	</p>
+
+	<example xml:id="eg-cong-euler-apply">
+		<title>Example of <xref ref="thm-euler"/></title>
+		<statement>
+			<p>
+				Take <m>m = 8</m> and <m>a = 7</m> so that <m>\gcd(a,m) = 1</m>. By <xref ref="thm-euler"/> we have
+				<me> 7^{\phi(8)} \equiv 1 \Mod{8} \Rightarrow 7^4 \equiv 1 \Mod{8}</me>.
+			</p>
+		</statement>
+	</example>
+
+	<example xml:id="eg-cong-euler-remainder">
+		<title>Compute the Remainder</title>
+		<statement>
+			<p>
+				Compute <m>3^{2020} \mmod 113</m>.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				Since <m>\gcd(3,113) = 1</m>, we can apply <xref ref="thm-euler"/>. In fact, 113 is prime, so <xref ref="thm-flt"/> applies here, so we know that
+				<me> 3^{112} \equiv 1 \Mod{13}</me>.
+				Using the <xref ref="thm-division-algorithm"/> on 2020 we get <m>2019 = 18\cdot 112 + 4</m>.
+				Hence 
+				<me>3^{2020} \equiv (3^{112})^{18} \cdot 3^4 \Mod{113} \equiv 81 \Mod{113}</me>.
+				So <m>3^{2020} \mmod 113 = 81</m>.
+			</p>
+		</solution>
+	</example>
+
+    <exercise xml:id="ex-cong-euler-remainder">
+    	<title>Compute the Remainder</title>
+    	<statement>
+    		<p>
+    			Compute <m>6^{6777} \mmod 667</m>.
+    		</p>
+    	</statement>
+    	<hint>
+    		<p><m>667 = 23 \times 29.</m></p>
+    	</hint>
+    </exercise>
+ 
+    <p>
+    	The idea behind the proof of <xref ref="thm-euler"/> is that for <m>a,m \in \mathbb{N}</m> relatively prime, multiplying each element of the set
+    	<me>S = \{y \in \{1,2,\ldots,m\} : \gcd(y,m) = 1\}</me>
+    	by <m>a</m> induces a permutation of the set modulo <m>m</m>.
+    	We give first an example with numbers.
+    </p>
 
 
-    
+	<example xml:id="eg-cong-euler-proof-example">
+		<title>Why <xref ref="thm-euler"/> holds, for <m>a = 4</m> and <m>m = 9</m></title>
+		<statement>
+			<p>
+				Let <m>a = 4</m> and <m>m = 9</m>.
+				Then <m>\phi(9) = 6</m>, since the integers <m>S = \{1,2,4,5,7,8\}</m> are relatively prime with <m>9</m>.
+			</p>
+			<p>
+				Multiplying each number in <m>S</m> by 4 and reducing modulo 9, we have
+			</p>
+			<sidebyside width="75%" margins="auto">
+		    <tabular halign="center">
+		        <row>
+		            <cell halign="right">
+		                <m>S = </m>
+		            </cell>
+		            <cell>
+		                <m>\{</m>1
+		            </cell>
+		            <cell>
+		                2
+		            </cell>
+		            <cell>
+		                4
+		            </cell>
+		            <cell>
+		                5
+		            </cell>
+		            <cell>
+		                7
+		            </cell>
+		            <cell>
+		                8<m>\}</m>
+		            </cell>
+		            <cell halign="left">
+		            </cell>
+		        </row>
+		        <row>
+		            <cell halign="right">
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell halign="left">
+		                (multiply by <m>a = 4</m>)
+		            </cell>
+		        </row>
+		        <row>
+		            <cell halign="right">
+		            </cell>
+		            <cell>
+		                4
+		            </cell>
+		            <cell>
+		                8
+		            </cell>
+		            <cell>
+		                16
+		            </cell>
+		            <cell>
+		                20
+		            </cell>
+		            <cell>
+		                28
+		            </cell>
+		            <cell>
+		                32
+		            </cell>
+		            <cell halign="left">
+		            </cell>
+		        </row>
+		        <row>
+		            <cell halign="right">
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell>
+		                <m>\downarrow</m>
+		            </cell>
+		            <cell halign="left">
+		                 (reduce modulo 9)
+		            </cell>
+		        </row>
+		        <row>
+		            <cell halign="right">
+		            </cell>
+		            <cell>
+		                <m>\{</m>4
+		            </cell>
+		            <cell>
+		                8
+		            </cell>
+		            <cell>
+		                7
+		            </cell>
+		            <cell>
+		                2
+		            </cell>
+		            <cell>
+		                1
+		            </cell>
+		            <cell>
+		                5<m>\}</m>
+		            </cell>
+		            <cell halign="left">
+		                <m>\rightarrow</m> same as <m>S</m>!
+		            </cell>
+		        </row>
+		    </tabular>
+			</sidebyside>
+			<p>
+				What this means is that <m>S</m> and <m>\{4y : y \in S\}</m> contain the same numbers modulo 9; so when we take the product of all elements in these sets, the results must be congruent modulo 9 as well:
+				<me>(4\cdot 1)(4\cdot 2)(4\cdot 4)(4 \cdot 5)(4\cdot 7)(4\cdot 8) \equiv (1)(2)(4)(5)(7)(8)\Mod{9}</me>.
+			</p>
+			<p>
+				Since each element of <m>S</m> is relatively prime with 9, we can apply <xref ref="prop-cong-division"/> to cancel each term, and we are left with
+				<me>(4)(4)(4)(4)(4)(4) \equiv 1 \Mod{9} \Rightarrow 4^{\phi(9)} \equiv 1 \Mod{9}</me>
+				since <m>\phi(9) = 6 = |S|</m>.
+			</p>
+		</statement>
+	</example>
+
+	<exercise xml:id="ex-cong-euler-proof-example-again">
+		<title>Repeat the Argument</title>
+		<statement>
+			<p>
+				Replicate the idea in <xref ref="eg-cong-euler-proof-example"/> to show that <m>7^{\phi(15)} \equiv 1 \Mod{15}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+
+	<P>
+		Finally, we present the proof of <xref ref="thm-euler"/>.
+	</P>
+
+    <p><alert>Proof of Euler's Theorem</alert></p>
+
+	<p>
+		Let <m>a,m \in \mathbb{N}</m> such that <m>\gcd(a,m) = 1</m>.
+	</p>
+	<p>
+		First define the set
+		<me>S = \{y : 1 \leq y \leq m, \gcd(y,m) = 1\}</me>
+		to be the set of natural numbers smaller than <m>m</m> and relatively prime with <m>m</m>.
+		We know that there are exactly <m>\phi(m)</m> elements in the set <m>S</m>, so we can label them as <m>S = \{b_1,b_2,\ldots,b_{\phi(m)}\}</m>, where <m>\gcd(b_i,m) = 1</m> for <m>i = 1,2,\ldots,\phi(m)</m>.
+	</p>
+	<p>
+		Since we have <m>\gcd(b_i,m) = 1</m> and <m>\gcd(a,m) = 1</m>, we must also have <me>\gcd(ab_i, m) = 1 \text{ for any } i = 1,2,\ldots,\phi(m)</me>.
+		We invoke <xref ref="thm-division-algorithm"/> now to write <m>ab_i</m> as 
+		<me> ab_i = qm + r \text{ for some } 0 \leq r \lt m,</me>
+		which implies that <m>ab_i \equiv r \Mod{m}</m>.
+	</p>
+	<p>
+		Combining with the fact that <m>\gcd(ab_i,m) = 1</m>, this implies that <m>\gcd(r,m) = 1</m>, so <m>r</m> is a natural number smaller than <m>m</m> and relatively prime with <m>m</m>.
+	</p>
+	<p>
+		In other words, <m>r</m> is in the set <m>S</m>, and we can write <m>r = b_j</m> for some <m>1 \leq j \leq \phi(m)</m>. This means for each <m>1 \leq i \leq \phi(m)</m>, we have <m>ab_i \equiv b_j \Mod{m}</m> for some <m>1 \leq j \leq \phi(m)</m>.
+	</p>
+	<p>
+		Furthermore, none of the <m>b_j</m>'s are repeated, because no two <m>ab_i</m> terms are equivalent modulo <m>m</m>.
+		(Otherwise, <m>ab_{i_1} \equiv ab_{i_2} \Mod{m} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{m}</m> by <xref ref="prop-cong-division"/>, which is a contradiction as the <m>b_i</m>'s are all distinct and smaller than <m>m</m>.)
+	</p>
+	<p>
+		Hence, each integer <m>ab_i</m> is congruent modulo <m>m</m> to distinct elements in <m>S</m>:
+		<md>
+			<mrow>ab_1 \amp \equiv b_{j_1} \Mod{m}</mrow>
+			<mrow>ab_2 \amp \equiv b_{j_2} \Mod{m}</mrow>
+			<mrow>\vdots \amp</mrow>
+			<mrow>ab_{\phi(m)} \amp \equiv b_{j_{\phi(m)}} \Mod{m}</mrow>
+		</md>
+		Multiplying all the congruences together gives another congruence, where the right-hand-side is just
+		<me>\displaystyle\prod_{k=1}^{\phi(m)} b_{j_k} = \displaystyle\prod_{i=1}^{\phi(m)} b_i</me>
+		since each element of <m>S</m> appears exactly once.
+		Hence,
+		<me>\prod_{i=1}^{\phi(m)} ab_i \equiv \prod_{i=1}^{\phi(m)} b_i \Mod{m} \Rightarrow a^{\phi(m)} \equiv 1 \Mod{m}</me>
+		by an application of <xref ref="prop-cong-division"/>. 
+	</p>
+
+	<exploration xml:id="expl-primality-testing">
+		<title>Primality Testing</title>
+		<introduction>
+			<p>
+				<xref ref="thm-flt"/> asserts that <alert>if</alert> <m>p</m> is prime and <m>\gcd(a,p)=1</m>, <alert>then</alert> <m>a^{p-1} \equiv 1 \Mod{p}</m>.
+			</p>
+		</introduction>
+		<task>
+			<statement>
+				<p>
+					Note that the converse of this statement is not true in general: Even if <m>\gcd(a,m) = 1</m> and <m>a^{m-1} \equiv 1 \Mod{m}</m>, we would not be able to conclude that <m>m</m> is prime.
+				</p>
+				<p>
+					Can you give examples of pairs <m>a, m</m> such that <m>\gcd(a,m) = 1</m> and <m>a^{m-1} \equiv 1 \Mod{m}</m> are both true, but <m>m</m> is not prime.
+				</p>
+			</statement>
+		</task>
+		<task>
+			<statement>
+				<p>
+					Complete the contrapositive of <xref ref="thm-flt"/>:
+				</p>
+				<sidebyside width="80%" margins="auto">
+					<p>
+						<alert>If</alert> <m>a,m \in \mathbb{N}</m>, <m>\gcd(a,m) = 1</m>, and <m> a^{m-1} \not\equiv 1 \Mod{m}</m>, <alert>then</alert> <fillin characters="25"/>.
+					</p>
+				</sidebyside>
+			</statement>
+		</task>
+		<task>
+			<statement>
+				<p>
+					Show that 91 is not prime by using part (b) with <m>a = 2</m>.
+				</p>
+			</statement>
+		</task>
+	</exploration>
+
+
 </section>

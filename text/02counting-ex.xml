@@ -172,11 +172,13 @@
 	<p>
 		A <term>full house</term> is a five-card hand with three cards of the same rank, plus two other cards of the same rank.
 		For example, the five-card hand
+	</p>
 		<sidebyside width="40%" margins="auto">
 			<p>
 				7<m>\heartsuit</m> 7<m>\diamondsuit</m> 7<m>\clubsuit</m> J<m>\heartsuit</m> J<m>\spadesuit</m>
 			</p>
 		</sidebyside>
+	<p>
 		is a full house.
 	</p>
 	<p>

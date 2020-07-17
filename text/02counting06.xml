@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-counting-summary">
+    <title>Summary</title>
+    <p>
+        In this chapter we developed techniques applicable to a wide variety of counting problems.
+		One should be able to decide which technique to use by determining if order matters or not; if repetition is allowed or not; if the underlying set is a multi-set or not.
+		<xref ref="table-summary-counting"/> summarizes these considerations.
+	</p>
+	<p>
+		Keep in mind that the <xref ref="prin-sum-rule" text="custom">Sum Rule</xref> and <xref ref="prin-prod-rule" text="custom">Product Rule</xref> underpin all these formulas, and that there is often more than one solution to any given counting problem.
+	</p>
+
+	<table xml:id="table-summary-counting">
+    <title>Summary of Counting Techniques</title>
+    <tabular halign="center">
+        <row bottom="medium">
+            <cell>
+            </cell>
+            <cell>
+                Permutation (order matters)
+            </cell>
+            <cell>
+                Combination (order does not matter)
+            </cell>
+        </row>
+        <row>
+            <cell>
+            	no repetition
+            </cell>
+            <cell>
+                 <xref ref="prop-Pnk"/>
+            </cell>
+            <cell>
+                 <xref ref="prop-comb"/>
+            </cell>
+        </row>
+        <row>
+            <cell>
+            	with repetition
+            </cell>
+            <cell>
+                 <xref ref="prop-perm-repetition"/>
+            </cell>
+            <cell>
+                 <xref ref="thm-comb-replace"/>
+            </cell>
+        </row>
+        <row>
+            <cell>
+            	multiset
+            </cell>
+            <cell>
+                 <xref ref="prop-perm-repeat"/>
+            </cell>
+            <cell>
+            	<ndash/> <ndash/> <ndash/> <ndash/> <ndash/>
+            </cell>
+        </row>
+    </tabular>
+	</table>
+
+
+	
+
+</section>

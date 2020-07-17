@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:32-04:00    *-->
+<!--*    on 2020-07-16T22:45:58-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Observe that the proof of <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> simply counts the number of \(n\)-letter strings of \(x\)'s and \(y\)'s that contain \(k\) number of \(x\)'s. This is the same thing as counting \(n\)-syllable forms in <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a>, and in fact, <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> can also be proven using the same recursive argument in <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a> part (c).</p>
+<p>Hence the number of times \(x^{n-k}y^k\) appears in the final expansion is precisely the number of rearrangements of the word</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{x\ x\cdots x}_\text{$n-k$ times}\underbrace{y\ y\cdots y}_\text{$k$ times},
+\end{equation*}
+</div>
+<p data-braille="continuation">which is exactly equal to \(\frac{n!}{(n-k)!k!} = \binom{n}{k}\) by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p>
 <span class="incontext"><a href="sec-binomial-coefficients.html#p-265">in-context</a></span>
 </body>
 </html>

@@ -7,12 +7,304 @@
     <title>Equivalence Relations</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Define relations on a set; determine whether or not a relation is an equivalence relation; determine the congruence classes of equivalence relations</li>
+            <li>Construct proofs about relations and their properties.</li>            
         </ul>
     </objectives>
 
+	<p>
+		You will have seen equivalence relations in MAT102.
+		Recall that they allow us to talk about the <em>same-ness</em> of objects in terms of some defining characteristic, even if those two objects are not necessarily <em>equal</em>.
+	</p>
+	<p>
+		Relations generalize functions; equivalence relations are relations that satisfy a number of properties.
+	</p>
+
+	<definition xml:id="def-relation">
+		<title>Relation</title>
+		<statement>
+			<p>
+				Given sets <m>S</m> and <m>T</m>, a <term>relation</term> between <m>S</m> and <m>T</m> is a subset of <m>S \times T</m>; that is, <m>R</m> is a relation if <m>R \subseteq S \times T</m>.
+			</p>
+			<p>
+				If <m>S = T</m> then we call <m>R</m> a <term>relation on <m>S</m></term>.
+			</p>
+		</statement>
+	</definition>
 
 
-    
+	<example xml:id="eg-cong-relation">
+		<title>A Simple Relation</title>
+		<statement>
+			<p>
+				Let <m>A = \{0,2,4,6\}</m> and <m>B = \{0,1,2,3,4\}</m>.
+			</p>
+			<p>
+				The set <me>R = \{(0,0),(0,2),(2,2),(6,3),(6,4)\}</me> is a subset of <m>A \times B</m>, so <m>R</m> is a relation between <m>A</m> and <m>B</m>.
+			</p>
+		</statement>
+	</example>
+
+	<exercise xml:id="ex-cong-relation-count">
+		<title>Counting Relations</title>
+		<statement>
+			<p>
+				How many relations are there between the sets <m>A = \{0,2,4,6\}</m> and <m>B = \{0,1,2,3,4\}</m>?
+			</p>
+		</statement>
+		<hint>
+			<p>
+				How many subsets does <m>A \times B</m> have?
+			</p>
+		</hint>
+	</exercise>
+
+
+	<exercise xml:id="ex-cong-relation-count-2">
+		<title>Counting Relations and Functions</title>
+		<statement>
+			<p>
+				Let <m>A</m> and <m>B</m> be finite sets.
+				<ol label="(a)">
+					<li>How many relations are there between <m>A</m> and <m>B</m>?</li>
+					<li>How many <em>functions</em> are there from <m>A</m> to <m>B</m>?</li>
+				</ol>
+				Which of your anwers from (a) or (b) should be larger? Why?
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Equivalence relations are a special type of relation<mdash/>they satisfy a number of additional conditions that allow for a reasonable way to talk about objects being <em>equivalent</em>.
+	</p>
+
+
+	<definition xml:id="def-equivalence-relation">
+		<title>Equivalence Relation</title>
+		<statement>
+			<p>
+				An <term>equivalence relation</term> <m>R</m> on a set <m>S</m> is a relation such that
+				<dl>
+					<li>
+						<title>Reflexive property</title>
+						<p>For all <m>x \in S</m>, <m>(x,x) \in R</m>.</p>
+					</li>
+					<li>
+						<title>Symmetric property</title>
+						<p>For all <m>x, y \in S</m>, <m>(x,y) \in R</m> implies <m>(y,x) \in R</m>.</p>
+					</li>
+					<li>
+						<title>Transitive property</title>
+						<p>For all <m>x, y, z \in S</m>, <m>(x,y) \in R</m> and <m>(y,z) \in R</m> imply <m>(x,z) \in R</m>.</p>
+					</li>
+				</dl>
+			</p>
+		</statement>
+	</definition>
+
+
+	<exercise xml:id="ex-cong-equivalence-check">
+		<title>Equivalence Relation or Not?</title>
+		<statement>
+			<p>
+				For each relation, determine whether or not it satisfies the reflexive, symmetric, and transitive properties. Then conclude whether or not it is an equivalence relation.
+				<ol label="(a)">
+					<li>The order relation <m>\lt</m> on <m>\mathbb{R}</m></li>
+					<li>The relation <m>R = \{(a,a),(b,b),(c,c),(a,b),(b,a),(a,c),(c,a)\}</m> on the set <m>\{a,b,c\}</m></li>
+					<li>The relation <m>D = \{(m,n): m + n \text{ is odd} \}</m> on <m>\mathbb{Z}</m></li>
+					<li>The relation <m>\equiv</m> on <m>\mathbb{Z}</m> given by <m>a \equiv b \ \Leftrightarrow \ n \mid (a-b)</m>, for a fixed <m>n \in \mathbb{N}</m></li>
+					<li>The relation <m>\sim</m> on <m>\mathbb{R}</m> given by <m>x \sim y \Leftrightarrow (x-y)(x^2+y^2-1) = 0</m></li>
+					<li>The relation <m>\approx</m> on <m>\mathbb{R}^2</m> given by <m>(x,y) \approx (w,z) \Leftrightarrow xy = wz</m></li>
+				</ol>
+			</p>
+		</statement>
+	</exercise>
+
+
+	<definition xml:id="def-equivalence-class">
+		<title>Equivalence Class</title>
+		<notation>
+			<usage>[x]</usage>
+			<description>equivalence class of <m>x</m></description>
+		</notation>
+		<statement>
+			<p>
+				Let <m>R</m> be an equivalence relation on a set <m>S</m>, and <m>x</m> an element in <m>S</m>.
+			</p>
+			<p>
+				The <term>equivalence class</term> of <m>x</m>, denoted by <m>[x]</m>, is the set of all elements in <m>S</m> related to <m>x</m> under <m>R</m>; that is,
+				<me>[x] = \{y \in S : (x,y) \in R\}</me>.
+			</p>
+		</statement>
+	</definition>
+
+
+	<exercise xml:id="ex-cong-equivalence-class">
+		<title>List the Equivalence Classes</title>
+		<statement>
+			<p>
+				List all equivalence classes of the equivalence relation
+				<me>R = \{(v,v),(w,w),(x,x),(y,y),(z,z),(v,z),(z,v),(w,x),(x,w),(y,y)\}</me>
+				on the set <m>S = \{v,w,x,y,z\}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		An equivalence relation on a set <m>S</m> induces a <xref ref="def-partition" text="custom">partition</xref> of <m>S</m> into its equivalence classes.
+		This is shown by proving that none of the equivalence classes overlap, and that their union is <m>S</m>.
+		First, we prove the following lemma that states that if two elements are equivalent, then their equivalence classes are equal.
+		Note the extra care in using the equivalence relation properties.
+	</p>
+
+	<lemma xml:id="lemma-equivalence-class">
+		<title>Equivalent Objects are in the Same Class</title>
+		<statement>
+			<p>
+				Let <m>R</m> be an equivalence relation on <m>S</m>, and let <m>a, b \in S</m>.
+				If <m>(a,b) \in R</m>, then <m>[a] = [b]</m>.
+			</p>
+		</statement>
+		<proof>
+		<p>
+			Let <m>R</m> be an equivalence relation on <m>S</m>, and let <m>a, b \in S</m> such that <m>(a,b) \in R</m>.
+			We will prove <m>[a] \subseteq [b]</m>.
+		</p>
+		<p>
+			Let <m>y \in [a]</m>. Then:
+			<md>
+				<mrow>(a,y) \amp \in R \qquad \amp \text{(by definition of $[a]$)}</mrow>
+				<mrow>(y,a) \amp \in R \qquad \amp \text{(since $R$ is symmetric)}</mrow>
+				<mrow>(a,b) \amp \in R \qquad \amp \text{(given)}</mrow>
+				<mrow>(y,b) \amp \in R \qquad \amp \text{(since $R$ is transitive)}</mrow>
+				<mrow>(b,y) \amp \in R \qquad \amp \text{(since $R$ is symmetric)}</mrow>
+				<mrow>y \amp \in [b] \qquad \amp \text{(by definition of $[b]$)}</mrow>
+			</md>
+			Hence <m>[a] \subseteq [b]</m>. The other inclusion is similarly proved, from which <m>[a] = [b]</m> follows.
+		</p>
+		</proof>
+	</lemma>
+
+	<theorem xml:id="thm-equivalence-partition">
+		<title>Equivalence Relations induce Partitions</title>
+		<statement>
+			<p>
+				If <m>R</m> is an equivalence relation on a set <m>S</m>, then
+				<ol label="(a)">
+					<li>any <m>x \in S</m> belongs to some equivalence class; and</li>
+					<li>any two different equivalence classes are disjoint.</li>
+				</ol>
+				In particular, the equivalence classes induced by <m>R</m> form a <xref ref="def-partition" text="custom">partition</xref> of the set <m>S</m>.
+			</p>
+		</statement>
+	</theorem>
+
+	<exercise xml:id="ex-cong-equivalence-partition-proof-a">
+		<title>Prove <xref ref="thm-equivalence-partition"/> (a)</title>
+		<statement>
+			<p>
+				Write a one-line proof of part (a) of <xref ref="thm-equivalence-partition"/>.
+			</p>
+		</statement>
+	</exercise>
+
+
+	<exercise xml:id="ex-cong-equivalence-partition-proof-b">
+		<title>Prove <xref ref="thm-equivalence-partition"/> (b)</title>
+		<statement>
+			<p>
+				Prove part (b) of <xref ref="thm-equivalence-partition"/> by showing that any two equivalence classes that have a common element must be the same equivalence class.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				You may want to use <xref ref="lemma-equivalence-class"/>.
+			</p>
+		</hint>
+	</exercise>
+
+	<exercise xml:id="ex-cong-equivalence-mod3">
+		<title>Describe the Classes I</title>
+		<statement>
+			<p>
+				Describe the equivalence classes of the equivalence relation <m>\sim</m> on <m>\mathbb{Z}</m> defined by
+				<me> m \sim n \Leftrightarrow 3 \mid (m - n)</me>.
+			</p>
+		</statement>
+	</exercise>
+
+
+	<exercise xml:id="ex-cong-equivalence-largest">
+		<title> Describe the Classes II</title>
+		<statement>
+			<p>
+				Let <m>A = \{0,1,2\}</m>, and consider the relation <m>\cong</m> on <m>P(A)</m> defined by
+				<me> X \cong Y \Leftrightarrow \text{ the largest element in } X \text{ equals the largest element in } Y</me>.
+				Prove <m>\cong</m> is an equivalence relation, and describe the equivalence classes.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-cong-euivalence-example">
+		<title>Give Examples</title>
+		<statement>
+			<p>
+				Give examples of equivalence relations on <m>\mathbb{Z}</m>:
+				<ol label="(a)">
+					<li>with exactly one equivalence class;</li>
+					<li>with exactly two equivalence classes;</li>
+					<li>with infinitely many equivalence classes.</li>
+				</ol>
+			</p>
+		</statement>
+	</exercise>
+
+
+	<remark xml:id="remark-cong-equivalence-representatives">
+		<title>Representatives of Equivalence Classes</title>
+			<p>
+				If <m>x</m> and <m>y</m> are in the same equivalence class, then <m>[x] = [y]</m>, and we can use either of them to refer to the same class. In fact, we can use any member of the class to represent it!
+			</p>
+	</remark>
+
+	<example xml:id="eg-cong-equivalence-even">
+		<title>Multiple Possible Representatives</title>
+		<statement>
+			<p>
+				Consider the equivalence relation <me>E = \{(a,b) : a + b \text{ is even}\}</me> on <m>\mathbb{Z}</m>.
+			</p>
+			<p>
+				The equivalence class of <m>0</m> is 
+				<me>[0] = \{a : a + 0 \text{ is even}\} = \{a : a \text{ is even}\}</me>, and hence <m>[0]</m> contains exactly all even integers.
+				This means we can also call <m>[0]</m> as <m>[2] = [-2] = [4] = \cdots</m> (any of these names).
+			</p>
+			<p>
+				Similarly, <me>[1] = \{a : a + 1 \text{ is even}\} = \{ a : a \text{ is odd}\}</me>.
+				So, <m>[1] = [-1] = [3] = [-3] = [5] = \cdots</m>.
+			</p>
+		</statement>
+	</example>
+
+	<p>
+		We can use the properties of equivalence classes and the additional results we've proven to derive interesting consequences about equivalence relations.
+		For instance, if two objects are in the same equivalence class, then they must be equivalent to one another.
+		(This sounds obvious<mdash/>try to prove it below!)
+	</p>
+
+	<exercise xml:id="ex-cong-euivalence-prove-property">
+		<title>Objects in the Same Class are Equivalent</title>
+		<statement>
+			<p>
+				Given an equivalence relation <m>R</m> on a set <m>S</m>, and an equivalence class <m>[x]</m>, show that for all <m>a, b \in S</m>, 
+				<me>a \in [x] \text{ and } b \in [x] \Rightarrow (a,b) \in R</me>.
+			</p>
+		</statement>
+	</exercise>
+
+
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+
+
 </section>

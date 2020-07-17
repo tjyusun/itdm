@@ -110,7 +110,7 @@
     </statement>
 </theorem>
 
-<exercise xml:id="exe-review-bezout">
+<exercise xml:id="ex-review-bezout">
     <statement>
         <p>
             Find a pair of integers <m>x</m> and <m>y</m> such that <me>13x + 11y = 2</me>.
@@ -121,7 +121,7 @@
     </statement>
 </exercise>
 
-<exercise xml:id="exe-review-bezout-no-solution">
+<exercise xml:id="ex-review-bezout-no-solution">
     <statement>
         <p>
             Prove that the equation <me>14x - 35y = 9</me> has no integer solutions.
@@ -129,7 +129,7 @@
     </statement>
 </exercise>
 
-<exercise xml:id="exe-review-bezout-gcd">
+<exercise xml:id="ex-review-bezout-gcd">
     <statement>
         <p>
             Let <m>a, b, d, \in \mathbb{N}</m>.
@@ -147,7 +147,7 @@
     </statement>
 </lemma>
 
-<exercise xml:id="exe-review-euclid-proof">
+<exercise xml:id="ex-review-euclid-proof">
     <statement>
         <p>
             Prove <xref ref="lem-euclid" /> using <xref ref="thm-bezout" />.
@@ -155,7 +155,7 @@
     </statement>
 </exercise>
 
-<exercise xml:id="exe-review-bezout-euclid">
+<exercise xml:id="ex-review-bezout-euclid">
     <statement>
         <p>
             Let <m>m,a,b \in \mathbb{N}</m>.

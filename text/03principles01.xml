@@ -11,9 +11,37 @@
             <li>Identify the pigeons and pigeonholes in a given problem and apply the Pigeonhole Principle to come to a conclusion.</li>
         </ul>
     </objectives>
+   	<p>
+		Let's kick off this chapter with a claim that seems suspect:
+	</p>
+	<p>
+		<alert>Claim.</alert> There are two people in Toronto with the exact same number of hair follicles on their head.
+	</p>
+	<p>
+		In your mind you're probably going <sq><em>Even if this were true<ellipsis/>how would we prove it??</em></sq>
+		And yes, we wouldn't be able to actually <em>count</em> the number of hair follicles on anyone's head.
+		But the beauty of the Pigeonhole Principle is that we don't need to!
+	</p>
+	<p>
+		I'm going to let <url href="https://twitter.com/onlinekyne">Kyne</url> of Canada's Drag Race Season 1 explain why this claim holds true.
+	</p>
+	<aside>
+		<p>
+			<url href="https://www.onlinekyne.com/">Kyne</url> was a contestant on the first season of Canada's Drag Race, and is a <url href="https://uwaterloo.ca/stories/mathematics/university-waterloos-math-student-vying-become-canadas-first">mathematical finance major at the University of Waterloo</url>.
+		</p>
+	</aside>
+
+	<sidebyside width="80%" margins="auto">
+		<video source="https://www.tiktok.com/@onlinekyne/video/6825323353256070406"/>
+	</sidebyside>
+
+	<!--
+		<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlinekyne/video/6825323353256070406" data-video-id="6825323353256070406" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlinekyne" href="https://www.tiktok.com/@onlinekyne">@onlinekyne</a> <p>Math is filled with statements that seem boring and obvious but produce very interesting consequences! <a title="math" target="_blank" href="https://www.tiktok.com/tag/math">##math</a> <a title="education" target="_blank" href="https://www.tiktok.com/tag/education">##education</a> <a title="edutok" target="_blank" href="https://www.tiktok.com/tag/edutok">##edutok</a> <a title="drag" target="_blank" href="https://www.tiktok.com/tag/drag">##drag</a> <a title="dragqueen" target="_blank" href="https://www.tiktok.com/tag/dragqueen">##dragqueen</a></p> <a target="_blank" title="♬ original sound - onlinekyne" href="https://www.tiktok.com/music/original-sound-6825323337519024901">♬ original sound - onlinekyne</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+	-->
+
     <p>
-    	The Pigeonhole Principle is not a <em>counting</em> technique <em>per se</em>, but a way to prove that a set of objects satisfies some existence or extremal property.
-		Before we state the principle formally let's look at two examples.
+    	As you've seen, the Pigeonhole Principle is not a <em>counting</em> technique <em>per se</em>, but a way to prove that a set of objects satisfies some existence or extremal property.
+		Before we state the principle formally let's look at two more examples.
 	</p>
 
 	<example xml:id="eg-php-pizza">
@@ -93,9 +121,9 @@
 	</example>
 
 	<p>
-		For both the previous examples, we argued that <em>there is no other way</em> but for the required property to hold, regardless of how the pizza slices/points are actually distributed among people.
+		For the previous examples, we argued that <em>there is no other way</em> but for the required property to hold, regardless of how the pizza slices/points are actually distributed among people.
 		We call this kind of proof a <term>non-constructive proof</term> or an <term>existence proof</term>, since it shows that the property holds without actually giving an example (or an algorithm to create an example).
-		This is typical of proofs that utilize the Pigeonhole Principle.
+		Like the hair follicle example, this is typical of proofs that utilize the Pigeonhole Principle.
 	</p>
 
 	<theorem xml:id="thm-php">
@@ -158,6 +186,8 @@
 			</p>
 		</hint>
 	</exercise>
+
+
 
 	<p>
 		Often it is not immediately obvious what the pigeons and pigeonholes should be when we attempt to apply <xref ref="thm-php"/> to a problem.

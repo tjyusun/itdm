@@ -1,6 +1,6 @@
 \BOOKMARK [0][-]{chapter*.1}{Welcome Message}{}% 1
 \BOOKMARK [0][-]{chapter*.2}{How to Use This Resource}{}% 2
-\BOOKMARK [0][-]{chapter*.3}{Feedback}{}% 3
+\BOOKMARK [0][-]{chapter*.3}{Feedback and Acknowledgements}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Review of MAT102}{}% 4
 \BOOKMARK [1][-]{section.1.1}{Sets and Functions}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.2}{Logic and Proof Techniques}{chapter.1}% 6
@@ -12,12 +12,28 @@
 \BOOKMARK [1][-]{section.2.3}{Binomial Coefficients}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.4}{The Balls in Bins Formula}{chapter.2}% 13
 \BOOKMARK [1][-]{section.2.5}{Combinatorial Arguments}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.6}{Exercises}{chapter.2}% 15
-\BOOKMARK [0][-]{chapter.3}{Pigeonhole and Inclusion-Exclusion}{}% 16
-\BOOKMARK [1][-]{section.3.1}{The Pigeonhole Principle}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.2}{Principle of Inclusion-Exclusion}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.3}{Exercises}{chapter.3}% 19
-\BOOKMARK [0][-]{appendix.A}{Notation}{}% 20
-\BOOKMARK [0][-]{appendix.B}{List of Results}{}% 21
-\BOOKMARK [0][-]{appendix.C}{Solutions to Selected Exercises}{}% 22
-\BOOKMARK [0][-]{appendix*.76}{References}{}% 23
+\BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.7}{Exercises}{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{Pigeonhole and Inclusion-Exclusion}{}% 17
+\BOOKMARK [1][-]{section.3.1}{The Pigeonhole Principle}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Principle of Inclusion-Exclusion}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Application: Derangements}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.4}{Exercises}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Congruence Modulo n}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Equivalence Relations}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Congruences and their Properties}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{Solving Congruences}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{Euler's Theorem}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.5}{The Chinese Remainder Theorem}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.6}{Exercises}{chapter.4}% 28
+\BOOKMARK [0][-]{chapter.5}{Graph Theory}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Modeling with Graphs}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Definitions and Eulerian Graphs}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.3}{Isomorphisms and Subgraphs}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.4}{Connectedness and Trees}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.5}{Bipartite and Hamiltonian Graphs}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.6}{Exercises}{chapter.5}% 35
+\BOOKMARK [0][-]{appendix.A}{Notation}{}% 36
+\BOOKMARK [0][-]{appendix.B}{List of Results}{}% 37
+\BOOKMARK [0][-]{appendix.C}{Solutions to Selected Exercises}{}% 38
+\BOOKMARK [0][-]{appendix*.233}{References}{}% 39

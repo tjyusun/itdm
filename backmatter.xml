@@ -12,29 +12,47 @@
 
 	<appendix xml:id="app-definitions-theorems">
 		<title>List of Results</title>
-    	<list-of elements="definition theorem proposition lemma" divisions="section" />
+    	<list-of elements="definition theorem proposition lemma corollary" divisions="section" />
     </appendix>
     
-
     <solutions divisional="solution">
     <title>Solutions to Selected Exercises</title>
     </solutions>
 
-<references>
 
 
-<biblio xml:id="bib-fuchs-102">
-	Fuchs, S., 2017. MAT102H5 Introduction to Mathematical Proofs. (Course Notes)
-</biblio>
-<biblio xml:id="bib-kolachana-2019">
-	Kolachana, A., Mahesh, K., Ramasubramanian, K., 2019. <url href="https://doi.org/10.1007/978-981-13-7326-8_18">Use of permutations and combinations in India</url>, in: Kolachana, A., Mahesh, K., Ramasubramanian, K. (Eds.), Studies in Indian Mathematics and Astronomy: Selected Articles of Kripa Shankar Shukla. Springer Singapore, Singapore, pp. 356–376. 
-</biblio>
+    <references>
+        
+        <biblio xml:id="bib-euler-54">
+            Euler, L., 1741. <url href="https://scholarlycommons.pacific.edu/euler-works/54/">Theorematum quorundam ad numeros primos spectantium demonstratio</url>. Euler Archive - All Works by Eneström Number. 54.
+        </biblio>
 
-<biblio xml:id="bib-wilson-2013">
-	Wilson, R., Watkins, J.J., 2013. Combinatorics: Ancient &amp; Modern. OUP Oxford.
-</biblio>
+        <biblio xml:id="bib-euler-271">
+            Euler, L., 1763. <url href="https://scholarlycommons.pacific.edu/euler-works/271/">Theoremata arithmetica nova methodo demonstrata</url>. Euler Archive - All Works by Eneström Number. 271.
+        </biblio>
 
-</references>
+
+        <biblio xml:id="bib-fuchs-102">
+        	Fuchs, S., 2017. MAT102H5 Introduction to Mathematical Proofs. (Course Notes)
+        </biblio>
+
+        <biblio xml:id="bib-kangsheng-1988">
+            Kangsheng, S., 1988. <url href="https://doi.org/10.1007/BF00357063">Historical development of the Chinese remainder theorem</url>. Arch. Hist. Exact Sci. 38, 285–305.
+        </biblio>
+
+        <biblio xml:id="bib-kolachana-2019">
+        	Kolachana, A., Mahesh, K., Ramasubramanian, K., 2019. <url href="https://doi.org/10.1007/978-981-13-7326-8_18">Use of permutations and combinations in India</url>, in: Kolachana, A., Mahesh, K., Ramasubramanian, K. (Eds.), Studies in Indian Mathematics and Astronomy: Selected Articles of Kripa Shankar Shukla. Springer Singapore, Singapore, pp. 356–376. 
+        </biblio>
+
+        <biblio xml:id="bib-wilson-2013">
+        	Wilson, R., Watkins, J.J., 2013. Combinatorics: Ancient &amp; Modern. OUP Oxford.
+        </biblio>
+
+    </references>
+
+
+
+
 
 </backmatter>
 

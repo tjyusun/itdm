@@ -53,13 +53,20 @@
 		Jungkook has 6 friends; over several days he invites some of them over to his home to eat lamb skewers for dinner, so that the company never repeats (<ie/> a different set of friends comes every night).
 		If he has at least one friend over every day, how many days can he follow this rule?
     </p>
+    <p>
+	</p>
 </statement>
 </exercise>
-<p>
-</p>
 
-<sidebyside widths="15% 82%" margins="auto">
-<image xml:id="img-php-square-2cm" halign="center">
+
+<exercise>
+<statement>
+	<p>
+		Place 5 points inside (or on the boundary) of a square with side length 2 cm. 
+		Show that there is a pair of points no more than <m>\sqrt{2}</m> cm apart.
+    </p>
+<sidebyside width="15%" margins="auto">
+<image xml:id="img-php-square-2cm">
 	<description>A two by two grid.</description>
     <latex-image>
 		\begin{tikzpicture}
@@ -69,15 +76,9 @@
 		\end{tikzpicture}
 	</latex-image>
 </image>
-<exercise>
-<statement>
-	<p>
-		Place 5 points inside (or on the boundary) of a square with side length 2 cm. 
-		Show that there is a pair of points no more than <m>\sqrt{2}</m> cm apart.
-    </p>
+</sidebyside>
 </statement>
 </exercise>
-</sidebyside>
 
 <exercise>
 <statement>
@@ -166,7 +167,7 @@
 	<p>
 		Count the number of 5-letter arrangements that can be formed from the letters of the word
 	</p>
-	<sidebyside width="30%" margins="auto" halign="center">
+	<sidebyside width="25%" margins="auto">
 		<p>EUPHORIA</p>
 	</sidebyside>
 	<p>
@@ -193,29 +194,29 @@
 	<p>
 		Count the number of <xref ref="eg-counting-lattice-path" text="custom">lattice paths</xref> from <m>(0,0)</m> to <m>(6,4)</m> that pass through <em>at least one</em> of the points <m>(2,3)</m>, <m>(3,1)</m>, and <m>(5,4)</m>.
     </p>
+<sidebyside width="40%" margins="auto">
+	<image xml:id="img-pie-lattice-path">
+		<description>A six by four grid.</description>
+	    <latex-image>
+			\begin{tikzpicture}
+			\draw[-,color=black,dashed] (0,0) grid (6,4);
+			\fill[thick] (0,0) circle[radius=3pt];
+			\fill[] (2,3) circle[radius=2.5pt];
+			\fill[] (3,1) circle[radius=2.5pt];
+			\fill[] (5,4) circle[radius=2.5pt];
+			\fill[thick] (6,4) circle[radius=3pt];
+			\node[label={\footnotesize$(6,4)$}] at (6.7,3.6){};
+			\node[label={\footnotesize$(0,0)$}] at (-0.7,-0.4){};
+			\end{tikzpicture}
+		</latex-image>
+	</image>
+</sidebyside>
 </statement>
 </exercise>
 
-<p>
-</p>
 
-<sidebyside width="40%" margins="auto">
-<image xml:id="img-pie-lattice-path" halign="center">
-	<description>A six by four grid.</description>
-    <latex-image>
-		\begin{tikzpicture}
-		\draw[-,color=black,dashed] (0,0) grid (6,4);
-		\fill[thick] (0,0) circle[radius=3pt];
-		\fill[] (2,3) circle[radius=2.5pt];
-		\fill[] (3,1) circle[radius=2.5pt];
-		\fill[] (5,4) circle[radius=2.5pt];
-		\fill[thick] (6,4) circle[radius=3pt];
-		\node[label={\footnotesize$(6,4)$}] at (6.7,3.6){};
-		\node[label={\footnotesize$(0,0)$}] at (-0.7,-0.4){};
-		\end{tikzpicture}
-	</latex-image>
-</image>
-</sidebyside>
+
+
 
 
 <exercise>

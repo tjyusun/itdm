@@ -86,7 +86,7 @@
     <xi:include href="text/02counting00.xml" />
     <xi:include href="text/03principles00.xml" />
     <xi:include href="text/04congruence00.xml" />
-
+    <xi:include href="text/05graph00.xml" />
     
     <xi:include href="backmatter.xml" />
     <!--

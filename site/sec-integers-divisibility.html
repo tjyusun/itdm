@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:27-04:00    *-->
+<!--*    on 2020-07-16T22:45:50-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -99,10 +99,10 @@ MathJax.Hub.Config({
 <nav id="toc"><ul>
 <li class="link frontmatter">
 <a href="front.html" data-scroll="front"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
 <li><a href="front-welcome.html" data-scroll="front-welcome">Welcome Message</a></li>
 <li><a href="front-how-to-use.html" data-scroll="front-how-to-use">How to Use This Resource</a></li>
-<li><a href="front-feedback.html" data-scroll="front-feedback">Feedback</a></li>
+<li><a href="front-feedback.html" data-scroll="front-feedback">Feedback and Acknowledgements</a></li>
+<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
 </ul>
 </li>
 <li class="link">
@@ -120,6 +120,7 @@ MathJax.Hub.Config({
 <li><a href="sec-binomial-coefficients.html" data-scroll="sec-binomial-coefficients">Binomial Coefficients</a></li>
 <li><a href="sec-balls-in-bins.html" data-scroll="sec-balls-in-bins">The Balls in Bins Formula</a></li>
 <li><a href="sec-combinatorial-arguments.html" data-scroll="sec-combinatorial-arguments">Combinatorial Arguments</a></li>
+<li><a href="sec-counting-summary.html" data-scroll="sec-counting-summary">Summary</a></li>
 <li><a href="exercises-counting.html" data-scroll="exercises-counting">Exercises</a></li>
 </ul>
 </li>
@@ -134,46 +135,56 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="chap-congruence.html" data-scroll="chap-congruence"><span class="codenumber">4</span> <span class="title">Congruence Modulo \(n\)</span></a><ul>
 <li><a href="sec-equivalence.html" data-scroll="sec-equivalence">Equivalence Relations</a></li>
-<li><a href="sec-congruence.html" data-scroll="sec-congruence">Congruences</a></li>
+<li><a href="sec-congruence.html" data-scroll="sec-congruence">Congruences and their Properties</a></li>
+<li><a href="sec-congruence-solving.html" data-scroll="sec-congruence-solving">Solving Congruences</a></li>
 <li><a href="sec-euler.html" data-scroll="sec-euler">Euler's Theorem</a></li>
 <li><a href="sec-chinese-remainder.html" data-scroll="sec-chinese-remainder">The Chinese Remainder Theorem</a></li>
-<li><a href="sec-RSA.html" data-scroll="sec-RSA">The RSA Cryptosystem</a></li>
 <li><a href="exercises-congruence.html" data-scroll="exercises-congruence">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-graph.html" data-scroll="chap-graph"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec-graph-modeling.html" data-scroll="sec-graph-modeling">Modeling with Graphs</a></li>
+<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Definitions and Eulerian Graphs</a></li>
+<li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Isomorphisms and Subgraphs</a></li>
+<li><a href="sec-graph-trees.html" data-scroll="sec-graph-trees">Connectedness and Trees</a></li>
+<li><a href="sec-graph-bipartite.html" data-scroll="sec-graph-bipartite">Bipartite and Hamiltonian Graphs</a></li>
+<li><a href="exercises-graph.html" data-scroll="exercises-graph">Exercises</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
 <li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">B</span> <span class="title">List of Results</span></a></li>
-<li class="link"><a href="solutions-5.html" data-scroll="solutions-5"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
+<li class="link"><a href="solutions-8.html" data-scroll="solutions-8"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-integers-divisibility"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Integers and Divisibility</span>
 </h2>
-<p id="p-51">For completeness we restate here the definition of divisibility and the Division Algorithm.</p>
+<p id="p-52">For completeness we restate here the definition of divisibility and the Division Algorithm.</p>
 <article class="definition definition-like" id="def-divisibility"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Divisibility and Primes.</span>
 </h6>
-<p id="p-52"> Let \(a \in \mathbb{Z}\) and \(b \in \mathbb{Z} \setminus \{0\}\text{.}\) We say that \(a\) <dfn class="terminology">is divisible by</dfn> \(b\text{,}\) or \(b\) <dfn class="terminology">divides</dfn> \(a\text{,}\) denoted by</p>
+<p id="p-53"> Let \(a \in \mathbb{Z}\) and \(b \in \mathbb{Z} \setminus \{0\}\text{.}\) We say that \(a\) <dfn class="terminology">is divisible by</dfn> \(b\text{,}\) or \(b\) <dfn class="terminology">divides</dfn> \(a\text{,}\) denoted by</p>
 <div class="displaymath">
 \begin{equation*}
 b \mid a\text{,}
 \end{equation*}
 </div>
 <p data-braille="continuation">if there exists \(m \in \mathbb{Z}\) such that \(a = mb\text{.}\)</p>
-<p id="p-53">If \(b\) is not divisible by \(a\text{,}\) then we write \(b \nmid a\text{.}\)</p>
-<p id="p-54">We say that the natural number \(p\) is a <dfn class="terminology">prime number</dfn> if the only natural numbers that divide \(p\) are \(1\) and \(p\text{.}\)</p></article><article class="theorem theorem-like" id="thm-division-algorithm"><h6 class="heading">
+<p id="p-54">If \(b\) is not divisible by \(a\text{,}\) then we write \(b \nmid a\text{.}\)</p>
+<p id="p-55">We say that the natural number \(p\) is a <dfn class="terminology">prime number</dfn> if the only natural numbers that divide \(p\) are \(1\) and \(p\text{.}\)</p></article><article class="theorem theorem-like" id="thm-division-algorithm"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Division Algorithm.</span>
 </h6>
-<p id="p-55">Let \(a,b \in \mathbb{N}\text{.}\) Then there exist unique \(q\) and \(r\) that satisfy all of the following:</p>
+<p id="p-56">Let \(a,b \in \mathbb{N}\text{.}\) Then there exist unique \(q\) and \(r\) that satisfy all of the following:</p>
 <div class="displaymath">
 \begin{equation*}
 a = qb + r, q \geq 0, 0 \leq r \lt b\text{.}
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exe-review-division-algorithm"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-division-algorithm"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-division-algorithm"><article class="exercise exercise-like"><p id="p-56">Find \(q\) and \(r\) that satisfy the Division Algorithm for the following pairs of numbers \(a\) and \(b\text{:}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-division-algorithm"><article class="exercise exercise-like"><p id="p-57">Find \(q\) and \(r\) that satisfy the Division Algorithm for the following pairs of numbers \(a\) and \(b\text{:}\)</p>
 <ol class="lower-alpha">
 <li id="li-36">\(\displaystyle a = 140, b = 22\)</li>
 <li id="li-37">\(\displaystyle a = 22, b = 140\)</li>
@@ -182,14 +193,14 @@ a = qb + r, q \geq 0, 0 \leq r \lt b\text{.}
 <article class="definition definition-like" id="def-gcd"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">GCD.</span>
 </h6>
-<p id="p-57"> Given integers \(a\) and \(b\) not both zero, their <dfn class="terminology">greatest common divisor</dfn>, denoted by</p>
+<p id="p-58"> Given integers \(a\) and \(b\) not both zero, their <dfn class="terminology">greatest common divisor</dfn>, denoted by</p>
 <div class="displaymath">
 \begin{equation*}
 \gcd(a,b)\text{,}
 \end{equation*}
 </div>
 <p data-braille="continuation">is the largest integer that divides both numbers.</p>
-<p id="p-58">We say that \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd(a,b) = 1\text{.}\)</p></article><p id="p-59">There are a number of ways to determine the GCD of two numbers \(a\) and \(b\text{:}\)</p>
+<p id="p-59">We say that \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd(a,b) = 1\text{.}\)</p></article><p id="p-60">There are a number of ways to determine the GCD of two numbers \(a\) and \(b\text{:}\)</p>
 <ul class="disc">
 <li id="li-39">Listing all factors of \(a\) and \(b\text{,}\) then finding the largest one they have in common;</li>
 <li id="li-40">Writing out the prime factorizations of \(a\) and \(b\text{,}\) then collecting all common prime factors;</li>
@@ -197,43 +208,43 @@ a = qb + r, q \geq 0, 0 \leq r \lt b\text{.}
 </ul>
 <article class="exercise exercise-like" id="exe-review-gcd"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-gcd"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-gcd"><article class="exercise exercise-like"><p id="p-60">Apply the three techniques above to compute \(\gcd(220,360)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-gcd"><article class="exercise exercise-like"><p id="p-61">Apply the three techniques above to compute \(\gcd(220,360)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-61">The GCD is 20.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-62">The GCD is 20.</p></div></div>
 </div></article></div>
 <article class="theorem theorem-like" id="thm-bezout"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Bezout's Identity.</span>
 </h6>
-<p id="p-63">Let \(a,b \in \mathbb{Z}\text{,}\) not both zero. Then there exist \(m,n \in \mathbb{Z}\) such that \(am + bn = \gcd(a,b)\text{.}\)</p></article><article class="exercise exercise-like" id="exe-review-bezout"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-bezout"><h6 class="heading">
+<p id="p-64">Let \(a,b \in \mathbb{Z}\text{,}\) not both zero. Then there exist \(m,n \in \mathbb{Z}\) such that \(am + bn = \gcd(a,b)\text{.}\)</p></article><article class="exercise exercise-like" id="ex-review-bezout"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-bezout"><article class="exercise exercise-like"><p id="p-64">Find a pair of integers \(x\) and \(y\) such that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout"><article class="exercise exercise-like"><p id="p-65">Find a pair of integers \(x\) and \(y\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 13x + 11y = 2\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Then explain why the equation \(13x + 11y = 2\) has infinitely many solutions. Can you characterize all such solutions?</p></article></div>
-<article class="exercise exercise-like" id="exe-review-bezout-no-solution"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-bezout-no-solution"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-review-bezout-no-solution"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout-no-solution"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-bezout-no-solution"><article class="exercise exercise-like"><p id="p-65">Prove that the equation</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-no-solution"><article class="exercise exercise-like"><p id="p-66">Prove that the equation</p>
 <div class="displaymath">
 \begin{equation*}
 14x - 35y = 9
 \end{equation*}
 </div>
 <p data-braille="continuation">has no integer solutions.</p></article></div>
-<article class="exercise exercise-like" id="exe-review-bezout-gcd"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-bezout-gcd"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-review-bezout-gcd"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout-gcd"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-bezout-gcd"><article class="exercise exercise-like"><p id="p-66">Let \(a, b, d, \in \mathbb{N}\text{.}\) Prove that \(ax + by = d\) has integer solutions \(x\) and \(y\) if and only if \(\gcd(a,b) \mid d\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-gcd"><article class="exercise exercise-like"><p id="p-67">Let \(a, b, d, \in \mathbb{N}\text{.}\) Prove that \(ax + by = d\) has integer solutions \(x\) and \(y\) if and only if \(\gcd(a,b) \mid d\text{.}\)</p></article></div>
 <article class="lemma theorem-like" id="lem-euclid"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Euclid's Lemma.</span>
 </h6>
-<p id="p-67">If \(p\) is prime, and \(a\) and \(b\) are integers such that \(p \mid ab\text{,}\) then either \(p \mid a\) or \(p \mid b\) (or both).</p></article><article class="exercise exercise-like" id="exe-review-euclid-proof"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-euclid-proof"><h6 class="heading">
+<p id="p-68">If \(p\) is prime, and \(a\) and \(b\) are integers such that \(p \mid ab\text{,}\) then either \(p \mid a\) or \(p \mid b\) (or both).</p></article><article class="exercise exercise-like" id="ex-review-euclid-proof"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-euclid-proof"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-euclid-proof"><article class="exercise exercise-like"><p id="p-68">Prove <a class="xref" data-knowl="./knowl/lem-euclid.html" title="Lemma 1.3.10: Euclid's Lemma">Lemma 1.3.10</a> using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.6: Bezout's Identity">Theorem 1.3.6</a>.</p></article></div>
-<article class="exercise exercise-like" id="exe-review-bezout-euclid"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-bezout-euclid"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-euclid-proof"><article class="exercise exercise-like"><p id="p-69">Prove <a class="xref" data-knowl="./knowl/lem-euclid.html" title="Lemma 1.3.10: Euclid's Lemma">Lemma 1.3.10</a> using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.6: Bezout's Identity">Theorem 1.3.6</a>.</p></article></div>
+<article class="exercise exercise-like" id="ex-review-bezout-euclid"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout-euclid"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-bezout-euclid"><article class="exercise exercise-like"><p id="p-69">Let \(m,a,b \in \mathbb{N}\text{.}\) Using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.6: Bezout's Identity">Theorem 1.3.6</a>, prove that if \(m \mid ab\) and \(\gcd(a,m) = 1\text{,}\) then \(m \mid b\text{.}\)</p></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-euclid"><article class="exercise exercise-like"><p id="p-70">Let \(m,a,b \in \mathbb{N}\text{.}\) Using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.6: Bezout's Identity">Theorem 1.3.6</a>, prove that if \(m \mid ab\) and \(\gcd(a,m) = 1\text{,}\) then \(m \mid b\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-05T23:56:35-04:00    *-->
+<!--*    on 2020-07-16T22:46:03-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider prime factors of 120.</p>
+<p>Note that the formula contributes a \(+1\) for intersections of even numbers of sets (or for \(|S|\) even); and a \(-1\) for intersections of odd numbers of sets (for \(|S|\) odd). Hence the total contribution for the element \(y\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{S \subseteq T} (-1)^{|S|} = \sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Applying <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a>, we see that this is equal to</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k} = \sum_{k=0}^{|T|} (1)^{|T|-k}(-1)^k\binom{|T|}{k} = \left( 1 + (-1) \right)^{|T|} = 0\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which is what we needed to prove.</p>
 <span class="incontext"><a href="sec-inclusion-exclusion.html#p-479">in-context</a></span>
 </body>
 </html>
