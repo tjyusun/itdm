@@ -44,11 +44,13 @@
 				The first condition in Sun Zi's problem can be written as <me>x \equiv 2 \Mod{3}</me>.
 				Write all three conditions as a system of linear congruences.
 			</p>
+			<!--
 			<answer>
 				<p>
 					<me>\begin{cases} x \equiv 2 \Mod{3} \\ x \equiv 3 \Mod{5} \\ x \equiv 2 \Mod{7} \end{cases}</me>
 				</p>
 			</answer>
+			-->
 		</task>
 		<task>
 			<p>
@@ -73,9 +75,11 @@
 			<p>
 				Finally, verify that the answer satisfies all three conditions.
 			</p>
+			<!--
 			<answer>
 				<p><m>x \equiv 233 \equiv 23 \Mod{105}</m>.</p>
 			</answer>
+			-->
 		</task>
 	</exploration>
 

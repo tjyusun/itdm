@@ -23,11 +23,11 @@
     		<p>
     			<term>Euler's totient function</term> (or <term>Euler's phi-function</term>) is the function <m>\phi: \mathbb{N} \rightarrow \mathbb{N}</m> defined by
 				<me> \phi(m) = \bigl|\{k \in \mathbb{N} : 1 \leq k \leq m, \gcd(k,m) = 1\}\bigr|</me>.
-    		</p>
 			<notation>
 				<usage>\phi(n)</usage>
 				<description>Euler's totient function</description>
 			</notation>
+			</p>
     	</statement>
     </definition>
 
@@ -51,6 +51,7 @@
 				Complete the table for <m>m = 11, 12, \ldots, 20</m>.
     		</p>
     		<table xml:id="table-euler-totient-values">
+    			<title>Values of <m>\phi(m)</m></title>
 			    <tabular halign="center">
 			        <row>
 			            <cell>
@@ -567,9 +568,9 @@
 	</exercise>
 
 
-	<P>
+	<p>
 		Finally, we present the proof of <xref ref="thm-euler"/>.
-	</P>
+	</p>
 
     <p><alert>Proof of Euler's Theorem</alert></p>
 
