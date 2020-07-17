@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-16T22:46:08-04:00    *-->
+<!--*    on 2020-07-16T23:16:56-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Combining with the fact that \(\gcd(ab_i,m) = 1\text{,}\) this implies that \(\gcd(r,m) = 1\text{,}\) so \(r\) is a natural number smaller than \(m\) and relatively prime with \(m\text{.}\)</p>
+<p>Since we have \(\gcd(b_i,m) = 1\) and \(\gcd(a,m) = 1\text{,}\) we must also have</p>
+<div class="displaymath">
+\begin{equation*}
+\gcd(ab_i, m) = 1 \text{ for any } i = 1,2,\ldots,\phi(m)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">We invoke <a class="xref" data-knowl="./knowl/thm-division-algorithm.html" title="Theorem 1.3.2: Division Algorithm">Theorem 1.3.2</a> now to write \(ab_i\) as</p>
+<div class="displaymath">
+\begin{equation*}
+ab_i = qm + r \text{ for some } 0 \leq r \lt m,
+\end{equation*}
+</div>
+<p data-braille="continuation">which implies that \(ab_i \equiv r \Mod{m}\text{.}\)</p>
 <span class="incontext"><a href="sec-euler.html#p-666">in-context</a></span>
 </body>
 </html>

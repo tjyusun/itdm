@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-16T22:45:54-04:00    *-->
+<!--*    on 2020-07-16T23:16:41-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -183,7 +183,7 @@ MathJax.Hub.Config({
 <article class="exercise exercise-like" id="ex-cong-totient"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-totient"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">\(\phi(n)\) for small \(n\).</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-totient"><article class="exercise exercise-like"><p id="p-638">The table below lists values of \(\phi(m)\) for small values of \(m\text{.}\) Complete the table for \(m = 11, 12, \ldots, 20\text{.}\)</p>
-<figure class="table table-like" id="table-euler-totient-values"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.4.4<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<figure class="table table-like" id="table-euler-totient-values"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.4.4<span class="period">.</span></span><span class="space"> </span>Values of \(\phi(m)\)</figcaption><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(m\)</td>
 <td class="c m b0 r0 l0 t0 lines">integers \(1 \leq k \leq m\)</td>
@@ -443,16 +443,18 @@ S = \{y \in \{1,2,\ldots,m\} : \gcd(y,m) = 1\}
 <p data-braille="continuation">since \(\phi(9) = 6 = |S|\text{.}\)</p></article></div>
 <article class="exercise exercise-like" id="ex-cong-euler-proof-example-again"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-euler-proof-example-again"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Repeat the Argument.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-proof-example-again"><article class="exercise exercise-like"><p id="p-661">Replicate the idea in <a class="xref" data-knowl="./knowl/eg-cong-euler-proof-example.html" title="Example 4.4.14: Why Theorem 4.4.9 holds, for \(a = 4\) and \(m = 9\)">Example 4.4.14</a> to show that \(7^{\phi(15)} \equiv 1 \Mod{15}\text{.}\)</p></article></div>Finally, we present the proof of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>.<p id="p-662"><em class="alert">Proof of Euler's Theorem</em></p>
-<p id="p-663">Let \(a,m \in \mathbb{N}\) such that \(\gcd(a,m) = 1\text{.}\)</p>
-<p id="p-664">First define the set</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-proof-example-again"><article class="exercise exercise-like"><p id="p-661">Replicate the idea in <a class="xref" data-knowl="./knowl/eg-cong-euler-proof-example.html" title="Example 4.4.14: Why Theorem 4.4.9 holds, for \(a = 4\) and \(m = 9\)">Example 4.4.14</a> to show that \(7^{\phi(15)} \equiv 1 \Mod{15}\text{.}\)</p></article></div>
+<p id="p-662">Finally, we present the proof of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>.</p>
+<p id="p-663"><em class="alert">Proof of Euler's Theorem</em></p>
+<p id="p-664">Let \(a,m \in \mathbb{N}\) such that \(\gcd(a,m) = 1\text{.}\)</p>
+<p id="p-665">First define the set</p>
 <div class="displaymath">
 \begin{equation*}
 S = \{y : 1 \leq y \leq m, \gcd(y,m) = 1\}
 \end{equation*}
 </div>
 <p data-braille="continuation">to be the set of natural numbers smaller than \(m\) and relatively prime with \(m\text{.}\) We know that there are exactly \(\phi(m)\) elements in the set \(S\text{,}\) so we can label them as \(S = \{b_1,b_2,\ldots,b_{\phi(m)}\}\text{,}\) where \(\gcd(b_i,m) = 1\) for \(i = 1,2,\ldots,\phi(m)\text{.}\)</p>
-<p id="p-665">Since we have \(\gcd(b_i,m) = 1\) and \(\gcd(a,m) = 1\text{,}\) we must also have</p>
+<p id="p-666">Since we have \(\gcd(b_i,m) = 1\) and \(\gcd(a,m) = 1\text{,}\) we must also have</p>
 <div class="displaymath">
 \begin{equation*}
 \gcd(ab_i, m) = 1 \text{ for any } i = 1,2,\ldots,\phi(m)\text{.}
@@ -465,10 +467,10 @@ ab_i = qm + r \text{ for some } 0 \leq r \lt m,
 \end{equation*}
 </div>
 <p data-braille="continuation">which implies that \(ab_i \equiv r \Mod{m}\text{.}\)</p>
-<p id="p-666">Combining with the fact that \(\gcd(ab_i,m) = 1\text{,}\) this implies that \(\gcd(r,m) = 1\text{,}\) so \(r\) is a natural number smaller than \(m\) and relatively prime with \(m\text{.}\)</p>
-<p id="p-667">In other words, \(r\) is in the set \(S\text{,}\) and we can write \(r = b_j\) for some \(1 \leq j \leq \phi(m)\text{.}\) This means for each \(1 \leq i \leq \phi(m)\text{,}\) we have \(ab_i \equiv b_j \Mod{m}\) for some \(1 \leq j \leq \phi(m)\text{.}\)</p>
-<p id="p-668">Furthermore, none of the \(b_j\)'s are repeated, because no two \(ab_i\) terms are equivalent modulo \(m\text{.}\) (Otherwise, \(ab_{i_1} \equiv ab_{i_2} \Mod{m} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{m}\) by <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>, which is a contradiction as the \(b_i\)'s are all distinct and smaller than \(m\text{.}\))</p>
-<p id="p-669">Hence, each integer \(ab_i\) is congruent modulo \(m\) to distinct elements in \(S\text{:}\)</p>
+<p id="p-667">Combining with the fact that \(\gcd(ab_i,m) = 1\text{,}\) this implies that \(\gcd(r,m) = 1\text{,}\) so \(r\) is a natural number smaller than \(m\) and relatively prime with \(m\text{.}\)</p>
+<p id="p-668">In other words, \(r\) is in the set \(S\text{,}\) and we can write \(r = b_j\) for some \(1 \leq j \leq \phi(m)\text{.}\) This means for each \(1 \leq i \leq \phi(m)\text{,}\) we have \(ab_i \equiv b_j \Mod{m}\) for some \(1 \leq j \leq \phi(m)\text{.}\)</p>
+<p id="p-669">Furthermore, none of the \(b_j\)'s are repeated, because no two \(ab_i\) terms are equivalent modulo \(m\text{.}\) (Otherwise, \(ab_{i_1} \equiv ab_{i_2} \Mod{m} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{m}\) by <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>, which is a contradiction as the \(b_i\)'s are all distinct and smaller than \(m\text{.}\))</p>
+<p id="p-670">Hence, each integer \(ab_i\) is congruent modulo \(m\) to distinct elements in \(S\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 ab_1 \amp \equiv b_{j_1} \Mod{m}\\
@@ -493,13 +495,13 @@ ab_{\phi(m)} \amp \equiv b_{j_{\phi(m)}} \Mod{m}
 <article class="exploration project-like" id="expl-primality-testing"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Primality Testing.</span>
 </h6>
-<div class="introduction" id="introduction-13"><p id="p-670"><a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> asserts that <em class="alert">if</em> \(p\) is prime and \(\gcd(a,p)=1\text{,}\) <em class="alert">then</em> \(a^{p-1} \equiv 1 \Mod{p}\text{.}\)</p></div>
+<div class="introduction" id="introduction-13"><p id="p-671"><a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> asserts that <em class="alert">if</em> \(p\) is prime and \(\gcd(a,p)=1\text{,}\) <em class="alert">then</em> \(a^{p-1} \equiv 1 \Mod{p}\text{.}\)</p></div>
 <article class="task exercise-like" id="task-15"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-671">Note that the converse of this statement is not true in general: Even if \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\text{,}\) we would not be able to conclude that \(m\) is prime.</p>
-<p id="p-672">Can you give examples of pairs \(a, m\) such that \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\) are both true, but \(m\) is not prime.</p></article><article class="task exercise-like" id="task-16"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-673">Complete the contrapositive of <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a>:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-674"><em class="alert">If</em> \(a,m \in \mathbb{N}\text{,}\) \(\gcd(a,m) = 1\text{,}\) and \(a^{m-1} \not\equiv 1 \Mod{m}\text{,}\) <em class="alert">then</em> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>.</p></div></div></div></article><article class="task exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-675">Show that 91 is not prime by using part (b) with \(a = 2\text{.}\)</p></article></article></section></div></main>
+<p id="p-672">Note that the converse of this statement is not true in general: Even if \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\text{,}\) we would not be able to conclude that \(m\) is prime.</p>
+<p id="p-673">Can you give examples of pairs \(a, m\) such that \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\) are both true, but \(m\) is not prime.</p></article><article class="task exercise-like" id="task-16"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-674">Complete the contrapositive of <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a>:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-675"><em class="alert">If</em> \(a,m \in \mathbb{N}\text{,}\) \(\gcd(a,m) = 1\text{,}\) and \(a^{m-1} \not\equiv 1 \Mod{m}\text{,}\) <em class="alert">then</em> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>.</p></div></div></div></article><article class="task exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-676">Show that 91 is not prime by using part (b) with \(a = 2\text{.}\)</p></article></article></section></div></main>
 </div>
 </body>
 </html>

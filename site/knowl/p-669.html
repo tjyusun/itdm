@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-16T22:46:08-04:00    *-->
+<!--*    on 2020-07-16T23:16:56-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,28 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Hence, each integer \(ab_i\) is congruent modulo \(m\) to distinct elements in \(S\text{:}\)</p>
-<div class="displaymath">
-\begin{align*}
-ab_1 \amp \equiv b_{j_1} \Mod{m}\\
-ab_2 \amp \equiv b_{j_2} \Mod{m}\\
-\vdots \amp\\
-ab_{\phi(m)} \amp \equiv b_{j_{\phi(m)}} \Mod{m}
-\end{align*}
-</div>
-<p data-braille="continuation">Multiplying all the congruences together gives another congruence, where the right-hand-side is just</p>
-<div class="displaymath">
-\begin{equation*}
-\displaystyle\prod_{k=1}^{\phi(m)} b_{j_k} = \displaystyle\prod_{i=1}^{\phi(m)} b_i
-\end{equation*}
-</div>
-<p data-braille="continuation">since each element of \(S\) appears exactly once. Hence,</p>
-<div class="displaymath">
-\begin{equation*}
-\prod_{i=1}^{\phi(m)} ab_i \equiv \prod_{i=1}^{\phi(m)} b_i \Mod{m} \Rightarrow a^{\phi(m)} \equiv 1 \Mod{m}
-\end{equation*}
-</div>
-<p data-braille="continuation">by an application of <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>.</p>
+<p>Furthermore, none of the \(b_j\)'s are repeated, because no two \(ab_i\) terms are equivalent modulo \(m\text{.}\) (Otherwise, \(ab_{i_1} \equiv ab_{i_2} \Mod{m} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{m}\) by <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>, which is a contradiction as the \(b_i\)'s are all distinct and smaller than \(m\text{.}\))</p>
 <span class="incontext"><a href="sec-euler.html#p-669">in-context</a></span>
 </body>
 </html>
