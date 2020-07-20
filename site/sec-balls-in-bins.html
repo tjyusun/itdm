@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-16T23:16:39-04:00    *-->
+<!--*    on 2020-07-19T22:07:39-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -145,7 +145,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="chap-graph.html" data-scroll="chap-graph"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a><ul>
 <li><a href="sec-graph-modeling.html" data-scroll="sec-graph-modeling">Modeling with Graphs</a></li>
-<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Definitions and Eulerian Graphs</a></li>
+<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Basic Definitions</a></li>
+<li><a href="sec-graph-eulerian.html" data-scroll="sec-graph-eulerian">Eulerian Graphs</a></li>
 <li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Isomorphisms and Subgraphs</a></li>
 <li><a href="sec-graph-trees.html" data-scroll="sec-graph-trees">Connectedness and Trees</a></li>
 <li><a href="sec-graph-bipartite.html" data-scroll="sec-graph-bipartite">Bipartite and Hamiltonian Graphs</a></li>
@@ -167,13 +168,13 @@ MathJax.Hub.Config({
 <li id="li-108">Derive the formulas for permutations and combinations with repetition (Balls in Bins Formula).</li>
 <li id="li-109">Given a counting problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
 </ul></article><p id="p-291">Consider the following example similar to <a class="xref" data-knowl="./knowl/eg-counting-mcq.html" title="Example 2.1.12: Multiple Choice Exam">Example 2.1.12</a>.</p>
-<article class="example example-like" id="eg-counting-mcq-again"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-mcq-again"><h6 class="heading">
+<article class="example example-like" id="eg-counting-mcq-again"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Multiple Choice, again.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-mcq-again"><article class="example example-like"><p id="p-292">A standardized multiple-choice test for high school students has 40 questions and 5 choices each (A to E). How many possible ways can the test be answered?</p>
+</h6>
+<p id="p-292">A standardized multiple-choice test for high school students has 40 questions and 5 choices each (A to E). How many possible ways can the test be answered?</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><p id="p-293">For each question, there are 5 options, so using <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, there are a total of \(5^{40}\) possible ways to complete the test.</p></div></div>
-</div></article></div>
-<p id="p-294">The operation in <a class="xref" data-knowl="./knowl/eg-counting-mcq-again.html" title="Example 2.4.1: Multiple Choice, again">Example 2.4.1</a> is called a permutation where <em class="emphasis">repetition</em> or <em class="emphasis">replacement is allowed</em>, since</p>
+</div></article><p id="p-294">The operation in <a class="xref" data-knowl="./knowl/eg-counting-mcq-again.html" title="Example 2.4.1: Multiple Choice, again">Example 2.4.1</a> is called a permutation where <em class="emphasis">repetition</em> or <em class="emphasis">replacement is allowed</em>, since</p>
 <ul class="disc">
 <li id="li-110">The order in which the answers are picked matters (i.e. A-B-A is different from B-A-A); and</li>
 <li id="li-111">Answers can be repeated. Imagine a bag with five balls labeled A to E; for each question we draw a ball from the bag, record the answer, and put it back.</li>
@@ -184,9 +185,10 @@ MathJax.Hub.Config({
 </h6>
 <p id="p-295">If repetition is allowed, the number of permutations of \(k\) objects taken from a set of size \(n\) is \(n^k\text{.}\)</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-296">By <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, since there are \(n\) possibilities for each of the \(k\) choices, the total number of ways to do so is \(n^k\text{.}\)</p></article></div>
 <p id="p-297">There is also a counterpart for combinations in which the order does not matter, which the next example illustrates.</p>
-<article class="example example-like" id="eg-counting-rice"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-rice"><h6 class="heading">
+<article class="example example-like" id="eg-counting-rice"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Rice Advice.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-rice"><article class="example example-like"><p id="p-298">Ten participants are recruited to join a focus group discussion on rice, after which they are asked to indicate their preferred type of rice among the following options:</p>
+</h6>
+<p id="p-298">Ten participants are recruited to join a focus group discussion on rice, after which they are asked to indicate their preferred type of rice among the following options:</p>
 <ul class="disc">
 <li id="li-112"><a class="external" href="https://en.wikipedia.org/wiki/Arborio_rice" target="_blank">Arborio</a></li>
 <li id="li-113"><a class="external" href="https://en.wikipedia.org/wiki/Basmati" target="_blank">Basmati</a></li>
@@ -231,8 +233,7 @@ MathJax.Hub.Config({
 \frac{14!}{10!\ 4!} = \binom{14}{4}
 \end{equation*}
 </div>
-<p data-braille="continuation">by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p></article></div>
-<article class="exercise exercise-like" id="ex-counting-rice-1"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-rice-1"><h6 class="heading">
+<p data-braille="continuation">by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p></article><article class="exercise exercise-like" id="ex-counting-rice-1"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-rice-1"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Rice Advice Exercise.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-rice-1"><article class="exercise exercise-like"><p id="p-308">Following <a class="xref" data-knowl="./knowl/eg-counting-rice.html" title="Example 2.4.3: Rice Advice">Example 2.4.3</a>, express each survey outcome as a pattern of dots \(\bullet\) and bars \(\mid\text{,}\) or vice-versa.</p>
 <ol class="lower-alpha">

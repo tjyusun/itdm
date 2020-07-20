@@ -3,16 +3,781 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-graph-trees">
-    <title>Connectedness and Trees</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-graph-isomorphisms">
+    <title>Isomorphisms and Subgraphs</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Define graph isomorphism and distinguish it from graph equality.</li>
+            <li>Define subgraphs and the complement of a graph. Find subgraphs of a given type in a graph; construct the complement of a graph.</li>
+            <li>Determine whether or not two graphs are isomorphic; if they are, deductively construct an adjacency-preserving bijection between their vertex sets.</li>
+            <li>Prove statements about graph structure in relation to the concepts in this chapter.</li>
         </ul>
     </objectives>
 
+    <p>
+    	Given any graph <m>G = (V,E)</m>, there is usually more than one way of representing <m>G</m> as a drawing.
+		In fact, the definition of a graph (<xref ref="def-graph"/>) as a pair <m>(V,E)</m> of vertex and edge sets makes no reference to how it is visualized as a drawing on a sheet of paper.
+		So when we say <sq>consider the following graph</sq> when referring to a drawing, we technically mean: <sq>consider the graph that is represented by this drawing\dots</sq>
+	</p>
+	<p>
+		In the next example it is clear that <m>G_2</m> and <m>G_3</m> are exactly the same graph.
+		But how about <m>G_1</m>?
+	</p>
 
+	<example xml:id="eg-graph-equal-isomorphic">
+		<title>Are These the Same Graphs?</title>
+		<statement>
+			<p>
+				Let <m>G_1</m>, <m>G_2</m>, and <m>G_3</m> be the following graphs:
+			</p>
+			<sidebyside widths="20% 20% 20%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label={\footnotesize $a$}] (1) at (0,0) {};
+						\node[label={\footnotesize $b$}] (2) at (2,2) {};
+						\node[label=right:{\footnotesize $c$}] (3) at (4,-2) {};
+						\node[label=below:{\footnotesize $d$}] (4) at (6,0) {};
+						\node[label=below:{\footnotesize $e$}] (5) at (3,0) {};
+						\end{scope}
 
+						\node[] at (5,2) {$G_1$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (3) edge[bend right=20] (2);
+						    \path [-] (3) edge (4);
+						    \path [-] (5) edge (4);
+						    \path [-] (5) edge (1);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label=below:{\footnotesize $v_1$}] (1) at (0,0) {};
+						\node[label=right:{\footnotesize $v_2$}] (2) at (1,3.7) {};
+						\node[label=below:{\footnotesize $v_3$}] (3) at (-2,1.5) {};
+						\node[label=below:{\footnotesize $v_4$}] (4) at (2,1.5) {};
+						\node[label=left:{\footnotesize $v_5$}] (5) at (-1,3.7) {};
+						\end{scope}
+
+						\node[] at (3,2.5) {$G_2$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (3) edge (2);
+						    \path [-] (3) edge (4);
+						    \path [-] (5) edge (4);
+						    \path [-] (5) edge (1);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label=below:{\footnotesize $v_3$}] (1) at (0,0) {};
+						\node[label=right:{\footnotesize $v_4$}] (2) at (1,2.3) {};
+						\node[label=below:{\footnotesize $v_5$}] (3) at (-2.48,0.3) {};
+						\node[label=right:{\footnotesize $v_1$}] (4) at (-1,3.7) {};
+						\node[label=left:{\footnotesize $v_2$}] (5) at (-2.8,2) {};
+
+						\end{scope}
+
+						\node[] at (-3.5,3.5) {$G_3$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (3) edge (2);
+						    \path [-] (3) edge (4);
+						    \path [-] (5) edge (4);
+						    \path [-] (5) edge (1);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				Clearly <m>G_2</m> and <m>G_3</m> are <em>equal</em> as graphs<mdash/>their vertex sets <me>V = \{v_1,v_2,v_3,v_4,v_5\}</me> and edge sets <me>E = \{(v_1,v_2),(v_2,v_3),(v_3,v_4),(v_4,v_5),(v_5,v_1)\}</me> are exactly the same, even if they are drawn differently on the plane.
+			</p>
+			<p>
+				As for <m>G_1</m>, it is apparent that it has the same <em>structure</em> as both <m>G_2</m> and <m>G_3</m>: they are all the <xref ref="def-cycle" text="custom">cycle graph</xref> on five vertices, or <m>C_5</m>, even if they don't share the same vertex set (<m>V(G_1) = \{a,b,c,d,e\}</m>).
+				This motivates our next definitions.
+			</p>
+		</statement>
+	</example>
+
+	<definition xml:id="def-graph-equality">
+		<title>Graph Equality</title>
+		<statement>
+			<p>
+				Two graphs <m>G_1 = (V_1,E_1)</m> and <m>G_2 = (V_2,E_2)</m> are said to be <term>equal</term> if and only if both <m>V_1 = V_2</m> and <m>E_1 = E_2</m> hold.
+			</p>
+		</statement>
+	</definition>
+
+	<definition xml:id="def-graph-isomorphism">
+		<title>Graph Isomorphism</title>
+		<statement>
+			<p>
+				Two simple graphs <m>G_1 = (V_1,E_1)</m> and <m>G_2 = (V_2,E_2)</m> are said to be <term>isomorphic</term>, 
+				denoted by <m>G_1 \cong G_2</m>,
+				if there exists a function 
+				<me>f: V_1 \rightarrow V_2</me>
+				such that for all <m>u, v \in V_1</m>,
+				<me> (u,v) \in E(G_1) \Leftrightarrow (f(u),f(v)) \in E(G_2)</me>.
+				That is, <m>f</m> preserves adjacencies between vertices.
+			</p>
+			<p>
+				We call <m>f</m> an <term>isomorphism</term> from <m>G_1</m> to <m>G_2</m>; we also say <m>G_1</m> is <term>isomorphic to</term> <m>G_2</m>.
+			</p>
+			<notation>
+				<usage>G_1 \cong G_2</usage>
+				<description>graph isomorphism</description>
+			</notation>
+		</statement>
+	</definition>
+
+	<p>
+		When two graphs <m>G_1</m> and <m>G_2</m> are isomorphic, this means one can relabel the vertices of <m>G_2</m> to match the vertex names of <m>G_1</m> such that both graphs become equal.
+		(Note that we only define isomorphisms for simple graphs at the moment.)
+	</p>
     
+	<exercise xml:id="ex-graph-isomorphism">
+		<title>Verify and Construct Isomorphisms</title>
+		<statement>
+			<p>
+				Verify that in the graphs of <xref ref="eg-graph-equal-isomorphic"/>, the function <m>f: V(G_1) \rightarrow V(G_2)</m> given by 
+				<me> f(a) = v_1, f(b) = v_5, f(c) = v_4, f(d) = v_3, f(e) = v_2</me>
+				is an isomorphism.
+			</p>
+			<p>
+				Then, construct two other isomorphisms from <m>G_1</m> to <m>G_2</m>. (Yes, there can be multiple!)
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-determine-isomorphism">
+		<title>Which Pairs are Isomorphic?</title>
+		<statement>
+			<p>
+				Given the graphs <m>H_1</m>, <m>H_2</m>, <m>H_3</m>, and <m>H_4</m>, which pairs (if any) are isomorphic?
+			</p>
+			<sidebyside widths="18% 60%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label={\footnotesize $1$}] (1) at (-2,2) {};
+						\node[label={\footnotesize $2$}] (2) at (2,2) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (0,0) {};
+						\node[label=below:{\footnotesize $4$}] (4) at (-2,-2) {};
+						\node[label=below:{\footnotesize $5$}] (5) at (2,-2) {};
+						\end{scope}
+
+						\node[] at (-3,0) {$H_1$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (2) edge (3);
+						    \path [-] (3) edge (1);
+						    \path [-] (3) edge (4);
+						    \path [-] (4) edge (5);
+						    \path [-] (5) edge (3);
+						    %\path [-] (6) edge[bend left=20] (7); 
+						    %\path [-] (D) edge node {$3$} (E);
+						    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<p>
+					<m>H_2 = (V_2,E_2)</m>, where <m>V_2 = \{v_1,v_2,v_3,v_4,v_5\}</m> and <m>E_2 = \{(v_1,v_2),(v_3,v_4),(v_4,v_5),(v_5,v_3)\}</m>.
+				</p>
+			</sidebyside>
+			<sidebyside widths="60% 23%" margins="auto">
+				<p>
+					<m>H_3 = (V_3,E_3)</m>, where <m>V_3 = \{p,q,r,s,t\}</m> and <m>E_3 = \{(p,q),(p,r),(p,s),(p,t),(r,t),(s,q)\}</m>
+				</p>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label=below:{\footnotesize $a$}] (1) at (0,0) {};
+						\node[label=right:{\footnotesize $b$}] (2) at (1,3.7) {};
+						\node[label=below:{\footnotesize $c$}] (3) at (-2,1.5) {};
+						\node[label=below:{\footnotesize $d$}] (4) at (2,1.5) {};
+						\node[label=left:{\footnotesize $e$}] (5) at (-1,3.7) {};
+						\end{scope}
+
+						\node[] at (3,2.5) {$H_4$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (3);
+						    \path [-] (3) edge (2);
+						    \path [-] (2) edge (4);
+						    \path [-] (3) edge (5);
+						    \path [-] (5) edge (4);
+						    \path [-] (4) edge (1);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
+
+	<p>
+		It is typically easier to prove that two graphs are <em>not</em> isomorphic, than to prove that they are, since two isomorphic graphs must agree on many of their structural properties.
+		Most obviously, two isomorphic graphs must have the same number of vertices<mdash/>this is an immediate consequence of the fact that the function <m>f</m> defining the isomorphism is a bijection.
+	</p>
+	<p>
+		We now prove two isomorphic graphs must have the same number of edges as well.
+	</p>
+
+	<proposition xml:id="prop-graph-isomorphic-edges">
+		<title>Isomorphic Graphs have the Same Number of Edges</title>
+		<statement>
+			<p>
+				If <m>G_1 = (V_1,E_1)</m> and <m>G_2 = (V_2,E_2)</m> are isomorphic simple graphs, prove that they must have the same number of edges, or <m>|E_1| = |E_2|</m>.
+			</p>
+		</statement>
+		<proof>
+			<p>
+				Let <m>f: V_1 \rightarrow V_2</m> be an isomorphism from <m>G_1</m> to <m>G_2</m>.
+				To prove <m>|E_1| = |E_2|</m> we construct a bijection between these two sets.
+			</p>
+			<p>
+				We know from <xref ref="def-graph-isomorphism"/> that for any pair of vertices <m>u,v \in V_1</m>, 
+				<me>(u,v) \in E_1 \Leftrightarrow (f(u),f(v)) \in E_2</me>.
+				So define a function <m>g: E_1 \rightarrow E_2</m> such that <m>g\left( (u,v) \right) = \left( f(u),f(v)\right)</m>.
+			</p>
+			<p>
+				Since <m>f</m> is injective, <m>g</m> must also be injective.
+				Also <m>g</m> must be surjective since any edge <m>(x,y) \in E_2</m> has a preimage <m>(f^{-1}(x),f^{-1}(y))</m> in <m>E_1</m>.
+				Thus <m>g</m> is a bijection, and <m>|E_1| = |E_2|</m>.
+			</p>
+		</proof>
+	</proposition>
+
+	<exercise xml:id="ex-graph-isomorphism-degree">
+		<title>Isomorphic Graphs have the Same Degree Sequence</title>
+		<statement>
+			<p>
+				Prove that two isomorphic simple graphs must have the same degree sequence.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-isomorphism-degree-check">
+		<title>Check Degree Sequences</title>
+		<statement>
+			<p>
+				Use <xref ref="ex-graph-isomorphism-degree"/> to determine which pairs in <xref ref="ex-graph-determine-isomorphism"/> are not isomorphic.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-isomorphism-degree-converse">
+		<title>Same Degree Sequence does not imply Isomorphism</title>
+		<statement>
+			<p>
+				The converse of <xref ref="ex-graph-isomorphism-degree"/> is not true.
+				Find a counterexample, <ie/> two non-isomorphic graphs with the same degree sequence.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				2, 2, 2, 1, 1
+			</p>
+		</hint>
+	</exercise>
+
+	<p>
+		Another way we can prove two graphs are not isomorphic is by looking at their subgraphs, which are graphs whose vertices and edges are subsets of that of the original graph.
+	</p>
+
+	<definition xml:id="def-subgraph">
+		<title>Subgraph</title>
+		<statement>
+			<p>
+				Given a graph <m>G = (V,E)</m>, a <term>subgraph</term> of <m>G</m> is another graph <m>G' = (V', E')</m> where 
+				<ul>
+					<li><m>V' \subseteq V</m></li>
+					<li><m>E' \subseteq E</m></li>
+					<li><m>(v_1,v_2) \in E' \Rightarrow v_1,v_2 \in V'</m>.</li>
+				</ul>
+			</p>
+		</statement>
+	</definition>
+
+	<example xml:id="eg-subgraph">
+		<title>Subgraph Example</title>
+		<statement>
+			<p>
+				Suppose we label the vertices of <m>K_4</m> to be <m>V = \{1,2,3,4\}</m>, so that its edges are <m>E = \{(1,2),(1,3),(1,4),(2,3),(2,4),(3,4)\}</m>.
+			</p>
+			<p>
+				The cycle graph <m>C_4</m> arises as a subgraph of the complete graph <m>K_4</m>, by taking 
+				<m>V' = \{1,2,3,4\}</m> and <m>E' = \{(1,2),(2,3),(3,4),(1,4)\}</m>.
+			</p>
+			<sidebyside width="25%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.7]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (0,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (2,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,2) {};
+						\node[label=left:{\footnotesize $4$}] (4) at (0,2) {};
+						\end{scope}
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-,color=blue] (1) -- (2) -- (3) -- (4) -- (1);
+						    \draw[thick,-] (1) -- (3);
+						    \draw[thick,-] (2) -- (4);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<example xml:id="eg-subgraph-not-isomorphic">
+		<title>Subgraphs for Non-isomorphism</title>
+		<statement>
+			<p>
+				The graphs <m>H_1</m> and <m>H_2</m> have the same degree sequence 4, 4, 4, 4, 4, 4, 4, 4 so we cannot use this to rule out isomorphism.
+				However, <m>H_2</m> has a <m>K_4</m> subgraph, while <m>H_1</m> does not, which tells us that they are not isomorphic.
+			</p>
+			<sidebyside widths="20% 20% 25%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (2,3) {};
+						\node[label=right:{\footnotesize $5$}] (5) at (1,4) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-1,4) {};
+						\node[label=left:{\footnotesize $7$}] (7) at (-2,3) {};
+						\node[label=left:{\footnotesize $8$}] (8) at (-2,1) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$H_1$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (7) -- (8) -- (1);
+						    \draw[thick,-] (1) -- (3) -- (5) -- (7) -- (1);
+						    \draw[thick,-] (2) -- (4) -- (6) -- (8) -- (2);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (2,3) {};
+						\node[label=right:{\footnotesize $5$}] (5) at (1,4) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-1,4) {};
+						\node[label=left:{\footnotesize $7$}] (7) at (-2,3) {};
+						\node[label=left:{\footnotesize $8$}] (8) at (-2,1) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$H_2$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (7) -- (8) -- (1);
+						    \draw[thick,-] (1) -- (4) -- (2) -- (7) -- (5) -- (8) -- (6) -- (3) -- (1);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (2,3) {};
+						\node[label=right:{\footnotesize $5$}] (5) at (1,4) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-1,4) {};
+						\node[label=left:{\footnotesize $7$}] (7) at (-2,3) {};
+						\node[label=left:{\footnotesize $8$}] (8) at (-2,1) {};
+						\end{scope}
+
+						\node[] at (0,-1) {A $K_4$ subgraph of $H_2$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (4) -- (5) -- (6) -- (7) -- (8) -- (1);
+						    \draw[thick,-] (2) -- (7) -- (5) -- (8) -- (6) -- (3);
+						    \draw[thick,-,color=blue] (1) -- (2) -- (3) -- (4);
+						    \draw[thick,-,color=blue] (2) -- (4) -- (1) -- (3);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				The reason why this is sufficient to conclude they are not isomorphic is that no matter how we try to form the bijection <m>f: V(H_1) \rightarrow V(H_2)</m>, we will never be able to find four vertices in <m>V(H_1)</m> to map to <m>\{1,2,3,4\}</m> in <m>V(H_2)</m> that also preserve adjacency relations.
+				That is, no four vertices in <m>H_1</m> are all connected to one another by edges, as opposed to <m>\{1,2,3,4\}</m>, which are all adjacent to one another in <m>H_2</m>.
+			</p>
+		</statement>
+	</example>
+
+	<p>
+		In the next example we explicitly construct an adjacency-preserving bijection between the vertex sets of two graphs that are isomorphic.
+	</p>
+
+	<example xml:id="eg-graph-construct-isomorphism">
+		<title>Prove Graph Isomorphism</title>
+		<statement>
+			<p>
+				The following graphs are isomorphic.
+				To produce the bijection <m>f</m> explicitly we examine the degrees and adjacencies of the vertices.
+			</p>
+			<sidebyside widths="20% 20%" margins="22%">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,2) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (1,4) {};
+						\node[label=left:{\footnotesize $5$}] (5) at (-1,4) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-2,2) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$G$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (1);
+						    \draw[thick,-] (4) -- (1) -- (5);
+						    \draw[thick,-] (4) -- (6) -- (2);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=right:{\footnotesize $s$}] (1) at (1,4) {};
+						\node[label=right:{\footnotesize $q$}] (2) at (1,0) {};
+						\node[label=left:{\footnotesize $t$}] (3) at (-1,4) {};
+						\node[label=left:{\footnotesize $p$}] (4) at (-1,0) {};
+						\node[label=right:{\footnotesize $r$}] (5) at (2,2) {};
+						\node[label=left:{\footnotesize $u$}] (6) at (-2,2) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$H$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (1);
+						    \draw[thick,-] (4) -- (1) -- (5);
+						    \draw[thick,-] (4) -- (6) -- (2);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				The degree sequence of both graphs is 4, 4, 4, 3, 3, 2.
+				So the vertex with degree 2 in <m>G</m> must be mapped to the vertex with degree 2 in <m>H</m>; this means <m>3 \leftrightarrow t</m> in any isomorphism.
+			</p>
+			<p>
+				There are two vertices of degree 3 in each: <m>\{2,5\}</m> in <m>G</m> and <m>\{q,r\}</m> in <m>H</m>.
+				So we should map either
+				<me>2 \leftrightarrow q \text{ and } 5 \leftrightarrow r, \quad \text{or} \quad 2 \leftrightarrow r \text{ and } 5 \leftrightarrow q</me>.
+				Clearly it must be the first option, since <m>2</m> is adjacent to <m>3</m> (the vertex with degree 2) in <m>G</m>, while <m>q</m> is adjacent to <m>t</m> in <m>H</m>.
+			</p>
+			<p>
+				Now we just need to determine how the four vertices of degree 4 <m>\{1, 4, 6\}</m> in <m>G</m> are mapped to those in <m>H</m>, <m>\{p, s, u\}</m>.
+				Observe that we must have <m>4 \leftrightarrow p</m>, since they are both adjacent to the vertex of degree 2 in their graphs.
+			</p>
+			<p>				
+				As for the others, you can check that both ways of assigning <m>\{s,u\}</m> to <m>\{1,6\}</m> will produce an isomorphism. 
+				So we see there are two isomorphisms between <m>G</m> and <m>H</m>:
+			</p>
+			<sidebyside widths="40% 40%" margins="auto">
+			    <tabular halign="center">
+			        <row bottom="medium">
+			            <cell>
+			                <m>G</m>
+			            </cell>
+			            <cell><m>3</m></cell>
+			            <cell><m>2</m></cell>
+			            <cell><m>5</m></cell>
+			            <cell><m>4</m></cell>
+			            <cell><m>1</m></cell>
+			            <cell><m>6</m></cell>
+			        </row>
+			        <row>
+			            <cell>
+			                <m>H</m>
+			            </cell>
+			            <cell><m>t</m></cell>
+			            <cell><m>q</m></cell>
+			            <cell><m>r</m></cell>
+			            <cell><m>p</m></cell>
+			            <cell><m>s</m></cell>
+			            <cell><m>u</m></cell>
+			        </row>
+			    </tabular>
+			    <tabular halign="center">
+			        <row bottom="medium">
+		            <cell>
+			                <m>G</m>
+			            </cell>
+			            <cell><m>3</m></cell>
+			            <cell><m>2</m></cell>
+			            <cell><m>5</m></cell>
+			            <cell><m>4</m></cell>
+			            <cell><m>1</m></cell>
+			            <cell><m>6</m></cell>
+			        </row>
+			        <row>
+			            <cell>
+			                <m>H</m>
+			            </cell>
+			            <cell><m>t</m></cell>
+			            <cell><m>q</m></cell>
+			            <cell><m>r</m></cell>
+			            <cell><m>p</m></cell>
+			            <cell><m>u</m></cell>
+			            <cell><m>s</m></cell>
+			        </row>
+			    </tabular>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<exercise xml:id="ex-graph-prove-isomorphic">
+		<title>Prove Graph Isomorphism</title>
+		<statement>
+			<p>
+				Prove the following graphs are isomorphic:
+			</p>
+			<sidebyside widths="23% 27%" margins="17%">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (2,4) {};
+						\node[label=left:{\footnotesize $5$}] (5) at (-1,4) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-2,3) {};
+						\node[label=left:{\footnotesize $7$}] (7) at (-2,1) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$G$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (7) -- (1);
+						    \draw[thick,-] (6) -- (3) -- (5) -- (7) -- (4) -- (1) -- (3);
+						    \draw[thick,-] (2) -- (4);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $d$}] (1) at (3,0) {};
+						\node[label=right:{\footnotesize $c$}] (2) at (5,2) {};
+						\node[label=above:{\footnotesize $g$}] (3) at (3,2) {};
+						\node[label=right:{\footnotesize $b$}] (4) at (5,4) {};
+						\node[label=above:{\footnotesize $f$}] (5) at (2,3) {};
+						\node[label=left:{\footnotesize $e$}] (6) at (0,0) {};
+						\node[label=left:{\footnotesize $a$}] (7) at (0,4) {};
+						\end{scope}
+
+						\node[] at (2,-1) {$H$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (7) -- (1);
+						    \draw[thick,-] (6) -- (3) -- (5) -- (7) -- (4) -- (1) -- (3);
+						    \draw[thick,-] (2) -- (4);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
+
+	<p>
+		Sometimes when graphs have many edges, it is easier to look at the edges they <em>don't have</em>!
+	</p>
+
+	<definition xml:id="def-complement">
+		<title>Graph Complement</title>
+		<statement>
+			<p>
+				Let <m>G = (V,E)</m> be a simple graph.
+				We define its <term>complement</term> <m>\overline{G}</m> to be the graph on the same vertex set <m>V(G)</m>, and with edge set 
+				<me> E' = \{(u,v) \in V \times V: (u,v) \not\in E\}</me>,
+				that is, <m>(u,v)</m> is an edge in <m>\overline{G}</m> if and only if it was not an edge in <m>G</m>.
+			</p>
+			<notation>
+				<usage>\overline{G}</usage>
+				<description>graph complement of <m>G</m></description>
+			</notation>
+		</statement>
+	</definition>
+
+	<example xml:id="eg-graph-complement">
+		<title>A Graph and its Complement</title>
+		<statement>
+			<p>
+				A graph <m>G</m> (red) and its complement <m>\overline{G}</m> (blue) are shown below. 
+			</p>
+			<sidebyside widths="22% 22% 22%" margins="15%">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1.5) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (1,3) {};
+						\node[label=left:{\footnotesize $5$}] (5) at (-1,3) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-2,1.5) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$G$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (6) -- (1) -- (2) -- (3) -- (4);
+						    \draw[thick,-] (6) -- (3) -- (5) -- (4) -- (1) -- (3);
+						    \draw[thick,-] (2) -- (4);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1.5) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (1,3) {};
+						\node[label=left:{\footnotesize $5$}] (5) at (-1,3) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-2,1.5) {};
+						\end{scope}
+
+						%\node[] at (0,-1) {$G$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-,color=red] (6) -- (1) -- (2) -- (3) -- (4);
+						    \draw[thick,-,color=red] (6) -- (3) -- (5) -- (4) -- (1) -- (3);
+						    \draw[thick,-,color=red] (2) -- (4);
+						    \draw[thick,-,color=blue] (1) -- (5) -- (6);
+						    \draw[thick,-,color=blue] (4) -- (6) -- (2) -- (5);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1.5) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (1,3) {};
+						\node[label=left:{\footnotesize $5$}] (5) at (-1,3) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-2,1.5) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$\overline{G}$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (5) -- (6);
+						    \draw[thick,-] (4) -- (6) -- (2) -- (5);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<proposition xml:id="prop-graph-isomorphism-complement">
+		<title>Complements are Isomorphic</title>
+		<statement>
+			<p>
+				Two graphs <m>G</m> and <m>H</m> are isomorphic if and only if their complements <m>\overline{G}</m> and <m>\overline{H}</m> are.
+			</p>
+		</statement>
+	</proposition>
+
+	<exercise xml:id="ex-graph-isomorphism-complement">
+		<title>Verify <xref ref="prop-graph-isomorphism-complement"/></title>
+		<statement>
+			<p>
+				Verify <xref ref="prop-graph-isomorphism-complement"/> on <xref ref="eg-graph-construct-isomorphism"/> and <xref ref="ex-graph-prove-isomorphic"/>.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-prove-complement">
+		<title>Prove <xref ref="prop-graph-isomorphism-complement"/></title>
+		<statement>
+			<p>
+				Prove <xref ref="prop-graph-isomorphism-complement"/>.
+			</p>
+		</statement>
+	</exercise>
+
+
 </section>

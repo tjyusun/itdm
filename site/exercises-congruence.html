@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-16T23:16:41-04:00    *-->
+<!--*    on 2020-07-19T22:07:42-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -145,7 +145,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="chap-graph.html" data-scroll="chap-graph"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a><ul>
 <li><a href="sec-graph-modeling.html" data-scroll="sec-graph-modeling">Modeling with Graphs</a></li>
-<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Definitions and Eulerian Graphs</a></li>
+<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Basic Definitions</a></li>
+<li><a href="sec-graph-eulerian.html" data-scroll="sec-graph-eulerian">Eulerian Graphs</a></li>
 <li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Isomorphisms and Subgraphs</a></li>
 <li><a href="sec-graph-trees.html" data-scroll="sec-graph-trees">Connectedness and Trees</a></li>
 <li><a href="sec-graph-bipartite.html" data-scroll="sec-graph-bipartite">Bipartite and Hamiltonian Graphs</a></li>
@@ -162,50 +163,50 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="exercises" id="exercises-congruence"><h2 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">4.6</span> <span class="title">Exercises</span>
 </h2>
-<section class="introduction" id="introduction-15"><p id="p-712">Additional Exercises for <a href="chap-congruence.html" class="internal" title="Chapter 4: Congruence Modulo \(n\)">Chapter 4</a></p></section><article class="exercise exercise-like" id="exercise-142"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-713">Let</p>
+<section class="introduction" id="introduction-14"><p id="p-711">Additional Exercises for <a href="chap-congruence.html" class="internal" title="Chapter 4: Congruence Modulo \(n\)">Chapter 4</a></p></section><article class="exercise exercise-like" id="exercise-142"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-712">Let</p>
 <div class="displaymath">
 \begin{equation*}
 R = \{(1,1),(2,2),(1,2),(2,1),(1,3),(3,3),(3,1),(4,4)\}
 \end{equation*}
 </div>
 <p data-braille="continuation">be a relation on the set \(\{1,2,3,4\}\text{.}\) Is \(R\) an equivalence relation? Which properties (reflexive, symmetric, transitive) hold/fail?</p></article><article class="exercise exercise-like" id="exercise-143"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-714">Let \(S\) be the set of differentiable functions from \(\mathbb{R}\) to \(\mathbb{R}\text{,}\) and let \(\star\) be the relation</p>
+<p id="p-713">Let \(S\) be the set of differentiable functions from \(\mathbb{R}\) to \(\mathbb{R}\text{,}\) and let \(\star\) be the relation</p>
 <div class="displaymath">
 \begin{equation*}
 f \star g \Leftrightarrow f'(x) = g'(x)\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Is \(\star\) an equivalence relation? If it is, describe its equivalence classes.</p></article><article class="exercise exercise-like" id="exercise-144"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-715">Let \(\sim\) be the following relation on \(\mathbb{Z}\text{:}\)</p>
+<p id="p-714">Let \(\sim\) be the following relation on \(\mathbb{Z}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 m \sim n \Leftrightarrow 4 \mid (m^2 - n^2)\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Is \(\sim\) an equivalence relation? If it is, describe its equivalence classes.</p></article><article class="exercise exercise-like" id="exercise-145"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-716">Let \(A_1, A_2, \ldots, A_k\) form a partition of \(S\text{.}\) Show that the relation</p>
+<p id="p-715">Let \(A_1, A_2, \ldots, A_k\) form a partition of \(S\text{.}\) Show that the relation</p>
 <div class="displaymath">
 \begin{equation*}
 R = \{(x,y) : x \text{ and } y \text{ are in the same $A_i$}\}
 \end{equation*}
 </div>
 <p data-braille="continuation">is an equivalence relation on \(S\text{.}\)</p>
-<p id="p-717">What are the equivalence classes of $R$?</p></article><article class="exercise exercise-like" id="exercise-146"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-718">If \(R\) is an equivalence relation on the set \(S\text{,}\) and \(a, b \in S\) such that \(a \in [b]\text{,}\) show that \([a] = [b]\text{.}\) Do not use <a class="xref" data-knowl="./knowl/lemma-equivalence-class.html" title="Lemma 4.1.9: Equivalent Objects are in the Same Class">Lemma 4.1.9</a> or <a class="xref" data-knowl="./knowl/thm-equivalence-partition.html" title="Theorem 4.1.10: Equivalence Relations induce Partitions">Theorem 4.1.10</a>.</p></article><article class="exercise exercise-like" id="exercise-147"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-719">Compute the remainder when</p>
+<p id="p-716">What are the equivalence classes of $R$?</p></article><article class="exercise exercise-like" id="exercise-146"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-717">If \(R\) is an equivalence relation on the set \(S\text{,}\) and \(a, b \in S\) such that \(a \in [b]\text{,}\) show that \([a] = [b]\text{.}\) Do not use <a class="xref" data-knowl="./knowl/lemma-equivalence-class.html" title="Lemma 4.1.9: Equivalent Objects are in the Same Class">Lemma 4.1.9</a> or <a class="xref" data-knowl="./knowl/thm-equivalence-partition.html" title="Theorem 4.1.10: Equivalence Relations induce Partitions">Theorem 4.1.10</a>.</p></article><article class="exercise exercise-like" id="exercise-147"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-718">Compute the remainder when</p>
 <ol class="lower-alpha">
 <li id="li-247">\(3^{333}\) is divided by \(100\)</li>
 <li id="li-248">\(5^{444}\) is divided by \(11\)</li>
 <li id="li-249">\(2^{888}\) is divided by \(8\)</li>
 <li id="li-250">\(9^{999}\) is divided by \(99\)</li>
 </ol></article><article class="exercise exercise-like" id="exercise-148"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-720">Show that \((3 + 3^3 + 3^5 + 3^7 + 3^9 + 3^{11}) \mmod{10} = 0\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-149"><h6 class="heading">
+<p id="p-719">Show that \((3 + 3^3 + 3^5 + 3^7 + 3^9 + 3^{11}) \mmod{10} = 0\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-149"><h6 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">April 2018 Final.</span>
 </h6>
-<p id="p-721">Without using induction, prove that \(11^{n+2} + 12^{2n+1}\) is divisible by \(133\) for any \(n \in \mathbb{N}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-150"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-722">Let \(N\) be the product of any \(k\) consecutive natural numbers. Prove \(k! \mid N\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-151"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-723">Find the multiplicative inverse of each integer \(b\) modulo \(m\text{:}\)</p>
+<p id="p-720">Without using induction, prove that \(11^{n+2} + 12^{2n+1}\) is divisible by \(133\) for any \(n \in \mathbb{N}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-150"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-721">Let \(N\) be the product of any \(k\) consecutive natural numbers. Prove \(k! \mid N\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-151"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-722">Find the multiplicative inverse of each integer \(b\) modulo \(m\text{:}\)</p>
 <ol class="lower-alpha">
 <li id="li-251">\(\displaystyle b = 4, m = 5\)</li>
 <li id="li-252">\(\displaystyle b = 13, m = 76\)</li>
@@ -213,7 +214,7 @@ R = \{(x,y) : x \text{ and } y \text{ are in the same $A_i$}\}
 <li id="li-254">\(\displaystyle b = 10, m = 9\)</li>
 <li id="li-255">\(\displaystyle b = 100, m = 999\)</li>
 </ol></article><article class="exercise exercise-like" id="exercise-152"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-724">Solve the following congruences. Express your answer as congruence classes of the original modulus.</p>
+<p id="p-723">Solve the following congruences. Express your answer as congruence classes of the original modulus.</p>
 <ol class="lower-alpha">
 <li id="li-256">\(\displaystyle 4x \equiv 8 \Mod{5}\)</li>
 <li id="li-257">\(\displaystyle 4x \equiv 3 \Mod{5}\)</li>
@@ -222,23 +223,23 @@ R = \{(x,y) : x \text{ and } y \text{ are in the same $A_i$}\}
 <li id="li-260">\(\displaystyle 100x - 23 \equiv 11 \Mod{99}\)</li>
 <li id="li-261">\(\displaystyle 31 - 11x \equiv 4x + 8 \Mod{44}\)</li>
 </ol></article><article class="exercise exercise-like" id="exercise-153"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-725">Prove that if \(\gcd(a,n) \nmid b\text{,}\) then \(ax \equiv b \Mod{n}\) has no solutions.</p></article><article class="exercise exercise-like" id="exercise-154"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-726">Let \(a \in \mathbb{N}\) and suppose \(p\) is prime. Prove that \(a^2 \equiv 1 \Mod{p}\) if and only if \(a \equiv 1 \Mod{p}\) or \(a \equiv -1 \Mod{p}\text{.}\)</p></article><article class="exercise exercise-like" id="ex-cong-power-two"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<p id="p-727">If \(m = 2^k\) is a power of 2, explain how you could use repeated squaring to compute \(a^m \mmod{n}\) for any \(n\text{.}\) Then apply your method to compute \(10^{32} \mmod 41\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-156"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<p id="p-728">If \(m\) is <em class="emphasis">not</em> a power of 2, explain how you could use the results of <a class="xref" data-knowl="./knowl/ex-cong-power-two.html" title="Exercise 4.6.14">Exercise 4.6.14</a> to compute \(a^m \mmod{n}\)for any \(n\text{.}\) Then apply your method to compute \(17^{26} \mmod 44\text{.}\)</p>
+<p id="p-724">Prove that if \(\gcd(a,n) \nmid b\text{,}\) then \(ax \equiv b \Mod{n}\) has no solutions.</p></article><article class="exercise exercise-like" id="exercise-154"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-725">Let \(a \in \mathbb{N}\) and suppose \(p\) is prime. Prove that \(a^2 \equiv 1 \Mod{p}\) if and only if \(a \equiv 1 \Mod{p}\) or \(a \equiv -1 \Mod{p}\text{.}\)</p></article><article class="exercise exercise-like" id="ex-cong-power-two"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-726">If \(m = 2^k\) is a power of 2, explain how you could use repeated squaring to compute \(a^m \mmod{n}\) for any \(n\text{.}\) Then apply your method to compute \(10^{32} \mmod 41\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-156"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-727">If \(m\) is <em class="emphasis">not</em> a power of 2, explain how you could use the results of <a class="xref" data-knowl="./knowl/ex-cong-power-two.html" title="Exercise 4.6.14">Exercise 4.6.14</a> to compute \(a^m \mmod{n}\)for any \(n\text{.}\) Then apply your method to compute \(17^{26} \mmod 44\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-49" id="hint-49"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-49"><div class="hint solution-like"><p id="p-729">Express \(m\) as a sum of powers of two.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-49" id="hint-49"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-49"><div class="hint solution-like"><p id="p-728">Express \(m\) as a sum of powers of two.</p></div></div>
 </div></article><article class="exercise exercise-like" id="ex-cong-phi-prime-power-prod"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<p id="p-730">Prove \(\phi(p^kq^l) = \left(p^k-p^{k-1}\right)\left(q^l - q^{l-1}\right)\) for primes \(p\) and \(q\text{,}\) and \(k,l\in\mathbb{N}\text{.}\)</p>
+<p id="p-729">Prove \(\phi(p^kq^l) = \left(p^k-p^{k-1}\right)\left(q^l - q^{l-1}\right)\) for primes \(p\) and \(q\text{,}\) and \(k,l\in\mathbb{N}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-50" id="hint-50"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-50"><div class="hint solution-like"><p id="p-731"><a class="xref" data-knowl="./knowl/ex-cong-euler-totient-prime-power.html" title="Checkpoint 4.4.7: \(\phi(p^k)\)">Checkpoint 4.4.7</a> and <a class="xref" data-knowl="./knowl/ex-cong-euler-totient-prime-product.html" title="Checkpoint 4.4.8: \(\phi(pq)\)">Checkpoint 4.4.8</a>.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-50" id="hint-50"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-50"><div class="hint solution-like"><p id="p-730"><a class="xref" data-knowl="./knowl/ex-cong-euler-totient-prime-power.html" title="Checkpoint 4.4.7: \(\phi(p^k)\)">Checkpoint 4.4.7</a> and <a class="xref" data-knowl="./knowl/ex-cong-euler-totient-prime-product.html" title="Checkpoint 4.4.8: \(\phi(pq)\)">Checkpoint 4.4.8</a>.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-158"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
-<p id="p-732">Find the smallest positive integer \(y\) such that</p>
+<p id="p-731">Find the smallest positive integer \(y\) such that</p>
 <ul class="disc">
 <li id="li-262">\(y\) divided by 9 leaves a remainder of 7, and</li>
 <li id="li-263">\(y\) divided by 10 leaves a remainder of 9.</li>
 </ul></article><article class="exercise exercise-like" id="exercise-159"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<p id="p-733">Solve the system of congruences</p>
+<p id="p-732">Solve the system of congruences</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} x \equiv 2 \Mod{3} \\
@@ -247,7 +248,7 @@ x \equiv 1 \Mod{13} \end{cases}
 \end{equation*}
 </div>
 <p data-braille="continuation">using the method outlined in <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a>.</p></article><article class="exercise exercise-like" id="exercise-160"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
-<p id="p-734">Compute each quantity:</p>
+<p id="p-733">Compute each quantity:</p>
 <ol class="lower-alpha">
 <li id="li-264">\(\displaystyle 2^{2020} \mmod{5}\)</li>
 <li id="li-265">\(\displaystyle 2^{2020} \mmod{7}\)</li>
@@ -255,7 +256,7 @@ x \equiv 1 \Mod{13} \end{cases}
 <li id="li-267">\(\displaystyle 2^{2020} \mmod{385}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-51" id="hint-51"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-51"><div class="hint solution-like"><p id="p-735">\(385 = 5 \cdot 7 \cdot 11\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-51" id="hint-51"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-51"><div class="hint solution-like"><p id="p-734">\(385 = 5 \cdot 7 \cdot 11\text{.}\)</p></div></div>
 </div></article></section></div></main>
 </div>
 </body>

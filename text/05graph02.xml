@@ -4,15 +4,417 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-graph-terms">
-    <title>Definitions and Eulerian Graphs</title>
+    <title>Basic Definitions</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Define basic graph theoretic concepts such as vertex, edge, path, trail, degree and so on.</li>
+            <li>Prove simple properties about graphs by applying these definitions appropriately.</li>
+            <li>Determine whether or not a given degree sequence can be realized as a graph.</li>
         </ul>
     </objectives>
 
+    <p>
+    	We now formally state the definition of a graph. 
+		Unless otherwise specified, the graphs you will encounter in this text are simple graphs.
+	</p>
 
+	<definition xml:id="def-graph">
+		<title>Graph</title>
+		<statement>
+			<p>
+				A <term>graph</term> <m>G</m> is defined as a pair <m>G = (V,E)</m> where <m>V</m> is a finite set consisting of elements called <term>vertices</term>, and <m>E</m> is a collection of unordered pairs of elements in <m>V</m> called <term>edges</term>.
+			</p>
+			<p>
+				If <m>e = (u,v)</m> is an edge of the graph, then we say that the vertices <m>u</m> and <m>v</m> are the <term>endpoints</term> of the edge <m>e</m>.
+				The vertices <m>u</m> and <m>v</m> are called <term>adjacent</term> vertices; the edge <m>e</m> is also said to be <term>incident</term> to the vertices <m>u</m> and <m>v</m>.
+			</p>
+		</statement>
+	</definition>
 
+	<definition xml:id="def-graph-simple">
+		<title>Simple Graphs and Multigraphs</title>
+		<statement>
+			<p>
+				A graph <m>G = (V,E)</m> is a <term>simple graph</term> if <m>E</m> has no repeated elements, <ie/>, between every pair of vertices there is at most one edge.
+				A graph that is permitted to have multiple edges between a pair of vertices is called a <term>multigraph</term>.
+			</p>
+		</statement>
+	</definition>
+
+	<p>
+		Visually, a graph can be drawn by using points to represent its vertices, and lines connecting pairs of vertices to represent the edges.
+	</p>
+
+	<example xml:id="eg-graph-first">
+		<title>First Graph</title>
+		<statement>
+			<p>
+				Define the graph <m>G</m> to have vertices <me>V = \{v_1,v_2,v_3,v_4,v_5\}</me> and edges <me>E = \{(v_1,v_2),(v_1,v_3),(v_1,v_4),(v_2,v_5),(v_4,v_5)\}</me>.
+				We can represent this graph by labeling five nodes, and drawing each edge.
+			</p>
+			<sidebyside width="25%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.55]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						    \node (1) at (1,0) {};
+						    \node (2) at (0,2) {};
+						    \node (3) at (2,4) {};
+						    \node (4) at (4,2) {};
+						    \node (5) at (3,0) {};
+						\end{scope}
+
+						\node[] at (0.6,-0.4) {\small $v_1$};
+						\node[] at (-0.5,2) {\small $v_2$};
+						\node[] at (2.4,4.4) {\small $v_3$};
+						\node[] at (4.5,2) {\small $v_4$};
+						\node[] at (3.5,0) {\small $v_5$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (1) edge (3);
+						    \path [-] (1) edge (4);
+						    \path [-] (2) edge (5);
+						    \path [-] (4) edge (5);
+						     %\path [-] (D) edge node {$3$} (E);
+						    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<exercise xml:id="ex-graph-first-draw">
+		<title>Draw These Graphs</title>
+		<statement>
+			<p>
+				Draw each of the following graphs:
+				<ol label="(a)">
+					<li><m>G_1 = (V_1, E_1)</m> where <m>V_1 = \{p, q, r, s, t, u\}</m> and <m>E_1 = \{(p,q),(q,r),(q,s),(q,t),(q,u),(r,s),(r,t),(r,u),(s,u)\}</m>.</li>
+					<li><m>G_2 = (V_2, E_2)</m> where <m>V_2 = \{1,2,3,4\}</m> and <m>E_2</m> contains all pairs of elements from <m>V_2</m>.</li>
+				</ol>
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-first-list">
+		<title>List Vertices and Edges</title>
+		<statement>
+			<p>
+				List all elements in the vertex and edge sets of each graph below.
+			</p>
+			<sidebyside widths="22% 32%" margins="20%">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.55]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						    \node (1) at (1,0) {};
+						    \node (2) at (0,2) {};
+						    \node (3) at (2,4) {};
+						    \node (4) at (4,2) {};
+						    \node (5) at (3,0) {};
+						\end{scope}
+
+						\node[] at (0.6,-0.4) {\small $1$};
+						\node[] at (-0.5,2) {\small $2$};
+						\node[] at (2.4,4.4) {\small $3$};
+						\node[] at (4.5,2) {\small $4$};
+						\node[] at (3.5,0) {\small $5$};
+						\node[] at (2,-1) {$G_3$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (1) edge (3);
+						    \path [-] (1) edge (5);
+						    \path [-] (2) edge (3);
+						    \path [-] (2) edge (4);
+						    \path [-] (3) edge (4);
+						    \path [-] (3) edge (5);
+						    \path [-] (4) edge (5);
+						     %\path [-] (D) edge node {$3$} (E);
+						    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.55]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						    \node (1) at (1,0) {};
+						    \node (2) at (3,0) {};
+						    \node (3) at (5,0) {};
+						    \node (4) at (7,0) {};
+						    \node (5) at (9,0) {};
+						    \node (6) at (4,2) {};
+						    \node (7) at (6,-2) {};
+
+						\end{scope}
+
+						\node[] at (1,-0.5) {\small $v_1$};
+						\node[] at (3,-0.5) {\small $v_2$};
+						\node[] at (5,-0.5) {\small $v_3$};
+						\node[] at (7,0.5) {\small $v_4$};
+						\node[] at (9,0.5) {\small $v_5$};
+						\node[] at (4,2.5) {\small $v_6$};
+						\node[] at (6,-2.5) {\small $v_7$};
+						\node[] at (3,-2) {$G_4$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (2) edge (3);
+						    \path [-] (3) edge (4);
+						    \path [-] (4) edge (5);
+						    \path [-] (4) edge (5);
+						    \path [-] (1) edge (6); 
+						    \path [-] (2) edge (6); 
+						    \path [-] (4) edge (7); 
+						    \path [-] (5) edge (7); 
+						    \path [-] (6) edge[bend left=20] (7); 
+						    %\path [-] (D) edge node {$3$} (E);
+						    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
+
+	<definition xml:id="def-degree">
+		<title>Degree of a vertex</title>
+		<statement>
+			<p>
+				The <term>degree</term> <m>d(v)</m> of a vertex <m>v</m> is the number of edges incident to it.
+			</p>
+			<notation>
+				<usage>d(v)</usage>
+				<description>degree of a vertex</description>
+			</notation>
+			<p>
+				The <term>degree sequence</term> of a graph is the <em>nonincreasing</em> sequence of numbers formed by the degrees of its vertices.
+			</p>
+		</statement>
+	</definition>
+
+	<p>
+		The degree sequence of a graph is a well-defined object, since the nonincreasing condition gives a canonical ordering of the vertex degrees to form the sequence.
+	</p>
+
+	<example xml:id="eg-graph-degree">
+		<title>Degree sequence</title>
+		<statement>
+			<p>
+				In the graph of <xref ref="eg-graph-first"/>, the degrees of each vertex are:
+			</p>
+			<sidebyside width="40%" margins="auto">
+				<tabular halign="center">
+			        <row bottom="medium">
+			            <cell>
+			                        Vertex
+			            </cell>
+			            <cell>
+			                <m>v_1</m>
+			            </cell>
+			            <cell>
+			                <m>v_2</m>
+			            </cell>
+			            <cell>
+			                <m>v_3</m>
+			            </cell>
+			            <cell>
+			                <m>v_4</m>
+			            </cell>
+			            <cell>
+			                <m>v_5</m>
+			            </cell>
+			        </row>
+			        <row>
+			            <cell>
+			                        Degree
+			            </cell>
+			            <cell>
+			                3
+			            </cell>
+			            <cell>
+			                2
+			            </cell>
+			            <cell>
+			                1
+			            </cell>
+			            <cell>
+			                2
+			            </cell>
+			            <cell>
+			                2
+			            </cell>
+			        </row>
+			    </tabular>
+			</sidebyside>
+			<p>
+				We write this as <m>d(v_1) = 3</m>, <m>d(v_2) = 2</m>, and so on.
+				Hence the degree sequence of the graph is 3, 2, 2, 2, 1 (just rearrange the numbers in nonincreasing order).
+			</p>
+		</statement>
+	</example>
     
+	<exercise xml:id="ex-graph-degree">
+		<title>Write the Degree Sequence</title>
+		<statement>
+			<p>
+				Determine the degrees of each vertex of the graphs <m>G_1</m>, <m>G_2</m>, <m>G_3</m>, and <m>G_4</m> from <xref ref="ex-graph-first-draw"/> and <xref ref="ex-graph-first-list"/>, then write the degree sequence of each graph.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-degree-zero">
+		<title>Zero Degrees</title>
+		<statement>
+			<p>
+				In a graph, what does it mean for a vertex <m>v</m>to have degree <m>d(v) = 0</m>?
+				Can you draw a graph with degree sequence 0, 0, 0, 0, 0?
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		While it is easy to write the degree sequence of a given graph, it is much harder to <em>start</em> with a nonincreasing sequence and determine whether or not it is possible to draw a graph with that particular sequence of vertex degrees.
+	</p>
+	<p>
+		From the next result we can derive one simple way to tell if given sequence <em>cannot</em> be realized as a graph.
+		This will be our first graph theory proof: that the sum of the degrees of all vertices must be equal to twice the number of edges in the graph.
+	</p>
+
+	<theorem xml:id="thm-degree-sum">
+		<title>Degree-Sum Formula</title>
+		<statement>
+			<p>
+				Let <m>G</m> be a graph with <m>m</m> edges. 
+				Then <me> \sum_{v \in V(G)} d(v) = 2m</me>.
+			</p>
+		</statement>
+		<proof>
+			<p>
+				If <m>(u,v)</m> is an edge of <m>G</m>, then it contributes 2 to the sum of all vertex degrees (one to the degrees of each of its endpoints: <m>d(u)</m> and <m>d(v)</m>). 
+				This is true for all edges of <m>G</m>, so twice the number of edges must be exactly the sum of all degrees.
+			</p>
+		</proof>
+	</theorem>
+
+	<remark xml:id="remark-VG-notation">
+		<p>
+			In the above statement we used the notation <m>V(G)</m> to refer to the vertex set of <m>G</m>; we will also use the notation <m>E(G)</m> to refer to the collection of edges of <m>G</m>.
+			This notation comes in handy if we are talking about the vertex or edge sets of different graphs.
+		</p>
+		<notation>
+			<usage>V(G)</usage>
+			<description>vertex set of <m>G</m></description>
+		</notation>
+		<notation>
+			<usage>E(G)</usage>
+			<description>edge set of <m>G</m></description>
+		</notation>
+	</remark>
+
+
+	<exercise xml:id="ex-graph-degsum">
+		<title>Verify <xref ref="thm-degree-sum"/></title>
+		<statement>
+			<p>
+				Verify <xref ref="thm-degree-sum"/> on the graphs you've seen so far in this section.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-handshake">
+		<title>Even Number of Odd Degree Vertices</title>
+		<statement>
+			<p>
+				Use <xref ref="thm-degree-sum"/> to prove that any graph must have an even number of vertices with odd degree.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-handshake-lemma">
+		<title>Handshakes at a [Pre-pandemic] Party</title>
+		<statement>
+			<p>
+				Explain how <xref ref="ex-graph-handshake"/> implies that in a party, the number of people who shook hands with an odd number of other people's hands must be even.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Because of <xref ref="ex-graph-handshake-lemma"/>, the result of <xref ref="ex-graph-handshake"/> is sometimes called the <em>Handshake Lemma</em>.
+		This can be used to prove that certain sequences will never occur as the degree sequence of a graph.
+	</p>
+
+	<lemma xml:id="lemma-handshake">
+		<title>Handshake Lemma</title>
+		<statement>
+			<p>
+				Any graph (simple or otherwise) must have an even number of vertices of odd degree.
+			</p>
+		</statement>
+	</lemma>
+
+	<example xml:id="eg-graph-coauthors-answer">
+		<title>Counting Collaborators</title>
+		<statement>
+			<p>
+				<xref ref="ex-graph-coauthors"/> can be resolved by arguing that the coauthorship relations among the six mathematicians can be represented using a graph: by taking the six mathematicians as vertices and placing an edge between two mathematicians if they have coauthored a paper together.
+			</p>
+			<p>
+				The sequence 3, 2, 2, 2, 1, 1 cannot be the degree sequence of this graph, since there is an odd number of vertices of odd degree. (There are three: 3, 1, 1.)
+				Therefore someone must have made a mistake counting.
+			</p>
+		</statement>
+	</example>
+
+	<p>
+		Try proving the following basic properties about degree sequences.
+		<aside>
+			<p>
+				There is a theorem that characterizes completely whether or not a degree sequence can be realized as a graph, but is beyond the scope of this course: the <url href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Gallai_theorem">Erdős-Gallai Theorem</url>
+			</p>
+		</aside>
+	</p>
+
+	<exercise xml:id="ex-graph-degree-0-4">
+		<title>Degree Sequence 3, 2, 1, 0</title>
+		<statement>
+			<p>
+				Can a graph on 4 vertices have degree sequence 3, 2, 1, 0?
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-degree-0-n-1">
+		<title>Degree Sequence with 0 and <m>n-1</m></title>
+		<statement>
+			<p>
+				Is it possible for the numbers <m>0</m> and <m>n-1</m> to both occur in the degree sequence of a graph with <m>n</m> vertices? 
+				Prove your answer.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-degree-sum-max">
+		<title>Maximum Degree Sum</title>
+		<statement>
+			<p>
+				Show that the sum of the degrees of a simple graph cannot add up to more than <m>n(n-1)</m>.
+			</p>
+		</statement>
+	</exercise>
+
+
 </section>

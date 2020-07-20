@@ -7,12 +7,505 @@
     <title>Modeling with Graphs</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Model real-world scenarios using graphs.</li>
         </ul>
     </objectives>
 
 
+    <p>
+    	A graph is, simply, an object with vertices (or nodes), and edges (each of which connects two vertices).
+		The power of graph theory lies in <em>abstraction</em>:
+		given a problem with physical, structural, or time-related elements, modeling them as graphs allows us to focus our efforts at solving the problem on only the relevant details necessary.
+		Consider the two examples below:
+	</p>
 
-    
+	<example xml:id="eg-graph-model-room">
+		<title>The Five-Room Problem</title>
+		<statement>
+			<p>
+				One day, you suddenly gain the power to walk through walls.
+				Is there a way for you to walk through each wall of the building below (given its floor plan), such that you start and end in the same room (or the outside)?
+				Assume you can visit any room as many times as you want, but cannot walk through each wall more than once.
+			</p>
+			<sidebyside width = "40%" margins="auto">
+				<image xml:id="img-graph-five-room">
+				<description>Floor plan of a house with five rooms.</description>
+			    <latex-image>
+			    	\begin{tikzpicture}[scale=0.5]
+					\draw (4,2);
+					\draw[-,thick] (0,0)--(7,0)--(7,4)--(0,4)--(0,0);
+					\draw[-,thick] (0,2)--(7,2);
+					\draw[-,thick] (2,0)--(2,2);
+					\draw[-,thick] (5,0)--(5,2);
+					\draw[-,thick] (3.5,2)--(3.5,4);
+					%\draw [blue,dashed,thick] (1,0.7) .. controls (0.8,2) .. (1.7,3) .. controls (2.5,5) and (4.2,5) .. (5.2, 2.8) .. controls (6.5,2.3) .. (7.4,3) .. controls (8,3) and (8,1) .. (7.4,1) .. controls (6,2) and (5,1) .. (6,0) .. controls (6,-1) and (4.5, -0.7) .. (3.5,1) .. controls (1.7,2) and (0.5,2) .. (-0.5, 1) .. controls (-1,-1) and (2,-0.4) .. (1,0.7);
+					\end{tikzpicture}
+				</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				For instance, the following path through the building does <em>not</em> pass through all walls (the walls in red are not used).
+			</p>
+			<sidebyside width="40%" margins="auto">
+				<image xml:id="img-graph-five-room-path">
+				<description>Floor plan of a house with five rooms, with a path going through the rooms (but missing some walls).</description>
+			    <latex-image>
+			    	\begin{tikzpicture}[scale=0.5]
+					\draw (4,2);
+					\draw[-,thick] (0,0)--(7,0)--(7,4)--(0,4);
+					\draw[-,thick] (0,2)--(2,2);
+					\draw[-,thick] (0,2)--(0,0);
+					\draw[-,thick] (2,0)--(2,2);
+					\draw[-,thick,red] (5,0)--(5,2);
+					\draw[-,thick,red] (3.5,2)--(3.5,4);
+					\draw[-,thick,red] (0,2) -- (0,4);
+					\draw[-,thick,red] (2,2) -- (7,2);
+					%\draw (0,0) grid (7,4);
+					%\draw [blue] plot [smooth, tension=2] coordinates { (1,1) (1.1,2) (1.2,3) (0,3) (-1,3.5) (-1,5) (1,5) (2,3)};
+					\draw [blue,dashed,thick] (1,0.7) .. controls (0.8,2) .. (1.7,3) .. controls (2.5,5) and (4.2,5) .. (5.2, 2.8) .. controls (6.5,2.3) .. (7.4,3) .. controls (8,3) and (8,1) .. (7.4,1) .. controls (6,2) and (5,1) .. (6,0) .. controls (6,-1) and (4.5, -0.7) .. (3.5,0.7) .. controls (1.7,2) and (0.5,2) .. (-0.5, 1) .. controls (-1,-1) and (2,-0.4) .. (1,0.7);
+					\end{tikzpicture}
+				</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<example xml:id="eg-graph-model-eulerian">
+		<title>Find a Trail on a Graph</title>
+		<statement>
+			<p>
+				In the graph below, can you trace a path starting and ending at the same vertex that uses each edge exactly once? (Vertices can be repeated.)
+			</p>
+			<sidebyside width="40%" margins="auto">
+				<image xml:id="img-graph-five-room-euler">
+				<description>Graph with six vertices and multiple edges.</description>
+			    <latex-image>
+			    	\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+					    \node (A) at (1,1) {};
+					    \node (B) at (3.5,1) {};
+					    \node (C) at (6,1) {};
+					    \node (D) at (5,3) {};
+					    \node (E) at (2,3) {};
+					    \node (O) at (3.5,6.5) {};
+					\end{scope}
+					\begin{scope}[>={Stealth[black]},
+					              every node/.style={fill=black,circle},
+					              every edge/.style={draw=black}]
+					    \path [-] (A) edge (E);
+					    \path [-] (A) edge[bend left = 50] (O); 
+					    \path [-] (A) edge[bend left = 80] (O); 
+					    \path [-] (E) edge[bend left = 10] (O); 
+					    \path [-] (E) edge[bend left = 30] (O); 
+					    \path [-] (C) edge[bend right = 50] (O); 
+					    \path [-] (C) edge[bend right = 80] (O); 
+					    \path [-] (D) edge[bend right = 10] (O); 
+					    \path [-] (D) edge[bend right = 30] (O); 
+					    \path [-] (B) edge[bend right = 20] (O); 
+					    \path [-] (A) edge (B);
+					    \path [-] (B) edge (E);
+					    \path [-] (B) edge (D);
+					    \path [-] (B) edge (C);
+					    \path [-] (D) edge (E);
+					    \path [-] (C) edge (D);
+						%\path [-] (D) edge node {$3$} (E);
+					    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<p>
+		You might be surprised to find out that answering <xref ref="eg-graph-model-room"/> is equivalent to answering <xref ref="eg-graph-model-eulerian"/>, in that a positive or negative answer to one implies the same answer for the other.
+	</p>
+	<p>
+		Here is how we can model the physical constraints of <xref ref="eg-graph-model-room"/> as the graph in <xref ref="eg-graph-model-eulerian"/>.
+		Observe that to answer the question, we only need to determine which two rooms are incident to (or beside) each wall; let's assume the outside of the building is one big room as well.
+		So we have six rooms, and we label them using the set <m>V = \{u,v,w,x,y,z\}</m> as follows:
+	</p>
+	<sidebyside width="35%" margins="auto">
+		<image xml:id="img-graph-five-room-label">
+			<description>Floor plan of a house with five rooms, all rooms (and exterior) are labeled.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.5]
+				\draw[-,thick] (0,0)--(7,0)--(7,4)--(3.5,4);
+				\draw[-,thick] (0,0)--(0,2);
+				\draw[-,thick] (0,2)--(3.5,2);
+				\draw[-,thick] (5,2)--(7,2);
+				\draw[-,thick] (2,0)--(2,2);
+				\draw[-,thick] (5,0)--(5,2);
+				\draw[-,thick] (3.5,2)--(3.5,4);
+				\draw[-,ultra thick,blue] (3.5,2)--(5,2);
+				\draw[-,ultra thick,red] (0,2)--(0,4)--(3.5,4);
+				\node[] at (3.5,6.5) {$u$};
+				\node[] at (1,1) {$v$};
+				\node[] at (3.5,1) {$w$};
+				\node[] at (6,1) {$x$};
+				\node[] at (1.75,3) {$y$};
+				\node[] at (5.25,3) {$z$};
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+	
+	<p>
+		Each wall can now be represented by a pair of rooms -- for example, the thick blue wall in the figure above can be represented as <m>(w,z)</m>, while the north and west (red) walls of room <m>y</m> can both be represented as <m>(u,y)</m>.
+	</p>
+	<p>
+		We can visually encode this information about each wall as an edge connecting the two rooms: we remove the floor plan, and draw all edges (the edges corresponding to the red and blue walls are highlighted in the graph).
+	</p>
+	<sidebyside width="35%" margins="auto">
+		<image xml:id="img-graph-five-room-euler-label">
+			<description>Graph with six labeled vertices corresponding to rooms and edges to walls.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.5]
+				\node[] at (3.5,6.5) {$u$};
+				\node[] at (1,1) {$v$};
+				\node[] at (3.5,1) {$w$};
+				\node[] at (6,1) {$x$};
+				\node[] at (1.75,3) {$y$};
+				\node[] at (5.25,3) {$z$};
+				\begin{scope}[every node/.style={circle, inner sep = 4pt, minimum size = 2pt}]
+				    \node (A) at (1,1) {};
+				    \node (B) at (3.5,1) {};
+				    \node (C) at (6,1) {};
+				    \node (D) at (5,3) {};
+				    \node (E) at (2,3) {};
+				    \node (O) at (3.5,6.5) {};
+				\end{scope}
+
+				\begin{scope}[>={Stealth[black]},
+				              every node/.style={fill=black,circle},
+				              every edge/.style={draw=black}]
+				    \path [-] (A) edge (E);
+				    \path [-] (A) edge[bend left = 50] (O); 
+				    \path [-] (A) edge[bend left = 80] (O); 
+				    \path [-] (E) edge[thick,red,bend left = 10] (O); 
+				    \path [-] (E) edge[thick,red,bend left = 30] (O); 
+				    \path [-] (C) edge[bend right = 50] (O); 
+				    \path [-] (C) edge[bend right = 80] (O); 
+				    \path [-] (D) edge[bend right = 10] (O); 
+				    \path [-] (D) edge[bend right = 30] (O); 
+				    \path [-] (B) edge[bend right = 20] (O); 
+				    \path [-] (A) edge (B);
+				    \path [-] (B) edge (E);
+				    \path [-] (B) edge[thick,blue] (D);
+				    \path [-] (B) edge (C);
+				    \path [-] (D) edge (E);
+				    \path [-] (C) edge (D);
+				\end{scope}
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+
+	<p>
+		Hence the question of whether or not it is possible to walk through all the walls of the building exactly once, is the same as determining if there is a way to walk along each edge of the graph obtained exactly once.
+		For instance, here is the blue path shown in <xref ref="eg-graph-model-room"/>, as a trail along the graph (where red walls/edges are not used).
+	</p>
+	<sidebyside widths="35% 35%" margins="auto">
+		<image xml:id="img-graph-five-room-path-example">
+			<description>Path through rooms of the five-room house.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.5]
+				\draw (4,2);
+				\draw[-,thick] (0,0)--(7,0)--(7,4)--(0,4);
+				\draw[-,thick] (0,2)--(2,2);
+				\draw[-,thick] (0,2)--(0,0);
+				\draw[-,thick] (2,0)--(2,2);
+				\draw[-,thick,red] (5,0)--(5,2);
+				\draw[-,thick,red] (3.5,2)--(3.5,4);
+				\draw[-,thick,red] (0,2) -- (0,4);
+				\draw[-,thick,red] (2,2) -- (7,2);
+				%\draw (0,0) grid (7,4);
+				%\draw [blue] plot [smooth, tension=2] coordinates { (1,1) (1.1,2) (1.2,3) (0,3) (-1,3.5) (-1,5) (1,5) (2,3)};
+				\draw [blue,dashed,thick] (1,0.7) .. controls (0.8,2) .. (1.7,3) .. controls (2.5,5) and (4.2,5) .. (5.2, 2.8) .. controls (6.5,2.3) .. (7.4,3) .. controls (8,3) and (8,1) .. (7.4,1) .. controls (6,2) and (5,1) .. (6,0) .. controls (6,-1) and (4.5, -0.7) .. (3.5,0.7) .. controls (1.7,2) and (0.5,2) .. (-0.5, 1) .. controls (-1,-1) and (2,-0.4) .. (1,0.7);
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+		<image xml:id="img-graph-five-room-euler-example">
+			<description>Corresponding trail through the graph.</description>
+		    <latex-image>
+		    	\begin{tikzpicture}[scale=0.5]
+				\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+				    \node (A) at (1,1) {};
+				    \node (B) at (3.5,1) {};
+				    \node (C) at (6,1) {};
+				    \node (D) at (5,3) {};
+				    \node (E) at (2,3) {};
+				    \node (O) at (3.5,6.5) {};
+				\end{scope}
+
+				\begin{scope}[>={Stealth[black]},
+				              every node/.style={fill=black,circle},
+				              every edge/.style={thick,draw=black,dashed}]
+				    \path [-] (A) edge[blue] (E);
+				    \path [-] (A) edge[blue,bend left = 50] (O); 
+				    \path [-] (A) edge[blue,bend left = 80] (O); 
+				    \path [-] (E) edge[blue,bend left = 10] (O); 
+				    \path [-] (E) edge[solid,red,bend left = 30] (O); 
+				    \path [-] (C) edge[blue,bend right = 50] (O); 
+				    \path [-] (C) edge[blue,bend right = 80] (O); 
+				    \path [-] (D) edge[blue,bend right = 10] (O); 
+				    \path [-] (D) edge[blue,bend right = 30] (O); 
+				    \path [-] (B) edge[blue,bend right = 20] (O); 
+				    \path [-] (A) edge[blue] (B);
+				    \path [-] (B) edge[solid,red] (E);
+				    \path [-] (B) edge[solid,red] (D);
+				    \path [-] (B) edge[solid,red] (C);
+				    \path [-] (D) edge[solid,red] (E);
+				    \path [-] (C) edge[solid,red] (D);
+				     %\path [-] (D) edge node {$3$} (E);
+				    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+				\end{scope}
+				\end{tikzpicture}
+			</latex-image>
+		</image>
+	</sidebyside>
+
+    <p>
+    	We will prove in a later example that it is impossible to construct a path through the building that satisfies the condition being asked. 
+		What is important now is that you understand how the problem was transformed into a question about a graph.
+    </p>
+    <p>
+    	Read the next three exercises and think about how you can represent the given scenarios as graphs.
+		We will come back to each of them in a later section.
+	</p>
+
+	<exercise xml:id="ex-graph-g8">
+		<title>Small Wedding Reception</title>
+		<statement>
+			<p>
+				An about-to-be-married couple made the mistake of asking their 8 guests to indicate on their RSVPs who they would <em>not</em> like to sit with at the dinner reception.
+				There will be two tables of four seats each (it is a really small venue).
+			</p>
+			<p>
+				Given the guestlist below, is there a way to seat the guests so that everyone is satisfied?
+			</p>
+				<sidebyside width="95%" margins="auto">
+				    <tabular halign="center">
+				        <row bottom="medium">
+				            <cell>
+				                Guest
+				            </cell>
+				            <cell>
+				                Does not want  to sit beside
+				            </cell>
+				            <cell>
+				                Guest
+				            </cell>
+				            <cell>
+				                Does not want  to sit beside
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Angela
+				            </cell>
+				            <cell>
+				                Donald
+				            </cell>
+				            <cell>
+				                Giuseppe
+				            </cell>
+				            <cell>
+				                Shinzo
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Boris
+				            </cell>
+				            <cell>
+				                Emmanuel, 
+				                Justin
+				            </cell>
+				            <cell>
+				                Justin
+				            </cell>
+				            <cell>
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Donald
+				            </cell>
+				            <cell>
+				                Angela,
+				                Emmanuel,
+				                Justin
+				            </cell>
+				            <cell>
+				                Shinzo
+				            </cell>
+				            <cell>
+				                Donald
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Emmanuel
+				            </cell>
+				            <cell>
+				                Boris
+				            </cell>
+				            <cell>
+				                Vladimir
+				            </cell>
+				            <cell>
+				                Emmanuel
+				            </cell>
+				        </row>
+				    </tabular>
+				</sidebyside>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-herbs">
+		<title>Medicine Delivery</title>
+		<statement>
+			<p>
+				You are working as a delivery person for a company selling medicinal herbs online.
+				On April 20th, a particularly busy day, you have to make deliveries to Brampton, Burlington, Cambridge, and Guelph; the company has its distribution center in Mississauga, which is where you live as well.
+				Given the table of distances below, can you determine the route that will take you from the distribution center in Mississauga, to each city exactly once, then back home, such that total distance traveled is minimized?
+			</p>
+				<sidebyside width="90%" margins="auto">
+				    <tabular halign="center">
+				        <row bottom="medium">
+				            <cell>
+				                distance (km)
+				            </cell>
+				            <cell>
+				                Mississauga
+				            </cell>
+				            <cell>
+				                Brampton
+				            </cell>
+				            <cell>
+				                Burlington
+				            </cell>
+				            <cell>
+				                Cambridge
+				            </cell>
+				            <cell>
+				                Guelph
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Mississauga
+				            </cell>
+				            <cell>
+				            </cell>
+				            <cell>
+				                22
+				            </cell>
+				            <cell>
+				                41
+				            </cell>
+				            <cell>
+				                72
+				            </cell>
+				            <cell>
+				                72
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Brampton
+				            </cell>
+				            <cell>
+				                22
+				            </cell>
+				            <cell>
+				            </cell>
+				            <cell>
+				                60
+				            </cell>
+				            <cell>
+				                75
+				            </cell>
+				            <cell>
+				                65
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Burlington
+				            </cell>
+				            <cell>
+				                41
+				            </cell>
+				            <cell>
+				                60
+				            </cell>
+				            <cell>
+				            </cell>
+				            <cell>
+				                49
+				            </cell>
+				            <cell>
+				                50
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Cambridge
+				            </cell>
+				            <cell>
+				                72
+				            </cell>
+				            <cell>
+				                75
+				            </cell>
+				            <cell>
+				                49
+				            </cell>
+				            <cell>
+				            </cell>
+				            <cell>
+				                25
+				            </cell>
+				        </row>
+				        <row>
+				            <cell>
+				                Guelph
+				            </cell>
+				            <cell>
+				                72
+				            </cell>
+				            <cell>
+				                65
+				            </cell>
+				            <cell>
+				                50
+				            </cell>
+				            <cell>
+				                25
+				            </cell>
+				            <cell>
+				            </cell>
+				        </row>
+				    </tabular>
+				</sidebyside>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-coauthors">
+		<title>Counting Collaborators</title>
+		<statement>
+			<p>
+				Six graph theorists are at a conference.
+				During a coffee break, each of them starts counting how many coauthors they have among the group (so 0 means that person has not written a paper with anyone in the group; 5 means that person has written a paper with everyone in the group).
+				When they scribble the numbers down on a napkin, they get:
+				<me>3,2,2,2,1,1</me>.
+				Prove that this is impossible, so someone must have made a mistake counting.
+			</p>
+		</statement>
+	</exercise>
+
+
 </section>

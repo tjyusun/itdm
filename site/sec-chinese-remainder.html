@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-16T23:16:41-04:00    *-->
+<!--*    on 2020-07-19T22:07:42-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -145,7 +145,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="chap-graph.html" data-scroll="chap-graph"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a><ul>
 <li><a href="sec-graph-modeling.html" data-scroll="sec-graph-modeling">Modeling with Graphs</a></li>
-<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Definitions and Eulerian Graphs</a></li>
+<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Basic Definitions</a></li>
+<li><a href="sec-graph-eulerian.html" data-scroll="sec-graph-eulerian">Eulerian Graphs</a></li>
 <li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Isomorphisms and Subgraphs</a></li>
 <li><a href="sec-graph-trees.html" data-scroll="sec-graph-trees">Connectedness and Trees</a></li>
 <li><a href="sec-graph-bipartite.html" data-scroll="sec-graph-bipartite">Bipartite and Hamiltonian Graphs</a></li>
@@ -163,57 +164,57 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">The Chinese Remainder Theorem</span>
 </h2>
 <article class="objectives goal-like" id="objectives-13"><h6 class="heading"><span class="type">Objectives</span></h6>
-<ul class="disc"><li id="li-240">State the Chinese Remainder Theorem and use it to solve systems of congruences and related problems.</li></ul></article><p id="p-677">The Chinese Remainder Theorem is a result in number theory about solving simultaneous systems of several linear congruences. In this section we explore its origins and give methods to solve these systems.</p>
+<ul class="disc"><li id="li-240">State the Chinese Remainder Theorem and use it to solve systems of congruences and related problems.</li></ul></article><p id="p-676">The Chinese Remainder Theorem is a result in number theory about solving simultaneous systems of several linear congruences. In this section we explore its origins and give methods to solve these systems.</p>
 <article class="exploration project-like" id="expl-sunzi"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sun Zi's Problem.</span>
 </h6>
-<div class="introduction" id="introduction-14">
-<p id="p-678">Sun Zi (<i class="foreign" lang="zh">孙子</i>) was a Chinese mathematician who in his text <a class="external" href="https://en.wikipedia.org/wiki/Sunzi_Suanjing" target="_blank"><span class="booktitle">Sunzi Suanjing</span></a><i class="foreign" lang="zh">《孙子算经》</i> (3rd to 5th century AD) is said to have written the earliest known reference to systems of linear congruences. In it he writes:</p>
+<div class="introduction" id="introduction-13">
+<p id="p-677">Sun Zi (<i class="foreign" lang="zh">孙子</i>) was a Chinese mathematician who in his text <a class="external" href="https://en.wikipedia.org/wiki/Sunzi_Suanjing" target="_blank"><span class="booktitle">Sunzi Suanjing</span></a><i class="foreign" lang="zh">《孙子算经》</i> (3rd to 5th century AD) is said to have written the earliest known reference to systems of linear congruences. In it he writes:</p>
 <blockquote class="blockquote" id="blockquote-4">
-<p id="p-679">‘<i class="foreign" lang="zh">今有物，不知其数。三、三数之，剩二；五、五数之，剩三；七、七数之，剩二。问物几何？</i>’</p>
+<p id="p-678">‘<i class="foreign" lang="zh">今有物，不知其数。三、三数之，剩二；五、五数之，剩三；七、七数之，剩二。问物几何？</i>’</p>
 <cite class="attribution">―<i class="foreign" lang="zh">孙子。《孙子算经》。</i></cite>
 </blockquote>
 <blockquote class="blockquote" id="blockquote-5">
-<p id="p-680">‘A number is repeatedly divided by 3, the remainder is 2; divided by 5, the remainder is 3; and by 7, the remainder is 2. What will the number be?’</p>
+<p id="p-679">‘A number is repeatedly divided by 3, the remainder is 2; divided by 5, the remainder is 3; and by 7, the remainder is 2. What will the number be?’</p>
 <cite class="attribution">―Sun Zi, <span class="booktitle">Sunzi Suanjing</span>, Vol. 3, Problem 26 (as cited in <a class="xref" data-knowl="./knowl/bib-kangsheng-1988.html" title="Bibliographic Entry 4">[4]</a>)</cite>
 </blockquote>
-<p id="p-681">We follow Sun Zi's method of solving this system.</p>
+<p id="p-680">We follow Sun Zi's method of solving this system.</p>
 </div>
 <article class="task exercise-like" id="task-18"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-682">The first condition in Sun Zi's problem can be written as</p>
+<p id="p-681">The first condition in Sun Zi's problem can be written as</p>
 <div class="displaymath">
 \begin{equation*}
 x \equiv 2 \Mod{3}\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Write all three conditions as a system of linear congruences.</p></article><article class="task exercise-like" id="task-19"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-683">Since the integers 3, 5, and 7 are pairwise relatively prime, then \(35^{-1} \Mod{3}\) exists. Compute this quantity.</p>
-<p id="p-684">Similarly, compute \(21^{-1} \Mod{5}\) and \(15^{-1} \Mod{7}\text{.}\)</p></article><article class="task exercise-like" id="task-20"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-685">Explain why each of the following congruences hold:</p>
+<p id="p-682">Since the integers 3, 5, and 7 are pairwise relatively prime, then \(35^{-1} \Mod{3}\) exists. Compute this quantity.</p>
+<p id="p-683">Similarly, compute \(21^{-1} \Mod{5}\) and \(15^{-1} \Mod{7}\text{.}\)</p></article><article class="task exercise-like" id="task-20"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-684">Explain why each of the following congruences hold:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} 2 \cdot 35^{-1} \cdot 35 \equiv 2 \Mod{3} \\ 3 \cdot 21^{-1} \cdot 21 \equiv 3 \Mod{5} \\ 2 \cdot 15^{-1} \cdot 15 \equiv 2 \Mod{7} \end{cases}\text{.}
 \end{equation*}
 </div></article><article class="task exercise-like" id="task-21"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-686">Explain why we can conclude that</p>
+<p id="p-685">Explain why we can conclude that</p>
 <div class="displaymath">
 \begin{equation*}
 x \equiv 2 \cdot 35^{-1} \cdot 35 + 3 \cdot 21^{-1} \cdot 21 + 2 \cdot 15^{-1} \cdot 15 \Mod{105}
 \end{equation*}
 </div>
 <p data-braille="continuation">is a solution to the original system of congruences, and using your answers from (b) simplify this expression to get an answer modulo 105.</p>
-<p id="p-687">Finally, verify that the answer satisfies all three conditions.</p></article></article><p id="p-688">The method outlined in <a class="xref" data-knowl="./knowl/expl-sunzi.html" title="Exploration 4.5.1: Sun Zi's Problem">Exploration 4.5.1</a> actually works for the general case, as long as the moduli in the system are pairwise relatively prime. Before stating our main theorems let's look at a smaller examples, one with only two congruences.</p>
+<p id="p-686">Finally, verify that the answer satisfies all three conditions.</p></article></article><p id="p-687">The method outlined in <a class="xref" data-knowl="./knowl/expl-sunzi.html" title="Exploration 4.5.1: Sun Zi's Problem">Exploration 4.5.1</a> actually works for the general case, as long as the moduli in the system are pairwise relatively prime. Before stating our main theorems let's look at a smaller examples, one with only two congruences.</p>
 <article class="exercise exercise-like" id="ex-crt-small"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-small"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Two Congruences.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-small"><article class="exercise exercise-like"><p id="p-689">Find a natural number \(x\) that leaves a remainder of 3 when divided by 5, and a remainder of 1 when divided by 7.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-small"><article class="exercise exercise-like"><p id="p-688">Find a natural number \(x\) that leaves a remainder of 3 when divided by 5, and a remainder of 1 when divided by 7.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-47" id="hint-47"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-47"><div class="hint solution-like"><p id="p-690">What are the numbers that satisfy the first condition? Among these, find one satisfying the second as well.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-47" id="hint-47"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-47"><div class="hint solution-like"><p id="p-689">What are the numbers that satisfy the first condition? Among these, find one satisfying the second as well.</p></div></div>
 </div></article></div>
-<p id="p-693">The solution to <a class="xref" data-knowl="./knowl/ex-crt-small.html" title="Checkpoint 4.5.1: Two Congruences">Checkpoint 4.5.1</a> did <em class="emphasis">not</em> use the same method as <a class="xref" data-knowl="./knowl/expl-sunzi.html" title="Exploration 4.5.1: Sun Zi's Problem">Exploration 4.5.1</a> and instead just relied on listing numbers. This won't be efficient for larger systems, so let's try to proceed more systematically.</p>
+<p id="p-692">The solution to <a class="xref" data-knowl="./knowl/ex-crt-small.html" title="Checkpoint 4.5.1: Two Congruences">Checkpoint 4.5.1</a> did <em class="emphasis">not</em> use the same method as <a class="xref" data-knowl="./knowl/expl-sunzi.html" title="Exploration 4.5.1: Sun Zi's Problem">Exploration 4.5.1</a> and instead just relied on listing numbers. This won't be efficient for larger systems, so let's try to proceed more systematically.</p>
 <article class="theorem theorem-like" id="thm-crt-2"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Solution to a system of two congruences.</span>
 </h6>
-<p id="p-694">Let \(m_1,m_2 \in \mathbb{N}\) and \(\gcd(m_1,m_2) = 1\text{,}\) and consider the system</p>
+<p id="p-693">Let \(m_1,m_2 \in \mathbb{N}\) and \(\gcd(m_1,m_2) = 1\text{,}\) and consider the system</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} x \equiv a \Mod{m_1} \\ x \equiv b \Mod{m_2} \end{cases}\text{.}
@@ -232,19 +233,19 @@ x \equiv atm_2 + bsm_1 \Mod{m_1m_2}\text{,}
 </div>
 <p data-braille="continuation">and this is unique modulo \(M = m_1m_2\text{.}\)</p></article><article class="exercise exercise-like" id="ex-crt-small-again"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-small-again"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Two Congruences, again.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-small-again"><article class="exercise exercise-like"><p id="p-695">Solve <a class="xref" data-knowl="./knowl/ex-crt-small.html" title="Checkpoint 4.5.1: Two Congruences">Checkpoint 4.5.1</a> by writing its two conditions as a system of two congruences and apply the method in <a class="xref" data-knowl="./knowl/thm-crt-2.html" title="Theorem 4.5.2: Solution to a system of two congruences">Theorem 4.5.2</a>.</p></article></div>
-<p id="p-696"><a class="xref" data-knowl="./knowl/thm-crt-2.html" title="Theorem 4.5.2: Solution to a system of two congruences">Theorem 4.5.2</a> speaks to the existence and uniqueness of a solution to the given system. Try proving it yourself in the next two exercises!</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-small-again"><article class="exercise exercise-like"><p id="p-694">Solve <a class="xref" data-knowl="./knowl/ex-crt-small.html" title="Checkpoint 4.5.1: Two Congruences">Checkpoint 4.5.1</a> by writing its two conditions as a system of two congruences and apply the method in <a class="xref" data-knowl="./knowl/thm-crt-2.html" title="Theorem 4.5.2: Solution to a system of two congruences">Theorem 4.5.2</a>.</p></article></div>
+<p id="p-695"><a class="xref" data-knowl="./knowl/thm-crt-2.html" title="Theorem 4.5.2: Solution to a system of two congruences">Theorem 4.5.2</a> speaks to the existence and uniqueness of a solution to the given system. Try proving it yourself in the next two exercises!</p>
 <article class="exercise exercise-like" id="ex-crt-2-prove-existence"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-2-prove-existence"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 4.5.2, existence.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-2-prove-existence"><article class="exercise exercise-like"><p id="p-697">Prove that \(x \equiv atm_2 + bsm_1 \Mod{m_1m_2}\) satisfies both congruences in the given system.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-2-prove-existence"><article class="exercise exercise-like"><p id="p-696">Prove that \(x \equiv atm_2 + bsm_1 \Mod{m_1m_2}\) satisfies both congruences in the given system.</p></article></div>
 <article class="exercise exercise-like" id="ex-crt-2-prove-uniqueness"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-2-prove-uniqueness"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 4.5.2, uniqueness.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-2-prove-uniqueness"><article class="exercise exercise-like"><p id="p-698">Prove that \(x \equiv atm_2 + bsm_1 \Mod{m_1m_2}\) is the only solution to the given system modulo \(m_1m_2\text{.}\)</p></article></div>
-<p id="p-700">Finally we state a method for a general system of congruences.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-2-prove-uniqueness"><article class="exercise exercise-like"><p id="p-697">Prove that \(x \equiv atm_2 + bsm_1 \Mod{m_1m_2}\) is the only solution to the given system modulo \(m_1m_2\text{.}\)</p></article></div>
+<p id="p-699">Finally we state a method for a general system of congruences.</p>
 <article class="theorem theorem-like" id="thm-crt-n"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Solution to a general system of congruences.</span>
 </h6>
-<p id="p-701">Let \(m_1,m_2,\ldots,m_n \in \mathbb{N}\) and \(\gcd(m_i,m_j) = 1\) for \(i \ne j\text{,}\) and consider the system</p>
+<p id="p-700">Let \(m_1,m_2,\ldots,m_n \in \mathbb{N}\) and \(\gcd(m_i,m_j) = 1\) for \(i \ne j\text{,}\) and consider the system</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} x \equiv a_1 \Mod{m_1} \\ x \equiv a_2 \Mod{m_2} \\ \vdots \\ x \equiv a_n \Mod{m_n} \end{cases}
@@ -254,7 +255,7 @@ x \equiv atm_2 + bsm_1 \Mod{m_1m_2}\text{,}
 <ul class="disc">
 <li id="li-243">Let \(M = m_1m_2\cdots m_n\text{.}\)</li>
 <li id="li-244">
-<p id="p-702">For each \(i = 1,2,\ldots,n\text{:}\)</p>
+<p id="p-701">For each \(i = 1,2,\ldots,n\text{:}\)</p>
 <ul class="circle">
 <li id="li-245">Define \(b_i = M/m_i\) (the product of all moduli other than \(m_i\)).</li>
 <li id="li-246">Find the multiplicative inverse of \(b_i\) modulo \(m_i\text{,}\) call it \(t_i\text{.}\)</li>
@@ -269,28 +270,29 @@ x \equiv a_1b_1t_1 + a_2b_2t_2 + \cdots + a_nb_nt_n \Mod{M}\equiv \sum_{i=1}^n a
 </div>
 <p data-braille="continuation">and this is unique modulo \(M\text{.}\)</p></article><article class="exercise exercise-like" id="ex-crt-sun-zi"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-sun-zi"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sun Zi's System.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-sun-zi"><article class="exercise exercise-like"><p id="p-703">Verify that the method outlined in <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a> produces the same steps and answer as in <a class="xref" data-knowl="./knowl/expl-sunzi.html" title="Exploration 4.5.1: Sun Zi's Problem">Exploration 4.5.1</a>.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-sun-zi"><article class="exercise exercise-like"><p id="p-702">Verify that the method outlined in <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a> produces the same steps and answer as in <a class="xref" data-knowl="./knowl/expl-sunzi.html" title="Exploration 4.5.1: Sun Zi's Problem">Exploration 4.5.1</a>.</p></article></div>
 <article class="exercise exercise-like" id="ex-crt-n"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-n"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Practice.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-n"><article class="exercise exercise-like"><p id="p-704">Solve the system of congruences</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-n"><article class="exercise exercise-like"><p id="p-703">Solve the system of congruences</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} x \equiv 4 \Mod{5} \\ x \equiv 5 \Mod{6} \\ x \equiv 6 \Mod{7} \end{cases}
 \end{equation*}
 </div>
 <p data-braille="continuation">using the method in <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a>.</p></article></div>
-<p id="p-705">One consequence of <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a> is that there is a bijection between n-tuples</p>
+<p id="p-704">One consequence of <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a> is that there is a bijection between n-tuples</p>
 <div class="displaymath">
 \begin{equation*}
 (a_1,a_2,\ldots,a_n) \in \mathbb{Z}_{m_1} \times \mathbb{Z}_{m_2} \times \cdots \times \mathbb{Z}_{m_n}
 \end{equation*}
 </div>
 <p data-braille="continuation">and congruence classes modulo \(M = \prod_{i=1}^n m_i\text{,}\) as long as the moduli \(m_i\) are pairwise relatively prime.</p>
-<p id="p-706">That is, any number in \(\{0,1,\ldots,M\}\) has a unique representation as a collection of remainders \(a_i\) for each modulus \(m_i\text{.}\)</p>
-<article class="example example-like" id="eg-crt-bijection"><a data-knowl="" class="id-ref original" data-refid="hk-eg-crt-bijection"><h6 class="heading">
+<p id="p-705">That is, any number in \(\{0,1,\ldots,M\}\) has a unique representation as a collection of remainders \(a_i\) for each modulus \(m_i\text{.}\)</p>
+<article class="example example-like" id="eg-crt-bijection"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">From \(\mathbb{Z}_{10}\) to \(\mathbb{Z}_2 \times \mathbb{Z}_5\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-crt-bijection"><article class="example example-like"><p id="p-707">Let \(x \equiv 1 \Mod{2}\) and \(x \equiv 2 \Mod{5}\text{.}\) Then <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a> tells us that the solution \(x \equiv 7 \Mod{10}\) is unique.</p>
-<p id="p-708">In fact for any pair of remainders modulo 2 and 5, we get a unique congruence class modulo 10 as a solution to the system</p>
+</h6>
+<p id="p-706">Let \(x \equiv 1 \Mod{2}\) and \(x \equiv 2 \Mod{5}\text{.}\) Then <a class="xref" data-knowl="./knowl/thm-crt-n.html" title="Theorem 4.5.6: Solution to a general system of congruences">Theorem 4.5.6</a> tells us that the solution \(x \equiv 7 \Mod{10}\) is unique.</p>
+<p id="p-707">In fact for any pair of remainders modulo 2 and 5, we get a unique congruence class modulo 10 as a solution to the system</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} x \equiv a_1 \Mod{2} \\ x \equiv a_2 \Mod{5}\end{cases}
@@ -350,18 +352,17 @@ x \equiv a_1b_1t_1 + a_2b_2t_2 + \cdots + a_nb_nt_n \Mod{M}\equiv \sum_{i=1}^n a
 <td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(9\)</td>
 </tr>
 </table></div>
-</div></div></article></div>
-<article class="exercise exercise-like" id="ex-crt-bijection-power"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-bijection-power"><h6 class="heading">
+</div></div></article><article class="exercise exercise-like" id="ex-crt-bijection-power"><a data-knowl="" class="id-ref original" data-refid="hk-ex-crt-bijection-power"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Computing large powers.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-bijection-power"><article class="exercise exercise-like"><p id="p-709">Verify that 19 is a solution to the system</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-crt-bijection-power"><article class="exercise exercise-like"><p id="p-708">Verify that 19 is a solution to the system</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{cases} x \equiv 1 \Mod{3} \\ x \equiv 5 \Mod{7}\end{cases}
 \end{equation*}
 </div>
-<p id="p-710">Then, use this fact to compute \(19^{20} \mmod{21}\text{.}\)</p>
+<p id="p-709">Then, use this fact to compute \(19^{20} \mmod{21}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-48" id="hint-48"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-48"><div class="hint solution-like"><p id="p-711">Instead of computing large powers of 19, compute large powers of 1 and 5 (with respective moduli) then use <a class="xref" data-knowl="./knowl/thm-crt-2.html" title="Theorem 4.5.2: Solution to a system of two congruences">Theorem 4.5.2</a>.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-48" id="hint-48"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-48"><div class="hint solution-like"><p id="p-710">Instead of computing large powers of 19, compute large powers of 1 and 5 (with respective moduli) then use <a class="xref" data-knowl="./knowl/thm-crt-2.html" title="Theorem 4.5.2: Solution to a system of two congruences">Theorem 4.5.2</a>.</p></div></div>
 </div></article></div></section></div></main>
 </div>
 </body>

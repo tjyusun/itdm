@@ -49,10 +49,10 @@
 </g>
 <path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 42.519906 -28.344938 C 42.519906 -4.864469 23.48475 14.174594 0.000375 14.174594 C -23.484 14.174594 -42.519156 -4.864469 -42.519156 -28.344938 C -42.519156 -51.829313 -23.484 -70.868375 0.000375 -70.868375 C 23.48475 -70.868375 42.519906 -51.829313 42.519906 -28.344938 Z M 42.519906 -28.344938 " transform="matrix(1,0,0,-1,85.734,96.616)"/>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-2" x="79.763" y="164.301"/>
+  <use xlink:href="#glyph0-2" x="79.763" y="178.475"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph1-3" x="87.235" y="165.795"/>
+  <use xlink:href="#glyph1-3" x="87.235" y="179.969"/>
 </g>
 </g>
 </svg>

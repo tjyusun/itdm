@@ -15,13 +15,13 @@
             <li>Prove simple combinatorial identities.</li>
         </ul>
     </objectives>
-    -->
+    
     <introduction>
         <p>
             Short intro here
         </p>
     </introduction>
-    
+    -->
 
 
 <xi:include href="./03principles01.xml" />

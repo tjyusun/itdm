@@ -3,16 +3,730 @@
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-graph-isomorphisms">
-    <title>Isomorphisms and Subgraphs</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-graph-eulerian">
+    <title>Eulerian Graphs</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Define Eulerian graphs; determine whether a given graph is Eulerian or not. Explain how degree sequences allow us to do this.</li>
         </ul>
     </objectives>
 
-
-
+    <p>
+    	In the previous section we defined the degree of a vertex and proved some properties about degree sequences.
+    	We can use vertex degrees to answer the five-room problem in <xref ref="eg-graph-model-room"/> in the negative.
+		First, we need a few more definitions.
+	</p>
     
+    <definition xml:id="def-trail">
+    	<title>Trail</title>
+    	<statement>
+    		<p>
+    			A <term>trail</term> in a graph <m>G = (v,E)</m> is an alternating list of vertices and edges
+				<me> u_0,e_0,u_1,e_1,u_2,\ldots,e_{k-1},u_k</me>
+				such that each edge <m>e_i</m> has <m>u_i</m> and <m>u_{i+1}</m> as its endpoints, and that these <m>e_i</m>'s are distinct (for <m>i = 0,2,\ldots,k-1</m>).
+				A trail is said to be <term>closed</term> if its endpoints <m>u_0</m> and <m>u_k</m> are the same vertex.
+    		</p>
+    	</statement>
+    </definition>
+
+    <p>
+    	Note that for simple graphs we can just write a list of vertices to describe the trail since there are no multiple edges between any two vertices.
+    </p>
+
+    <example xml:id="eg-graph-trail">
+    	<title>A Trail</title>
+    	<statement>
+    		<p>
+    			The graph <m>G</m> contains the trail 1-2-6-7-3-2, denoted by the thick red edges.
+				It is not closed. 
+				Also, it cannot be continued to make it closed because one of the edges <m>(1,2)</m> or <m>(2,6)</m> would have to be repeated for the trail to make its way back to vertex <m>1</m>.
+    		</p>
+    		<sidebyside width="35%" margins="auto">
+    			<image>
+    				<latex-image>
+    					\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label=below:{\footnotesize $1$}] (1) at (0,0) {};
+						\node[label=below:{\footnotesize $2$}] (2) at (2,0) {};
+						\node[label=below:{\footnotesize $3$}] (3) at (4,0) {};
+						\node[label=below:{\footnotesize $4$}] (4) at (6,0) {};
+						\node[label=above:{\footnotesize $5$}] (5) at (0,2) {};
+						\node[label=above:{\footnotesize $6$}] (6) at (2,2) {};
+						\node[label=above:{\footnotesize $7$}] (7) at (4,2) {};
+						\node[label=above:{\footnotesize $8$}] (8) at (6,2) {};
+						\end{scope}
+
+						\node[] at (7.5,1) {$G$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={draw=black}]
+						    \path [-,ultra thick] (1) edge[red] (2);
+						    \path [-,ultra thick] (2) edge[red] (3);
+						    \path [-] (3) edge (4);
+						    \path [-] (5) edge (6);
+						    \path [-,ultra thick] (6) edge[red] (7);
+						    \path [-] (7) edge (8);
+						    \path [-] (1) edge (5);
+						    \path [-,ultra thick] (2) edge[red] (6);
+						    \path [-,ultra thick] (3) edge[red] (7);
+						    \path [-] (4) edge (8);
+						\end{scope}
+						\end{tikzpicture}
+    				</latex-image>
+    			</image>
+    		</sidebyside>
+    	</statement>
+    </example>
+
+    <definition xml:id="def-eulerian">
+    	<title>Eulerian Graph</title>
+    	<statement>
+    		<p>
+    			A graph is said to be <term>Eulerian</term> if it has a closed trail containing all its edges. 
+				This trail is called an <term>Eulerian trail</term>.
+    		</p>
+    	</statement>
+    </definition>
+
+    <p>
+    	The condition of having a closed trail that uses all the edges of a graph is equivalent to saying that the graph can be drawn on paper in one motion without lifting one's pen.
+    </p>
+
+    <example xml:id="eg-graph-eulerian">
+    	<title>Eulerian and non-Eulerian Graphs</title>
+    	<statement>
+    		<p>
+    			The graph <m>H_1</m> below is Eulerian since the closed trail 3-1-2-3-4-5-3 uses all its edges exactly once.
+    		</p>
+    		<p>
+				However the graph <m>H_2</m> is <em>not</em> Eulerian.
+				Although it contains trails (<eg/>, 4-3-2-5-4-2-1-3-5) that use all its edges exactly once, none of these are closed trails.
+    		</p>
+    		<sidebyside widths="18% 25%" margins="17%">
+    			<image>
+    				<latex-image>
+    					\begin{tikzpicture}[scale=0.4]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label={\footnotesize $1$}] (1) at (-2,1.5) {};
+						\node[label={\footnotesize $2$}] (2) at (2,2) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (0,0) {};
+						\node[label=below:{\footnotesize $4$}] (4) at (-2,-2) {};
+						\node[label=below:{\footnotesize $5$}] (5) at (2,-1.5) {};
+						\end{scope}
+
+						\node[] at (-3,0) {$H_1$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (2) edge (3);
+						    \path [-] (3) edge (1);
+						    \path [-] (3) edge (4);
+						    \path [-] (4) edge (5);
+						    \path [-] (5) edge (3);
+						\end{scope}
+						\end{tikzpicture}
+    				</latex-image>
+    			</image>
+    			<image>
+    				<latex-image>
+    					\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label={\footnotesize $1$}] (1) at (0,3.5) {};
+						\node[label=left:{\footnotesize $2$}] (2) at (-2,2) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,2) {};
+						\node[label=below:{\footnotesize $4$}] (4) at (-2,0) {};
+						\node[label=below:{\footnotesize $5$}] (5) at (2,0) {};
+						\end{scope}
+
+						\node[] at (-3.5,0) {$H_2$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (2) edge (3);
+						    \path [-] (3) edge (1);
+						    \path [-] (3) edge (4);
+						    \path [-] (2) edge (4);
+						    \path [-] (2) edge (5);
+						    \path [-] (4) edge (5);
+						    \path [-] (5) edge (3);
+						    %\path [-] (6) edge[bend left=20] (7); 
+						    %\path [-] (D) edge node {$3$} (E);
+						    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+						\end{scope}
+						\end{tikzpicture}
+    				</latex-image>
+    			</image>
+    		</sidebyside>
+    	</statement>
+    </example>
+
+    <p>
+    	It turns out that there is an easy way to tell whether a graph is Eulerian or not.
+    	Intuitively, to be able to draw an Eulerian trail on a graph, we should always be able to leave any vertex we land on, unless it is the starting vertex.
+    	Also, the graph has to be in <sq>one piece</sq>, otherwise no trail can contain all edges. 
+    	This leads to our next two definitions (we will discuss these in more detail in <xref ref="sec-graph-trees"/>).
+    </p>
+
+    <definition xml:id="def-path">
+    	<title>Path</title>
+    	<statement>
+    		<p>
+    			A <term>path</term> is a trail in which no vertices are repeated (so it is not closed). The <term>endpoints</term> of a trail are the first and last vertices. 
+    			A path with endpoints <m>u</m> and <m>v</m> is called a <m>u</m>-<m>v</m> path.
+    		</p>
+    	</statement>
+    </definition>
+
+    <definition xml:id="def-connected">
+    	<title>Connectedness</title>
+    	<statement>
+    		<p>
+    			A graph <m>G = (V,E)</m> is said to be <term>connected</term> if for all <m>u, v \in V(G)</m>, there is a <m>u</m>-<m>v</m> path joining them.
+    		</p>
+    		<p>
+    			A graph that is not connected is called <term>disconnected</term>.
+    		</p>
+    	</statement>
+    </definition>
+
+    <example xml:id="eg-graph-connected">
+    	<title>A Disconnected Graph</title>
+    	<statement>
+    		<p>
+    			The graph below is disconnected, since there is no path on the graph with endpoints <m>1</m> and <m>6</m> (among other choices).
+    		</p>
+    		<sidebyside width="17%" margins="auto">
+    			<image>
+    				<latex-image>
+    					\begin{tikzpicture}[scale=0.4]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label={\footnotesize $1$}] (1) at (-3,3) {};
+						\node[label=below:{\footnotesize $2$}] (2) at (-3,0) {};
+						\node[label=above:{\footnotesize $3$}] (3) at (-1,1.5) {};
+						\node[label=above:{\footnotesize $4$}] (4) at (1,1.5) {};
+						\node[label=below:{\footnotesize $5$}] (5) at (3,0) {};
+						\node[label=above:{\footnotesize $6$}] (6) at (3,3) {};
+						\end{scope}
+
+						%\node[] at (0,2) {$G$};
+
+						\begin{scope}[>={Stealth[black]},
+						              every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (1) edge (2);
+						    \path [-] (2) edge (3);
+						    \path [-] (3) edge (1);
+						    \path [-] (3) edge (4);
+						    \path [-] (2) edge (4);
+						    \path [-] (5) edge (6);
+						    %\path [-] (6) edge[bend left=20] (7); 
+						    %\path [-] (D) edge node {$3$} (E);
+						    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+						\end{scope}
+						\end{tikzpicture}
+    				</latex-image>
+    			</image>
+    		</sidebyside>
+    	</statement>
+    </example>
+
+    <p>
+    	Now we can state a necessary and sufficient condition for a graph to be Eulerian.
+    </p>
+
+    <theorem xml:id="thm-eulerian">
+    	<title>When is a Graph Eulerian?</title>
+    	<statement>
+    		<p>
+    			A (not necessarily simple) graph <m>G</m> is Eulerian <em>if and only if</em> 
+    			<ul>
+    				<li>all its vertex degrees are even, and</li>
+    				<li><m>G</m> is connected.</li>
+    			</ul>
+    		</p>
+    	</statement>
+    	<proof>
+    		<p>
+    			We first show the <em>only if</em> implication. 
+				Suppose <m>G</m> is a (not necessarily simple) Eulerian graph.
+				Then there is a closed trail in <m>G</m>, say
+				<me>u_0, e_0, u_1, e_1, \ldots, e_{k-1}, u_k = u_0</me>
+				that traverses all the edges of <m>G</m> exactly once.
+				(Some of the <m>u_i</m>'s may be repeated, but none of the edges are repeated.)
+    		</p>
+    		<sidebyside width="45%" margins="auto">
+    			<image>
+    				<latex-image>
+    					\begin{tikzpicture}[scale=0.7]
+						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+						\node[label=below right:{$u_{i-1}$}] (1) at (0,0) {};
+						\node[label={},opacity=0] (2) at (2,2) {};
+						\node[label=right:{},opacity=0,] (3) at (5,1) {};
+						\node[label=right:{$u_{i+1}$}] (4) at (6,-1) {};
+						\node[label=below:{$u_{i}$}] (5) at (3,0) {};
+						\node[label=right:{},opacity=0,] (6) at (-2,-1) {};
+						\node[label=right:{},opacity=0,] (7) at (7,1) {};
+						\end{scope}
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \path [-] (5) edge[opacity=0.4] (2);
+						    \path [-] (5) edge[opacity=0.4] (3);
+						    \draw[->,thick] (1) -- (5) node [midway,label=above:{\small $e_{i-1}$},yshift=-3pt] {};
+						    \draw[->,thick] (5) -- (4) node [pos=0.6,label=above:{\small $e_{i}$},yshift=-3pt] {};
+						    \path [-] (6) edge[opacity=0.4] (1);
+						    \path [-] (4) edge[opacity=0.4] (7);
+						\end{scope}
+						\end{tikzpicture}
+    				</latex-image>
+    			</image>
+    		</sidebyside>
+    		<p>
+    			For each vertex in <m>V(G)</m>, each time it appears in this list (say as <m>u_i</m>), the trail passes through it and we add two to its degree (one from <m>e_{i-1} = (u_{i-1},u_i)</m> and one from <m>e_i = (u_i,u_{i+1})</m>).
+				This is true even for <m>u_0</m> since we also add two to its degree for the first and last edge of the trail, which comes back to <m>u_k = u_0</m>.
+			</p>
+			<p>
+				Hence all vertex degrees must be even.
+				The graph <m>G</m> must also be connected if it contains an Eulerian trail.
+				This shows the <em>only if</em> direction.
+			</p>
+			<p>
+				The <em>if</em> implication is better explained by the following algorithm:
+			</p>
+			<p>
+				Suppose <m>G</m> is a graph whose vertices all have even degree, and also assume that every vertex is reachable from every other vertex. 
+				We will construct an Eulerian trail on <m>G</m>.
+			</p>
+			<p>
+				<dl>
+					<li>
+						<title>Step 1.</title>
+						<p>Choose any vertex <m>v</m> of <m>G</m>, and create a trail that starts and ends at <m>v</m>, never repeating an edge.</p>
+					</li>
+					<li>
+						<title>Step 2.</title>
+						<p>Call this trail <m>C</m>.</p>
+					</li>
+					<li>
+						<title>Step 3.</title>
+						<p>If <m>C</m> is all of <m>G</m>, then we are done, and we have found an Eulerian trail in <m>G</m>.</p>
+					</li>
+					<li>
+						<title>Step 4.</title>
+						<p>If not, then remove the edges of <m>C</m> from <m>G</m> to form a new graph <m>G'</m>.
+						Since <m>C</m> is a closed trail, removing it reduces each vertex degree of <m>G</m> by an even number, so <m>G'</m> also has all vertex degrees even.</p>
+					</li>
+					<li>
+						<title>Step 5.</title>
+						<p>Choose a vertex <m>v'</m> common to <m>C</m> and <m>G'</m>, and create a trail in <m>G'</m> that starts and ends at <m>v'</m>.
+						Call this new trail <m>C'</m>.
+						</p>
+					</li>
+					<li>
+						<title>Step 6.</title>
+						<p>Combine <m>C</m> and <m>C'</m> to get a new trail <m>C''</m> by inserting <m>C'</m> where the vertex <m>v'</m> occurs in <m>C</m>.
+						Now set <m>C = C''</m> and go back to Step 2.
+						</p>
+					</li>
+				</dl>
+			</p>
+			<sidebyside widths="24% 24% 24%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.4]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+
+						\node (1) at (0,0) {};
+						\node (2) at (6,0) {};
+						\node (3) at (0,6) {};
+						\node[label=right:{$v$}] (4) at (6,6) {};
+						\node (5) at (3,6) {};
+						\node (6) at (6,3) {};
+						\end{scope}
+
+						\node[] at (8,3.5) {$G$};
+						\node[red] at (3,3) {\footnotesize $C$};
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,red,->] (4) -- node[above]{\footnotesize $1$} (5);
+						    \draw[thick,red,->] (5) -- node[above,yshift=2pt]{\footnotesize $2$} (1);
+						    \draw[thick,red,->] (1) -- node[above]{\footnotesize $3$} (2);
+						    \draw[thick,red,->] (2) -- node[right]{\footnotesize $4$} (6);
+						    \draw[thick,red,->] (6) -- node[right]{\footnotesize $5$} (4);
+						    \path [-] (3) edge (1);
+						    \path [-] (3) edge (5);
+						    \path [-] (5) edge (6);
+						    \path [-] (6) edge (1);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.4]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (0,0) {};
+						%\node (2) at (6,0) {};
+						\node (3) at (0,6) {};
+						%\node[label=above:{$v$},opacity=0] (4) at (6,6) {};
+						\node[label=above:{$v'$}] (5) at (3,6) {};
+						\node (6) at (6,3) {};
+						\end{scope}
+
+						\node[] at (8,3.5) {$G'$};
+						\node[blue] at (2,4) {\footnotesize $C'$};
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,blue,->] (5) -- node[above]{\footnotesize $1$} (6);
+						    \draw[thick,blue,->] (6) -- node[above,yshift=2pt]{\footnotesize $2$} (1);
+						    \draw[thick,blue,->] (1) -- node[left]{\footnotesize $3$} (3);
+						    \draw[thick,blue,->] (3) -- node[above]{\footnotesize $4$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.4]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (0,0) {};
+						\node (2) at (6,0) {};
+						\node (3) at (0,6) {};
+						\node (4) at (6,6) {};
+						\node (5) at (3,6) {};
+						\node (6) at (6,3) {};
+						\end{scope}
+
+						\node[] at (8,3) {$G$};
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,->] (4) -- node[above]{\footnotesize $1$} (5);
+						    \draw[thick,->] (5) -- node[above]{\footnotesize $2$} (6);
+						    \draw[thick,->] (6) -- node[above]{\footnotesize $3$} (1);
+						    \draw[thick,->] (1) -- node[left]{\footnotesize $4$} (3);
+						    \draw[thick,->] (3) -- node[above]{\footnotesize $5$} (5);
+						    \draw[thick,->] (5) -- node[above,yshift=3pt]{\footnotesize $6$} (1);
+						    \draw[thick,->] (1) -- node[below]{\footnotesize $7$} (2);
+						    \draw[thick,->] (2) -- node[right]{\footnotesize $8$} (6);
+						    \draw[thick,->] (6) -- node[right]{\footnotesize $9$} (4);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				The above algorithm constructs an Eulerian trail on <m>G</m> by first finding a closed trail <m>C</m>, then finding another trail <m>C'</m> through the remaining edges, and finally combining both trails by inserting <m>C'</m> at the vertex <m>v'</m> in trail <m>C</m>.
+			</p>
+    	</proof>
+    </theorem>
+
+    <example xml:id="eg-graph-model-room-solution">
+    	<title>Solution to the Five-Room Problem</title>
+    	<statement>
+    		<p>
+    			Now we can finally resolve <xref ref="eg-graph-model-room"/>.
+    			Whether or not one can walk through all the walls of the building exactly once and return to the same room is equivalent to asking whether the graph of <xref ref="eg-graph-model-eulerian"/> contains an Eulerian trail or not.
+				The answer here is <alert>no</alert>, since the graph has vertices of odd degree.
+    		</p>
+    	</statement>
+    </example>
+
+    <example xml:id="eg-graph-not-eulerian">
+    	<title>Disconnected, so not Eulerian</title>
+    	<statement>
+    		<p>
+    			The vertices of the graph below all have even degree.
+    			However the graph is not Eulerian since it is disconnected.
+    		</p>
+    		<sidebyside width="15%" margins="auto">
+    			<image>
+    				<latex-image>
+    					\begin{tikzpicture}[scale=0.3]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=below:{\footnotesize $1$}] (1) at (0,0) {};
+						\node[label=below:{\footnotesize $2$}] (2) at (4,0) {};
+						\node[label=above:{\footnotesize $3$}] (3) at (4,4) {};
+						\node[label=above:{\footnotesize $4$}] (4) at (0,4) {};
+						\node[label=below:{\footnotesize $5$}] (5) at (2,-1) {};
+						\node[label=below:{\footnotesize $6$}] (6) at (5,2) {};
+						\node[label=above:{\footnotesize $7$}] (7) at (2,5) {};
+						\node[label=below:{\footnotesize $8$}] (8) at (-1,2) {};
+						\end{scope}
+
+						%\node[] at (7,1) {$H$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (1);
+						    \draw[thick,-] (5) -- (6) -- (7) -- (8) -- (5);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+    				</latex-image>
+    			</image>
+    		</sidebyside>
+    	</statement>
+	</example>
+
+	<exercise xml:id="ex-graph-find-eulerian-trail">
+		<title>Find Eulerian Trails</title>
+		<statement>
+			<p>
+				Verify that all vertex degrees of <m>G_1</m>, <m>G_2</m>, and <m>G_3</m> are even, then find an Eulerian trail in each graph. (Note that <m>G_3</m> is a multigraph.)
+			</p>
+			<sidebyside widths="27% 27% 27%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.3]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=below:{\footnotesize $1$}] (1) at (0,0) {};
+						\node[label=below:{\footnotesize $2$}] (2) at (-3,1.5) {};
+						\node[label=below:{\footnotesize $3$}] (3) at (3,1.5) {};
+						\node[label=left:{\footnotesize $4$}] (4) at (-4,4) {};
+						\node[label=right:{\footnotesize $5$}] (5) at (4,4) {};
+						\node[label=above:{\footnotesize $6$}] (6) at (-3,6.5) {};
+						\node[label=above:{\footnotesize $7$}] (7) at (3,6.5) {};
+						\node[label=above:{\footnotesize $8$}] (8) at (0,8) {};
+						\end{scope}
+
+						\node[] at (6,2) {$G_1$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (4) -- (8) -- (3) -- (6) -- (7) -- (2) -- (5) -- (1) -- (4);
+						    \draw[thick,-] (1) -- (2) -- (4) -- (6) -- (8) -- (7) -- (5) -- (3) -- (1);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.3]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=below:{\footnotesize $1$}] (1) at (0,0) {};
+						\node[label=below:{\footnotesize $2$}] (2) at (2,2) {};
+						\node[label=above:{\footnotesize $3$}] (3) at (4,4) {};
+						\node[label=below:{\footnotesize $4$}] (4) at (6,2) {};
+						\node[label=below:{\footnotesize $5$}] (5) at (8,0) {};
+						\node[label=below:{\footnotesize $6$}] (6) at (4,0) {};
+						\node[label=above:{\footnotesize $7$}] (7) at (0,4) {};
+						\node[label=above:{\footnotesize $8$}] (8) at (8,4) {};
+						\node[label=below:{\footnotesize $9$}] (9) at (10,2) {};
+						\node[label=below:{\footnotesize $10$}] (10) at (12,0) {};
+						\node[label=above:{\footnotesize $11$}] (11) at (12,4) {};
+						\end{scope}
+
+						\node[] at (6,-2) {$G_2$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (6) -- (1);
+						    \draw[thick,-] (7) -- (3) -- (8) -- (9) -- (10) -- (5) -- (6) -- (2) -- (7);
+						    \draw[thick,-] (11) -- (9) -- (5) -- (4) -- (8) -- (11);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=below:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=below:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=left:{\footnotesize $3$}] (3) at (-2,2) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (2,2) {};
+						\node[label=above:{\footnotesize $5$}] (5) at (-1,4) {};
+						\node[label=above:{\footnotesize $6$}] (6) at (1,4) {};
+						\end{scope}
+
+						\node[] at (3,1) {$G_3$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (5) -- (6) -- (2) -- (1);
+						    \draw[thick,-] (6) -- (4) -- (3) -- (1) -- (6);
+						    \path [-] (3) edge[bend right=30] (4);
+						    \path [-] (4) edge[bend right=30] (3);
+						    \path [-] (2) edge[bend right=20] (5);
+						    \path [-] (5) edge[bend right=20] (2);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
+
+	<p>
+		We end this section by defining some special graphs.
+	</p>
+
+	<definition xml:id="def-cycle">
+		<title>Cycle</title>
+		<statement>
+			<p>
+				A <term>cycle</term> is a closed trail in which only the first and last vertices are repeated.
+			</p>
+			<p>
+				The <term>cycle graph</term> with <m>n</m> vertices is denoted by <m>C_n</m>, and is a graph that consists of a single cycle.
+			</p>
+			<notation>
+				<usage>C_n</usage>
+				<description>cycle on <m>n</m> vertices</description>
+			</notation>
+		</statement>
+	</definition>
+
+	<definition xml:id="def-complete-graph">
+		<title>Complete Graph</title>
+		<statement>
+			<p>
+				The <term>complete graph</term> on <m>n</m> vertices is denoted by <m>K_n</m>, and is the simple graph on <m>n</m> vertices that consists of all possible edges between all vertex pairs.
+			</p>
+			<notation>
+				<usage>K_n</usage>
+				<description>complete graph on <m>n</m> vertices</description>
+			</notation>
+		</statement>
+	</definition>
+
+	<example xml:id="eg-cycle-complete">
+		<title>Examples</title>
+		<statement>
+			<p>
+				Here are the graphs of <m>C_4</m>, <m>C_5</m>, <m>K_4</m>, and <m>K_5</m> (from left to right).
+			</p>
+			<sidebyside widths="16% 20% 16% 20%" margins="auto">
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (0,0) {};
+						\node (2) at (2,0) {};
+						\node (3) at (2,2) {};
+						\node (4) at (0,2) {};
+						\end{scope}
+
+						%\node[] at (3,1) {$C_5$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (1);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (-1,0) {};
+						\node (2) at (1,0) {};
+						\node (3) at (2,2) {};
+						\node (4) at (0,3.5) {};
+						\node (5) at (-2,2) {};
+						\end{scope}
+
+						%\node[] at (3,1) {$C_5$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (1);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (0,0) {};
+						\node (2) at (2,0) {};
+						\node (3) at (2,2) {};
+						\node (4) at (0,2) {};
+						\end{scope}
+
+						%\node[] at (3,1) {$C_5$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (1);
+						    \draw[thick,-] (1) -- (3);
+						    \draw[thick,-] (2) -- (4);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image>
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (-1,0) {};
+						\node (2) at (1,0) {};
+						\node (3) at (2,2) {};
+						\node (4) at (0,3.5) {};
+						\node (5) at (-2,2) {};
+						\end{scope}
+
+						%\node[] at (3,1) {$C_5$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (1);
+						    \draw[thick,-] (1) -- (3) -- (5) -- (2) -- (4) -- (1);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<exercise xml:id="ex-graph-complete-edges">
+		<title>Compute <m>|E(K_n)|</m></title>
+		<statement>
+			<p>
+				Determine <m>|E(K_n)|</m>, the number of edges of the complete graph on <m>n</m> vertices.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-cycle-complete-degrees">
+		<title>Are <m>C_n</m> and <m>K_n</m> Eulerian?</title>
+		<statement>
+			<p>
+				Determine the degree sequences of <m>C_n</m> and <m>K_n</m> for any <m>n \in \mathbb{N}</m>.
+				Then show that the graph <m>C_n</m> is Eulerian for all <m>n \in \mathbb{N}</m>, while the complete graph <m>K_n</m> is Eulerian only for odd <m>n \in \mathbb{N}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-graph-complete-find-eulerian">
+		<title>Find Eulerian Trails on <m>K_5</m> and <m>K_7</m></title>
+		<statement>
+			<p>
+				Find an Eulerian trail on each of <m>K_5</m> and on <m>K_7</m>.
+			</p>
+		</statement>
+	</exercise>
+
 </section>

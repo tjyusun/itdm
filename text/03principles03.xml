@@ -51,7 +51,7 @@
 				Count the number of derangements <m>D_n</m> of the set <m>\{1,2,\ldots,n\}</m> using <xref ref="thm-pie"/>, by following these steps:
 				<notation>
 					<usage>D_n</usage>
-					<description>Number of derangements of <m>\{1,2,\ldots,n\}</m></description>
+					<description>number of derangements of <m>\{1,2,\ldots,n\}</m></description>
 				</notation>
 			</p>
 		</introduction>

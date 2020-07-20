@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-16T23:16:38-04:00    *-->
+<!--*    on 2020-07-19T22:07:39-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -145,7 +145,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="chap-graph.html" data-scroll="chap-graph"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a><ul>
 <li><a href="sec-graph-modeling.html" data-scroll="sec-graph-modeling">Modeling with Graphs</a></li>
-<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Definitions and Eulerian Graphs</a></li>
+<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Basic Definitions</a></li>
+<li><a href="sec-graph-eulerian.html" data-scroll="sec-graph-eulerian">Eulerian Graphs</a></li>
 <li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Isomorphisms and Subgraphs</a></li>
 <li><a href="sec-graph-trees.html" data-scroll="sec-graph-trees">Connectedness and Trees</a></li>
 <li><a href="sec-graph-bipartite.html" data-scroll="sec-graph-bipartite">Bipartite and Hamiltonian Graphs</a></li>
@@ -174,9 +175,10 @@ MathJax.Hub.Config({
 <li id="li-64">How many buildings are there on the UTM campus?</li>
 </ul>
 <p data-braille="continuation">Often we are also interested in counting the number of different ways some given scenario or condition can happen. For instance, consider the following example:</p>
-<article class="example example-like" id="eg-counting-kiss-marry-kill"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-kiss-marry-kill"><h6 class="heading">
+<article class="example example-like" id="eg-counting-kiss-marry-kill"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">First Counting Example.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-kiss-marry-kill"><article class="example example-like"><p id="p-90">In the game <em class="emphasis">Kiss, Marry, Kill</em>,<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> you are given three different names, and you must decide which one among them to kiss/marry/kill (with the understanding that you can't kiss the person you marry, and the person you kiss, you can only kiss one time).</p>
+</h6>
+<p id="p-90">In the game <em class="emphasis">Kiss, Marry, Kill</em>,<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> you are given three different names, and you must decide which one among them to kiss/marry/kill (with the understanding that you can't kiss the person you marry, and the person you kiss, you can only kiss one time).</p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">You may know this game by a different name.</div></div>
 <p id="p-91">How many possible ways can you answer?</p>
 <div class="solutions">
@@ -212,8 +214,7 @@ MathJax.Hub.Config({
 </tr>
 </table></div></div></div>
 </div></div>
-</div></article></div>
-<p id="p-93"><a class="xref" data-knowl="./knowl/eg-counting-kiss-marry-kill.html" title="Example 2.1.1: First Counting Example">Example 2.1.1</a> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?</p>
+</div></article><p id="p-93"><a class="xref" data-knowl="./knowl/eg-counting-kiss-marry-kill.html" title="Example 2.1.1: First Counting Example">Example 2.1.1</a> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?</p>
 <article class="exercise exercise-like" id="ex-counting-coldplay"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-coldplay"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coldplay"><article class="exercise exercise-like"><p id="p-94">Three friends (Mina, Lisa, and Wendy) were able to get three seats together in a row at a Coldplay concert.</p>
@@ -225,9 +226,10 @@ MathJax.Hub.Config({
 <a data-knowl="" class="id-ref original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-95">a. 6; b. 2</p></div></div>
 </div></article></div>
 <p id="p-98">The techniques we will develop will help us count when the number of possibilities is too large that we can't simply list them all! For instance, the next example is one where listing all possibilities seems like a bad idea.</p>
-<article class="example example-like" id="eg-counting-dogs"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-dogs"><h6 class="heading">
+<article class="example example-like" id="eg-counting-dogs"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Dog Adoption.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-dogs"><article class="example example-like"><p id="p-99">There are 10 dogs up for adoption at your local animal shelter. You and 9 other friends decide to adopt one dog each. How many ways can you assign dogs to people?</p>
+</h6>
+<p id="p-99">There are 10 dogs up for adoption at your local animal shelter. You and 9 other friends decide to adopt one dog each. How many ways can you assign dogs to people?</p>
 <p id="p-100"><em class="alert">Solution (but not really)</em> If we first fix you and your friends in some specified order (human 1, human 2, human 3, and so on) and name the dogs A, B, C, up to J, then each adoption arrangement corresponds to an <em class="emphasis">ordering of the letters A to J in a list</em>, where the position of each letter corresponds to the person adopting that dog.</p>
 <p id="p-101">For example, the arrangement</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
@@ -269,8 +271,7 @@ MathJax.Hub.Config({
 </tr>
 </table></div></div></div>
 <p id="p-102">means that dog J is assigned to human 1, dog I is assigned to human 2, and so on, while the arrangement DJABECIHGF means dog D is assigned to human 1, dog J to human 2, and so on…</p>
-<p id="p-103">You should quickly realize there are too many combinations to list!</p></article></div>
-<p id="p-104">When possible, it is a good idea to <em class="emphasis">exploit the structure</em> of what we are counting! Two rules for counting will help us get started: the Sum Rule and the Product Rule. Think about the following checkpoint, which is similar to something you might have seen in grade school:</p>
+<p id="p-103">You should quickly realize there are too many combinations to list!</p></article><p id="p-104">When possible, it is a good idea to <em class="emphasis">exploit the structure</em> of what we are counting! Two rules for counting will help us get started: the Sum Rule and the Product Rule. Think about the following checkpoint, which is similar to something you might have seen in grade school:</p>
 <article class="exercise exercise-like" id="ex-counting-socks"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-socks"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Socks!</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-socks"><article class="exercise exercise-like"><p id="p-105">You plan to move to a new apartment by the end of the month, and while packing your clothes, you note that you have 3 pairs of black socks, 4 pairs of white socks, and 2 pairs of blue socks.</p>
@@ -343,9 +344,10 @@ MathJax.Hub.Config({
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-128">Induction on \(k\text{.}\)</p></div></div>
 </div></article></div>
-<article class="example example-like" id="eg-counting-mcq"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-mcq"><h6 class="heading">
+<article class="example example-like" id="eg-counting-mcq"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Multiple Choice Exam.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-mcq"><article class="example example-like"><p id="p-129">A multiple-choice exam has 20 questions and four choices for each question. How many possible combinations of responses are there?</p>
+</h6>
+<p id="p-129">A multiple-choice exam has 20 questions and four choices for each question. How many possible combinations of responses are there?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="figs/mcq1.png" style="width: 100%; height: auto;" alt="Multiple-choice bubble sheet with five questions and four boxes each for choices A, B, C, D."></div></div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
@@ -359,8 +361,7 @@ MathJax.Hub.Config({
 <p id="p-131">In other words, pure guessing as a strategy will on average result in a perfect score once every one trillion tries. In comparison, the odds of matching six numbers in Lotto 6/49 is much better: one in 14 million.</p>
 <p id="p-132">If we allow questions to be left unanswered, then there are \(5^{20}=95367431640625\text{,}\) around 96 trillion possible ways to answer the test.</p>
 </div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="ex-counting-coldplay2"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-coldplay2"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="ex-counting-coldplay2"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-coldplay2"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Concert Seating with \(n\) people.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coldplay2"><article class="exercise exercise-like"><p id="p-133">Apply the Product Rule to answer (a) and (b) of <a class="xref" data-knowl="./knowl/ex-counting-coldplay.html" title="Checkpoint 2.1.2: Concert Seating">Checkpoint 2.1.2</a>, then generalize this method to count the number of ways to sit \(n\) people in a row of \(n\) seats.</p></article></div>
 <p id="p-135">Because the following operation frequently turns up in counting problems, we have a special name for it.</p>
@@ -376,15 +377,15 @@ n! = \prod_{i=1}^n i = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 2 \cdot 1\te
 <p data-braille="continuation">By convention we define \(0! = 1\text{.}\) </p></article><article class="remark remark-like" id="remark-factorial"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.15</span><span class="period">.</span>
 </h6>
-<p id="p-137">For problems where the answer involves a factorial, it is fine to leave the factorial in your answer without computing the actual value.</p></article><article class="example example-like" id="eg-counting-dogs-again"><a data-knowl="" class="id-ref original" data-refid="hk-eg-counting-dogs-again"><h6 class="heading">
+<p id="p-137">For problems where the answer involves a factorial, it is fine to leave the factorial in your answer without computing the actual value.</p></article><article class="example example-like" id="eg-counting-dogs-again"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Dog Adoption, again.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-dogs-again"><article class="example example-like"><p id="p-138"><a class="xref" data-knowl="./knowl/eg-counting-dogs.html" title="Example 2.1.3: Dog Adoption">Example 2.1.3</a> had too many combinations to list, but using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> we see that there are a total of</p>
+</h6>
+<p id="p-138"><a class="xref" data-knowl="./knowl/eg-counting-dogs.html" title="Example 2.1.3: Dog Adoption">Example 2.1.3</a> had too many combinations to list, but using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> we see that there are a total of</p>
 <div class="displaymath">
 \begin{equation*}
 10! = 10 \times 9 \times 8 \times \cdots \times 1 = 3628800 \text{ combinations}\text{.}
 \end{equation*}
-</div></article></div>
-<article class="exercise exercise-like" id="ex-counting-party-leaders"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-party-leaders"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="ex-counting-party-leaders"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-party-leaders"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Trip Planning.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-party-leaders"><article class="exercise exercise-like"><p id="p-139">Four friends (Andrew, Jagmeet, Yves-François, and Jo-Ann) are planning a trip to Ottawa, and they need to assign tasks (booking flights, booking hotel rooms, and making an itinerary) to three people. Andrew cannot be trusted to make an itinerary; also, either Jagmeet or Jo-Ann must book hotel rooms. How many ways can they assign tasks?</p>
 <p id="p-140">Think carefully about which counting principle(s) to apply here. Explain your method of calculation properly.</p>

@@ -1,0 +1,289 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-19T22:07:43-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Eulerian Graphs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
+\newcommand{\vdia}{\textcolor{red}{\vardiamond}}
+\newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
+\newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
+
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="MAT202.html"><span class="title">MAT202: Introduction to Discrete Mathematics</span></a></h1>
+<p class="byline">TJ Yusun</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-graph-terms.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap-graph.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-graph-isomorphisms.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-graph-terms.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap-graph.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-graph-isomorphisms.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front.html" data-scroll="front"><span class="title">Front Matter</span></a><ul>
+<li><a href="front-welcome.html" data-scroll="front-welcome">Welcome Message</a></li>
+<li><a href="front-how-to-use.html" data-scroll="front-how-to-use">How to Use This Resource</a></li>
+<li><a href="front-feedback.html" data-scroll="front-feedback">Feedback and Acknowledgements</a></li>
+<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-review-mat102.html" data-scroll="chap-review-mat102"><span class="codenumber">1</span> <span class="title">Review of MAT102</span></a><ul>
+<li><a href="sec-sets-and-functions.html" data-scroll="sec-sets-and-functions">Sets and Functions</a></li>
+<li><a href="sec-logic-and-proof-techniques.html" data-scroll="sec-logic-and-proof-techniques">Logic and Proof Techniques</a></li>
+<li><a href="sec-integers-divisibility.html" data-scroll="sec-integers-divisibility">Integers and Divisibility</a></li>
+<li><a href="sec-reading-writing-proofs.html" data-scroll="sec-reading-writing-proofs">Reading and Writing Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-counting.html" data-scroll="chap-counting"><span class="codenumber">2</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="sec-basic-counting.html" data-scroll="sec-basic-counting">The Basic Counting Principles</a></li>
+<li><a href="sec-permutations-combinations.html" data-scroll="sec-permutations-combinations">Permutations and Combinations</a></li>
+<li><a href="sec-binomial-coefficients.html" data-scroll="sec-binomial-coefficients">Binomial Coefficients</a></li>
+<li><a href="sec-balls-in-bins.html" data-scroll="sec-balls-in-bins">The Balls in Bins Formula</a></li>
+<li><a href="sec-combinatorial-arguments.html" data-scroll="sec-combinatorial-arguments">Combinatorial Arguments</a></li>
+<li><a href="sec-counting-summary.html" data-scroll="sec-counting-summary">Summary</a></li>
+<li><a href="exercises-counting.html" data-scroll="exercises-counting">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-principles.html" data-scroll="chap-principles"><span class="codenumber">3</span> <span class="title">Pigeonhole and Inclusion-Exclusion</span></a><ul>
+<li><a href="sec-pigeonhole.html" data-scroll="sec-pigeonhole">The Pigeonhole Principle</a></li>
+<li><a href="sec-inclusion-exclusion.html" data-scroll="sec-inclusion-exclusion">Principle of Inclusion-Exclusion</a></li>
+<li><a href="sec-derangements.html" data-scroll="sec-derangements">Application: Derangements</a></li>
+<li><a href="exercises-principles.html" data-scroll="exercises-principles">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-congruence.html" data-scroll="chap-congruence"><span class="codenumber">4</span> <span class="title">Congruence Modulo \(n\)</span></a><ul>
+<li><a href="sec-equivalence.html" data-scroll="sec-equivalence">Equivalence Relations</a></li>
+<li><a href="sec-congruence.html" data-scroll="sec-congruence">Congruences and their Properties</a></li>
+<li><a href="sec-congruence-solving.html" data-scroll="sec-congruence-solving">Solving Congruences</a></li>
+<li><a href="sec-euler.html" data-scroll="sec-euler">Euler's Theorem</a></li>
+<li><a href="sec-chinese-remainder.html" data-scroll="sec-chinese-remainder">The Chinese Remainder Theorem</a></li>
+<li><a href="exercises-congruence.html" data-scroll="exercises-congruence">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-graph.html" data-scroll="chap-graph"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec-graph-modeling.html" data-scroll="sec-graph-modeling">Modeling with Graphs</a></li>
+<li><a href="sec-graph-terms.html" data-scroll="sec-graph-terms">Basic Definitions</a></li>
+<li><a href="sec-graph-eulerian.html" data-scroll="sec-graph-eulerian" class="active">Eulerian Graphs</a></li>
+<li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Isomorphisms and Subgraphs</a></li>
+<li><a href="sec-graph-trees.html" data-scroll="sec-graph-trees">Connectedness and Trees</a></li>
+<li><a href="sec-graph-bipartite.html" data-scroll="sec-graph-bipartite">Bipartite and Hamiltonian Graphs</a></li>
+<li><a href="exercises-graph.html" data-scroll="exercises-graph">Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">B</span> <span class="title">List of Results</span></a></li>
+<li class="link"><a href="solutions-8.html" data-scroll="solutions-8"><span class="codenumber">C</span> <span class="title">Solutions to Selected Exercises</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-graph-eulerian"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Eulerian Graphs</span>
+</h2>
+<article class="objectives goal-like" id="objectives-16"><h6 class="heading"><span class="type">Objectives</span></h6>
+<ul class="disc"><li id="li-274">Define Eulerian graphs; determine whether a given graph is Eulerian or not. Explain how degree sequences allow us to do this.</li></ul></article><p id="p-782">In the previous section we defined the degree of a vertex and proved some properties about degree sequences. We can use vertex degrees to answer the five-room problem in <a class="xref" data-knowl="./knowl/eg-graph-model-room.html" title="Example 5.1.1: The Five-Room Problem">Example 5.1.1</a> in the negative. First, we need a few more definitions.</p>
+<article class="definition definition-like" id="def-trail"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Trail.</span>
+</h6>
+<p id="p-783">A <dfn class="terminology">trail</dfn> in a graph \(G = (v,E)\) is an alternating list of vertices and edges</p>
+<div class="displaymath">
+\begin{equation*}
+u_0,e_0,u_1,e_1,u_2,\ldots,e_{k-1},u_k
+\end{equation*}
+</div>
+<p data-braille="continuation">such that each edge \(e_i\) has \(u_i\) and \(u_{i+1}\) as its endpoints, and that these \(e_i\)'s are distinct (for \(i = 0,2,\ldots,k-1\)). A trail is said to be <dfn class="terminology">closed</dfn> if its endpoints \(u_0\) and \(u_k\) are the same vertex.</p></article><p id="p-784">Note that for simple graphs we can just write a list of vertices to describe the trail since there are no multiple edges between any two vertices.</p>
+<article class="example example-like" id="eg-graph-trail"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">A Trail.</span>
+</h6>
+<p id="p-785">The graph \(G\) contains the trail 1-2-6-7-3-2, denoted by the thick red edges. It is not closed. Also, it cannot be continued to make it closed because one of the edges \((1,2)\) or \((2,6)\) would have to be repeated for the trail to make its way back to vertex \(1\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-41.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="definition definition-like" id="def-eulerian"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Eulerian Graph.</span>
+</h6>
+<p id="p-786">A graph is said to be <dfn class="terminology">Eulerian</dfn> if it has a closed trail containing all its edges. This trail is called an <dfn class="terminology">Eulerian trail</dfn>.</p></article><p id="p-787">The condition of having a closed trail that uses all the edges of a graph is equivalent to saying that the graph can be drawn on paper in one motion without lifting one's pen.</p>
+<article class="example example-like" id="eg-graph-eulerian"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Eulerian and non-Eulerian Graphs.</span>
+</h6>
+<p id="p-788">The graph \(H_1\) below is Eulerian since the closed trail 3-1-2-3-4-5-3 uses all its edges exactly once.</p>
+<p id="p-789">However the graph \(H_2\) is <em class="emphasis">not</em> Eulerian. Although it contains trails (e.g., 4-3-2-5-4-2-1-3-5) that use all its edges exactly once, none of these are closed trails.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;">
+<div class="sbspanel" style="width:27.2727272727273%;justify-content:flex-start;"><img src="images/image-42.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:37.8787878787879%;justify-content:flex-start;"><img src="images/image-43.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><p id="p-790">It turns out that there is an easy way to tell whether a graph is Eulerian or not. Intuitively, to be able to draw an Eulerian trail on a graph, we should always be able to leave any vertex we land on, unless it is the starting vertex. Also, the graph has to be in ‘one piece’, otherwise no trail can contain all edges. This leads to our next two definitions (we will discuss these in more detail in <a href="sec-graph-trees.html" class="internal" title="Section 5.5: Connectedness and Trees">Section 5.5</a>).</p>
+<article class="definition definition-like" id="def-path"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Path.</span>
+</h6>
+<p id="p-791">A <dfn class="terminology">path</dfn> is a trail in which no vertices are repeated (so it is not closed). The <dfn class="terminology">endpoints</dfn> of a trail are the first and last vertices. A path with endpoints \(u\) and \(v\) is called a \(u\)-\(v\) path.</p></article><article class="definition definition-like" id="def-connected"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Connectedness.</span>
+</h6>
+<p id="p-792">A graph \(G = (V,E)\) is said to be <dfn class="terminology">connected</dfn> if for all \(u, v \in V(G)\text{,}\) there is a \(u\)-\(v\) path joining them.</p>
+<p id="p-793">A graph that is not connected is called <dfn class="terminology">disconnected</dfn>.</p></article><article class="example example-like" id="eg-graph-connected"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">A Disconnected Graph.</span>
+</h6>
+<p id="p-794">The graph below is disconnected, since there is no path on the graph with endpoints \(1\) and \(6\) (among other choices).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:41.5%;margin-right:41.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-44.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="p-795">Now we can state a necessary and sufficient condition for a graph to be Eulerian.</p>
+<article class="theorem theorem-like" id="thm-eulerian"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">When is a Graph Eulerian?</span>
+</h6>
+<p id="p-796">A (not necessarily simple) graph \(G\) is Eulerian <em class="emphasis">if and only if</em></p>
+<ul class="disc">
+<li id="li-275">all its vertex degrees are even, and</li>
+<li id="li-276">\(G\) is connected.</li>
+</ul></article><article class="hiddenproof" id="proof-9"><a data-knowl="" class="id-ref original" data-refid="hk-proof-9"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-797">We first show the <em class="emphasis">only if</em> implication. Suppose \(G\) is a (not necessarily simple) Eulerian graph. Then there is a closed trail in \(G\text{,}\) say</p>
+<div class="displaymath">
+\begin{equation*}
+u_0, e_0, u_1, e_1, \ldots, e_{k-1}, u_k = u_0
+\end{equation*}
+</div>
+<p data-braille="continuation">that traverses all the edges of \(G\) exactly once. (Some of the \(u_i\)'s may be repeated, but none of the edges are repeated.)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-45.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-798">For each vertex in \(V(G)\text{,}\) each time it appears in this list (say as \(u_i\)), the trail passes through it and we add two to its degree (one from \(e_{i-1} = (u_{i-1},u_i)\) and one from \(e_i = (u_i,u_{i+1})\)). This is true even for \(u_0\) since we also add two to its degree for the first and last edge of the trail, which comes back to \(u_k = u_0\text{.}\)</p>
+<p id="p-799">Hence all vertex degrees must be even. The graph \(G\) must also be connected if it contains an Eulerian trail. This shows the <em class="emphasis">only if</em> direction.</p>
+<p id="p-800">The <em class="emphasis">if</em> implication is better explained by the following algorithm:</p>
+<p id="p-801">Suppose \(G\) is a graph whose vertices all have even degree, and also assume that every vertex is reachable from every other vertex. We will construct an Eulerian trail on \(G\text{.}\)</p>
+<dl id="p-802" class="description-list">
+<dt id="li-277">Step 1.</dt>
+<dd><p id="p-803">Choose any vertex \(v\) of \(G\text{,}\) and create a trail that starts and ends at \(v\text{,}\) never repeating an edge.</p></dd>
+<dt id="li-278">Step 2.</dt>
+<dd><p id="p-804">Call this trail \(C\text{.}\)</p></dd>
+<dt id="li-279">Step 3.</dt>
+<dd><p id="p-805">If \(C\) is all of \(G\text{,}\) then we are done, and we have found an Eulerian trail in \(G\text{.}\)</p></dd>
+<dt id="li-280">Step 4.</dt>
+<dd><p id="p-806">If not, then remove the edges of \(C\) from \(G\) to form a new graph \(G'\text{.}\) Since \(C\) is a closed trail, removing it reduces each vertex degree of \(G\) by an even number, so \(G'\) also has all vertex degrees even.</p></dd>
+<dt id="li-281">Step 5.</dt>
+<dd><p id="p-807">Choose a vertex \(v'\) common to \(C\) and \(G'\text{,}\) and create a trail in \(G'\) that starts and ends at \(v'\text{.}\) Call this new trail \(C'\text{.}\)</p></dd>
+<dt id="li-282">Step 6.</dt>
+<dd><p id="p-808">Combine \(C\) and \(C'\) to get a new trail \(C''\) by inserting \(C'\) where the vertex \(v'\) occurs in \(C\text{.}\) Now set \(C = C''\) and go back to Step 2.</p></dd>
+</dl>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:4.666666666666667%;margin-right:4.666666666666667%;">
+<div class="sbspanel" style="width:26.4705882352941%;justify-content:flex-start;"><img src="images/image-46.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:26.4705882352941%;justify-content:flex-start;"><img src="images/image-47.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:26.4705882352941%;justify-content:flex-start;"><img src="images/image-48.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-809">The above algorithm constructs an Eulerian trail on \(G\) by first finding a closed trail \(C\text{,}\) then finding another trail \(C'\) through the remaining edges, and finally combining both trails by inserting \(C'\) at the vertex \(v'\) in trail \(C\text{.}\)</p></article></div>
+<article class="example example-like" id="eg-graph-model-room-solution"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Solution to the Five-Room Problem.</span>
+</h6>
+<p id="p-810">Now we can finally resolve <a class="xref" data-knowl="./knowl/eg-graph-model-room.html" title="Example 5.1.1: The Five-Room Problem">Example 5.1.1</a>. Whether or not one can walk through all the walls of the building exactly once and return to the same room is equivalent to asking whether the graph of <a class="xref" data-knowl="./knowl/eg-graph-model-eulerian.html" title="Example 5.1.2: Find a Trail on a Graph">Example 5.1.2</a> contains an Eulerian trail or not. The answer here is <em class="alert">no</em>, since the graph has vertices of odd degree.</p></article><article class="example example-like" id="eg-graph-not-eulerian"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Disconnected, so not Eulerian.</span>
+</h6>
+<p id="p-811">The vertices of the graph below all have even degree. However the graph is not Eulerian since it is disconnected.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:42.5%;margin-right:42.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-49.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="ex-graph-find-eulerian-trail"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-find-eulerian-trail"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Find Eulerian Trails.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-find-eulerian-trail"><article class="exercise exercise-like"><p id="p-812">Verify that all vertex degrees of \(G_1\text{,}\) \(G_2\text{,}\) and \(G_3\) are even, then find an Eulerian trail in each graph. (Note that \(G_3\) is a multigraph.)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.166666666666667%;margin-right:3.166666666666667%;">
+<div class="sbspanel" style="width:28.8256227758007%;justify-content:flex-start;"><img src="images/image-50.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.8256227758007%;justify-content:flex-start;"><img src="images/image-51.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.8256227758007%;justify-content:flex-start;"><img src="images/image-52.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article></div>
+<p id="p-813">We end this section by defining some special graphs.</p>
+<article class="definition definition-like" id="def-cycle"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Cycle.</span>
+</h6>
+<p id="p-814">A <dfn class="terminology">cycle</dfn> is a closed trail in which only the first and last vertices are repeated.</p>
+<p id="p-815">The <dfn class="terminology">cycle graph</dfn> with \(n\) vertices is denoted by \(C_n\text{,}\) and is a graph that consists of a single cycle.</p></article><article class="definition definition-like" id="def-complete-graph"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Complete Graph.</span>
+</h6>
+<p id="p-816">The <dfn class="terminology">complete graph</dfn> on \(n\) vertices is denoted by \(K_n\text{,}\) and is the simple graph on \(n\) vertices that consists of all possible edges between all vertex pairs.</p></article><article class="example example-like" id="eg-cycle-complete"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Examples.</span>
+</h6>
+<p id="p-817">Here are the graphs of \(C_4\text{,}\) \(C_5\text{,}\) \(K_4\text{,}\) and \(K_5\) (from left to right).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:3.5%;margin-right:3.5%;">
+<div class="sbspanel" style="width:17.2043010752688%;justify-content:flex-start;"><img src="images/image-53.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.505376344086%;justify-content:flex-start;"><img src="images/image-54.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:17.2043010752688%;justify-content:flex-start;"><img src="images/image-55.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.505376344086%;justify-content:flex-start;"><img src="images/image-56.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="exercise exercise-like" id="ex-graph-complete-edges"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-complete-edges"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Compute \(|E(K_n)|\).</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-complete-edges"><article class="exercise exercise-like"><p id="p-818">Determine \(|E(K_n)|\text{,}\) the number of edges of the complete graph on \(n\) vertices.</p></article></div>
+<article class="exercise exercise-like" id="ex-graph-cycle-complete-degrees"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-cycle-complete-degrees"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Are \(C_n\) and \(K_n\) Eulerian?</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-cycle-complete-degrees"><article class="exercise exercise-like"><p id="p-819">Determine the degree sequences of \(C_n\) and \(K_n\) for any \(n \in \mathbb{N}\text{.}\) Then show that the graph \(C_n\) is Eulerian for all \(n \in \mathbb{N}\text{,}\) while the complete graph \(K_n\) is Eulerian only for odd \(n \in \mathbb{N}\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="ex-graph-complete-find-eulerian"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-complete-find-eulerian"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Find Eulerian Trails on \(K_5\) and \(K_7\).</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-complete-find-eulerian"><article class="exercise exercise-like"><p id="p-820">Find an Eulerian trail on each of \(K_5\) and on \(K_7\text{.}\)</p></article></div></section></div></main>
+</div>
+</body>
+</html>
