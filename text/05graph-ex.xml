@@ -13,10 +13,901 @@
 <exercise>
 	<statement>
 		<p>
-
+			Write the definitions for each of the following terms: graph, simple graph, vertex, edge, degree, degree sequence, trail, path, cycle, complete graph, Eulerian, subgraph, graph isomorphism, complement, connectedness, tree, forest, leaf, bipartite graph, Hamiltonian graph.
 		</p>
 	</statement>
 </exercise>
+
+<exercise>
+	<statement>
+		<p>
+			List all vertices and edges of the graphs <m>G_1</m>, <m>G_2</m>, and <m>G_3</m>:
+		</p>
+		<sidebyside widths="25% 24% 20%" margins="auto" valign="middle">
+			<image xml:id="img-graph-ex-G1">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+					\node[label={\footnotesize $v_1$}] (1) at (0,0) {};
+					\node[label={\footnotesize $v_2$}] (2) at (2,2) {};
+					\node[label=right:{\footnotesize $v_3$}] (3) at (4,-2) {};
+					\node[label=below:{\footnotesize $v_4$}] (4) at (6,0) {};
+					\node[label=below:{\footnotesize $v_5$}] (5) at (8,0) {};
+					\node[label={\footnotesize $v_6$}] (6) at (5,2) {};
+					\node[label={\footnotesize $v_7$}] (7) at (2,-2) {};
+					\end{scope}
+
+					\node[] at (7.5,2) {$G_1$};
+
+					\begin{scope}[>={Stealth[black]},
+					              every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \path [-] (1) edge (2);
+					    \path [-] (3) edge (2);
+					    \path [-] (3) edge (4);
+					    \path [-] (5) edge (4);
+					    \path [-] (6) edge (4);
+					    \path [-] (5) edge (6);
+					    \path [-] (7) edge (6);
+					    \path [-] (7) edge (1);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-G2">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+					\node[label={\footnotesize $y_1$}] (1) at (0,0) {};
+					\node[label={\footnotesize $y_2$}] (2) at (2,2) {};
+					\node[label=below:{\footnotesize $y_6$}] (3) at (2,-2) {};
+					\node[label={\footnotesize $y_3$}] (4) at (4,2) {};
+					\node[label=below:{\footnotesize $y_5$}] (5) at (4,-2) {};
+					\node[label={\footnotesize $y_4$}] (6) at (6,0) {};
+					\end{scope}
+
+					\node[] at (7,-1.5) {$G_2$};
+
+					\begin{scope}[>={Stealth[black]},
+					              every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \path [-] (1) edge (2);
+					    \path [-] (1) edge (3);
+					    \path [-] (1) edge (4);
+					    \path [-] (1) edge (5);
+					    \path [-] (1) edge (6);
+					    \path [-] (2) edge (3);
+					    \path [-] (2) edge (4);
+					    \path [-] (2) edge (5);
+					    \path [-] (2) edge (6);
+					    \path [-] (3) edge (4);
+					    \path [-] (3) edge (5);
+					    \path [-] (3) edge (6);
+					    \path [-] (4) edge (5);
+					    \path [-] (4) edge (6);
+					    \path [-] (5) edge (6);
+					    %\path [-] (6) edge[bend left=20] (7); 
+					    %\path [-] (D) edge node {$3$} (E);
+					    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-G3">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+					\node[label=left:{\footnotesize $v_1$}] (1) at (-2,-1) {};
+					\node[label={\footnotesize $v_2$}] (2) at (-1,1.5) {};
+					\node[label=below:{\footnotesize $v_3$}] (3) at (0,-3) {};
+					\node[label={\footnotesize $v_4$}] (4) at (1,1.5) {};
+					\node[label=right:{\footnotesize $v_5$}] (5) at (2,-1) {};
+					\node[label=right:{\footnotesize $v_6$}] (6) at (2,-3) {};
+					\end{scope}
+
+					\node[] at (3,2) {$G_3$};
+
+					\begin{scope}[>={Stealth[black]},
+					              every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \path [-] (1) edge (2);
+					    \path [-] (1) edge (3);
+					    \path [-] (1) edge (4);
+					    \path [-] (1) edge (5);
+					    \path [-] (2) edge (4);
+					    \path [-] (3) edge (4);
+					    \path [-] (3) edge (5);
+					    \path [-] (4) edge (5);
+					    \path [-] (3) edge (6);
+					    \path [-] (5) edge (6);
+					    %\path [-] (6) edge[bend left=20] (7); 
+					    %\path [-] (D) edge node {$3$} (E);
+					    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Determine the degree sequences of the graphs <m>G_1</m>, <m>G_2</m>, and <m>G_3</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Determine which of the graphs <m>G_1</m>, <m>G_2</m>, <m>G_3</m> are Eulerian, and for each one that is, find an Eulerian trail. 
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			For each nonincreasing sequence of numbers below, draw a simple graph with that degree sequence, or explain why it is impossible to do so.
+			<ol label="(a)">
+				<li>1,1,1,1,1</li>
+				<li>1,1,1,1,1,1</li>
+				<li>2,2,2,2,2,2</li>
+				<li>9,3,3,2,1</li>
+				<li>4,4,2,2,2</li>
+				<li>4,4,3,2,1</li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			You meet with six other friends for lunch, and because you had just learned about <xref ref="ex-graph-handshake-lemma"/> in class, you ask each of your friends how many in the group they shook hands with before eating.
+			You are surprised to hear each friend reply with a different number from 1 to 6.
+			How many hands did you shake at that lunch?
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<title>April 2016 Final</title>
+	<statement>
+		<p>
+			In a group of two or more people, must there always be at least two people who are acquainted with the same number of people within the group?
+			Explain your answer.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			For which natural <m>n \geq 3</m> is <m>C_n</m> Eulerian? How about <m>K_n</m>? <m>P_n</m>?
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			How many different Eulerian trails does <m>C_n</m> have for <m>n \geq 3</m>?
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find two nonisomorphic simple graphs w/ degree sequence 3,3,3,3,2,2,2,2.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<title>April 2017 Final</title>
+	<statement>
+		<p>
+			Let <m>G</m> be a graph on <m>n</m> vertices.
+			It is known that there are 6 vertices which have degree 3, and all of the remaining vertices are of degree 4. 
+			Show that <m>G</m> cannot be disconnected with exactly two isomorphic connected components.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Prove that the following graphs <m>P</m> and <m>Q</m> are isomorphic.
+		</p>
+		<sidebyside widths="24% 22%" margins="25%">
+			<image xml:id="img-graph-ex-P">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.6]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=left:{\footnotesize $a$}] (1) at (-1,0) {};
+					\node[label=right:{\footnotesize $b$}] (2) at (1,0) {};
+					\node[label=right:{\footnotesize $c$}] (3) at (2,2) {};
+					\node[label=left:{\footnotesize $d$}] (4) at (0,3) {};
+					\node[label=left:{\footnotesize $e$}] (5) at (-2,2) {};
+					\end{scope}
+
+					\node[] at (-3,1) {$P$};
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (2) -- (4) -- (1) -- (5) -- (3) -- (1);
+					    \draw[thick,-] (5) -- (2);
+					    \draw[thick,-] (3) -- (4);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-Q">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.6]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=below left:{\footnotesize $4$}] (1) at (0,2) {};
+					\node[label=right:{\footnotesize $5$}] (2) at (0,0) {};
+					\node[label=above:{\footnotesize $2$}] (3) at (0,3) {};
+					\node[label=left:{\footnotesize $1$}] (4) at (-2,3) {};
+					\node[label=right:{\footnotesize $3$}] (5) at (2,3) {};
+					\end{scope}
+
+					\node[] at (-2,1) {$Q$};
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (2) -- (4) -- (1) -- (5) -- (3) -- (1);
+					    \draw[thick,-] (5) -- (2);
+					    \draw[thick,-] (3) -- (4);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Are there any isomorphic graphs among <m>G_4</m>, <m>G_5</m>, and <m>G_6</m>?
+		</p>
+		<sidebyside widths="28% 25% 25%" margins="auto">
+			<image xml:id="img-graph-ex-G4">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+					\node[label={\footnotesize $1$}] (1) at (0,0) {};
+					\node[label={\footnotesize $2$}] (2) at (2,0) {};
+					\node[label=above:{\footnotesize $3$}] (3) at (4,0) {};
+					\node[label=below:{\footnotesize $4$}] (4) at (6,0) {};
+					\node[label=below:{\footnotesize $5$}] (5) at (8,0) {};
+					\node[label={\footnotesize $6$}] (6) at (6,2) {};
+					\node[label=left:{\footnotesize $7$}] (7) at (2,-2) {};
+					\end{scope}
+
+					\node[] at (1.5,2.5) {$G_4$};
+
+					\begin{scope}[>={Stealth[black]},
+					              every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \path [-] (1) edge (2);
+					    \path [-] (3) edge (2);
+					    \path [-] (3) edge (4);
+					    \path [-] (5) edge (4);
+					    \path [-] (6) edge (4);
+					    \path [-] (5) edge (6);
+					    \path [-] (7) edge (3);
+					    \path [-] (6) edge (3);
+					    \path [-] (7) edge (1);
+					    \path [-] (7) edge (2);
+					    %\path [-] (6) edge[bend left=20] (7); 
+					    %\path [-] (D) edge node {$3$} (E);
+					    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-G5">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+					\node[label=below:{\footnotesize $1$}] (1) at (0,0) {};
+					\node[label={\footnotesize $2$}] (2) at (2,2) {};
+					\node[label=below:{\footnotesize $7$}] (7) at (2,-2) {};
+					\node[label={\footnotesize $3$}] (3) at (4,2) {};
+					\node[label=below:{\footnotesize $6$}] (6) at (4,-2) {};
+					\node[label=below:{\footnotesize $5$}] (5) at (6,-1) {};
+					\node[label={\footnotesize $4$}] (4) at (6,1) {};
+
+
+					\end{scope}
+
+					\node[] at (-0.5,1.5) {$G_5$};
+
+					\begin{scope}[>={Stealth[black]},
+					              every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \path [-] (1) edge (2);
+					    \path [-] (1) edge (3);
+					    \path [-] (2) edge (3);
+					    \path [-] (3) edge (4);
+					    \path [-] (4) edge (5);
+					    \path [-] (5) edge (6);
+					    \path [-] (6) edge (7);
+					    \path [-] (7) edge (1);
+					    \path [-] (7) edge (3);
+					    \path [-] (2) edge (6);
+					    %\path [-] (6) edge[bend left=20] (7); 
+					    %\path [-] (D) edge node {$3$} (E);
+					    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-G6">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
+					\node[label=below:{\footnotesize $1$}] (1) at (0,0) {};
+					\node[label=above right:{\footnotesize $2$}] (2) at (-2,0) {};
+					\node[label=below:{\footnotesize $3$}] (3) at (-2,-2) {};
+					\node[label=above left:{\footnotesize $4$}] (4) at (-4,-2) {};
+					\node[label=above:{\footnotesize $5$}] (5) at (-1,2) {};
+					\node[label=right:{\footnotesize $6$}] (6) at (2,2) {};
+					\node[label=right:{\footnotesize $7$}] (7) at (2,-2) {};
+
+
+					\end{scope}
+
+					\node[] at (-4,1.5) {$G_6$};
+
+					\begin{scope}[>={Stealth[black]},
+					              every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \path [-] (1) edge (2);
+					    \path [-] (1) edge (3);
+					    \path [-] (1) edge (4);
+					    \path [-] (2) edge (3);
+					    \path [-] (3) edge (4);
+					    \path [-] (4) edge (5);
+					    \path [-] (5) edge (6);
+					    \path [-] (6) edge (7);
+					    \path [-] (5) edge (7);
+					    \path [-] (4) edge (7);
+					    %\path [-] (6) edge[bend left=20] (7); 
+					    %\path [-] (D) edge node {$3$} (E);
+					    %\path [-] (B) edge[bend right=60] node {$1$} (E); 
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Prove that graph isomorphism is an equivalence relation on the set of all simple graphs.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			There are eleven simple graphs on four vertices (up to isomorphism). 
+			Find all of them.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Show that the following two graphs are not isomorphic:
+		</p>
+		<sidebyside widths="17% 17%" margins="30%">
+			<image xml:id="img-graph-ex-not-isomorphic-1">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.4]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node (1) at (0,0) {};
+					\node (2) at (4,0) {};
+					\node (3) at (2,3.7) {};
+					\node (4) at (1.3,1) {};
+					\node (5) at (2.7,1) {};
+					\node (6) at (2,2) {};
+					\end{scope}
+
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (2) -- (3) -- (1);
+					    \draw[thick,-] (4) -- (5) -- (6) -- (4);
+					    \draw[thick,-] (1) -- (4);
+					    \draw[thick,-] (2) -- (5);
+					    \draw[thick,-] (3) -- (6);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-not-isomorphic-2">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node (1) at (-1,0) {};
+					\node (2) at (1,0) {};
+					\node (3) at (2,1.5) {};
+					\node (4) at (1,3) {};
+					\node (5) at (-1,3) {};
+					\node (6) at (-2,1.5) {};
+					\end{scope}
+
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (2) -- (3) -- (4);
+					    \draw[thick,-] (4) -- (5) -- (6) -- (1);
+					    \draw[thick,-] (1) -- (4);
+					    \draw[thick,-] (2) -- (5);
+					    \draw[thick,-] (3) -- (6);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-any-isomorphic">
+	<statement>
+		<p>
+			Are there any isomorphic graphs among the following graphs?
+		</p>
+		<sidebyside widths="22% 22% 22% 22%" margins="auto">
+			<image xml:id="img-graph-ex-any-isomorphic-1">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.7]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node (1) at (0,0) {};
+					\node (2) at (3,0) {};
+					\node (3) at (3,3) {};
+					\node (4) at (0,3) {};
+					\node (5) at (1,1) {};
+					\node (6) at (2,1) {};
+					\node (7) at (2,2) {};
+					\node (8) at (1,2) {};
+					\end{scope}
+
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (1);
+					    \draw[thick,-] (5) -- (6) -- (7) -- (8) -- (5);
+					    \draw[thick,-] (1) -- (5);
+					    \draw[thick,-] (2) -- (6);
+					    \draw[thick,-] (3) -- (7);
+					    \draw[thick,-] (4) -- (8);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-any-isomorphic-2">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node (1) at (1,2.4) {};
+					\node (2) at (1,-2.4) {};
+					\node (3) at (-1,2.4) {};
+					\node (4) at (-1,-2.4) {};
+					\node (5) at (2.4,1) {};
+					\node (6) at (2.4,-1) {};
+					\node (7) at (-2.4,1) {};
+					\node (8) at (-2.4,-1) {};
+					\end{scope}
+
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (6) -- (3) -- (8) -- (2) -- (5) -- (4) -- (7) -- (1);
+					    \draw[thick,-] (1) -- (8);
+					    \draw[thick,-] (2) -- (7);
+					    \draw[thick,-] (3) -- (5);
+					    \draw[thick,-] (4) -- (6);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-any-isomorphic-3">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.7]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node (1) at (0,0) {};
+					\node (2) at (0,1) {};
+					\node (3) at (0,2) {};
+					\node (4) at (0,3) {};
+					\node (5) at (3,0) {};
+					\node (6) at (3,1) {};
+					\node (7) at (3,2) {};
+					\node (8) at (3,3) {};
+					\end{scope}
+
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (6) -- (3) -- (8) -- (2) -- (5) -- (4) -- (7) -- (1);
+					    \draw[thick,-] (1) -- (8);
+					    \draw[thick,-] (2) -- (7);
+					    \draw[thick,-] (3) -- (5);
+					    \draw[thick,-] (4) -- (6);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-any-isomorphic-4">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node (1) at (1,2.4) {};
+					\node (2) at (1,-2.4) {};
+					\node (3) at (-1,2.4) {};
+					\node (4) at (-1,-2.4) {};
+					\node (5) at (2.4,1) {};
+					\node (6) at (2.4,-1) {};
+					\node (7) at (-2.4,1) {};
+					\node (8) at (-2.4,-1) {};
+					\end{scope}
+
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (5) -- (6) -- (2) -- (4) -- (8) -- (7) -- (3) -- (1);
+					    \draw[thick,-] (1) -- (4);
+					    \draw[thick,-] (2) -- (3);
+					    \draw[thick,-] (5) -- (8);
+					    \draw[thick,-] (6) -- (7);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-complement-deg-sequence">
+	<statement>
+		<p>
+			Suppose that a graph <m>G</m> has degree sequence 3, 3, 2, 2, 2, 1, 1.
+			What is the degree sequence of <m>\overline{G}</m>?
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Generalize <xref ref="ex-complement-deg-sequence"/>.
+			How are the degree sequences of a graph <m>G</m> and its complement <m>\overline{G}</m> related?
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Can a graph <m>G</m> be isomorphic to its complement <m>\overline{G}</m>? 
+			Either find an example (if yes) or prove it cannot happen (if no).
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Prove that <m>C_n</m> is connected for <m>n \geq 2</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Prove that <m>K_n</m> is connected for <m>n \geq 2</m>.
+		</p>
+	</statement>
+</exercise>
+
+
+<exercise xml:id="ex-path-transitive">
+	<statement>
+		<p>
+			In a graph <m>G = (V,E)</m>, explain why a <m>u</m>-<m>v</m> path and a <m>v</m>-<m>w</m> path, when connected at the point <m>v</m>, may not necessarily result in a path.
+		</p>
+		<p>
+			Prove that a <m>u</m>-<m>v</m> path and a <m>v</m>-<m>w</m> path together must <em>contain</em> a <m>u</m>-<m>w</m> path.
+		</p>
+	</statement>
+</exercise>
+
+
+<exercise xml:id="ex-connectedness-relation">
+	<statement>
+		<p>
+			Let <m>G = (V,E)</m> be a simple graph. 
+			Prove that the relation <m>\sim</m> on <m>V</m> given by
+			<me> u \sim v \ \Leftrightarrow \ \text{$u$ and $v$ are joined by a $u$-$v$ path}</me>
+			is an equivalence relation. 
+			This is called the connectedness relation on the vertices of a graph.
+		</p>
+	</statement>
+	<hint>
+		<p>
+			Use <xref ref="ex-path-transitive"/> to show transitivity.
+		</p>
+	</hint>
+</exercise>
+
+
+<exercise>
+	<statement>
+		<p>
+			Describe the equivalence class <m>[1]</m> of the vertex 1 in the graph below, based on the connectedness relation defined in <xref ref="ex-connectedness-relation"/>.
+		</p>
+		<sidebyside width="24%" margins="auto">
+			<image xml:id="img-graph-ex-connectedness-relation">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.5]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=left:{\footnotesize $1$}] (1) at (1,1) {};
+					\node[label=left:{\footnotesize $2$}] (2) at (2,3) {};
+					\node[label=left:{\footnotesize $3$}] (3) at (3,2) {};
+					\node[label=right:{\footnotesize $4$}] (4) at (5,3) {};
+					\node[label=left:{\footnotesize $5$}] (5) at (4,1) {};
+					\node[label=right:{\footnotesize $6$}] (6) at (6,1) {};
+					\node[label=right:{\footnotesize $7$}] (7) at (4,4) {};
+					\end{scope}
+
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- (2) -- (7);
+					    \draw[thick,-] (3) -- (4) -- (6) -- (3);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</statement>
+</exercise>
+
+
+<exercise>
+	<statement>
+		<p>
+			Draw an example of each of the following graphs or explain why it is impossible:
+			<ol label="(a)">
+				<li>A bipartite Eulerian graph</li>
+				<li>A forest on 7 vertices and 4 edges</li>
+				<li>A tree on 6 vertices that has 5 leaves</li>
+				<li>A connected graph whose complement is connected</li>
+				<li>A disconnected graph whose complement is disconnected</li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-deg-connected">
+	<title>December 2016 Final</title>
+	<statement>
+		<p>
+			Prove that any simple graph whose vertices all have degree at least <m>\dfrac{n-1}{2}</m> must be connected. 
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find an Eulerian trail in <m>K_{2,4}</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Prove that <m>K_{m,n}</m> is connected for any <m>,n \in \mathbb{N}</m>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find all pairs of natural numbers <m>(m,n)</m> for which <m>K_{m,n}</m> is Eulerian.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find all pairs of natural numbers <m>(m,n)</m> for which <m>K_{m,n}</m> is Hamiltonian.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find a Hamiltonian cycle in each of the graphs in <xref ref="ex-any-isomorphic"/>.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			Find a Hamiltonian cycle of least cost in each of the following graphs:
+		</p>
+		<sidebyside widths="22% 28%" margins="20%">
+			<image xml:id="img-graph-ex-least-cost-hamiltonian-1">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.9]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=left:{\footnotesize $v_1$}] (1) at (-1,0) {};
+					\node[label=right:{\footnotesize $v_2$}] (2) at (1,0) {};
+					\node[label=right:{\footnotesize $v_3$}] (3) at (2,1.5) {};
+					\node[label=left:{\footnotesize $v_4$}] (4) at (-0.5,2.5) {};
+					\end{scope}
+
+					%\node[] at (3.7,1.5) {$G$};
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- node[below]{\scriptsize $10$} (2);
+					    \draw[thick,-] (1) -- node[above,pos=0.7]{\scriptsize $12$} (3);
+					    \draw[thick,-] (1) -- node[left,pos=0.6]{\scriptsize $5$} (4);
+					    \draw[thick,-] (2) -- node[right]{\scriptsize $9$} (3);
+					    \draw[thick,-] (2) -- node[left,pos=0.6]{\scriptsize $7$} (4);
+					    \draw[thick,-] (3) -- node[above]{\scriptsize $6$} (4);
+					    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-least-cost-hamiltonian-2">
+				<latex-image>
+					\begin{tikzpicture}[scale=1.1]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=below left:{\footnotesize $a$}] (1) at (-2,0) {};
+					\node[label=below right:{\footnotesize $b$}] (2) at (0,0) {};
+					\node[label=below right:{\footnotesize $c$}] (3) at (2,0) {};
+					\node[label=below:{\footnotesize $d$}] (4) at (-1,-1) {};
+					\node[label=above:{\footnotesize $e$}] (5) at (-1,1) {};
+					\end{scope}
+
+					%\node[] at (3.7,1.5) {$G$};
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-] (1) -- node[above,pos=0.7]{\scriptsize $1$} (2);
+					    %\draw[thick,-] (1) -- node[above,pos=0.7]{\scriptsize $2$} (3);
+					    \draw[thick,-] (1) -- node[left,pos=0.6]{\scriptsize $1$} (4);
+					    \draw[thick,-] (1) -- node[above left]{\scriptsize $3$} (5);
+					    \draw[thick,-] (2) -- node[above,pos=0.2]{\scriptsize $2$} (3);
+					    \draw[thick,-] (2) -- node[left,pos=0.4]{\scriptsize $2$} (4);
+					    \draw[thick,-] (2) -- node[right,pos=0.5]{\scriptsize $1$} (5);
+					    \draw[thick,-] (3) -- node[below]{\scriptsize $0$} (4);
+					    \draw[thick,-] (3) -- node[above,pos=0.5]{\footnotesize $1$} (5);
+					    \path [thick,-] (4) edge[bend left=10] node[left,pos=0.75] {\footnotesize $1$} (5); 
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			The graph <m>K_n</m> is Hamiltonian for any <m>n \geq 3</m>.
+			How many different Hamiltonian cycles are contained in <m>K_n</m> for <m>n \geq 3</m>?
+		</p>
+	</statement>
+	<hint>
+		<p>
+			<m>K_3</m> has only one, while <m>K_4</m> has three, shown here.
+		</p>
+		<sidebyside widths="17% 17% 17%" margins="22%">
+			<image xml:id="img-graph-ex-how-many-tours-1">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.9]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=left:{\footnotesize $1$}] (1) at (0,0) {};
+					\node[label=right:{\footnotesize $2$}] (2) at (2,0) {};
+					\node[label=right:{\footnotesize $3$}] (3) at (2,2) {};
+					\node[label=left:{\footnotesize $4$}] (4) at (0,2) {};
+					\end{scope}
+
+					\node[] at (1,-1) {\footnotesize 1-2-3-4-1};
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-,color=blue] (1) -- (2) -- (3) -- (4) -- (1);
+					    %\draw[thick,-] (1) -- node[above,pos=0.7]{\scriptsize $2$} (3);
+					    \draw[thin,-] (2) -- (4);
+					    \draw[thin,-] (1) -- (3);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-how-many-tours-2">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.9]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=left:{\footnotesize $1$}] (1) at (0,0) {};
+					\node[label=right:{\footnotesize $2$}] (2) at (2,0) {};
+					\node[label=right:{\footnotesize $3$}] (3) at (2,2) {};
+					\node[label=left:{\footnotesize $4$}] (4) at (0,2) {};
+					\end{scope}
+
+					\node[] at (1,-1) {\footnotesize 1-3-4-2-1};
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-,color=blue] (1) -- (2) -- (4) -- (3) -- (1);
+					    %\draw[thick,-] (1) -- node[above,pos=0.7]{\scriptsize $2$} (3);
+					    \draw[thin,-] (2) -- (3);
+					    \draw[thin,-] (1) -- (4);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+			<image xml:id="img-graph-ex-how-many-tours-3">
+				<latex-image>
+					\begin{tikzpicture}[scale=0.9]
+					\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+					\node[label=left:{\footnotesize $1$}] (1) at (0,0) {};
+					\node[label=right:{\footnotesize $2$}] (2) at (2,0) {};
+					\node[label=right:{\footnotesize $3$}] (3) at (2,2) {};
+					\node[label=left:{\footnotesize $4$}] (4) at (0,2) {};
+					\end{scope}
+
+					\node[] at (1,-1) {\footnotesize 1-4-2-3-1};
+					\begin{scope}[>={Stealth[black]},
+					              %every node/.style={fill=black,circle},
+					              every edge/.style={thick,draw=black}]
+					    \draw[thick,-,color=blue] (1) -- (3) -- (2) -- (4) -- (1);
+					    %\draw[thick,-] (1) -- node[above,pos=0.7]{\scriptsize $2$} (3);
+					    \draw[thin,-] (3) -- (4);
+					    \draw[thin,-] (1) -- (2);
+					\end{scope}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</sidebyside>
+	</hint>
+</exercise>
+
+
 
 </exercises>
 

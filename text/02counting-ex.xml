@@ -71,7 +71,7 @@
 </statement>
 <solution>
 	<p>
-		b. The rearrangement should start A, I, and I in some order, and end with P, N, and N in some order. These two decisions are independent of each other, so using <xref ref="prin-prod-rule"/> and <xref ref="prop-perm-repeat"/> we count a total of <me>\dfrac{3!}{2!} \times \dfrac{3!}{2!} = 9</me> rearrangements.
+		b. The rearrangement should start A, I, and I, in some order, and end with P, N, and N in some order. These two decisions are independent of each other, so using <xref ref="prin-prod-rule"/> and <xref ref="prop-perm-repeat"/> we count a total of <me>\dfrac{3!}{2!} \times \dfrac{3!}{2!} = 9</me> rearrangements.
 		(Try listing them all!)
 	</p>
 </solution>
@@ -134,7 +134,17 @@
 	</p>
 </statement>
 <solution>
-	<p>Test</p>
+	<p>The operation of <em>forming a straight</em> can be broken down into the following operations:</p>
+	<p>
+		<ul>
+			<li>Pick a first card: there are 10 choices (A to 10).</li>
+			<li>There is only one way to continue picking ranks. (If we start with a 6, then the next four cards must be 7, 8, 9, and 10.)</li>
+			<li>Now we pick a suit for each of the cards we picked. There are four choices for each of the five cards, or a total of <m>4^5</m> suit combinations.</li>
+		</ul>
+	</p>
+	<p>
+		Hence using <xref ref="prin-prod-rule"/>, we can form a total of <m>10 \cdot 4^5</m> straights from a standard deck.
+	</p>
 </solution>
 </exercise>
 
@@ -160,11 +170,8 @@
 	</p>
 </statement>
 <hint>
-	<p>LOL</p>
+	<p>First pick a suit, then pick cards from that suit.</p>
 </hint>
-<solution>
-	<p>Hmmmm...</p>
-</solution>
 </exercise>
 
 <exercise>
@@ -193,11 +200,24 @@
 		How many ways are there to draw a three-card hand from a standard deck of cards such that: 
 		<ol label="(a)">
 			<li>all of them are face cards (J, Q, K)?</li>
-			<li>there are at least two numbered cards?</li>
+			<li>there are at least two numbered cards? (numbered cards are 2 to 10)</li>
 			<li>there are at least two numbered cards, and exactly two red cards?</li>
 		</ol>
 	</p>
 </statement>
+<solution>
+	<p>
+		b. The set of three-card hands that have at least two numbered cards can be partitioned into two disjoint sets: those that have exactly two numbered cards, and those that have exactly three numbered cards. Let's call these sets <m>A</m> and <m>B</m>; by <xref ref="prin-sum-rule"/>, the desired quantity is <m>|A| + |B|</m>.
+	</p>
+	<p>
+		The hands in <m>|A|</m> can be counted by first selecting two numbered cards. There are 36 of them (nine ranks and four suits each) so this step has <m>\binom{36}{2}</m> possibilities.
+		Then, we pick the third non-numbered card from 16 options (A, J, Q, K; four suits each). Hence by <xref ref="prin-prod-rule"/> <m>|A| = \binom{36}{2} \cdot \binom{16}{1}</m>.
+	</p>
+	<p>
+		Also, there are <m>|B| = \binom{36}{3}</m> ways to pick three numbered cards.
+		Hence the total is <m>\binom{36}{2} \cdot \binom{16}{1} + \binom{36}{3}</m>.
+	</p>
+</solution>
 </exercise>
 
 <exercise xml:id="divex-3x3-grid">

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-graph-hamiltonian">
+    <title>Hamiltonian Graphs</title>
+    <objectives>
+        <ul>
+            <li>Define Hamiltonian cycles and graphs. Find a Hamiltonian cycle in a graph, or explain why one does not exist.</li>
+            <li>Give conditions (necessary or sufficient) for a graph to be Hamiltonian.</li>
+            <li>Solve the Traveling Salesman Problem for small instances.</li>
+        </ul>
+    </objectives>
+
+    <p>
+    	Recall that a graph that contains a trail that traverses all its edges is called an Eulerian graph.
+    </p>
+    <p>
+		Sometimes we would like a graph to have a cycle that passes through all of its vertices in some order, without repeating any vertex.
+		These graphs are called Hamiltonian graphs.
+	</p>
+
+	<definition xml:id="def-hamiltonian">
+		<title>Hamiltonian Cycle; Graph</title>
+		<statement>
+			<p>
+				Let <m>G = (V,E)</m> be a simple graph. 
+				A <term>Hamiltonian cycle</term> on <m>G</m> is a cycle <m>C</m> that contains all the vertices of <m>G</m>.
+			</p>
+			<p>
+				A graph that contains a Hamiltonian cycle is called a <term>Hamiltonian graph</term>.
+			</p>
+		</statement>
+	</definition>
+
+	<example xml:id="eg-hamiltonian">
+		<title>A Hamiltonian Graph</title>
+		<statement>
+			<p>
+				This graph from <xref ref="eg-graph-construct-isomorphism"/> is Hamiltonian, since it contains a Hamiltonian cycle <m>s</m>-<m>p</m>-<m>t</m>-<m>q</m>-<m>u</m>-<m>r</m>-<m>s</m>.
+			</p>
+			<sidebyside width="20%" margins="auto">
+				<image xml:id="img-hamiltonian">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=right:{\footnotesize $s$}] (1) at (1,4) {};
+						\node[label=right:{\footnotesize $q$}] (2) at (1,0) {};
+						\node[label=left:{\footnotesize $t$}] (3) at (-1,4) {};
+						\node[label=left:{\footnotesize $p$}] (4) at (-1,0) {};
+						\node[label=right:{\footnotesize $r$}] (5) at (2,2) {};
+						\node[label=left:{\footnotesize $u$}] (6) at (-2,2) {};
+						\end{scope}
+
+						\node[] at (0,-1) {$H$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2);
+						    \draw[thick,-] (4) -- (5);
+						    \draw[thick,-] (6) -- (1);
+						    \draw[thick,-,color=blue] (1) -- (5) -- (6) -- (2) -- (3) -- (4) -- (1);
+						    \draw[thick,-] (4) -- (6);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<p>
+		While it is very easy to determine whether a graph is Eulerian (just check that all its vertices have even degree!), it is generally very difficult to determine whether or not a graph is Hamiltonian.
+	</p>
+
+	<exercise xml:id="ex-find-hamiltonian">
+		<title>Hamilton's Puzzle</title>
+		<statement>
+			<p>
+				Hamiltonian cycles are named after Irish mathematician <url href="https://en.wikipedia.org/wiki/William_Rowan_Hamilton">Sir William Rowan Hamilton</url>.
+				In 1857 he invented what he called the <url href="https://en.wikipedia.org/wiki/Icosian_game">icosian game</url>, essentially a puzzle with the graph of a dodecahedron's vertices and edges, with the objective of finding a cycle through the graph that visits all vertices exactly once.
+			</p>
+			<p>
+				Can you find a Hamiltonian cycle in Hamilton's icosian game below?
+			</p>
+			<sidebyside width="25%" margins="auto">
+				<image xml:id="img-icosian">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (-1.7,0) {};
+						\node (2) at (1.7,0) {};
+						\node (3) at (3.2,3) {};
+						\node (4) at (0,6.1) {};
+						\node (5) at (-3.2,3) {};
+						\node (6) at (-1,1) {};
+						\node (7) at (1,1) {};
+						\node (8) at (2,3) {};
+						\node (9) at (0,5) {};
+						\node (10) at (-2,3) {};
+						\node (11) at (0,1) {};
+						\node (12) at (1.5,2) {};
+						\node (13) at (1,4) {};
+						\node (14) at (-1,4) {};
+						\node (15) at (-1.5,2) {};
+						\node (16) at (0,2) {};
+						\node (17) at (0.8,2.3) {};
+						\node (18) at (0.5,3.5) {};
+						\node (19) at (-0.5,3.5) {};
+						\node (20) at (-0.8,2.3) {};
+						\end{scope}
+
+						%\node[] at (0,-1) {$H$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (1);
+						    \draw[thick,-] (6) -- (11) -- (7) -- (12) -- (8) -- (13) -- (9) -- (14) -- (10) -- (15) -- (6);
+						    \draw[thick,-] (1) -- (6);
+						    \draw[thick,-] (2) -- (7);
+						    \draw[thick,-] (3) -- (8);
+						    \draw[thick,-] (4) -- (9);
+						    \draw[thick,-] (5) -- (10);
+						    \draw[thick,-] (16) -- (17) -- (18) -- (19) -- (20) -- (16);
+						    \draw[thick,-] (11) -- (16);
+						    \draw[thick,-] (12) -- (17);
+						    \draw[thick,-] (13) -- (18);
+						    \draw[thick,-] (14) -- (19);
+						    \draw[thick,-] (15) -- (20);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
+
+	<exploration xml:id="expl-knights-tour">
+		<title>Knight's Tours</title>
+		<introduction>
+			<p>
+				Hamilton was not the first person to consider the problem of finding Hamiltonian cycles in a graph.
+				This problem arose much earlier in a different context<mdash/>that of finding a <sq>knight's tour</sq> on a chessboard. 
+				That is, can a knight start at any square on a board, visit every square exactly once, and return to its starting position?
+			</p>
+			<sidebyside width="45%" margins="auto">
+				<image source="images/knight.PNG">
+					<description>A knight on an otherwise empty eight-by-eight chessboard.</description>
+				</image>
+			</sidebyside>
+		</introduction>
+			<task>
+				<p>
+					Try finding a knight's tour yourself on an 8 <times/> 8 board <url href="http://www.maths-resources.com/knights/">on this website</url>.
+				</p>
+			</task>
+			<task>
+				<p>
+					Explain how the knight's tour problem is equivalent to finding a Hamiltonian cycle on a graph (and explain how the graph is obtained).
+				</p>
+			</task>
+			<task>
+				<p>
+					Mentions of the knight's tour problem can be found as far back as the 9th century AD, in Sanskrit writings about poetics, and even before that for smaller grids. See <xref ref="bib-jelliss-2019"/> for a comprehensive timeline.
+				</p>
+				<p>
+					Try changing the size of the chessboard <url href="http://www.maths-resources.com/knights/">in this link</url> to something smaller. 
+					Are there configurations that don't allow knight's tours?
+				</p>
+			</task>
+			<task>
+				<p>
+					If so motivated, why not check out the problem of finding a <url href="http://www.mayhematics.com/t/1d.htm"><em>magic</em> knight's tour</url>?
+				</p>
+			</task>
+	</exploration>
+
+	<p>
+		In order to prove a graph is <em>not</em> Hamiltonian, one has to argue that it does not contain a Hamiltonian cycle as a subgraph (or, to assume that it does, and show it leads to a contradiction).
+	</p>
+
+	<example xml:id="eg-not-hamiltonian">
+		<title>A Non-Hamiltonian Graph</title>
+		<statement>
+			<p>
+				Consider the following graph:
+			</p>
+			<sidebyside widths="25%" margins="auto">
+				<image xml:id="img-not-hamiltonian">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $1$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $2$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $3$}] (3) at (2,1.5) {};
+						\node[label=right:{\footnotesize $4$}] (4) at (1,3) {};
+						\node[label=left:{\footnotesize $5$}] (5) at (-1,3) {};
+						\node[label=left:{\footnotesize $6$}] (6) at (-2,1.5) {};
+						\end{scope}
+
+						\node[] at (3.7,1.5) {$G$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3);
+						    \draw[thick,-] (3) -- (4) -- (5) -- (6);
+						    \draw[thick,-] (1) -- (5);
+						    \draw[thick,-] (5) -- (3) -- (6);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				If <m>G</m> had a Hamiltonian cycle <m>C</m>, it must contain both edges <m>(6,3)</m> and <m>(6,5)</m>, since these are the only two edges passing through 6.
+				Similarly, <m>C</m> must contain both <m>(1,5)</m> and <m>(1,2)</m>, and <m>(2,1)</m> and <m>(2,3)</m>, and <m>(4,5)</m> and <m>(4,3)</m> (there are no other options for choosing two edges incident to vertices 1, 2, and 4).
+			</p>
+			<p>
+				This is already a contradiction, since we have argued that <m>C</m> must contain seven edges, while a Hamiltonian cycle in <m>G</m> will have only 6 edges.
+				Hence <m>G</m> is not Hamiltonian.
+			</p>
+		</statement>
+	</example>
+
+	<p>
+		The <term>Traveling Salesman Problem</term> generalizes the problem of finding a Hamiltonian cycle in a graph<mdash/>when numbers called <em>costs</em> are assigned to the edges of a graph, one can also ask the question:
+	</p>
+	<sidebyside width="75%" margins="auto">
+		<p>
+			Find a Hamiltonian cycle of least cost on the graph <m>G</m>.
+		</p>
+	</sidebyside>
+	<p>
+		We also call these numbers <em>distances</em> or <em>weights</em>, and we want to minimize total distance or total weight of the Hamiltonian cycle.
+	</p>
+
+	<exercise xml:id="ex-find-least-cost-hamiltonian">
+		<title>Least Cost Hamiltonian Cycle</title>
+		<statement>
+			<p>
+				In the following graph (numbers on edges are weights), find two different Hamiltonian cycles and compute their total costs.
+				Can you find the least cost Hamiltonian cycle on this graph?
+			</p>
+			<sidebyside width="30%" margins="auto">
+				<image xml:id="img-find-least-cost-hamiltonian">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.9]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=left:{\footnotesize $a$}] (1) at (-1,0) {};
+						\node[label=right:{\footnotesize $b$}] (2) at (1,0) {};
+						\node[label=right:{\footnotesize $c$}] (3) at (2,1.5) {};
+						\node[label=right:{\footnotesize $d$}] (4) at (1,3) {};
+						\node[label=left:{\footnotesize $e$}] (5) at (-1,3) {};
+						\node[label=left:{\footnotesize $f$}] (6) at (-2,1.5) {};
+						\end{scope}
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- node[below]{\scriptsize $10$} (2);
+						    \draw[thick,-] (1) -- node[above,pos=0.8]{\scriptsize $8$} (3);
+						    \draw[thick,-] (1) -- node[above,pos=0.7,yshift=2pt]{\scriptsize $5$} (4);
+						    \draw[thick,-] (1) -- node[left,pos=0.65]{\scriptsize $3$} (5);
+						    \draw[thick,-] (1) -- node[left]{\scriptsize $4$} (6);
+						    \draw[thick,-] (2) -- node[right]{\scriptsize $9$} (3);
+						    \draw[thick,-] (2) -- node[left,pos=0.7]{\scriptsize $8$} (4);
+						    \draw[thick,-] (2) -- node[above,pos=0.6]{\scriptsize $2$} (5);
+						    \draw[thick,-] (2) -- node[above,pos=0.6]{\scriptsize $12$} (6);
+						    \draw[thick,-] (3) -- node[right]{\scriptsize $1$} (4);
+						    \draw[thick,-] (4) -- node[above]{\scriptsize $3$} (5);
+						    \draw[thick,-] (5) -- node[above,pos=0.8,yshift=4pt]{\scriptsize $10$} (6);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-hamiltonian-">
+		<title>Medicine Delivery</title>
+		<statement>
+			<p>
+				Explain how the problem in <xref ref="ex-graph-herbs"/> relates to the Traveling Salesman Problem.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		We end this section with a sufficient condition for a graph to be Hamiltonian, due to <url href="https://en.wikipedia.org/wiki/Gabriel_Andrew_Dirac">Dirac</url>.
+		Before working through the proof, attempt the checkpoints that follow first.
+	</p>
+
+	<theorem xml:id="thm-dirac">
+		<title>Sufficient Condition for Hamiltonicity (Dirac)</title>
+		<statement>
+			<p>
+				If a graph <m>G</m> on <m>n \geq 3</m> vertices has minimum vertex degree <m>n/2</m>, then <m>G</m> is Hamiltonian.
+			</p>
+		</statement>
+		<proof>
+			<p>
+				Let <m>G = (V,E)</m> be a graph on <m>n = |V| \geq 3</m> vertices, such that <m>\min_v \deg(v) \geq n/2</m>.
+				Then <m>G</m> must be connected (by <xref ref="ex-deg-connected"/>).
+			</p>
+			<p>
+				Let <m>P = x_1x_2\cdots x_k</m> be a longest path in <m>G</m> (note it has <m>k-1</m> edges).
+			</p>
+			<p>
+				Then all vertices of <m>G</m> that are adjacent to <m>x_1</m> must already be on <m>P</m>, otherwise, <m>P</m> can be extended to a longer path.
+				Similarly, all vertices adjacent to <m>x_k</m> must already be on <m>P</m>.
+				Because the minimum vertex degree is <m>n/2</m>, this means:
+				<ul>
+					<li>The vertex <m>x_1</m> is adjacent to <m>n/2</m> of the vertices <m>\{x_2,x_3,\ldots,x_k\}</m>;</li>
+					<li>and the vertex <m>x_k</m> is adjacent to <m>n/2</m> of the vertices <m>\{x_1,x_2,\ldots,x_{k-1}\}</m>.</li>
+				</ul>
+			</p>
+			<p>
+				Since <m>k \leq n</m>, there must be some pair of vertices <m>x_{i+1}</m> and <m>x_i</m> such that <m>(x_1,x_{i+1}) \in E</m> and <m>(x_i,x_k) \in E</m>. 
+				This is because there are <m>n/2</m> neighbours of <m>x_1</m> in the set <m>\{x_2,\ldots,x_k\}</m>, and hence only <m>k - 1 - n/2</m> of the set <m>\{x_1,\ldots,x_{k-1}\}</m> do not precede some neighbour of <m>x_1</m>.
+			</p>
+			<p>
+				Since <m>k \leq n</m>, then <m>k - 1 - n/2 \leq n/2-1</m>, which implies <m>x_k</m> must have a neighbour <m>x_i</m> that immediately precedes a neighbour of <m>x_{1}</m>.
+			</p>
+			<sidebyside width="60%" margins="auto">
+				<image xml:id="img-dirac-proof">
+					<latex-image>
+						<![CDATA[
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=below:{\small $x_1$}] (1) at (-1.5,0) {};
+						\node[label=below:{\small $x_2$}] (2) at (0.5,0) {};
+						\node[label={[label distance=-0.15cm]270:{\small $x_{i-1}$}}] (3) at (3,0) {};
+						\node[label={[label distance=0cm]270:{\small $x_i$}}] (4) at (5,0) {};
+						\node[label={[label distance=-0.15cm]270:{\small $x_{i+1}$}}] (5) at (7,0) {};
+						\node[label={[label distance=-0.15cm]270:{\small $x_{i+2}$}}] (6) at (9,0) {};
+						\node[label={[label distance=-0.15cm]270:{\small $x_{k-1}$}}] (7) at (12,0) {};
+						\node[label=below:{\small $x_k$}] (8) at (14,0) {};
+						\end{scope}
+
+						\node[] at (1.8,0) {$\cdots$};
+						\node[] at (10.5,0) {$\cdots$};
+						%\node[] at (5,-1.1) {\small $(v)$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={semithick,draw=blue}]
+						    \draw[semithick,<-,blue] (1) -- (2);
+						    \draw[semithick,<-,blue] (3) -- (4);
+						    \draw[thick,-] (4) -- (5);
+						    \draw[semithick,->,color=blue] (5) -- (6);
+						    \draw[semithick,->,color=blue] (7) -- (8);
+						    \path [->] (1) edge[bend right=40,blue] node {} (5);
+						    \path [->] (8) edge[bend right=40,blue] node {} (4);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+						]]>
+					</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				We claim that the cycle <me>C = x_1x_{i+1}x_{i+2} \cdots x_kx_ix_{i-1}\cdots x_2x_1</me> contains <em>all</em> vertices of <m>G</m>, and is therefore a Hamiltonian cycle on <m>G</m>.
+			</p>
+			<p>
+				If not, since <m>G</m> is connected, there must be some vertex <m>x_j</m> on this cycle that is adjacent to some vertex <m>y</m> not on <m>C</m>.
+				But now we can construct a path starting at <m>y</m>, moving to <m>x_j</m>, then following the cycle <m>C</m> for <m>k-1</m> more edges, creating a new path with <m>k</m> edges.
+				This contradicts the fact that <m>x_1x_2\cdots x_k</m> was the longest path on <m>G</m>.
+			</p>
+			<p>
+				Hence <m>C</m> must be a Hamiltonian cycle on <m>G</m>, and <m>G</m> is Hamiltonian.
+			</p>
+		</proof>
+	</theorem>
+
+	<exercise xml:id="ex-verify-dirac">
+		<title>Verify <xref ref="thm-dirac"/></title>
+		<statement>
+			<p>
+				Verify that the following graph satisfies the conditions of <xref ref="thm-dirac"/>, then find a Hamiltonian cycle on the graph.
+			</p>
+			<sidebyside width="35%" margins="auto">
+				<image xml:id="img-verify-dirac">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.5]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (0,0) {};
+						\node (2) at (2,0) {};
+						\node (3) at (0,3) {};
+						\node (4) at (-2,0) {};
+						\node (5) at (0,-3) {};
+						\node (6) at (2,2) {};
+						\node (7) at (-2,3) {};
+						\node (8) at (-2,-3) {};
+						\node (9) at (2,-2) {};
+						\node (10) at (-4,0) {};
+						\end{scope}
+
+						%\node[] at (0,-1) {$H$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (7) -- (10) -- (8) -- (9) -- (2) -- (6) -- (3) -- (8) -- (4) -- (9) -- (1);
+						    \draw[thick,-] (5) -- (1) -- (7) -- (5) -- (10) -- (4);
+						    \draw[thick,-] (10) -- (6);
+						    \draw[thick,-] (1) -- (8);
+						    \draw[thick,-] (2) -- (7);
+						    \draw[thick,-] (3) -- (9);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
+
+
+	<exercise xml:id="ex-hamiltonian-necessary">
+		<title><xref ref="thm-dirac"/> is Not Necessary</title>
+		<statement>
+			<p>
+				<xref ref="thm-dirac"/> is a sufficient condition for a graph to be Hamiltonian, but it is not necesssary.
+				Can you find an example of a Hamiltonian graph <m>G</m> that does not satisfy the conditions of the theorem?
+			</p>
+		</statement>
+	</exercise>
+
+
+    
+</section>

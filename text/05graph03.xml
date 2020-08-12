@@ -42,7 +42,7 @@
 				Also, it cannot be continued to make it closed because one of the edges <m>(1,2)</m> or <m>(2,6)</m> would have to be repeated for the trail to make its way back to vertex <m>1</m>.
     		</p>
     		<sidebyside width="35%" margins="auto">
-    			<image>
+    			<image xml:id="img-graph-trail">
     				<latex-image>
     					\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -104,7 +104,7 @@
 				Although it contains trails (<eg/>, 4-3-2-5-4-2-1-3-5) that use all its edges exactly once, none of these are closed trails.
     		</p>
     		<sidebyside widths="18% 25%" margins="17%">
-    			<image>
+    			<image xml:id="img-eulerian-H1">
     				<latex-image>
     					\begin{tikzpicture}[scale=0.4]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -130,7 +130,7 @@
 						\end{tikzpicture}
     				</latex-image>
     			</image>
-    			<image>
+    			<image xml:id="img-eulerian-H2-not">
     				<latex-image>
     					\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -201,7 +201,7 @@
     			The graph below is disconnected, since there is no path on the graph with endpoints <m>1</m> and <m>6</m> (among other choices).
     		</p>
     		<sidebyside width="17%" margins="auto">
-    			<image>
+    			<image xml:id="img-graph-disconnected">
     				<latex-image>
     					\begin{tikzpicture}[scale=0.4]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -260,7 +260,7 @@
 				(Some of the <m>u_i</m>'s may be repeated, but none of the edges are repeated.)
     		</p>
     		<sidebyside width="45%" margins="auto">
-    			<image>
+    			<image xml:id="img-graph-proof-eulerian">
     				<latex-image>
     					\begin{tikzpicture}[scale=0.7]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -337,7 +337,7 @@
 				</dl>
 			</p>
 			<sidebyside widths="24% 24% 24%" margins="auto">
-				<image>
+				<image xml:id="img-graph-alg-eulerian-1">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.4]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -369,7 +369,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-graph-alg-eulerian-2">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.4]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -395,7 +395,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-graph-alg-eulerian-3">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.4]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -451,7 +451,7 @@
     			However the graph is not Eulerian since it is disconnected.
     		</p>
     		<sidebyside width="15%" margins="auto">
-    			<image>
+    			<image xml:id="img-diconnected-not-eulerian">
     				<latex-image>
     					\begin{tikzpicture}[scale=0.3]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -487,7 +487,7 @@
 				Verify that all vertex degrees of <m>G_1</m>, <m>G_2</m>, and <m>G_3</m> are even, then find an Eulerian trail in each graph. (Note that <m>G_3</m> is a multigraph.)
 			</p>
 			<sidebyside widths="27% 27% 27%" margins="auto">
-				<image>
+				<image xml:id="img-find-eulerian-1">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.3]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -512,7 +512,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-find-eulerian-2">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.3]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -541,7 +541,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-find-eulerian-3">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -584,11 +584,11 @@
 			</p>
 			<p>
 				The <term>cycle graph</term> with <m>n</m> vertices is denoted by <m>C_n</m>, and is a graph that consists of a single cycle.
-			</p>
 			<notation>
 				<usage>C_n</usage>
 				<description>cycle on <m>n</m> vertices</description>
 			</notation>
+			</p>
 		</statement>
 	</definition>
 
@@ -597,11 +597,11 @@
 		<statement>
 			<p>
 				The <term>complete graph</term> on <m>n</m> vertices is denoted by <m>K_n</m>, and is the simple graph on <m>n</m> vertices that consists of all possible edges between all vertex pairs.
-			</p>
 			<notation>
 				<usage>K_n</usage>
 				<description>complete graph on <m>n</m> vertices</description>
 			</notation>
+			</p>
 		</statement>
 	</definition>
 
@@ -612,7 +612,7 @@
 				Here are the graphs of <m>C_4</m>, <m>C_5</m>, <m>K_4</m>, and <m>K_5</m> (from left to right).
 			</p>
 			<sidebyside widths="16% 20% 16% 20%" margins="auto">
-				<image>
+				<image xml:id="img-c4">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -632,7 +632,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-c5">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -653,7 +653,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-k4">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -675,7 +675,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-k5">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]

@@ -1,18 +1,20 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-19T22:07:49-04:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-08-11T21:48:48-04:00       *-->
+<!--*   A recent stable commit (2020-07-07):   *-->
+<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="example example-like"><h6 class="heading">
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Rice Advice.</span>
 </h6>
 <p>Ten participants are recruited to join a focus group discussion on rice, after which they are asked to indicate their preferred type of rice among the following options:</p>
@@ -24,14 +26,14 @@
 <li><a class="external" href="https://en.wikipedia.org/wiki/Glutinous_rice" target="_blank">Malagkit</a></li>
 </ul>
 <p data-braille="continuation">The participants gave their preferences anonymously so the researchers only know how many participants responded with each option. How many combinations of answers can the researchers obtain from the study?</p>
-<p><em class="alert">Solution</em> Since we are only concerned with the survey results, outcomes look like the following, where we only record how many respondents picked the corresponding option:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p>Arborio -- 3, Basmati -- 5, Jasmine -- 2</p></div></div></div>
-<p>and</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p>Koshihikari -- 9, Malagkit -- 1</p></div></div></div>
-<p>are examples of possible outcomes; we need to count how many there are in total.</p>
-<p>Note that we cannot simply take permutations and then divide by an overcounting factor since how much we overcount by depends on the actual distribution of answers.</p>
-<p>Instead, we envision the process of collecting survey responses as placing balls into bins with labels `Arborio,' `Basmati,' and so on. (Imagine the participants physically placing their survey forms into one of five ballot boxes!)</p>
-<p>For example, the outcome [Arborio -- 3, Basmati -- 5, Jasmine -- 2] corresponds to the following distribution of balls into bins:</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Solution</em> Since we are only concerned with the survey results, outcomes look like the following, where we only record how many respondents picked the corresponding option:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p xmlns:svg="http://www.w3.org/2000/svg">Arborio -- 3, Basmati -- 5, Jasmine -- 2</p></div></div></div>
+<p xmlns:svg="http://www.w3.org/2000/svg">and</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p xmlns:svg="http://www.w3.org/2000/svg">Koshihikari -- 9, Malagkit -- 1</p></div></div></div>
+<p xmlns:svg="http://www.w3.org/2000/svg">are examples of possible outcomes; we need to count how many there are in total.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Note that we cannot simply take permutations and then divide by an overcounting factor since how much we overcount by depends on the actual distribution of answers.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Instead, we envision the process of collecting survey responses as placing balls into bins with labels `Arborio,' `Basmati,' and so on. (Imagine the participants physically placing their survey forms into one of five ballot boxes!)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For example, the outcome [Arborio -- 3, Basmati -- 5, Jasmine -- 2] corresponds to the following distribution of balls into bins:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r0 l0 t0 lines">\(\bullet \bullet \bullet\)</td>
@@ -49,13 +51,13 @@
 </tr>
 </table></div></div></div>
 <p>This can also be represented concisely as the pattern</p>
-<div class="displaymath">
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \bullet \bullet \bullet \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \, \bullet \mid \, \mid
 \end{equation*}
 </div>
 <p data-braille="continuation">where the four vertical lines denote ‘dividers’ in between each pair of adjacent bins. Hence the problem of counting the number of possible outcomes is reduced to counting the number of arrangements of 10 \(\bullet\) and 4 \(\mid\) symbols, which is</p>
-<div class="displaymath">
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \frac{14!}{10!\ 4!} = \binom{14}{4}
 \end{equation*}

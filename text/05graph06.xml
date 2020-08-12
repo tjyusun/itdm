@@ -4,15 +4,301 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-graph-bipartite">
-    <title>Bipartite and Hamiltonian Graphs</title>
+    <title>Bipartite Graphs</title>
     <objectives>
         <ul>
-            <li>Something</li>
-            
+            <li>Define bipartite graphs; determine if a given graph is bipartite, and if it is, give the bipartition.</li>
+            <li>Prove simple statements about bipartite graphs.</li>
         </ul>
     </objectives>
 
+    <definition xml:id="def-bipartite">
+    	<title>Bipartite Graph</title>
+    	<statement>
+    		<p>
+    			A simple graph <m>G = (V,E)</m> is said to be <term>bipartite</term> if we can <xref ref="def-partition" text="custom">partition</xref> <m>V</m> into two disjoint sets <m>V_1</m> and <m>V_2</m> such that any edge in <m>E</m> must have exactly one endpoint in each of <m>V_1</m> and <m>V_2</m>.
+    		</p>
+    		<p>
+				That is, <m>G</m> does not have any edges whose endpoints are both in <m>V_1</m>, or both in <m>V_2</m>.
+    		</p>
+    	</statement>
+	</definition>
 
+	<example xml:id="eg-bipartite">
+		<title><m>P_6</m> is Bipartite</title>
+		<statement>
+			<p>
+				Consider the path <m>P_6</m> on six vertices.
+			</p>
+			<sidebyside widths="27% 22%" margins="20%" valign="middle">
+				<image xml:id="img-bipartite-p6">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.7]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=below:{\small $1$}] (1) at (0,0) {};
+						\node[label=below:{\small $2$}] (2) at (1,0) {};
+						\node[label=below:{\small $3$}] (3) at (2,0) {};
+						\node[label=below:{\small $4$}] (4) at (3,0) {};
+						\node[label=below:{\small $5$}] (5) at (4,0) {};
+						\node[label=below:{\small $6$}] (6) at (5,0) {};
+						\end{scope}
 
+						%\node[] at (2,-1) {$H$};
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image xml:id="img-bipartite-p6-partition">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.7]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=above:{\small $1$}] (1) at (1,2) {};
+						\node[label=below:{\small $2$}] (2) at (-1,0) {};
+						\node[label=above:{\small $3$}] (3) at (0,2) {};
+						\node[label=below:{\small $4$}] (4) at (0,0) {};
+						\node[label=above:{\small $5$}] (5) at (-1,2) {};
+						\node[label=below:{\small $6$}] (6) at (1,0) {};
+						\end{scope}
+
+						\node[] at (2.3, 2.3) {\small $V_1$};
+						\node[] at (2.3, -0.3) {\small $V_2$};
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6);
+						    \draw [blue,dashed,thick] (-1.7,-0.3) .. controls (-1,-1) .. (0,-1.2) .. controls (1,-1) .. (1.7,-0.3) .. controls (1,0.4) .. (0,0.6) .. controls (-1,0.4) .. (-1.7,-0.3);
+						    \draw [blue,dashed,thick] (-1.7,2.3) .. controls (-1,3) .. (0,3.2) .. controls (1,3) .. (1.7,2.3) .. controls (1,1.6) .. (0,1.4) .. controls (-1,1.6) .. (-1.7,2.3);
+						    %.. controls (6,2) and (5,1) .. (6,0) .. controls (6,-1) and (4.5, -0.7) .. (3.5,0.7) .. controls (1.7,2) and (0.5,2) .. (-0.5, 1) .. controls (-1,-1) and (2,-0.4) .. (1,0.7);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+			<p>
+				It is bipartite, because we can partition <m>V</m> into two sets
+				<m>V_1 = \{1,3,5\}</m> and <m>V_2 = \{2,4,6\}</m>, such that any edge in the graph has one endpoint in each of the partitions.
+			</p>
+		</statement>
+	</example>
+
+	<exercise xml:id="ex-which-bipartite">
+		<title>Which Graphs are Bipartite?</title>
+		<statement>
+			<p>
+				Which of the following graphs are bipartite? 
+				For those that are, give the bipartition, and redraw them to show the bipartition explicitly.
+				For those that are not, explain why a bipartition cannot exist.
+			</p>
+			<sidebyside widths="20% 17% 15% 23%" margins="auto" valign="middle">
+				<image xml:id="img-which-bipartite-1">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.7]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (1,1) {};
+						\node (2) at (2,1) {};
+						\node (3) at (3,1) {};
+						\node (4) at (4,1) {};
+						\node (5) at (2,2) {};
+						\node (6) at (2,3) {};
+						\node (7) at (4,2) {};
+						\end{scope}
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (7);
+						    \draw[thick,-] (2) -- (5) -- (6);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image xml:id="img-which-bipartite-2">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (0,0) {};
+						\node (2) at (2,0) {};
+						\node (3) at (2,2) {};
+						\node (4) at (0,2) {};
+						\node (5) at (3,1) {};
+						\end{scope}
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (1);
+						    \draw[thick,-] (2) -- (5) -- (3);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image xml:id="img-which-bipartite-3">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (0,0) {};
+						\node (2) at (2,0) {};
+						\node (3) at (2,2) {};
+						\node (4) at (0,2) {};
+						\node (5) at (1,1) {};
+						\end{scope}
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (1);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+				<image xml:id="img-which-bipartite-4">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.6]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node (1) at (-1,0) {};
+						\node (2) at (1,0) {};
+						\node (3) at (2,1.5) {};
+						\node (4) at (1,3) {};
+						\node (5) at (-1,3) {};
+						\node (6) at (-2,1.5) {};
+						\end{scope}
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (2) -- (3) -- (4) -- (5) -- (6) -- (1);
+						    \draw[thick,-] (1) -- (4);
+						    \draw[thick,-] (2) -- (5);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</exercise>
     
+	<exercise xml:id="ex-explain-g8-bipartite">
+		<title>Small Wedding Reception</title>
+		<statement>
+			<p>
+				Explain how <xref ref="ex-graph-g8"/> relates to determining whether a certain graph is bipartite. 
+				Then answer the exercise.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		As with trees, there is a nice characterization of bipartite graphs.
+	</p>
+
+	<theorem xml:id="thm-bipartite">
+		<title>Characterization of Bipartite Graphs</title>
+		<statement>
+			<p>
+				A simple graph is bipartite if and only if it does not contain any odd cycles as a subgraph (<ie/> it does not contain any <m>C_n</m> for <m>n</m> odd).
+			</p>
+		</statement>
+	</theorem>
+
+	<p>
+		The proof of the <sq>only if</sq> direction is left as an exercise; the <sq>if</sq> direction will not be proven here.
+	</p>
+
+	<exercise xml:id="ex-bipartite-only-if">
+		<title><xref ref="thm-bipartite"/>, Only If</title>
+		<statement>
+			<p>
+				Prove the <sq>only if</sq> direction of <xref ref="thm-bipartite"/> by contradiction. That is, assume that <m>G</m> has an odd cycle, then show that it cannot be bipartite.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-tree-bipartite">
+		<title>Trees are Bipartite</title>
+		<statement>
+			<p>
+				Use <xref ref="thm-bipartite"/> to prove that all trees are bipartite.
+			</p>
+		</statement>
+	</exercise>
+
+	<definition xml:id="def-complete-bipartite">
+		<title>Complete Bipartite Graph</title>
+		<statement>
+			<p>
+				The <term>complete bipartite graph</term> on <m>m</m> and <m>n</m> vertices, denoted by <m>K_{m,n}</m>, is the bipartite graph <m>G = (V_1 \cup V_2, E)</m> where <m>|V_1| = m</m>, <m>|V_2| = n</m>, <m>V_1 \cap V_2 = \varnothing</m>, and
+				<me>E = \{(u,v) : u \in V_1, v \in V_2\}</me>.
+				That is, there is an edge in between any vertex in <m>V_1</m> and any vertex in <m>V_2</m>.
+			<notation>
+				<usage>K_{m,n}</usage>
+				<description>complete bipartite graph on <m>m</m> and <m>n</m> vertices</description>
+			</notation>
+			</p>
+		</statement>
+	</definition>
+
+	<example xml:id="eg-complete-bipartite">
+		<title><m>K_{2,4}</m></title>
+		<statement>
+			<p>
+				The graph of <m>K_{2,4}</m>:
+			</p>
+			<sidebyside width="25%" margins="auto">
+				<image xml:id="img-k-2-4">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.7]
+						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
+						\node[label=below:{\small $1$}] (1) at (0,0) {};
+						\node[label=below:{\small $2$}] (2) at (2,0) {};
+						\node[label=below:{\small $3$}] (3) at (4,0) {};
+						\node[label=below:{\small $4$}] (4) at (6,0) {};
+						\node[label=above:{\small $5$}] (5) at (2,2) {};
+						\node[label=above:{\small $6$}] (6) at (4,2) {};
+						\end{scope}
+
+
+						\begin{scope}[>={Stealth[black]},
+						              %every node/.style={fill=black,circle},
+						              every edge/.style={thick,draw=black}]
+						    \draw[thick,-] (1) -- (5) -- (2) -- (6) -- (3) -- (5) -- (4) -- (6) -- (1);
+						    %.. controls (6,2) and (5,1) .. (6,0) .. controls (6,-1) and (4.5, -0.7) .. (3.5,0.7) .. controls (1.7,2) and (0.5,2) .. (-0.5, 1) .. controls (-1,-1) and (2,-0.4) .. (1,0.7);
+						    %\draw[thick,-] (4) -- node[above]{\footnotesize $1$} (5);
+						\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</sidebyside>
+		</statement>
+	</example>
+
+	<exercise xml:id="ex-draw-complete-bipartite">
+		<title>Draw these Graphs</title>
+		<statement>
+			<p>
+				Draw the graphs of <m>K_{1,2}</m>, <m>K_{4,1}</m>, <m>K_{3,3}</m>, and <m>K_{5,5}</m>.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise xml:id="ex-which-Kmn-are-trees">
+		<title>Which <m>K_{m,n}</m> are Trees?</title>
+		<statement>
+			<p>
+				Find all pairs of natural numbers <m>(m,n)</m> for which <m>K_{m,n}</m> is a tree.
+			</p>
+		</statement>
+	</exercise>
+
+
+
 </section>

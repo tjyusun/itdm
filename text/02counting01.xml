@@ -12,6 +12,15 @@
             <li>Given a counting problem, describe the steps necessary to form the object or scenario being counted, and apply the Product Rule.</li>
         </ul>
     </objectives>
+    
+    
+    <sidebyside>    
+        <video xml:id="video-intro-to-counting" youtube="VEF1B5ZLVOE" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Introduction to Counting</em>
+    </p>
+    
     <p>
         In this section (and chapter) we will develop techniques for counting!
         When you hear the word <em>count</em> you probably think about <em>listing</em> or <em>enumerating</em> objects.
@@ -27,48 +36,48 @@
     Often we are also interested in counting the number of different ways some given scenario or condition can happen. For instance, consider the following example:
     </p>
 
-    <example xml:id="eg-counting-kiss-marry-kill">
+    <example xml:id="eg-counting-writing-project">
         <title>First Counting Example</title>
             <statement>
             <p>
-                In the game <em>Kiss, Marry, Kill</em>,<fn>You may know this game by a different name.</fn> you are given three different names, and you must decide which one among them to kiss/marry/kill (with the understanding that you can't kiss the person you marry, and the person you kiss, you can only kiss one time).
+                Three friends Andrea, Doug, and Steven are working together on a group project and they are trying to delegate the writing among themselves based on sections: introduction, literature review, and conclusion (everyone will work on the analysis).
             </p>
             <p>
-                How many possible ways can you answer?
+                How many possible ways can the tasks be assigned to the three friends?
             </p>
             </statement>
             <solution>
                 <p>
-                Suppose the three names are A, B, and C.
+                Let's abbreviate their names as A, D, and S.
                 We can just list all possibilities to find that there are 6 ways:
                 </p>
                 <sidebyside width="60%" margins="auto">
                 <tabular>
                     <row>
-                        <cell right="medium">Kiss</cell>
+                        <cell right="medium">Introduction</cell>
                         <cell>A</cell>
                         <cell>A</cell>
-                        <cell>B</cell>
-                        <cell>B</cell>
-                        <cell>C</cell>
-                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>D</cell>
+                        <cell>S</cell>
+                        <cell>S</cell>
                     </row>
                     <row>
-                        <cell right="medium">Marry</cell>
-                        <cell>B</cell>
-                        <cell>C</cell>
+                        <cell right="medium">Lit Review</cell>
+                        <cell>D</cell>
+                        <cell>S</cell>
                         <cell>A</cell>
-                        <cell>C</cell>
+                        <cell>S</cell>
                         <cell>A</cell>
-                        <cell>B</cell>
+                        <cell>D</cell>
                     </row>
                     <row>
-                        <cell right="medium">Kill</cell>
-                        <cell>C</cell>
-                        <cell>B</cell>
-                        <cell>C</cell>
+                        <cell right="medium">Conclusion</cell>
+                        <cell>S</cell>
+                        <cell>D</cell>
+                        <cell>S</cell>
                         <cell>A</cell>
-                        <cell>B</cell>
+                        <cell>D</cell>
                         <cell>A</cell>
                     </row>
                 </tabular>
@@ -77,7 +86,7 @@
     </example>
 
     <p>
-    <xref ref="eg-counting-kiss-marry-kill"/> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?
+    <xref ref="eg-counting-writing-project"/> is small enough that we can count the number of possibilities by listing them. Can you do the same for the following exercise? What do you notice about your answer to part (a)?
     </p>
 
     <exercise xml:id="ex-counting-coldplay">
@@ -188,7 +197,7 @@
     <p>
         When possible, it is a good idea to <em>exploit the structure</em> of what we are counting!
         Two rules for counting will help us get started: the Sum Rule and the Product Rule.
-        Think about the following checkpoint, which is similar to something you might have seen in grade school:
+        Think about the following exercises:
     </p>
     <exercise xml:id="ex-counting-socks">
         <title>Socks!</title>
@@ -237,6 +246,14 @@
         This is the <term>Sum Rule</term> in action.
     </p>
       
+    <sidebyside>    
+        <video xml:id="video-sum-rule-and-partitions" youtube="5aiDfPpxbrY" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>The Sum Rule and Partitions</em>
+    </p>
+
+
     <definition xml:id="def-partition">
         <title>Partition</title>
         <statement>
@@ -256,7 +273,7 @@
         <statement>
             <p>
                 If <m>B_1,B_2,\ldots,B_m</m> form a partition of <m>A</m>, then
-                <me> |A| = \sum_{i=1}^n |B_i| = |B_1| + |B_2| + \cdots + |B_m|</me>.
+                <me> |A| = \sum_{i=1}^m |B_i| = |B_1| + |B_2| + \cdots + |B_m|</me>.
             </p>
         </statement>
     </principle>
@@ -301,7 +318,15 @@
         When we need to count objects that are constructed by performing <em>successive steps</em> or operations that are independent, we use the <alert>Product Rule</alert>.
     </p>
     
-    
+    <sidebyside>    
+    <video xml:id="video-product-rule" youtube="bgeL_Uoqq2U" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>The Product Rule</em>
+    </p>
+
+
+
     <principle xml:id="prin-prod-rule">
     <title>Product Rule</title>
         <statement>
@@ -318,6 +343,7 @@
         </statement>
     </principle>
     
+
     <exercise xml:id="ex-counting-outfit">
         <title>Counting Outfits</title>
         <statement>
@@ -329,15 +355,65 @@
         </statement>
         <solution>
             <p>
-            The operation of <em>picking an outfit to wear to school</em> can be broken down into the following steps:
-            <ol>
-                <li>Pick a shirt (3 choices)</li>
-                <li>Pick a pair of pants (4 choices, including no pants; regardless of which shirt you picked)</li>
-                <li>Pick a pair of socks (9 choices, including barefoot; regardless of which shirt/pants you wear)</li>
-            </ol>
-            So it takes 3 steps to decide on an outfit, where <m>r_1 = 3</m>, <m>r_2 = 4</m>, and <m>r_3 = 9</m>.
-            By the Product Rule, there are <m>3 \cdot 4 \cdot 9 = 108</m> different outfits you can choose to wear.
+                The operation of <em>picking an outfit to wear to school</em> can be broken down into the following steps:
+                <ol>
+                    <li>Pick a shirt (3 choices)</li>
+                    <li>Pick a pair of pants (4 choices, including no pants; regardless of which shirt you picked)</li>
+                    <li>Pick a pair of socks (9 choices, including barefoot; regardless of which shirt/pants you wear)</li>
+                </ol>
+                So it takes 3 steps to decide on an outfit, where <m>r_1 = 3</m>, <m>r_2 = 4</m>, and <m>r_3 = 9</m>.
+                By the Product Rule, there are <m>3 \cdot 4 \cdot 9 = 108</m> different outfits you can choose to wear.
             </p>
+            <p>
+                We can represent these possibilities as different paths through the following tree diagram starting at the leftmost node <m>0</m> and ending at one of the rightmost nodes.
+            </p>
+            <sidebyside width="70%" margins="auto">
+                <image xml:id="img-counting-tree-diagram">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.6]
+                        \path (0,8) node[draw,shape=circle] (0) {\footnotesize 0};
+                        \foreach \i in {1,2,3}
+                        {
+                            \pgfmathtruncatemacro{\in}{6*\i - 4};
+                            \path (4,\in) node[draw,shape=circle] (s\i) {\footnotesize $s_{\i}$};
+                            \draw (0) -- (s\i);
+                        }
+                        \foreach \i in {1,2,3,4}
+                        {
+                            \pgfmathtruncatemacro{\in}{2*\i + 9};
+                            \path (8,\in) node[draw,shape=circle] (p\i) {\footnotesize $p_{\i}$};
+                            \draw (s3) -- (p\i);
+                        }
+                        \draw (s1) -- (6,0.5);
+                        \draw (s1) -- (6,1.5);
+                        \draw (s1) -- (6,2.5);
+                        \draw (s1) -- (6,3.5);
+                        \node at (7,2) {$\vdots$};
+                        \draw (s2) -- (6,6.5);
+                        \draw (s2) -- (6,7.5);
+                        \draw (s2) -- (6,8.5);
+                        \draw (s2) -- (6,9.5);
+                        \node at (7,8) {$\vdots$};
+                        \foreach \i in {1,2,3,4,5,6,7,8,9}
+                        {
+                            \pgfmathtruncatemacro{\in}{2*\i + 1};
+                            \path (14,\in) node[draw,shape=circle] (k\i) {\footnotesize $k_{\i}$};
+                            \draw (p1) -- (k\i);
+                        }
+                        \draw (p4) -- (10,15);
+                        \draw (p4) -- (10,15.5);
+                        \draw (p4) -- (10,16);
+                        \draw (p4) -- (10,16.5);
+                        \draw (p4) -- (10,17);
+                        \draw (p4) -- (10,17.5);
+                        \draw (p4) -- (10,18);
+                        \draw (p4) -- (10,18.5);
+                        \draw (p4) -- (10,19);
+                        \node at (11,17) {$\vdots$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </sidebyside>
         </solution>
     </exercise>
 

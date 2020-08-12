@@ -1,0 +1,27 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-08-11T21:49:15-04:00       *-->
+<!--*   A recent stable commit (2020-07-07):   *-->
+<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">We proceed by induction on the number of vertices \(|V|\) in the tree. The claim is:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p xmlns:svg="http://www.w3.org/2000/svg">\(P(n):\) All trees with \(n\) vertices have \(n-1\) edges.</p></div></div></div>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Base case</em>: \(P(1)\) is clearly true, since a tree on one vertex has no edge.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Induction step</em>: Assume that \(P(k-1)\) holds; that is, any tree with \(k-1\) vertices has \(k-2\) edges.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">To prove \(P(k)\) holds, let \(G\) be an arbitrary tree on \(k\) vertices. By <a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a>, \(G\) must have a leaf, or a vertex \(v\) with \(d(v) = 1\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Remove the vertex \(v\) from the tree and the one edge it is an endpoint of. The resulting graph \(G'\) is still a tree (it must still be connected and have no cycles, since we only removed a leaf), but with \(k-1\) vertices. By the induction hypothesis, \(G'\) has \(k-2\) edges.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Therefore the original graph \(G\) must have had \(k-1\) edges (adding back what was removed with \(v\)).</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">This completes the proof.</p></article><span class="incontext"><a href="sec-graph-trees.html#proof-12">in-context</a></span>
+</body>
+</html>

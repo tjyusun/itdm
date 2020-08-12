@@ -5,6 +5,22 @@
 
 <backmatter xml:id="back" xmlns:xi="http://www.w3.org/2001/XInclude">
     
+    
+    <appendix xml:id="app-math-communication">
+        <title>How to Read and Write Mathematics</title>
+            <introduction>
+                <p>
+                    Intro here
+                </p>
+            </introduction>
+        <xi:include href="text/99writing01.xml" />
+        <xi:include href="text/99writing02.xml" />
+        <xi:include href="text/99writing03.xml" />
+        <xi:include href="text/99writing04.xml" />
+    </appendix>
+    
+
+
     <appendix xml:id="app-notation">
     	<title>Notation</title>
     	<notation-list />
@@ -14,8 +30,13 @@
 		<title>List of Results</title>
     	<list-of elements="definition theorem proposition lemma corollary" divisions="section" />
     </appendix>
+
+    <appendix xml:id="app-explorations">
+        <title>List of Examples and Exercises</title>
+        <list-of elements="exploration example exercise activity" divisions="chapter section" />
+    </appendix>
     
-    <solutions divisional="solution">
+    <solutions xml:id="app-solutions" divisional="solution">
     <title>Solutions to Selected Exercises</title>
     </solutions>
 
@@ -34,6 +55,10 @@
 
         <biblio xml:id="bib-fuchs-102">
         	Fuchs, S., 2017. MAT102H5 Introduction to Mathematical Proofs. (Course Notes)
+        </biblio>
+
+        <biblio xml:id="bib-jelliss-2019">
+            Jelliss, G.P., 2019. <url href="https://www.mayhematics.com/p/KTN12_Bibliography.pdf">Chronology &amp; bibliography of tours</url>. (<url href="https://www.mayhematics.com/p/p.htm">Main website</url>)
         </biblio>
 
         <biblio xml:id="bib-kangsheng-1988">

@@ -53,7 +53,7 @@
 				We can represent this graph by labeling five nodes, and drawing each edge.
 			</p>
 			<sidebyside width="25%" margins="auto">
-				<image>
+				<image xml:id="img-first-graph">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.55]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -108,7 +108,7 @@
 				List all elements in the vertex and edge sets of each graph below.
 			</p>
 			<sidebyside widths="22% 32%" margins="20%">
-				<image>
+				<image xml:id="img-graph-list-VE1">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.55]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -143,7 +143,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-graph-list-VE2">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.55]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -194,11 +194,11 @@
 		<statement>
 			<p>
 				The <term>degree</term> <m>d(v)</m> of a vertex <m>v</m> is the number of edges incident to it.
-			</p>
 			<notation>
 				<usage>d(v)</usage>
 				<description>degree of a vertex</description>
 			</notation>
+			</p>
 			<p>
 				The <term>degree sequence</term> of a graph is the <em>nonincreasing</em> sequence of numbers formed by the degrees of its vertices.
 			</p>
@@ -313,7 +313,6 @@
 		<p>
 			In the above statement we used the notation <m>V(G)</m> to refer to the vertex set of <m>G</m>; we will also use the notation <m>E(G)</m> to refer to the collection of edges of <m>G</m>.
 			This notation comes in handy if we are talking about the vertex or edge sets of different graphs.
-		</p>
 		<notation>
 			<usage>V(G)</usage>
 			<description>vertex set of <m>G</m></description>
@@ -322,6 +321,7 @@
 			<usage>E(G)</usage>
 			<description>edge set of <m>G</m></description>
 		</notation>
+		</p>
 	</remark>
 
 
@@ -381,12 +381,12 @@
 
 	<p>
 		Try proving the following basic properties about degree sequences.
+	</p>
 		<aside>
 			<p>
 				There is a theorem that characterizes completely whether or not a degree sequence can be realized as a graph, but is beyond the scope of this course: the <url href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Gallai_theorem">Erdős-Gallai Theorem</url>
 			</p>
 		</aside>
-	</p>
 
 	<exercise xml:id="ex-graph-degree-0-4">
 		<title>Degree Sequence 3, 2, 1, 0</title>

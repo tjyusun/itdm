@@ -18,25 +18,22 @@
     </titlepage>
    
        
-    
     <preface xml:id="front-welcome">
         <title>Welcome Message</title>
         <p>
             <alert>September 2020</alert>
         </p>
         <sidebyside widths="70%">
-        <image source="figs/TJ.jpg"><description>TJ posing with a "V" sign on vacation in an Asian country</description></image>
+        <image source="figs/TJ.jpg"><description>TJ posing with a "V" sign on vacation in Vietnam</description></image>
         </sidebyside>
         <p>
             Hello all!
         </p>
         <p>
-            My name is <alert>TJ</alert>, and this semester I will be joining you in your journey to discover and learn about discrete mathematics.
+            This semester I will be joining you in your journey to discover and learn about discrete mathematics.
+            You can call me Professor/Prof. Yusun, Dr. Yusun, or TJ; my pronouns are he/him/his.
             I did my PhD at <url href="https://sfu.ca">Simon Fraser University</url>, in the area of operations research.
-            You can call me Professor/Prof. Yusun, Dr. Yusun, or simply TJ.
-            My pronouns are he/him/his.
         </p>
-                
         <p>
             It's been a wild ride this year, and we're only 2/3 of the way through!
             We have all been affected in different ways by many different events, and it is understandable that you may not be in the optimal mindset to study, especially since you'll be doing this from your homes, dorms, residences.
@@ -77,32 +74,59 @@
             We are in this together.
         </p>
         <p>
-            <em>TJ</em>
+            <em>TJ Yusun</em>
         </p>
                     
     </preface>
     
 
     <preface xml:id="front-how-to-use">
-        <title>How to Use This Resource</title>
+        <title>About This Resource</title>
         <p>
-            Read it
+            The word <em>discrete</em> in the title of our course means <em>separate</em>; something that is <em>not smooth</em>.
         </p>
+        <p>
+            In the study of discrete mathematics we will typically concern ourselves with discrete objects such as the integers, graphs, finite and countable sets. (In contrast, excluded from this are objects that may vary continuously, such as those ones covered in trigonometry, calculus, and Euclidean geometry.)
+        </p>
+        <p>
+            In these notes we take a tour through a variety of topics including counting techniques, the pigeonhole principle, number theory, and graph theory.
+            Material is presented in a manner that encourages the reader to actively engage with the material, via inline exercises (called <sq>checkpoints</sq>) scattered throughout each section.
+            A number of historical explorations and asides give context to some of these topics, and hopefully allow for a critical reflection on the historical and political underpinnings of the field and of mathematics as a whole.
+        </p>
+        <p>
+            These notes are being developed specifically for the Fall/Winter 2020-2021 offerings of MAT202: Introduction to Discrete Mathematics course at the <url href="https://www.utm.utoronto.ca/math-cs-stats/home">University of Toronto Mississauga</url>.
+            For the online offering of this course a number of short videos will be produced and uploaded into the HTML version of these notes, to be inline with the text and in close proximity to the topic being discussed.
+            These videos will be created and uploaded throughout the term.
+        </p>
+        <p>
+            A PDF (with no solutions or videos) will also be posted for offline access to the notes.
+            The goal is to provide students with as many means of accessing and learning the material as possible (video, audio, text) but also for these notes to represent a logical flow for the course that supports student self-study.
+        </p>
+        <p>
+            Notable changes from the Fall/Winter 2019-2020 PDF notes include:
+            <ul>
+                <li>Section 1.4 removed and expanded to a new appendix on mathematical communication;</li>
+                <li>A number of historical explorations added throughout the text (there are plans for more in the future);</li>
+                <li>Sections 5.2 and 5.5 each split into two smaller sections; paths and connectedness defined earlier in chapter;</li>
+                <li>A small number of exercises (both inline and end-of-chapter) now have solutions.</li>
+            </ul>
+        </p>
+
     </preface>
     
     <preface xml:id="front-feedback">
         <title>Feedback and Acknowledgements</title>
         <p>
             <alert>Feedback</alert>
-            These notes are being developed by TJ Yusun for the Fall and Winter 2020-2021 offerings of MAT202: Introduction to Discrete Mathematics course at the University of Toronto Mississauga.
             This is an ongoing project, and so the text may contain errors or typos.
-            Errata will be posted in the Quercus course container for MAT202 as they are found; students are also encouraged to email <url href="mailto:tj.yusun@utoronto.ca?subject=202notes-pretext"><c>tj.yusun@utoronto.ca</c></url> if you find any errors or would like to provide feedback about these notes.
+            Errata will be posted in the Quercus course container for MAT202 as they are found; minor errors not affecting the numbering of results are likely to be corrected right away in the HTML version.
+            Students are encouraged to email <url href="mailto:tj.yusun@utoronto.ca?subject=202notes-pretext"><c>tj.yusun@utoronto.ca</c></url> if you find any errors or would like to provide feedback about these notes.
         </p>
         <p>
             When emailing, please include the following:
             <ul>
                 <li>Description of error</li>
-                <li>URL of error (if in the online version)</li>
+                <li>URL of error (if in the online version) and date found</li>
                 <li>page number of error (if in the PDF version), and compile date on the front page of the pdf.</li>
             </ul>
         </p>
@@ -124,7 +148,7 @@
 
         <colophon xml:id="colophon">
 
-        <edition>Introduction to Discrete Mathematics: September 2020</edition>
+        <edition>Introduction to Discrete Mathematics: Fall/Winter 2020-2021</edition>
 
         <website>
             <name><c>itdm</c></name>
@@ -147,8 +171,11 @@
         <credit>
             <role>Source files</role>
             <entity>
-                The source files for this document can be found at <url href="http://github.com/">this git repository</url>. The sources are licensed under the <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 License</url>.
-        </entity>
+                Link to source will be posted here later.
+                <!--
+                The source files for this document can be found at <url href="https://github.com/tjyusun/itdm">this git repository</url>.
+                -->
+            </entity>
         </credit>
 
     </colophon>

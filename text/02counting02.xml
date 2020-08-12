@@ -16,6 +16,13 @@
         In this section we get a little bit fancier and define some special quantities that show up frequently when counting objects or rearrangements.
         First, recall that the <xref text="custom" ref="def-factorial">factorial</xref> of <m>n</m> is shorthand for the product <me>n! = n \times (n-1) \times \cdots \times 1</me>, which, as we saw in the previous section, can be used to count the number of ways to sit <m>n</m> people in a row for a concert.
     </p>
+    <sidebyside>    
+    <video xml:id="video-permutation" youtube="IfyjfJfl-sU" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Permutations</em>
+    </p>
+
     <definition xml:id="def-permutation">
     	<title>Permutation</title>
     	<statement>
@@ -24,6 +31,8 @@
     		</p>
     	</statement>
     </definition>
+
+
     <remark xml:id="remark-permutation">
     		<p>
     			If <m>|S| = n</m>, then there are <m>n!</m> bijections <m>S \rightarrow S</m>.
@@ -58,13 +67,13 @@
 		<title>EQUATION</title>
 		<statement>
 			<p>
-				How many four-letter words can be formed using the letters of the word 
+				How many three-letter words can be formed using the letters of the word 
 			</p>
 				<sidebyside width="20%" margins="auto"><p>EQUATION?</p></sidebyside>
 		</statement>
 		<hint>
 			<p>
-				How many choices do you have for the first letter? the second? the others?
+				How many choices do you have for the first letter? the second? the third?
 				Use the <xref text="custom" ref="prin-prod-rule">Product Rule</xref>.
 			</p>
 		</hint>
@@ -168,6 +177,14 @@
 	<p>
 		The next example shows that having <em>distinct</em> objects is crucial in the statement of <xref  ref="def-permutation"/>.
 	</p>
+
+	<sidebyside>    
+    <video xml:id="video-permutation-multiset" youtube="1ByDmzD7jDg" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Permutations of a Multiset</em>
+    </p>
+
 	<example xml:id="eg-counting-YEET">
 		<title>Repeated Letters</title>
 		<statement>
@@ -432,6 +449,13 @@
 	<p>
 		When selecting <m>k</m> elements from a set of <m>n</m>, and if the order in which they are selected does not matter, we simply need to divide by <m>k!</m>.
 	</p>
+
+	<sidebyside>    
+	    <video xml:id="video-combination" youtube="t-PQAURivXg" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Combinations</em>
+    </p>
 
 	<definition xml:id="def-combination">
 		<title>Combination</title>

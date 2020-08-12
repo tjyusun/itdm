@@ -17,7 +17,7 @@
     <p>
     	Given any graph <m>G = (V,E)</m>, there is usually more than one way of representing <m>G</m> as a drawing.
 		In fact, the definition of a graph (<xref ref="def-graph"/>) as a pair <m>(V,E)</m> of vertex and edge sets makes no reference to how it is visualized as a drawing on a sheet of paper.
-		So when we say <sq>consider the following graph</sq> when referring to a drawing, we technically mean: <sq>consider the graph that is represented by this drawing\dots</sq>
+		So when we say <sq>consider the following graph</sq> when referring to a drawing, we technically mean: <sq>consider the graph that is represented by this drawing<ellipsis/></sq>
 	</p>
 	<p>
 		In the next example it is clear that <m>G_2</m> and <m>G_3</m> are exactly the same graph.
@@ -31,7 +31,7 @@
 				Let <m>G_1</m>, <m>G_2</m>, and <m>G_3</m> be the following graphs:
 			</p>
 			<sidebyside widths="20% 20% 20%" margins="auto">
-				<image>
+				<image xml:id="img-equal-isomorphic-G1">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -56,7 +56,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-equal-isomorphic-G2">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -81,7 +81,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-equal-isomorphic-G3">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -141,11 +141,11 @@
 			</p>
 			<p>
 				We call <m>f</m> an <term>isomorphism</term> from <m>G_1</m> to <m>G_2</m>; we also say <m>G_1</m> is <term>isomorphic to</term> <m>G_2</m>.
-			</p>
 			<notation>
 				<usage>G_1 \cong G_2</usage>
 				<description>graph isomorphism</description>
 			</notation>
+			</p>
 		</statement>
 	</definition>
 
@@ -175,7 +175,7 @@
 				Given the graphs <m>H_1</m>, <m>H_2</m>, <m>H_3</m>, and <m>H_4</m>, which pairs (if any) are isomorphic?
 			</p>
 			<sidebyside widths="18% 60%" margins="auto">
-				<image>
+				<image xml:id="img-which-isomorphic-H1">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.5]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -212,7 +212,7 @@
 				<p>
 					<m>H_3 = (V_3,E_3)</m>, where <m>V_3 = \{p,q,r,s,t\}</m> and <m>E_3 = \{(p,q),(p,r),(p,s),(p,t),(r,t),(s,q)\}</m>
 				</p>
-				<image>
+				<image xml:id="img-which-isomorphic-H4">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={fill=black,circle, inner sep = 1.5pt, minimum size = 2pt}]
@@ -337,7 +337,7 @@
 				<m>V' = \{1,2,3,4\}</m> and <m>E' = \{(1,2),(2,3),(3,4),(1,4)\}</m>.
 			</p>
 			<sidebyside width="25%" margins="auto">
-				<image>
+				<image xml:id="img-cycle-subgraph">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.7]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -369,7 +369,7 @@
 				However, <m>H_2</m> has a <m>K_4</m> subgraph, while <m>H_1</m> does not, which tells us that they are not isomorphic.
 			</p>
 			<sidebyside widths="20% 20% 25%" margins="auto">
-				<image>
+				<image xml:id="img-not-isomorphic-subgraph-1">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -395,7 +395,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-not-isomorphic-subgraph-2">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -420,7 +420,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-not-isomorphic-subgraph-3">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -467,7 +467,7 @@
 				To produce the bijection <m>f</m> explicitly we examine the degrees and adjacencies of the vertices.
 			</p>
 			<sidebyside widths="20% 20%" margins="22%">
-				<image>
+				<image xml:id="img-construct-isomorphism-G">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -491,7 +491,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-construct-isomorphism-H">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -594,7 +594,7 @@
 				Prove the following graphs are isomorphic:
 			</p>
 			<sidebyside widths="23% 27%" margins="17%">
-				<image>
+				<image xml:id="img-prove-isomorphic-G">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -619,7 +619,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-prove-isomorphic-H">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -660,11 +660,11 @@
 				We define its <term>complement</term> <m>\overline{G}</m> to be the graph on the same vertex set <m>V(G)</m>, and with edge set 
 				<me> E' = \{(u,v) \in V \times V: (u,v) \not\in E\}</me>,
 				that is, <m>(u,v)</m> is an edge in <m>\overline{G}</m> if and only if it was not an edge in <m>G</m>.
-			</p>
 			<notation>
 				<usage>\overline{G}</usage>
 				<description>graph complement of <m>G</m></description>
 			</notation>
+			</p>
 		</statement>
 	</definition>
 
@@ -675,7 +675,7 @@
 				A graph <m>G</m> (red) and its complement <m>\overline{G}</m> (blue) are shown below. 
 			</p>
 			<sidebyside widths="22% 22% 22%" margins="15%">
-				<image>
+				<image xml:id="img-complement-G">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -699,7 +699,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-complement-all">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -725,7 +725,7 @@
 						\end{tikzpicture}
 					</latex-image>
 				</image>
-				<image>
+				<image xml:id="img-complement-H">
 					<latex-image>
 						\begin{tikzpicture}[scale=0.6]
 						\begin{scope}[every node/.style={opacity=0.8,fill=black,circle, inner sep = 1.5pt, minimum size = 0pt}]
@@ -779,5 +779,13 @@
 		</statement>
 	</exercise>
 
+	<remark xml:id="remark-isomorphism">
+		<p>
+			In general it is a difficult problem to determine whether or not two graphs are isomorphic.
+			While algorithms exist that work well on random graphs, in the worst-case some of these still exhibit exponential-time behaviour.
+			For some special cases this problem has efficient solutions that run in polynomial time.
+			See <url href="https://en.wikipedia.org/wiki/Graph_Isomorphism_Problem">this page</url> and the references therein to read more about the problem.
+		</p>
+	</remark>
 
 </section>
