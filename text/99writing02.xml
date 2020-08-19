@@ -32,6 +32,46 @@
     Before one can write and communicate mathematics well, one needs to be able to <em>read</em> mathematics.
 </p>
 
+OUTLINE
+
+To write well, one must read well.
+Reading math: what's the difference?
+Sometimes words in sentences mean something different.
+You need to distinguish when a word means something mathematically or simply in prose.
+
+E.g. when someone says "differentiate between injective and surjective functions" they don't mean to take the derivative (the mathematical definition) but just the more commonly-used definition of to "separate" or "distinguish."
+
+Some English words match up reasonably well with their corresponding mathematical concepts, for instance "partition," or "even"
+
+Much of mathematical writing involves implications. 
+You've seen this before, in MAT102. 
+Statements of the form
+If p, then q.
+
+But proofs are rarely linear. 
+Here's an example
+
+(Take from section 1.4)
+e.g. if a odd then a^3 odd
+
+Okay pretty straightforward.
+
+How about this?
+
+(more complicated, multiple implications implying another implication)
+Ah, slightly harder to parse. 
+Need to go through each step in the proof WHILE keeping big picture in mind.
+
+Big picture: What are the assumptions? What is being proven? What results are being used?
+Details: What is this line saying? Why does the next line follow?
+
+In this exercise you will talk with your group members and simply work through a proof, answering some guide questions.
+
+1. What are the assumptions? Differentiate between implicit and explicit assumptions.
+
+
+
+
 -->
 
     <!--

@@ -14,9 +14,11 @@
                 </p>
             </introduction>
         <xi:include href="text/99writing01.xml" />
+        <!--
         <xi:include href="text/99writing02.xml" />
         <xi:include href="text/99writing03.xml" />
         <xi:include href="text/99writing04.xml" />
+        -->
     </appendix>
     
 
@@ -67,6 +69,10 @@
 
         <biblio xml:id="bib-kolachana-2019">
         	Kolachana, A., Mahesh, K., Ramasubramanian, K., 2019. <url href="https://doi.org/10.1007/978-981-13-7326-8_18">Use of permutations and combinations in India</url>, in: Kolachana, A., Mahesh, K., Ramasubramanian, K. (Eds.), Studies in Indian Mathematics and Astronomy: Selected Articles of Kripa Shankar Shukla. Springer Singapore, Singapore, pp. 356–376. 
+        </biblio>
+
+        <biblio xml:id="bib-latex">
+            The LaTeX Project. <url href="https://www.latex-project.org/">https://www.latex-project.org/</url>
         </biblio>
 
         <biblio xml:id="bib-wilson-2013">
