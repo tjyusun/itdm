@@ -33,9 +33,11 @@ Let's prove that
 \[ \sum_{i=1}^n i = \dfrac{n(n+1)}{2}\]
 using mathematical induction.
 
-The base case for $n = 1$ is clearly true, since $1 = \frac{1(2)}{2}$.
+The base case for $n = 1$ is clearly true,
+since $1 = \frac{1(2)}{2}$.
 
-Now assume that the claim is true for $n = k$; that is,
+Now assume that the claim is true for $n = k$;
+that is,
 \[ \sum_{i=1}^k i = 1 + 2 + \cdots + k = \dfrac{k(k+1)}{2}.\]
 	</cd>
 	</p>

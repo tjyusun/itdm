@@ -20,6 +20,7 @@
     </ul>
 </p>
 <activity xml:id="exe-review-proofs">
+    <title>Review of Proofs</title>
     <statement>
         <p>
             Prove each statement, noting which proof technique you used.
@@ -75,6 +76,7 @@
 </p>
 
 <exercise xml:id="exe-review-induction">
+    <title>Practice Induction</title>
     <statement>
         <p>
         Prove the following statements using induction:
@@ -88,6 +90,7 @@
 </exercise>
 
 <exercise xml:id="exe-review-induction-fibonacci">
+    <title>Fibonacci Sequence</title>
     <statement>
         <p>
             The <term>Fibonacci sequence</term> <m>\{F_n\}</m> is defined recursively as
@@ -100,6 +103,7 @@
 </exercise>
 
 <exercise xml:id="exe-review-induction-tiling">
+    <title>Tiling</title>
     <statement>
         <p>
             Let <m>T_n</m> be the number of ways one can tile a <m>2 \times n</m> grid with <m>1 \times 2</m> rectangles.

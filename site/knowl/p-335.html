@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:51:48-04:00       *-->
+<!--*       on 2020-08-21T13:36:08-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,7 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We just showed that the left-hand side and the right-hand side of the given identity are two different ways of counting the committee-chair possibilities, and hence, they must be equal.</p>
+<p>Suppose that from a group of \(n\) people, we want to</p>
+<ol class="decimal">
+<li>Form a committee of \(k\) people; and</li>
+<li>Elect a chair of the committee.</li>
+</ol>
+<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, we can count the number of ways we can do this by multiplying.</p>
+<ol class="decimal">
+<li>There are \(\binom{n}{k}\) ways to form a committee of \(k\) people from a group of \(n\text{.}\)</li>
+<li>From the \(k\) people in the committee, we need to choose a chair, and there are \(k\) choices.</li>
+</ol>
+<p data-braille="continuation">Hence we count a total of</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{n}{k} \times k
+\end{equation*}
+</div>
+<p data-braille="continuation">ways to do this. Note that this is the left-hand side of what we're proving, <a class="xref" data-knowl="./knowl/equation-chairperson.html" title="Equation 2.5.1">(2.5.1)</a>.</p>
 <span class="incontext"><a href="sec-combinatorial-arguments.html#p-335">in-context</a></span>
 </body>
 </html>

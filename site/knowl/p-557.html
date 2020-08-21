@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:51:56-04:00       *-->
+<!--*       on 2020-08-21T13:36:16-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,7 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(R\) be an equivalence relation on \(S\text{,}\) and let \(a, b \in S\text{.}\) If \((a,b) \in R\text{,}\) then \([a] = [b]\text{.}\)</p>
-<span class="incontext"><a href="sec-equivalence.html#p-557">in-context</a></span>
+<p>Then the desired quantity is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+N = |A_1^c \cap A_2^c \cap \cdots \cap A_n^c|\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which is the number of pairings satisfying the given condition. By <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>, this is equal to the sum</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+N = \sum_{S \subseteq \{1,2,\ldots,n\}} (-1)^{|S|} \left| \bigcap_{i \in S} A_i\right| = |U| - \sum_{1 \leq i \leq n} |A_i| + \sum_{1 \leq i \lt j \leq n} |A_i \cap A_j| - \cdots + (-1)^n|A_1 \cap A_2 \cap \cdots \cap A_n|\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="exercises-principles.html#p-557">in-context</a></span>
 </body>
 </html>

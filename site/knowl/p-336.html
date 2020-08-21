@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:51:48-04:00       *-->
+<!--*       on 2020-08-21T13:36:08-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,7 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The following diagrams illustrate the two ways of selecting a committee of size \(k = 4\) and a chairperson given a group of \(n = 9\) people.</p>
+<p>Now let's count the number of such committee-chair selections in a different way: by first selecting the chair.</p>
+<ol class="decimal">
+<li>Elect a chair of the committee; then</li>
+<li>Complete the committee by adding members.</li>
+</ol>
+<p data-braille="continuation">Again, we use <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, noting that the number of choices in the second step is independent of who is picked for the first.</p>
+<ol class="decimal">
+<li>There are \(n\) people in the original group, so we have \(n\) choices for committee chair.</li>
+<li>From the remaining \(n-1\) people, we need to select \(k-1\) members to fill out the committee. There are \(\binom{n-1}{k-1}\) ways to do this.</li>
+</ol>
+<p data-braille="continuation">Therefore we can select a chair and form the committee a total of</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+n\binom{n-1}{k-1}
+\end{equation*}
+</div>
+<p data-braille="continuation">ways. This is the right-hand side of <a class="xref" data-knowl="./knowl/equation-chairperson.html" title="Equation 2.5.1">(2.5.1)</a>!</p>
 <span class="incontext"><a href="sec-combinatorial-arguments.html#p-336">in-context</a></span>
 </body>
 </html>

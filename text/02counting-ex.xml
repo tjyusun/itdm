@@ -336,20 +336,57 @@
 <exercise>
 <statement>
 	<p>
-		The Greater Toronto Area has a population of about 6 million.
-		Suppose that each resident has a jar with 100 coins, consisting of nickels, dimes, quarters, loonies ($1), and toonies ($2).
-		Prove that two residents must have identical jars.
+		Count the number of ways to distribute 30 identical balls into 9 different boxes so that each box is nonempty.
 	</p>
 </statement>
 </exercise>
 
 <exercise>
-<statement>
-	<p>
-		Count the number of ways to distribute 30 identical balls into 9 different boxes so that each box is nonempty.
-	</p>
-</statement>
+	<title>Fall 2019 Term Test</title>
+	<statement>
+		<p>
+			How many arrangements of the word ONTARIO:
+			<ol label="(a)">
+				<li><em>do not</em> have any two vowels beside each other?</li>
+				<li>have all vowels in alphabetical order?</li>
+			</ol>
+		</p>
+	</statement>
+	<solution>
+		<p>
+			(a). If no vowels can be beside each other, then the arrangement must have the pattern <em>vowel-consonant-vowel-consonant-vowel-consonant-vowel</em>.
+			Hence to create an arrangement, we just need to:
+			<ul>
+				<li>Step 1: Arrange vowels A, I, O, O (<m>4!/2!</m> ways)</li>
+				<li>Step 2: Arrange consonants N, T, R (<m>3!</m> ways)</li>
+			</ul>
+			where these two steps are performed independently of each other.
+			Hence there are <m>\dfrac{4!}{2!} \cdot 3!</m> arrangements that satisfy the given condition.
+		</p>
+		<p>
+			(b). The vowels have to be in the order AIOO from left to right, and this fixes the ordering of the vowels.
+			Hence to create an arrangement, we need to perform the following steps:
+			<ul>
+				<li>Step 1: Arrange consonants (<m>3!</m> ways)</li>
+				<li>Step 2: Insert the three consonants among the vowels<mdash/>since consonant order has been fixed in the previous step, this is equivalent to distributing 3 indistinguishable balls into 5 distinguishable bins corresponding to the five places in 
+				<sidebyside width="80%" margins="auto">
+					<p>
+						_ A _ I _ O _ O _
+					</p>
+				</sidebyside>
+				There are <m>\binom{7}{3}</m> ways to do this by <xref ref="thm-comb-replace"/>.</li>
+			</ul>
+			Hence there are <m>3! \cdot \displaystyle\binom{7}{3}</m> such arrangements.
+		</p>
+		<p>
+			<alert>Note</alert>: there are other (even simpler) solutions.
+			Can you solve (b) in as many different ways as you can?
+		</p>
+	</solution>
 </exercise>
+
+
+
 
 <exercise>
 <statement>
@@ -460,6 +497,41 @@
 		<m>\displaystyle b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b</m>
 	</p>
 </statement>
+<solution>
+	<p>
+		Let <m>S</m> be the number of ordered triples of <m>\{1,2,\ldots,b\}</m>.
+		Note that <m>|S| = b^3</m> by the Product Rule, since there are <m>b</m> choices per position, and elements can be repeated.
+	</p>
+	<p>
+		Now define the following sets:
+		<ul>
+			<li><m>A_1 = </m> the number of ordered triples that consist of only one element.</li>
+			<li><m>A_2 = </m> the number of ordered triples that consist of two distinct elements.</li>
+			<li><m>A_3 = </m> the number of ordered triples that consist of three distinct elements.</li>
+		</ul>
+		Then by the Sum Rule, <m>|S| = |A_3| + |A_2| + |A_1|</m>.
+	</p>
+	<p>
+		To form an ordered triple with all three elements distinct, we first select three elements from <m>\{1,2,\ldots,b\}</m> (in <m>\binom{b}{3}</m> ways), then generate all permutations (there are <m>3! = 6</m> permutations). 
+		Hence <me>|A_3| = 6\binom{b}{3}</me>.
+	</p>
+	<p>
+		To form an ordered triple with two distinct elements,
+		<ul>
+			<li>We first select the two elements (in <m>\binom{b}{2}</m> ways)<mdash/>say we picked 1 and 2;</li>
+			<li>We pick one of the elements to repeat (there are 2 choices)<mdash/>say 1;</li>
+			<li>We count all permutations (there are 3 spots to choose from to place the non-repeated element)<mdash/>(1,1,2), (1,2,1), and (2,1,1) in our example.</li>
+		</ul>
+		Hence <me>|A_2| = 6\binom{b}{2}</me>.
+	</p>
+	<p>
+		Finally, <me>|A_1| = b</me> since there are <m>b</m> ordered triples of the form <m>(i,i,i)</m> for <m>i = 1,2,\ldots,b</m>.
+	</p>
+	<p>
+		Thus the number of ordered triples <m>|S|</m> that can be formed from the set <m>\{1,2,\ldots,b\}</m> is 
+		<me>b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b</me>.
+	</p>
+</solution>
 </exercise>
 </exercisegroup>
 

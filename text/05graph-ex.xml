@@ -174,7 +174,7 @@
 </exercise>
 
 <exercise>
-	<title>April 2016 Final</title>
+	<title>Winter 2016 Final</title>
 	<statement>
 		<p>
 			In a group of two or more people, must there always be at least two people who are acquainted with the same number of people within the group?
@@ -208,7 +208,7 @@
 </exercise>
 
 <exercise>
-	<title>April 2017 Final</title>
+	<title>Winter 2017 Final</title>
 	<statement>
 		<p>
 			Let <m>G</m> be a graph on <m>n</m> vertices.
@@ -713,7 +713,7 @@
 </exercise>
 
 <exercise xml:id="ex-deg-connected">
-	<title>December 2016 Final</title>
+	<title>Fall 2016 Final</title>
 	<statement>
 		<p>
 			Prove that any simple graph whose vertices all have degree at least <m>\dfrac{n-1}{2}</m> must be connected. 

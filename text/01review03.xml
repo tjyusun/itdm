@@ -39,10 +39,11 @@
     </statement>
 </theorem>
 
-<exercise xml:id="exe-review-division-algorithm">
+<exercise xml:id="ex-review-division-algorithm">
+    <title>Verify <xref ref="thm-division-algorithm"/></title>
     <statement>
         <p>
-            Find <m>q</m> and <m>r</m> that satisfy the Division Algorithm for the following pairs of numbers <m>a</m> and <m>b</m>:
+            Find <m>q</m> and <m>r</m> that satisfy <xref ref="thm-division-algorithm"/> for the following pairs of numbers <m>a</m> and <m>b</m>:
             <ol label="(a)">
                 <li><m>a = 140, b = 22</m></li>
                 <li><m>a = 22, b = 140</m></li>
@@ -76,7 +77,8 @@
 </ul>
 </p>
 
-<exercise xml:id="exe-review-gcd">
+<exercise xml:id="ex-review-gcd">
+    <title>Compute the GCDs</title>
     <statement>
         <p>
             Apply the three techniques above to compute <m>\gcd(220,360)</m>.
@@ -100,6 +102,16 @@
 
 </exercise>
 
+<exercise xml:id="ex-review-gcd-prop">
+    <title>Property of GCDs</title>
+    <statement>
+        <p>
+            If <m>a</m> and <m>b</m> are nonzero integers and <m>k</m> is an integer, show that <m>\gcd(a,b) = \gcd(a-kb,b)</m>.
+        </p>
+    </statement>
+</exercise>
+
+
 <theorem xml:id="thm-bezout">
     <title>Bezout's Identity</title>
     <statement>
@@ -111,10 +123,12 @@
 </theorem>
 
 <exercise xml:id="ex-review-bezout">
+    <title>Find all Integer Solutions</title>
     <statement>
         <p>
             Find a pair of integers <m>x</m> and <m>y</m> such that <me>13x + 11y = 2</me>.
-
+        </p>
+        <p>
             Then explain why the equation <m>13x + 11y = 2</m> has infinitely many solutions.
             Can you characterize all such solutions?
         </p>
@@ -122,6 +136,7 @@
 </exercise>
 
 <exercise xml:id="ex-review-bezout-no-solution">
+    <title>No Integer Solutions</title>
     <statement>
         <p>
             Prove that the equation <me>14x - 35y = 9</me> has no integer solutions.
@@ -130,6 +145,7 @@
 </exercise>
 
 <exercise xml:id="ex-review-bezout-gcd">
+    <title><m>ax + by = d</m> has Integer Solutions <m>\Leftrightarrow \gcd(a,b) \mid d</m></title>
     <statement>
         <p>
             Let <m>a, b, d, \in \mathbb{N}</m>.
@@ -148,6 +164,7 @@
 </lemma>
 
 <exercise xml:id="ex-review-euclid-proof">
+    <title>Prove <xref ref="lem-euclid"/></title>
     <statement>
         <p>
             Prove <xref ref="lem-euclid" /> using <xref ref="thm-bezout" />.
@@ -156,6 +173,7 @@
 </exercise>
 
 <exercise xml:id="ex-review-bezout-euclid">
+    <title>Another Divisibility Property</title>
     <statement>
         <p>
             Let <m>m,a,b \in \mathbb{N}</m>.
@@ -163,5 +181,10 @@
         </p>
     </statement>
 </exercise>
+
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+
 
 </section>

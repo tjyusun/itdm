@@ -247,6 +247,7 @@
 	</proposition>
 
 	<exercise xml:id="ex-counting-nonnegative-1">
+		<title>Apply <xref ref="prop-nonnegative"/></title>
 		<statement>
 			<p>
 				Determine the number of integer solutions to the system 

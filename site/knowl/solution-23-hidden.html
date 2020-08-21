@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:51:50-04:00       *-->
+<!--*       on 2020-08-21T13:36:10-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -14,8 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">Towards a contradiction, suppose that each person gets at most one slice only. Then they will eat at most only 6 slices among them, leaving the pizza unfinished. This is a contradiction, so there must be one person who eats at least two slices.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Observe that this proof does not deny the possibility of multiple people getting two slices: it is quite possible that four of the friends ate a slice each, and the two others ate two slices each. It is also possible that one person ate three slices, while the five remaining friends ate a slice each.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">In either case, one person ate at least two slices.</p>
+<p>(a). If no vowels can be beside each other, then the arrangement must have the pattern <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">vowel-consonant-vowel-consonant-vowel-consonant-vowel</em>. Hence to create an arrangement, we just need to:</p>
+<ul class="disc">
+<li>Step 1: Arrange vowels A, I, O, O (\(4!/2!\) ways)</li>
+<li>Step 2: Arrange consonants N, T, R (\(3!\) ways)</li>
+</ul>
+<p data-braille="continuation">where these two steps are performed independently of each other. Hence there are \(\dfrac{4!}{2!} \cdot 3!\) arrangements that satisfy the given condition.</p>
+<p>(b). The vowels have to be in the order AIOO from left to right, and this fixes the ordering of the vowels. Hence to create an arrangement, we need to perform the following steps:</p>
+<ul class="disc">
+<li>Step 1: Arrange consonants (\(3!\) ways)</li>
+<li>Step 2: Insert the three consonants among the vowels—since consonant order has been fixed in the previous step, this is equivalent to distributing 3 indistinguishable balls into 5 distinguishable bins corresponding to the five places in <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p xmlns:svg="http://www.w3.org/2000/svg">_ A _ I _ O _ O _</p></div></div></div> There are \(\binom{7}{3}\) ways to do this by <a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a>.</li>
+</ul>
+<p data-braille="continuation">Hence there are \(3! \cdot \displaystyle\binom{7}{3}\) such arrangements.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Note</em>: there are other (even simpler) solutions. Can you solve (b) in as many different ways as you can?</p>
 </div></body>
 </html>

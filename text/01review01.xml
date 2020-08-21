@@ -157,6 +157,7 @@
     
 
     <exercise>
+        <title>Prove <xref ref="thm-composition-of-bijections"/></title>
         <statement>
             <p> Prove <xref ref="thm-composition-of-bijections"/>.</p>
         </statement>
@@ -209,6 +210,7 @@
     </definition>
 
     <exercise>
+        <title>Cardinality of a Power Set</title>
         <statement>
             <p> Prove that if <m>A</m> is finite, then <me>|P(A)| = 2^{|A|}</me>.</p>
         </statement>

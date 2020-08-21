@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:52:09-04:00       *-->
+<!--*       on 2020-08-21T13:36:30-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,13 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>There are two vertices of degree 3 in each: \(\{2,5\}\) in \(G\) and \(\{q,r\}\) in \(H\text{.}\) So we should map either</p>
+<p>Two simple graphs \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are said to be <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">isomorphic</dfn>, denoted by \(G_1 \cong G_2\text{,}\) if there exists a function</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-2 \leftrightarrow q \text{ and } 5 \leftrightarrow r, \quad \text{or} \quad 2 \leftrightarrow r \text{ and } 5 \leftrightarrow q\text{.}
+f: V_1 \rightarrow V_2
 \end{equation*}
 </div>
-<p data-braille="continuation">Clearly it must be the first option, since \(2\) is adjacent to \(3\) (the vertex with degree 2) in \(G\text{,}\) while \(q\) is adjacent to \(t\) in \(H\text{.}\)</p>
+<p data-braille="continuation">such that for all \(u, v \in V_1\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(u,v) \in E(G_1) \Leftrightarrow (f(u),f(v)) \in E(G_2)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">That is, \(f\) preserves adjacencies between vertices.</p>
 <span class="incontext"><a href="sec-graph-isomorphisms.html#p-852">in-context</a></span>
 </body>
 </html>

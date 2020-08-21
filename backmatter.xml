@@ -10,12 +10,13 @@
         <title>How to Read and Write Mathematics</title>
             <introduction>
                 <p>
-                    Intro here
+                    Mathematics is at its core a human endeavour. 
+                    
                 </p>
             </introduction>
         <xi:include href="text/99writing01.xml" />
-        <!--
         <xi:include href="text/99writing02.xml" />
+        <!--
         <xi:include href="text/99writing03.xml" />
         <xi:include href="text/99writing04.xml" />
         -->

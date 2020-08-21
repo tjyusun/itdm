@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:52:01-04:00       *-->
+<!--*       on 2020-08-21T13:36:20-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,19 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Since \(\gcd(3,113) = 1\text{,}\) we can apply <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>. In fact, 113 is prime, so <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> applies here, so we know that</p>
+<p>In <a class="xref" data-knowl="./knowl/def-multiplicative-inverse.html" title="Definition 4.3.5: Multiplicative Inverse">Definition 4.3.5</a> we are really saying that any number in \([b]\) is a multiplicative inverse of \(a\) modulo \(m\text{,}\) though we will usually be interested in finding that specific inverse that is also in the set \(\{0,1,\ldots,m-1\}\text{.}\) This can now be used when solving congruences of the form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-3^{112} \equiv 1 \Mod{13}\text{.}
+ax \equiv b \Mod{n}
 \end{equation*}
 </div>
-<p data-braille="continuation">Using the <a class="xref" data-knowl="./knowl/thm-division-algorithm.html" title="Theorem 1.3.2: Division Algorithm">Theorem 1.3.2</a> on 2020 we get \(2019 = 18\cdot 112 + 4\text{.}\) Hence</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-3^{2020} \equiv (3^{112})^{18} \cdot 3^4 \Mod{113} \equiv 81 \Mod{113}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">So \(3^{2020} \mmod 113 = 81\text{.}\)</p>
-<span class="incontext"><a href="sec-euler.html#p-650">in-context</a></span>
+<p data-braille="continuation">where \(a \nmid b\text{.}\) Instead of dividing both sides by \(a\) (which can't always be done), we multiply both sides by the inverse of \(a\text{.}\)</p>
+<span class="incontext"><a href="sec-congruence-solving.html#p-650">in-context</a></span>
 </body>
 </html>

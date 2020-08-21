@@ -21,7 +21,18 @@
 </statement>
 <solution>
 	<p>
-		Define pigeonholes to be <m>\{1,2\}</m>, <m>\{3,4\}</m>, and so on.
+		Define pigeonholes to be <m>\{1,2\}, \{3,4\}, \ldots, \{2n-1,2n\}</m>. Note that there are <m>n</m> of them, and each set has two consecutive integers.
+	</p>
+	<p>
+		The pigeons are the <m>n+1</m> elements we pick from <m>\{1,2,\ldots,2n\}</m>.
+		Since there are more pigeons than pigeonholes, by <xref ref="cor-php"/> we conclude that one pigeonhole (set) has at least two pigeons.
+	</p>
+	<p>
+		This means there must be two consecutive integers among the <m>n+1</m> we picked.
+	</p>
+	<p>
+		Finally, any two consecutive integers are relatively prime.
+		We can see this by applying <xref ref="ex-review-gcd-prop"/> with <m>a = b+1</m> and <m>k = 1</m>.
 	</p>
 </solution>
 </exercise>
@@ -45,6 +56,28 @@
 		What should the average of all the three-sums be?
 	</p>
 </hint>
+</exercise>
+
+<exercise>
+	<title>Fall 2019 Term Test</title>
+	<statement>
+		<p>
+			Prove that if seven integers are selected from
+			<me>\{1,2,3,\ldots,12\}</me>,
+			then some two integers <m>m</m> and <m>n</m> must have been chosen so that <m>m + 3 = n</m>.
+		</p>
+	</statement>
+	<solution>
+		<p>
+			Define pigeonholes to be the sets 
+			<me> \{1,4\}, \{ 2,5\}, \{3,6\}, \{7, 10\}, \{8, 11\}, \{9, 12\}</me>
+			and pigeons to be the integers selected from <m>\{1,2,\ldots,12\}</m>;
+			assign each integer selected to the bin that contains that number.
+		</p>
+		<p>
+			Since seven integers are selected, one of the bins must have two numbers <m>m</m> and <m>n</m> selected from it<mdash/>these two numbers satisfy the given condition (larger number is three more than the smaller number).
+		</p>
+	</solution>
 </exercise>
 
 <exercise>
@@ -102,6 +135,17 @@
     </p>
 </statement>
 </exercise>
+
+<exercise>
+<statement>
+	<p>
+		The Greater Toronto Area has a population of about 6 million.
+		Suppose that each resident has a jar with 100 coins, consisting of nickels, dimes, quarters, loonies ($1), and toonies ($2).
+		Prove that two residents must have identical jars.
+	</p>
+</statement>
+</exercise>
+
 
 <exercise>
 <statement>
@@ -230,6 +274,62 @@
 		</ol>
     </p>
 </statement>
+<solution>
+	<p>
+		Let <m>U</m> be the set of all pairings of the $2n$ pets, and define the forbidden set <m>A_i</m> as the set of all pairings where the <m>i</m>th heaviest cat <em>is</em> paired with the <m>i</m>th heaviest dog.
+	</p>
+	<p>
+		Then the desired quantity is <me>N = |A_1^c \cap A_2^c \cap \cdots \cap A_n^c|</me>, which is the number of pairings satisfying the given condition.
+		By <xref ref="thm-pie"/>, this is equal to the sum
+		<md>
+			<mrow>N \amp = \sum_{S \subseteq \{1,2,\ldots,n\}} (-1)^{|S|} \left| \bigcap_{i \in S} A_i\right| </mrow>
+			<mrow>\amp = |U| - \sum_{1 \leq i \leq n} |A_i| + \sum_{1 \leq i \lt j \leq n} |A_i \cap A_j| - \cdots + (-1)^n|A_1 \cap A_2 \cap \cdots \cap A_n|.</mrow>
+		</md>
+	</p>
+	<p>
+		First, we compute <m>|A_i|</m> by observing that once the <m>i</m>th heaviest dog and <m>i</m>th heaviest cat are paired up, then we can pair up the other <m>2n-2</m> pets with no restrictions. 
+	</p>
+	<p>
+		The number of ways to do this can be determined as follows:
+		<ul>
+			<li>Create a pair out of the <m>2n-2</m> remaining animals: <m>\binom{2n-2}{2}</m> ways.</li>
+			<li>Create a pair out of the <m>2n-4</m> remaining animals: <m>\binom{2n-4}{2}</m> ways.</li>
+			<li><m>\vdots</m></li>
+			<li>Create a pair out of the 4 remaining animals: <m>\binom{4}{2}</m> ways.</li>
+			<li>Create a pair out of the 2 remaining animals: <m>\binom{2}{2} = 1</m> way.</li>
+			<li>Divide by <m>(n-1)!</m> since the order in which pairs are formed doesn't matter.</li>
+		</ul>
+		Hence for any <m>i = 1,2,\ldots,n</m> we have
+		<md>
+			<mrow>|A_i| \amp = \binom{2n-2}{2}\binom{2n-4}{2}\cdots\binom{4}{2}\binom{2}{2}\dfrac{1}{(n-1)!}</mrow>
+			<mrow>\amp = \dfrac{(2n-2)!}{2!\ (2n-4)!}\cdot\dfrac{(2n-4)!}{2!\ (2n-6)!}\cdots\dfrac{4!}{2!\ 2!}\cdot \dfrac{2!}{2! \ 0!} \cdot \dfrac{1}{(n-1)!}</mrow>
+			<mrow>\amp = \dfrac{(2n-2)!}{(2!)^{n-1}\ (n-1)!}</mrow>
+		</md>
+	</p>
+	<p>
+		For the pairwise intersections <m>|A_i \cap A_j|</m> the only difference is that we are fixing two pairs to begin, and then grouping the remaining <m>2n-4</m> animals into pairs.
+		This means that for any <m>i \ne j</m> we have
+		<md>
+			<mrow>|A_i \cap A_j| \amp = \binom{2n-4}{2}\binom{2n-6}{2}\cdots\binom{4}{2}\binom{2}{2}\dfrac{1}{(n-1)!}</mrow>
+			<mrow>\amp = \dfrac{(2n-4)!}{2!\ (2n-6)!}\cdot\dfrac{(2n-6)!}{2!\ (2n-8)!}\cdots\dfrac{4!}{2!\ 2!}\cdot \dfrac{2!}{2! \ 0!} \cdot \dfrac{1}{(n-1)!}</mrow>
+			<mrow>\amp = \dfrac{(2n-4)!}{(2!)^{n-2}\ (n-2)!}</mrow>
+		</md>
+	</p>
+	<p>
+		And in general, the cardinality of the intersection of <m>k</m> of the <m>A_i</m>'s is:
+		<me>|A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k}| = \dfrac{(2n-2k)!}{(2!)^{n-k}\ (n-k)!}</me>.
+	</p>
+	<p>
+		Note this is also true when we pick <m>k = 0</m>: we just get the number of ways we can group <m>2n</m> animals into pairs unrestricted.
+	</p>
+	<p>
+		Since this quantity is only dependent on how many <m>A_i</m>'s we are taking, we can write the inclusion-exclusion as:
+		<md>
+			<mrow>N \amp = |U| - \binom{n}{1}|A_1| + \binom{n}{2}|A_1 \cap A_2| - \cdots + (-1)^n\binom{n}{n}|A_1 \cap A_2 \cap \cdots \cap A_n|</mrow>
+			<mrow>\amp = \sum_{k=0}^n (-1)^k\binom{n}{k}\dfrac{(2n-2k)!}{(2!)^{n-k}\ (n-k)!}.</mrow>
+		</md>
+	</p>
+</solution>
 </exercise>
 
 <exercise>

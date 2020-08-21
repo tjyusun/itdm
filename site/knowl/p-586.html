@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:51:57-04:00       *-->
+<!--*       on 2020-08-21T13:36:17-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,7 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Observe that if two numbers \(a\) and \(b\) are congruent modulo \(n\text{,}\) then their difference \(a-b\) is congruent to 0 modulo \(n\text{.}\) This is because \(a\) and \(b\) are essentially <em class="emphasis">the same</em> when working modulo \(n\) (the remainder is all that matters), so subtracting them will give ‘0’ in that framework.</p>
-<span class="incontext"><a href="sec-congruence.html#p-586">in-context</a></span>
+<p>Let \(y \in [a]\text{.}\) Then:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(a,y) \amp \in R \qquad \amp \text{(by definition of $[a]$)}\\
+(y,a) \amp \in R \qquad \amp \text{(since $R$ is symmetric)}\\
+(a,b) \amp \in R \qquad \amp \text{(given)}\\
+(y,b) \amp \in R \qquad \amp \text{(since $R$ is transitive)}\\
+(b,y) \amp \in R \qquad \amp \text{(since $R$ is symmetric)}\\
+y \amp \in [b] \qquad \amp \text{(by definition of $[b]$)}
+\end{align*}
+</div>
+<p data-braille="continuation">Hence \([a] \subseteq [b]\text{.}\) The other inclusion is similarly proved, from which \([a] = [b]\) follows.</p>
+<span class="incontext"><a href="sec-equivalence.html#p-586">in-context</a></span>
 </body>
 </html>

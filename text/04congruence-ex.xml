@@ -86,7 +86,7 @@
 </exercise>
 
 <exercise>
-	<title>April 2018 Final</title>
+	<title>Winter 2018 Final</title>
 	<statement>
 		<p>
 			Without using induction, prove that <m>11^{n+2} + 12^{2n+1}</m> is divisible by <m>133</m> for any <m>n \in \mathbb{N}</m>.

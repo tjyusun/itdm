@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-18T21:51:25-04:00       *-->
+<!--*       on 2020-08-21T13:35:46-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -157,7 +157,10 @@ MathJax.Hub.Config({
 </li>
 <li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
 <li class="link">
-<a href="app-math-communication.html" data-scroll="app-math-communication"><span class="codenumber">A</span> <span class="title">How to Read and Write Mathematics</span></a><ul><li><a href="app-intro-to-latex.html" data-scroll="app-intro-to-latex">Introduction to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span></a></li></ul>
+<a href="app-math-communication.html" data-scroll="app-math-communication"><span class="codenumber">A</span> <span class="title">How to Read and Write Mathematics</span></a><ul>
+<li><a href="app-intro-to-latex.html" data-scroll="app-intro-to-latex">Introduction to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span></a></li>
+<li><a href="app-reading-math.html" data-scroll="app-reading-math">Reading Mathematics</a></li>
+</ul>
 </li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">B</span> <span class="title">Notation</span></a></li>
 <li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">C</span> <span class="title">List of Results</span></a></li>
@@ -176,7 +179,7 @@ MathJax.Hub.Config({
 <li id="li-25">Contradiction: Assume the conclusion is false, then use this to arrive at a statement that contradicts one of the assumptions.</li>
 </ul>
 <article class="activity project-like" id="exe-review-proofs"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Review of Proofs.</span>
 </h6>
 <p id="p-45">Prove each statement, noting which proof technique you used. Explain all your steps clearly, as if you are writing for the current batch of MAT102 students.</p>
 <ol class="lower-alpha">
@@ -204,7 +207,7 @@ MathJax.Hub.Config({
 <p id="p-50">b.* For all \(k \in \mathbb{N}\text{,}\) \([P(1) \wedge P(2) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)\) is true.</p>
 <p id="p-51">This is called <dfn class="terminology">strong induction</dfn>, where one assumes the induction step holds for all natural numbers from 1 to \(k\) in order to prove the claim for \(k+1\text{.}\)</p></article><p id="p-52">Depending on what is being proved, one may need to make slight modifications to the standard technique: e.g. changing/adding to the base case, or “skipping” from \(k\) to \(k+2\) in the case when one only has to prove the claim for every other natural number starting from the base case.</p>
 <article class="exercise exercise-like" id="exe-review-induction"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-induction"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Practice Induction.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction"><article class="exercise exercise-like"><p id="p-53">Prove the following statements using induction:</p>
 <ol class="lower-alpha">
 <li id="li-37">\(1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{1}{6}n(n+1)(2n+1)\) for all \(n \in \mathbb{N}\text{.}\)</li>
@@ -212,7 +215,7 @@ MathJax.Hub.Config({
 <li id="li-39">\(4^{2n} -1\) is divisible by 5 for every \(n \in \mathbb{N}\text{.}\)</li>
 </ol></article></div>
 <article class="exercise exercise-like" id="exe-review-induction-fibonacci"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-induction-fibonacci"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Fibonacci Sequence.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction-fibonacci"><article class="exercise exercise-like"><p id="p-54">The <dfn class="terminology">Fibonacci sequence</dfn> \(\{F_n\}\) is defined recursively as</p>
 <div class="displaymath">
 \begin{equation*}
@@ -228,10 +231,10 @@ F_n = \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}
 </div>
 <p data-braille="continuation">using strong induction.</p></article></div>
 <article class="exercise exercise-like" id="exe-review-induction-tiling"><a data-knowl="" class="id-ref original" data-refid="hk-exe-review-induction-tiling"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Tiling.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-review-induction-tiling"><article class="exercise exercise-like"><p id="p-55">Let \(T_n\) be the number of ways one can tile a \(2 \times n\) grid with \(1 \times 2\) rectangles. For example, \(T_2 = 2\) since there are two tilings of a \(2 \times 2\) grid using only \(1 \times 2\) rectangles.</p>
 <figure class="figure figure-like" id="exe-tiling-fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/exe-tiling-img.svg" style="width: 100%; height: auto;" alt="Two tilings of a 2-by-2 grid by 1-by-2 rectangles."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span>The two tilings of a two-by-two grid.</figcaption></figure><p id="p-56">Find a recurrence relation for \(T_n\) and prove that \(T_n = F_{n+1}\) as defined in <a class="xref" data-knowl="./knowl/exe-review-induction-fibonacci.html" title="Checkpoint 1.2.3">Checkpoint 1.2.3</a>.</p></article></div></section></div></main>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.5<span class="period">.</span></span><span class="space"> </span>The two tilings of a two-by-two grid.</figcaption></figure><p id="p-56">Find a recurrence relation for \(T_n\) and prove that \(T_n = F_{n+1}\) as defined in <a class="xref" data-knowl="./knowl/exe-review-induction-fibonacci.html" title="Checkpoint 1.2.3: Fibonacci Sequence">Checkpoint 1.2.3</a>.</p></article></div></section></div></main>
 </div>
 </body>
 </html>
