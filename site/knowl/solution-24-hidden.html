@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-21T13:36:11-04:00       *-->
+<!--*       on 2020-09-04T01:00:10-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -13,45 +13,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(S\) be the number of ordered triples of \(\{1,2,\ldots,b\}\text{.}\) Note that \(|S| = b^3\) by the Product Rule, since there are \(b\) choices per position, and elements can be repeated.</p>
-<p>Now define the following sets:</p>
-<ul class="disc">
-<li>\(A_1 = \) the number of ordered triples that consist of only one element.</li>
-<li>\(A_2 = \) the number of ordered triples that consist of two distinct elements.</li>
-<li>\(A_3 = \) the number of ordered triples that consist of three distinct elements.</li>
-</ul>
-<p data-braille="continuation">Then by the Sum Rule, \(|S| = |A_3| + |A_2| + |A_1|\text{.}\)</p>
-<p>To form an ordered triple with all three elements distinct, we first select three elements from \(\{1,2,\ldots,b\}\) (in \(\binom{b}{3}\) ways), then generate all permutations (there are \(3! = 6\) permutations). Hence</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-|A_3| = 6\binom{b}{3}\text{.}
-\end{equation*}
-</div>
-<p>To form an ordered triple with two distinct elements,</p>
-<ul class="disc">
-<li>We first select the two elements (in \(\binom{b}{2}\) ways)—say we picked 1 and 2;</li>
-<li>We pick one of the elements to repeat (there are 2 choices)—say 1;</li>
-<li>We count all permutations (there are 3 spots to choose from to place the non-repeated element)—(1,1,2), (1,2,1), and (2,1,1) in our example.</li>
-</ul>
-<p data-braille="continuation">Hence</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-|A_2| = 6\binom{b}{2}\text{.}
-\end{equation*}
-</div>
-<p>Finally,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-|A_1| = b
-\end{equation*}
-</div>
-<p data-braille="continuation">since there are \(b\) ordered triples of the form \((i,i,i)\) for \(i = 1,2,\ldots,b\text{.}\)</p>
-<p>Thus the number of ordered triples \(|S|\) that can be formed from the set \(\{1,2,\ldots,b\}\) is</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b\text{.}
-\end{equation*}
-</div>
-</div></body>
+<body><div class="solution solution-like"><p xmlns:svg="http://www.w3.org/2000/svg">Knowing \((0,0)\) is a vertex, by locating the opposite vertex, a unique rectangle can be formed. So this question is equivalent to <em class="emphasis">How many vertices can be chosen to form a rectangle with \((0,0)\text{?}\)</em> We can simply count that there are 9 of them in total, since any vertex besides those of the form \((0,a)\) and \((b,0)\) can be chosen to be the opposite vertex.</p></div></body>
 </html>

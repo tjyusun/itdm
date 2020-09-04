@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-21T13:35:50-04:00       *-->
+<!--*       on 2020-09-04T00:59:50-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -157,10 +157,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
 <li class="link">
-<a href="app-math-communication.html" data-scroll="app-math-communication"><span class="codenumber">A</span> <span class="title">How to Read and Write Mathematics</span></a><ul>
-<li><a href="app-intro-to-latex.html" data-scroll="app-intro-to-latex">Introduction to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span></a></li>
-<li><a href="app-reading-math.html" data-scroll="app-reading-math">Reading Mathematics</a></li>
-</ul>
+<a href="app-math-communication.html" data-scroll="app-math-communication"><span class="codenumber">A</span> <span class="title">How to Read and Write Mathematics</span></a><ul><li><a href="app-intro-to-latex.html" data-scroll="app-intro-to-latex">Introduction to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span></a></li></ul>
 </li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">B</span> <span class="title">Notation</span></a></li>
 <li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">C</span> <span class="title">List of Results</span></a></li>
@@ -174,14 +171,14 @@ MathJax.Hub.Config({
 </h2>
 <article class="objectives goal-like" id="objectives-12"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-245">Define Euler's totient function \(\phi(n)\text{,}\) compute its values for small \(n\text{,}\) and prove general statements about \(\phi(n)\text{.}\)</li>
-<li id="li-246">State and apply Euler's Theorem and Fermat's Little Theorem to solve congruences and prove other results.</li>
-<li id="li-247">Apply Fermat's Little Theorem to primality testing.</li>
-</ul></article><p id="p-658">First, let's restate the definition of Euler's totient function (introduced in <a class="xref" data-knowl="./knowl/expl-pie-euler-totient.html" title="Exploration 3.2.1: Euler's Totient Function">Exploration 3.2.1</a>).</p>
+<li id="li-249">Define Euler's totient function \(\phi(n)\text{,}\) compute its values for small \(n\text{,}\) and prove general statements about \(\phi(n)\text{.}\)</li>
+<li id="li-250">State and apply Euler's Theorem and Fermat's Little Theorem to solve congruences and prove other results.</li>
+<li id="li-251">Apply Fermat's Little Theorem to primality testing.</li>
+</ul></article><p id="p-667">First, let's restate the definition of Euler's totient function (introduced in <a class="xref" data-knowl="./knowl/expl-pie-euler-totient.html" title="Exploration 3.2.1: Euler's Totient Function">Exploration 3.2.1</a>).</p>
 <article class="definition definition-like" id="def-euler-totient"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Euler's Totient Function.</span>
 </h6>
-<p id="p-659"><dfn class="terminology">Euler's totient function</dfn> (or <dfn class="terminology">Euler's phi-function</dfn>) is the function \(\phi: \mathbb{N} \rightarrow \mathbb{N}\) defined by</p>
+<p id="p-668"><dfn class="terminology">Euler's totient function</dfn> (or <dfn class="terminology">Euler's phi-function</dfn>) is the function \(\phi: \mathbb{N} \rightarrow \mathbb{N}\) defined by</p>
 <div class="displaymath">
 \begin{equation*}
 \phi(m) = \bigl|\{k \in \mathbb{N} : 1 \leq k \leq m, \gcd(k,m) = 1\}\bigr|\text{.}
@@ -189,10 +186,10 @@ MathJax.Hub.Config({
 </div></article><article class="example example-like" id="eg-cong-totient"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">\(\phi(1)\) and \(\phi(8)\).</span>
 </h6>
-<p id="p-660">We have \(\phi(1) = 1\) since \(1\) is the only integer in \(\{1\}\) relatively prime with 1.</p>
-<p id="p-661">Also \(\phi(8) = 4\text{,}\) since there are four numbers in the set \(\{1,2,\ldots,8\}\) relatively prime with 8: they are 1, 3, 5, and 7.</p></article><article class="exercise exercise-like" id="ex-cong-totient"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-totient"><h6 class="heading">
+<p id="p-669">We have \(\phi(1) = 1\) since \(1\) is the only integer in \(\{1\}\) relatively prime with 1.</p>
+<p id="p-670">Also \(\phi(8) = 4\text{,}\) since there are four numbers in the set \(\{1,2,\ldots,8\}\) relatively prime with 8: they are 1, 3, 5, and 7.</p></article><article class="exercise exercise-like" id="ex-cong-totient"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-totient"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">\(\phi(n)\) for small \(n\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-totient"><article class="exercise exercise-like"><p id="p-662">The table below lists values of \(\phi(m)\) for small values of \(m\text{.}\) Complete the table for \(m = 11, 12, \ldots, 20\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-totient"><article class="exercise exercise-like"><p id="p-671">The table below lists values of \(\phi(m)\) for small values of \(m\text{.}\) Complete the table for \(m = 11, 12, \ldots, 20\text{.}\)</p>
 <figure class="table table-like" id="table-euler-totient-values"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.4.4<span class="period">.</span></span><span class="space"> </span>Values of \(\phi(m)\)</figcaption><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(m\)</td>
@@ -305,28 +302,28 @@ MathJax.Hub.Config({
 <td class="c m b2 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 </table></figure></article></div>
-<p id="p-663">If \(p\) is prime, then by definition all integers from \(1\) to \(p-1\) are relatively prime with \(p\text{.}\) This implies the following result:</p>
+<p id="p-672">If \(p\) is prime, then by definition all integers from \(1\) to \(p-1\) are relatively prime with \(p\text{.}\) This implies the following result:</p>
 <article class="proposition theorem-like" id="prop-euler-totient-prime"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">\(\phi(p)\).</span>
 </h6>
-<p id="p-664">If \(p\) is prime, then \(\phi(p) = p-1\text{.}\)</p></article><article class="exercise exercise-like" id="ex-cong-euler-totient-prime-converse"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-euler-totient-prime-converse"><h6 class="heading">
+<p id="p-673">If \(p\) is prime, then \(\phi(p) = p-1\text{.}\)</p></article><article class="exercise exercise-like" id="ex-cong-euler-totient-prime-converse"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-euler-totient-prime-converse"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Converse of Proposition 4.4.5.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-totient-prime-converse"><article class="exercise exercise-like"><p id="p-665">Is the converse of the above statement true? That is, if \(m \gt 2\) is an integer such that \(\phi(m) = m-1\text{,}\) does it necessarily follow that \(m\) is prime?</p>
-<p id="p-666">Justify your answer.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-totient-prime-converse"><article class="exercise exercise-like"><p id="p-674">Is the converse of the above statement true? That is, if \(m \gt 2\) is an integer such that \(\phi(m) = m-1\text{,}\) does it necessarily follow that \(m\) is prime?</p>
+<p id="p-675">Justify your answer.</p></article></div>
 <article class="exercise exercise-like" id="ex-cong-euler-totient-prime-power"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-euler-totient-prime-power"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">\(\phi(p^k)\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-totient-prime-power"><article class="exercise exercise-like"><p id="p-667">If \(p\) is prime and \(k \in \mathbb{N}\text{,}\) prove that \(\phi(p^k) = p^k - p^{k-1}\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-totient-prime-power"><article class="exercise exercise-like"><p id="p-676">If \(p\) is prime and \(k \in \mathbb{N}\text{,}\) prove that \(\phi(p^k) = p^k - p^{k-1}\text{.}\)</p></article></div>
 <article class="exercise exercise-like" id="ex-cong-euler-totient-prime-product"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-euler-totient-prime-product"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">\(\phi(pq)\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-totient-prime-product"><article class="exercise exercise-like"><p id="p-668">If \(p\) and \(q\) are prime, prove that \(\phi(pq) = (p-1)(q-1)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-totient-prime-product"><article class="exercise exercise-like"><p id="p-677">If \(p\) and \(q\) are prime, prove that \(\phi(pq) = (p-1)(q-1)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><p id="p-669"><a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a></p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><p id="p-678"><a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a></p></div></div>
 </div></article></div>
-<p id="p-670">Now we can state Euler's Theorem then prove Fermat's Little Theorem, which is a special case.</p>
+<p id="p-679">Now we can state Euler's Theorem then prove Fermat's Little Theorem, which is a special case.</p>
 <article class="theorem theorem-like" id="thm-euler"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Euler's Theorem.</span>
 </h6>
-<p id="p-671">If \(a, m \in \mathbb{N}\) with \(\gcd(a,m) = 1\text{,}\) then</p>
+<p id="p-680">If \(a, m \in \mathbb{N}\) with \(\gcd(a,m) = 1\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 a^{\phi(m)} \equiv 1 \Mod{m}\text{.}
@@ -334,17 +331,17 @@ a^{\phi(m)} \equiv 1 \Mod{m}\text{.}
 </div></article><article class="theorem theorem-like" id="thm-flt"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Fermat's Little Theorem (FLT).</span>
 </h6>
-<p id="p-672">If \(a \in \mathbb{N}\) and \(p\) is prime such that \(p \nmid a\text{,}\) then</p>
+<p id="p-681">If \(a \in \mathbb{N}\) and \(p\) is prime such that \(p \nmid a\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 a^{p-1} \equiv 1 \Mod{p}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-7"><a data-knowl="" class="id-ref original" data-refid="hk-proof-7"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-673">If \(p\) is prime with \(p \nmid a\text{,}\) we have \(\gcd(a,p) = 1\text{.}\) So we can use <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a> on \(a\) and \(m = p\text{.}\) Since \(\phi(p) = p-1\) by <a class="xref" data-knowl="./knowl/prop-euler-totient-prime.html" title="Proposition 4.4.5: \(\phi(p)\)">Proposition 4.4.5</a>, the result follows.</p></article></div>
-<p id="p-674">Although <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> is a special case of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>, it was <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> that was actually proven first—in 1736, also by Euler <a class="xref" data-knowl="./knowl/bib-euler-54.html" title="Bibliographic Entry 1">[1]</a>. Only in 1763 did Euler publish the generalization that is Euler's Theorem <a class="xref" data-knowl="./knowl/bib-euler-271.html" title="Bibliographic Entry 2">[2]</a>.</p>
+</div></article><article class="hiddenproof" id="proof-7"><a data-knowl="" class="id-ref original" data-refid="hk-proof-7"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-682">If \(p\) is prime with \(p \nmid a\text{,}\) we have \(\gcd(a,p) = 1\text{.}\) So we can use <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a> on \(a\) and \(m = p\text{.}\) Since \(\phi(p) = p-1\) by <a class="xref" data-knowl="./knowl/prop-euler-totient-prime.html" title="Proposition 4.4.5: \(\phi(p)\)">Proposition 4.4.5</a>, the result follows.</p></article></div>
+<p id="p-683">Although <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> is a special case of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>, it was <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> that was actually proven first—in 1736, also by Euler <a class="xref" data-knowl="./knowl/bib-euler-54.html" title="Bibliographic Entry 1">[1]</a>. Only in 1763 did Euler publish the generalization that is Euler's Theorem <a class="xref" data-knowl="./knowl/bib-euler-271.html" title="Bibliographic Entry 2">[2]</a>.</p>
 <article class="example example-like" id="eg-cong-euler-apply"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Example of Theorem 4.4.9.</span>
 </h6>
-<p id="p-675">Take \(m = 8\) and \(a = 7\) so that \(\gcd(a,m) = 1\text{.}\) By <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a> we have</p>
+<p id="p-684">Take \(m = 8\) and \(a = 7\) so that \(\gcd(a,m) = 1\text{.}\) By <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a> we have</p>
 <div class="displaymath">
 \begin{equation*}
 7^{\phi(8)} \equiv 1 \Mod{8} \Rightarrow 7^4 \equiv 1 \Mod{8}\text{.}
@@ -352,10 +349,10 @@ a^{p-1} \equiv 1 \Mod{p}\text{.}
 </div></article><article class="example example-like" id="eg-cong-euler-remainder"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Compute the Remainder.</span>
 </h6>
-<p id="p-676">Compute \(3^{2020} \mmod 113\text{.}\)</p>
+<p id="p-685">Compute \(3^{2020} \mmod 113\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like">
-<p id="p-677">Since \(\gcd(3,113) = 1\text{,}\) we can apply <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>. In fact, 113 is prime, so <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> applies here, so we know that</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-44" id="solution-44"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like">
+<p id="p-686">Since \(\gcd(3,113) = 1\text{,}\) we can apply <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>. In fact, 113 is prime, so <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> applies here, so we know that</p>
 <div class="displaymath">
 \begin{equation*}
 3^{112} \equiv 1 \Mod{13}\text{.}
@@ -371,11 +368,11 @@ a^{p-1} \equiv 1 \Mod{p}\text{.}
 </div></div>
 </div></article><article class="exercise exercise-like" id="ex-cong-euler-remainder"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-euler-remainder"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.13</span><span class="period">.</span><span class="space"> </span><span class="title">Compute the Remainder.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-remainder"><article class="exercise exercise-like"><p id="p-678">Compute \(6^{6777} \mmod 667\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-remainder"><article class="exercise exercise-like"><p id="p-687">Compute \(6^{6777} \mmod 667\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><p id="p-679">\(667 = 23 \times 29.\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><p id="p-688">\(667 = 23 \times 29.\)</p></div></div>
 </div></article></div>
-<p id="p-680">The idea behind the proof of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a> is that for \(a,m \in \mathbb{N}\) relatively prime, multiplying each element of the set</p>
+<p id="p-689">The idea behind the proof of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a> is that for \(a,m \in \mathbb{N}\) relatively prime, multiplying each element of the set</p>
 <div class="displaymath">
 \begin{equation*}
 S = \{y \in \{1,2,\ldots,m\} : \gcd(y,m) = 1\}
@@ -385,8 +382,8 @@ S = \{y \in \{1,2,\ldots,m\} : \gcd(y,m) = 1\}
 <article class="example example-like" id="eg-cong-euler-proof-example"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Why Theorem 4.4.9 holds, for \(a = 4\) and \(m = 9\).</span>
 </h6>
-<p id="p-681">Let \(a = 4\) and \(m = 9\text{.}\) Then \(\phi(9) = 6\text{,}\) since the integers \(S = \{1,2,4,5,7,8\}\) are relatively prime with \(9\text{.}\)</p>
-<p id="p-682">Multiplying each number in \(S\) by 4 and reducing modulo 9, we have</p>
+<p id="p-690">Let \(a = 4\) and \(m = 9\text{.}\) Then \(\phi(9) = 6\text{,}\) since the integers \(S = \{1,2,4,5,7,8\}\) are relatively prime with \(9\text{.}\)</p>
+<p id="p-691">Multiplying each number in \(S\) by 4 and reducing modulo 9, we have</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(S = \)</td>
@@ -439,13 +436,13 @@ S = \{y \in \{1,2,\ldots,m\} : \gcd(y,m) = 1\}
 <td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\rightarrow\) same as \(S\text{!}\)</td>
 </tr>
 </table></div></div></div>
-<p id="p-683">What this means is that \(S\) and \(\{4y : y \in S\}\) contain the same numbers modulo 9; so when we take the product of all elements in these sets, the results must be congruent modulo 9 as well:</p>
+<p id="p-692">What this means is that \(S\) and \(\{4y : y \in S\}\) contain the same numbers modulo 9; so when we take the product of all elements in these sets, the results must be congruent modulo 9 as well:</p>
 <div class="displaymath">
 \begin{equation*}
 (4\cdot 1)(4\cdot 2)(4\cdot 4)(4 \cdot 5)(4\cdot 7)(4\cdot 8) \equiv (1)(2)(4)(5)(7)(8)\Mod{9}\text{.}
 \end{equation*}
 </div>
-<p id="p-684">Since each element of \(S\) is relatively prime with 9, we can apply <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a> to cancel each term, and we are left with</p>
+<p id="p-693">Since each element of \(S\) is relatively prime with 9, we can apply <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a> to cancel each term, and we are left with</p>
 <div class="displaymath">
 \begin{equation*}
 (4)(4)(4)(4)(4)(4) \equiv 1 \Mod{9} \Rightarrow 4^{\phi(9)} \equiv 1 \Mod{9}
@@ -453,18 +450,18 @@ S = \{y \in \{1,2,\ldots,m\} : \gcd(y,m) = 1\}
 </div>
 <p data-braille="continuation">since \(\phi(9) = 6 = |S|\text{.}\)</p></article><article class="exercise exercise-like" id="ex-cong-euler-proof-example-again"><a data-knowl="" class="id-ref original" data-refid="hk-ex-cong-euler-proof-example-again"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Repeat the Argument.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-proof-example-again"><article class="exercise exercise-like"><p id="p-685">Replicate the idea in <a class="xref" data-knowl="./knowl/eg-cong-euler-proof-example.html" title="Example 4.4.14: Why Theorem 4.4.9 holds, for \(a = 4\) and \(m = 9\)">Example 4.4.14</a> to show that \(7^{\phi(15)} \equiv 1 \Mod{15}\text{.}\)</p></article></div>
-<p id="p-686">Finally, we present the proof of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>.</p>
-<p id="p-687"><em class="alert">Proof of Euler's Theorem</em></p>
-<p id="p-688">Let \(a,m \in \mathbb{N}\) such that \(\gcd(a,m) = 1\text{.}\)</p>
-<p id="p-689">First define the set</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-cong-euler-proof-example-again"><article class="exercise exercise-like"><p id="p-694">Replicate the idea in <a class="xref" data-knowl="./knowl/eg-cong-euler-proof-example.html" title="Example 4.4.14: Why Theorem 4.4.9 holds, for \(a = 4\) and \(m = 9\)">Example 4.4.14</a> to show that \(7^{\phi(15)} \equiv 1 \Mod{15}\text{.}\)</p></article></div>
+<p id="p-695">Finally, we present the proof of <a class="xref" data-knowl="./knowl/thm-euler.html" title="Theorem 4.4.9: Euler's Theorem">Theorem 4.4.9</a>.</p>
+<p id="p-696"><em class="alert">Proof of Euler's Theorem</em></p>
+<p id="p-697">Let \(a,m \in \mathbb{N}\) such that \(\gcd(a,m) = 1\text{.}\)</p>
+<p id="p-698">First define the set</p>
 <div class="displaymath">
 \begin{equation*}
 S = \{y : 1 \leq y \leq m, \gcd(y,m) = 1\}
 \end{equation*}
 </div>
 <p data-braille="continuation">to be the set of natural numbers smaller than \(m\) and relatively prime with \(m\text{.}\) We know that there are exactly \(\phi(m)\) elements in the set \(S\text{,}\) so we can label them as \(S = \{b_1,b_2,\ldots,b_{\phi(m)}\}\text{,}\) where \(\gcd(b_i,m) = 1\) for \(i = 1,2,\ldots,\phi(m)\text{.}\)</p>
-<p id="p-690">Since we have \(\gcd(b_i,m) = 1\) and \(\gcd(a,m) = 1\text{,}\) we must also have</p>
+<p id="p-699">Since we have \(\gcd(b_i,m) = 1\) and \(\gcd(a,m) = 1\text{,}\) we must also have</p>
 <div class="displaymath">
 \begin{equation*}
 \gcd(ab_i, m) = 1 \text{ for any } i = 1,2,\ldots,\phi(m)\text{.}
@@ -477,10 +474,10 @@ ab_i = qm + r \text{ for some } 0 \leq r \lt m,
 \end{equation*}
 </div>
 <p data-braille="continuation">which implies that \(ab_i \equiv r \Mod{m}\text{.}\)</p>
-<p id="p-691">Combining with the fact that \(\gcd(ab_i,m) = 1\text{,}\) this implies that \(\gcd(r,m) = 1\text{,}\) so \(r\) is a natural number smaller than \(m\) and relatively prime with \(m\text{.}\)</p>
-<p id="p-692">In other words, \(r\) is in the set \(S\text{,}\) and we can write \(r = b_j\) for some \(1 \leq j \leq \phi(m)\text{.}\) This means for each \(1 \leq i \leq \phi(m)\text{,}\) we have \(ab_i \equiv b_j \Mod{m}\) for some \(1 \leq j \leq \phi(m)\text{.}\)</p>
-<p id="p-693">Furthermore, none of the \(b_j\)'s are repeated, because no two \(ab_i\) terms are equivalent modulo \(m\text{.}\) (Otherwise, \(ab_{i_1} \equiv ab_{i_2} \Mod{m} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{m}\) by <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>, which is a contradiction as the \(b_i\)'s are all distinct and smaller than \(m\text{.}\))</p>
-<p id="p-694">Hence, each integer \(ab_i\) is congruent modulo \(m\) to distinct elements in \(S\text{:}\)</p>
+<p id="p-700">Combining with the fact that \(\gcd(ab_i,m) = 1\text{,}\) this implies that \(\gcd(r,m) = 1\text{,}\) so \(r\) is a natural number smaller than \(m\) and relatively prime with \(m\text{.}\)</p>
+<p id="p-701">In other words, \(r\) is in the set \(S\text{,}\) and we can write \(r = b_j\) for some \(1 \leq j \leq \phi(m)\text{.}\) This means for each \(1 \leq i \leq \phi(m)\text{,}\) we have \(ab_i \equiv b_j \Mod{m}\) for some \(1 \leq j \leq \phi(m)\text{.}\)</p>
+<p id="p-702">Furthermore, none of the \(b_j\)'s are repeated, because no two \(ab_i\) terms are equivalent modulo \(m\text{.}\) (Otherwise, \(ab_{i_1} \equiv ab_{i_2} \Mod{m} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{m}\) by <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>, which is a contradiction as the \(b_i\)'s are all distinct and smaller than \(m\text{.}\))</p>
+<p id="p-703">Hence, each integer \(ab_i\) is congruent modulo \(m\) to distinct elements in \(S\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 ab_1 \amp \equiv b_{j_1} \Mod{m}\\
@@ -505,13 +502,13 @@ ab_{\phi(m)} \amp \equiv b_{j_{\phi(m)}} \Mod{m}
 <article class="exploration project-like" id="expl-primality-testing"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Primality Testing.</span>
 </h6>
-<div class="introduction" id="introduction-11"><p id="p-695"><a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> asserts that <em class="alert">if</em> \(p\) is prime and \(\gcd(a,p)=1\text{,}\) <em class="alert">then</em> \(a^{p-1} \equiv 1 \Mod{p}\text{.}\)</p></div>
+<div class="introduction" id="introduction-11"><p id="p-704"><a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a> asserts that <em class="alert">if</em> \(p\) is prime and \(\gcd(a,p)=1\text{,}\) <em class="alert">then</em> \(a^{p-1} \equiv 1 \Mod{p}\text{.}\)</p></div>
 <article class="task exercise-like" id="task-15"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-696">Note that the converse of this statement is not true in general: Even if \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\text{,}\) we would not be able to conclude that \(m\) is prime.</p>
-<p id="p-697">Can you give examples of pairs \(a, m\) such that \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\) are both true, but \(m\) is not prime.</p></article><article class="task exercise-like" id="task-16"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-698">Complete the contrapositive of <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a>:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-699"><em class="alert">If</em> \(a,m \in \mathbb{N}\text{,}\) \(\gcd(a,m) = 1\text{,}\) and \(a^{m-1} \not\equiv 1 \Mod{m}\text{,}\) <em class="alert">then</em> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>.</p></div></div></div></article><article class="task exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-700">Show that 91 is not prime by using part (b) with \(a = 2\text{.}\)</p></article></article></section></div></main>
+<p id="p-705">Note that the converse of this statement is not true in general: Even if \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\text{,}\) we would not be able to conclude that \(m\) is prime.</p>
+<p id="p-706">Can you give examples of pairs \(a, m\) such that \(\gcd(a,m) = 1\) and \(a^{m-1} \equiv 1 \Mod{m}\) are both true, but \(m\) is not prime.</p></article><article class="task exercise-like" id="task-16"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-707">Complete the contrapositive of <a class="xref" data-knowl="./knowl/thm-flt.html" title="Theorem 4.4.10: Fermat's Little Theorem (FLT)">Theorem 4.4.10</a>:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-708"><em class="alert">If</em> \(a,m \in \mathbb{N}\text{,}\) \(\gcd(a,m) = 1\text{,}\) and \(a^{m-1} \not\equiv 1 \Mod{m}\text{,}\) <em class="alert">then</em> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>.</p></div></div></div></article><article class="task exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-709">Show that 91 is not prime by using part (b) with \(a = 2\text{.}\)</p></article></article></section></div></main>
 </div>
 </body>
 </html>

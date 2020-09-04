@@ -10,13 +10,18 @@
         <title>How to Read and Write Mathematics</title>
             <introduction>
                 <p>
-                    Mathematics is at its core a human endeavour. 
-                    
+                    Communication is an integral part of mathematics.
+                    This includes reading, evaluating, and writing/talking about mathematics.
+                    In these sections we give some tips and general guidelines with the goal of facilitating your learning in the following two outcomes:
+                    <ul>
+                        <li>Read a mathematical argument and evaluate it for correctness, completeness, and clarity.</li>
+                        <li>Use the language of mathematics (including terminology, notation, logical connectors and phrasing) to accurately and clearly communicate an argument or solution to a problem.</li>
+                    </ul>
                 </p>
             </introduction>
         <xi:include href="text/99writing01.xml" />
-        <xi:include href="text/99writing02.xml" />
         <!--
+        <xi:include href="text/99writing02.xml" />
         <xi:include href="text/99writing03.xml" />
         <xi:include href="text/99writing04.xml" />
         -->

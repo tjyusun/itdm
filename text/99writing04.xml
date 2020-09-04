@@ -4,11 +4,19 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <section xml:id="app-writing-math">
-<title> Writing Mathematics </title>
+<title>Writing Mathematics</title>
 
 <p>
-	Hello
+	As mentioned in the introduction, being able to <em>communicate</em> mathematics is a necessary skill for one to be able to <em>do</em> mathematics.
+	Being able to prove a claim, and the capacity to explain the proof to others, are two different but complementary aspects of mathematics.
+</p>
+<p>
+	Proofs and arguments need to be expressed clearly and concisely
+
 </p>
 
+	<!--
+		A result exists in your head. You don't know how to explain it to anyone else. Did you do mathematics?
+	-->
 
 </section>

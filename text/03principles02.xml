@@ -320,6 +320,23 @@
 				Use <xref ref="thm-pie"/> to determine how many five-card hands can be drawn from a standard deck of cards such that there is at least one card of each suit.
 			</p>
 		</statement>
+		<solution>
+			<p>
+				 The total number of ways to draw 5 cards from a deck is <m>\displaystyle\binom{52}{5}</m>.
+			</p>
+			<p>
+				 Let <m>A_i</m> = set of hands that do not have suit <m>i</m>.
+				 Using <xref ref="thm-pie"/>, we have 
+				 <md>
+				 	<mrow>|(A_1 \cup A_2 \cup \amp A_3 \cup A_4)^{c}| = |U| - |A_1| - |A_2| - |A_3| - |A_4| </mrow>
+				 	<mrow> \amp + |A_1 \cap A_2| + |A_1 \cap A_3| + |A_1 \cap A_4|</mrow>
+				 	<mrow> \amp + |A_2 \cap A_3| + |A_2 \cap A_4| + |A_3 \cap A_4|</mrow>
+				 	<mrow> \amp - |A_1 \cap A_2 \cap A_3| - |A_1 \cap A_3 \cap A_4| - |A_2 \cap A_3 \cap A_4| - |A_1 \cap A_2 \cap A_4|</mrow>
+				 	<mrow> \amp + |A_1 \cap A_2 \cap A_3 \cap A_4|</mrow>
+				 	<mrow> = \amp {{52}\choose{5}} - 4 \times {{39}\choose{5}} + 6 \times {{26}\choose{5}} - 4 {{13}\choose{5}} + 0 = 685464</mrow>
+				 </md>.
+			</p>
+		</solution>
 	</exercise>
 
 	<exercise xml:id="ex-pie-nonnegative">
@@ -331,11 +348,29 @@
 		</statement>
 		<hint>
 			<p>
-				Define <m>A_1</m> to be the set of solutions such that <m>x_1 > 3</m>, etc.
+				Define <m>A_1</m> to be the set of solutions such that <m>x_1 \gt 3</m>, etc.
 			</p>
 		</hint>
+		<solution>
+			<p>
+				 The total number of solutions with no other constraints is <m>\displaystyle\binom{3+10-1}{10}</m>.
+				 Let <m>A_1</m> be the set of solutions where <m>x_1 \gt 3</m>, <m>A_2</m> be the set of solutions where <m>x_2 \gt 4</m>, <m>A_3</m> where <m>x_3 \gt 8</m>.
+			</p>
+			<p>
+				 Using <xref ref="thm-pie"/>, the desired quantity is
+				 <md>
+				 	<mrow>|(A_1 \cup A_2 \cup A_3)^c| \amp = {{12}\choose{10}} - {(3+6-1)\choose{6}} - {(3+5-1)\choose{5}} - {(3+1-1)\choose{1}} </mrow>
+				 	<mrow>\amp + {{(3+1-1)}\choose{1}} + 0 + 0 - 0 </mrow>
+				 	<mrow>\amp = {{12}\choose{10}} - {{8}\choose{6}} - {{7}\choose{5}} - {{3}\choose{1}} + {{3}\choose{1}}</mrow>
+				 	<mrow>\amp = 17</mrow>.
+				 </md>
+			</p>
+		</solution>
 	</exercise>
 
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
 
 </section>
 

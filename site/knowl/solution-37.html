@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-21T13:36:20-04:00       *-->
+<!--*       on 2020-09-04T01:00:15-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -16,22 +16,21 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.3.2.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.11.1</span><span class="period">.</span>
 </h6>
-<p>We can apply <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a> here to divide through by 2, and we get</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The total number of ways to draw 5 cards from a deck is \(\displaystyle\binom{52}{5}\text{.}\)</p>
+<p>Let \(A_i\) = set of hands that do not have suit \(i\text{.}\) Using <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>, we have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x \equiv 3 \Mod{5}\text{.}
-\end{equation*}
+\begin{align*}
+|(A_1 \cup A_2 \cup \amp A_3 \cup A_4)^{c}| = |U| - |A_1| - |A_2| - |A_3| - |A_4| \\
+\amp + |A_1 \cap A_2| + |A_1 \cap A_3| + |A_1 \cap A_4|\\
+\amp + |A_2 \cap A_3| + |A_2 \cap A_4| + |A_3 \cap A_4|\\
+\amp - |A_1 \cap A_2 \cap A_3| - |A_1 \cap A_3 \cap A_4| - |A_2 \cap A_3 \cap A_4| - |A_1 \cap A_2 \cap A_4|\\
+\amp + |A_1 \cap A_2 \cap A_3 \cap A_4|\\
+= \amp {{52}\choose{5}} - 4 \times {{39}\choose{5}} + 6 \times {{26}\choose{5}} - 4 {{13}\choose{5}} + 0 = 685464\text{.}
+\end{align*}
 </div>
-<p data-braille="continuation">Modulo 10, this is the same as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x \equiv 3 \Mod{10} \text{ and } x \equiv 8 \Mod{10}\text{.}
-\end{equation*}
 </div>
-<p data-braille="continuation">So the original congruence has two solutions in \(\{[0],[1],\ldots,[9]\}\text{,}\) namely \([3]\) and \([8]\text{.}\)</p>
-</div>
-<span class="incontext"><a href="sec-congruence-solving.html#solution-37">in-context</a></span>
+<span class="incontext"><a href="sec-inclusion-exclusion.html#solution-37">in-context</a></span>
 </body>
 </html>

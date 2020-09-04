@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-21T13:36:16-04:00       *-->
+<!--*       on 2020-09-04T01:00:15-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -16,11 +16,14 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-|A_i| \amp = \binom{2n-2}{2}\binom{2n-4}{2}\cdots\binom{4}{2}\binom{2}{2}\dfrac{1}{(n-1)!}\\
-\amp = \dfrac{(2n-2)!}{2!\ (2n-4)!}\cdot\dfrac{(2n-4)!}{2!\ (2n-6)!}\cdots\dfrac{4!}{2!\ 2!}\cdot \dfrac{2!}{2! \ 0!} \cdot \dfrac{1}{(n-1)!}\\
-\amp = \dfrac{(2n-2)!}{(2!)^{n-1}\ (n-1)!}
+|(A_1 \cup A_2 \cup \amp A_3 \cup A_4)^{c}| = |U| - |A_1| - |A_2| - |A_3| - |A_4| \\
+\amp + |A_1 \cap A_2| + |A_1 \cap A_3| + |A_1 \cap A_4|\\
+\amp + |A_2 \cap A_3| + |A_2 \cap A_4| + |A_3 \cap A_4|\\
+\amp - |A_1 \cap A_2 \cap A_3| - |A_1 \cap A_3 \cap A_4| - |A_2 \cap A_3 \cap A_4| - |A_1 \cap A_2 \cap A_4|\\
+\amp + |A_1 \cap A_2 \cap A_3 \cap A_4|\\
+= \amp {{52}\choose{5}} - 4 \times {{39}\choose{5}} + 6 \times {{26}\choose{5}} - 4 {{13}\choose{5}} + 0 = 685464
 \end{align*}
 </div>
-<span class="incontext"><a href="exercises-principles.html#mjx-eqn-mrow-22">in-context</a></span>
+<span class="incontext"><a href="sec-inclusion-exclusion.html#mjx-eqn-mrow-22">in-context</a></span>
 </body>
 </html>

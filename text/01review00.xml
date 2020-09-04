@@ -7,12 +7,6 @@
 <title>Review of MAT102</title>
 	<introduction>
         <p>
-            The word <em>discrete</em> in the title of our course means <em>separate</em>; something that is <em>not smooth</em>.
-        </p>
-        <p>
-            In the study of discrete mathematics we will typically concern ourselves with discrete objects such as the integers, graphs, finite and countable sets. (In contrast, excluded from this are objects that may vary continuously, such as those ones covered in trigonometry, calculus, and Euclidean geometry.)
-        </p>
-        <p>
             Many of the concepts you learned in your MAT102 course will be useful in MAT202; in this chapter we briefly review some definitions and results, and present some exercises to warm up for the rest of the course! Material in this chapter is based on <pubtitle>MAT102H5 Introduction to Mathematical Proofs</pubtitle> by <em>Shay Fuchs</em> <xref ref="bib-fuchs-102"/>.
         </p>
     </introduction>

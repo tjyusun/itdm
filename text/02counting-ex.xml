@@ -115,6 +115,16 @@
 		</ol>
 	</p>
 </statement>
+<solution>
+	<p>
+	<ol label="(a)">
+		<li>In this case <m>n=5, k=2</m>, applying <xref ref="thm-binomial"/>, the coefficient of <m>x^3y^2</m> is <m>{{5}\choose{2}} = \frac{5!}{2!(5-2)!}=10</m>.</li>
+		<li>In this case <m>n=5, k=2</m>, applying <xref ref="thm-binomial"/> again, the coefficient of <m>x^3y^2</m> is <m>{{5}\choose{2}}3^3\cdot  2^2</m>.</li>
+    	<li>The coefficient is <m>{{5}\choose{2}}2^{3}\cdot (-1)^{2} = 80</m>.</li>
+    	<li>The coefficient is <m>{{5}\choose{2}}7^3\cdot7^2=168070</m>.</li>
+    </ol>
+	</p>
+</solution>
 </exercise>
 
 <exercise>
@@ -258,6 +268,11 @@
 		</image>
 	</sidebyside>
 </statement>
+<solution>
+	<p>
+		Knowing <m>(0,0)</m> is a vertex, by locating the opposite vertex, a unique rectangle can be formed. So this question is equivalent to <em>How many vertices can be chosen to form a rectangle with <m>(0,0)</m>?</em> We can simply count that there are 9 of them in total, since any vertex besides those of the form <m>(0,a)</m> and <m>(b,0)</m> can be chosen to be the opposite vertex.
+	</p>
+</solution>
 </exercise>
 
 <exercise>
@@ -411,6 +426,11 @@
 		<m>x_1 + x_2 + x_3 = 30</m>, <m>x_1, x_2, x_3 \geq 0</m>.
 	</p>
 </statement>
+<solution>
+	<p>
+		<xref ref="thm-comb-replace"/> gives <m>{{3+30-1}\choose{30}} = 496</m>.
+	</p>
+</solution>
 </exercise>
 
 <exercise>
@@ -427,6 +447,11 @@
 		<m>x_1 + x_2 + x_3 + x_4 = 2020</m>, <m>x_1 \geq 300</m>, <m>x_2 \geq 400</m>, <m>x_3 \geq 500</m>, <m>x_4 \geq 1000</m>
 	</p>
 </statement>
+<solution>
+	<p>
+		We first try simplifying the question by making the substitution <m>y_i = x_i - c_i</m> where <m>x_i \geq c_i</m> is given. We get <me>y_1+y_2+y_3+y_4 = 2020-300-400-500-1000 = -180 \lt 0</me>. Therefore there are no solutions.
+	</p>
+</solution>
 </exercise>
 
 <exercise>

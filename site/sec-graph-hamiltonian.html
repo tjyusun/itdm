@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-21T13:35:53-04:00       *-->
+<!--*       on 2020-09-04T00:59:52-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -157,10 +157,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link backmatter"><a href="back.html" data-scroll="back"><span class="title">Back Matter</span></a></li>
 <li class="link">
-<a href="app-math-communication.html" data-scroll="app-math-communication"><span class="codenumber">A</span> <span class="title">How to Read and Write Mathematics</span></a><ul>
-<li><a href="app-intro-to-latex.html" data-scroll="app-intro-to-latex">Introduction to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span></a></li>
-<li><a href="app-reading-math.html" data-scroll="app-reading-math">Reading Mathematics</a></li>
-</ul>
+<a href="app-math-communication.html" data-scroll="app-math-communication"><span class="codenumber">A</span> <span class="title">How to Read and Write Mathematics</span></a><ul><li><a href="app-intro-to-latex.html" data-scroll="app-intro-to-latex">Introduction to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span></a></li></ul>
 </li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">B</span> <span class="title">Notation</span></a></li>
 <li class="link"><a href="app-definitions-theorems.html" data-scroll="app-definitions-theorems"><span class="codenumber">C</span> <span class="title">List of Results</span></a></li>
@@ -174,84 +171,84 @@ MathJax.Hub.Config({
 </h2>
 <article class="objectives goal-like" id="objectives-20"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-307">Define Hamiltonian cycles and graphs. Find a Hamiltonian cycle in a graph, or explain why one does not exist.</li>
-<li id="li-308">Give conditions (necessary or sufficient) for a graph to be Hamiltonian.</li>
-<li id="li-309">Solve the Traveling Salesman Problem for small instances.</li>
-</ul></article><p id="p-960">Recall that a graph that contains a trail that traverses all its edges is called an Eulerian graph.</p>
-<p id="p-961">Sometimes we would like a graph to have a cycle that passes through all of its vertices in some order, without repeating any vertex. These graphs are called Hamiltonian graphs.</p>
+<li id="li-311">Define Hamiltonian cycles and graphs. Find a Hamiltonian cycle in a graph, or explain why one does not exist.</li>
+<li id="li-312">Give conditions (necessary or sufficient) for a graph to be Hamiltonian.</li>
+<li id="li-313">Solve the Traveling Salesman Problem for small instances.</li>
+</ul></article><p id="p-969">Recall that a graph that contains a trail that traverses all its edges is called an Eulerian graph.</p>
+<p id="p-970">Sometimes we would like a graph to have a cycle that passes through all of its vertices in some order, without repeating any vertex. These graphs are called Hamiltonian graphs.</p>
 <article class="definition definition-like" id="def-hamiltonian"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.7.1</span><span class="period">.</span><span class="space"> </span><span class="title">Hamiltonian Cycle; Graph.</span>
 </h6>
-<p id="p-962">Let \(G = (V,E)\) be a simple graph. A <dfn class="terminology">Hamiltonian cycle</dfn> on \(G\) is a cycle \(C\) that contains all the vertices of \(G\text{.}\)</p>
-<p id="p-963">A graph that contains a Hamiltonian cycle is called a <dfn class="terminology">Hamiltonian graph</dfn>.</p></article><article class="example example-like" id="eg-hamiltonian"><h6 class="heading">
+<p id="p-971">Let \(G = (V,E)\) be a simple graph. A <dfn class="terminology">Hamiltonian cycle</dfn> on \(G\) is a cycle \(C\) that contains all the vertices of \(G\text{.}\)</p>
+<p id="p-972">A graph that contains a Hamiltonian cycle is called a <dfn class="terminology">Hamiltonian graph</dfn>.</p></article><article class="example example-like" id="eg-hamiltonian"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.7.2</span><span class="period">.</span><span class="space"> </span><span class="title">A Hamiltonian Graph.</span>
 </h6>
-<p id="p-964">This graph from <a class="xref" data-knowl="./knowl/eg-graph-construct-isomorphism.html" title="Example 5.4.13: Prove Graph Isomorphism">Example 5.4.13</a> is Hamiltonian, since it contains a Hamiltonian cycle \(s\)-\(p\)-\(t\)-\(q\)-\(u\)-\(r\)-\(s\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-hamiltonian.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="p-965">While it is very easy to determine whether a graph is Eulerian (just check that all its vertices have even degree!), it is generally very difficult to determine whether or not a graph is Hamiltonian.</p>
+<p id="p-973">This graph from <a class="xref" data-knowl="./knowl/eg-graph-construct-isomorphism.html" title="Example 5.4.13: Prove Graph Isomorphism">Example 5.4.13</a> is Hamiltonian, since it contains a Hamiltonian cycle \(s\)-\(p\)-\(t\)-\(q\)-\(u\)-\(r\)-\(s\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-hamiltonian.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="p-974">While it is very easy to determine whether a graph is Eulerian (just check that all its vertices have even degree!), it is generally very difficult to determine whether or not a graph is Hamiltonian.</p>
 <article class="exercise exercise-like" id="ex-find-hamiltonian"><a data-knowl="" class="id-ref original" data-refid="hk-ex-find-hamiltonian"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.7.3</span><span class="period">.</span><span class="space"> </span><span class="title">Hamilton's Puzzle.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-find-hamiltonian"><article class="exercise exercise-like"><p id="p-966">Hamiltonian cycles are named after Irish mathematician <a class="external" href="https://en.wikipedia.org/wiki/William_Rowan_Hamilton" target="_blank">Sir William Rowan Hamilton</a>. In 1857 he invented what he called the <a class="external" href="https://en.wikipedia.org/wiki/Icosian_game" target="_blank">icosian game</a>, essentially a puzzle with the graph of a dodecahedron's vertices and edges, with the objective of finding a cycle through the graph that visits all vertices exactly once.</p>
-<p id="p-967">Can you find a Hamiltonian cycle in Hamilton's icosian game below?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-find-hamiltonian"><article class="exercise exercise-like"><p id="p-975">Hamiltonian cycles are named after Irish mathematician <a class="external" href="https://en.wikipedia.org/wiki/William_Rowan_Hamilton" target="_blank">Sir William Rowan Hamilton</a>. In 1857 he invented what he called the <a class="external" href="https://en.wikipedia.org/wiki/Icosian_game" target="_blank">icosian game</a>, essentially a puzzle with the graph of a dodecahedron's vertices and edges, with the objective of finding a cycle through the graph that visits all vertices exactly once.</p>
+<p id="p-976">Can you find a Hamiltonian cycle in Hamilton's icosian game below?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-icosian.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
 <article class="exploration project-like" id="expl-knights-tour"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">5.7.1</span><span class="period">.</span><span class="space"> </span><span class="title">Knight's Tours.</span>
 </h6>
 <div class="introduction" id="introduction-15">
-<p id="p-968">Hamilton was not the first person to consider the problem of finding Hamiltonian cycles in a graph. This problem arose much earlier in a different context—that of finding a ‘knight's tour’ on a chessboard. That is, can a knight start at any square on a board, visit every square exactly once, and return to its starting position?</p>
+<p id="p-977">Hamilton was not the first person to consider the problem of finding Hamiltonian cycles in a graph. This problem arose much earlier in a different context—that of finding a ‘knight's tour’ on a chessboard. That is, can a knight start at any square on a board, visit every square exactly once, and return to its starting position?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/knight.PNG" style="width: 100%; height: auto;" alt="A knight on an otherwise empty eight-by-eight chessboard."></div></div></div>
 </div>
 <article class="task exercise-like" id="task-25"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-969">Try finding a knight's tour yourself on an 8 <span class="times-sign">×</span> 8 board <a class="external" href="http://www.maths-resources.com/knights/" target="_blank">on this website</a>.</p></article><article class="task exercise-like" id="task-26"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-970">Explain how the knight's tour problem is equivalent to finding a Hamiltonian cycle on a graph (and explain how the graph is obtained).</p></article><article class="task exercise-like" id="task-27"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-971">Mentions of the knight's tour problem can be found as far back as the 9th century AD, in Sanskrit writings about poetics, and even before that for smaller grids. See <a class="xref" data-knowl="./knowl/bib-jelliss-2019.html" title="Bibliographic Entry 4">[4]</a> for a comprehensive timeline.</p>
-<p id="p-972">Try changing the size of the chessboard <a class="external" href="http://www.maths-resources.com/knights/" target="_blank">in this link</a> to something smaller. Are there configurations that don't allow knight's tours?</p></article><article class="task exercise-like" id="task-28"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-973">If so motivated, why not check out the problem of finding a <a class="external" href="http://www.mayhematics.com/t/1d.htm" target="_blank"><em class="emphasis">magic</em> knight's tour</a>?</p></article></article><p id="p-974">In order to prove a graph is <em class="emphasis">not</em> Hamiltonian, one has to argue that it does not contain a Hamiltonian cycle as a subgraph (or, to assume that it does, and show it leads to a contradiction).</p>
+<p id="p-978">Try finding a knight's tour yourself on an 8 <span class="times-sign">×</span> 8 board <a class="external" href="http://www.maths-resources.com/knights/" target="_blank">on this website</a>.</p></article><article class="task exercise-like" id="task-26"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-979">Explain how the knight's tour problem is equivalent to finding a Hamiltonian cycle on a graph (and explain how the graph is obtained).</p></article><article class="task exercise-like" id="task-27"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-980">Mentions of the knight's tour problem can be found as far back as the 9th century AD, in Sanskrit writings about poetics, and even before that for smaller grids. See <a class="xref" data-knowl="./knowl/bib-jelliss-2019.html" title="Bibliographic Entry 4">[4]</a> for a comprehensive timeline.</p>
+<p id="p-981">Try changing the size of the chessboard <a class="external" href="http://www.maths-resources.com/knights/" target="_blank">in this link</a> to something smaller. Are there configurations that don't allow knight's tours?</p></article><article class="task exercise-like" id="task-28"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-982">If so motivated, why not check out the problem of finding a <a class="external" href="http://www.mayhematics.com/t/1d.htm" target="_blank"><em class="emphasis">magic</em> knight's tour</a>?</p></article></article><p id="p-983">In order to prove a graph is <em class="emphasis">not</em> Hamiltonian, one has to argue that it does not contain a Hamiltonian cycle as a subgraph (or, to assume that it does, and show it leads to a contradiction).</p>
 <article class="example example-like" id="eg-not-hamiltonian"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.7.4</span><span class="period">.</span><span class="space"> </span><span class="title">A Non-Hamiltonian Graph.</span>
 </h6>
-<p id="p-975">Consider the following graph:</p>
+<p id="p-984">Consider the following graph:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-not-hamiltonian.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="p-976">If \(G\) had a Hamiltonian cycle \(C\text{,}\) it must contain both edges \((6,3)\) and \((6,5)\text{,}\) since these are the only two edges passing through 6. Similarly, \(C\) must contain both \((1,5)\) and \((1,2)\text{,}\) and \((2,1)\) and \((2,3)\text{,}\) and \((4,5)\) and \((4,3)\) (there are no other options for choosing two edges incident to vertices 1, 2, and 4).</p>
-<p id="p-977">This is already a contradiction, since we have argued that \(C\) must contain seven edges, while a Hamiltonian cycle in \(G\) will have only 6 edges. Hence \(G\) is not Hamiltonian.</p></article><p id="p-978">The <dfn class="terminology">Traveling Salesman Problem</dfn> generalizes the problem of finding a Hamiltonian cycle in a graph—when numbers called <em class="emphasis">costs</em> are assigned to the edges of a graph, one can also ask the question:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-979">Find a Hamiltonian cycle of least cost on the graph \(G\text{.}\)</p></div></div></div>
-<p id="p-980">We also call these numbers <em class="emphasis">distances</em> or <em class="emphasis">weights</em>, and we want to minimize total distance or total weight of the Hamiltonian cycle.</p>
+<p id="p-985">If \(G\) had a Hamiltonian cycle \(C\text{,}\) it must contain both edges \((6,3)\) and \((6,5)\text{,}\) since these are the only two edges passing through 6. Similarly, \(C\) must contain both \((1,5)\) and \((1,2)\text{,}\) and \((2,1)\) and \((2,3)\text{,}\) and \((4,5)\) and \((4,3)\) (there are no other options for choosing two edges incident to vertices 1, 2, and 4).</p>
+<p id="p-986">This is already a contradiction, since we have argued that \(C\) must contain seven edges, while a Hamiltonian cycle in \(G\) will have only 6 edges. Hence \(G\) is not Hamiltonian.</p></article><p id="p-987">The <dfn class="terminology">Traveling Salesman Problem</dfn> generalizes the problem of finding a Hamiltonian cycle in a graph—when numbers called <em class="emphasis">costs</em> are assigned to the edges of a graph, one can also ask the question:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-988">Find a Hamiltonian cycle of least cost on the graph \(G\text{.}\)</p></div></div></div>
+<p id="p-989">We also call these numbers <em class="emphasis">distances</em> or <em class="emphasis">weights</em>, and we want to minimize total distance or total weight of the Hamiltonian cycle.</p>
 <article class="exercise exercise-like" id="ex-find-least-cost-hamiltonian"><a data-knowl="" class="id-ref original" data-refid="hk-ex-find-least-cost-hamiltonian"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.7.5</span><span class="period">.</span><span class="space"> </span><span class="title">Least Cost Hamiltonian Cycle.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-find-least-cost-hamiltonian"><article class="exercise exercise-like"><p id="p-981">In the following graph (numbers on edges are weights), find two different Hamiltonian cycles and compute their total costs. Can you find the least cost Hamiltonian cycle on this graph?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-find-least-cost-hamiltonian"><article class="exercise exercise-like"><p id="p-990">In the following graph (numbers on edges are weights), find two different Hamiltonian cycles and compute their total costs. Can you find the least cost Hamiltonian cycle on this graph?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-find-least-cost-hamiltonian.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
 <article class="exercise exercise-like" id="ex-hamiltonian-"><a data-knowl="" class="id-ref original" data-refid="hk-ex-hamiltonian-"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.7.6</span><span class="period">.</span><span class="space"> </span><span class="title">Medicine Delivery.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-hamiltonian-"><article class="exercise exercise-like"><p id="p-982">Explain how the problem in <a class="xref" data-knowl="./knowl/ex-graph-herbs.html" title="Checkpoint 5.1.4: Medicine Delivery">Checkpoint 5.1.4</a> relates to the Traveling Salesman Problem.</p></article></div>
-<p id="p-983">We end this section with a sufficient condition for a graph to be Hamiltonian, due to <a class="external" href="https://en.wikipedia.org/wiki/Gabriel_Andrew_Dirac" target="_blank">Dirac</a>. Before working through the proof, attempt the checkpoints that follow first.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-hamiltonian-"><article class="exercise exercise-like"><p id="p-991">Explain how the problem in <a class="xref" data-knowl="./knowl/ex-graph-herbs.html" title="Checkpoint 5.1.4: Medicine Delivery">Checkpoint 5.1.4</a> relates to the Traveling Salesman Problem.</p></article></div>
+<p id="p-992">We end this section with a sufficient condition for a graph to be Hamiltonian, due to <a class="external" href="https://en.wikipedia.org/wiki/Gabriel_Andrew_Dirac" target="_blank">Dirac</a>. Before working through the proof, attempt the checkpoints that follow first.</p>
 <article class="theorem theorem-like" id="thm-dirac"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sufficient Condition for Hamiltonicity (Dirac).</span>
 </h6>
-<p id="p-984">If a graph \(G\) on \(n \geq 3\) vertices has minimum vertex degree \(n/2\text{,}\) then \(G\) is Hamiltonian.</p></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-985">Let \(G = (V,E)\) be a graph on \(n = |V| \geq 3\) vertices, such that \(\min_v \deg(v) \geq n/2\text{.}\) Then \(G\) must be connected (by <a class="xref" data-knowl="./knowl/ex-deg-connected.html" title="Exercise 5.8.27: Fall 2016 Final">Exercise 5.8.27</a>).</p>
-<p id="p-986">Let \(P = x_1x_2\cdots x_k\) be a longest path in \(G\) (note it has \(k-1\) edges).</p>
-<p id="p-987">Then all vertices of \(G\) that are adjacent to \(x_1\) must already be on \(P\text{,}\) otherwise, \(P\) can be extended to a longer path. Similarly, all vertices adjacent to \(x_k\) must already be on \(P\text{.}\) Because the minimum vertex degree is \(n/2\text{,}\) this means:</p>
+<p id="p-993">If a graph \(G\) on \(n \geq 3\) vertices has minimum vertex degree \(n/2\text{,}\) then \(G\) is Hamiltonian.</p></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-994">Let \(G = (V,E)\) be a graph on \(n = |V| \geq 3\) vertices, such that \(\min_v \deg(v) \geq n/2\text{.}\) Then \(G\) must be connected (by <a class="xref" data-knowl="./knowl/ex-deg-connected.html" title="Exercise 5.8.27: Fall 2016 Final">Exercise 5.8.27</a>).</p>
+<p id="p-995">Let \(P = x_1x_2\cdots x_k\) be a longest path in \(G\) (note it has \(k-1\) edges).</p>
+<p id="p-996">Then all vertices of \(G\) that are adjacent to \(x_1\) must already be on \(P\text{,}\) otherwise, \(P\) can be extended to a longer path. Similarly, all vertices adjacent to \(x_k\) must already be on \(P\text{.}\) Because the minimum vertex degree is \(n/2\text{,}\) this means:</p>
 <ul class="disc">
-<li id="li-310">The vertex \(x_1\) is adjacent to \(n/2\) of the vertices \(\{x_2,x_3,\ldots,x_k\}\text{;}\)</li>
-<li id="li-311">and the vertex \(x_k\) is adjacent to \(n/2\) of the vertices \(\{x_1,x_2,\ldots,x_{k-1}\}\text{.}\)</li>
+<li id="li-314">The vertex \(x_1\) is adjacent to \(n/2\) of the vertices \(\{x_2,x_3,\ldots,x_k\}\text{;}\)</li>
+<li id="li-315">and the vertex \(x_k\) is adjacent to \(n/2\) of the vertices \(\{x_1,x_2,\ldots,x_{k-1}\}\text{.}\)</li>
 </ul>
-<p id="p-988">Since \(k \leq n\text{,}\) there must be some pair of vertices \(x_{i+1}\) and \(x_i\) such that \((x_1,x_{i+1}) \in E\) and \((x_i,x_k) \in E\text{.}\) This is because there are \(n/2\) neighbours of \(x_1\) in the set \(\{x_2,\ldots,x_k\}\text{,}\) and hence only \(k - 1 - n/2\) of the set \(\{x_1,\ldots,x_{k-1}\}\) do not precede some neighbour of \(x_1\text{.}\)</p>
-<p id="p-989">Since \(k \leq n\text{,}\) then \(k - 1 - n/2 \leq n/2-1\text{,}\) which implies \(x_k\) must have a neighbour \(x_i\) that immediately precedes a neighbour of \(x_{1}\text{.}\)</p>
+<p id="p-997">Since \(k \leq n\text{,}\) there must be some pair of vertices \(x_{i+1}\) and \(x_i\) such that \((x_1,x_{i+1}) \in E\) and \((x_i,x_k) \in E\text{.}\) This is because there are \(n/2\) neighbours of \(x_1\) in the set \(\{x_2,\ldots,x_k\}\text{,}\) and hence only \(k - 1 - n/2\) of the set \(\{x_1,\ldots,x_{k-1}\}\) do not precede some neighbour of \(x_1\text{.}\)</p>
+<p id="p-998">Since \(k \leq n\text{,}\) then \(k - 1 - n/2 \leq n/2-1\text{,}\) which implies \(x_k\) must have a neighbour \(x_i\) that immediately precedes a neighbour of \(x_{1}\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-dirac-proof.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="p-990">We claim that the cycle</p>
+<p id="p-999">We claim that the cycle</p>
 <div class="displaymath">
 \begin{equation*}
 C = x_1x_{i+1}x_{i+2} \cdots x_kx_ix_{i-1}\cdots x_2x_1
 \end{equation*}
 </div>
 <p data-braille="continuation">contains <em class="emphasis">all</em> vertices of \(G\text{,}\) and is therefore a Hamiltonian cycle on \(G\text{.}\)</p>
-<p id="p-991">If not, since \(G\) is connected, there must be some vertex \(x_j\) on this cycle that is adjacent to some vertex \(y\) not on \(C\text{.}\) But now we can construct a path starting at \(y\text{,}\) moving to \(x_j\text{,}\) then following the cycle \(C\) for \(k-1\) more edges, creating a new path with \(k\) edges. This contradicts the fact that \(x_1x_2\cdots x_k\) was the longest path on \(G\text{.}\)</p>
-<p id="p-992">Hence \(C\) must be a Hamiltonian cycle on \(G\text{,}\) and \(G\) is Hamiltonian.</p></article></div>
+<p id="p-1000">If not, since \(G\) is connected, there must be some vertex \(x_j\) on this cycle that is adjacent to some vertex \(y\) not on \(C\text{.}\) But now we can construct a path starting at \(y\text{,}\) moving to \(x_j\text{,}\) then following the cycle \(C\) for \(k-1\) more edges, creating a new path with \(k\) edges. This contradicts the fact that \(x_1x_2\cdots x_k\) was the longest path on \(G\text{.}\)</p>
+<p id="p-1001">Hence \(C\) must be a Hamiltonian cycle on \(G\text{,}\) and \(G\) is Hamiltonian.</p></article></div>
 <article class="exercise exercise-like" id="ex-verify-dirac"><a data-knowl="" class="id-ref original" data-refid="hk-ex-verify-dirac"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.7.8</span><span class="period">.</span><span class="space"> </span><span class="title">Verify Theorem 5.7.7.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-verify-dirac"><article class="exercise exercise-like"><p id="p-993">Verify that the following graph satisfies the conditions of <a class="xref" data-knowl="./knowl/thm-dirac.html" title="Theorem 5.7.7: Sufficient Condition for Hamiltonicity (Dirac)">Theorem 5.7.7</a>, then find a Hamiltonian cycle on the graph.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-verify-dirac"><article class="exercise exercise-like"><p id="p-1002">Verify that the following graph satisfies the conditions of <a class="xref" data-knowl="./knowl/thm-dirac.html" title="Theorem 5.7.7: Sufficient Condition for Hamiltonicity (Dirac)">Theorem 5.7.7</a>, then find a Hamiltonian cycle on the graph.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-verify-dirac.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
 <article class="exercise exercise-like" id="ex-hamiltonian-necessary"><a data-knowl="" class="id-ref original" data-refid="hk-ex-hamiltonian-necessary"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.7.9</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 5.7.7 is Not Necessary.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-hamiltonian-necessary"><article class="exercise exercise-like"><p id="p-994"><a class="xref" data-knowl="./knowl/thm-dirac.html" title="Theorem 5.7.7: Sufficient Condition for Hamiltonicity (Dirac)">Theorem 5.7.7</a> is a sufficient condition for a graph to be Hamiltonian, but it is not necesssary. Can you find an example of a Hamiltonian graph \(G\) that does not satisfy the conditions of the theorem?</p></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-hamiltonian-necessary"><article class="exercise exercise-like"><p id="p-1003"><a class="xref" data-knowl="./knowl/thm-dirac.html" title="Theorem 5.7.7: Sufficient Condition for Hamiltonicity (Dirac)">Theorem 5.7.7</a> is a sufficient condition for a graph to be Hamiltonian, but it is not necesssary. Can you find an example of a Hamiltonian graph \(G\) that does not satisfy the conditions of the theorem?</p></article></div></section></div></main>
 </div>
 </body>
 </html>

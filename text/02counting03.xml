@@ -254,6 +254,13 @@
 		The reason for the term <em>binomial coefficient</em> is clarified in the next theorem.
 	</p>
 
+    <sidebyside>    
+    <video xml:id="video-binomial-theorem" youtube="KQcp66H8QvM" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>The Binomial Theorem</em>
+    </p>
+
     <theorem xml:id="thm-binomial">
     	<title>Binomial Theorem</title>
     	<statement>

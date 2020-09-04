@@ -10,6 +10,9 @@
             <li>Prove simple combinatorial identities by counting a set in two ways. (The set may or may not be given.)</li>
         </ul>
     </objectives>
+
+
+
     <p>
         The <xref ref="thm-binomial" text="custom">Binomial Theorem</xref> and <xref ref="thm-pascals-formula" text="custom">Pascal's Formula</xref> are examples of <term>combinatorial identities</term>.
 		These are identities or equations that involve the binomial coefficients.
@@ -32,6 +35,14 @@
 		The first two proofs of <xref ref="thm-pascals-formula"/>, in contrast, provide insights about the quantities involved in the identity.
 		Let's look at another example.
 	</p>
+
+    <sidebyside>    
+    <video xml:id="video-balls-in-bins" youtube="LBzyl70eo2M" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Combinatorial Arguments</em>
+    </p>
+
 
 	<theorem xml:id="thm-chairperson">
 		<title>Chairperson Identity</title>

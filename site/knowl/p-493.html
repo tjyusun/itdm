@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-21T13:36:14-04:00       *-->
+<!--*       on 2020-09-04T01:00:14-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(A_1\) be the set of arrangements where vowels are in alphabetical order, and \(A_2\) the set of arrangements where consonants are in alphabetical order. Then the desired number is \(|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2|\text{,}\) by <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>.</p>
+<p>Note that the formula contributes a \(+1\) for intersections of even numbers of sets (or for \(|S|\) even); and a \(-1\) for intersections of odd numbers of sets (for \(|S|\) odd). Hence the total contribution for the element \(y\) is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sum_{S \subseteq T} (-1)^{|S|} = \sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Applying <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a>, we see that this is equal to</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k} = \sum_{k=0}^{|T|} (1)^{|T|-k}(-1)^k\binom{|T|}{k} = \left( 1 + (-1) \right)^{|T|} = 0\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which is what we needed to prove.</p>
 <span class="incontext"><a href="sec-inclusion-exclusion.html#p-493">in-context</a></span>
 </body>
 </html>

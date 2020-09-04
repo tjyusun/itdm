@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-21T13:36:24-04:00       *-->
+<!--*       on 2020-09-04T01:00:16-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -14,7 +14,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">Natural numbers satisfying the first congruence are \(\{3, 8, 13, 18, 23, 28, \ldots\}\text{.}\) The number 8 works.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Also verify that the number 43 works. In fact, check that any integer of the form \(8 + 35k\) for \(k \in \mathbb{Z}\) will work!</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Define pigeonholes to be \(\{1,2\}, \{3,4\}, \ldots, \{2n-1,2n\}\text{.}\) Note that there are \(n\) of them, and each set has two consecutive integers.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The pigeons are the \(n+1\) elements we pick from \(\{1,2,\ldots,2n\}\text{.}\) Since there are more pigeons than pigeonholes, by <a class="xref" data-knowl="./knowl/cor-php.html" title="Corollary 3.1.5: Pigeonhole Principle with \(k=1\)">Corollary 3.1.5</a> we conclude that one pigeonhole (set) has at least two pigeons.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">This means there must be two consecutive integers among the \(n+1\) we picked.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Finally, any two consecutive integers are relatively prime. We can see this by applying <a class="xref" data-knowl="./knowl/ex-review-gcd-prop.html" title="Checkpoint 1.3.6: Property of GCDs">Checkpoint 1.3.6</a> with \(a = b+1\) and \(k = 1\text{.}\)</p>
 </div></body>
 </html>

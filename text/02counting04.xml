@@ -152,6 +152,13 @@
 		This gives the following formula:
     </p>
 
+    <sidebyside>    
+    <video xml:id="video-balls-in-bins" youtube="Oj3wc56o9Ok" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>The Balls in Bins Formula</em>
+    </p>
+
     <theorem xml:id="thm-comb-replace">
     	<title>Balls in Bins</title>
     	<statement>

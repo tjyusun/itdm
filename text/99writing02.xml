@@ -143,13 +143,123 @@ OUTLINE
 </exercise>
 
 <p>
-    For longer proofs involving multiple objects it is sometimes challenging to keep track of which ones represent arbitrary quantities, which ones have been fixed, and so on.
+    For longer proofs involving multiple objects it is less straightforward to keep track of which ones represent arbitrary quantities, which ones have been fixed, and so on.
+    Here are some general tips for reading math.
 </p>
 
-    
+<remark xml:id="remark-reading-math">
+    <title>Tips for Reading Mathematics</title>
+        <p>
+            <ul>
+                <li>Take notes: use pen and paper, or digital tools, to write down your thoughts as you read the proof. Draw diagrams, write an outline, emphasize key points, highlight confusing steps that need further study.</li>
+                <li>Look for key words to help you understand the logical structure of the argument: <em>therefore</em>, <em>implies</em>, <em>since</em>, <em>assume</em>, <em>thus</em>, and so on.</li>
+                <li>Mathematical proofs often rely on previous results, so you will frequently have to look up past propositions or theorems. You'll also notice that some results are more useful than others.</li>
+                <li><p>Speaking of propositions and theorems: it is not always clear what the difference is between them (and lemmas, properties, principles, and so on<ellipsis/>).
+                <ul>
+                    <li>Theorems are the most important results in a mathematical text or paper.</li>
+                    <li>Propositions are results that are lesser in importance.</li>
+                    <li>Lemmas are minor results that are specifically used to prove theorems or other results.</li>
+                    <li>Corollaries are direct consequences (<eg/> a special case) of theorems.</li>
+                    <li>Conjectures are mathematical statements that are not yet proven, but they <sq>make sense</sq>, <ie/> there is some consensus that they could be true. The <url href="https://mathworld.wolfram.com/TwinPrimeConjecture.html">Twin Prime Conjecture</url> is a famous example.</li>
+                    <li>Principles are similar to theorems, but are usually deemed to be more <sq>fundamental</sq> in nature, or generally applicable.</li>
+                    </ul>
+                </p>
+                </li>
+                <li><p>
+                    Don't rush through the material. Ask yourself questions to check understanding, for example:
+                    <ul>
+                        <li>Are there any words whose meaning is vague or unclear to me?</li>
+                        <li>Do I believe the proof?</li>
+                        <li>Are there other arguments that could have worked?</li>
+                        <li>Can I simplify the idea to make it more understandable?</li>
+                        <li>Can I come up with my own examples based on this definition or property?</li>
+                        <li>Why did the author choose this way of explaining it?</li>
+                        <li>and so on<ellipsis/></li>
+                    </ul>
+                    </p>
+                </li>
+                <li>Also think about the big picture. What were the assumptions? What was being proven? How does this proof and the methods used fit into the rest of the text?</li>
+                <li>Finally, try explaining it to someone else. Having discussions with other classmates will deepen your own understanding of the results (and will usually reveal whether one actually understands the material or not).</li>
+            </ul>
+        </p>
+</remark>
+
+<exercise xml:id="ex-reading-2">
+    <title>Reading <xref ref="prop-inverse-strictly-increasing"/></title>
+    <statement>
+        <p>
+            Read the proof of <xref ref="prop-inverse-strictly-increasing"/> below, making use of the tips in <xref ref="remark-reading-math"/>. Try explaining the proof to a classmate.
+        </p>
+    </statement>
+</exercise>
+
+
+<proposition xml:id="prop-inverse-strictly-increasing">
+    <title>Inverse of Strictly Increasing is Strictly Increasing</title>
+    <statement>
+        <p>
+            Let <m>A</m>, <m>B \subseteq \mathbb{R}</m>, and let <m>f:A \rightarrow B</m> be a bijective function. If <m>f</m> is strictly increasing on <m>A</m>, then <m>f^{-1}</m> is strictly increasing on <m>B</m>.
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Let <m>f: A \rightarrow B</m> be a bijective function and assume it is strictly increasing. 
+            This means that for all <m>x_1,x_2</m> in <m>A</m>,
+            <me>x_1 \lt x_2 \Rightarrow f(x_1) \lt f(x_2)</me>.
+        </p>
+        <p>
+            Since <m>f</m> is bijective, we know that it has an inverse <m>f^{-1}:B \rightarrow A</m>. To show that <m>f^{-1}</m> is strictly increasing, we need to show that
+            <me> \text{If } y_1 \lt y_2, \text{ then } f^{-1}(y_1) \lt f^{-1}(y_2)</me>
+            for all <m>y_1,y_2 \in B</m>.
+        </p>
+        <p>
+            We prove this by contradiction. 
+            Take arbitrary <m>y_1,y_2 \in B</m> such that <m>y_1 \lt y_2</m>, and assume that <m>f^{-1}(y_1) \geq f^{-1}(y_2)</m>.
+        </p>
+        <p>
+            Note that <m>f^{-1}(y_1) \ne f^{-1}(y_2)</m> since <m>f^{-1}</m> has to be injective; so we must have <m>f^{-1}(y_1) > f^{-1}(y_2)</m>.
+        </p>
+        <p>
+            But since <m>f</m> is strictly increasing, we have
+            <md>
+                <mrow>f^{-1}(y_1) \amp \gt f^{-1}(y_2) </mrow>
+                <mrow>\Rightarrow f(f^{-1}(y_1)) \amp \gt f(f^{-1}(y_2))</mrow>
+                <mrow>\Rightarrow y_1 \amp \gt y_2</mrow>
+            </md>
+        and this contradicts the assumption that <m>y_1 \lt y_2</m>. Thus <m>f^{-1}(y_1) \lt f^{-1}(y_2)</m> must be true.
+    </p>
+    </proof>
+</proposition>
+
+<exercise xml:id="ex-reading-3">
+    <title>Extra Practice</title>
+    <statement>
+        <p>
+            Go back to your MAT102 notes <xref ref="bib-fuchs-102"/> and pick a theorem.
+            Read this theorem, applying the tips in <xref ref="remark-reading-math"/>.
+        </p>
+    </statement>
+</exercise>
+
+
+<assemblage xml:id="box-reading-resources">
+<title>Other Resources for Reading</title>
+<p>
+    <ul>
+        <li>Mark Tomforde, <url href="https://marktomforde.com/academic/mathmajors/images/MathReadingTips.pdf">Tips for Reading your Mathematics Textbook</url> (PDF)</li>
+        <li>Shai Shimonson and Fernando Gouvea, <url href="https://web.stonehill.edu/compsci/History_Math/math-read.htm">How to Read Mathematics</url></li>
+    </ul>
+</p>
+</assemblage>
+
+
+
+
 
 
 <!--
+
+IDEA: google docs, one different proof for each group in TUT?
 
 
 <example xml:id=" ">
@@ -160,6 +270,10 @@ OUTLINE
         </p>
     </statement>
 </example>
+
+GUIDE QUESTIONS
+
+PUT WORDS/PHRASES HERE: from Section 1.4
 
 
 
