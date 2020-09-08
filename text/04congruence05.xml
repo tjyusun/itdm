@@ -161,11 +161,6 @@
 				Prove that <m>x \equiv atm_2 + bsm_1 \Mod{m_1m_2}</m> is the only solution to the given system modulo <m>m_1m_2</m>.
 			</p>
 		</statement>
-		<solution>
-			<p>
-
-			</p>
-		</solution>
 	</exercise>
 
 	<p>
@@ -306,6 +301,12 @@
 			</p>
 		</hint>
 	</exercise>
+
+
+<solutions inline="solution">
+    <title>Solutions to Selected Checkpoints</title>
+</solutions>
+
 
 
 </section>

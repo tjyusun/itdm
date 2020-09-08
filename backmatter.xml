@@ -5,7 +5,6 @@
 
 <backmatter xml:id="back" xmlns:xi="http://www.w3.org/2001/XInclude">
     
-    <!--
     <appendix xml:id="app-math-communication">
         <title>How to Read and Write Mathematics</title>
             <introduction>
@@ -24,9 +23,9 @@
     <!--
         <xi:include href="text/99writing03.xml" />
         <xi:include href="text/99writing04.xml" />
+    -->
         
     </appendix>
-    -->
 
 
     <appendix xml:id="app-notation">
