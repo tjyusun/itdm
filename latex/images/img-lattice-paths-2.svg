@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103pt" height="83pt" viewBox="0 0 103 83" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-dasharray:2.98883,2.98883;stroke-miterlimit:10;" d="M -0.00184375 0.00103125 L 99.213 0.00103125 M -0.00184375 19.840875 L 99.213 19.840875 M -0.00184375 39.684625 L 99.213 39.684625 M -0.00184375 59.528375 L 99.213 59.528375 M -0.00184375 79.364312 L 99.213 79.364312 M -0.00184375 0.00103125 L -0.00184375 79.372125 M 19.841906 0.00103125 L 19.841906 79.372125 M 39.685656 0.00103125 L 39.685656 79.372125 M 59.529406 0.00103125 L 59.529406 79.372125 M 79.36925 0.00103125 L 79.36925 79.372125 M 99.205187 0.00103125 L 99.205187 79.372125 " transform="matrix(1,0,0,-1,2.787,80.169)"/>
+<path style="fill:none;stroke-width:1.19553;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(100%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -0.00184375 0.00103125 L -0.00184375 39.684625 " transform="matrix(1,0,0,-1,2.787,80.169)"/>
+<path style="fill:none;stroke-width:1.19553;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M -0.00184375 39.684625 L 79.36925 39.684625 " transform="matrix(1,0,0,-1,2.787,80.169)"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4.878906 80.167969 C 4.878906 79.011719 3.941406 78.078125 2.785156 78.078125 C 1.632813 78.078125 0.695313 79.011719 0.695313 80.167969 C 0.695313 81.324219 1.632813 82.261719 2.785156 82.261719 C 3.941406 82.261719 4.878906 81.324219 4.878906 80.167969 Z M 4.878906 80.167969 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 84.25 40.484375 C 84.25 39.328125 83.3125 38.390625 82.15625 38.390625 C 81.003906 38.390625 80.066406 39.328125 80.066406 40.484375 C 80.066406 41.640625 81.003906 42.574219 82.15625 42.574219 C 83.3125 42.574219 84.25 41.640625 84.25 40.484375 Z M 84.25 40.484375 "/>
+</g>
+</svg>

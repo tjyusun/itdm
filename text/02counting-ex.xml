@@ -383,13 +383,17 @@
 			Hence to create an arrangement, we need to perform the following steps:
 			<ul>
 				<li>Step 1: Arrange consonants (<m>3!</m> ways)</li>
-				<li>Step 2: Insert the three consonants among the vowels<mdash/>since consonant order has been fixed in the previous step, this is equivalent to distributing 3 indistinguishable balls into 5 distinguishable bins corresponding to the five places in 
+				<li><p>Step 2: Insert the three consonants among the vowels<mdash/>since consonant order has been fixed in the previous step, this is equivalent to distributing 3 indistinguishable balls into 5 distinguishable bins corresponding to the five places in 
+				</p>
 				<sidebyside width="80%" margins="auto">
 					<p>
 						_ A _ I _ O _ O _
 					</p>
 				</sidebyside>
-				There are <m>\binom{7}{3}</m> ways to do this by <xref ref="thm-comb-replace"/>.</li>
+				<p>
+				There are <m>\binom{7}{3}</m> ways to do this by <xref ref="thm-comb-replace"/>.
+				</p>
+				</li>
 			</ul>
 			Hence there are <m>3! \cdot \displaystyle\binom{7}{3}</m> such arrangements.
 		</p>

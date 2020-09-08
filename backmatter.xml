@@ -5,7 +5,7 @@
 
 <backmatter xml:id="back" xmlns:xi="http://www.w3.org/2001/XInclude">
     
-    
+    <!--
     <appendix xml:id="app-math-communication">
         <title>How to Read and Write Mathematics</title>
             <introduction>
@@ -20,13 +20,12 @@
                 </p>
             </introduction>
         <xi:include href="text/99writing01.xml" />
-        <!--
         <xi:include href="text/99writing02.xml" />
         <xi:include href="text/99writing03.xml" />
         <xi:include href="text/99writing04.xml" />
-        -->
+        
     </appendix>
-    
+    -->
 
 
     <appendix xml:id="app-notation">
@@ -44,10 +43,11 @@
         <list-of elements="exploration example exercise activity" divisions="chapter section" />
     </appendix>
     
+    <!--
     <solutions xml:id="app-solutions" divisional="solution">
     <title>Solutions to Selected Exercises</title>
     </solutions>
-
+    -->
 
 
     <references>

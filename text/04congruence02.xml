@@ -272,10 +272,10 @@
 	<p>
 		The second statement of <xref ref="prop-cong-division"/> is also called the <alert>cancellation law</alert>, since it gives a condition under which one can divide both sides of a congruence by a number.
 	</p>
-
+<!--
 <solutions inline="solution">
     <title>Solutions to Selected Checkpoints</title>
 </solutions>
-
+-->
 
 </section>
