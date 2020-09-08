@@ -132,7 +132,7 @@ OUTLINE
         </p>
         <p>
             <ol>
-                <li>What was/were being proven?</li>
+                <li>What was/were being proven? What method(s) were used?</li>
                 <li>Explain how the variable <m>m</m> is being used in the proof. What does it represent?</li>
                 <li>Explain how the quantity <m>k</m> is being used in the proof. What does it represent?</li>
                 <li>What definitions were used, either implicitly or explicitly?</li>
@@ -208,25 +208,28 @@ OUTLINE
             <me>x_1 \lt x_2 \Rightarrow f(x_1) \lt f(x_2)</me>.
         </p>
         <p>
-            Since <m>f</m> is bijective, we know that it has an inverse <m>f^{-1}:B \rightarrow A</m>. To show that <m>f^{-1}</m> is strictly increasing, we need to show that
+            <!--
+                Since <m>f</m> is bijective, we know that it has an inverse <m>f^{-1}:B \rightarrow A</m>.
+            -->
+            To show that <m>f^{-1}</m> is strictly increasing, we need to show that
             <me> \text{If } y_1 \lt y_2, \text{ then } f^{-1}(y_1) \lt f^{-1}(y_2)</me>
             for all <m>y_1,y_2 \in B</m>.
         </p>
         <p>
             We prove this by contradiction. 
-            Take arbitrary <m>y_1,y_2 \in B</m> such that <m>y_1 \lt y_2</m>, and assume that <m>f^{-1}(y_1) \geq f^{-1}(y_2)</m>.
+            Take <m>y_1,y_2 \in B</m> such that <m>y_1 \lt y_2</m>, and assume that <m>f^{-1}(y_1) \geq f^{-1}(y_2)</m>.
         </p>
         <p>
-            Note that <m>f^{-1}(y_1) \ne f^{-1}(y_2)</m> since <m>f^{-1}</m> has to be injective; so we must have <m>f^{-1}(y_1) > f^{-1}(y_2)</m>.
+            Note that we must have <m>f^{-1}(y_1) > f^{-1}(y_2)</m> since <m>f^{-1}</m> is injective.
         </p>
         <p>
-            But since <m>f</m> is strictly increasing, we have
+            Since <m>f</m> is strictly increasing, we have
             <md>
                 <mrow>f^{-1}(y_1) \amp \gt f^{-1}(y_2) </mrow>
-                <mrow>\Rightarrow f(f^{-1}(y_1)) \amp \gt f(f^{-1}(y_2))</mrow>
+                <!-- <mrow>\Rightarrow f(f^{-1}(y_1)) \amp \gt f(f^{-1}(y_2))</mrow> -->
                 <mrow>\Rightarrow y_1 \amp \gt y_2</mrow>
             </md>
-        and this contradicts the assumption that <m>y_1 \lt y_2</m>. Thus <m>f^{-1}(y_1) \lt f^{-1}(y_2)</m> must be true.
+        contradicting the assumption that <m>y_1 \lt y_2</m>. Thus <m>f^{-1}(y_1) \lt f^{-1}(y_2)</m> must be true.
     </p>
     </proof>
 </proposition>

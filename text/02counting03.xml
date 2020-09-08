@@ -255,7 +255,7 @@
 	</p>
 
     <sidebyside>    
-    <video xml:id="video-binomial-theorem" youtube="KQcp66H8QvM" play-at="embed" />
+    <video xml:id="video-binomial-theorem" youtube="KQcp66H8QvM" play-at="embed" preview="images/07-thumb.png" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>The Binomial Theorem</em>
@@ -477,12 +477,12 @@
 		</solution>
 	</exercise>
 
-	
+<!--
 <solutions inline="solution">
     <title>Solutions to Selected Checkpoints</title>
 </solutions>
 
-
+-->
 
 
 

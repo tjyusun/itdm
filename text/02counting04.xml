@@ -153,7 +153,7 @@
     </p>
 
     <sidebyside>    
-    <video xml:id="video-balls-in-bins" youtube="Oj3wc56o9Ok" play-at="embed" />
+    <video xml:id="video-balls-in-bins" youtube="Oj3wc56o9Ok" play-at="embed" preview="images/08-thumb.png"/>
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>The Balls in Bins Formula</em>
@@ -317,12 +317,12 @@
 
 	</exercise>
 
-	
+<!--
 <solutions inline="solution">
     <title>Solutions to Selected Checkpoints</title>
 </solutions>
 
-
+-->
 
 
 

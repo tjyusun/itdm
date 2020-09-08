@@ -15,7 +15,7 @@
     
     
     <sidebyside>    
-        <video xml:id="video-intro-to-counting" youtube="VEF1B5ZLVOE" play-at="embed" />
+        <video xml:id="video-intro-to-counting" youtube="VEF1B5ZLVOE" play-at="embed" preview="images/01-thumb.png" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Introduction to Counting</em>
@@ -247,7 +247,7 @@
     </p>
       
     <sidebyside>    
-        <video xml:id="video-sum-rule-and-partitions" youtube="5aiDfPpxbrY" play-at="embed" />
+        <video xml:id="video-sum-rule-and-partitions" youtube="5aiDfPpxbrY" play-at="embed" preview="images/02-thumb.png" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>The Sum Rule and Partitions</em>
@@ -319,7 +319,7 @@
     </p>
     
     <sidebyside>    
-    <video xml:id="video-product-rule" youtube="bgeL_Uoqq2U" play-at="embed" />
+    <video xml:id="video-product-rule" youtube="bgeL_Uoqq2U" play-at="embed" preview="images/03-thumb.png" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>The Product Rule</em>
@@ -517,8 +517,10 @@
             </p>
         </hint>
     </exercise>
-
+<!--
 <solutions inline="solution">
     <title>Solutions to Selected Checkpoints</title>
 </solutions>
+-->
+
 </section>
