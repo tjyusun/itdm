@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-07T22:52:20-04:00       *-->
+<!--*       on 2020-09-23T23:22:59-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,7 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Now we can state the Principle of Inclusion-Exclusion (or PIE) in full generality. There are a number of ways to prove this, but the usual method is to show that each item belonging to none of the \(A_i\)'s contribute 1 to the total; while all other items contribute 0 to the total.</p>
+<p>To summarize: (note the alternating signs)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+|(A_1 \cup A_2 \cup A_3)^c| = |U| \amp \underbrace{- |A_1| - |A_2| - |A_3|}_{\text{single sets}} \\
+\amp \underbrace{+ |A_1 \cap A_2| + |A_1 \cap A_3| + |A_2 \cap A_3|}_{\text{intersections of pairs}}\\
+\amp \underbrace{- |A_1 \cap A_2 \cap A_3|}_{\text{intersection of all three}}\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec-inclusion-exclusion.html#p-491">in-context</a></span>
 </body>
 </html>

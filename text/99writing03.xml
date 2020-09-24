@@ -4,11 +4,147 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <section xml:id="app-evaluating-math">
-<title> Evaluating Mathematics </title>
+<title>Writing Mathematics, Part I</title>
 
 <p>
-	Hello
+	Mathematics is more than just performing calculations.
+	It is about ideas: how concepts and calculations come together to tell a story.
+</p>
+<p>
+	Effective writing tells the story well and conveys meaning to the audience.
+</p>
+<remark xml:id="rem-writing-well">
+	<title>Some Tips for Effective Math Writing</title>
+	<statement>
+		<p>
+			<ul>
+				<li>First of all, the math is correct.</li>
+				<li>The solution is well-organized; logical structure is easy to follow.</li>
+				<li>Steps are justified/explained as appropriate to the audience.</li>
+				<li>Solution is written in complete sentences.</li>
+				<li>Words (<em>therefore</em>, <em>because</em>, <em>for all</em>) are used instead of symbols (<m>\therefore</m>, <m>\because</m>, <m>\forall</m>.)</li>
+				<li>Equal signs and right-arrows are not just chained together.</li>
+			</ul>
+			Check <url href="https://math.hmc.edu/su/writing-math-well/">Writing Math Well</url> by Francis Su for some nice handouts.
+		</p>
+	</statement>
+</remark>
+<p>
+	When your TA or instructor reads your work what exactly are they looking for? 
+	How do they assign a grade to your solution or proof?
+</p>
+<p>
+	Consider the following statement, and suppose that the proof inside the solution link was submitted by a student.
 </p>
 
+<example xml:id="eg-evaluate-1">
+	<title>Prove this identity</title>
+	<statement>
+		<p>
+				If <m>n</m> is a natural number, then <me>1 + 3 + 5 + \cdots + (2n-1) = n^2</me>.
+		</p>
+	</statement>
+	<solution>
+		<p><alert>Proof</alert>
+			<m>n = 1: 1 = 1</m> OK.
+		</p>
+		<p>
+			<m>n = k: 1 + 3 + 5 + \cdots + (2k-1) = k^2</m>
+		</p>
+		<p>
+			The hypothesis is, <m>n = k + 1: 1 + 3 + 5 + \cdots + (2(k+1) - 1) = (k+1)^2</m>.
+		</p>
+		<p>
+			<me>1 + 3 + 5 + \cdots + (2k-1) + (2k+1) = k^2 + (2k + 1) = (k+1)^2</me>, done.
+		</p>
+	</solution>
+</example>
+
+
+<remark xml:id="rem-rubric-writing">
+	<title>Rubric for Writing</title>
+	<statement>
+		<p>
+			Every solution or proof you submit in the assignments or term test will be assigned two grades: one for the mathematics and one for the writing. This rubric will be used to assign the writing grade.
+		</p>
+		<p>
+			<ul>
+				<li><alert>2 points</alert>: Explanations are well-written and appropriate to the target audience, MAT202 students. Guiding text and connecting words make clear the structure of the overall argument. Mathematical symbols are used correctly and convey ideas well. There are no typos or proofreading errors.</li>
+				<li><alert>1 point</alert>: The solution or proof is somewhat understandable, and the main argument can still be followed. But there are minor errors in organization or the writing, or some justifications may be unclear.</li>
+				<li><alert>0 points</alert>: Problems with the writing interfere with audience understanding/most of the solution not written in complete sentences or using words.</li>
+			</ul>
+		</p>
+	</statement>
+</remark>
+
+
+<exercise xml:id="ex-writing-induction-guide">
+	<title>Grade and Reflect</title>
+	<statement>
+		<p>
+			What grade (out of 2 points) would you give the proof in <xref ref="eg-evaluate-1"/> using the rubric in <xref ref="rem-rubric-writing"/>?
+			Then think about the following guide questions:
+			<ol label="(a)">
+				<li>Why did you assign it the grade that you did?</li>
+				<li>Were there any errors in the mathematics of the proof? </li>
+				<li>What feedback would you give the student?</li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
+<p>
+	Now consider the following problem: 
+</p>
+<example xml:id="eg-evaluate-2">
+	<title>Counting Problem</title>
+	<statement>
+		<p>
+			How many arrangements of the word NEWFOUNDLAND have the three N's together but the two D's apart?
+		</p>
+	</statement>
+</example>
+	
+<p>
+	In each checkpoint below there is a solution to <xref ref="eg-evaluate-2"/>.
+	To each one assign a grade out of 2 points based on <xref ref="rem-rubric-writing"/>.
+</p>
+
+
+<exercise xml:id="ex-evaluate-2-a">
+	<statement>
+		<image source="images/Sept23-newfoundland-1.png" width="80%"/>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-evaluate-2-no-sentence">
+	<statement>
+		<image source="images/Sept23-newfoundland-no-sentence.png" width="80%"/>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-evaluate-2-3">
+	<statement>
+		<image source="images/Sept23-newfoundland-3.png" width="90%"/>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-evaluate-2-a1b0">
+	<statement>
+		<image source="images/Sept23-newfoundland-a1b0.png" width="80%"/>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-evaluate-2-2">
+	<statement>
+		<image source="images/Sept23-newfoundland-2.png" width="80%"/>
+	</statement>
+</exercise>
+
+<exercise xml:id="ex-evaluate-2-3b">
+	<statement>
+		<image source="images/Sept23-newfoundland-3b.png" width="90%"/>
+	</statement>
+</exercise>
 
 </section>

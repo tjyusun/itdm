@@ -11,6 +11,14 @@
             <li>Recognize scenarios where derangements apply and use them to solve problems.</li>
         </ul>
     </objectives>
+	
+	<sidebyside>    
+    <video xml:id="video-derangements" youtube="UML9C4ECiI8" play-at="embed" preview="images/12-thumb.png"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Derangements</em>
+    </p>
+
 	<p>
 		Recall that the permutations of a set <m>S</m> are the bijective functions from <m>S</m> to itself.
 		We have a special name for those permutations that leave no element fixed:

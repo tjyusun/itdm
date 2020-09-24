@@ -4,16 +4,165 @@
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
 <section xml:id="app-writing-math">
-<title>Writing Mathematics</title>
+<title>Writing Mathematics, Part II</title>
 
 <p>
-	Being able to <em>communicate</em> mathematics is a necessary skill for one to be able to <em>do</em> mathematics.
-	Being able to prove a claim, and the capacity to explain the proof to others, are two different but complementary aspects of mathematics.
+	Okay, it's your turn to try writing a clear, concise proof of a statement!
+	As we have seen, the use of English words makes proofs more approachable and understandable. Here's a small sample of commonly-used phrases in mathematical proofs. Note the use of the plural <em>we</em> instead of the singular <em>I</em>.
 </p>
+<sidebyside widths="50% 50%" margins="auto" valign="middle">
+    <p>
+    <alert>Declare intentions</alert>
+    <ul>
+        <li>We will prove...</li>
+        <li>We want to show that...</li>
+        <li>In order to prove... we...</li>
+        <li>At this point we need to find...</li>
+        <li>We consider the following cases...</li>
+    </ul>
+    </p>
+    <p>
+    <alert>Clarify implications</alert>
+    <ul>
+        <li>Since... then...</li>
+        <li>Because..., we have...</li>
+        <li>Therefore/thus/hence...</li>
+        <li>This means that...</li>
+        <li>The previous statement implies...</li>
+    </ul>
+    </p>
+</sidebyside>
+
+<p><alert>Explain steps</alert>
+<ul>
+    <li>By assumption, we know that...</li>
+    <li>By simplication/manipulation,rearranging,...</li>
+    <li>Because of property/theorem/definition, we have...</li>
+</ul>
+</p>
+
 <p>
-	Proofs and arguments need to be expressed clearly and concisely
-
+	Moreover<mdash/>and this is something that takes some practice to get used to<mdash/>mathematical formulas and equations, when used in English sentences, need to be treated as part of the grammar.
+	A complete sentence is one that expresses a complete idea. For example, <em>TJ baked brownies.</em> is a complete sentence, while <em>baked brownies</em> is not. (The latter is called a phrase, or a fragment.)
 </p>
 
+<activity xml:id="ex-writing-grammar">
+	<title>Complete sentence or not?</title>
+	<statement>
+		<p>
+			For each statement below, decide whether it is a complete sentence or not.
+		</p>
+		<ol label="(a)">
+			<li>x^2.</li>
+			<li>x^2 = 9.</li>
+			<li>Because <m>A \subseteq B</m>.</li>
+			<li>6 ways of rearranging the letters of the word DOG.</li>
+			<li>We will manipulate <m>\binom{n}{k}</m>.</li>
+			<li><m>-1 \in \mathbb{N}</m>.</li>
+		</ol>
+	</statement>
+</activity>
+
+<p>
+	Something else to note is that the two-column proof method of writing statement and reason beside each other is <em>not</em> a best practice.
+	Besides the fact that it is not really used by math practitioners, these are just lists of bullet points that sometimes even obfuscate the logical links among the parts of a solution.
+	They are sometimes useful, like for organizing your thoughts, but generally it is better form to write in complete sentences.
+</p>
+
+<example xml:id="eg-writing-two-column">
+	<title>A Simple Inequality</title>
+	<statement>
+		<p>
+			Show that if <m>a \gt b \gt 0</m>, then <m>a^2 \gt b^2</m>.
+		</p>
+		<p>
+			<alert>A Two-Column Proof</alert>
+		</p>
+		<p>
+		    <tabular>
+		        <row>
+		            <cell>
+		                Statement
+		            </cell>
+		            <cell>
+		                Reason
+		            </cell>
+		        </row>
+		        <row>
+		            <cell>
+		            	<m>a \gt b</m>
+		            </cell>
+		            <cell>
+		            	Given
+		            </cell>
+		        </row>
+		        <row>
+		            <cell>
+		            	<m>a - b \gt 0</m>
+		            </cell>
+		            <cell>
+		            	Add <m>-b</m> to both sides
+		            </cell>
+		        </row>
+		        <row>
+		            <cell>
+		            	<m>a + b \gt 0</m>
+		            </cell>
+		            <cell>
+		            	Since <m>a,b \gt 0</m>
+		            </cell>
+		        </row>
+		        <row>
+		            <cell>
+		            	<m>a^2 - b^2 \gt 0</m>
+		            </cell>
+		            <cell>
+		            	Multiply two previous inequalities
+		            </cell>
+		        </row>
+		        <row>
+		            <cell>
+		            	<m>a^2 \gt b^2</m>
+		            </cell>
+		            <cell>
+		            	Add <m>b^2</m> to both sides
+		            </cell>
+		        </row>
+    	    </tabular>
+		</p>
+		<p>
+			<alert>A Proof in Prose</alert>
+		</p>
+		<p>
+			Let <m>a</m> and <m>b</m> be positive real numbers with <m>a \gt b</m>.
+			Then <m>a-b</m> and <m>a+b</m> are both positive.
+			Hence their product <m>(a-b)(a+b) = a^2 - b^2</m> is positive as well,
+			implying <m>a^2 \gt b^2</m>.
+		</p>
+	</statement>
+</example>
+
+
+
+<activity xml:id="exe-review-proof-writing">
+	<statement>
+    <p>
+    	Write a clear and complete solution to the following exercise:
+    </p>
+    <p>
+        Count the number of nonnegative integer solutions to the equation 
+        <me>x_1 + x_2 + x_3 + x_4 = 35</me>
+        that satisfy <m>x_1 \geq 4</m>, <m>x_2 \geq 1</m>, and <m>x_3 \leq 5</m>.
+    </p>
+    <p>
+        Try solving it yourself first before looking at the hint!
+    </p>    
+</statement>
+<hint>
+	<p>
+		Count the number of solutions that satisfy <m>x_3 \geq 6</m> first.
+	</p>
+</hint>
+</activity>
 
 </section>

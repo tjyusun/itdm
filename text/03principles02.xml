@@ -11,9 +11,19 @@
             <li>Sketch Venn Diagrams that correspond to a given scenario or problem.</li>
         </ul>
     </objectives>
+	
+	<sidebyside>    
+    <video xml:id="video-inclusion-exclusion" youtube="FMYJxGzboIM" play-at="embed" preview="images/11-thumb.png"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Principle of Inclusion-Exclusion</em>
+    </p>
+
     <p>
     	We first recall that in order to count the number of elements of a set <m>U</m> that <em>don't</em> satisfy a given condition, one can first count the number of elements that <em>do</em>, and then subtract from the cardinality of <m>U</m>.
     </p>
+
+    
 
     <example xml:id="eg-pie-divisible-3">
     	<title>Not Divisible by 3</title>

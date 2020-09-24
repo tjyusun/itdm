@@ -128,6 +128,7 @@ that is,
 			<ul>
 				<li>David Richeson also has a PDF quick guide to <latex/> available <url href="https://divisbyzero.com/teaching/a-quick-guide-to-latex/">on his website</url>.</li>
 				<li>Overleaf also has an <url href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">introductory guide</url>.</li>
+				<li><url href="https://detexify.kirelabs.org/classify.html">Detexify</url> for searching commands for symbols.</li>
 				<li><url href="http://www.tug.org/texworks/">TeXworks</url>, if you would like to install <latex/> on your computer. (optional! only if you really want to...)</li>
 			</ul>
 		</p>

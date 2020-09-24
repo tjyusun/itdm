@@ -126,6 +126,13 @@
 		Like the hair follicle example, this is typical of proofs that utilize the Pigeonhole Principle.
 	</p>
 
+    <sidebyside>    
+    <video xml:id="video-pigeonhole" youtube="XnvaUoONj2M" play-at="embed" preview="images/10-thumb.png"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Pigeonhole Principle</em>
+    </p>
+
 	<theorem xml:id="thm-php">
 		<title>Pigeonhole Principle (PHP)</title>
 		<statement>

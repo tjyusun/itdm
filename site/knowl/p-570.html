@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-07T22:52:23-04:00       *-->
+<!--*       on 2020-09-23T23:23:02-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,23 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The number of ways to do this can be determined as follows:</p>
-<ul class="disc">
-<li>Create a pair out of the \(2n-2\) remaining animals: \(\binom{2n-2}{2}\) ways.</li>
-<li>Create a pair out of the \(2n-4\) remaining animals: \(\binom{2n-4}{2}\) ways.</li>
-<li>\(\displaystyle \vdots\)</li>
-<li>Create a pair out of the 4 remaining animals: \(\binom{4}{2}\) ways.</li>
-<li>Create a pair out of the 2 remaining animals: \(\binom{2}{2} = 1\) way.</li>
-<li>Divide by \((n-1)!\) since the order in which pairs are formed doesn't matter.</li>
-</ul>
-<p data-braille="continuation">Hence for any \(i = 1,2,\ldots,n\) we have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-|A_i| \amp = \binom{2n-2}{2}\binom{2n-4}{2}\cdots\binom{4}{2}\binom{2}{2}\dfrac{1}{(n-1)!}\\
-\amp = \dfrac{(2n-2)!}{2!\ (2n-4)!}\cdot\dfrac{(2n-4)!}{2!\ (2n-6)!}\cdots\dfrac{4!}{2!\ 2!}\cdot \dfrac{2!}{2! \ 0!} \cdot \dfrac{1}{(n-1)!}\\
-\amp = \dfrac{(2n-2)!}{(2!)^{n-1}\ (n-1)!}
-\end{align*}
-</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let \(U\) be the set of all pairings of the $2n$ pets, and define the forbidden set \(A_i\) as the set of all pairings where the \(i\)th heaviest cat <em class="emphasis">is</em> paired with the \(i\)th heaviest dog.</p>
 <span class="incontext"><a href="exercises-principles.html#p-570">in-context</a></span>
 </body>
 </html>

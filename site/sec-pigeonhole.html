@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-07T22:51:54-04:00       *-->
+<!--*       on 2020-09-23T23:22:36-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -160,6 +160,8 @@ MathJax.Hub.Config({
 <a href="app-math-communication.html" data-scroll="app-math-communication"><span class="codenumber">A</span> <span class="title">How to Read and Write Mathematics</span></a><ul>
 <li><a href="app-intro-to-latex.html" data-scroll="app-intro-to-latex">Introduction to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span></a></li>
 <li><a href="app-reading-math.html" data-scroll="app-reading-math">Reading Mathematics</a></li>
+<li><a href="app-evaluating-math.html" data-scroll="app-evaluating-math">Writing Mathematics, Part I</a></li>
+<li><a href="app-writing-math.html" data-scroll="app-writing-math">Writing Mathematics, Part II</a></li>
 </ul>
 </li>
 <li class="link"><a href="app-notation.html" data-scroll="app-notation"><span class="codenumber">B</span> <span class="title">Notation</span></a></li>
@@ -179,7 +181,7 @@ MathJax.Hub.Config({
 <p id="p-424"><em class="alert">Claim.</em> There are two people in Toronto with the exact same number of hair follicles on their head.</p>
 <p id="p-425">In your mind you're probably going ‘<em class="emphasis">Even if this were true…how would we prove it??</em>’ And yes, we wouldn't be able to actually <em class="emphasis">count</em> the number of hair follicles on anyone's head. But the beauty of the Pigeonhole Principle is that we don't need to!</p>
 <p id="p-426">I'm going to let <a class="external" href="https://twitter.com/onlinekyne" target="_blank">Kyne</a> of Canada's Drag Race Season 1 explain why this claim holds true (<a class="external" href="https://www.tiktok.com/@onlinekyne/video/6825323353256070406" target="_blank">link to video</a>).</p>
-<aside class="aside aside-like" id="aside-3"><p id="p-427"><a class="external" href="https://www.onlinekyne.com/" target="_blank">Kyne</a> was a contestant on the first season of Canada's Drag Race, and is a <a class="external" href="https://uwaterloo.ca/stories/mathematics/university-waterloos-math-student-vying-become-canadas-first" target="_blank">mathematical finance major at the University of Waterloo</a>.</p></aside><div class="sidebyside">      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlinekyne/video/6825323353256070406" data-video-id="6825323353256070406" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlinekyne" href="https://www.tiktok.com/@onlinekyne">@onlinekyne</a> <p><a title="math" target="_blank" href="https://www.tiktok.com/tag/math">#</a><a title="education" target="_blank" href="https://www.tiktok.com/tag/education">#</a><a title="edutok" target="_blank" href="https://www.tiktok.com/tag/edutok">#</a><a title="drag" target="_blank" href="https://www.tiktok.com/tag/drag">#</a><a title="dragqueen" target="_blank" href="https://www.tiktok.com/tag/dragqueen">#</a></p> <a target="_blank" title="♬ original sound - onlinekyne" href="https://www.tiktok.com/music/original-sound-6825323337519024901">♬ original sound - onlinekyne</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script></div>
+<aside class="aside aside-like" id="aside-3"><p id="p-427"><a class="external" href="https://www.onlinekyne.com/" target="_blank">Kyne</a> was a contestant on the first season of Canada's Drag Race, and is a <a class="external" href="https://uwaterloo.ca/stories/mathematics/university-waterloos-math-student-vying-become-canadas-first" target="_blank">mathematical finance major at the University of Waterloo</a>.</p></aside><div class="sidebyside"><blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlinekyne/video/6825323353256070406" data-video-id="6825323353256070406" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlinekyne" href="https://www.tiktok.com/@onlinekyne">@onlinekyne</a> <p><a title="math" target="_blank" href="https://www.tiktok.com/tag/math">#</a><a title="education" target="_blank" href="https://www.tiktok.com/tag/education">#</a><a title="edutok" target="_blank" href="https://www.tiktok.com/tag/edutok">#</a><a title="drag" target="_blank" href="https://www.tiktok.com/tag/drag">#</a><a title="dragqueen" target="_blank" href="https://www.tiktok.com/tag/dragqueen">#</a></p> <a target="_blank" title="♬ original sound - onlinekyne" href="https://www.tiktok.com/music/original-sound-6825323337519024901">♬ original sound - onlinekyne</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script></div>
 <p id="p-428">As you've seen, the Pigeonhole Principle is not a <em class="emphasis">counting</em> technique <em class="emphasis">per se</em>, but a way to prove that a set of objects satisfies some existence or extremal property. Before we state the principle formally let's look at two more examples.</p>
 <article class="example example-like" id="eg-php-pizza"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Splitting a Pizza.</span>
@@ -212,29 +214,34 @@ x_1 + x_2 + \cdots + x_{20} \amp \lt 160\\
 <p data-braille="continuation">which contradicts the assumption that the average was 8 out of 10.</p>
 </div></div>
 </div></article><p id="p-438">For the previous examples, we argued that <em class="emphasis">there is no other way</em> but for the required property to hold, regardless of how the pizza slices/points are actually distributed among people. We call this kind of proof a <dfn class="terminology">non-constructive proof</dfn> or an <dfn class="terminology">existence proof</dfn>, since it shows that the property holds without actually giving an example (or an algorithm to create an example). Like the hair follicle example, this is typical of proofs that utilize the Pigeonhole Principle.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;">
+<div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'"><img src="images/10-thumb.png" class="video-poster" alt="Video cover image"></div>
+<div class="hidden-content"><iframe id="video-pigeonhole" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/XnvaUoONj2M?&amp;modestbranding=1&amp;rel=0"></iframe></div>
+</div></div></div></div>
+<p id="p-439"><em class="alert">Video</em>: <em class="emphasis">Pigeonhole Principle</em></p>
 <article class="theorem theorem-like" id="thm-php"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Pigeonhole Principle (PHP).</span>
 </h6>
-<p id="p-439">Placing more than \(kn\) objects (pigeons) into \(n\) classes (pigeonholes) puts more than \(k\) objects into some class.</p></article><article class="exercise exercise-like" id="ex-php-proof"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-proof"><h6 class="heading">
+<p id="p-440">Placing more than \(kn\) objects (pigeons) into \(n\) classes (pigeonholes) puts more than \(k\) objects into some class.</p></article><article class="exercise exercise-like" id="ex-php-proof"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-proof"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Prove the PHP.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-proof"><article class="exercise exercise-like"><p id="p-440">Prove <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> following the proofs of <a class="xref" data-knowl="./knowl/eg-php-pizza.html" title="Example 3.1.1: Splitting a Pizza">Example 3.1.1</a> and <a class="xref" data-knowl="./knowl/eg-php-quiz-scores.html" title="Example 3.1.2: Quiz Scores">Example 3.1.2</a>.</p></article></div>
-<p id="p-441">Setting \(k = 1\) in the statement of the principle results in the classic version:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-proof"><article class="exercise exercise-like"><p id="p-441">Prove <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> following the proofs of <a class="xref" data-knowl="./knowl/eg-php-pizza.html" title="Example 3.1.1: Splitting a Pizza">Example 3.1.1</a> and <a class="xref" data-knowl="./knowl/eg-php-quiz-scores.html" title="Example 3.1.2: Quiz Scores">Example 3.1.2</a>.</p></article></div>
+<p id="p-442">Setting \(k = 1\) in the statement of the principle results in the classic version:</p>
 <article class="corollary theorem-like" id="cor-php"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Pigeonhole Principle with \(k=1\).</span>
 </h6>
-<p id="p-442">If more than \(n\) objects are placed into \(n\) classes, then some class must have at least 2 objects.</p></article><article class="exercise exercise-like" id="ex-php-last-digit"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-last-digit"><h6 class="heading">
+<p id="p-443">If more than \(n\) objects are placed into \(n\) classes, then some class must have at least 2 objects.</p></article><article class="exercise exercise-like" id="ex-php-last-digit"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-last-digit"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Same Last Digit.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-last-digit"><article class="exercise exercise-like"><p id="p-443">Given any set of eleven natural numbers, prove that there must be two of them with the same last digit.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-last-digit"><article class="exercise exercise-like"><p id="p-444">Given any set of eleven natural numbers, prove that there must be two of them with the same last digit.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-29"><div class="hint solution-like"><p id="p-444">How many digits are possible?</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-29"><div class="hint solution-like"><p id="p-445">How many digits are possible?</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="ex-php-difference-divisible"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-difference-divisible"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Difference Divisible by 10.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-difference-divisible"><article class="exercise exercise-like"><p id="p-445">Given any set of eleven natural numbers, prove that there must be a pair of elements whose difference is divisible by 10.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-difference-divisible"><article class="exercise exercise-like"><p id="p-446">Given any set of eleven natural numbers, prove that there must be a pair of elements whose difference is divisible by 10.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-30" id="hint-30"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-30"><div class="hint solution-like"><p id="p-446">Use <a class="xref" data-knowl="./knowl/ex-php-last-digit.html" title="Checkpoint 3.1.6: Same Last Digit">Checkpoint 3.1.6</a>.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-30" id="hint-30"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-30"><div class="hint solution-like"><p id="p-447">Use <a class="xref" data-knowl="./knowl/ex-php-last-digit.html" title="Checkpoint 3.1.6: Same Last Digit">Checkpoint 3.1.6</a>.</p></div></div>
 </div></article></div>
-<p id="p-447">Often it is not immediately obvious what the pigeons and pigeonholes should be when we attempt to apply <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> to a problem. Moreover one needs also to give a rule that assigns pigeons to pigeonholes, such that:</p>
+<p id="p-448">Often it is not immediately obvious what the pigeons and pigeonholes should be when we attempt to apply <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> to a problem. Moreover one needs also to give a rule that assigns pigeons to pigeonholes, such that:</p>
 <ul class="disc">
 <li id="li-174">There are fewer pigeonholes (\(n\)) than pigeons (\(\gt kn\)).</li>
 <li id="li-175">The desired property is satisfied when more than \(k\) objects is put into any class.</li>
@@ -243,10 +250,10 @@ x_1 + x_2 + \cdots + x_{20} \amp \lt 160\\
 <article class="example example-like" id="eg-php-sum-to-8"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sum to 8.</span>
 </h6>
-<p id="p-448">If five numbers are selected from the set \(\{1,2,3,4,5,6,7\}\text{,}\) prove that two of these numbers must sum to 8.</p>
+<p id="p-449">If five numbers are selected from the set \(\{1,2,3,4,5,6,7\}\text{,}\) prove that two of these numbers must sum to 8.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like">
-<p id="p-449">Define pigeonholes to be the sets \(\{1,7\}\text{,}\) \(\{2,6\}\text{,}\) \(\{3,5\}\text{,}\) \(\{4\}\text{,}\) and pigeons to be the five numbers selected. Then picking five numbers from \(\{1,2,\ldots,7\}\) is the same as placing 5 pigeons into these 4 pigeonholes.</p>
+<p id="p-450">Define pigeonholes to be the sets \(\{1,7\}\text{,}\) \(\{2,6\}\text{,}\) \(\{3,5\}\text{,}\) \(\{4\}\text{,}\) and pigeons to be the five numbers selected. Then picking five numbers from \(\{1,2,\ldots,7\}\) is the same as placing 5 pigeons into these 4 pigeonholes.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span></td>
@@ -261,51 +268,51 @@ x_1 + x_2 + \cdots + x_{20} \amp \lt 160\\
 <td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(\{4\}\)</td>
 </tr>
 </table></div></div></div>
-<p id="p-450">Note that the last pigeonhole by definition can only contain at most one pigeon—this does not affect the proof. By PHP, there is a pigeonhole with two pigeons. That is, two numbers are selected from one of these sets; these two numbers must sum to 8.</p>
+<p id="p-451">Note that the last pigeonhole by definition can only contain at most one pigeon—this does not affect the proof. By PHP, there is a pigeonhole with two pigeons. That is, two numbers are selected from one of these sets; these two numbers must sum to 8.</p>
 </div></div>
-</div></article><p id="p-451">We say that the number five is <dfn class="terminology">best possible</dfn> in <a class="xref" data-knowl="./knowl/eg-php-sum-to-8.html" title="Example 3.1.8: Sum to 8">Example 3.1.8</a> since it is possible to select four numbers and not have any pair sum to 8 (for instance, pick 1, 2, 3, and 4). But selecting <em class="emphasis">any</em> five numbers from \(\{1,2,\ldots,7\}\) guarantees the property is satisfied.</p>
+</div></article><p id="p-452">We say that the number five is <dfn class="terminology">best possible</dfn> in <a class="xref" data-knowl="./knowl/eg-php-sum-to-8.html" title="Example 3.1.8: Sum to 8">Example 3.1.8</a> since it is possible to select four numbers and not have any pair sum to 8 (for instance, pick 1, 2, 3, and 4). But selecting <em class="emphasis">any</em> five numbers from \(\{1,2,\ldots,7\}\) guarantees the property is satisfied.</p>
 <article class="exercise exercise-like" id="ex-php-sum-to-2n"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-sum-to-2n"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Sum to \(2n\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-sum-to-2n"><article class="exercise exercise-like"><p id="p-452">Generalize <a class="xref" data-knowl="./knowl/eg-php-sum-to-8.html" title="Example 3.1.8: Sum to 8">Example 3.1.8</a>. That is, if \(n+1\) numbers are selected from the set \(\{1,2,\ldots,2n-1\}\text{,}\) prove that two of these numbers must sum to \(2n\text{.}\)</p></article></div>
-<p id="p-453">The next example is slightly different in that we're not given a fixed set of numbers to work with. Instead, the result being proven holds for any set of six integers. (Convince yourself it works and try proving it yourself first before expanding the solution!)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-sum-to-2n"><article class="exercise exercise-like"><p id="p-453">Generalize <a class="xref" data-knowl="./knowl/eg-php-sum-to-8.html" title="Example 3.1.8: Sum to 8">Example 3.1.8</a>. That is, if \(n+1\) numbers are selected from the set \(\{1,2,\ldots,2n-1\}\text{,}\) prove that two of these numbers must sum to \(2n\text{.}\)</p></article></div>
+<p id="p-454">The next example is slightly different in that we're not given a fixed set of numbers to work with. Instead, the result being proven holds for any set of six integers. (Convince yourself it works and try proving it yourself first before expanding the solution!)</p>
 <article class="example example-like" id="eg-php-sum-diff-8"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Sum or Difference Divisible by 8.</span>
 </h6>
-<p id="p-454">Given <em class="emphasis">any</em> set of six integers, show that there is a pair among them whose sum <em class="emphasis">or</em> difference is divisible by 8.</p>
+<p id="p-455">Given <em class="emphasis">any</em> set of six integers, show that there is a pair among them whose sum <em class="emphasis">or</em> difference is divisible by 8.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><p id="p-455">Use remainders modulo 8.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><p id="p-456">Use remainders modulo 8.</p></div></div>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like">
-<p id="p-456">If a pair of integers \(a, b\) among the six have the same remainder when dividing by 8, then their difference \(a-b\) is divisible by 8, and we are done.</p>
-<p id="p-457">So assume that all six integers have distinct remainders when dividing by 8. Construct the five pigeonholes \(\{0\},\{1,7\},\{2,6\},\{3,5\},\{4\}\) and place each of the six numbers in the pigeonhole corresponding to its remainder.</p>
-<p id="p-458">By PHP, one of these pigeonholes must have two numbers. That is, summing those two numbers gives a sum that is divisible by 8.</p>
+<p id="p-457">If a pair of integers \(a, b\) among the six have the same remainder when dividing by 8, then their difference \(a-b\) is divisible by 8, and we are done.</p>
+<p id="p-458">So assume that all six integers have distinct remainders when dividing by 8. Construct the five pigeonholes \(\{0\},\{1,7\},\{2,6\},\{3,5\},\{4\}\) and place each of the six numbers in the pigeonhole corresponding to its remainder.</p>
+<p id="p-459">By PHP, one of these pigeonholes must have two numbers. That is, summing those two numbers gives a sum that is divisible by 8.</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="ex-php-sum-diff-8-best"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-sum-diff-8-best"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Six is Best Possible.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-sum-diff-8-best"><article class="exercise exercise-like"><p id="p-459">Show that <a class="xref" data-knowl="./knowl/eg-php-sum-diff-8.html" title="Example 3.1.10: Sum or Difference Divisible by 8">Example 3.1.10</a> is best possible by constructing a set of five integers for which <em class="emphasis">no pair</em> has sum or difference divisible by 8.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-sum-diff-8-best"><article class="exercise exercise-like"><p id="p-460">Show that <a class="xref" data-knowl="./knowl/eg-php-sum-diff-8.html" title="Example 3.1.10: Sum or Difference Divisible by 8">Example 3.1.10</a> is best possible by constructing a set of five integers for which <em class="emphasis">no pair</em> has sum or difference divisible by 8.</p></article></div>
 <article class="exercise exercise-like" id="ex-php-sum-diff-2n"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-sum-diff-2n"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Sum or Difference Divisible by \(2n\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-sum-diff-2n"><article class="exercise exercise-like"><p id="p-461">Prove this generalization of <a class="xref" data-knowl="./knowl/eg-php-sum-diff-8.html" title="Example 3.1.10: Sum or Difference Divisible by 8">Example 3.1.10</a>:</p>
-<p id="p-462">Given any set of \(n+2\) integers, there is a pair among them whose sum or difference is divisible by \(2n\text{.}\)</p></article></div>
-<p id="p-463">A few more applications to conclude this section.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-sum-diff-2n"><article class="exercise exercise-like"><p id="p-462">Prove this generalization of <a class="xref" data-knowl="./knowl/eg-php-sum-diff-8.html" title="Example 3.1.10: Sum or Difference Divisible by 8">Example 3.1.10</a>:</p>
+<p id="p-463">Given any set of \(n+2\) integers, there is a pair among them whose sum or difference is divisible by \(2n\text{.}\)</p></article></div>
+<p id="p-464">A few more applications to conclude this section.</p>
 <article class="example example-like" id="ex-php-friends"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Number of Friends.</span>
 </h6>
-<p id="p-464">Prove that in any group of people, there must be two of them with the same number of friends in the group.</p>
+<p id="p-465">Prove that in any group of people, there must be two of them with the same number of friends in the group.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like">
-<p id="p-465">Suppose there are \(n\) people in the group. Then each person can have \(0, 1, \ldots, \text{ or } n-1\) friends among the group. This is still \(n\) pigeonholes, so we cannot apply PHP yet.</p>
-<p id="p-466">Observe that it cannot happen that someone has no friends, and someone else has \(n-1\) friends. (If a person has \(n-1\) friends, then every other person has at least one friend.) Hence there are only \(n-1\) possible numbers of friends among the \(n\) people, which means two of them must have the same number of friends, by the PHP.</p>
+<p id="p-466">Suppose there are \(n\) people in the group. Then each person can have \(0, 1, \ldots, \text{ or } n-1\) friends among the group. This is still \(n\) pigeonholes, so we cannot apply PHP yet.</p>
+<p id="p-467">Observe that it cannot happen that someone has no friends, and someone else has \(n-1\) friends. (If a person has \(n-1\) friends, then every other person has at least one friend.) Hence there are only \(n-1\) possible numbers of friends among the \(n\) people, which means two of them must have the same number of friends, by the PHP.</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="ex-php-divides"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-divides"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">One Divides Another.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-divides"><article class="exercise exercise-like"><p id="p-467">Prove that any \((n+1)\)-subset of \(\{1,2,\ldots,2n\}\) contains two numbers such that one divides the other.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-divides"><article class="exercise exercise-like"><p id="p-468">Prove that any \((n+1)\)-subset of \(\{1,2,\ldots,2n\}\) contains two numbers such that one divides the other.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><p id="p-468">Pigeonholes are \(\{1\},\{3\},\{5\},\ldots,\{2n-1\}\text{;}\) assign each number to the pigeonhole that contains its largest odd divisor. If two numbers are in the same pigeonhole, why should one divide the other?</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><p id="p-469">Pigeonholes are \(\{1\},\{3\},\{5\},\ldots,\{2n-1\}\text{;}\) assign each number to the pigeonhole that contains its largest odd divisor. If two numbers are in the same pigeonhole, why should one divide the other?</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="ex-php-shower"><a data-knowl="" class="id-ref original" data-refid="hk-ex-php-shower"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Tracking Showers.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-shower"><article class="exercise exercise-like"><p id="p-469">Over a two-week period (14 days), you kept track of how many showers you took. Your records show that you showered at least once every day, and that you showered a total of 17 times.</p>
-<p id="p-470">By following the steps below, prove that there was a period of consecutive days during which you showered exactly 10 times.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-shower"><article class="exercise exercise-like"><p id="p-470">Over a two-week period (14 days), you kept track of how many showers you took. Your records show that you showered at least once every day, and that you showered a total of 17 times.</p>
+<p id="p-471">By following the steps below, prove that there was a period of consecutive days during which you showered exactly 10 times.</p>
 <ol class="lower-alpha">
 <li id="li-176">Define variables \(x_i\) to be the number of times you took a shower on day \(i\) (\(1 \leq i \leq 14\)), and define \(y_i = x_1 + x_2 + \cdots + x_i\) to be the partial sums. Explain why it suffices to prove \(y_i = y_j + 10\) for some \(i,j\text{.}\)</li>
 <li id="li-177">Explain why the set<div class="displaymath">
