@@ -17,7 +17,7 @@
         First, recall that the <xref text="custom" ref="def-factorial">factorial</xref> of <m>n</m> is shorthand for the product <me>n! = n \times (n-1) \times \cdots \times 1</me>, which, as we saw in the previous section, can be used to count the number of ways to sit <m>n</m> people in a row for a concert.
     </p>
     <sidebyside>    
-    <video xml:id="video-permutation" youtube="IfyjfJfl-sU" play-at="embed" preview="images/04-thumb.png" />
+    <video xml:id="video-permutation" youtube="IfyjfJfl-sU" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Permutations</em>
@@ -179,7 +179,7 @@
 	</p>
 
 	<sidebyside>    
-    <video xml:id="video-permutation-multiset" youtube="1ByDmzD7jDg" play-at="embed" preview="images/05-thumb.png"/>
+    <video xml:id="video-permutation-multiset" youtube="1ByDmzD7jDg" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Permutations of a Multiset</em>
@@ -451,7 +451,7 @@
 	</p>
 
 	<sidebyside>    
-	    <video xml:id="video-combination" youtube="t-PQAURivXg" play-at="embed" preview="images/06-thumb.png"/>
+	    <video xml:id="video-combination" youtube="t-PQAURivXg" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Combinations</em>

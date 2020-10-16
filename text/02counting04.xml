@@ -153,7 +153,7 @@
     </p>
 
     <sidebyside>    
-    <video xml:id="video-balls-in-bins" youtube="Oj3wc56o9Ok" play-at="embed" preview="images/08-thumb.png"/>
+    <video xml:id="video-balls-in-bins" youtube="Oj3wc56o9Ok" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>The Balls in Bins Formula</em>

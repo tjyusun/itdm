@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-23T23:22:38-04:00       *-->
+<!--*       on 2020-10-16T13:05:41-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -178,19 +178,19 @@ MathJax.Hub.Config({
 <li id="li-281">Define basic graph theoretic concepts such as vertex, edge, path, trail, degree and so on.</li>
 <li id="li-282">Prove simple properties about graphs by applying these definitions appropriately.</li>
 <li id="li-283">Determine whether or not a given degree sequence can be realized as a graph.</li>
-</ul></article><p id="p-788">We now formally state the definition of a graph. Unless otherwise specified, the graphs you will encounter in this text are simple graphs.</p>
+</ul></article><p id="p-799">We now formally state the definition of a graph. Unless otherwise specified, the graphs you will encounter in this text are simple graphs.</p>
 <article class="definition definition-like" id="def-graph"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Graph.</span>
 </h6>
-<p id="p-789">A <dfn class="terminology">graph</dfn> \(G\) is defined as a pair \(G = (V,E)\) where \(V\) is a finite set consisting of elements called <dfn class="terminology">vertices</dfn>, and \(E\) is a collection of unordered pairs of elements in \(V\) called <dfn class="terminology">edges</dfn>.</p>
-<p id="p-790">If \(e = (u,v)\) is an edge of the graph, then we say that the vertices \(u\) and \(v\) are the <dfn class="terminology">endpoints</dfn> of the edge \(e\text{.}\) The vertices \(u\) and \(v\) are called <dfn class="terminology">adjacent</dfn> vertices; the edge \(e\) is also said to be <dfn class="terminology">incident</dfn> to the vertices \(u\) and \(v\text{.}\)</p></article><article class="definition definition-like" id="def-graph-simple"><h6 class="heading">
+<p id="p-800">A <dfn class="terminology">graph</dfn> \(G\) is defined as a pair \(G = (V,E)\) where \(V\) is a finite set consisting of elements called <dfn class="terminology">vertices</dfn>, and \(E\) is a collection of unordered pairs of elements in \(V\) called <dfn class="terminology">edges</dfn>.</p>
+<p id="p-801">If \(e = (u,v)\) is an edge of the graph, then we say that the vertices \(u\) and \(v\) are the <dfn class="terminology">endpoints</dfn> of the edge \(e\text{.}\) The vertices \(u\) and \(v\) are called <dfn class="terminology">adjacent</dfn> vertices; the edge \(e\) is also said to be <dfn class="terminology">incident</dfn> to the vertices \(u\) and \(v\text{.}\)</p></article><article class="definition definition-like" id="def-graph-simple"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Simple Graphs and Multigraphs.</span>
 </h6>
-<p id="p-791">A graph \(G = (V,E)\) is a <dfn class="terminology">simple graph</dfn> if \(E\) has no repeated elements, i.e., between every pair of vertices there is at most one edge. A graph that is permitted to have multiple edges between a pair of vertices is called a <dfn class="terminology">multigraph</dfn>.</p></article><p id="p-792">Visually, a graph can be drawn by using points to represent its vertices, and lines connecting pairs of vertices to represent the edges.</p>
+<p id="p-802">A graph \(G = (V,E)\) is a <dfn class="terminology">simple graph</dfn> if \(E\) has no repeated elements, i.e., between every pair of vertices there is at most one edge. A graph that is permitted to have multiple edges between a pair of vertices is called a <dfn class="terminology">multigraph</dfn>.</p></article><p id="p-803">Visually, a graph can be drawn by using points to represent its vertices, and lines connecting pairs of vertices to represent the edges.</p>
 <article class="example example-like" id="eg-graph-first"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">First Graph.</span>
 </h6>
-<p id="p-793">Define the graph \(G\) to have vertices</p>
+<p id="p-804">Define the graph \(G\) to have vertices</p>
 <div class="displaymath">
 \begin{equation*}
 V = \{v_1,v_2,v_3,v_4,v_5\}
@@ -205,14 +205,14 @@ E = \{(v_1,v_2),(v_1,v_3),(v_1,v_4),(v_2,v_5),(v_4,v_5)\}\text{.}
 <p data-braille="continuation">We can represent this graph by labeling five nodes, and drawing each edge.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-first-graph.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="ex-graph-first-draw"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-first-draw"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Draw These Graphs.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-first-draw"><article class="exercise exercise-like"><p id="p-794">Draw each of the following graphs:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-first-draw"><article class="exercise exercise-like"><p id="p-805">Draw each of the following graphs:</p>
 <ol class="lower-alpha">
 <li id="li-284">\(G_1 = (V_1, E_1)\) where \(V_1 = \{p, q, r, s, t, u\}\) and \(E_1 = \{(p,q),(q,r),(q,s),(q,t),(q,u),(r,s),(r,t),(r,u),(s,u)\}\text{.}\)</li>
 <li id="li-285">\(G_2 = (V_2, E_2)\) where \(V_2 = \{1,2,3,4\}\) and \(E_2\) contains all pairs of elements from \(V_2\text{.}\)</li>
 </ol></article></div>
 <article class="exercise exercise-like" id="ex-graph-first-list"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-first-list"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">List Vertices and Edges.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-first-list"><article class="exercise exercise-like"><p id="p-795">List all elements in the vertex and edge sets of each graph below.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-first-list"><article class="exercise exercise-like"><p id="p-806">List all elements in the vertex and edge sets of each graph below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;">
 <div class="sbspanel" style="width:36.6666666666667%;justify-content:flex-start;"><img src="images/img-graph-list-VE1.svg" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:53.3333333333333%;justify-content:flex-start;"><img src="images/img-graph-list-VE2.svg" style="width: 100%; height: auto;" alt=""></div>
@@ -220,12 +220,12 @@ E = \{(v_1,v_2),(v_1,v_3),(v_1,v_4),(v_2,v_5),(v_4,v_5)\}\text{.}
 <article class="definition definition-like" id="def-degree"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Degree of a vertex.</span>
 </h6>
-<p id="p-796">The <dfn class="terminology">degree</dfn> \(d(v)\) of a vertex \(v\) is the number of edges incident to it. </p>
-<p id="p-797">The <dfn class="terminology">degree sequence</dfn> of a graph is the <em class="emphasis">nonincreasing</em> sequence of numbers formed by the degrees of its vertices.</p></article><p id="p-798">The degree sequence of a graph is a well-defined object, since the nonincreasing condition gives a canonical ordering of the vertex degrees to form the sequence.</p>
+<p id="p-807">The <dfn class="terminology">degree</dfn> \(d(v)\) of a vertex \(v\) is the number of edges incident to it. </p>
+<p id="p-808">The <dfn class="terminology">degree sequence</dfn> of a graph is the <em class="emphasis">nonincreasing</em> sequence of numbers formed by the degrees of its vertices.</p></article><p id="p-809">The degree sequence of a graph is a well-defined object, since the nonincreasing condition gives a canonical ordering of the vertex degrees to form the sequence.</p>
 <article class="example example-like" id="eg-graph-degree"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Degree sequence.</span>
 </h6>
-<p id="p-799">In the graph of <a class="xref" data-knowl="./knowl/eg-graph-first.html" title="Example 5.2.3: First Graph">Example 5.2.3</a>, the degrees of each vertex are:</p>
+<p id="p-810">In the graph of <a class="xref" data-knowl="./knowl/eg-graph-first.html" title="Example 5.2.3: First Graph">Example 5.2.3</a>, the degrees of each vertex are:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">Vertex</td>
@@ -244,53 +244,53 @@ E = \{(v_1,v_2),(v_1,v_3),(v_1,v_4),(v_2,v_5),(v_4,v_5)\}\text{.}
 <td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">2</td>
 </tr>
 </table></div></div></div>
-<p id="p-800">We write this as \(d(v_1) = 3\text{,}\) \(d(v_2) = 2\text{,}\) and so on. Hence the degree sequence of the graph is 3, 2, 2, 2, 1 (just rearrange the numbers in nonincreasing order).</p></article><article class="exercise exercise-like" id="ex-graph-degree"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degree"><h6 class="heading">
+<p id="p-811">We write this as \(d(v_1) = 3\text{,}\) \(d(v_2) = 2\text{,}\) and so on. Hence the degree sequence of the graph is 3, 2, 2, 2, 1 (just rearrange the numbers in nonincreasing order).</p></article><article class="exercise exercise-like" id="ex-graph-degree"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degree"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Write the Degree Sequence.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree"><article class="exercise exercise-like"><p id="p-801">Determine the degrees of each vertex of the graphs \(G_1\text{,}\) \(G_2\text{,}\) \(G_3\text{,}\) and \(G_4\) from <a class="xref" data-knowl="./knowl/ex-graph-first-draw.html" title="Checkpoint 5.2.4: Draw These Graphs">Checkpoint 5.2.4</a> and <a class="xref" data-knowl="./knowl/ex-graph-first-list.html" title="Checkpoint 5.2.5: List Vertices and Edges">Checkpoint 5.2.5</a>, then write the degree sequence of each graph.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree"><article class="exercise exercise-like"><p id="p-812">Determine the degrees of each vertex of the graphs \(G_1\text{,}\) \(G_2\text{,}\) \(G_3\text{,}\) and \(G_4\) from <a class="xref" data-knowl="./knowl/ex-graph-first-draw.html" title="Checkpoint 5.2.4: Draw These Graphs">Checkpoint 5.2.4</a> and <a class="xref" data-knowl="./knowl/ex-graph-first-list.html" title="Checkpoint 5.2.5: List Vertices and Edges">Checkpoint 5.2.5</a>, then write the degree sequence of each graph.</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-degree-zero"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degree-zero"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Zero Degrees.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-zero"><article class="exercise exercise-like"><p id="p-802">In a graph, what does it mean for a vertex \(v\)to have degree \(d(v) = 0\text{?}\) Can you draw a graph with degree sequence 0, 0, 0, 0, 0?</p></article></div>
-<p id="p-803">While it is easy to write the degree sequence of a given graph, it is much harder to <em class="emphasis">start</em> with a nonincreasing sequence and determine whether or not it is possible to draw a graph with that particular sequence of vertex degrees.</p>
-<p id="p-804">From the next result we can derive one simple way to tell if given sequence <em class="emphasis">cannot</em> be realized as a graph. This will be our first graph theory proof: that the sum of the degrees of all vertices must be equal to twice the number of edges in the graph.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-zero"><article class="exercise exercise-like"><p id="p-813">In a graph, what does it mean for a vertex \(v\)to have degree \(d(v) = 0\text{?}\) Can you draw a graph with degree sequence 0, 0, 0, 0, 0?</p></article></div>
+<p id="p-814">While it is easy to write the degree sequence of a given graph, it is much harder to <em class="emphasis">start</em> with a nonincreasing sequence and determine whether or not it is possible to draw a graph with that particular sequence of vertex degrees.</p>
+<p id="p-815">From the next result we can derive one simple way to tell if given sequence <em class="emphasis">cannot</em> be realized as a graph. This will be our first graph theory proof: that the sum of the degrees of all vertices must be equal to twice the number of edges in the graph.</p>
 <article class="theorem theorem-like" id="thm-degree-sum"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Degree-Sum Formula.</span>
 </h6>
-<p id="p-805">Let \(G\) be a graph with \(m\) edges. Then</p>
+<p id="p-816">Let \(G\) be a graph with \(m\) edges. Then</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{v \in V(G)} d(v) = 2m\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref original" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-806">If \((u,v)\) is an edge of \(G\text{,}\) then it contributes 2 to the sum of all vertex degrees (one to the degrees of each of its endpoints: \(d(u)\) and \(d(v)\)). This is true for all edges of \(G\text{,}\) so twice the number of edges must be exactly the sum of all degrees.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref original" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-817">If \((u,v)\) is an edge of \(G\text{,}\) then it contributes 2 to the sum of all vertex degrees (one to the degrees of each of its endpoints: \(d(u)\) and \(d(v)\)). This is true for all edges of \(G\text{,}\) so twice the number of edges must be exactly the sum of all degrees.</p></article></div>
 <article class="remark remark-like" id="remark-VG-notation"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.2.11</span><span class="period">.</span>
 </h6>
-<p id="p-807">In the above statement we used the notation \(V(G)\) to refer to the vertex set of \(G\text{;}\) we will also use the notation \(E(G)\) to refer to the collection of edges of \(G\text{.}\) This notation comes in handy if we are talking about the vertex or edge sets of different graphs. </p></article><article class="exercise exercise-like" id="ex-graph-degsum"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degsum"><h6 class="heading">
+<p id="p-818">In the above statement we used the notation \(V(G)\) to refer to the vertex set of \(G\text{;}\) we will also use the notation \(E(G)\) to refer to the collection of edges of \(G\text{.}\) This notation comes in handy if we are talking about the vertex or edge sets of different graphs. </p></article><article class="exercise exercise-like" id="ex-graph-degsum"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degsum"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Verify Theorem 5.2.10.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degsum"><article class="exercise exercise-like"><p id="p-808">Verify <a class="xref" data-knowl="./knowl/thm-degree-sum.html" title="Theorem 5.2.10: Degree-Sum Formula">Theorem 5.2.10</a> on the graphs you've seen so far in this section.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degsum"><article class="exercise exercise-like"><p id="p-819">Verify <a class="xref" data-knowl="./knowl/thm-degree-sum.html" title="Theorem 5.2.10: Degree-Sum Formula">Theorem 5.2.10</a> on the graphs you've seen so far in this section.</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-handshake"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-handshake"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Even Number of Odd Degree Vertices.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-handshake"><article class="exercise exercise-like"><p id="p-809">Use <a class="xref" data-knowl="./knowl/thm-degree-sum.html" title="Theorem 5.2.10: Degree-Sum Formula">Theorem 5.2.10</a> to prove that any graph must have an even number of vertices with odd degree.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-handshake"><article class="exercise exercise-like"><p id="p-820">Use <a class="xref" data-knowl="./knowl/thm-degree-sum.html" title="Theorem 5.2.10: Degree-Sum Formula">Theorem 5.2.10</a> to prove that any graph must have an even number of vertices with odd degree.</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-handshake-lemma"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-handshake-lemma"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Handshakes at a [Pre-pandemic] Party.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-handshake-lemma"><article class="exercise exercise-like"><p id="p-810">Explain how <a class="xref" data-knowl="./knowl/ex-graph-handshake.html" title="Checkpoint 5.2.13: Even Number of Odd Degree Vertices">Checkpoint 5.2.13</a> implies that in a party, the number of people who shook hands with an odd number of other people's hands must be even.</p></article></div>
-<p id="p-811">Because of <a class="xref" data-knowl="./knowl/ex-graph-handshake-lemma.html" title="Checkpoint 5.2.14: Handshakes at a [Pre-pandemic] Party">Checkpoint 5.2.14</a>, the result of <a class="xref" data-knowl="./knowl/ex-graph-handshake.html" title="Checkpoint 5.2.13: Even Number of Odd Degree Vertices">Checkpoint 5.2.13</a> is sometimes called the <em class="emphasis">Handshake Lemma</em>. This can be used to prove that certain sequences will never occur as the degree sequence of a graph.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-handshake-lemma"><article class="exercise exercise-like"><p id="p-821">Explain how <a class="xref" data-knowl="./knowl/ex-graph-handshake.html" title="Checkpoint 5.2.13: Even Number of Odd Degree Vertices">Checkpoint 5.2.13</a> implies that in a party, the number of people who shook hands with an odd number of other people's hands must be even.</p></article></div>
+<p id="p-822">Because of <a class="xref" data-knowl="./knowl/ex-graph-handshake-lemma.html" title="Checkpoint 5.2.14: Handshakes at a [Pre-pandemic] Party">Checkpoint 5.2.14</a>, the result of <a class="xref" data-knowl="./knowl/ex-graph-handshake.html" title="Checkpoint 5.2.13: Even Number of Odd Degree Vertices">Checkpoint 5.2.13</a> is sometimes called the <em class="emphasis">Handshake Lemma</em>. This can be used to prove that certain sequences will never occur as the degree sequence of a graph.</p>
 <article class="lemma theorem-like" id="lemma-handshake"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Handshake Lemma.</span>
 </h6>
-<p id="p-812">Any graph (simple or otherwise) must have an even number of vertices of odd degree.</p></article><article class="example example-like" id="eg-graph-coauthors-answer"><h6 class="heading">
+<p id="p-823">Any graph (simple or otherwise) must have an even number of vertices of odd degree.</p></article><article class="example example-like" id="eg-graph-coauthors-answer"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Collaborators.</span>
 </h6>
-<p id="p-813"><a class="xref" data-knowl="./knowl/ex-graph-coauthors.html" title="Checkpoint 5.1.5: Counting Collaborators">Checkpoint 5.1.5</a> can be resolved by arguing that the coauthorship relations among the six mathematicians can be represented using a graph: by taking the six mathematicians as vertices and placing an edge between two mathematicians if they have coauthored a paper together.</p>
-<p id="p-814">The sequence 3, 2, 2, 2, 1, 1 cannot be the degree sequence of this graph, since there is an odd number of vertices of odd degree. (There are three: 3, 1, 1.) Therefore someone must have made a mistake counting.</p></article><p id="p-815">Try proving the following basic properties about degree sequences.</p>
-<aside class="aside aside-like" id="aside-4"><p id="p-816">There is a theorem that characterizes completely whether or not a degree sequence can be realized as a graph, but is beyond the scope of this course: the <a class="external" href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Gallai_theorem" target="_blank">Erdős-Gallai Theorem</a></p></aside><article class="exercise exercise-like" id="ex-graph-degree-0-4"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degree-0-4"><h6 class="heading">
+<p id="p-824"><a class="xref" data-knowl="./knowl/ex-graph-coauthors.html" title="Checkpoint 5.1.5: Counting Collaborators">Checkpoint 5.1.5</a> can be resolved by arguing that the coauthorship relations among the six mathematicians can be represented using a graph: by taking the six mathematicians as vertices and placing an edge between two mathematicians if they have coauthored a paper together.</p>
+<p id="p-825">The sequence 3, 2, 2, 2, 1, 1 cannot be the degree sequence of this graph, since there is an odd number of vertices of odd degree. (There are three: 3, 1, 1.) Therefore someone must have made a mistake counting.</p></article><p id="p-826">Try proving the following basic properties about degree sequences.</p>
+<aside class="aside aside-like" id="aside-4"><p id="p-827">There is a theorem that characterizes completely whether or not a degree sequence can be realized as a graph, but is beyond the scope of this course: the <a class="external" href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Gallai_theorem" target="_blank">Erdős-Gallai Theorem</a></p></aside><article class="exercise exercise-like" id="ex-graph-degree-0-4"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degree-0-4"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Degree Sequence 3, 2, 1, 0.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-0-4"><article class="exercise exercise-like"><p id="p-817">Can a graph on 4 vertices have degree sequence 3, 2, 1, 0?</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-0-4"><article class="exercise exercise-like"><p id="p-828">Can a graph on 4 vertices have degree sequence 3, 2, 1, 0?</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-degree-0-n-1"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degree-0-n-1"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Degree Sequence with 0 and \(n-1\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-0-n-1"><article class="exercise exercise-like"><p id="p-818">Is it possible for the numbers \(0\) and \(n-1\) to both occur in the degree sequence of a graph with \(n\) vertices? Prove your answer.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-0-n-1"><article class="exercise exercise-like"><p id="p-829">Is it possible for the numbers \(0\) and \(n-1\) to both occur in the degree sequence of a graph with \(n\) vertices? Prove your answer.</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-degree-sum-max"><a data-knowl="" class="id-ref original" data-refid="hk-ex-graph-degree-sum-max"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Maximum Degree Sum.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-sum-max"><article class="exercise exercise-like"><p id="p-819">Show that the sum of the degrees of a simple graph cannot add up to more than \(n(n-1)\text{.}\)</p></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-degree-sum-max"><article class="exercise exercise-like"><p id="p-830">Show that the sum of the degrees of a simple graph cannot add up to more than \(n(n-1)\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>

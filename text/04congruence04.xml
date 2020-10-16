@@ -31,6 +31,13 @@
     	</statement>
     </definition>
 
+	<sidebyside>    
+    <video xml:id="video-euler-phi-function" youtube="Gw8BYxEcZsM" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Euler's Phi Function</em>
+    </p>
+
     <example xml:id="eg-cong-totient">
     	<title><m>\phi(1)</m> and <m>\phi(8)</m></title>
     	<statement>
@@ -330,6 +337,13 @@
 		Now we can state Euler's Theorem then prove Fermat's Little Theorem, which is a special case.
 	</p>
 
+	<sidebyside>    
+    <video xml:id="video-two-theorems" youtube="LJKnVi3NSpU" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Two Theorems in Number Theory</em>
+    </p>
+
 	<theorem xml:id="thm-euler">
 		<title>Euler's Theorem</title>
 		<statement>
@@ -615,6 +629,14 @@
 		by an application of <xref ref="prop-cong-division"/>. 
 	</p>
 
+
+	<sidebyside>    
+    <video xml:id="video-primality-testing" youtube="OWPQlthnJw4" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Primality Testing</em>
+    </p>
+
 	<exploration xml:id="expl-primality-testing">
 		<title>Primality Testing</title>
 		<introduction>
@@ -652,6 +674,7 @@
 			</statement>
 		</task>
 	</exploration>
+
 
 
 </section>

@@ -109,7 +109,7 @@
             <ul>
                 <li> <term>injective</term> if for every <m>x_1 \ne x_2 \in A</m>, <m>f(x_1) \ne f(x_2)</m>. </li>
                 <li> <term>surjective</term> if for every <m>y \in B</m>, there exists an <m>x \in A</m> so that <m>f(x) = y</m>. </li>
-                <li> <term>bijective</term> if for every <m>x_1 \ne x_2 \in A</m>, <m>f(x_1) \ne f(x_2)</m>. </li>
+                <li> <term>bijective</term> if it is both injective and surjective.</li>
             </ul>
         </p>
         </statement>

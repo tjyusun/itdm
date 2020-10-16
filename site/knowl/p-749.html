@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-23T23:23:10-04:00       *-->
+<!--*       on 2020-10-16T13:06:13-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,7 +15,30 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Additional Exercises for <a href="chap-congruence.html" class="internal" title="Chapter 4: Congruence Modulo \(n\)">Chapter 4</a></p>
-<span class="incontext"><a href="exercises-congruence.html#p-749">in-context</a></span>
+<p>Let \(m_1,m_2,\ldots,m_n \in \mathbb{N}\) and \(\gcd(m_i,m_j) = 1\) for \(i \ne j\text{,}\) and consider the system</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{cases} x \equiv a_1 \Mod{m_1} \\ x \equiv a_2 \Mod{m_2} \\ \vdots \\ x \equiv a_n \Mod{m_n} \end{cases}
+\end{equation*}
+</div>
+<p data-braille="continuation">Perform the following steps:</p>
+<ul class="disc">
+<li>Let \(M = m_1m_2\cdots m_n\text{.}\)</li>
+<li>
+<p>For each \(i = 1,2,\ldots,n\text{:}\)</p>
+<ul class="circle">
+<li>Define \(b_i = M/m_i\) (the product of all moduli other than \(m_i\)).</li>
+<li>Find the multiplicative inverse of \(b_i\) modulo \(m_i\text{,}\) call it \(t_i\text{.}\)</li>
+</ul>
+</li>
+</ul>
+<p data-braille="continuation">A solution to the given system is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x \equiv a_1b_1t_1 + a_2b_2t_2 + \cdots + a_nb_nt_n \Mod{M}\equiv \sum_{i=1}^n a_ib_it_i \Mod{M}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">and this is unique modulo \(M\text{.}\)</p>
+<span class="incontext"><a href="sec-chinese-remainder.html#p-749">in-context</a></span>
 </body>
 </html>

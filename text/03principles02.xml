@@ -13,7 +13,7 @@
     </objectives>
 	
 	<sidebyside>    
-    <video xml:id="video-inclusion-exclusion" youtube="FMYJxGzboIM" play-at="embed" preview="images/11-thumb.png"/>
+    <video xml:id="video-inclusion-exclusion" youtube="FMYJxGzboIM" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Principle of Inclusion-Exclusion</em>
@@ -66,7 +66,7 @@
 		<solution>
 			<p>
 				Following the previous example, there are <m>8</m> integers in <m>U</m> that are divisible by 3.
-				Also, there are <m>\lfloor \frac{25}{4} \rfloor = 6</m> integers in <m>U</m> not divisible by 4.
+				Also, there are <m>\lfloor \frac{25}{4} \rfloor = 6</m> integers in <m>U</m> divisible by 4.
 			</p>
 			<p>
 				However, after subtracting <m>25 - 8 - 6 = 11</m>, we've actually removed some numbers twice: those numbers that are divisible by <em>both</em> 3 and 4 (<ie/> divisible by 12).

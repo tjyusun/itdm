@@ -13,7 +13,7 @@
     </objectives>
 	
 	<sidebyside>    
-    <video xml:id="video-derangements" youtube="UML9C4ECiI8" play-at="embed" preview="images/12-thumb.png"/>
+    <video xml:id="video-derangements" youtube="UML9C4ECiI8" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Derangements</em>

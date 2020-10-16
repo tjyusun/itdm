@@ -17,6 +17,13 @@
 		This is an important relation that has several applications, so it is given a name.
 	</p>
 
+    <sidebyside>    
+    <video xml:id="video-congruence" youtube="E6jSw_jmw8M" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Congruence</em>
+    </p>
+
 	<definition xml:id="def-congruence">
 		<title>Congruence</title>
 		<statement>
@@ -132,6 +139,13 @@
 			</p>
 		</statement>
 	</example>
+
+	<sidebyside>    
+    <video xml:id="video-properties-of-congruence" youtube="l422FH4nEmk" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Properties of Congruence</em>
+    </p>
 
 	<p>
 		Observe that if two numbers <m>a</m> and <m>b</m> are congruent modulo <m>n</m>, then their difference <m>a-b</m> is congruent to 0 modulo <m>n</m>.

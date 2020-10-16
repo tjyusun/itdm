@@ -78,6 +78,21 @@
 		Equivalence relations are a special type of relation<mdash/>they satisfy a number of additional conditions that allow for a reasonable way to talk about objects being <em>equivalent</em>.
 	</p>
 
+	<sidebyside>    
+    <video xml:id="video-equivalence-relation-1" youtube="7Sc-vvr9SMQ" play-at="embed"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Equivalence Relations, Part 1</em> (by <url href="https://www.youtube.com/channel/UCnzqLoGhxAA46i9xcPHZavQ">Mike Pawliuk</url>)
+    </p>
+
+	<sidebyside>    
+    <video xml:id="video-equivalence-relation-2" youtube="Xm7_ol_-fSI" play-at="embed"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Equivalence Relations, Part 2</em> (by <url href="https://www.youtube.com/channel/UCnzqLoGhxAA46i9xcPHZavQ">Mike Pawliuk</url>)
+    </p>
+
+
 
 	<definition xml:id="def-equivalence-relation">
 		<title>Equivalence Relation</title>
@@ -120,6 +135,14 @@
 		</statement>
 	</exercise>
 
+	<sidebyside>    
+    <video xml:id="video-equivalence-class-1" youtube="5qxqGbQRjz0" play-at="embed"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Equivalence Classes, Part 1</em> (by <url href="https://www.youtube.com/channel/UCnzqLoGhxAA46i9xcPHZavQ">Mike Pawliuk</url>)
+    </p>
+
+
 
 	<definition xml:id="def-equivalence-class">
 		<title>Equivalence Class</title>
@@ -149,6 +172,8 @@
 			</p>
 		</statement>
 	</exercise>
+
+
 
 	<p>
 		An equivalence relation on a set <m>S</m> induces a <xref ref="def-partition" text="custom">partition</xref> of <m>S</m> into its equivalence classes.
@@ -222,6 +247,14 @@
 			</p>
 		</hint>
 	</exercise>
+
+	<sidebyside>    
+    <video xml:id="video-equivalence-class-2" youtube="_cs3WzuHmRs" play-at="embed"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Equivalence Classes, Part 2</em> (by <url href="https://www.youtube.com/channel/UCnzqLoGhxAA46i9xcPHZavQ">Mike Pawliuk</url>)
+    </p>
+
 
 	<exercise xml:id="ex-cong-equivalence-mod3">
 		<title>Describe the Classes I</title>

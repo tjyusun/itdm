@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-23T23:23:08-04:00       *-->
+<!--*       on 2020-10-16T13:06:11-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -15,28 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Hence, each integer \(ab_i\) is congruent modulo \(m\) to distinct elements in \(S\text{:}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-ab_1 \amp \equiv b_{j_1} \Mod{m}\\
-ab_2 \amp \equiv b_{j_2} \Mod{m}\\
-\vdots \amp\\
-ab_{\phi(m)} \amp \equiv b_{j_{\phi(m)}} \Mod{m}
-\end{align*}
-</div>
-<p data-braille="continuation">Multiplying all the congruences together gives another congruence, where the right-hand-side is just</p>
+<p>Since each element of \(S\) is relatively prime with 9, we can apply <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a> to cancel each term, and we are left with</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\displaystyle\prod_{k=1}^{\phi(m)} b_{j_k} = \displaystyle\prod_{i=1}^{\phi(m)} b_i
+(4)(4)(4)(4)(4)(4) \equiv 1 \Mod{9} \Rightarrow 4^{\phi(9)} \equiv 1 \Mod{9}
 \end{equation*}
 </div>
-<p data-braille="continuation">since each element of \(S\) appears exactly once. Hence,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\prod_{i=1}^{\phi(m)} ab_i \equiv \prod_{i=1}^{\phi(m)} b_i \Mod{m} \Rightarrow a^{\phi(m)} \equiv 1 \Mod{m}
-\end{equation*}
-</div>
-<p data-braille="continuation">by an application of <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>.</p>
+<p data-braille="continuation">since \(\phi(9) = 6 = |S|\text{.}\)</p>
 <span class="incontext"><a href="sec-euler.html#p-708">in-context</a></span>
 </body>
 </html>

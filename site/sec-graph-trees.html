@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-09-23T23:22:39-04:00       *-->
+<!--*       on 2020-10-16T13:05:42-04:00       *-->
 <!--*   A recent stable commit (2020-07-07):   *-->
 <!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
 <!--*                                          *-->
@@ -178,36 +178,36 @@ MathJax.Hub.Config({
 <li id="li-302">Define connectedness; determine whether a given graph is connected or disconnected.</li>
 <li id="li-303">Define trees; give necessary and sufficient conditions for a graph to be a tree.</li>
 <li id="li-304">Prove simple statements about trees and connectedness of graphs, in particular utilizing proof by contradiction and structural induction on graphs.</li>
-</ul></article><p id="p-903">As we mentioned in <a href="sec-graph-modeling.html" class="internal" title="Section 5.1: Modeling with Graphs">Section 5.1</a> the power of graph theory is that it allows us to abstract only the relevant details about the structure underlying a given scenario, regardless of the original context of the problem. A <em class="alert">tree</em> is a special type of graph that arises in several real-world applications. For instance, it is a prominent data type in computer science; it is seen whenever the structure being described has an underlying hierarchy or order.</p>
-<p id="p-904">We first restate some definitions you've seen before and give a bit more detail. Recall that a <a class="xref" data-knowl="./knowl/def-path.html" title="Definition 5.3.5: Path">path</a> is a trail with no repeated vertices.</p>
+</ul></article><p id="p-914">As we mentioned in <a href="sec-graph-modeling.html" class="internal" title="Section 5.1: Modeling with Graphs">Section 5.1</a> the power of graph theory is that it allows us to abstract only the relevant details about the structure underlying a given scenario, regardless of the original context of the problem. A <em class="alert">tree</em> is a special type of graph that arises in several real-world applications. For instance, it is a prominent data type in computer science; it is seen whenever the structure being described has an underlying hierarchy or order.</p>
+<p id="p-915">We first restate some definitions you've seen before and give a bit more detail. Recall that a <a class="xref" data-knowl="./knowl/def-path.html" title="Definition 5.3.5: Path">path</a> is a trail with no repeated vertices.</p>
 <article class="definition definition-like" id="def-path-graph"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Path Graph.</span>
 </h6>
-<p id="p-905">A <dfn class="terminology">path graph</dfn> is any graph isomorphic to a path on \(n\) vertices and is denoted by \(P_n\text{.}\) </p></article><article class="example example-like" id="eg-path-graph"><h6 class="heading">
+<p id="p-916">A <dfn class="terminology">path graph</dfn> is any graph isomorphic to a path on \(n\) vertices and is denoted by \(P_n\text{.}\) </p></article><article class="example example-like" id="eg-path-graph"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">\(P_6\text{,}\) or the Path on Six Vertices.</span>
 </h6>
-<p id="p-906">Two different drawings of the graph \(P_6\text{:}\)</p>
+<p id="p-917">Two different drawings of the graph \(P_6\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;">
 <div class="sbspanel" style="width:54%;justify-content:center;"><img src="images/img-p6-1.svg" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:22%;justify-content:center;"><img src="images/img-p6-2.svg" style="width: 100%; height: auto;" alt=""></div>
-</div></div></article><p id="p-907">A graph is <a class="xref" data-knowl="./knowl/def-connected.html" title="Definition 5.3.6: Connectedness">connected</a> if there are paths between any two of its vertices.</p>
+</div></div></article><p id="p-918">A graph is <a class="xref" data-knowl="./knowl/def-connected.html" title="Definition 5.3.6: Connectedness">connected</a> if there are paths between any two of its vertices.</p>
 <article class="definition definition-like" id="def-connected-component"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Connected Component.</span>
 </h6>
-<p id="p-908">A <dfn class="terminology">connected component</dfn> of a graph \(G\) is any connected subgraph of \(G\) that is not contained in any other connected subgraph (i.e. the maximal connected subgraphs of \(G\)).</p></article><p id="p-909">If there exists a \(u\)-\(v\) path on a graph \(G\text{,}\) we also say that \(u\) and \(v\) <dfn class="terminology">are connected</dfn> on \(G\text{.}\)</p>
+<p id="p-919">A <dfn class="terminology">connected component</dfn> of a graph \(G\) is any connected subgraph of \(G\) that is not contained in any other connected subgraph (i.e. the maximal connected subgraphs of \(G\)).</p></article><p id="p-920">If there exists a \(u\)-\(v\) path on a graph \(G\text{,}\) we also say that \(u\) and \(v\) <dfn class="terminology">are connected</dfn> on \(G\text{.}\)</p>
 <article class="exercise exercise-like" id="ex-path-connected"><a data-knowl="" class="id-ref original" data-refid="hk-ex-path-connected"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">\(P_6\) is connected.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-path-connected"><article class="exercise exercise-like"><p id="p-910">Verify that the graph \(P_6\) is connected.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-path-connected"><article class="exercise exercise-like"><p id="p-921">Verify that the graph \(P_6\) is connected.</p></article></div>
 <article class="example example-like" id="eg-graph-connected-component"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Connected and Disconnected.</span>
 </h6>
-<p id="p-911">The graph \(G\) is not connected since not all pairs of vertices are endpoints of some path. For example, there is no path joining 1 and 6; nor is there one joining 3 and 4.</p>
+<p id="p-922">The graph \(G\) is not connected since not all pairs of vertices are endpoints of some path. For example, there is no path joining 1 and 6; nor is there one joining 3 and 4.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:36.5%;margin-right:36.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-connected-1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="p-912">The graph \(G\) has two connected components: one is the \(C_3\) subgraph formed by the vertices \(\{1,2,3\}\text{,}\) and the other one is a path of length three (\(P_3\)) formed by the vertices \(\{4,5,6\}\text{.}\) These are the <em class="emphasis">maximal</em> connected subgraphs of \(G\text{.}\) (On the other hand, the path 1-2-3 is <em class="emphasis">not</em> a maximal connected subgraph, since it is a subgraph of the cycle 1-2-3-1.)</p>
+<p id="p-923">The graph \(G\) has two connected components: one is the \(C_3\) subgraph formed by the vertices \(\{1,2,3\}\text{,}\) and the other one is a path of length three (\(P_3\)) formed by the vertices \(\{4,5,6\}\text{.}\) These are the <em class="emphasis">maximal</em> connected subgraphs of \(G\text{.}\) (On the other hand, the path 1-2-3 is <em class="emphasis">not</em> a maximal connected subgraph, since it is a subgraph of the cycle 1-2-3-1.)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-connected-2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="p-913">The graph \(H\) is connected, since between any two of its vertices one can find a path. For example, if we pick vertices 1 and 5, we can find a 1-5 path: 1-2-3-5. In fact there is another path (1-4-3-5) but we only need at least one for each vertex pair to satisfy the condition of connectedness.</p></article><article class="exercise exercise-like" id="ex-which-connected"><a data-knowl="" class="id-ref original" data-refid="hk-ex-which-connected"><h6 class="heading">
+<p id="p-924">The graph \(H\) is connected, since between any two of its vertices one can find a path. For example, if we pick vertices 1 and 5, we can find a 1-5 path: 1-2-3-5. In fact there is another path (1-4-3-5) but we only need at least one for each vertex pair to satisfy the condition of connectedness.</p></article><article class="exercise exercise-like" id="ex-which-connected"><a data-knowl="" class="id-ref original" data-refid="hk-ex-which-connected"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Which Graphs are Connected?</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-which-connected"><article class="exercise exercise-like"><p id="p-914">Which of the following graphs are connected?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-which-connected"><article class="exercise exercise-like"><p id="p-925">Which of the following graphs are connected?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:9.166666666666666%;margin-right:9.166666666666666%;">
 <div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-start;"><img src="images/img-which-connected-1.svg" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-start;"><img src="images/img-which-connected-2.svg" style="width: 100%; height: auto;" alt=""></div>
@@ -215,14 +215,14 @@ MathJax.Hub.Config({
 </div></div></article></div>
 <article class="exercise exercise-like" id="ex-isomorphic-connected"><a data-knowl="" class="id-ref original" data-refid="hk-ex-isomorphic-connected"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Connectedness is Invariant under Isomorphism.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-isomorphic-connected"><article class="exercise exercise-like"><p id="p-915">Prove that if \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are isomorphic, and \(G_1\) is connected, then \(G_2\) must be connected as well.</p></article></div>
-<p id="p-916">If a graph is connected, and contains no copies of \(C_n\) for any \(n\) (i.e. it does not have cycles) then we call it a tree.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-isomorphic-connected"><article class="exercise exercise-like"><p id="p-926">Prove that if \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are isomorphic, and \(G_1\) is connected, then \(G_2\) must be connected as well.</p></article></div>
+<p id="p-927">If a graph is connected, and contains no copies of \(C_n\) for any \(n\) (i.e. it does not have cycles) then we call it a tree.</p>
 <article class="definition definition-like" id="def-tree"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Tree, Forest.</span>
 </h6>
-<p id="p-917">A <dfn class="terminology">tree</dfn> is a simple connected graph that contains no cycles as a subgraph.</p>
-<p id="p-918">A <dfn class="terminology">forest</dfn> is a simple graph that contains no cycles as a subgraph.</p></article><p id="p-919">As to be expected, a forest is simply a collection of trees. Technically, by <a class="xref" data-knowl="./knowl/def-tree.html" title="Definition 5.5.8: Tree, Forest">Definition 5.5.8</a> a single tree can be called a forest as well.</p>
-<aside class="aside aside-like" id="aside-5"><p id="p-920">While the graph-theoretic definition of a forest is unambiguous, in the real world it is quite imprecise: <a class="external" href="https://www.nature.org/en-us/what-we-do/our-insights/perspectives/how-many-trees-make-a-forest/" target="_blank">How many trees make a forest?</a></p></aside><article class="example example-like" id="eg-tree-forest"><h6 class="heading">
+<p id="p-928">A <dfn class="terminology">tree</dfn> is a simple connected graph that contains no cycles as a subgraph.</p>
+<p id="p-929">A <dfn class="terminology">forest</dfn> is a simple graph that contains no cycles as a subgraph.</p></article><p id="p-930">As to be expected, a forest is simply a collection of trees. Technically, by <a class="xref" data-knowl="./knowl/def-tree.html" title="Definition 5.5.8: Tree, Forest">Definition 5.5.8</a> a single tree can be called a forest as well.</p>
+<aside class="aside aside-like" id="aside-5"><p id="p-931">While the graph-theoretic definition of a forest is unambiguous, in the real world it is quite imprecise: <a class="external" href="https://www.nature.org/en-us/what-we-do/our-insights/perspectives/how-many-trees-make-a-forest/" target="_blank">How many trees make a forest?</a></p></aside><article class="example example-like" id="eg-tree-forest"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Trees and Forests and Actual Trees.</span>
 </h6>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.75%;margin-right:2.75%;">
@@ -232,50 +232,50 @@ MathJax.Hub.Config({
 <div class="sbspanel" style="width:19.047619047619%;justify-content:flex-end;"><img src="images/tree.png" style="width: 100%; height: auto;" alt="A drawing of an actual, non-graph tree."></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.75%;margin-right:2.75%;">
-<div class="sbspanel" style="width:21.1640211640212%;justify-content:flex-start;"><p id="p-921">A tree on six vertices (also a forest)</p></div>
-<div class="sbspanel" style="width:21.1640211640212%;justify-content:flex-start;"><p id="p-922">A forest on six vertices (not a tree)</p></div>
-<div class="sbspanel" style="width:21.1640211640212%;justify-content:flex-start;"><p id="p-923">A connected graph (not a tree)</p></div>
-<div class="sbspanel" style="width:19.047619047619%;justify-content:flex-start;"><p id="p-924">A tree (not a graph)</p></div>
+<div class="sbspanel" style="width:21.1640211640212%;justify-content:flex-start;"><p id="p-932">A tree on six vertices (also a forest)</p></div>
+<div class="sbspanel" style="width:21.1640211640212%;justify-content:flex-start;"><p id="p-933">A forest on six vertices (not a tree)</p></div>
+<div class="sbspanel" style="width:21.1640211640212%;justify-content:flex-start;"><p id="p-934">A connected graph (not a tree)</p></div>
+<div class="sbspanel" style="width:19.047619047619%;justify-content:flex-start;"><p id="p-935">A tree (not a graph)</p></div>
 </div></div></article><article class="exercise exercise-like" id="ex-nonisomorphic-trees"><a data-knowl="" class="id-ref original" data-refid="hk-ex-nonisomorphic-trees"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Find all Trees.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-nonisomorphic-trees"><article class="exercise exercise-like"><p id="p-925">Find all nonisomorphic trees on</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-nonisomorphic-trees"><article class="exercise exercise-like"><p id="p-936">Find all nonisomorphic trees on</p>
 <ol class="lower-alpha">
 <li id="li-305">four vertices;</li>
 <li id="li-306">five vertices.</li>
 </ol></article></div>
-<p id="p-926">In a sense, trees are the minimally connected graphs, since removing any edge from a tree results in a disconnected graph.</p>
+<p id="p-937">In a sense, trees are the minimally connected graphs, since removing any edge from a tree results in a disconnected graph.</p>
 <article class="proposition theorem-like" id="prop-tree-remove-edge-disconnect"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.5.11</span><span class="period">.</span><span class="space"> </span><span class="title">Tree Minus an Edge is Disconnected.</span>
 </h6>
-<p id="p-927">Let \(G = (V,E)\) be a tree, and \((u,v) \in E\) an edge of \(G\text{.}\) Then the graph \(G' = \left(V, E \setminus \{(u,v)\}\right)\) is disconnected.</p></article><article class="hiddenproof" id="proof-11"><a data-knowl="" class="id-ref original" data-refid="hk-proof-11"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><p id="p-928">We proceed by contradiction. Assume that the graph \(G'\) remains connected after removing the edge \((u,v)\text{.}\) Then by the definition of connectnedness there is a \(u\)-\(v\) path in \(G'\text{.}\)</p>
+<p id="p-938">Let \(G = (V,E)\) be a tree, and \((u,v) \in E\) an edge of \(G\text{.}\) Then the graph \(G' = \left(V, E \setminus \{(u,v)\}\right)\) is disconnected.</p></article><article class="hiddenproof" id="proof-11"><a data-knowl="" class="id-ref original" data-refid="hk-proof-11"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><p id="p-939">We proceed by contradiction. Assume that the graph \(G'\) remains connected after removing the edge \((u,v)\text{.}\) Then by the definition of connectnedness there is a \(u\)-\(v\) path in \(G'\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:75%;justify-content:flex-start;"><p id="p-929">But this means that there had to have been a cycle in the original graph \(G\text{,}\) consisting of the \(u\)-\(v\) path in \(G'\) and the edge \((u,v)\text{.}\) This contradicts the assumption that \(G\) was a tree. Therefore removing any edge from \(G\) results in a disconnected graph.</p></div>
+<div class="sbspanel" style="width:75%;justify-content:flex-start;"><p id="p-940">But this means that there had to have been a cycle in the original graph \(G\text{,}\) consisting of the \(u\)-\(v\) path in \(G'\) and the edge \((u,v)\text{.}\) This contradicts the assumption that \(G\) was a tree. Therefore removing any edge from \(G\) results in a disconnected graph.</p></div>
 <div class="sbspanel" style="width:18%;justify-content:flex-start;"><img src="images/img-proof-tree-minus-edge.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div></article></div>
-<p id="p-930">Our main result in this section is the relationship between the number of vertices and the number of edges in a tree. We first give one more definition and then prove an auxiliary result.</p>
+<p id="p-941">Our main result in this section is the relationship between the number of vertices and the number of edges in a tree. We first give one more definition and then prove an auxiliary result.</p>
 <article class="definition definition-like" id="def-leaf"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.12</span><span class="period">.</span><span class="space"> </span><span class="title">Leaf.</span>
 </h6>
-<p id="p-931">A <dfn class="terminology">leaf</dfn> in a tree is a vertex with degree 1.</p></article><article class="lemma theorem-like" id="lem-tree-number-leaves"><h6 class="heading">
+<p id="p-942">A <dfn class="terminology">leaf</dfn> in a tree is a vertex with degree 1.</p></article><article class="lemma theorem-like" id="lem-tree-number-leaves"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.5.13</span><span class="period">.</span><span class="space"> </span><span class="title">A Tree must have at least Two Leaves.</span>
 </h6>
-<p id="p-932">If \(G\) is a tree on at least two vertices, then it has at least two leaves.</p></article><article class="exploration project-like" id="expl-tree-number-leaves"><h6 class="heading">
+<p id="p-943">If \(G\) is a tree on at least two vertices, then it has at least two leaves.</p></article><article class="exploration project-like" id="expl-tree-number-leaves"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Lemma 5.5.13.</span>
 </h6>
-<div class="introduction" id="introduction-14"><p id="p-933">Let's work through the proof of <a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a> together! This is a proof by contradiction, so we start by assuming the opposite of the desired conclusion. That is: let's assume that \(G = (V,E)\) is a tree on at least two vertices, such that it has <em class="alert">only one leaf or none at all</em>.</p></div>
+<div class="introduction" id="introduction-14"><p id="p-944">Let's work through the proof of <a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a> together! This is a proof by contradiction, so we start by assuming the opposite of the desired conclusion. That is: let's assume that \(G = (V,E)\) is a tree on at least two vertices, such that it has <em class="alert">only one leaf or none at all</em>.</p></div>
 <article class="task exercise-like" id="task-22"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-934">We say that a path in a graph is <em class="emphasis">maximal</em> if we cannot add any more vertices to either end to make it longer. (For example, the path \(v_2\)-\(v_1\)-\(v_4\)-\(v_5\) in <a class="xref" data-knowl="./knowl/eg-graph-first.html" title="Example 5.2.3: First Graph">Example 5.2.3</a> is maximal.)</p>
-<p id="p-935">Explain why we can always find a maximal path in a tree on at least two vertices (in fact, in any graph that has at least one edge).</p></article><article class="task exercise-like" id="task-23"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-936">Take a maximal path \(P\) in \(G\) and call its vertices \(x_1,x_2,\ldots,x_k\text{.}\)</p>
+<p id="p-945">We say that a path in a graph is <em class="emphasis">maximal</em> if we cannot add any more vertices to either end to make it longer. (For example, the path \(v_2\)-\(v_1\)-\(v_4\)-\(v_5\) in <a class="xref" data-knowl="./knowl/eg-graph-first.html" title="Example 5.2.3: First Graph">Example 5.2.3</a> is maximal.)</p>
+<p id="p-946">Explain why we can always find a maximal path in a tree on at least two vertices (in fact, in any graph that has at least one edge).</p></article><article class="task exercise-like" id="task-23"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-947">Take a maximal path \(P\) in \(G\) and call its vertices \(x_1,x_2,\ldots,x_k\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-maximal-path.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="p-937">Given the assumption that \(G\) has fewer than two leaves, what can we conclude about \(x_1\) and \(x_k\text{?}\) (Hint: what about their degrees?)</p></article><article class="task exercise-like" id="task-24"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-938">Show that your conclusion from (b) will inevitably lead to one of the following contradictions:</p>
+<p id="p-948">Given the assumption that \(G\) has fewer than two leaves, what can we conclude about \(x_1\) and \(x_k\text{?}\) (Hint: what about their degrees?)</p></article><article class="task exercise-like" id="task-24"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-949">Show that your conclusion from (b) will inevitably lead to one of the following contradictions:</p>
 <ul class="disc">
 <li id="li-307">that the path \(P\) was not maximal after all;</li>
 <li id="li-308">that the graph \(G\) could not have been a tree to begin with.</li>
 </ul></article></article><article class="exercise exercise-like" id="ex-maximal-paths"><a data-knowl="" class="id-ref original" data-refid="hk-ex-maximal-paths"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Maximal Paths in Graphs.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-maximal-paths"><article class="exercise exercise-like"><p id="p-939">In <a class="xref" data-knowl="./knowl/expl-tree-number-leaves.html" title="Exploration 5.5.1: Proving Lemma 5.5.13">Exploration 5.5.1</a> we claimed that we can always find a maximal path in a graph with at least one edge. Find <em class="emphasis">all</em> maximal paths in each graph below. Do maximal paths of a graph always have the same number of vertices?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-maximal-paths"><article class="exercise exercise-like"><p id="p-950">In <a class="xref" data-knowl="./knowl/expl-tree-number-leaves.html" title="Exploration 5.5.1: Proving Lemma 5.5.13">Exploration 5.5.1</a> we claimed that we can always find a maximal path in a graph with at least one edge. Find <em class="emphasis">all</em> maximal paths in each graph below. Do maximal paths of a graph always have the same number of vertices?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:4.5%;margin-right:4.5%;">
 <div class="sbspanel" style="width:21.978021978022%;justify-content:center;"><img src="images/img-find-maximal-path-1.svg" style="width: 100%; height: auto;" alt=""></div>
 <div class="sbspanel" style="width:13.1868131868132%;justify-content:center;"><img src="images/img-find-maximal-path-2.svg" style="width: 100%; height: auto;" alt=""></div>
@@ -284,36 +284,36 @@ MathJax.Hub.Config({
 </div></div></article></div>
 <article class="exercise exercise-like" id="ex-verify-lemma-leaves"><a data-knowl="" class="id-ref original" data-refid="hk-ex-verify-lemma-leaves"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.15</span><span class="period">.</span><span class="space"> </span><span class="title">Verify Lemma 5.5.13.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-verify-lemma-leaves"><article class="exercise exercise-like"><p id="p-940">Verify <a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a> on each graph in <a class="xref" data-knowl="./knowl/ex-maximal-paths.html" title="Checkpoint 5.5.14: Maximal Paths in Graphs">Checkpoint 5.5.14</a>.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-verify-lemma-leaves"><article class="exercise exercise-like"><p id="p-951">Verify <a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a> on each graph in <a class="xref" data-knowl="./knowl/ex-maximal-paths.html" title="Checkpoint 5.5.14: Maximal Paths in Graphs">Checkpoint 5.5.14</a>.</p></article></div>
 <article class="exercise exercise-like" id="ex-max-leaves"><a data-knowl="" class="id-ref original" data-refid="hk-ex-max-leaves"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.16</span><span class="period">.</span><span class="space"> </span><span class="title">Maximum Leaves.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-max-leaves"><article class="exercise exercise-like"><p id="p-941"><a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a> gives the minimum number of leaves in any tree on at least two vertices. What is the maximum number of leaves in a tree on \(n\) vertices?</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-max-leaves"><article class="exercise exercise-like"><p id="p-952"><a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a> gives the minimum number of leaves in any tree on at least two vertices. What is the maximum number of leaves in a tree on \(n\) vertices?</p></article></div>
 <article class="exercise exercise-like" id="ex-min-max-leaves-forest"><a data-knowl="" class="id-ref original" data-refid="hk-ex-min-max-leaves-forest"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.17</span><span class="period">.</span><span class="space"> </span><span class="title">Leaves in a Forest.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-min-max-leaves-forest"><article class="exercise exercise-like"><p id="p-942">What is the minimum and maximum number of leaves in a forest that has \(k\) connected components (assume the components have \(n_1, n_2, \ldots, n_k\) vertices)?</p></article></div>
-<p id="p-943">Before we state our main result, try studying the trees of <a class="xref" data-knowl="./knowl/ex-maximal-paths.html" title="Checkpoint 5.5.14: Maximal Paths in Graphs">Checkpoint 5.5.14</a>. Do you notice a relationship between the number of vertices and the number of edges of each graph?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-min-max-leaves-forest"><article class="exercise exercise-like"><p id="p-953">What is the minimum and maximum number of leaves in a forest that has \(k\) connected components (assume the components have \(n_1, n_2, \ldots, n_k\) vertices)?</p></article></div>
+<p id="p-954">Before we state our main result, try studying the trees of <a class="xref" data-knowl="./knowl/ex-maximal-paths.html" title="Checkpoint 5.5.14: Maximal Paths in Graphs">Checkpoint 5.5.14</a>. Do you notice a relationship between the number of vertices and the number of edges of each graph?</p>
 <article class="theorem theorem-like" id="thm-tree-n-1"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.5.18</span><span class="period">.</span><span class="space"> </span><span class="title">Trees have \(|V|-1\) Edges.</span>
 </h6>
-<p id="p-944">A tree on \(|V| = n\) vertices has \(|E| = n-1\) edges.</p></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-945">We proceed by induction on the number of vertices \(|V|\) in the tree. The claim is:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-946">\(P(n):\) All trees with \(n\) vertices have \(n-1\) edges.</p></div></div></div>
-<p id="p-947"><em class="alert">Base case</em>: \(P(1)\) is clearly true, since a tree on one vertex has no edge.</p>
-<p id="p-948"><em class="alert">Induction step</em>: Assume that \(P(k-1)\) holds; that is, any tree with \(k-1\) vertices has \(k-2\) edges.</p>
-<p id="p-949">To prove \(P(k)\) holds, let \(G\) be an arbitrary tree on \(k\) vertices. By <a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a>, \(G\) must have a leaf, or a vertex \(v\) with \(d(v) = 1\text{.}\)</p>
-<p id="p-950">Remove the vertex \(v\) from the tree and the one edge it is an endpoint of. The resulting graph \(G'\) is still a tree (it must still be connected and have no cycles, since we only removed a leaf), but with \(k-1\) vertices. By the induction hypothesis, \(G'\) has \(k-2\) edges.</p>
-<p id="p-951">Therefore the original graph \(G\) must have had \(k-1\) edges (adding back what was removed with \(v\)).</p>
-<p id="p-952">This completes the proof.</p></article></div>
-<p id="p-953">It is interesting to note that the converse of <a class="xref" data-knowl="./knowl/thm-tree-n-1.html" title="Theorem 5.5.18: Trees have \(|V|-1\) Edges">Theorem 5.5.18</a> is actually true.</p>
+<p id="p-955">A tree on \(|V| = n\) vertices has \(|E| = n-1\) edges.</p></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-956">We proceed by induction on the number of vertices \(|V|\) in the tree. The claim is:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-957">\(P(n):\) All trees with \(n\) vertices have \(n-1\) edges.</p></div></div></div>
+<p id="p-958"><em class="alert">Base case</em>: \(P(1)\) is clearly true, since a tree on one vertex has no edge.</p>
+<p id="p-959"><em class="alert">Induction step</em>: Assume that \(P(k-1)\) holds; that is, any tree with \(k-1\) vertices has \(k-2\) edges.</p>
+<p id="p-960">To prove \(P(k)\) holds, let \(G\) be an arbitrary tree on \(k\) vertices. By <a class="xref" data-knowl="./knowl/lem-tree-number-leaves.html" title="Lemma 5.5.13: A Tree must have at least Two Leaves">Lemma 5.5.13</a>, \(G\) must have a leaf, or a vertex \(v\) with \(d(v) = 1\text{.}\)</p>
+<p id="p-961">Remove the vertex \(v\) from the tree and the one edge it is an endpoint of. The resulting graph \(G'\) is still a tree (it must still be connected and have no cycles, since we only removed a leaf), but with \(k-1\) vertices. By the induction hypothesis, \(G'\) has \(k-2\) edges.</p>
+<p id="p-962">Therefore the original graph \(G\) must have had \(k-1\) edges (adding back what was removed with \(v\)).</p>
+<p id="p-963">This completes the proof.</p></article></div>
+<p id="p-964">It is interesting to note that the converse of <a class="xref" data-knowl="./knowl/thm-tree-n-1.html" title="Theorem 5.5.18: Trees have \(|V|-1\) Edges">Theorem 5.5.18</a> is actually true.</p>
 <article class="theorem theorem-like" id="thm-n-1-tree"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.5.19</span><span class="period">.</span><span class="space"> </span><span class="title">Converse of Theorem 5.5.18.</span>
 </h6>
-<p id="p-954">If \(G\) is a connected simple graph on \(n\) vertices and \(n-1\) edges, then \(G\) must be a tree.</p></article><p id="p-955">We will not prove it here but we now summarize both results into one nice characterization of trees.</p>
+<p id="p-965">If \(G\) is a connected simple graph on \(n\) vertices and \(n-1\) edges, then \(G\) must be a tree.</p></article><p id="p-966">We will not prove it here but we now summarize both results into one nice characterization of trees.</p>
 <article class="theorem theorem-like" id="thm-trees"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.5.20</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of Trees.</span>
 </h6>
-<p id="p-956">If \(G = (V,E)\) is a connected simple graph, then \(|E| = |V| - 1\) if and only if \(G\) is a tree.</p></article><article class="exercise exercise-like" id="ex-not-a-tree"><a data-knowl="" class="id-ref original" data-refid="hk-ex-not-a-tree"><h6 class="heading">
+<p id="p-967">If \(G = (V,E)\) is a connected simple graph, then \(|E| = |V| - 1\) if and only if \(G\) is a tree.</p></article><article class="exercise exercise-like" id="ex-not-a-tree"><a data-knowl="" class="id-ref original" data-refid="hk-ex-not-a-tree"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.21</span><span class="period">.</span><span class="space"> </span><span class="title">Connectedness is Required.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-not-a-tree"><article class="exercise exercise-like"><p id="p-957">Find an example of a simple graph on \(n\) vertices and \(n-1\) edges that is not a tree.</p></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-not-a-tree"><article class="exercise exercise-like"><p id="p-968">Find an example of a simple graph on \(n\) vertices and \(n-1\) edges that is not a tree.</p></article></div></section></div></main>
 </div>
 </body>
 </html>

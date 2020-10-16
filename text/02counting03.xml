@@ -255,7 +255,7 @@
 	</p>
 
     <sidebyside>    
-    <video xml:id="video-binomial-theorem" youtube="KQcp66H8QvM" play-at="embed" preview="images/07-thumb.png" />
+    <video xml:id="video-binomial-theorem" youtube="KQcp66H8QvM" play-at="embed"  />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>The Binomial Theorem</em>

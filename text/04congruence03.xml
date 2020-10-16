@@ -12,6 +12,13 @@
         </ul>
     </objectives>
 
+	<sidebyside>    
+    <video xml:id="video-solving-congruences" youtube="pMiqyAj7EkU" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Solving Congruences</em>
+    </p>
+
 	<p>
 		When we are asked to <em>solve for <m>x</m></em> in an equation like <m>2x^2 + 4 = 36</m>, we know that we need to look for all values of <m>x</m> that satisfy that equation (<m>x = \pm 4</m>).
 		What if we are asked to solve for <m>x</m> given a congruence? 
@@ -98,6 +105,14 @@
 			</p>
 		</hint>
 	</exercise>
+
+	<sidebyside>    
+    <video xml:id="video-multiplicative-inverses" youtube="jELQCYrL7MQ" play-at="embed"/>
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Multiplicative Inverses</em>
+    </p>
+
 
 	<p>
 		We've seen that dividing both sides by a constant is not always possible.

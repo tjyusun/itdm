@@ -37,7 +37,7 @@
 	</p>
 
     <sidebyside>    
-    <video xml:id="video-combinatorial-arguments" youtube="LBzyl70eo2M" play-at="embed" preview="images/09-thumb.png"/>
+    <video xml:id="video-combinatorial-arguments" youtube="LBzyl70eo2M" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Combinatorial Arguments</em>

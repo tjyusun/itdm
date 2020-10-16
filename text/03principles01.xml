@@ -127,7 +127,7 @@
 	</p>
 
     <sidebyside>    
-    <video xml:id="video-pigeonhole" youtube="XnvaUoONj2M" play-at="embed" preview="images/10-thumb.png"/>
+    <video xml:id="video-pigeonhole" youtube="XnvaUoONj2M" play-at="embed"/>
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Pigeonhole Principle</em>
