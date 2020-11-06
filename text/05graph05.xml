@@ -89,6 +89,13 @@
     	</statement>
     </example>
 
+	<sidebyside>    
+    <video xml:id="video-connectedness" youtube="QycrK3MP0Zo" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Connectedness</em>
+    </p>
+
     <p>
     	A graph is <xref ref="def-connected" text="custom">connected</xref> if there are paths between any two of its vertices.
     </p>
@@ -278,6 +285,13 @@
 	<p>
 		If a graph is connected, and contains no copies of <m>C_n</m> for any <m>n</m> (<ie/> it does not have cycles) then we call it a tree.
 	</p>
+
+	<sidebyside>    
+    <video xml:id="video-trees" youtube="Ot_5cM3vvyE" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Trees</em>
+    </p>
 
 	<definition xml:id="def-tree">
 		<title>Tree, Forest</title>
@@ -670,6 +684,13 @@
 		Do you notice a relationship between the number of vertices and the number of edges of each graph?
 	</p>
 
+	<sidebyside>    
+    <video xml:id="video-char-trees" youtube="804i5sIS-pg" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Characterization of Trees</em>
+    </p>
+
 	<theorem xml:id="thm-tree-n-1">
 		<title>Trees have <m>|V|-1</m> Edges</title>
 		<statement>
@@ -722,10 +743,30 @@
 				If <m>G</m> is a connected simple graph on <m>n</m> vertices and <m>n-1</m> edges, then <m>G</m> must be a tree.
 			</p>
 		</statement>
+		<proof>
+			<p>
+				Let <m>G</m> be a connected graph on <m>n</m> vertices and <m>n-1</m> edges. 
+				Towards a contradiction, assume <m>G</m>has at least one cycle. 
+			</p>
+			<p>
+				Construct a new graph <m>G'</m> by removing an edge from a cycle in <m>G</m>. 
+				Then <m>G'</m> remains connected (why?).
+			</p>
+			<p>
+				Continue this process until we obtain a graph <m>H</m> with no cycles.
+				Then by definition, <m>H</m> must be a tree (connected and acyclic).
+				Observe that <m>H</m> has <m>n</m> vertices but strictly fewer than <m>n-1</m> edges since we removed at least one edge from <m>G</m> to obtain <m>H</m>.
+				This contradicts <xref ref="thm-tree-n-1"/>.
+			</p>
+			<p>
+				Hence <m>G</m> must have had no cycles to begin with.
+				This implies <m>G</m> is a tree.
+			</p>
+		</proof>
 	</theorem>
 
 	<p>
-		We will not prove it here but we now summarize both results into one nice characterization of trees.
+		We now summarize both results into one nice characterization of trees.
 	</p>
 
 	<theorem xml:id="thm-trees">

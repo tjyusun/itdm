@@ -14,6 +14,13 @@
         </ul>
     </objectives>
 
+	<sidebyside>    
+    <video xml:id="video-isomoprhism" youtube="amvh1any_UQ" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Isomorphisms</em>
+    </p>
+
     <p>
     	Given any graph <m>G = (V,E)</m>, there is usually more than one way of representing <m>G</m> as a drawing.
 		In fact, the definition of a graph (<xref ref="def-graph"/>) as a pair <m>(V,E)</m> of vertex and edge sets makes no reference to how it is visualized as a drawing on a sheet of paper.
@@ -311,6 +318,13 @@
 	<p>
 		Another way we can prove two graphs are not isomorphic is by looking at their subgraphs, which are graphs whose vertices and edges are subsets of that of the original graph.
 	</p>
+
+	<sidebyside>    
+    <video xml:id="video-subgraphs" youtube="1KchNM15DCQ" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Subgraphs and Complements</em>
+    </p>
 
 	<definition xml:id="def-subgraph">
 		<title>Subgraph</title>

@@ -52,6 +52,7 @@
 		<p>
 			For each statement below, decide whether it is a complete sentence or not.
 		</p>
+		<p>
 		<ol label="(a)">
 			<li>x^2.</li>
 			<li>x^2 = 9.</li>
@@ -60,6 +61,7 @@
 			<li>We will manipulate <m>\binom{n}{k}</m>.</li>
 			<li><m>-1 \in \mathbb{N}</m>.</li>
 		</ol>
+		</p>
 	</statement>
 </activity>
 
@@ -78,7 +80,7 @@
 		<p>
 			<alert>A Two-Column Proof</alert>
 		</p>
-		<p>
+		<sidebyside>
 		    <tabular>
 		        <row>
 		            <cell>
@@ -129,7 +131,7 @@
 		            </cell>
 		        </row>
     	    </tabular>
-		</p>
+    	</sidebyside>
 		<p>
 			<alert>A Proof in Prose</alert>
 		</p>

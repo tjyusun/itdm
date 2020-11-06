@@ -11,6 +11,13 @@
         </ul>
     </objectives>
 
+	<sidebyside>    
+    <video xml:id="video-handshake-lemma" youtube="MwLzeaAZP9U" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Eulerian Graphs</em>
+    </p>
+
     <p>
     	In the previous section we defined the degree of a vertex and proved some properties about degree sequences.
     	We can use vertex degrees to answer the five-room problem in <xref ref="eg-graph-model-room"/> in the negative.

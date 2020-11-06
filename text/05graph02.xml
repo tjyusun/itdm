@@ -13,6 +13,13 @@
         </ul>
     </objectives>
 
+	<sidebyside>    
+    <video xml:id="video-graph-theory-defs" youtube="p0ukh73oFO8" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Graph Theory Definitions</em>
+    </p>
+
     <p>
     	We now formally state the definition of a graph. 
 		Unless otherwise specified, the graphs you will encounter in this text are simple graphs.
@@ -292,6 +299,13 @@
 		From the next result we can derive one simple way to tell if given sequence <em>cannot</em> be realized as a graph.
 		This will be our first graph theory proof: that the sum of the degrees of all vertices must be equal to twice the number of edges in the graph.
 	</p>
+
+	<sidebyside>    
+    <video xml:id="video-handshake-lemma" youtube="lPQdksgCbRc" play-at="embed" />
+    </sidebyside>
+    <p>
+        <alert>Video</alert>: <em>Handshake Lemma</em>
+    </p>
 
 	<theorem xml:id="thm-degree-sum">
 		<title>Degree-Sum Formula</title>

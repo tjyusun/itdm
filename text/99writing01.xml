@@ -74,13 +74,13 @@ that is,
 		The output should appear on the right.
 	</p>
 	<figure xml:id="fig-overleaf-1">
+				<caption>Overleaf document</caption>
     			<image source="figs/latex-example-overleaf1.png" width="90%"><description>Overleaf document.</description></image>
-    			<caption>Overleaf document</caption>
     </figure>
     <figure xml:id="fig-overleaf-2">
+    			<caption>Compiled output</caption>
     			<image source="figs/latex-example-overleaf2.png" width="90%"><description>
     			Output document.</description></image>
-    			<caption>Compiled output</caption>
     </figure>
 	<p>
 		You may have noticed that there is some extra text that tells <latex/> what kind of document you are preparing (article), what the title is (First Project), author's name, and so on.
