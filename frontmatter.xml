@@ -21,40 +21,42 @@
     <preface xml:id="front-welcome">
         <title>Welcome Message</title>
         <p>
-            <alert>September 2020</alert>
+            <alert>January 2021</alert>
         </p>
+        <!--
         <sidebyside widths="70%">
         <image source="figs/TJ.jpg"><description>TJ posing with a "V" sign on vacation in Vietnam</description></image>
         </sidebyside>
+        -->
         <p>
             Hello all!
         </p>
         <p>
-            This semester I will be joining you in your journey to discover and learn about discrete mathematics.
-            You can call me Professor/Prof. Yusun, Dr. Yusun, or TJ; my pronouns are he/him/his.
+            This Winter term you have an amazing instructional team for MAT202 who will be joining you in your journey to discover and learn about discrete mathematics.
+            I am the coordinator for the course; you can call me Professor/Prof. Yusun, Dr. Yusun, or TJ; my pronouns are he/him/his.
             I did my PhD at <url href="https://sfu.ca">Simon Fraser University</url>, in the area of operations research.
         </p>
         <p>
-            It's been a wild ride this year, and we're only 2/3 of the way through!
-            We have all been affected in different ways by many different events, and it is understandable that you may not be in the optimal mindset to study, especially since you'll be doing this from your homes, dorms, residences.
+            So, it's 2021, huh... did anyone imagine back in March of 2020 that we would still be online a year afterwards? *sad*
+            We have all been affected in different ways by many different events since, and it is understandable that you may not be in the optimal mindset to study, especially since you'll be doing this from your homes, dorms, residences.
             I guess you also miss seeing people, hanging out with your friends, going to the library on campus<ellipsis/>I mean, you probably miss waiting for your <em>Thai Express</em> order from the Davis Food Court!
         </p>
         <sidebyside widths="70%">
-            <image source="figs/UTMfall.jpg"><description>Yellowing trees in the Fall lining the pathway to Deerfield Hall at the UTM campus.</description></image>
+            <image source="figs/UTMwinter.jpg"><description>View from the third floor of Deerfield Hall on the UTM campus. Footprints on snow-covered pathways in a V shape with bare trees in the middle. </description></image>
         </sidebyside>
         <p>
-            I hear you, and I personally would like nothing more than to be able to see your faces in person this Fall term. 
+            I hear you, and I personally would like nothing more than to be able to see your faces in person this term. 
             Unfortunately we've had to make some adjustments, and here we are<mdash/>meeting each other through words on a screen instead.
         </p>
         <p>
-            In recognition of the unusual position we're all in, I'd like to make a number of commitments to you:
+            In recognition of the unusual position we're all in, the instructors and TAs would like to make a number of commitments to you:
             <ul>
-                <li>In all aspects of the course, I will be clear and organized, and reduce as many barriers to your access and learning that I can.</li>
-                <li>I will be reasonably available to help you with your learning.</li>
-                <li>I will do my best to listen when you speak. Your voices are important to me.</li>
-                <li>I will treat you with respect and dignity, and make our class a safe learning environment for you and your peers.</li>
+                <li>In all aspects of the course, we will be clear and organized, and reduce as many barriers to your access and learning that we can.</li>
+                <li>We will be reasonably available to help you with your learning.</li>
+                <li>We will do my best to listen when you speak. Your voices are important to us.</li>
+                <li>We will treat you with respect and dignity, and make our class a safe learning environment for you and your peers.</li>
             </ul>
-            In return, all I ask is that:
+            In return, all we ask is that:
             <ul>
                 <li>You uphold academic integrity in everything you do.</li>
                 <li>You sincerely attempt to engage actively in the course (material, classes, tutorials, and discussions) and submit assessments by their due dates.</li>
@@ -64,17 +66,17 @@
             </ul>
         </p>
         <p>
-            Moreover, there <em>will</em> be technology difficulties and failures throughout the term, for both you and me.
-            (In the Winter I had to cancel a class because my internet went out for one whole day.)
+            Moreover, there <em>will</em> be technology difficulties and failures throughout the term... I myself have been known to disappear in the middle of a class thanks to my wifi.
             This is to be expected, and we will manage.
+            For the majority of you who took courses online in the Fall, I also hope that you've learned a bit about yourselves<mdash/>your strengths, weaknesses, motivations, desires, and needs<mdash/>and that you are able to take these lessons with you in the new term, and the new year.
         </p>
         <p>
-            Finally, let me reiterate that <em>I want you to succeed</em>, and I will try my best to facilitate this.
+            Finally, let me reiterate that <em>we want you to succeed</em>, and we will try my best to facilitate this.
             But also remember that your success depends on the actions you take. 
             We are in this together.
         </p>
         <p>
-            <em>TJ Yusun</em>
+            <em>Prof. TJ Yusun</em>
         </p>
                     
     </preface>
@@ -157,7 +159,7 @@
         </website>
 
         <copyright>
-            <year>2019<ndash/>2020</year>
+            <year>2019<ndash/>2021</year>
             <holder>Timothy Yusun</holder>
             <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
             <shortlicense>
