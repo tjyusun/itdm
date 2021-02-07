@@ -73,7 +73,7 @@
 				This means we need to <sq>add them back in</sq> again.
 			</p>
 			<p>
-				There are <m>\lfloor \frac{25}{12} \rfloor = 2</m> of these numbers, so the correct total is <me>20 - 8 - 6 + 2 = 13</me> integers in the set that are neither divisible by 3 nor by 4.
+				There are <m>\lfloor \frac{25}{12} \rfloor = 2</m> of these numbers, so the correct total is <me>25 - 8 - 6 + 2 = 13</me> integers in the set that are neither divisible by 3 nor by 4.
 			</p>
 		</solution>
 	</example>

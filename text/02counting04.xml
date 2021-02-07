@@ -311,7 +311,7 @@
 					</me>.
 				</p>
 				<p>
-					At this point it is the same kind of system as in <xref ref="prop-nonnegative"/>, hence we can apply it directly to get the desired number, <m>\displaystyle\binom{56}{53}</m>.
+					At this point it is the same kind of system as in <xref ref="prop-nonnegative"/>, hence we can apply it directly to get the desired number, <m>\displaystyle\binom{55}{52}</m>.
 				</p>
 			</solution>
 
