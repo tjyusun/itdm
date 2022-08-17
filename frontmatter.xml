@@ -21,35 +21,44 @@
     <preface xml:id="front-welcome">
         <title>Welcome Message</title>
         <p>
-            <alert>January 2021</alert>
+            <alert>January 2022</alert>
         </p>
-        <!--
+        
         <sidebyside widths="70%">
         <image source="figs/TJ.jpg"><description>TJ posing with a "V" sign on vacation in Vietnam</description></image>
         </sidebyside>
-        -->
+
+        
         <p>
             Hello all!
         </p>
+
         <p>
-            This Winter term you have an amazing instructional team for MAT202 who will be joining you in your journey to discover and learn about discrete mathematics.
-            I am the coordinator for the course; you can call me Professor/Prof. Yusun, Dr. Yusun, or TJ; my pronouns are he/him/his.
+            You can call me Professor/Prof. Yusun, Dr. Yusun, or TJ; my pronouns are he/him/his.
             I did my PhD at <url href="https://sfu.ca">Simon Fraser University</url>, in the area of operations research.
         </p>
         <p>
-            So, it's 2021, huh... did anyone imagine back in March of 2020 that we would still be online a year afterwards? *sad*
-            We have all been affected in different ways by many different events since, and it is understandable that you may not be in the optimal mindset to study, especially since you'll be doing this from your homes, dorms, residences.
-            I guess you also miss seeing people, hanging out with your friends, going to the library on campus<ellipsis/>I mean, you probably miss waiting for your <em>Thai Express</em> order from the Davis Food Court!
+            The past two years have brought with it multiple challenges for students and faculty alike.
+            We have all been affected in different ways by many different events since, and it is understandable that you may not be in the optimal mindset to study. 
+
+            <!-- especially since you'll be learning online from your homes, dorms, residences.. -->
+            
         </p>
+        
         <sidebyside widths="70%">
             <image source="figs/UTMwinter.jpg"><description>View from the third floor of Deerfield Hall on the UTM campus. Footprints on snow-covered pathways in a V shape with bare trees in the middle. </description></image>
         </sidebyside>
+    
+<!--
         <p>
             I hear you, and I personally would like nothing more than to be able to see your faces in person this term. 
             Unfortunately we've had to make some adjustments, and here we are<mdash/>meeting each other through words on a screen instead.
-        </p>
+        </p>    
+-->
+        
         <p>
-            In recognition of the unusual position we're all in, the instructors and TAs would like to make a number of commitments to you:
+            Things are still in a state of flux: we are slated to be online for the first three weeks and possibly moving back to an in-person environment starting January 31, 2022.
+            Regardless of what happens, whether this plan changes or not, the MAT202 teaching team would like to make a number of commitments to you:
             <ul>
                 <li>In all aspects of the course, we will be clear and organized, and reduce as many barriers to your access and learning that we can.</li>
                 <li>We will be reasonably available to help you with your learning.</li>
@@ -66,12 +75,12 @@
             </ul>
         </p>
         <p>
-            Moreover, there <em>will</em> be technology difficulties and failures throughout the term... I myself have been known to disappear in the middle of a class thanks to my wifi.
+            Moreover, there <em>will</em> be technology difficulties and failures throughout the term... I myself have been known to disappear in the middle of a Zoom class thanks to my wifi. 
             This is to be expected, and we will manage.
-            For the majority of you who took courses online in the Fall, I also hope that you've learned a bit about yourselves<mdash/>your strengths, weaknesses, motivations, desires, and needs<mdash/>and that you are able to take these lessons with you in the new term, and the new year.
+            For the majority of you who took courses online last year, I also hope that you've learned a bit about yourselves<mdash/>your strengths, weaknesses, motivations, desires, and needs<mdash/>and that you are able to take these lessons with you in the new term.
         </p>
         <p>
-            Finally, let me reiterate that <em>we want you to succeed</em>, and we will try my best to facilitate this.
+            Finally, let me reiterate that <em>we want you to succeed</em>, and we will try our best to facilitate this.
             But also remember that your success depends on the actions you take. 
             We are in this together.
         </p>
@@ -81,7 +90,7 @@
                     
     </preface>
     
-
+ 
     <preface xml:id="front-how-to-use">
         <title>About This Resource</title>
         <p>
@@ -96,7 +105,7 @@
             A number of historical explorations and asides give context to some of these topics, and hopefully allow for a critical reflection on the historical and political underpinnings of the field and of mathematics as a whole.
         </p>
         <p>
-            These notes are being developed specifically for the Fall/Winter 2020-2021 offerings of MAT202: Introduction to Discrete Mathematics course at the <url href="https://www.utm.utoronto.ca/math-cs-stats/home">University of Toronto Mississauga</url>.
+            These notes are being developed specifically for the Fall/Winter 2020-2022 offerings of MAT202: Introduction to Discrete Mathematics course at the <url href="https://www.utm.utoronto.ca/math-cs-stats/home">University of Toronto Mississauga</url>.
             For the online offering of this course a number of short videos will be produced and uploaded into the HTML version of these notes, to be inline with the text and in close proximity to the topic being discussed.
             These videos will be created and uploaded throughout the term.
         </p>
@@ -107,12 +116,14 @@
         <p>
             Notable changes from the Fall/Winter 2019-2020 PDF notes include:
             <ul>
-                <li>Section 1.4 removed and expanded to a new appendix on mathematical communication (still in preparation);</li>
+                <li>Section 1.4 removed and expanded to a new appendix on mathematical communication;</li>
                 <li>A number of historical explorations added throughout the text (there are plans for more in the future);</li>
                 <li>Sections 5.2 and 5.5 each split into two smaller sections; paths and connectedness defined earlier in chapter;</li>
-                <li>A small number of exercises (both inline and end-of-chapter) now have solutions in the HTML version.</li>
+                <li>A small number of exercises (both inline and end-of-chapter) now have solutions in the HTML version;</li>
+                <li>New appendices added that index the introduction of new notation (<xref ref="app-notation"/>), list results (<xref ref="app-definitions-theorems"/>), and compile examples and exercises (<xref ref="app-explorations"/>).</li>
             </ul>
         </p>
+
 
     </preface>
     
@@ -150,7 +161,7 @@
 
         <colophon xml:id="colophon">
 
-        <edition>Introduction to Discrete Mathematics: Fall/Winter 2020-2021</edition>
+        <edition>Introduction to Discrete Mathematics: Fall/Winter 2021-2022</edition>
 
         <website>
             <name><c>itdm</c></name>

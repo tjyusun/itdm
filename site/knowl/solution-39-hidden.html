@@ -2,9 +2,9 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:33-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:45-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,9 +14,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">Define pigeonholes to be \(\{1,2\}, \{3,4\}, \ldots, \{2n-1,2n\}\text{.}\) Note that there are \(n\) of them, and each set has two consecutive integers.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">The pigeons are the \(n+1\) elements we pick from \(\{1,2,\ldots,2n\}\text{.}\) Since there are more pigeons than pigeonholes, by <a class="xref" data-knowl="./knowl/cor-php.html" title="Corollary 3.1.5: Pigeonhole Principle with \(k=1\)">Corollary 3.1.5</a> we conclude that one pigeonhole (set) has at least two pigeons.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">This means there must be two consecutive integers among the \(n+1\) we picked.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Finally, any two consecutive integers are relatively prime. We can see this by applying <a class="xref" data-knowl="./knowl/ex-review-gcd-prop.html" title="Checkpoint 1.3.6: Property of GCDs">Checkpoint 1.3.6</a> with \(a = b+1\) and \(k = 1\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The total number of solutions with no other constraints is \(\displaystyle\binom{3+10-1}{10}\text{.}\) Let \(A_1\) be the set of solutions where \(x_1 \gt 3\text{,}\) \(A_2\) be the set of solutions where \(x_2 \gt 4\text{,}\) \(A_3\) where \(x_3 \gt 8\text{.}\)</p>
+<p>Using <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>, the desired quantity is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+|(A_1 \cup A_2 \cup A_3)^c| \amp = {{12}\choose{10}} - {(3+6-1)\choose{6}} - {(3+5-1)\choose{5}} - {(3+1-1)\choose{1}} \\
+\amp + {{(3+1-1)}\choose{1}} + 0 + 0 - 0 \\
+\amp = {{12}\choose{10}} - {{8}\choose{6}} - {{7}\choose{5}} - {{3}\choose{1}} + {{3}\choose{1}}\\
+\amp = 17\text{.}
+\end{align*}
+</div>
 </div></body>
 </html>

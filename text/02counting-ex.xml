@@ -494,6 +494,37 @@
 		Prove the identity <me>\sum_{k=0}^n \binom{n}{k}^2 = \binom{2n}{n}</me> by counting the number of subsets of size <m>n</m> of the set <m>\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}</m>.
 	</p>
 </statement>
+<solution>
+<p>
+		The right-hand-side is exactly the number of <m>n</m>-element subsets of the given set <m>\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}</m>.
+</p>
+<p>
+	We need to show that the left-hand side counts the same collection of objects.
+	Since there is a sum from <m>k = 0</m> to <m>k = n</m>, let's think about possible cases.
+</p>
+<p>
+	The set <m>\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}</m> has two types of elements: <m>a_i</m>'s and <m>b_i</m>'s.
+	So let's take cases on how many of the <m>a_i</m>'s we pick when forming an $n$-element subset.
+</p>
+<p>
+	Suppose that we pick <m>k</m> of the <m>a_i</m>'s. This means we need to take <m>n-k</m> of the <m>b_i</m>'s to create an <m>n</m>-subset. 
+	Or equivalently, throw away <m>k</m> of the <m>b_i</m>'s and use whatever is left.
+	By the product rule we can count this by multiplying <m>\displaystyle\binom{n}{k}\binom{n}{k}</m>.
+</p>
+<p>
+	For example, to include 3 of the <m>a_i</m>'s in our subset, we can pick them in <m>\displaystyle\binom{n}{3}</m> ways.
+	Then we need to exclude 3 of the <m>b_i</m>'s to end up with <m>n-3</m> <m>b_i</m> elements to include in our subset and make it have <m>n</m> elements.
+	There are <m>\displaystyle\binom{n}{3}\binom{n}{3}</m> ways to do this.
+</p>
+<p>
+	It is a partition of the collection of all <m>n</m>-subsets to divide them into cases by how many of the <m>a_i</m>'s are picked, from <m>k = 0</m> to <m>k=n</m>. 
+	Hence the sum rule gives the left-hand side:
+	<me> \binom{n}{0}\binom{n}{0} + \binom{n}{1}\binom{n}{1} + \cdots + \binom{n}{n}\binom{n}{n} = \sum_{k=0}^n \binom{n}{k}^2</me>.
+	Therefore the equation
+	<me> \sum_{k=0}^n \binom{n}{k}^2 = \binom{2n}{n}</me>
+	holds.
+</p>
+</solution>
 </exercise>
 
 <exercisegroup>

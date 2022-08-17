@@ -12,7 +12,7 @@
     </objectives>
 
 	<sidebyside>    
-    <video xml:id="video-handshake-lemma" youtube="MwLzeaAZP9U" play-at="embed" />
+    <video xml:id="video-eulerian" youtube="MwLzeaAZP9U" play-at="embed" />
     </sidebyside>
     <p>
         <alert>Video</alert>: <em>Eulerian Graphs</em>

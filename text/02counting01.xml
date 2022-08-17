@@ -503,7 +503,7 @@
         <title>Trip Planning</title>
         <statement>
             <p>
-                Four friends (Andrew, Jagmeet, Yves-François, and Jo-Ann) are planning a trip to Ottawa, and they need to assign tasks (booking flights, booking hotel rooms, and making an itinerary) to three people. Andrew cannot be trusted to make an itinerary; also, either Jagmeet or Jo-Ann must book hotel rooms. How many ways can they assign tasks?
+                Four friends (Erin, Jagmeet, Yves-François, and Annamie) are planning a trip to Ottawa, and they need to assign tasks (booking flights, booking hotel rooms, and making an itinerary) to three people. Erin cannot be trusted to make an itinerary; also, either Jagmeet or Annamie must book hotel rooms. How many ways can they assign tasks?
             </p>
             <p>
                 Think carefully about which counting principle(s) to apply here.

@@ -1,9 +1,9 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:05-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:21-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,45 +14,30 @@
 <title>Principle of Inclusion-Exclusion</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '95f73ab521816689d';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=95f73ab521816689d"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -65,7 +50,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\vheart}{\textcolor{red}{\varheart}}
 \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
 \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
 \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
@@ -85,6 +70,7 @@ MathJax.Hub.Config({
 \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
 \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
 \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
 
 
 \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
@@ -185,56 +171,56 @@ MathJax.Hub.Config({
 </h2>
 <article class="objectives goal-like" id="objectives-7"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-179">State the Principle of Inclusion-Exclusion and apply it to problems to compute set cardinalities (for combinations of two to four sets).</li>
-<li id="li-180">Sketch Venn Diagrams that correspond to a given scenario or problem.</li>
-</ul></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-inclusion-exclusion" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/FMYJxGzboIM?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-472"><em class="alert">Video</em>: <em class="emphasis">Principle of Inclusion-Exclusion</em></p>
-<p id="p-473">We first recall that in order to count the number of elements of a set \(U\) that <em class="emphasis">don't</em> satisfy a given condition, one can first count the number of elements that <em class="emphasis">do</em>, and then subtract from the cardinality of \(U\text{.}\)</p>
-<article class="example example-like" id="eg-pie-divisible-3"><h6 class="heading">
+<li id="li-180">State the Principle of Inclusion-Exclusion and apply it to problems to compute set cardinalities (for combinations of two to four sets).</li>
+<li id="li-181">Sketch Venn Diagrams that correspond to a given scenario or problem.</li>
+</ul></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-inclusion-exclusion" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/FMYJxGzboIM?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
+<p id="p-477"><em class="alert">Video</em>: <em class="emphasis">Principle of Inclusion-Exclusion</em></p>
+<p id="p-478">We first recall that in order to count the number of elements of a set \(U\) that <em class="emphasis">don't</em> satisfy a given condition, one can first count the number of elements that <em class="emphasis">do</em>, and then subtract from the cardinality of \(U\text{.}\)</p>
+<article class="example example-like" id="eg-pie-divisible-3"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-pie-divisible-3"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Not Divisible by 3.</span>
-</h6>
-<p id="p-474">How many integers in \(U = \{1,2,\ldots,25\}\) are <em class="emphasis">not</em> divisible by 3?</p>
-<p id="p-475"><em class="alert">Solution</em>  We first count the number of integers in the set that are divisible by 3: there are</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-pie-divisible-3"><article class="example example-like"><p id="p-479">How many integers in \(U = \{1,2,\ldots,25\}\) are <em class="emphasis">not</em> divisible by 3?</p>
+<p id="p-480"><em class="alert">Solution</em>  We first count the number of integers in the set that are divisible by 3: there are</p>
 <div class="displaymath">
 \begin{equation*}
 \left\lfloor \frac{25}{3}\right\rfloor = 8
 \end{equation*}
 </div>
-<p data-braille="continuation">of them.</p>
-<p id="p-476">Note that the notation \(\lfloor n \rfloor\) denotes the <dfn class="terminology">floor function</dfn>, which returns the largest integer that is less than or equal to \(n\text{.}\)</p>
-<p id="p-477">Subtracting, we get \(25 - 8 = 17\) integers in the set \(U\) that are not divisible by 3. (Check that this is the correct number!)</p></article><p id="p-478">Note that this solution can be expressed in terms of sets: if \(U = \{1,2,\ldots,25\}\) is the universe, and \(A\) is the set of integers in \(U\) divisible by 3, then the desired quantity is \(|A^c|\text{,}\) and</p>
+<p class="continuation">of them.</p>
+<p id="p-481">Note that the notation \(\lfloor n \rfloor\) denotes the <dfn class="terminology">floor function</dfn>, which returns the largest integer that is less than or equal to \(n\text{.}\)</p>
+<p id="p-482">Subtracting, we get \(25 - 8 = 17\) integers in the set \(U\) that are not divisible by 3. (Check that this is the correct number!)</p></article></div>
+<p id="p-483">Note that this solution can be expressed in terms of sets: if \(U = \{1,2,\ldots,25\}\) is the universe, and \(A\) is the set of integers in \(U\) divisible by 3, then the desired quantity is \(|A^c|\text{,}\) and</p>
 <div class="displaymath">
 \begin{equation*}
 |A^c| = |U| - |A|\text{.}
 \end{equation*}
 </div>
-<p id="p-479">What if we added a second condition to avoid?</p>
-<article class="example example-like" id="eg-pie-divisible-3-4"><h6 class="heading">
+<p id="p-484">What if we added a second condition to avoid?</p>
+<article class="example example-like" id="eg-pie-divisible-3-4"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-pie-divisible-3-4"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Not Divisible by 3 or 4.</span>
-</h6>
-<p id="p-480">How many numbers in \(U = \{1,2,\ldots,25\}\) are not divisible by 3 or 4?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-pie-divisible-3-4"><article class="example example-like"><p id="p-485">How many numbers in \(U = \{1,2,\ldots,25\}\) are not divisible by 3 or 4?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like">
-<p id="p-481">Following the previous example, there are \(8\) integers in \(U\) that are divisible by 3. Also, there are \(\lfloor \frac{25}{4} \rfloor = 6\) integers in \(U\) divisible by 4.</p>
-<p id="p-482">However, after subtracting \(25 - 8 - 6 = 11\text{,}\) we've actually removed some numbers twice: those numbers that are divisible by <em class="emphasis">both</em> 3 and 4 (i.e. divisible by 12). This means we need to ‘add them back in’ again.</p>
-<p id="p-483">There are \(\lfloor \frac{25}{12} \rfloor = 2\) of these numbers, so the correct total is</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like">
+<p id="p-486">Following the previous example, there are \(8\) integers in \(U\) that are divisible by 3. Also, there are \(\lfloor \frac{25}{4} \rfloor = 6\) integers in \(U\) divisible by 4.</p>
+<p id="p-487">However, after subtracting \(25 - 8 - 6 = 11\text{,}\) we've actually removed some numbers twice: those numbers that are divisible by <em class="emphasis">both</em> 3 and 4 (i.e. divisible by 12). This means we need to ‘add them back in’ again.</p>
+<p id="p-488">There are \(\lfloor \frac{25}{12} \rfloor = 2\) of these numbers, so the correct total is</p>
 <div class="displaymath">
 \begin{equation*}
 25 - 8 - 6 + 2 = 13
 \end{equation*}
 </div>
-<p data-braille="continuation">integers in the set that are neither divisible by 3 nor by 4.</p>
+<p class="continuation">integers in the set that are neither divisible by 3 nor by 4.</p>
 </div></div>
-</div></article><p id="p-484">We can again write the solution to <a class="xref" data-knowl="./knowl/eg-pie-divisible-3-4.html" title="Example 3.2.2: Not Divisible by 3 or 4">Example 3.2.2</a> in terms of sets:</p>
+</div></article></div>
+<p id="p-489">We can again write the solution to <a class="xref" data-knowl="./knowl/eg-pie-divisible-3-4.html" title="Example 3.2.2: Not Divisible by 3 or 4">Example 3.2.2</a> in terms of sets:</p>
 <ul class="disc">
-<li id="li-181">\(\displaystyle U = \{1,2,\ldots,25\}\)</li>
-<li id="li-182">\(A_1 = \) integers in \(U\) divisible by 3 \(= \{3,6,9,12,15,18,21,24\}\)</li>
-<li id="li-183">\(A_2 = \) integers in \(U\) divisible by 4 \(= \{4,8,12,16,20,24\}\)</li>
-<li id="li-184">\(A_1 \cup A_2 = \) integers in \(U\) divisible by either 3 or 4 \(= \{3,4,6,8,9,12,15,16,18,20,21,24\}\)</li>
-<li id="li-185">Desired set: \((A_1 \cup A_2)^c = \) integers in \(U\) divisible by neither 3 nor 4.</li>
+<li id="li-182">\(\displaystyle U = \{1,2,\ldots,25\}\)</li>
+<li id="li-183">\(A_1 = \) integers in \(U\) divisible by 3 \(= \{3,6,9,12,15,18,21,24\}\)</li>
+<li id="li-184">\(A_2 = \) integers in \(U\) divisible by 4 \(= \{4,8,12,16,20,24\}\)</li>
+<li id="li-185">\(A_1 \cup A_2 = \) integers in \(U\) divisible by either 3 or 4 \(= \{3,4,6,8,9,12,15,16,18,20,21,24\}\)</li>
+<li id="li-186">Desired set: \((A_1 \cup A_2)^c = \) integers in \(U\) divisible by neither 3 nor 4.</li>
 </ul>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-divisible-3-4.svg" style="width: 100%; height: auto;" alt="Venn diagram."></div></div></div>
-<p id="p-485">Observe that when we subtract \(|A_1|\) and \(|A_2|\) from \(|U|\text{,}\) we are subtracting the elements in the intersection \(A_1 \cap A_2 = \{12, 24\}\) two times. So to determine the quantity \(|(A_1 \cup A_2)^c|\) we computed:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/img-divisible-3-4.svg" role="img" class="contained" alt="Venn diagram."></div></div></div>
+<p id="p-490">Observe that when we subtract \(|A_1|\) and \(|A_2|\) from \(|U|\text{,}\) we are subtracting the elements in the intersection \(A_1 \cap A_2 = \{12, 24\}\) two times. So to determine the quantity \(|(A_1 \cup A_2)^c|\) we computed:</p>
 <div class="displaymath">
 \begin{equation*}
 |(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2|\text{.}
@@ -243,20 +229,20 @@ MathJax.Hub.Config({
 <article class="remark remark-like" id="remark-setminus"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-486">Do not confuse the operations \(|A| - |B|\) and \(A \setminus B\text{.}\) The first is a difference of two numbers, while the second is a set operation that also results in a set. In fact, it is not the case that \(|A| - |B| = |A \setminus B|\) in general. (Can you come up with a counterexample?)</p></article><article class="exercise exercise-like" id="ex-pie-divisible-7-11"><a data-knowl="" class="id-ref original" data-refid="hk-ex-pie-divisible-7-11"><h6 class="heading">
+<p id="p-491">Do not confuse the operations \(|A| - |B|\) and \(A \setminus B\text{.}\) The first is a difference of two numbers, while the second is a set operation that also results in a set. In fact, it is not the case that \(|A| - |B| = |A \setminus B|\) in general. (Can you come up with a counterexample?)</p></article><article class="exercise exercise-like" id="ex-pie-divisible-7-11"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-pie-divisible-7-11"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Not Divisible by 7 or 11.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-divisible-7-11"><article class="exercise exercise-like"><p id="p-487">How many integers in \(\{1,2,3,\ldots,2020\}\) are not divisible by 7 or 11?</p></article></div>
-<p id="p-488">Now suppose we add a third condition to avoid, that is, a third set \(A_3\) to remove. Consider the problem of determining the number of elements in the set \((A_1 \cup A_2 \cup A_3)^c\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/img-pie-3-sets.svg" style="width: 100%; height: auto;" alt="Venn diagram illustrating the complement of the union of three sets."></div></div></div>
-<p id="p-489">The idea now is to replicate the 2-set scenario by first subtracting \(|A_1| + |A_2| + |A_3|\) from \(|U|\text{,}\) then to add back what was removed more than once. This means we have to add back \(|A_1 \cap A_2|\text{,}\) \(|A_1 \cap A_3|\text{,}\) and \(|A_2 \cap A_3|\text{.}\)</p>
-<p id="p-490">However, elements in the intersection of all three sets \(A_1 \cap A_2 \cap A_3\) have been removed three times and added back three times at this point. This means we should subtract</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-divisible-7-11"><article class="exercise exercise-like"><p id="p-492">How many integers in \(\{1,2,3,\ldots,2020\}\) are not divisible by 7 or 11?</p></article></div>
+<p id="p-493">Now suppose we add a third condition to avoid, that is, a third set \(A_3\) to remove. Consider the problem of determining the number of elements in the set \((A_1 \cup A_2 \cup A_3)^c\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/img-pie-3-sets.svg" role="img" class="contained" alt="Venn diagram illustrating the complement of the union of three sets."></div></div></div>
+<p id="p-494">The idea now is to replicate the 2-set scenario by first subtracting \(|A_1| + |A_2| + |A_3|\) from \(|U|\text{,}\) then to add back what was removed more than once. This means we have to add back \(|A_1 \cap A_2|\text{,}\) \(|A_1 \cap A_3|\text{,}\) and \(|A_2 \cap A_3|\text{.}\)</p>
+<p id="p-495">However, elements in the intersection of all three sets \(A_1 \cap A_2 \cap A_3\) have been removed three times and added back three times at this point. This means we should subtract</p>
 <div class="displaymath">
 \begin{equation*}
 |A_1 \cap A_2 \cap A_3|
 \end{equation*}
 </div>
-<p data-braille="continuation">one more time so that we remove all the elements we need to remove.</p>
-<p id="p-491">To summarize: (note the alternating signs)</p>
+<p class="continuation">one more time so that we remove all the elements we need to remove.</p>
+<p id="p-496">To summarize: (note the alternating signs)</p>
 <div class="displaymath">
 \begin{align*}
 |(A_1 \cup A_2 \cup A_3)^c| = |U| \amp \underbrace{- |A_1| - |A_2| - |A_3|}_{\text{single sets}} \\
@@ -264,106 +250,106 @@ MathJax.Hub.Config({
 \amp \underbrace{- |A_1 \cap A_2 \cap A_3|}_{\text{intersection of all three}}\text{.}
 \end{align*}
 </div>
-<article class="exercise exercise-like" id="ex-pie-divisible-3-7-11"><a data-knowl="" class="id-ref original" data-refid="hk-ex-pie-divisible-3-7-11"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-pie-divisible-3-7-11"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-pie-divisible-3-7-11"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Not Divisible by 3, 7, or 11.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-divisible-3-7-11"><article class="exercise exercise-like"><p id="p-492">How many integers in \(\{1,2,\ldots,2020\}\) are not divisible by 3, 7, or 11?</p></article></div>
-<p id="p-493">Now we can state the Principle of Inclusion-Exclusion (or PIE) in full generality. There are a number of ways to prove this, but the usual method is to show that each item belonging to none of the \(A_i\)'s contribute 1 to the total; while all other items contribute 0 to the total.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-divisible-3-7-11"><article class="exercise exercise-like"><p id="p-497">How many integers in \(\{1,2,\ldots,2020\}\) are not divisible by 3, 7, or 11?</p></article></div>
+<p id="p-498">Now we can state the Principle of Inclusion-Exclusion (or PIE) in full generality. There are a number of ways to prove this, but the usual method is to show that each item belonging to none of the \(A_i\)'s contribute 1 to the total; while all other items contribute 0 to the total.</p>
 <article class="theorem theorem-like" id="thm-pie"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of Inclusion-Exclusion.</span>
 </h6>
-<p id="p-494">Given a universe \(U\) of items and subsets \(A_1,A_2,\ldots,A_n\) of the items, the number \(N\) of items belonging to <em class="emphasis">none of these subsets</em> is given by</p>
+<p id="p-499">Given a universe \(U\) of items and subsets \(A_1,A_2,\ldots,A_n\) of the items, the number \(N\) of items belonging to <em class="emphasis">none of these subsets</em> is given by</p>
 <div class="displaymath">
 \begin{align*}
 N \amp = \sum_{S \subseteq \{1,2,\ldots,n\}} (-1)^{|S|} \left| \bigcap_{i\in S} A_i\right|\\
 \amp  = |U| - \sum_{i = 1}^n |A_i| + \sum_{1 \leq i \lt j \leq n} |A_i \cap A_j| - \sum_{1 \leq i \lt j \lt k \leq n} |A_i \cap A_j \cap A_k| + \cdots 
 \end{align*}
-</div></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-495">Suppose that the element \(x\) is in none of the \(A_i\)'s. Then it is counted exactly once in the sum, in the first term \(|U|\text{.}\)</p>
-<p id="p-496">Now suppose that the element \(y\) is in some collection of \(A_i\)'s. Let \(T = \{i : y \in A_i\}\) be the set of indices of sets that contain \(y\text{.}\) (For example, if \(y\) is in \(A_1\text{,}\) \(A_3\text{,}\) and \(A_4\text{,}\) then \(T = \{1,3,4\}\text{.}\)) Then for each subset \(S\) of \(T\text{,}\) there is a corresponding term in the formula above.</p>
-<p id="p-497">Note that the formula contributes a \(+1\) for intersections of even numbers of sets (or for \(|S|\) even); and a \(-1\) for intersections of odd numbers of sets (for \(|S|\) odd). Hence the total contribution for the element \(y\) is</p>
+</div></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-500">Suppose that the element \(x\) is in none of the \(A_i\)'s. Then it is counted exactly once in the sum, in the first term \(|U|\text{.}\)</p>
+<p id="p-501">Now suppose that the element \(y\) is in some collection of \(A_i\)'s. Let \(T = \{i : y \in A_i\}\) be the set of indices of sets that contain \(y\text{.}\) (For example, if \(y\) is in \(A_1\text{,}\) \(A_3\text{,}\) and \(A_4\text{,}\) then \(T = \{1,3,4\}\text{.}\)) Then for each subset \(S\) of \(T\text{,}\) there is a corresponding term in the formula above.</p>
+<p id="p-502">Note that the formula contributes a \(+1\) for intersections of even numbers of sets (or for \(|S|\) even); and a \(-1\) for intersections of odd numbers of sets (for \(|S|\) odd). Hence the total contribution for the element \(y\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{S \subseteq T} (-1)^{|S|} = \sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Applying <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a>, we see that this is equal to</p>
+<p class="continuation">Applying <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a>, we see that this is equal to</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{k=0}^{|T|} (-1)^k\binom{|T|}{k} = \sum_{k=0}^{|T|} (1)^{|T|-k}(-1)^k\binom{|T|}{k} = \left( 1 + (-1) \right)^{|T|} = 0\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which is what we needed to prove.</p></article></div>
-<article class="exercise exercise-like" id="ex-pie-4sets"><a data-knowl="" class="id-ref original" data-refid="hk-ex-pie-4sets"><h6 class="heading">
+<p class="continuation">which is what we needed to prove.</p></article></div>
+<article class="exercise exercise-like" id="ex-pie-4sets"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-pie-4sets"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">PIE for Four Sets.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-4sets"><article class="exercise exercise-like"><p id="p-498">Given a universe \(U\) and four sets \(A_1, A_2, A_3, A_4\) in \(U\text{,}\) write out the complete formula for \(|(A_1 \cup A_2 \cup A_3 \cup A_4)^c|\text{.}\)</p></article></div>
-<article class="example example-like" id="eg-pie-EQUATION"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-4sets"><article class="exercise exercise-like"><p id="p-503">Given a universe \(U\) and four sets \(A_1, A_2, A_3, A_4\) in \(U\text{,}\) write out the complete formula for \(|(A_1 \cup A_2 \cup A_3 \cup A_4)^c|\text{.}\)</p></article></div>
+<article class="example example-like" id="eg-pie-EQUATION"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-pie-EQUATION"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Word Rearragements.</span>
-</h6>
-<p id="p-499">Count the number of arrangements of the letters in the word</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:42.5%;margin-right:42.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-500">EQUATION</p></div></div></div>
-<p id="p-501">such that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-pie-EQUATION"><article class="example example-like"><p id="p-504">Count the number of arrangements of the letters in the word</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:42.5%;margin-right:42.5%;"><div class="sbspanel top" style="width:100%;"><p id="p-505">EQUATION</p></div></div></div>
+<p id="p-506">such that</p>
 <ul class="disc">
-<li id="li-186">vowels are <em class="emphasis">not</em> in alphabetical order when read left-to-right; <em class="alert">and</em>
+<li id="li-187">vowels are <em class="emphasis">not</em> in alphabetical order when read left-to-right; <em class="alert">and</em>
 </li>
-<li id="li-187">consontants are <em class="emphasis">not</em> in alphabetical order when read left-to-right.</li>
+<li id="li-188">consontants are <em class="emphasis">not</em> in alphabetical order when read left-to-right.</li>
 </ul>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like">
-<p id="p-502">Let \(A_1\) be the set of arrangements where vowels are in alphabetical order, and \(A_2\) the set of arrangements where consonants are in alphabetical order. Then the desired number is \(|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2|\text{,}\) by <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>.</p>
-<p id="p-503">We compute each quantity:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like">
+<p id="p-507">Let \(A_1\) be the set of arrangements where vowels are in alphabetical order, and \(A_2\) the set of arrangements where consonants are in alphabetical order. Then the desired number is \(|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2|\text{,}\) by <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>.</p>
+<p id="p-508">We compute each quantity:</p>
 <ul class="disc">
-<li id="li-188">\(|U| = 8!\text{,}\) the number of permutations of the letters.</li>
-<li id="li-189">\(|A_1| = 3! \cdot \binom{8}{3}\) (permute the consonants first, then insert among vowels using the Balls in Bins Formula)</li>
-<li id="li-190">\(|A_2| = 5! \cdot \binom{8}{5}\) (permute the vowels first, then insert among consontants)</li>
-<li id="li-191">\(|A_1 \cap A_2| = \binom{8}{5}\) (vowels and consonants are in a fixed order; just pick 5 slots for vowels to be in and the rest follows)</li>
+<li id="li-189">\(|U| = 8!\text{,}\) the number of permutations of the letters.</li>
+<li id="li-190">\(|A_1| = 3! \cdot \binom{8}{3}\) (permute the consonants first, then insert among vowels using the Balls in Bins Formula)</li>
+<li id="li-191">\(|A_2| = 5! \cdot \binom{8}{5}\) (permute the vowels first, then insert among consontants)</li>
+<li id="li-192">\(|A_1 \cap A_2| = \binom{8}{5}\) (vowels and consonants are in a fixed order; just pick 5 slots for vowels to be in and the rest follows)</li>
 </ul>
-<p id="p-504">Hence \(|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2| = 8! - 3!\binom{8}{3} - 5!\binom{8}{5} + \binom{8}{5}\text{,}\) or 33320.</p>
+<p id="p-509">Hence \(|(A_1 \cup A_2)^c| = |U| - |A_1| - |A_2| + |A_1 \cap A_2| = 8! - 3!\binom{8}{3} - 5!\binom{8}{5} + \binom{8}{5}\text{,}\) or 33320.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="ex-pie-relatively-prime"><a data-knowl="" class="id-ref original" data-refid="hk-ex-pie-relatively-prime"><h6 class="heading">
+</div></article></div>
+<article class="exercise exercise-like" id="ex-pie-relatively-prime"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-pie-relatively-prime"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Relatively Prime Numbers.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-relatively-prime"><article class="exercise exercise-like"><p id="p-505">Use <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to determine how many natural numbers less than 120 are relatively prime with 120.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-relatively-prime"><article class="exercise exercise-like"><p id="p-510">Use <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to determine how many natural numbers less than 120 are relatively prime with 120.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><p id="p-506">Consider prime factors of 120.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><p id="p-511">Consider prime factors of 120.</p></div></div>
 </div></article></div>
 <article class="exploration project-like" id="expl-pie-euler-totient"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Euler's Totient Function.</span>
 </h6>
 <div class="introduction" id="introduction-8">
-<p id="p-507">Given \(n \in \mathbb{N}\) and \(\{p_1,p_2,\ldots,p_k\}\) its set of prime factors, we will prove the following formula for the number of natural numbers less than \(n\) (denoted by \(\phi(n)\)) that are also relatively prime with \(n\text{:}\)</p>
+<p id="p-512">Given \(n \in \mathbb{N}\) and \(\{p_1,p_2,\ldots,p_k\}\) its set of prime factors, we will prove the following formula for the number of natural numbers less than \(n\) (denoted by \(\phi(n)\)) that are also relatively prime with \(n\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \phi(n) = \sum_{S \subseteq \{1,2,\ldots,k\}}(-1)^{|S|}\dfrac{n}{\prod_{i\in S} p_i}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">(This is known as <dfn class="terminology">Euler's totient function</dfn>.)</p>
+<p class="continuation">(This is known as <dfn class="terminology">Euler's totient function</dfn>.)</p>
 </div>
 <article class="task exercise-like" id="task-9"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-508">Define \(A_i\) to be the set of natural numbers less than \(n\) that are divisible by \(p_i\text{.}\) Compute the value of \(|A_i|\text{.}\)</p>
+<p id="p-513">Define \(A_i\) to be the set of natural numbers less than \(n\) that are divisible by \(p_i\text{.}\) Compute the value of \(|A_i|\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-34" id="hint-34"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-34"><div class="hint solution-like"><p id="p-509"><a class="xref" data-knowl="./knowl/eg-pie-divisible-3.html" title="Example 3.2.1: Not Divisible by 3">Example 3.2.1</a>.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-34" id="hint-34"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-34"><div class="hint solution-like"><p id="p-514"><a class="xref" data-knowl="./knowl/eg-pie-divisible-3.html" title="Example 3.2.1: Not Divisible by 3">Example 3.2.1</a>.</p></div></div>
 </div></article><article class="task exercise-like" id="task-10"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-510">For any set \(S \subseteq \{1,2,\ldots,k\}\text{,}\) compute the value of \(\left|\displaystyle\bigcap_{i\in S} A_i \right|\text{.}\)</p></article><article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-511">Express \(\phi(n)\) as a combination of the sets \(A_i\) and apply <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to obtain the desired formula.</p></article></article><article class="exercise exercise-like" id="ex-pie-apply-totient"><a data-knowl="" class="id-ref original" data-refid="hk-ex-pie-apply-totient"><h6 class="heading">
+<p id="p-515">For any set \(S \subseteq \{1,2,\ldots,k\}\text{,}\) compute the value of \(\left|\displaystyle\bigcap_{i\in S} A_i \right|\text{.}\)</p></article><article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-516">Express \(\phi(n)\) as a combination of the sets \(A_i\) and apply <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to obtain the desired formula.</p></article></article><article class="exercise exercise-like" id="ex-pie-apply-totient"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-pie-apply-totient"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Compute \(\phi(100)\) and \(\phi(135)\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-apply-totient"><article class="exercise exercise-like"><p id="p-512">Use the formula in <a class="xref" data-knowl="./knowl/expl-pie-euler-totient.html" title="Exploration 3.2.1: Euler's Totient Function">Exploration 3.2.1</a> to compute \(\phi(100)\) and \(\phi(135)\text{.}\)</p></article></div>
-<article class="exercise exercise-like" id="ex-pie-cards"><a data-knowl="" class="id-ref original" data-refid="hk-ex-pie-cards"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-apply-totient"><article class="exercise exercise-like"><p id="p-517">Use the formula in <a class="xref" data-knowl="./knowl/expl-pie-euler-totient.html" title="Exploration 3.2.1: Euler's Totient Function">Exploration 3.2.1</a> to compute \(\phi(100)\) and \(\phi(135)\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="ex-pie-cards"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-pie-cards"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">One Card of Each Suit.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-cards"><article class="exercise exercise-like"><p id="p-513">Use <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to determine how many five-card hands can be drawn from a standard deck of cards such that there is at least one card of each suit.</p></article></div>
-<article class="exercise exercise-like" id="ex-pie-nonnegative"><a data-knowl="" class="id-ref original" data-refid="hk-ex-pie-nonnegative"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-cards"><article class="exercise exercise-like"><p id="p-518">Use <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to determine how many five-card hands can be drawn from a standard deck of cards such that there is at least one card of each suit.</p></article></div>
+<article class="exercise exercise-like" id="ex-pie-nonnegative"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-pie-nonnegative"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Nonnegative Integer Solutions.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-nonnegative"><article class="exercise exercise-like"><p id="p-516">Use <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to determine how many nonnegative integer solutions there are to \(x_1 + x_2 + x_3 = 10\text{,}\) \(x_1 \leq 3\text{,}\) \(x_2 \leq 4\text{,}\) \(x_3 \leq 8\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-pie-nonnegative"><article class="exercise exercise-like"><p id="p-521">Use <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to determine how many nonnegative integer solutions there are to \(x_1 + x_2 + x_3 = 10\text{,}\) \(x_1 \leq 3\text{,}\) \(x_2 \leq 4\text{,}\) \(x_3 \leq 8\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-35" id="hint-35"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-35"><div class="hint solution-like"><p id="p-517">Define \(A_1\) to be the set of solutions such that \(x_1 \gt 3\text{,}\) etc.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-35" id="hint-35"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-35"><div class="hint solution-like"><p id="p-522">Define \(A_1\) to be the set of solutions such that \(x_1 \gt 3\text{,}\) etc.</p></div></div>
 </div></article></div>
 <section class="solutions" id="solutions-7"><h3 class="heading hide-type">
-<span class="type">Solutions</span> <span class="codenumber">3.2.1</span> <span class="title">Solutions to Selected Checkpoints</span>
+<span class="type">Solutions</span> <span class="codenumber"></span> <span class="title">Solutions to Selected Checkpoints</span>
 </h3>
 <article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">One Card of Each Suit.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-37-hidden.html" title="Solution 3.2.11.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-38-hidden.html" title="Solution 3.2.11.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Nonnegative Integer Solutions.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-38-hidden.html" title="Solution 3.2.12.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-39-hidden.html" title="Solution 3.2.12.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
 </div>
 </body>
 </html>

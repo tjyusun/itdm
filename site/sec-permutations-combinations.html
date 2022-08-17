@@ -1,9 +1,9 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:03-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:20-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,45 +14,30 @@
 <title>Permutations and Combinations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '95f73ab521816689d';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=95f73ab521816689d"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -65,7 +50,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\vheart}{\textcolor{red}{\varheart}}
 \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
 \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
 \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
@@ -85,6 +70,7 @@ MathJax.Hub.Config({
 \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
 \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
 \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
 
 
 \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
@@ -185,51 +171,51 @@ MathJax.Hub.Config({
 </h2>
 <article class="objectives goal-like" id="objectives-2"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-66">Derive the formulas for permutations and combinations (of \(n\) objects taken \(k\) at a time), multi-permutations, and permutations with repetitions allowed.</li>
-<li id="li-67">Explain how overcounting is used as a counting technique and apply it to counting problems.</li>
-<li id="li-68">Given a counting problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
-</ul></article><p id="p-133">In this section we get a little bit fancier and define some special quantities that show up frequently when counting objects or rearrangements. First, recall that the <a class="xref" data-knowl="./knowl/def-factorial.html" title="Definition 2.1.14: Factorial">factorial</a> of \(n\) is shorthand for the product</p>
+<li id="li-67">Derive the formulas for permutations and combinations (of \(n\) objects taken \(k\) at a time), multi-permutations, and permutations with repetitions allowed.</li>
+<li id="li-68">Explain how overcounting is used as a counting technique and apply it to counting problems.</li>
+<li id="li-69">Given a counting problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
+</ul></article><p id="p-132">In this section we get a little bit fancier and define some special quantities that show up frequently when counting objects or rearrangements. First, recall that the <a class="xref" data-knowl="./knowl/def-factorial.html" title="Definition 2.1.14: Factorial">factorial</a> of \(n\) is shorthand for the product</p>
 <div class="displaymath">
 \begin{equation*}
 n! = n \times (n-1) \times \cdots \times 1\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which, as we saw in the previous section, can be used to count the number of ways to sit \(n\) people in a row for a concert.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-permutation" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/IfyjfJfl-sU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-134"><em class="alert">Video</em>: <em class="emphasis">Permutations</em></p>
+<p class="continuation">which, as we saw in the previous section, can be used to count the number of ways to sit \(n\) people in a row for a concert.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-permutation" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/IfyjfJfl-sU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
+<p id="p-133"><em class="alert">Video</em>: <em class="emphasis">Permutations</em></p>
 <article class="definition definition-like" id="def-permutation"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Permutation.</span>
 </h6>
-<p id="p-135">A <dfn class="terminology">permutation</dfn> is a bijection from a finite set \(S\) to itself.</p></article><article class="remark remark-like" id="remark-permutation"><h6 class="heading">
+<p id="p-134">A <dfn class="terminology">permutation</dfn> is a bijection from a finite set \(S\) to itself.</p></article><article class="remark remark-like" id="remark-permutation"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-136">If \(|S| = n\text{,}\) then there are \(n!\) bijections \(S \rightarrow S\text{.}\) Equivalently,</p>
+<p id="p-135">If \(|S| = n\text{,}\) then there are \(n!\) bijections \(S \rightarrow S\text{.}\) Equivalently,</p>
 <ul class="disc">
-<li id="li-69">There are \(n!\) ways to arrange \(n\) <em class="emphasis">distinct</em> objects in a row.</li>
-<li id="li-70">There are \(n!\) rearrangements of a word with \(n\) <em class="emphasis">distinct</em> letters. Each rearrangement is said to be a <em class="emphasis">permutation</em> of the \(n\) letters.</li>
-</ul></article><article class="example example-like" id="eg-counting-bijections"><h6 class="heading">
+<li id="li-70">There are \(n!\) ways to arrange \(n\) <em class="emphasis">distinct</em> objects in a row.</li>
+<li id="li-71">There are \(n!\) rearrangements of a word with \(n\) <em class="emphasis">distinct</em> letters. Each rearrangement is said to be a <em class="emphasis">permutation</em> of the \(n\) letters.</li>
+</ul></article><article class="example example-like" id="eg-counting-bijections"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-counting-bijections"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Bijections.</span>
-</h6>
-<p id="p-137">Let \(S = \{a,b,c,d\}\text{.}\) Then the function \(f: S \rightarrow S\) defined by</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-bijections"><article class="example example-like"><p id="p-136">Let \(S = \{a,b,c,d\}\text{.}\) Then the function \(f: S \rightarrow S\) defined by</p>
 <div class="displaymath">
 \begin{equation*}
 f(a) = b, f(b) = d, f(c) = c, f(d) = a
 \end{equation*}
 </div>
-<p data-braille="continuation">is one example of a bijection from \(S\) to \(S\text{.}\) Since \(|S| = 4\text{,}\) there are a total of \(4! = 24\) bijections from \(S\) to itself.</p></article><p id="p-138">What if we wanted to rearrange \(k\) of the \(n\) distinct objects (i.e. only a subset)?</p>
-<article class="exercise exercise-like" id="ex-counting-EQUATION"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-EQUATION"><h6 class="heading">
+<p class="continuation">is one example of a bijection from \(S\) to \(S\text{.}\) Since \(|S| = 4\text{,}\) there are a total of \(4! = 24\) bijections from \(S\) to itself.</p></article></div>
+<p id="p-137">What if we wanted to rearrange \(k\) of the \(n\) distinct objects (i.e. only a subset)?</p>
+<article class="exercise exercise-like" id="ex-counting-EQUATION"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-EQUATION"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">EQUATION.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-EQUATION"><article class="exercise exercise-like"><p id="p-139">How many three-letter words can be formed using the letters of the word</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-140">EQUATION?</p></div></div></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-EQUATION"><article class="exercise exercise-like"><p id="p-138">How many three-letter words can be formed using the letters of the word</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><p id="p-139">EQUATION?</p></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-141">How many choices do you have for the first letter? the second? the third? Use the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-140">How many choices do you have for the first letter? the second? the third? Use the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>.</p></div></div>
 </div></article></div>
-<p id="p-142">Let's generalize this. Let \(k \leq n\text{,}\) and use the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> to count the number of ways to arrange \(k\) objects in a row, taking from a set of \(n\) distinct objects.</p>
-<p id="p-143">Then express your answer in terms of factorials, and complete the statement of <a class="xref" data-knowl="./knowl/prop-Pnk.html" title="Proposition 2.2.5: \(k\)-permutation of an \(n\)-set">Proposition 2.2.5</a> below.</p>
+<p id="p-141">Let's generalize this. Let \(k \leq n\text{,}\) and use the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> to count the number of ways to arrange \(k\) objects in a row, taking from a set of \(n\) distinct objects.</p>
+<p id="p-142">Then express your answer in terms of factorials, and complete the statement of <a class="xref" data-knowl="./knowl/prop-Pnk.html" title="Proposition 2.2.5: \(k\)-permutation of an \(n\)-set">Proposition 2.2.5</a> below.</p>
 <article class="proposition theorem-like" id="prop-Pnk"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">\(k\)-permutation of an \(n\)-set.</span>
 </h6>
-<p id="p-144"> If \(k \leq n\text{,}\) then the number of permutations of \(k\) distinct elements from a set of size \(n\text{,}\) denoted by \(P(n,k)\) or \({}_nP_k\text{,}\) is</p>
+<p id="p-143"> If \(k \leq n\text{,}\) then the number of permutations of \(k\) distinct elements from a set of size \(n\text{,}\) denoted by \(P(n,k)\) or \({}_nP_k\text{,}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 P(n,k) = \underline{\hspace{9.090909090909092em}}\text{.}
@@ -237,66 +223,65 @@ P(n,k) = \underline{\hspace{9.090909090909092em}}\text{.}
 </div></article><article class="remark remark-like" id="remark-Pnk-notation"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h6>
-<p id="p-145">When solving problems you may use either notation above and leave your answer in that form.</p></article><article class="example example-like" id="eg-counting-student-council"><h6 class="heading">
+<p id="p-144">When solving problems you may use either notation above and leave your answer in that form.</p></article><article class="example example-like" id="eg-counting-student-council"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-counting-student-council"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Student Council Representatives.</span>
-</h6>
-<p id="p-146">How many ways can a class of 45 students elect a president, vice-president, and secretary to represent them on student council?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-student-council"><article class="example example-like"><p id="p-145">How many ways can a class of 45 students elect a president, vice-president, and secretary to represent them on student council?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
-<p id="p-147">This corresponds to the number of permutations of 45 objects taken 3 at a time, so the total is</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-146">This corresponds to the number of permutations of 45 objects taken 3 at a time, so the total is</p>
 <div class="displaymath">
 \begin{equation*}
 45 \cdot 44 \cdot 43 = 85140\text{.}
 \end{equation*}
 </div>
-<p id="p-148">One can also imagine the solution using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>: there are three steps to this operation:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p id="p-147">One can also imagine the solution using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>: there are three steps to this operation:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">elect a president:</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">45 choices</td>
+<td class="l m b0 r0 l0 t0 lines">45 choices</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">elect a vice-president:</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">44 choices</td>
+<td class="l m b0 r0 l0 t0 lines">44 choices</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">elect a secretary:</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">43 choices</td>
+<td class="l m b0 r0 l0 t0 lines">43 choices</td>
 </tr>
 </table></div></div></div>
-<p id="p-149">Then the number of ways to do so is \(45 \cdot 44 \cdot 43\text{.}\)</p>
-</div></div>
-</div></article><article class="exercise exercise-like" id="ex-counting-ZAHLEN"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-ZAHLEN"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">ZAHLEN.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-ZAHLEN"><article class="exercise exercise-like"><ol id="p-150" class="lower-alpha">
-<li id="li-71">Count the number of three-letter words that can be formed from the letters of the word ZAHLEN.</li>
-<li id="li-72">How many of the words from (a) contain <em class="alert">only consonants</em>?</li>
-<li id="li-73">How many of the words from (a) contain <em class="alert">contain exactly one vowel</em>?</li>
-</ol>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-151">For part c., try using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>. What steps need to be performed to form a word that satisfies the given condition?</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like">
-<p id="p-152">a. 120</p>
-<p id="p-153">b. 24</p>
-<p id="p-154">c. 72</p>
+<p id="p-148">Then the number of ways to do so is \(45 \cdot 44 \cdot 43\text{.}\)</p>
 </div></div>
 </div></article></div>
-<p id="p-156">The next example shows that having <em class="emphasis">distinct</em> objects is crucial in the statement of <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a>.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-permutation-multiset" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/1ByDmzD7jDg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-157"><em class="alert">Video</em>: <em class="emphasis">Permutations of a Multiset</em></p>
-<article class="example example-like" id="eg-counting-YEET"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-counting-ZAHLEN"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-ZAHLEN"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">ZAHLEN.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-ZAHLEN"><article class="exercise exercise-like"><ol id="p-149" class="lower-alpha">
+<li id="li-72">Count the number of three-letter words that can be formed from the letters of the word ZAHLEN.</li>
+<li id="li-73">How many of the words from (a) contain <em class="alert">only consonants</em>?</li>
+<li id="li-74">How many of the words from (a) contain <em class="alert">contain exactly one vowel</em>?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-150">For part c., try using the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a>. What steps need to be performed to form a word that satisfies the given condition?</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like">
+<p id="p-151">a. 120</p>
+<p id="p-152">b. 24</p>
+<p id="p-153">c. 72</p>
+</div></div>
+</div></article></div>
+<p id="p-155">The next example shows that having <em class="emphasis">distinct</em> objects is crucial in the statement of <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a>.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-permutation-multiset" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/1ByDmzD7jDg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
+<p id="p-156"><em class="alert">Video</em>: <em class="emphasis">Permutations of a Multiset</em></p>
+<article class="example example-like" id="eg-counting-YEET"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-counting-YEET"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Repeated Letters.</span>
-</h6>
-<p id="p-158">Count the number of arrangements of the letters in the word YEET.</p>
-<p id="p-159"><em class="alert">Solution</em> A misguided attempt to apply <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a> will yield \(4! = 24\) possible arrangements of the word YEET. However, we see that there are only 12 possibilities when we list them all:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-YEET"><article class="example example-like"><p id="p-157">Count the number of arrangements of the letters in the word YEET.</p>
+<p id="p-158"><em class="alert">Solution</em> A misguided attempt to apply <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a> will yield \(4! = 24\) possible arrangements of the word YEET. However, we see that there are only 12 possibilities when we list them all:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">YEET</td>
 <td class="l m b0 r0 l0 t0 lines">YETE</td>
 <td class="l m b0 r0 l0 t0 lines">YTEE</td>
 <td class="l m b0 r0 l0 t0 lines">TYEE</td>
 <td class="l m b0 r0 l0 t0 lines">TEYE</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">TEEY</td>
+<td class="l m b0 r0 l0 t0 lines">TEEY</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">EETY</td>
@@ -304,233 +289,234 @@ P(n,k) = \underline{\hspace{9.090909090909092em}}\text{.}
 <td class="l m b0 r0 l0 t0 lines">ETYE</td>
 <td class="l m b0 r0 l0 t0 lines">ETEY</td>
 <td class="l m b0 r0 l0 t0 lines">EYET</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">EYTE</td>
+<td class="l m b0 r0 l0 t0 lines">EYTE</td>
 </tr>
 </table></div></div></div>
-<p id="p-160">This is because the letters in the word YEET are <em class="emphasis">not</em> distinct! If we distinguish each letter E in the word by calling them E\(_1\) and E\(_2\text{,}\) then we see that each arrangement above actually came from <em class="alert">two</em> arrangements, for instance:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr><td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">YE\(_1\)E\(_2\)T and YE\(_2\)E\(_1\)T \(\rightarrow\) YEET</td></tr>
-<tr><td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">YE\(_1\)TE\(_2\) and YE\(_2\)TE\(_1\) \(\rightarrow\) YETE</td></tr>
+<p id="p-159">This is because the letters in the word YEET are <em class="emphasis">not</em> distinct! If we distinguish each letter E in the word by calling them E\(_1\) and E\(_2\text{,}\) then we see that each arrangement above actually came from <em class="alert">two</em> arrangements, for instance:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr><td class="l m b0 r0 l0 t0 lines">YE\(_1\)E\(_2\)T and YE\(_2\)E\(_1\)T \(\rightarrow\) YEET</td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines">YE\(_1\)TE\(_2\) and YE\(_2\)TE\(_1\) \(\rightarrow\) YETE</td></tr>
 </table></div></div></div>
-<p id="p-161">Thus while <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a> predicts \(4! = 24\) arrangements of the four letters Y, E\(_1\text{,}\) E\(_2\text{,}\) and T, we see that for each arrangement either E\(_1\) is somewhere to the left, or somewhere to the right of E\(_2\text{.}\) Hence we divide by two to account for this overcounting, which gives the correct number, \(4!/2 = 12\text{.}\)</p></article><p id="p-162">What if three letter E's are repeated? Following the same reasoning, we can distinguish them first as E\(_1\text{,}\) E\(_2\text{,}\) and E\(_3\text{,}\) then apply <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a>. We will get a number that overcounts the actual answer by a factor of 6 this time, since there are \(3! = 6\) ways to arrange the three E's:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p id="p-160">Thus while <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a> predicts \(4! = 24\) arrangements of the four letters Y, E\(_1\text{,}\) E\(_2\text{,}\) and T, we see that for each arrangement either E\(_1\) is somewhere to the left, or somewhere to the right of E\(_2\text{.}\) Hence we divide by two to account for this overcounting, which gives the correct number, \(4!/2 = 12\text{.}\)</p></article></div>
+<p id="p-161">What if three letter E's are repeated? Following the same reasoning, we can distinguish them first as E\(_1\text{,}\) E\(_2\text{,}\) and E\(_3\text{,}\) then apply <a class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 2.2.1: Permutation">Definition 2.2.1</a>. We will get a number that overcounts the actual answer by a factor of 6 this time, since there are \(3! = 6\) ways to arrange the three E's:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">E\(_1\)E\(_2\)E\(_3\)</td>
 <td class="l m b0 r0 l0 t0 lines">E\(_1\)E\(_3\)E\(_2\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">E\(_2\)E\(_1\)E\(_3\)</td>
+<td class="l m b0 r0 l0 t0 lines">E\(_2\)E\(_1\)E\(_3\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">E\(_2\)E\(_3\)E\(_1\)</td>
 <td class="l m b0 r0 l0 t0 lines">E\(_3\)E\(_1\)E\(_2\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">E\(_3\)E\(_2\)E\(_1\)</td>
+<td class="l m b0 r0 l0 t0 lines">E\(_3\)E\(_2\)E\(_1\)</td>
 </tr>
 </table></div></div></div>
-<p id="p-163">We generalize this to <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>, which gives a way to count rearrangements of words when some letters are repeated. (We say the letters are elements of a <dfn class="terminology">multiset</dfn>, which generalizes sets to allow for multiple instances of elements.)</p>
+<p id="p-162">We generalize this to <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>, which gives a way to count rearrangements of words when some letters are repeated. (We say the letters are elements of a <dfn class="terminology">multiset</dfn>, which generalizes sets to allow for multiple instances of elements.)</p>
 <article class="proposition theorem-like" id="prop-perm-repeat"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Permutations of a multiset.</span>
 </h6>
-<p id="p-164">Let \(S\) be a set with \(n\) (not necessarily distinct) objects, such that there are \(n_1\) objects of type 1, \(n_2\) objects of type 2, \(\ldots\text{,}\) and \(n_k\) objects of type \(k\text{,}\) where \(n_1 + n_2 + \cdots + n_k = n\text{.}\) Then the number of arrangements of these objects is</p>
+<p id="p-163">Let \(S\) be a set with \(n\) (not necessarily distinct) objects, such that there are \(n_1\) objects of type 1, \(n_2\) objects of type 2, \(\ldots\text{,}\) and \(n_k\) objects of type \(k\text{,}\) where \(n_1 + n_2 + \cdots + n_k = n\text{.}\) Then the number of arrangements of these objects is</p>
 <div class="displaymath">
 \begin{equation*}
 \dfrac{n!}{n_1! n_2! \cdots n_k!}\text{.}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="ex-counting-MISSISSAUGA"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-MISSISSAUGA"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="ex-counting-MISSISSAUGA"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-MISSISSAUGA"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">MISSISSAUGA.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-MISSISSAUGA"><article class="exercise exercise-like"><p id="p-165">How many arrangements can be formed using the letters of the word</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-166">MISSISSAUGA?</p></div></div></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-MISSISSAUGA"><article class="exercise exercise-like"><p id="p-164">How many arrangements can be formed using the letters of the word</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><p id="p-165">MISSISSAUGA?</p></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-167">\(\dfrac{11!}{1!\ 2!\ 4!\ 2!\ 1!\ 1!} = \dfrac{11!}{2!\ 4!\ 2!} = 415800.\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-166">\(\dfrac{11!}{1!\ 2!\ 4!\ 2!\ 1!\ 1!} = \dfrac{11!}{2!\ 4!\ 2!} = 415800.\)</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="ex-counting-MATHEMATICS"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-MATHEMATICS"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-counting-MATHEMATICS"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-MATHEMATICS"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">MATHEMATICS.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-MATHEMATICS"><article class="exercise exercise-like"><p id="p-168">Count the number of ways the letters of the word MATHEMATICS can be arranged so that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-MATHEMATICS"><article class="exercise exercise-like"><p id="p-167">Count the number of ways the letters of the word MATHEMATICS can be arranged so that</p>
 <ol class="lower-alpha">
-<li id="li-74">The two M's are beside each other.</li>
-<li id="li-75">The two M's are <em class="emphasis">not</em> beside each other.</li>
-<li id="li-76">The word MATH appears somewhere in the arrangement.</li>
+<li id="li-75">The two M's are beside each other.</li>
+<li id="li-76">The two M's are <em class="emphasis">not</em> beside each other.</li>
+<li id="li-77">The word MATH appears somewhere in the arrangement.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-169">a. Treat ‘MM’ as a single object.</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-170">b. How are parts a. and b. related?</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-171">c. Treat ‘MATH’ as a single object.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-168">a. Treat ‘MM’ as a single object.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-169">b. How are parts a. and b. related?</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">3</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-170">c. Treat ‘MATH’ as a single object.</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="ex-counting-esports"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-esports"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-counting-esports"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-esports"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Esports Tournament.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-esports"><article class="exercise exercise-like"><p id="p-182">UTM Athletics is sending a team of 7 players to represent the university at an Ontario e-sports tournament called <em class="emphasis">The Provincial</em>. Suppose that a total of 30 students tried out for the team.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-esports"><article class="exercise exercise-like"><p id="p-181">UTM Athletics is sending a team of 7 players to represent the university at an Ontario e-sports tournament called <em class="emphasis">The Provincial</em>. Suppose that a total of 30 students tried out for the team.</p>
 <ol class="lower-alpha">
-<li id="li-77">How many possible teams can be formed from the students who tried out?</li>
-<li id="li-78">
-<p id="p-183">Suppose further that there are different positions on the team, as follows</p>
+<li id="li-78">How many possible teams can be formed from the students who tried out?</li>
+<li id="li-79">
+<p id="p-182">Suppose further that there are different positions on the team, as follows</p>
 <ul class="disc">
-<li id="li-79">1 carry player</li>
-<li id="li-80">1 mid player</li>
-<li id="li-81">1 offlane player</li>
-<li id="li-82">2 support players</li>
-<li id="li-83">2 reserve players</li>
+<li id="li-80">1 carry player</li>
+<li id="li-81">1 mid player</li>
+<li id="li-82">1 offlane player</li>
+<li id="li-83">2 support players</li>
+<li id="li-84">2 reserve players</li>
 </ul>
-<p data-braille="continuation">How many possible teams can be formed from the students who tried out? Assume everyone who tried out can play every position. (Not usually the case in reality…)</p>
+<p class="continuation">How many possible teams can be formed from the students who tried out? Assume everyone who tried out can play every position. (Not usually the case in reality…)</p>
 </li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-184">a. Each student either makes the team, or doesn't. Express each possible team as a sequence of 30 labels, one for each student who tried out.</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><p id="p-185">b. Same with a., but with more labels to account for the different positions on the team.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-183">a. Each student either makes the team, or doesn't. Express each possible team as a sequence of 30 labels, one for each student who tried out.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><p id="p-184">b. Same with a., but with more labels to account for the different positions on the team.</p></div></div>
 </div></article></div>
-<p id="p-186">The scenario in part (a) of <a class="xref" data-knowl="./knowl/ex-counting-esports.html" title="Checkpoint 2.2.13: Esports Tournament">Checkpoint 2.2.13</a> is an example where the order in which the students are picked does not matter -- the team is just a collection (set) of 7 players. Here's a smaller example:</p>
-<article class="example example-like" id="eg-counting-bridesmaids"><h6 class="heading">
+<p id="p-185">The scenario in part (a) of <a class="xref" data-knowl="./knowl/ex-counting-esports.html" title="Checkpoint 2.2.13: Esports Tournament">Checkpoint 2.2.13</a> is an example where the order in which the students are picked does not matter -- the team is just a collection (set) of 7 players. Here's a smaller example:</p>
+<article class="example example-like" id="eg-counting-bridesmaids"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-counting-bridesmaids"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Picking Bridesmaids.</span>
-</h6>
-<p id="p-187">Adele is getting married soon, and due to space constraints at the venue, needs to pick exactly two of her five best friends (Mel B., Mel C., Emma, Geri, and Victoria) to be her bridesmaids. How many possible combinations are there?</p>
-<p id="p-188"><em class="alert">Solution</em> Each combination of bridesmaids corresponds to a rearrangement of three X's and two O's, given a <em class="emphasis">fixed</em> arrangement of the five names in a row; for instance, the arrangement</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-bridesmaids"><article class="example example-like"><p id="p-186">Adele is getting married soon, and due to space constraints at the venue, needs to pick exactly two of her five best friends (Mel B., Mel C., Emma, Geri, and Victoria) to be her bridesmaids. How many possible combinations are there?</p>
+<p id="p-187"><em class="alert">Solution</em> Each combination of bridesmaids corresponds to a rearrangement of three X's and two O's, given a <em class="emphasis">fixed</em> arrangement of the five names in a row; for instance, the arrangement</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">Mel B.</td>
 <td class="l m b0 r0 l0 t0 lines">Mel C.</td>
 <td class="l m b0 r0 l0 t0 lines">Emma</td>
 <td class="l m b0 r0 l0 t0 lines">Gerri</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Victoria</td>
+<td class="l m b0 r0 l0 t0 lines">Victoria</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">O</td>
 <td class="l m b0 r0 l0 t0 lines">X</td>
 <td class="l m b0 r0 l0 t0 lines">X</td>
 <td class="l m b0 r0 l0 t0 lines">O</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">X</td>
+<td class="l m b0 r0 l0 t0 lines">X</td>
 </tr>
 </table></div></div></div>
-<p id="p-189">means that Mel B. and Gerri will be bridesmaids, while</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p id="p-188">means that Mel B. and Gerri will be bridesmaids, while</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">Mel B.</td>
 <td class="l m b0 r0 l0 t0 lines">Mel C.</td>
 <td class="l m b0 r0 l0 t0 lines">Emma</td>
 <td class="l m b0 r0 l0 t0 lines">Gerri</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Victoria</td>
+<td class="l m b0 r0 l0 t0 lines">Victoria</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">X</td>
 <td class="l m b0 r0 l0 t0 lines">X</td>
 <td class="l m b0 r0 l0 t0 lines">X</td>
 <td class="l m b0 r0 l0 t0 lines">O</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">O</td>
+<td class="l m b0 r0 l0 t0 lines">O</td>
 </tr>
 </table></div></div></div>
-<p id="p-190">corresponds to Geri and Victoria being chosen. Applying <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a> to the three X's and two O's, we see that there are exactly \(\dfrac{5!}{2! 3!} = 10\) possible combinations.</p>
-<p id="p-191"><em class="alert">Note</em> When the usual formula for \(k\)-permutations from an \(n\)-set (<a class="xref" data-knowl="./knowl/prop-Pnk.html" title="Proposition 2.2.5: \(k\)-permutation of an \(n\)-set">Proposition 2.2.5</a>)) is applied to the previous example, we get a total of \(\dfrac{5!}{(5-3)!} = 60\text{,}\) which is incorrect. The reason is that this formula treats the pairs</p>
+<p id="p-189">corresponds to Geri and Victoria being chosen. Applying <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a> to the three X's and two O's, we see that there are exactly \(\dfrac{5!}{2! 3!} = 10\) possible combinations.</p>
+<p id="p-190"><em class="alert">Note</em> When the usual formula for \(k\)-permutations from an \(n\)-set (<a class="xref" data-knowl="./knowl/prop-Pnk.html" title="Proposition 2.2.5: \(k\)-permutation of an \(n\)-set">Proposition 2.2.5</a>)) is applied to the previous example, we get a total of \(\dfrac{5!}{(5-3)!} = 60\text{,}\) which is incorrect. The reason is that this formula treats the pairs</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;">
-<div class="sbspanel" style="width:41.6666666666667%;justify-content:flex-start;"><p id="p-192">(Geri, Victoria)</p></div>
-<div class="sbspanel" style="width:16.6666666666667%;justify-content:flex-start;"><p id="p-193">and</p></div>
-<div class="sbspanel" style="width:41.6666666666667%;justify-content:flex-start;"><p id="p-194">(Victoria, Geri)</p></div>
+<div class="sbspanel top" style="width:41.6666666666667%;"><p id="p-191">(Geri, Victoria)</p></div>
+<div class="sbspanel top" style="width:16.6666666666667%;"><p id="p-192">and</p></div>
+<div class="sbspanel top" style="width:41.6666666666667%;"><p id="p-193">(Victoria, Geri)</p></div>
 </div></div>
-<p id="p-195">as different outcomes, while for this example they both correspond to the same combination of \(\{\text{Geri}, \text{Victoria}\}\) being chosen as bridesmaids, since the order doesn't matter.</p></article><article class="assemblage assemblage-like" id="box-overcounting"><h6 class="heading"><span class="title">Overcounting as a Counting Technique.</span></h6>
-<p id="p-196">In the previous examples you may have been reminded of the main difference between an <em class="emphasis">\(n\)-tuple</em> \((a_1,a_2,\ldots,a_n)\) and a <em class="emphasis">set of \(n\) elements</em> \(\{a_1,a_2,\ldots,a_n\}\text{:}\) order.</p>
-<p id="p-197">To give a small example, the triples \((1,2,3)\) and \((3,1,2)\) are <em class="emphasis">not</em> equal in \(\mathbb{R}^3\text{,}\) and there are a total of six <em class="emphasis">different</em> triples using these same numbers:</p>
-<div class="displaymath" id="p-198">
+<p id="p-194">as different outcomes, while for this example they both correspond to the same combination of \(\{\text{Geri}, \text{Victoria}\}\) being chosen as bridesmaids, since the order doesn't matter.</p></article></div>
+<article class="assemblage assemblage-like" id="box-overcounting"><h6 class="heading"><span class="title">Overcounting as a Counting Technique.</span></h6>
+<p id="p-195">In the previous examples you may have been reminded of the main difference between an <em class="emphasis">\(n\)-tuple</em> \((a_1,a_2,\ldots,a_n)\) and a <em class="emphasis">set of \(n\) elements</em> \(\{a_1,a_2,\ldots,a_n\}\text{:}\) order.</p>
+<p id="p-196">To give a small example, the triples \((1,2,3)\) and \((3,1,2)\) are <em class="emphasis">not</em> equal in \(\mathbb{R}^3\text{,}\) and there are a total of six <em class="emphasis">different</em> triples using these same numbers:</p>
+<div class="displaymath" id="p-197">
 \begin{align*}
 (1,2,3) \amp \amp (2,1,3) \amp \amp (3,1,2)\\
 (1,3,2) \amp \amp (2,3,1) \amp \amp (3,2,1)
 \end{align*}
 </div>
-<p id="p-199">On the other hand, the sets \(\{1,2,3\}\) and \(\{3,2,1\}\) are equal—it doesn't matter how we write the three numbers since a set is defined by object membership.</p>
-<p id="p-200">In general, to count objects for which order does not matter, we can <em class="alert">assume order matters first, then divide by the overcounting factor</em>, typically the factorial of how many elements are under consideration.</p>
-<p id="p-201">As another example, in <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>, each \(n_i!\) term in the denominator is the overcounting factor associated with first treating all objects of type \(i\) (there are \(n_i\) of them) differently.</p></article><p id="p-202">When selecting \(k\) elements from a set of \(n\text{,}\) and if the order in which they are selected does not matter, we simply need to divide by \(k!\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-combination" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/t-PQAURivXg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-203"><em class="alert">Video</em>: <em class="emphasis">Combinations</em></p>
+<p id="p-198">On the other hand, the sets \(\{1,2,3\}\) and \(\{3,2,1\}\) are equal—it doesn't matter how we write the three numbers since a set is defined by object membership.</p>
+<p id="p-199">In general, to count objects for which order does not matter, we can <em class="alert">assume order matters first, then divide by the overcounting factor</em>, typically the factorial of how many elements are under consideration.</p>
+<p id="p-200">As another example, in <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>, each \(n_i!\) term in the denominator is the overcounting factor associated with first treating all objects of type \(i\) (there are \(n_i\) of them) differently.</p></article><p id="p-201">When selecting \(k\) elements from a set of \(n\text{,}\) and if the order in which they are selected does not matter, we simply need to divide by \(k!\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-combination" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/t-PQAURivXg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
+<p id="p-202"><em class="alert">Video</em>: <em class="emphasis">Combinations</em></p>
 <article class="definition definition-like" id="def-combination"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Combination.</span>
 </h6>
-<p id="p-204"> A <dfn class="terminology">combination</dfn> of \(k\) elements taken from a set \(S\) of size \(n\) is any \(k\)-element subset of \(S\text{.}\)</p></article><article class="proposition theorem-like" id="prop-comb"><h6 class="heading">
+<p id="p-203"> A <dfn class="terminology">combination</dfn> of \(k\) elements taken from a set \(S\) of size \(n\) is any \(k\)-element subset of \(S\text{.}\)</p></article><article class="proposition theorem-like" id="prop-comb"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">\(k\)-combinations of an \(n\)-set.</span>
 </h6>
-<p id="p-205">The number of \(k\)-combinations of a set with \(n\) distinct elements, denoted by \(\displaystyle\binom{n}{k}\) (read as ‘\(n\) choose \(k\)’), is</p>
+<p id="p-204">The number of \(k\)-combinations of a set with \(n\) distinct elements, denoted by \(\displaystyle\binom{n}{k}\) (read as ‘\(n\) choose \(k\)’), is</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{k} = \dfrac{n!}{(n-k)!\ k!} = \dfrac{{}_nP_k}{k!}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Alternative notation for this include \(C(n,k)\) and \(_nC_k\text{.}\)</p></article><article class="example example-like" id="eg-counting-standard-deck"><h6 class="heading">
+<p class="continuation">Alternative notation for this include \(C(n,k)\) and \(_nC_k\text{.}\)</p></article><article class="example example-like" id="eg-counting-standard-deck"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-counting-standard-deck"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Cards.</span>
-</h6>
-<p id="p-206">A <dfn class="terminology">standard deck of cards</dfn> consists of 52 cards, which come in 13 ranks (A/ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, J/jack, Q/queen, K/king) of four cards each, one for each suit: clubs \(\clubsuit\) (a black suit), spades \(\spadesuit\) (black), hearts \(\heartsuit\) (red), diamonds \(\diamondsuit\) (red).</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-standard-deck"><article class="example example-like"><p id="p-205">A <dfn class="terminology">standard deck of cards</dfn> consists of 52 cards, which come in 13 ranks (A/ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, J/jack, Q/queen, K/king) of four cards each, one for each suit: clubs \(\clubsuit\) (a black suit), spades \(\spadesuit\) (black), hearts \(\heartsuit\) (red), diamonds \(\diamondsuit\) (red).</p>
 <ol class="lower-alpha">
-<li id="li-84">How many outcomes (or <em class="alert">hands</em>) are possible when you draw five cards at random from the deck?</li>
-<li id="li-85">How many of these five-card hands comprise only numbered cards?</li>
-<li id="li-86">How many of these five-card hands have exactly two red and three black cards?</li>
+<li id="li-85">How many outcomes (or <em class="alert">hands</em>) are possible when you draw five cards at random from the deck?</li>
+<li id="li-86">How many of these five-card hands comprise only numbered cards?</li>
+<li id="li-87">How many of these five-card hands have exactly two red and three black cards?</li>
 </ol>
-<p id="p-207"><em class="alert">Solution</em> a. There are 52 distinct cards in the deck, and we are drawing five of them at random. Each outcome only depends on which cards are drawn, so the order in which we draw them does not matter. Therefore there are</p>
+<p id="p-206"><em class="alert">Solution</em> a. There are 52 distinct cards in the deck, and we are drawing five of them at random. Each outcome only depends on which cards are drawn, so the order in which we draw them does not matter. Therefore there are</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{52}{5} = \frac{52!}{47! \ 5!} = 2598960
 \end{equation*}
 </div>
-<p data-braille="continuation">possible five-card hands.</p>
-<p id="p-208">b. The ranks 2 to 10 are the numbered cards; there are a total of 36 numbered cards in a deck (9 ranks times 4 suits each). The number of five-card hands drawn from these cards is</p>
+<p class="continuation">possible five-card hands.</p>
+<p id="p-207">b. The ranks 2 to 10 are the numbered cards; there are a total of 36 numbered cards in a deck (9 ranks times 4 suits each). The number of five-card hands drawn from these cards is</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{36}{5}\text{.}
 \end{equation*}
 </div>
-<p id="p-209">c. The process of forming such a five-card hand can be broken down into two steps:</p>
+<p id="p-208">c. The process of forming such a five-card hand can be broken down into two steps:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
-<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><p id="p-210">Step 1: Pick two red cards</p></div>
-<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><p id="p-211">Step 2: Pick three black cards</p></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p id="p-209">Step 1: Pick two red cards</p></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p id="p-210">Step 2: Pick three black cards</p></div>
 </div></div>
-<p id="p-212">These two steps are independent of one another. There are 26 black and 26 red cards, so the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> tells us that there are</p>
+<p id="p-211">These two steps are independent of one another. There are 26 black and 26 red cards, so the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> tells us that there are</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{26}{2}\binom{26}{3}
 \end{equation*}
 </div>
-<p data-braille="continuation">five-card hands with this property.</p></article><article class="exercise exercise-like" id="ex-counting-esports-comb"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-esports-comb"><h6 class="heading">
+<p class="continuation">five-card hands with this property.</p></article></div>
+<article class="exercise exercise-like" id="ex-counting-esports-comb"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-esports-comb"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Esports Tournament, again.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-esports-comb"><article class="exercise exercise-like"><p id="p-213">Solve part a. of <a class="xref" data-knowl="./knowl/ex-counting-esports.html" title="Checkpoint 2.2.13: Esports Tournament">Checkpoint 2.2.13</a> using <a class="xref" data-knowl="./knowl/prop-comb.html" title="Proposition 2.2.16: \(k\)-combinations of an \(n\)-set">Proposition 2.2.16</a></p>
-<p id="p-214">Then solve part b. (and express your answer) using only combinations.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-esports-comb"><article class="exercise exercise-like"><p id="p-212">Solve part a. of <a class="xref" data-knowl="./knowl/ex-counting-esports.html" title="Checkpoint 2.2.13: Esports Tournament">Checkpoint 2.2.13</a> using <a class="xref" data-knowl="./knowl/prop-comb.html" title="Proposition 2.2.16: \(k\)-combinations of an \(n\)-set">Proposition 2.2.16</a></p>
+<p id="p-213">Then solve part b. (and express your answer) using only combinations.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-215">b. Use the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> where each step corresponds to selecting players for a role.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-214">b. Use the <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Product Rule</a> where each step corresponds to selecting players for a role.</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="ex-counting-Cnk-two-ways"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-Cnk-two-ways"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-counting-Cnk-two-ways"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-Cnk-two-ways"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Two Ways of Counting.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-Cnk-two-ways"><article class="exercise exercise-like"><p id="p-221">Let \(0 \leq k \leq n\text{.}\) Using algebra it's straightforward to show that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-Cnk-two-ways"><article class="exercise exercise-like"><p id="p-220">Let \(0 \leq k \leq n\text{.}\) Using algebra it's straightforward to show that</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{k} = \binom{n}{n-k}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Without using algebra, explain why \(\displaystyle\binom{n}{k}\) is equal to \(\displaystyle\binom{n}{n-k}\) by counting the number of \(k\)-subsets of \(\{1,2,\ldots,n\}\) in two ways.</p>
+<p class="continuation">Without using algebra, explain why \(\displaystyle\binom{n}{k}\) is equal to \(\displaystyle\binom{n}{n-k}\) by counting the number of \(k\)-subsets of \(\{1,2,\ldots,n\}\) in two ways.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><p id="p-222">The first way is the usual way. For the second way: select elements that will <em class="emphasis">not</em> be put in the \(k\)-set.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><p id="p-221">The first way is the usual way. For the second way: select elements that will <em class="emphasis">not</em> be put in the \(k\)-set.</p></div></div>
 </div></article></div>
 <article class="exploration project-like" id="expl-susruta"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Early Combinatorics.</span>
 </h6>
 <div class="introduction" id="introduction-2">
-<p id="p-223">Some of the earliest mentions of permutations and combinations occur in ancient Hindu texts dating back to the year 600 BC. Called <em class="emphasis">vikalpa</em> and <em class="emphasis">bhaṅga</em>, respectively, they were used in the study of <a class="external" href="https://en.wikipedia.org/wiki/Sanskrit_prosody" target="_blank">Vedic meters</a> in poetry, in architecture, in medicine, astrology, and other areas.</p>
-<p id="p-224">The following examples are taken from <a class="xref" data-knowl="./knowl/bib-kolachana-2019.html" title="Bibliographic Entry 6">[6]</a>.</p>
+<p id="p-222">Some of the earliest mentions of permutations and combinations occur in ancient Hindu texts dating back to the year 600 BC. Called <em class="emphasis">vikalpa</em> and <em class="emphasis">bhaṅga</em>, respectively, they were used in the study of <a class="external" href="https://en.wikipedia.org/wiki/Sanskrit_prosody" target="_blank">Vedic meters</a> in poetry, in architecture, in medicine, astrology, and other areas.</p>
+<p id="p-223">The following examples are taken from <a class="xref" data-knowl="./knowl/bib-kolachana-2019.html" title="Bibliographic Entry 6">[6]</a>.</p>
 </div>
 <article class="task exercise-like" id="task-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-225">The <a class="external" href="https://en.wikipedia.org/wiki/Sushruta_Samhita" target="_blank"><span class="booktitle">Suśruta-saṃhitā</span></a>, (est. 500 BC) an ancient Hindu text on medicine and surgery, counts the number of combinations of the flavours <em class="emphasis">sweet</em>, <em class="emphasis">acid</em>, <em class="emphasis">saline</em>, <em class="emphasis">pungent</em>, <em class="emphasis">bitter</em>, and <em class="emphasis">astringent</em> taken two at a time, in the following way:</p>
+<p id="p-224">The <a class="external" href="https://en.wikipedia.org/wiki/Sushruta_Samhita" target="_blank"><span class="booktitle">Suśruta-saṃhitā</span></a>, (est. 500 BC) an ancient Hindu text on medicine and surgery, counts the number of combinations of the flavours <em class="emphasis">sweet</em>, <em class="emphasis">acid</em>, <em class="emphasis">saline</em>, <em class="emphasis">pungent</em>, <em class="emphasis">bitter</em>, and <em class="emphasis">astringent</em> taken two at a time, in the following way:</p>
 <blockquote class="blockquote" id="blockquote-1">
-<p id="p-226">“On making two combinations in successive way, those beginning with sweet are found to be 5 in number; those beginning with acid are 4; those with saline 3; those with pungent 2; bitter and astringent make 1 combination.”</p>
+<p id="p-225">“On making two combinations in successive way, those beginning with sweet are found to be 5 in number; those beginning with acid are 4; those with saline 3; those with pungent 2; bitter and astringent make 1 combination.”</p>
 <cite class="attribution">―<span class="booktitle">Suśruta-saṃhitā</span> lxiii, as cited in <a class="xref" data-knowl="./knowl/bib-kolachana-2019.html" title="Bibliographic Entry 6">[6]</a>, p. 358</cite>
 </blockquote>
-<p id="p-227">Explain how this computes \(\displaystyle\binom{6}{2}\text{.}\)</p></article><article class="task exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-228">This excerpt from the <span class="booktitle">Anuyogadvāra-sūtra</span> (c. 500) explains how to compute \(6!\text{.}\)</p>
+<p id="p-226">Explain how this computes \(\displaystyle\binom{6}{2}\text{.}\)</p></article><article class="task exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-227">This excerpt from the <span class="booktitle">Anuyogadvāra-sūtra</span> (c. 500) explains how to compute \(6!\text{.}\)</p>
 <blockquote class="blockquote" id="blockquote-2">
-<p id="p-229">“What is the direct arrangement? Dharmāstikāya, Adharmāstikāya, Ākāśāstikāya, Jīvāstikāya, Pudgalāstikāya and Addhāsamaya—this is the direct arrangement. What is the reverse arrangement? Addhāsamaya, Pudgalāstikāya, Jīvāstikāya, Ākāśāstikāya, Adharmāstikāya, and Dharmāstikāya—this is the reverse arrangement. What are the mixed arrangements? From the series of numbers beginning with one and increasing by one up to six terms. The mutual products of these minus 2 will give the number of mixed arrangements.”</p>
+<p id="p-228">“What is the direct arrangement? Dharmāstikāya, Adharmāstikāya, Ākāśāstikāya, Jīvāstikāya, Pudgalāstikāya and Addhāsamaya—this is the direct arrangement. What is the reverse arrangement? Addhāsamaya, Pudgalāstikāya, Jīvāstikāya, Ākāśāstikāya, Adharmāstikāya, and Dharmāstikāya—this is the reverse arrangement. What are the mixed arrangements? From the series of numbers beginning with one and increasing by one up to six terms. The mutual products of these minus 2 will give the number of mixed arrangements.”</p>
 <cite class="attribution">―<span class="booktitle">Anuyogadvāra-sūtra</span>, Sūtra 97, as cited in <a class="xref" data-knowl="./knowl/bib-kolachana-2019.html" title="Bibliographic Entry 6">[6]</a>, p. 363.</cite>
 </blockquote>
-<p id="p-230">Discuss what <em class="emphasis">mixed arrangement</em> refers to and how the computation of \(6!\) is carried out.</p></article></article><section class="solutions" id="solutions-3"><h3 class="heading hide-type">
-<span class="type">Solutions</span> <span class="codenumber">2.2.1</span> <span class="title">Solutions to Selected Checkpoints</span>
+<p id="p-229">Discuss what <em class="emphasis">mixed arrangement</em> refers to and how the computation of \(6!\) is carried out.</p></article></article><section class="solutions" id="solutions-3"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber"></span> <span class="title">Solutions to Selected Checkpoints</span>
 </h3>
 <article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">ZAHLEN.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-10-hidden.html" title="Solution 2.2.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-10-hidden.html" title="Solution 2.2.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">MATHEMATICS.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-11-hidden.html" title="Solution 2.2.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-11-hidden.html" title="Solution 2.2.12.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Esports Tournament, again.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-12-hidden.html" title="Solution 2.2.18.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-12-hidden.html" title="Solution 2.2.18.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
 </div>
 </body>
 </html>

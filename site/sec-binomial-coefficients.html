@@ -1,9 +1,9 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:03-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:20-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,45 +14,30 @@
 <title>Binomial Coefficients</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '95f73ab521816689d';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=95f73ab521816689d"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -65,7 +50,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\vheart}{\textcolor{red}{\varheart}}
 \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
 \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
 \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
@@ -85,6 +70,7 @@ MathJax.Hub.Config({
 \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
 \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
 \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
 
 
 \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
@@ -185,29 +171,29 @@ MathJax.Hub.Config({
 </h2>
 <article class="objectives goal-like" id="objectives-3"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-87">Prove the Binomial Theorem and apply it to find coefficients of terms in expansions.</li>
-<li id="li-88">Describe and prove simple identities involving binomial coefficients possibly in relation to Pascal's Triangle.</li>
-</ul></article><p id="p-231">In this section we discuss the quantity \(\displaystyle\binom{n}{k}\) in more detail and explore some nice related identities and applications. First, we give a name to the quantity; the reason for the name will be made clear in the main theorem of this section.</p>
+<li id="li-88">Prove the Binomial Theorem and apply it to find coefficients of terms in expansions.</li>
+<li id="li-89">Describe and prove simple identities involving binomial coefficients possibly in relation to Pascal's Triangle.</li>
+</ul></article><p id="p-230">In this section we discuss the quantity \(\displaystyle\binom{n}{k}\) in more detail and explore some nice related identities and applications. First, we give a name to the quantity; the reason for the name will be made clear in the main theorem of this section.</p>
 <article class="definition definition-like" id="def-binomial-coefficient"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial Coefficient.</span>
 </h6>
-<p id="p-232">For \(k \leq n\text{,}\) the quantities</p>
+<p id="p-231">For \(k \leq n\text{,}\) the quantities</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{k}
 \end{equation*}
 </div>
-<p data-braille="continuation">are called <dfn class="terminology">binomial coefficients</dfn>.</p></article><article class="exploration project-like" id="expl-pingala"><h6 class="heading">
+<p class="continuation">are called <dfn class="terminology">binomial coefficients</dfn>.</p></article><article class="exploration project-like" id="expl-pingala"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Meru Prastaara (The Holy Mountain).</span>
 </h6>
 <div class="introduction" id="introduction-3">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:17.5%;margin-right:17.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="figs/meru-prastaara.png" style="width: 100%; height: auto;" alt="The Meru Prastaara. Numbers in boxes arranged in a triangular shape."></div></div></div>
-<p id="p-233">The Indian mathematician and writer <a class="external" href="https://en.wikipedia.org/wiki/Pingala" target="_blank">Piṅgala</a> (200 BC) in his text the <span class="booktitle">Chandaḥśāstra</span> studied variations in poetic metres when using only either long (<em class="emphasis">g</em>, for <em class="emphasis">guru</em>) and short (<em class="emphasis">l</em>, for <em class="emphasis">laghu</em>) syllables.</p>
-<aside class="aside aside-like" id="aside-1"><p id="p-234">This exposition is based on <a class="xref" data-knowl="./knowl/bib-kolachana-2019.html" title="Bibliographic Entry 6">[6]</a>, p. 390.</p></aside><p id="p-235">He explained that monosyllabic (or one-syllable) metres have two variations—either <em class="emphasis">g</em> or <em class="emphasis">l</em>—while disyllabic metres have four different kinds:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-236"><em class="emphasis">gg</em>, <em class="emphasis">gl</em>, <em class="emphasis">lg</em>, or <em class="emphasis">ll</em>.</p></div></div></div>
-<p id="p-237">Or, one with no <em class="emphasis">l</em>'s, two with one <em class="emphasis">l</em>, and one with two <em class="emphasis">l</em>'s.</p>
-<p id="p-238">Piṅgala also observed that each two-syllable variant could be obtained from the one-syllable variants using the following scheme, appending on the right:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17.5%;margin-right:17.5%;"><div class="sbspanel top" style="width:100%;"><img src="figs/meru-prastaara.png" class="contained" alt="The Meru Prastaara. Numbers in boxes arranged in a triangular shape."></div></div></div>
+<p id="p-232">The Indian mathematician and writer <a class="external" href="https://en.wikipedia.org/wiki/Pingala" target="_blank">Piṅgala</a> (200 BC) in his text the <span class="booktitle">Chandaḥśāstra</span> studied variations in poetic metres when using only either long (<em class="emphasis">g</em>, for <em class="emphasis">guru</em>) and short (<em class="emphasis">l</em>, for <em class="emphasis">laghu</em>) syllables.</p>
+<aside class="aside aside-like" id="aside-1"><p id="p-233">This exposition is based on <a class="xref" data-knowl="./knowl/bib-kolachana-2019.html" title="Bibliographic Entry 6">[6]</a>, p. 390.</p></aside><p id="p-234">He explained that monosyllabic (or one-syllable) metres have two variations—either <em class="emphasis">g</em> or <em class="emphasis">l</em>—while disyllabic metres have four different kinds:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><p id="p-235"><em class="emphasis">gg</em>, <em class="emphasis">gl</em>, <em class="emphasis">lg</em>, or <em class="emphasis">ll</em>.</p></div></div></div>
+<p id="p-236">Or, one with no <em class="emphasis">l</em>'s, two with one <em class="emphasis">l</em>, and one with two <em class="emphasis">l</em>'s.</p>
+<p id="p-237">Piṅgala also observed that each two-syllable variant could be obtained from the one-syllable variants using the following scheme, appending on the right:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">monosyllabic</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -215,14 +201,14 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">l)</em></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">(g</em></td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"><em class="emphasis">l)</em></td>
+<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">l)</em></td>
 </tr>
 <tr>
 <td class="l m b2 r0 l0 t0 lines">append</td>
 <td class="l m b2 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines" colspan="2"><em class="emphasis">g</em></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell" colspan="2"><em class="emphasis">l</em></td>
+<td class="c m b2 r0 l0 t0 lines" colspan="2"><em class="emphasis">l</em></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">disyllabic</td>
@@ -231,11 +217,11 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">lg</em></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">gl</em></td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"><em class="emphasis">ll</em></td>
+<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">ll</em></td>
 </tr>
 </table></div></div></div>
-<p id="p-239">The same can be done going from two to three syllables.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p id="p-238">The same can be done going from two to three syllables.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">disyllabic</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -247,14 +233,14 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">(gg</em></td>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">lg</em></td>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">gl</em></td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"><em class="emphasis">ll)</em></td>
+<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">ll)</em></td>
 </tr>
 <tr>
 <td class="l m b2 r0 l0 t0 lines">append</td>
 <td class="l m b2 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines" colspan="4"><em class="emphasis">g</em></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell" colspan="4"><em class="emphasis">l</em></td>
+<td class="c m b2 r0 l0 t0 lines" colspan="4"><em class="emphasis">l</em></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">trisyllabic</td>
@@ -267,160 +253,160 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">ggl</em></td>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">lgl</em></td>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">gll</em></td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"><em class="emphasis">lll</em></td>
+<td class="l m b0 r0 l0 t0 lines"><em class="emphasis">lll</em></td>
 </tr>
 </table></div></div></div>
 </div>
 <article class="task exercise-like" id="task-3"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-240">Of the three trisyllabic variants with two <em class="emphasis">l</em>'s (<em class="emphasis">llg</em>, <em class="emphasis">lgl</em>, and <em class="emphasis">gll</em>), one comes from the first group (ending with <em class="emphasis">g</em>), and two from the second (ending with <em class="emphasis">l</em>). Explain how this demonstrates that</p>
+<p id="p-239">Of the three trisyllabic variants with two <em class="emphasis">l</em>'s (<em class="emphasis">llg</em>, <em class="emphasis">lgl</em>, and <em class="emphasis">gll</em>), one comes from the first group (ending with <em class="emphasis">g</em>), and two from the second (ending with <em class="emphasis">l</em>). Explain how this demonstrates that</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{3}{2} = \binom{2}{2} + \binom{2}{1}\text{.}
 \end{equation*}
 </div></article><article class="task exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-241">Construct the table for the four-syllable forms in a similar way: appending <em class="emphasis">g</em>'s to all trisyllabic forms, then appending <em class="emphasis">l</em>'s. You should get a total of 16. In the same manner as (a), find an identity involving</p>
+<p id="p-240">Construct the table for the four-syllable forms in a similar way: appending <em class="emphasis">g</em>'s to all trisyllabic forms, then appending <em class="emphasis">l</em>'s. You should get a total of 16. In the same manner as (a), find an identity involving</p>
 <div class="displaymath">
 \begin{equation*}
 \displaystyle\binom{4}{2}
 \end{equation*}
 </div>
-<p data-braille="continuation">by looking at the two possible endings of the four-syllable forms.</p>
+<p class="continuation">by looking at the two possible endings of the four-syllable forms.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><p id="p-242">There are six strings involving <em class="emphasis">g</em>'s and <em class="emphasis">l</em>'s that have exactly two <em class="emphasis">l</em>'s. How many of them end with <em class="emphasis">g</em>? How many with <em class="emphasis">l</em>?</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><p id="p-241">There are six strings involving <em class="emphasis">g</em>'s and <em class="emphasis">l</em>'s that have exactly two <em class="emphasis">l</em>'s. How many of them end with <em class="emphasis">g</em>? How many with <em class="emphasis">l</em>?</p></div></div>
 </div></article><article class="task exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-243">Generalize the arguments above to a formula involving</p>
+<p id="p-242">Generalize the arguments above to a formula involving</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{k}\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><p id="p-244">Separate into two cases depending on the last syllable (<em class="emphasis">g</em> or <em class="emphasis">l</em>).</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><p id="p-245">How many of the \((n-1)\)-syllable variants already have \(k\) <em class="emphasis">l</em>'s? How many have \((k-1)\) \(l\)'s and need one more?</p></div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-246">Right-hand side is \(\displaystyle\binom{n-1}{k} + \binom{n-1}{k-1}\text{.}\)</p></div></div>
-</div></article></article><p id="p-247">In <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a> we saw how the binomial coefficient \(\displaystyle\binom{n}{k}\) can be expressed as the <em class="emphasis">sum</em> of two binomial coefficients involving \((n-1)\text{:}\)</p>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><p id="p-243">Separate into two cases depending on the last syllable (<em class="emphasis">g</em> or <em class="emphasis">l</em>).</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><p id="p-244">How many of the \((n-1)\)-syllable variants already have \(k\) <em class="emphasis">l</em>'s? How many have \((k-1)\) \(l\)'s and need one more?</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-245">Right-hand side is \(\displaystyle\binom{n-1}{k} + \binom{n-1}{k-1}\text{.}\)</p></div></div>
+</div></article></article><p id="p-246">In <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a> we saw how the binomial coefficient \(\displaystyle\binom{n}{k}\) can be expressed as the <em class="emphasis">sum</em> of two binomial coefficients involving \((n-1)\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This rule is known as <a class="external" href="https://en.wikipedia.org/wiki/Pascal%27s_rule" target="_blank">Pascal's Formula</a>, after mathematician <a class="external" href="https://en.wikipedia.org/wiki/Blaise_Pascal" target="_blank">Blaise Pascal</a>, who formalized many of the results and identities about the binomial coefficients.</p>
+<p class="continuation">This rule is known as <a class="external" href="https://en.wikipedia.org/wiki/Pascal%27s_rule" target="_blank">Pascal's Formula</a>, after mathematician <a class="external" href="https://en.wikipedia.org/wiki/Blaise_Pascal" target="_blank">Blaise Pascal</a>, who formalized many of the results and identities about the binomial coefficients.</p>
 <article class="theorem theorem-like" id="thm-pascals-formula"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Pascal's Formula.</span>
 </h6>
-<p id="p-248">If \(n \geq 1\text{,}\) then</p>
+<p id="p-247">If \(n \geq 1\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}\text{.}
 \end{equation*}
-</div></article><p id="p-249"><a class="xref" data-knowl="./knowl/thm-pascals-formula.html" title="Theorem 2.3.2: Pascal's Formula">Theorem 2.3.2</a> generates an intuitive visualization of the binomial coefficients that you may have seen before, widely known as Pascal's Triangle.</p>
-<aside class="aside aside-like" id="aside-2"><p id="p-250">Pascal was not the first to discover this mathematical object, which was simply called the <dfn class="terminology">arithmetical triangle</dfn> beforehand.</p>
-<p id="p-251">This triangle and its relations to combinatorial problems was known to several other mathematicians: Piṅgala, and several others in India; Chinese mathematicians <a class="external" href="https://en.wikipedia.org/wiki/Jia_Xian" target="_blank">Jia Xian</a> and <a class="external" href="https://en.wikipedia.org/wiki/Yang_Hui" target="_blank">Yang Hui</a>; <a class="external" href="https://en.wikipedia.org/wiki/Ahmad_ibn_Munim_al-Abdari" target="_blank">Ahmad Ibn Mun'im</a>, who taught in Marrakesh; <a class="external" href="https://en.wikipedia.org/wiki/Niccol%C3%B2_Fontana_Tartaglia" target="_blank">Niccolò Tartaglia</a> and <a class="external" href="https://en.wikipedia.org/wiki/Gerolamo_Cardano" target="_blank">Gerolamo Cardano</a> (Italy); <a class="external" href="https://en.wikipedia.org/wiki/Michael_Stifel" target="_blank">Michael Stifel</a> (Germany); and <a class="external" href="https://en.wikipedia.org/wiki/Marin_Mersenne" target="_blank">Marin Mersenne</a>, who met and did mathematics with Pascal.</p>
-<p id="p-252">For more details check out <a class="xref" data-knowl="./knowl/bib-wilson-2013.html" title="Bibliographic Entry 8">[8]</a> for an excellent resource.</p></aside><p id="p-253">We start by placing a 1 in the 0th row, and two 1's in the 1st row. Then each new row starts and ends with a 1, while each value in between is obtained by adding the numbers to its upper left and upper right.</p>
-<figure class="figure figure-like" id="fig-pascals-triangle"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/img-pascals-triangle.svg" style="width: 100%; height: auto;" alt="The first five rows of Pascal's triangle."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.3<span class="period">.</span></span><span class="space"> </span>The first five rows of Pascal's Triangle, for \(n = 0\) to \(4\text{.}\)</figcaption></figure><p id="p-254">The \(k\)th entry in the \(n\)th row of this triangle (starting with \(n=0\)) is exactly \(\displaystyle\binom{n}{k}\text{,}\) while <a class="xref" data-knowl="./knowl/thm-pascals-formula.html" title="Theorem 2.3.2: Pascal's Formula">Theorem 2.3.2</a> shows how to recursively generate its rows.</p>
-<article class="exercise exercise-like" id="ex-counting-pascal-complete"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-pascal-complete"><h6 class="heading">
+</div></article><p id="p-248"><a class="xref" data-knowl="./knowl/thm-pascals-formula.html" title="Theorem 2.3.2: Pascal's Formula">Theorem 2.3.2</a> generates an intuitive visualization of the binomial coefficients that you may have seen before, widely known as Pascal's Triangle.</p>
+<aside class="aside aside-like" id="aside-2"><p id="p-249">Pascal was not the first to discover this mathematical object, which was simply called the <dfn class="terminology">arithmetical triangle</dfn> beforehand.</p>
+<p id="p-250">This triangle and its relations to combinatorial problems was known to several other mathematicians: Piṅgala, and several others in India; Chinese mathematicians <a class="external" href="https://en.wikipedia.org/wiki/Jia_Xian" target="_blank">Jia Xian</a> and <a class="external" href="https://en.wikipedia.org/wiki/Yang_Hui" target="_blank">Yang Hui</a>; <a class="external" href="https://en.wikipedia.org/wiki/Ahmad_ibn_Munim_al-Abdari" target="_blank">Ahmad Ibn Mun'im</a>, who taught in Marrakesh; <a class="external" href="https://en.wikipedia.org/wiki/Niccol%C3%B2_Fontana_Tartaglia" target="_blank">Niccolò Tartaglia</a> and <a class="external" href="https://en.wikipedia.org/wiki/Gerolamo_Cardano" target="_blank">Gerolamo Cardano</a> (Italy); <a class="external" href="https://en.wikipedia.org/wiki/Michael_Stifel" target="_blank">Michael Stifel</a> (Germany); and <a class="external" href="https://en.wikipedia.org/wiki/Marin_Mersenne" target="_blank">Marin Mersenne</a>, who met and did mathematics with Pascal.</p>
+<p id="p-251">For more details check out <a class="xref" data-knowl="./knowl/bib-wilson-2013.html" title="Bibliographic Entry 8">[8]</a> for an excellent resource.</p></aside><p id="p-252">We start by placing a 1 in the 0th row, and two 1's in the 1st row. Then each new row starts and ends with a 1, while each value in between is obtained by adding the numbers to its upper left and upper right.</p>
+<figure class="figure figure-like" id="fig-pascals-triangle"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/img-pascals-triangle.svg" role="img" class="contained" alt="The first five rows of Pascal's triangle."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.3<span class="period">.</span></span><span class="space"> </span>The first five rows of Pascal's Triangle, for \(n = 0\) to \(4\text{.}\)</figcaption></figure><p id="p-253">The \(k\)th entry in the \(n\)th row of this triangle (starting with \(n=0\)) is exactly \(\displaystyle\binom{n}{k}\text{,}\) while <a class="xref" data-knowl="./knowl/thm-pascals-formula.html" title="Theorem 2.3.2: Pascal's Formula">Theorem 2.3.2</a> shows how to recursively generate its rows.</p>
+<article class="exercise exercise-like" id="ex-counting-pascal-complete"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-pascal-complete"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Continue the Triangle.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-pascal-complete"><article class="exercise exercise-like"><p id="p-255">Complete Pascal's Triangle up to the 9th row and use it to determine the value of \(\displaystyle\binom{9}{3}\text{.}\)</p></article></div>
-<p id="p-256">The reason for the term <em class="emphasis">binomial coefficient</em> is clarified in the next theorem.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-binomial-theorem" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/KQcp66H8QvM?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-257"><em class="alert">Video</em>: <em class="emphasis">The Binomial Theorem</em></p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-pascal-complete"><article class="exercise exercise-like"><p id="p-254">Complete Pascal's Triangle up to the 9th row and use it to determine the value of \(\displaystyle\binom{9}{3}\text{.}\)</p></article></div>
+<p id="p-255">The reason for the term <em class="emphasis">binomial coefficient</em> is clarified in the next theorem.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-binomial-theorem" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/KQcp66H8QvM?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
+<p id="p-256"><em class="alert">Video</em>: <em class="emphasis">The Binomial Theorem</em></p>
 <article class="theorem theorem-like" id="thm-binomial"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial Theorem.</span>
 </h6>
-<p id="p-258">For \(k \leq n\text{,}\) the quantity \(\displaystyle\binom{n}{k}\) is equal to the coefficient of \(x^{n-k}y^k\) in the expansion of \((x+y)^n\text{.}\) That is,</p>
+<p id="p-257">For \(k \leq n\text{,}\) the quantity \(\displaystyle\binom{n}{k}\) is equal to the coefficient of \(x^{n-k}y^k\) in the expansion of \((x+y)^n\text{.}\) That is,</p>
 <div class="displaymath">
 \begin{equation*}
 (x+y)^n = \underbrace{(x+y)(x+y)\cdots(x+y)}_\text{$n$ times} = \displaystyle\sum_{k=0}^n \binom{n}{k}x^{n-k}y^k\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-259">Each factor in the product \((x+y)^n = (x+y)(x+y)\cdots(x+y)\) contributes either an \(x\) or a \(y\) in the resulting expansion. We can express each term in the answer as a sequence of \(n\) symbols, each either an \(x\) or a \(y\text{;}\) for example, picking \(x\) from each \((x+y)\) term gives \(\underbrace{xx\cdots x}_\text{$n$ times}=x^n\text{.}\)</p>
-<p id="p-260">Hence the number of times \(x^{n-k}y^k\) appears in the final expansion is precisely the number of rearrangements of the word</p>
+</div></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-258">Each factor in the product \((x+y)^n = (x+y)(x+y)\cdots(x+y)\) contributes either an \(x\) or a \(y\) in the resulting expansion. We can express each term in the answer as a sequence of \(n\) symbols, each either an \(x\) or a \(y\text{;}\) for example, picking \(x\) from each \((x+y)\) term gives \(\underbrace{xx\cdots x}_\text{$n$ times}=x^n\text{.}\)</p>
+<p id="p-259">Hence the number of times \(x^{n-k}y^k\) appears in the final expansion is precisely the number of rearrangements of the word</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{x\ x\cdots x}_\text{$n-k$ times}\underbrace{y\ y\cdots y}_\text{$k$ times},
 \end{equation*}
 </div>
-<p data-braille="continuation">which is exactly equal to \(\frac{n!}{(n-k)!k!} = \binom{n}{k}\) by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p></article></div>
-<p id="p-261">Observe that the proof of <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> simply counts the number of \(n\)-letter strings of \(x\)'s and \(y\)'s that contain \(k\) number of \(x\)'s. This is the same thing as counting \(n\)-syllable forms in <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a>, and in fact, <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> can also be proven using the same recursive argument in <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a> part (c).</p>
-<article class="exercise exercise-like" id="ex-counting-coefficient-1"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-coefficient-1"><h6 class="heading">
+<p class="continuation">which is exactly equal to \(\frac{n!}{(n-k)!k!} = \binom{n}{k}\) by <a class="xref" data-knowl="./knowl/prop-perm-repeat.html" title="Proposition 2.2.10: Permutations of a multiset">Proposition 2.2.10</a>.</p></article></div>
+<p id="p-260">Observe that the proof of <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> simply counts the number of \(n\)-letter strings of \(x\)'s and \(y\)'s that contain \(k\) number of \(x\)'s. This is the same thing as counting \(n\)-syllable forms in <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a>, and in fact, <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> can also be proven using the same recursive argument in <a class="xref" data-knowl="./knowl/expl-pingala.html" title="Exploration 2.3.1: The Meru Prastaara (The Holy Mountain)">Exploration 2.3.1</a> part (c).</p>
+<article class="exercise exercise-like" id="ex-counting-coefficient-1"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-coefficient-1"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Coefficient of \(x^4y^7\) in \((x+y)^{11}\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coefficient-1"><article class="exercise exercise-like"><p id="p-262">Determine the coefficient of \(x^4y^7\) in the product \((x+y)^{11}\text{.}\)</p></article></div>
-<article class="exercise exercise-like" id="ex-counting-coefficient-2"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-coefficient-2"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coefficient-1"><article class="exercise exercise-like"><p id="p-261">Determine the coefficient of \(x^4y^7\) in the product \((x+y)^{11}\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="ex-counting-coefficient-2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-coefficient-2"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Coefficient of \(a^2b^3\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coefficient-2"><article class="exercise exercise-like"><p id="p-263">Determine the coefficient of \(a^2b^3\) in each product:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-coefficient-2"><article class="exercise exercise-like"><p id="p-262">Determine the coefficient of \(a^2b^3\) in each product:</p>
 <ol class="lower-alpha">
-<li id="li-89">\(\displaystyle (a+b)^5\)</li>
-<li id="li-90">\(\displaystyle (a-b)^5\)</li>
-<li id="li-91">\(\displaystyle (3a+2b)^5\)</li>
+<li id="li-90">\(\displaystyle (a+b)^5\)</li>
+<li id="li-91">\(\displaystyle (a-b)^5\)</li>
+<li id="li-92">\(\displaystyle (3a+2b)^5\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><p id="p-264">b. and c. What are \(x\) and \(y\) in the statement of <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a>?</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><p id="p-263">b. and c. What are \(x\) and \(y\) in the statement of <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a>?</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="ex-counting-binomial-identity"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-binomial-identity"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-counting-binomial-identity"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-binomial-identity"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Prove that \(\displaystyle\sum_{k=0}^n \binom{n}{k} = 2^n\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-binomial-identity"><article class="exercise exercise-like"><p id="p-266">Prove that \(\displaystyle\sum_{k=0}^n \binom{n}{k} = 2^n\) for \(n \geq 0\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-binomial-identity"><article class="exercise exercise-like"><p id="p-265">Prove that \(\displaystyle\sum_{k=0}^n \binom{n}{k} = 2^n\) for \(n \geq 0\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><p id="p-267">Stare at <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> until you see it.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><p id="p-266">Stare at <a class="xref" data-knowl="./knowl/thm-binomial.html" title="Theorem 2.3.5: Binomial Theorem">Theorem 2.3.5</a> until you see it.</p></div></div>
 </div></article></div>
-<p id="p-269">We end this section with a nice application where binomial coefficients appear.</p>
-<article class="example example-like" id="eg-counting-lattice-path"><h6 class="heading">
+<p id="p-268">We end this section with a nice application where binomial coefficients appear.</p>
+<article class="example example-like" id="eg-counting-lattice-path"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-counting-lattice-path"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths.</span>
-</h6>
-<p id="p-270">On the \(xy\)-plane, a <dfn class="terminology">lattice path</dfn> is a path that moves from integer point to integer point by taking only steps of length one to the right or upwards. For instance, the following are three different paths to the point \((4,2)\text{,}\) starting at the origin \((0,0)\text{:}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-lattice-path"><article class="example example-like"><p id="p-269">On the \(xy\)-plane, a <dfn class="terminology">lattice path</dfn> is a path that moves from integer point to integer point by taking only steps of length one to the right or upwards. For instance, the following are three different paths to the point \((4,2)\text{,}\) starting at the origin \((0,0)\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/img-lattice-paths-1.svg" style="width: 100%; height: auto;" alt="A lattice path from (0,0) to (4,2)."></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/img-lattice-paths-2.svg" style="width: 100%; height: auto;" alt="A lattice path from (0,0) to (4,2)."></div>
-<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/img-lattice-paths-3.svg" style="width: 100%; height: auto;" alt="A lattice path from (0,0) to (4,2)."></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="images/img-lattice-paths-1.svg" role="img" class="contained" alt="A lattice path from (0,0) to (4,2)."></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="images/img-lattice-paths-2.svg" role="img" class="contained" alt="A lattice path from (0,0) to (4,2)."></div>
+<div class="sbspanel top" style="width:31.0344827586207%;"><img src="images/img-lattice-paths-3.svg" role="img" class="contained" alt="A lattice path from (0,0) to (4,2)."></div>
 </div></div>
-<p id="p-271">Each path above can be represented as a sequence of 4 R's and 2 U's:</p>
+<p id="p-270">Each path above can be represented as a sequence of 4 R's and 2 U's:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:9.166666666666666%;margin-right:9.166666666666666%;">
-<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-start;"><p id="p-272">RRUURR</p></div>
-<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-start;"><p id="p-273">UURRRR</p></div>
-<div class="sbspanel" style="width:18.3673469387755%;justify-content:flex-start;"><p id="p-274">RRRURU</p></div>
+<div class="sbspanel top" style="width:18.3673469387755%;"><p id="p-271">RRUURR</p></div>
+<div class="sbspanel top" style="width:18.3673469387755%;"><p id="p-272">UURRRR</p></div>
+<div class="sbspanel top" style="width:18.3673469387755%;"><p id="p-273">RRRURU</p></div>
 </div></div>
-<p id="p-275">so the total number of lattice paths from \((0,0)\) to \((4,2)\) is the same as the number of such sequences, which is</p>
+<p id="p-274">so the total number of lattice paths from \((0,0)\) to \((4,2)\) is the same as the number of such sequences, which is</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{6}{4} = \frac{6!}{2! \ 4!}\text{.}
 \end{equation*}
-</div></article><p id="p-276"><a class="xref" data-knowl="./knowl/eg-counting-lattice-path.html" title="Example 2.3.9: Lattice Paths">Example 2.3.9</a> illustrates a useful technique in counting problems: by representing what is being counted (lattice paths) in a different way (sequences of R's and U's), we can uncover the combinatorial structure of these objects, making them easier to count.</p>
-<article class="exercise exercise-like" id="ex-counting-lattice-1"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-lattice-1"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths to \((a,b)\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-lattice-1"><article class="exercise exercise-like"><p id="p-277">Count the number of lattice paths ending at \((a,b)\) for integer \(a,b \geq 0\text{.}\)</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-278">\(\displaystyle\binom{a+b}{a}\) or \(\displaystyle\binom{a+b}{b}\)</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="ex-counting-lattice-2"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-lattice-2"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths, specific numbers.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-lattice-2"><article class="exercise exercise-like"><p id="p-280">Determine the number of lattice paths that end at:</p>
-<ol class="lower-alpha">
-<li id="li-92">\(\displaystyle (5,4)\)</li>
-<li id="li-93">\(\displaystyle (4,4)\)</li>
-<li id="li-94">\(\displaystyle (5,3)\)</li>
-</ol>
-<p data-braille="continuation">Simplify your answers to arrive at a single number for each part. How are your answers related?</p></article></div>
-<article class="exercise exercise-like" id="ex-counting-lattice-pascal"><a data-knowl="" class="id-ref original" data-refid="hk-ex-counting-lattice-pascal"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths and Pascal's Formula.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-lattice-pascal"><article class="exercise exercise-like"><p id="p-281">Prove <a class="xref" data-knowl="./knowl/thm-pascals-formula.html" title="Theorem 2.3.2: Pascal's Formula">Theorem 2.3.2</a> using lattice paths and an idea from <a class="xref" data-knowl="./knowl/ex-counting-lattice-2.html" title="Checkpoint 2.3.11: Lattice Paths, specific numbers">Checkpoint 2.3.11</a>.</p>
+<p id="p-275"><a class="xref" data-knowl="./knowl/eg-counting-lattice-path.html" title="Example 2.3.9: Lattice Paths">Example 2.3.9</a> illustrates a useful technique in counting problems: by representing what is being counted (lattice paths) in a different way (sequences of R's and U's), we can uncover the combinatorial structure of these objects, making them easier to count.</p>
+<article class="exercise exercise-like" id="ex-counting-lattice-1"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-lattice-1"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths to \((a,b)\).</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-lattice-1"><article class="exercise exercise-like"><p id="p-276">Count the number of lattice paths ending at \((a,b)\) for integer \(a,b \geq 0\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><p id="p-282">Count the number of lattice paths to \((k,n-k)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-277">\(\displaystyle\binom{a+b}{a}\) or \(\displaystyle\binom{a+b}{b}\)</p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="ex-counting-lattice-2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-lattice-2"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths, specific numbers.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-lattice-2"><article class="exercise exercise-like"><p id="p-279">Determine the number of lattice paths that end at:</p>
+<ol class="lower-alpha">
+<li id="li-93">\(\displaystyle (5,4)\)</li>
+<li id="li-94">\(\displaystyle (4,4)\)</li>
+<li id="li-95">\(\displaystyle (5,3)\)</li>
+</ol>
+<p class="continuation">Simplify your answers to arrive at a single number for each part. How are your answers related?</p></article></div>
+<article class="exercise exercise-like" id="ex-counting-lattice-pascal"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-counting-lattice-pascal"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths and Pascal's Formula.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-lattice-pascal"><article class="exercise exercise-like"><p id="p-280">Prove <a class="xref" data-knowl="./knowl/thm-pascals-formula.html" title="Theorem 2.3.2: Pascal's Formula">Theorem 2.3.2</a> using lattice paths and an idea from <a class="xref" data-knowl="./knowl/ex-counting-lattice-2.html" title="Checkpoint 2.3.11: Lattice Paths, specific numbers">Checkpoint 2.3.11</a>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><p id="p-281">Count the number of lattice paths to \((k,n-k)\text{.}\)</p></div></div>
 </div></article></div>
 <section class="solutions" id="solutions-4"><h3 class="heading hide-type">
-<span class="type">Solutions</span> <span class="codenumber">2.3.1</span> <span class="title">Solutions to Selected Checkpoints</span>
+<span class="type">Solutions</span> <span class="codenumber"></span> <span class="title">Solutions to Selected Checkpoints</span>
 </h3>
 <article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Coefficient of \(a^2b^3\).</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-13-hidden.html" title="Solution 2.3.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-13-hidden.html" title="Solution 2.3.7.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Prove that \(\displaystyle\sum_{k=0}^n \binom{n}{k} = 2^n\).</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-14-hidden.html" title="Solution 2.3.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-14-hidden.html" title="Solution 2.3.8.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths to \((a,b)\).</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-15-hidden.html" title="Solution 2.3.10.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-15-hidden.html" title="Solution 2.3.10.1"><span class="type">Solution</span></a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Paths and Pascal's Formula.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-16-hidden.html" title="Solution 2.3.12.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-16-hidden.html" title="Solution 2.3.12.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
 </div>
 </body>
 </html>

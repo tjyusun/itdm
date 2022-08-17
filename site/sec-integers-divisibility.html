@@ -1,9 +1,9 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:02-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:19-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,45 +14,30 @@
 <title>Integers and Divisibility</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '95f73ab521816689d';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=95f73ab521816689d"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -65,7 +50,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\vheart}{\textcolor{red}{\varheart}}
 \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
 \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
 \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
@@ -85,6 +70,7 @@ MathJax.Hub.Config({
 \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
 \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
 \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
 
 
 \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
@@ -183,99 +169,99 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-integers-divisibility"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Integers and Divisibility</span>
 </h2>
-<p id="p-55">For completeness we restate here the definition of divisibility and the Division Algorithm.</p>
+<p id="p-54">For completeness we restate here the definition of divisibility and the Division Algorithm.</p>
 <article class="definition definition-like" id="def-divisibility"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Divisibility and Primes.</span>
 </h6>
-<p id="p-56"> Let \(a \in \mathbb{Z}\) and \(b \in \mathbb{Z} \setminus \{0\}\text{.}\) We say that \(a\) <dfn class="terminology">is divisible by</dfn> \(b\text{,}\) or \(b\) <dfn class="terminology">divides</dfn> \(a\text{,}\) denoted by</p>
+<p id="p-55"> Let \(a \in \mathbb{Z}\) and \(b \in \mathbb{Z} \setminus \{0\}\text{.}\) We say that \(a\) <dfn class="terminology">is divisible by</dfn> \(b\text{,}\) or \(b\) <dfn class="terminology">divides</dfn> \(a\text{,}\) denoted by</p>
 <div class="displaymath">
 \begin{equation*}
 b \mid a\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">if there exists \(m \in \mathbb{Z}\) such that \(a = mb\text{.}\)</p>
-<p id="p-57">If \(b\) is not divisible by \(a\text{,}\) then we write \(b \nmid a\text{.}\)</p>
-<p id="p-58">We say that the natural number \(p\) is a <dfn class="terminology">prime number</dfn> if the only natural numbers that divide \(p\) are \(1\) and \(p\text{.}\)</p></article><article class="theorem theorem-like" id="thm-division-algorithm"><h6 class="heading">
+<p class="continuation">if there exists \(m \in \mathbb{Z}\) such that \(a = mb\text{.}\)</p>
+<p id="p-56">If \(b\) is not divisible by \(a\text{,}\) then we write \(b \nmid a\text{.}\)</p>
+<p id="p-57">We say that the natural number \(p\) is a <dfn class="terminology">prime number</dfn> if the only natural numbers that divide \(p\) are \(1\) and \(p\text{.}\)</p></article><article class="theorem theorem-like" id="thm-division-algorithm"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Division Algorithm.</span>
 </h6>
-<p id="p-59">Let \(a,b \in \mathbb{N}\text{.}\) Then there exist unique \(q\) and \(r\) that satisfy all of the following:</p>
+<p id="p-58">Let \(a,b \in \mathbb{N}\text{.}\) Then there exist unique \(q\) and \(r\) that satisfy all of the following:</p>
 <div class="displaymath">
 \begin{equation*}
 a = qb + r, q \geq 0, 0 \leq r \lt b\text{.}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="ex-review-division-algorithm"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-division-algorithm"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="ex-review-division-algorithm"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-division-algorithm"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Verify Theorem 1.3.2.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-division-algorithm"><article class="exercise exercise-like"><p id="p-60">Find \(q\) and \(r\) that satisfy <a class="xref" data-knowl="./knowl/thm-division-algorithm.html" title="Theorem 1.3.2: Division Algorithm">Theorem 1.3.2</a> for the following pairs of numbers \(a\) and \(b\text{:}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-division-algorithm"><article class="exercise exercise-like"><p id="p-59">Find \(q\) and \(r\) that satisfy <a class="xref" data-knowl="./knowl/thm-division-algorithm.html" title="Theorem 1.3.2: Division Algorithm">Theorem 1.3.2</a> for the following pairs of numbers \(a\) and \(b\text{:}\)</p>
 <ol class="lower-alpha">
-<li id="li-40">\(\displaystyle a = 140, b = 22\)</li>
-<li id="li-41">\(\displaystyle a = 22, b = 140\)</li>
-<li id="li-42">\(\displaystyle a = 735, b = 21\)</li>
+<li id="li-41">\(\displaystyle a = 140, b = 22\)</li>
+<li id="li-42">\(\displaystyle a = 22, b = 140\)</li>
+<li id="li-43">\(\displaystyle a = 735, b = 21\)</li>
 </ol></article></div>
 <article class="definition definition-like" id="def-gcd"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">GCD.</span>
 </h6>
-<p id="p-61"> Given integers \(a\) and \(b\) not both zero, their <dfn class="terminology">greatest common divisor</dfn>, denoted by</p>
+<p id="p-60"> Given integers \(a\) and \(b\) not both zero, their <dfn class="terminology">greatest common divisor</dfn>, denoted by</p>
 <div class="displaymath">
 \begin{equation*}
 \gcd(a,b)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">is the largest integer that divides both numbers.</p>
-<p id="p-62">We say that \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd(a,b) = 1\text{.}\)</p></article><p id="p-63">There are a number of ways to determine the GCD of two numbers \(a\) and \(b\text{:}\)</p>
+<p class="continuation">is the largest integer that divides both numbers.</p>
+<p id="p-61">We say that \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd(a,b) = 1\text{.}\)</p></article><p id="p-62">There are a number of ways to determine the GCD of two numbers \(a\) and \(b\text{:}\)</p>
 <ul class="disc">
-<li id="li-43">Listing all factors of \(a\) and \(b\text{,}\) then finding the largest one they have in common;</li>
-<li id="li-44">Writing out the prime factorizations of \(a\) and \(b\text{,}\) then collecting all common prime factors;</li>
-<li id="li-45">The Euclidean Algorithm (repeated division).</li>
+<li id="li-44">Listing all factors of \(a\) and \(b\text{,}\) then finding the largest one they have in common;</li>
+<li id="li-45">Writing out the prime factorizations of \(a\) and \(b\text{,}\) then collecting all common prime factors;</li>
+<li id="li-46">The Euclidean Algorithm (repeated division).</li>
 </ul>
-<article class="exercise exercise-like" id="ex-review-gcd"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-gcd"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-review-gcd"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-gcd"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Compute the GCDs.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-gcd"><article class="exercise exercise-like"><p id="p-64">Apply the three techniques above to compute \(\gcd(220,360)\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-gcd"><article class="exercise exercise-like"><p id="p-63">Apply the three techniques above to compute \(\gcd(220,360)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-65">The GCD is 20.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-64">The GCD is 20.</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="ex-review-gcd-prop"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-gcd-prop"><h6 class="heading">
+<article class="exercise exercise-like" id="ex-review-gcd-prop"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-gcd-prop"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Property of GCDs.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-gcd-prop"><article class="exercise exercise-like"><p id="p-67">If \(a\) and \(b\) are nonzero integers and \(k\) is an integer, show that \(\gcd(a,b) = \gcd(a-kb,b)\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-gcd-prop"><article class="exercise exercise-like"><p id="p-66">If \(a\) and \(b\) are nonzero integers and \(k\) is an integer, show that \(\gcd(a,b) = \gcd(a-kb,b)\text{.}\)</p></article></div>
 <article class="theorem theorem-like" id="thm-bezout"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Bezout's Identity.</span>
 </h6>
-<p id="p-68">Let \(a,b \in \mathbb{Z}\text{,}\) not both zero. Then there exist \(m,n \in \mathbb{Z}\) such that \(am + bn = \gcd(a,b)\text{.}\)</p></article><article class="exercise exercise-like" id="ex-review-bezout"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout"><h6 class="heading">
+<p id="p-67">Let \(a,b \in \mathbb{Z}\text{,}\) not both zero. Then there exist \(m,n \in \mathbb{Z}\) such that \(am + bn = \gcd(a,b)\text{.}\)</p></article><article class="exercise exercise-like" id="ex-review-bezout"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-bezout"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Find all Integer Solutions.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout"><article class="exercise exercise-like"><p id="p-69">Find a pair of integers \(x\) and \(y\) such that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout"><article class="exercise exercise-like"><p id="p-68">Find a pair of integers \(x\) and \(y\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 13x + 11y = 2\text{.}
 \end{equation*}
 </div>
-<p id="p-70">Then explain why the equation \(13x + 11y = 2\) has infinitely many solutions. Can you characterize all such solutions?</p></article></div>
-<article class="exercise exercise-like" id="ex-review-bezout-no-solution"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout-no-solution"><h6 class="heading">
+<p id="p-69">Then explain why the equation \(13x + 11y = 2\) has infinitely many solutions. Can you characterize all such solutions?</p></article></div>
+<article class="exercise exercise-like" id="ex-review-bezout-no-solution"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-bezout-no-solution"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">No Integer Solutions.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-no-solution"><article class="exercise exercise-like"><p id="p-71">Prove that the equation</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-no-solution"><article class="exercise exercise-like"><p id="p-70">Prove that the equation</p>
 <div class="displaymath">
 \begin{equation*}
 14x - 35y = 9
 \end{equation*}
 </div>
-<p data-braille="continuation">has no integer solutions.</p></article></div>
-<article class="exercise exercise-like" id="ex-review-bezout-gcd"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout-gcd"><h6 class="heading">
+<p class="continuation">has no integer solutions.</p></article></div>
+<article class="exercise exercise-like" id="ex-review-bezout-gcd"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-bezout-gcd"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">\(ax + by = d\) has Integer Solutions \(\Leftrightarrow \gcd(a,b) \mid d\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-gcd"><article class="exercise exercise-like"><p id="p-72">Let \(a, b, d, \in \mathbb{N}\text{.}\) Prove that \(ax + by = d\) has integer solutions \(x\) and \(y\) if and only if \(\gcd(a,b) \mid d\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-gcd"><article class="exercise exercise-like"><p id="p-71">Let \(a, b, d, \in \mathbb{N}\text{.}\) Prove that \(ax + by = d\) has integer solutions \(x\) and \(y\) if and only if \(\gcd(a,b) \mid d\text{.}\)</p></article></div>
 <article class="lemma theorem-like" id="lem-euclid"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Euclid's Lemma.</span>
 </h6>
-<p id="p-73">If \(p\) is prime, and \(a\) and \(b\) are integers such that \(p \mid ab\text{,}\) then either \(p \mid a\) or \(p \mid b\) (or both).</p></article><article class="exercise exercise-like" id="ex-review-euclid-proof"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-euclid-proof"><h6 class="heading">
+<p id="p-72">If \(p\) is prime, and \(a\) and \(b\) are integers such that \(p \mid ab\text{,}\) then either \(p \mid a\) or \(p \mid b\) (or both).</p></article><article class="exercise exercise-like" id="ex-review-euclid-proof"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-euclid-proof"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Prove Lemma 1.3.11.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-euclid-proof"><article class="exercise exercise-like"><p id="p-74">Prove <a class="xref" data-knowl="./knowl/lem-euclid.html" title="Lemma 1.3.11: Euclid's Lemma">Lemma 1.3.11</a> using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.7: Bezout's Identity">Theorem 1.3.7</a>.</p></article></div>
-<article class="exercise exercise-like" id="ex-review-bezout-euclid"><a data-knowl="" class="id-ref original" data-refid="hk-ex-review-bezout-euclid"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-euclid-proof"><article class="exercise exercise-like"><p id="p-73">Prove <a class="xref" data-knowl="./knowl/lem-euclid.html" title="Lemma 1.3.11: Euclid's Lemma">Lemma 1.3.11</a> using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.7: Bezout's Identity">Theorem 1.3.7</a>.</p></article></div>
+<article class="exercise exercise-like" id="ex-review-bezout-euclid"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-review-bezout-euclid"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Another Divisibility Property.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-euclid"><article class="exercise exercise-like"><p id="p-75">Let \(m,a,b \in \mathbb{N}\text{.}\) Using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.7: Bezout's Identity">Theorem 1.3.7</a>, prove that if \(m \mid ab\) and \(\gcd(a,m) = 1\text{,}\) then \(m \mid b\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-review-bezout-euclid"><article class="exercise exercise-like"><p id="p-74">Let \(m,a,b \in \mathbb{N}\text{.}\) Using <a class="xref" data-knowl="./knowl/thm-bezout.html" title="Theorem 1.3.7: Bezout's Identity">Theorem 1.3.7</a>, prove that if \(m \mid ab\) and \(\gcd(a,m) = 1\text{,}\) then \(m \mid b\text{.}\)</p></article></div>
 <section class="solutions" id="solutions-1"><h3 class="heading hide-type">
-<span class="type">Solutions</span> <span class="codenumber">1.3.1</span> <span class="title">Solutions to Selected Checkpoints</span>
+<span class="type">Solutions</span> <span class="codenumber"></span> <span class="title">Solutions to Selected Checkpoints</span>
 </h3>
 <article class="exercise-like"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Compute the GCDs.</span>
 </h6>
-<div class="solutions"><a class="original" data-knowl="./knowl/solution-1-hidden.html" title="Solution 1.3.5.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-1-hidden.html" title="Solution 1.3.5.1"><span class="type">Solution</span></a></div></article></section></section></div></main>
 </div>
 </body>
 </html>

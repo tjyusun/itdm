@@ -1,9 +1,9 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:10-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:27-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,45 +14,30 @@
 <title>Writing Mathematics, Part I</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '95f73ab521816689d';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=95f73ab521816689d"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -65,7 +50,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\vheart}{\textcolor{red}{\varheart}}
 \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
 \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
 \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
@@ -85,6 +70,7 @@ MathJax.Hub.Config({
 \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
 \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
 \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
 
 
 \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
@@ -183,84 +169,84 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="app-evaluating-math"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">A.3</span> <span class="title">Writing Mathematics, Part I</span>
 </h2>
-<p id="p-1110">Mathematics is more than just performing calculations. It is about ideas: how concepts and calculations come together to tell a story.</p>
-<p id="p-1111">Effective writing tells the story well and conveys meaning to the audience.</p>
+<p id="p-1120">Mathematics is more than just performing calculations. It is about ideas: how concepts and calculations come together to tell a story.</p>
+<p id="p-1121">Effective writing tells the story well and conveys meaning to the audience.</p>
 <article class="remark remark-like" id="rem-writing-well"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">A.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Some Tips for Effective Math Writing.</span>
 </h6>
-<ul id="p-1112" class="disc">
-<li id="li-364">First of all, the math is correct.</li>
-<li id="li-365">The solution is well-organized; logical structure is easy to follow.</li>
-<li id="li-366">Steps are justified/explained as appropriate to the audience.</li>
-<li id="li-367">Solution is written in complete sentences.</li>
-<li id="li-368">Words (<em class="emphasis">therefore</em>, <em class="emphasis">because</em>, <em class="emphasis">for all</em>) are used instead of symbols (\(\therefore\text{,}\) \(\because\text{,}\) \(\forall\text{.}\))</li>
-<li id="li-369">Equal signs and right-arrows are not just chained together.</li>
+<ul id="p-1122" class="disc">
+<li id="li-367">First of all, the math is correct.</li>
+<li id="li-368">The solution is well-organized; logical structure is easy to follow.</li>
+<li id="li-369">Steps are justified/explained as appropriate to the audience.</li>
+<li id="li-370">Solution is written in complete sentences.</li>
+<li id="li-371">Words (<em class="emphasis">therefore</em>, <em class="emphasis">because</em>, <em class="emphasis">for all</em>) are used instead of symbols (\(\therefore\text{,}\) \(\because\text{,}\) \(\forall\text{.}\))</li>
+<li id="li-372">Equal signs and right-arrows are not just chained together.</li>
 </ul>
-<p data-braille="continuation">Check <a class="external" href="https://math.hmc.edu/su/writing-math-well/" target="_blank">Writing Math Well</a> by Francis Su for some nice handouts.</p></article><p id="p-1113">When your TA or instructor reads your work what exactly are they looking for? How do they assign a grade to your solution or proof?</p>
-<p id="p-1114">Consider the following statement, and suppose that the proof inside the solution link was submitted by a student.</p>
-<article class="example example-like" id="eg-evaluate-1"><h6 class="heading">
+<p class="continuation">Check <a class="external" href="https://math.hmc.edu/su/writing-math-well/" target="_blank">Writing Math Well</a> by Francis Su for some nice handouts.</p></article><p id="p-1123">When your TA or instructor reads your work what exactly are they looking for? How do they assign a grade to your solution or proof?</p>
+<p id="p-1124">Consider the following statement, and suppose that the proof inside the solution link was submitted by a student.</p>
+<article class="example example-like" id="eg-evaluate-1"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-evaluate-1"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Prove this identity.</span>
-</h6>
-<p id="p-1115">If \(n\) is a natural number, then</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-evaluate-1"><article class="example example-like"><p id="p-1125">If \(n\) is a natural number, then</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 3 + 5 + \cdots + (2n-1) = n^2\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like">
-<p id="p-1116"><em class="alert">Proof</em> \(n = 1: 1 = 1\) OK.</p>
-<p id="p-1117">\(n = k: 1 + 3 + 5 + \cdots + (2k-1) = k^2\)</p>
-<p id="p-1118">The hypothesis is, \(n = k + 1: 1 + 3 + 5 + \cdots + (2(k+1) - 1) = (k+1)^2\text{.}\)</p>
-<div class="displaymath" id="p-1119">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
+<p id="p-1126"><em class="alert">Proof</em> \(n = 1: 1 = 1\) OK.</p>
+<p id="p-1127">\(n = k: 1 + 3 + 5 + \cdots + (2k-1) = k^2\)</p>
+<p id="p-1128">The hypothesis is, \(n = k + 1: 1 + 3 + 5 + \cdots + (2(k+1) - 1) = (k+1)^2\text{.}\)</p>
+<div class="displaymath" id="p-1129">
 \begin{equation*}
 1 + 3 + 5 + \cdots + (2k-1) + (2k+1) = k^2 + (2k + 1) = (k+1)^2\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">done.</p>
+<p class="continuation">done.</p>
 </div></div>
-</div></article><article class="remark remark-like" id="rem-rubric-writing"><h6 class="heading">
+</div></article></div>
+<article class="remark remark-like" id="rem-rubric-writing"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">A.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Rubric for Writing.</span>
 </h6>
-<p id="p-1120">Every solution or proof you submit in the assignments or term test will be assigned two grades: one for the mathematics and one for the writing. This rubric will be used to assign the writing grade.</p>
-<ul id="p-1121" class="disc">
-<li id="li-370">
+<p id="p-1130">Every solution or proof you submit in the assignments or term test will be assigned two grades: one for the mathematics and one for the writing. This rubric will be used to assign the writing grade.</p>
+<ul id="p-1131" class="disc">
+<li id="li-373">
 <em class="alert">2 points</em>: Explanations are well-written and appropriate to the target audience, MAT202 students. Guiding text and connecting words make clear the structure of the overall argument. Mathematical symbols are used correctly and convey ideas well. There are no typos or proofreading errors.</li>
-<li id="li-371">
+<li id="li-374">
 <em class="alert">1 point</em>: The solution or proof is somewhat understandable, and the main argument can still be followed. But there are minor errors in organization or the writing, or some justifications may be unclear.</li>
-<li id="li-372">
+<li id="li-375">
 <em class="alert">0 points</em>: Problems with the writing interfere with audience understanding/most of the solution not written in complete sentences or using words.</li>
-</ul></article><article class="exercise exercise-like" id="ex-writing-induction-guide"><a data-knowl="" class="id-ref original" data-refid="hk-ex-writing-induction-guide"><h6 class="heading">
+</ul></article><article class="exercise exercise-like" id="ex-writing-induction-guide"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-writing-induction-guide"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Grade and Reflect.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-writing-induction-guide"><article class="exercise exercise-like"><p id="p-1122">What grade (out of 2 points) would you give the proof in <a class="xref" data-knowl="./knowl/eg-evaluate-1.html" title="Example A.3.2: Prove this identity">Example A.3.2</a> using the rubric in <a class="xref" data-knowl="./knowl/rem-rubric-writing.html" title="Remark A.3.3: Rubric for Writing">Remark A.3.3</a>? Then think about the following guide questions:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-writing-induction-guide"><article class="exercise exercise-like"><p id="p-1132">What grade (out of 2 points) would you give the proof in <a class="xref" data-knowl="./knowl/eg-evaluate-1.html" title="Example A.3.2: Prove this identity">Example A.3.2</a> using the rubric in <a class="xref" data-knowl="./knowl/rem-rubric-writing.html" title="Remark A.3.3: Rubric for Writing">Remark A.3.3</a>? Then think about the following guide questions:</p>
 <ol class="lower-alpha">
-<li id="li-373">Why did you assign it the grade that you did?</li>
-<li id="li-374">Were there any errors in the mathematics of the proof?</li>
-<li id="li-375">What feedback would you give the student?</li>
+<li id="li-376">Why did you assign it the grade that you did?</li>
+<li id="li-377">Were there any errors in the mathematics of the proof?</li>
+<li id="li-378">What feedback would you give the student?</li>
 </ol></article></div>
-<p id="p-1123">Now consider the following problem:</p>
-<article class="example example-like" id="eg-evaluate-2"><h6 class="heading">
+<p id="p-1133">Now consider the following problem:</p>
+<article class="example example-like" id="eg-evaluate-2"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-evaluate-2"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Counting Problem.</span>
-</h6>
-<p id="p-1124">How many arrangements of the word NEWFOUNDLAND have the three N's together but the two D's apart?</p></article><p id="p-1125">In each checkpoint below there is a solution to <a class="xref" data-knowl="./knowl/eg-evaluate-2.html" title="Example A.3.5: Counting Problem">Example A.3.5</a>. To each one assign a grade out of 2 points based on <a class="xref" data-knowl="./knowl/rem-rubric-writing.html" title="Remark A.3.3: Rubric for Writing">Remark A.3.3</a>.</p>
-<article class="exercise exercise-like" id="ex-evaluate-2-a"><a data-knowl="" class="id-ref original" data-refid="hk-ex-evaluate-2-a"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-evaluate-2"><article class="example example-like"><p id="p-1134">How many arrangements of the word NEWFOUNDLAND have the three N's together but the two D's apart?</p></article></div>
+<p id="p-1135">In each checkpoint below there is a solution to <a class="xref" data-knowl="./knowl/eg-evaluate-2.html" title="Example A.3.5: Counting Problem">Example A.3.5</a>. To each one assign a grade out of 2 points based on <a class="xref" data-knowl="./knowl/rem-rubric-writing.html" title="Remark A.3.3: Rubric for Writing">Remark A.3.3</a>.</p>
+<article class="exercise exercise-like" id="ex-evaluate-2-a"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-evaluate-2-a"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.3.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-a"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Sept23-newfoundland-1.png" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
-<article class="exercise exercise-like" id="ex-evaluate-2-no-sentence"><a data-knowl="" class="id-ref original" data-refid="hk-ex-evaluate-2-no-sentence"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-a"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/Sept23-newfoundland-1.png" class="contained" alt=""></div></div></div></article></div>
+<article class="exercise exercise-like" id="ex-evaluate-2-no-sentence"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-evaluate-2-no-sentence"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.3.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-no-sentence"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Sept23-newfoundland-no-sentence.png" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
-<article class="exercise exercise-like" id="ex-evaluate-2-3"><a data-knowl="" class="id-ref original" data-refid="hk-ex-evaluate-2-3"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-no-sentence"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/Sept23-newfoundland-no-sentence.png" class="contained" alt=""></div></div></div></article></div>
+<article class="exercise exercise-like" id="ex-evaluate-2-3"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-evaluate-2-3"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.3.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-3"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Sept23-newfoundland-3.png" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
-<article class="exercise exercise-like" id="ex-evaluate-2-a1b0"><a data-knowl="" class="id-ref original" data-refid="hk-ex-evaluate-2-a1b0"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-3"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/Sept23-newfoundland-3.png" class="contained" alt=""></div></div></div></article></div>
+<article class="exercise exercise-like" id="ex-evaluate-2-a1b0"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-evaluate-2-a1b0"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.3.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-a1b0"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Sept23-newfoundland-a1b0.png" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
-<article class="exercise exercise-like" id="ex-evaluate-2-2"><a data-knowl="" class="id-ref original" data-refid="hk-ex-evaluate-2-2"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-a1b0"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/Sept23-newfoundland-a1b0.png" class="contained" alt=""></div></div></div></article></div>
+<article class="exercise exercise-like" id="ex-evaluate-2-2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-evaluate-2-2"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.3.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-2"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Sept23-newfoundland-2.png" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
-<article class="exercise exercise-like" id="ex-evaluate-2-3b"><a data-knowl="" class="id-ref original" data-refid="hk-ex-evaluate-2-3b"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-2"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/Sept23-newfoundland-2.png" class="contained" alt=""></div></div></div></article></div>
+<article class="exercise exercise-like" id="ex-evaluate-2-3b"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-evaluate-2-3b"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">A.3.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-3b"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/Sept23-newfoundland-3b.png" style="width: 100%; height: auto;" alt=""></div></div></div></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-evaluate-2-3b"><article class="exercise exercise-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/Sept23-newfoundland-3b.png" class="contained" alt=""></div></div></div></article></div></section></div></main>
 </div>
 </body>
 </html>

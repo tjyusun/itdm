@@ -188,6 +188,21 @@
 	</hint>
 </exercise>
 
+<exercise xml:id="ex-cong-phi-multiplicative">
+	<statement>
+		<p>
+			A function <m>f(n)</m> on the integers is said to be <em>multiplicative</em> if <me>f(mn) = f(m)f(n)</me> whenever <m>\gcd(m,n) = 1</m>.
+			<xref ref="def-euler-totient">Euler's Totient Function <m>\phi(m)</m></xref> is a <em>multiplicative</em> function. (The proof uses <xref ref="sec-chinese-remainder"/>.)
+		</p>
+		<p>
+			<ol>
+				<li> Give a general formula for <m>\phi(p_1^{r_1}p_2^{r_2}\cdots p_k^{r_k})</m> where the <m>p_i</m>'s are distinct primes.</li>
+				<li>Compute <m>\phi(9000)</m> and <m>\phi(133947)</m></li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
 <exercise>
 	<statement>
 		<p>

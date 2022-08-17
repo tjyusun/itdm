@@ -30,15 +30,18 @@
     </latex-image-preamble>
     
     <latex-preamble>
+        <!-- COMMENTED THIS OUT June 21, 2021 to make MathJax work -->
+        <!--
         <package>makecell</package>
         <package>setspace</package>
         <package>mdframed</package>
         <package>venndiagram</package>
+        -->
     </latex-preamble>
     
     <macros>
 
-            
+        
         \newcommand{\vheart}{\textcolor{red}{\varheart}}
         \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
         \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
@@ -59,6 +62,7 @@
         \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
         \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
         \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+        
 
         <!-- fixes \color{}{} vs \textcolor{}{} mathjax vs latex issue -->
         \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}

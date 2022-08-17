@@ -271,7 +271,7 @@
 		<title> Describe the Classes II</title>
 		<statement>
 			<p>
-				Let <m>A = \{0,1,2\}</m>, and consider the relation <m>\cong</m> on <m>P(A)</m> defined by
+				Let <m>A = \{0,1,2\}</m>, and consider the relation <m>\cong</m> on <m>P(A) \setminus \{\varnothing\}</m> defined by
 				<me> X \cong Y \Leftrightarrow \text{ the largest element in } X \text{ equals the largest element in } Y</me>.
 				Prove <m>\cong</m> is an equivalence relation, and describe the equivalence classes.
 			</p>

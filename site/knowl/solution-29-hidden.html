@@ -2,9 +2,9 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:29-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:42-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,8 +14,44 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">Towards a contradiction, suppose that each person gets at most one slice only. Then they will eat at most only 6 slices among them, leaving the pizza unfinished. This is a contradiction, so there must be one person who eats at least two slices.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Observe that this proof does not deny the possibility of multiple people getting two slices: it is quite possible that four of the friends ate a slice each, and the two others ate two slices each. It is also possible that one person ate three slices, while the five remaining friends ate a slice each.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">In either case, one person ate at least two slices.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let \(S\) be the number of ordered triples of \(\{1,2,\ldots,b\}\text{.}\) Note that \(|S| = b^3\) by the Product Rule, since there are \(b\) choices per position, and elements can be repeated.</p>
+<p>Now define the following sets:</p>
+<ul class="disc">
+<li>\(A_1 = \) the number of ordered triples that consist of only one element.</li>
+<li>\(A_2 = \) the number of ordered triples that consist of two distinct elements.</li>
+<li>\(A_3 = \) the number of ordered triples that consist of three distinct elements.</li>
+</ul>
+<p class="continuation">Then by the Sum Rule, \(|S| = |A_3| + |A_2| + |A_1|\text{.}\)</p>
+<p>To form an ordered triple with all three elements distinct, we first select three elements from \(\{1,2,\ldots,b\}\) (in \(\binom{b}{3}\) ways), then generate all permutations (there are \(3! = 6\) permutations). Hence</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|A_3| = 6\binom{b}{3}\text{.}
+\end{equation*}
+</div>
+<p>To form an ordered triple with two distinct elements,</p>
+<ul class="disc">
+<li>We first select the two elements (in \(\binom{b}{2}\) ways)—say we picked 1 and 2;</li>
+<li>We pick one of the elements to repeat (there are 2 choices)—say 1;</li>
+<li>We count all permutations (there are 3 spots to choose from to place the non-repeated element)—(1,1,2), (1,2,1), and (2,1,1) in our example.</li>
+</ul>
+<p class="continuation">Hence</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|A_2| = 6\binom{b}{2}\text{.}
+\end{equation*}
+</div>
+<p>Finally,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|A_1| = b
+\end{equation*}
+</div>
+<p class="continuation">since there are \(b\) ordered triples of the form \((i,i,i)\) for \(i = 1,2,\ldots,b\text{.}\)</p>
+<p>Thus the number of ordered triples \(|S|\) that can be formed from the set \(\{1,2,\ldots,b\}\) is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b\text{.}
+\end{equation*}
+</div>
 </div></body>
 </html>

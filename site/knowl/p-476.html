@@ -2,9 +2,9 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:31-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:43-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,7 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Note that the notation \(\lfloor n \rfloor\) denotes the <dfn class="terminology">floor function</dfn>, which returns the largest integer that is less than or equal to \(n\text{.}\)</p>
-<span class="incontext"><a href="sec-inclusion-exclusion.html#p-476">in-context</a></span>
+<p>By following the steps below, prove that there was a period of consecutive days during which you showered exactly 10 times.</p>
+<ol class="lower-alpha">
+<li>Define variables \(x_i\) to be the number of times you took a shower on day \(i\) (\(1 \leq i \leq 14\)), and define \(y_i = x_1 + x_2 + \cdots + x_i\) to be the partial sums. Explain why it suffices to prove \(y_i = y_j + 10\) for some \(i,j\text{.}\)</li>
+<li>Explain why the set<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\{y_1,y_2,\ldots,y_{14},y_1+10,y_2+10,\ldots,y_{14}+10\}
+\end{equation*}
+</div>can only contain numbers from 1 to 27.</li>
+<li>Apply <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> to prove the desired property. What are the pigeons and pigeonholes?</li>
+</ol>
+<span class="incontext"><a href="sec-pigeonhole.html#p-476">in-context</a></span>
 </body>
 </html>

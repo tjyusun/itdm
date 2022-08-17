@@ -1,9 +1,9 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-07T10:56:10-05:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2022-01-04T16:06:27-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -14,45 +14,30 @@
 <title>Writing Mathematics, Part II</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '95f73ab521816689d';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=95f73ab521816689d"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -65,7 +50,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{makecell}\require{setspace}\require{mdframed}\require{venndiagram}\newcommand{\vheart}{\textcolor{red}{\varheart}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\vheart}{\textcolor{red}{\varheart}}
 \newcommand{\vdia}{\textcolor{red}{\vardiamond}}
 \newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
 \newcommand{\mmod}[1]{\ \mathrm{\bf mod}\ #1}
@@ -85,6 +70,7 @@ MathJax.Hub.Config({
 \newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
 \newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
 \newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+
 
 
 \renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
@@ -183,94 +169,94 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="app-writing-math"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">A.4</span> <span class="title">Writing Mathematics, Part II</span>
 </h2>
-<p id="p-1126">Okay, it's your turn to try writing a clear, concise proof of a statement! As we have seen, the use of English words makes proofs more approachable and understandable. Here's a small sample of commonly-used phrases in mathematical proofs. Note the use of the plural <em class="emphasis">we</em> instead of the singular <em class="emphasis">I</em>.</p>
+<p id="p-1136">Okay, it's your turn to try writing a clear, concise proof of a statement! As we have seen, the use of English words makes proofs more approachable and understandable. Here's a small sample of commonly-used phrases in mathematical proofs. Note the use of the plural <em class="emphasis">we</em> instead of the singular <em class="emphasis">I</em>.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:center;">
-<p id="p-1127"><em class="alert">Declare intentions</em></p>
+<div class="sbspanel middle" style="width:50%;">
+<p id="p-1137"><em class="alert">Declare intentions</em></p>
 <ul class="disc">
-<li id="li-376">We will prove...</li>
-<li id="li-377">We want to show that...</li>
-<li id="li-378">In order to prove... we...</li>
-<li id="li-379">At this point we need to find...</li>
-<li id="li-380">We consider the following cases...</li>
+<li id="li-379">We will prove...</li>
+<li id="li-380">We want to show that...</li>
+<li id="li-381">In order to prove... we...</li>
+<li id="li-382">At this point we need to find...</li>
+<li id="li-383">We consider the following cases...</li>
 </ul>
 </div>
-<div class="sbspanel" style="width:50%;justify-content:center;">
-<p id="p-1128"><em class="alert">Clarify implications</em></p>
+<div class="sbspanel middle" style="width:50%;">
+<p id="p-1138"><em class="alert">Clarify implications</em></p>
 <ul class="disc">
-<li id="li-381">Since... then...</li>
-<li id="li-382">Because..., we have...</li>
-<li id="li-383">Therefore/thus/hence...</li>
-<li id="li-384">This means that...</li>
-<li id="li-385">The previous statement implies...</li>
+<li id="li-384">Since... then...</li>
+<li id="li-385">Because..., we have...</li>
+<li id="li-386">Therefore/thus/hence...</li>
+<li id="li-387">This means that...</li>
+<li id="li-388">The previous statement implies...</li>
 </ul>
 </div>
 </div></div>
-<p id="p-1129"><em class="alert">Explain steps</em></p>
+<p id="p-1139"><em class="alert">Explain steps</em></p>
 <ul class="disc">
-<li id="li-386">By assumption, we know that...</li>
-<li id="li-387">By simplication/manipulation,rearranging,...</li>
-<li id="li-388">Because of property/theorem/definition, we have...</li>
+<li id="li-389">By assumption, we know that...</li>
+<li id="li-390">By simplication/manipulation,rearranging,...</li>
+<li id="li-391">Because of property/theorem/definition, we have...</li>
 </ul>
-<p id="p-1130">Moreover—and this is something that takes some practice to get used to—mathematical formulas and equations, when used in English sentences, need to be treated as part of the grammar. A complete sentence is one that expresses a complete idea. For example, <em class="emphasis">TJ baked brownies.</em> is a complete sentence, while <em class="emphasis">baked brownies</em> is not. (The latter is called a phrase, or a fragment.)</p>
+<p id="p-1140">Moreover—and this is something that takes some practice to get used to—mathematical formulas and equations, when used in English sentences, need to be treated as part of the grammar. A complete sentence is one that expresses a complete idea. For example, <em class="emphasis">TJ baked brownies.</em> is a complete sentence, while <em class="emphasis">baked brownies</em> is not. (The latter is called a phrase, or a fragment.)</p>
 <article class="activity project-like" id="ex-writing-grammar"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">A.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Complete sentence or not?</span>
 </h6>
-<p id="p-1131">For each statement below, decide whether it is a complete sentence or not.</p>
-<ol id="p-1132" class="lower-alpha">
-<li id="li-389">x^2.</li>
-<li id="li-390">x^2 = 9.</li>
-<li id="li-391">Because \(A \subseteq B\text{.}\)</li>
-<li id="li-392">6 ways of rearranging the letters of the word DOG.</li>
-<li id="li-393">We will manipulate \(\binom{n}{k}\text{.}\)</li>
-<li id="li-394">\(-1 \in \mathbb{N}\text{.}\)</li>
-</ol></article><p id="p-1133">Something else to note is that the two-column proof method of writing statement and reason beside each other is <em class="emphasis">not</em> a best practice. Besides the fact that it is not really used by math practitioners, these are just lists of bullet points that sometimes even obfuscate the logical links among the parts of a solution. They are sometimes useful, like for organizing your thoughts, but generally it is better form to write in complete sentences.</p>
-<article class="example example-like" id="eg-writing-two-column"><h6 class="heading">
+<p id="p-1141">For each statement below, decide whether it is a complete sentence or not.</p>
+<ol id="p-1142" class="lower-alpha">
+<li id="li-392">x^2.</li>
+<li id="li-393">x^2 = 9.</li>
+<li id="li-394">Because \(A \subseteq B\text{.}\)</li>
+<li id="li-395">6 ways of rearranging the letters of the word DOG.</li>
+<li id="li-396">We will manipulate \(\binom{n}{k}\text{.}\)</li>
+<li id="li-397">\(-1 \in \mathbb{N}\text{.}\)</li>
+</ol></article><p id="p-1143">Something else to note is that the two-column proof method of writing statement and reason beside each other is <em class="emphasis">not</em> a best practice. Besides the fact that it is not really used by math practitioners, these are just lists of bullet points that sometimes even obfuscate the logical links among the parts of a solution. They are sometimes useful, like for organizing your thoughts, but generally it is better form to write in complete sentences.</p>
+<article class="example example-like" id="eg-writing-two-column"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-writing-two-column"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">A Simple Inequality.</span>
-</h6>
-<p id="p-1134">Show that if \(a \gt b \gt 0\text{,}\) then \(a^2 \gt b^2\text{.}\)</p>
-<p id="p-1135"><em class="alert">A Two-Column Proof</em></p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-writing-two-column"><article class="example example-like"><p id="p-1144">Show that if \(a \gt b \gt 0\text{,}\) then \(a^2 \gt b^2\text{.}\)</p>
+<p id="p-1145"><em class="alert">A Two-Column Proof</em></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">Statement</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Reason</td>
+<td class="l m b0 r0 l0 t0 lines">Reason</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(a \gt b\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Given</td>
+<td class="l m b0 r0 l0 t0 lines">Given</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(a - b \gt 0\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Add \(-b\) to both sides</td>
+<td class="l m b0 r0 l0 t0 lines">Add \(-b\) to both sides</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(a + b \gt 0\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Since \(a,b \gt 0\)</td>
+<td class="l m b0 r0 l0 t0 lines">Since \(a,b \gt 0\)</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(a^2 - b^2 \gt 0\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Multiply two previous inequalities</td>
+<td class="l m b0 r0 l0 t0 lines">Multiply two previous inequalities</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\(a^2 \gt b^2\)</td>
-<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">Add \(b^2\) to both sides</td>
+<td class="l m b0 r0 l0 t0 lines">Add \(b^2\) to both sides</td>
 </tr>
 </table></div></div></div>
-<p id="p-1136"><em class="alert">A Proof in Prose</em></p>
-<p id="p-1137">Let \(a\) and \(b\) be positive real numbers with \(a \gt b\text{.}\) Then \(a-b\) and \(a+b\) are both positive. Hence their product \((a-b)(a+b) = a^2 - b^2\) is positive as well, implying \(a^2 \gt b^2\text{.}\)</p></article><article class="activity project-like" id="exe-review-proof-writing"><h6 class="heading">
+<p id="p-1146"><em class="alert">A Proof in Prose</em></p>
+<p id="p-1147">Let \(a\) and \(b\) be positive real numbers with \(a \gt b\text{.}\) Then \(a-b\) and \(a+b\) are both positive. Hence their product \((a-b)(a+b) = a^2 - b^2\) is positive as well, implying \(a^2 \gt b^2\text{.}\)</p></article></div>
+<article class="activity project-like" id="exe-review-proof-writing"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">A.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-1138">Write a clear and complete solution to the following exercise:</p>
-<p id="p-1139">Count the number of nonnegative integer solutions to the equation</p>
+<p id="p-1148">Write a clear and complete solution to the following exercise:</p>
+<p id="p-1149">Count the number of nonnegative integer solutions to the equation</p>
 <div class="displaymath">
 \begin{equation*}
 x_1 + x_2 + x_3 + x_4 = 35
 \end{equation*}
 </div>
-<p data-braille="continuation">that satisfy \(x_1 \geq 4\text{,}\) \(x_2 \geq 1\text{,}\) and \(x_3 \leq 5\text{.}\)</p>
-<p id="p-1140">Try solving it yourself first before looking at the hint!</p>
+<p class="continuation">that satisfy \(x_1 \geq 4\text{,}\) \(x_2 \geq 1\text{,}\) and \(x_3 \leq 5\text{.}\)</p>
+<p id="p-1150">Try solving it yourself first before looking at the hint!</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like"><p id="p-1141">Count the number of solutions that satisfy \(x_3 \geq 6\) first.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like"><p id="p-1151">Count the number of solutions that satisfy \(x_3 \geq 6\) first.</p></div></div>
 </div></article></section></div></main>
 </div>
 </body>

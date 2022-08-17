@@ -152,6 +152,29 @@
 		</statement>
 	</exercise>
 	
+	<p>
+		You may have noticed that in <xref ref="def-multiplicative-inverse"/> we required that <m>\gcd(a,m) = 1</m> holds.
+		Without this condition, could one still obtain an inverse of <m>a</m> modulo <m>m</m>?
+		Before expanding the next exercise try exploring this idea with pairs of values of <m>a</m> and <m>m</m> that <em>aren't</em> relatively prime.
+	</p>
+
+	<exercise xml:id="ex-cong-inverse-existence">
+		<title>When does <m>a</m> have an Inverse Modulo <m>m</m>?</title>
+		<statement>
+			<p>
+				Let <m>a, m \in \mathbb{N}</m>.
+				Prove that <m>a</m> has an inverse modulo <m>m</m> if and only if <m>\gcd(a,m) = 1</m>.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				Prove both directions separately. 
+				<xref ref="thm-bezout" /> will be useful in both cases.
+			</p>
+		</hint>
+	</exercise>
+
+
 	<exercise xml:id="ex-cong-prove-inverse-unique">
 		<title>The Multiplicative Inverse is Unique</title>
 		<statement>
