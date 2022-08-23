@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2019-2020 Timothy Yusun -->
+<!-- Copyright 2019-2022 Timothy Yusun -->
 <!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
 <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
 
@@ -21,7 +21,7 @@
     <preface xml:id="front-welcome">
         <title>Welcome Message</title>
         <p>
-            <alert>January 2022</alert>
+            <alert>September 2022</alert>
         </p>
         
         <sidebyside widths="70%">
@@ -40,24 +40,17 @@
         <p>
             The past two years have brought with it multiple challenges for students and faculty alike.
             We have all been affected in different ways by many different events since, and it is understandable that you may not be in the optimal mindset to study. 
-
-            <!-- especially since you'll be learning online from your homes, dorms, residences.. -->
-            
         </p>
         
         <sidebyside widths="70%">
             <image source="figs/UTMwinter.jpg"><description>View from the third floor of Deerfield Hall on the UTM campus. Footprints on snow-covered pathways in a V shape with bare trees in the middle. </description></image>
         </sidebyside>
     
-<!--
         <p>
-            I hear you, and I personally would like nothing more than to be able to see your faces in person this term. 
-            Unfortunately we've had to make some adjustments, and here we are<mdash/>meeting each other through words on a screen instead.
-        </p>    
--->
-        
-        <p>
-            Things are still in a state of flux: we are slated to be online for the first three weeks and possibly moving back to an in-person environment starting January 31, 2022.
+            Things are slowly starting to move back to more familiar ground: classes will be in-person, and I hope 
+            (TO BE CONTINUED)
+
+
             Regardless of what happens, whether this plan changes or not, the MAT202 teaching team would like to make a number of commitments to you:
             <ul>
                 <li>In all aspects of the course, we will be clear and organized, and reduce as many barriers to your access and learning that we can.</li>
@@ -75,9 +68,9 @@
             </ul>
         </p>
         <p>
-            Moreover, there <em>will</em> be technology difficulties and failures throughout the term... I myself have been known to disappear in the middle of a Zoom class thanks to my wifi. 
+            Moreover, there <em>will</em> be technology difficulties and failures throughout the term... 
             This is to be expected, and we will manage.
-            For the majority of you who took courses online last year, I also hope that you've learned a bit about yourselves<mdash/>your strengths, weaknesses, motivations, desires, and needs<mdash/>and that you are able to take these lessons with you in the new term.
+            For the majority of you who took courses online last year, I also hope that you've learned a bit about yourselves<mdash/>your strengths, weaknesses, motivations, desires, and needs<mdash/>and that you are able to take these lessons with you in the new academic year.
         </p>
         <p>
             Finally, let me reiterate that <em>we want you to succeed</em>, and we will try our best to facilitate this.
@@ -105,7 +98,7 @@
             A number of historical explorations and asides give context to some of these topics, and hopefully allow for a critical reflection on the historical and political underpinnings of the field and of mathematics as a whole.
         </p>
         <p>
-            These notes are being developed specifically for the Fall/Winter 2020-2022 offerings of MAT202: Introduction to Discrete Mathematics course at the <url href="https://www.utm.utoronto.ca/math-cs-stats/home">University of Toronto Mississauga</url>.
+            These notes are being developed specifically for the Fall/Winter 2020-2023 offerings of MAT202: Introduction to Discrete Mathematics course at the <url href="https://www.utm.utoronto.ca/math-cs-stats/home">University of Toronto Mississauga</url>.
             For the online offering of this course a number of short videos will be produced and uploaded into the HTML version of these notes, to be inline with the text and in close proximity to the topic being discussed.
             These videos will be created and uploaded throughout the term.
         </p>
@@ -161,7 +154,7 @@
 
         <colophon xml:id="colophon">
 
-        <edition>Introduction to Discrete Mathematics: Fall/Winter 2021-2022</edition>
+        <edition>Introduction to Discrete Mathematics: Fall/Winter 2022-2023</edition>
 
         <website>
             <name><c>itdm</c></name>
@@ -170,7 +163,7 @@
         </website>
 
         <copyright>
-            <year>2019<ndash/>2021</year>
+            <year>2019<ndash/>2022</year>
             <holder>Timothy Yusun</holder>
             <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
             <shortlicense>

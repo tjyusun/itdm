@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-04T16:06:46-05:00       *-->
+<!--*       on 2022-08-23T17:45:55-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">If \(S = T\) then we call \(R\) a <dfn class="terminology">relation on \(S\)</dfn>.</p>
-<span class="incontext"><a href="sec-equivalence.html#p-587">in-context</a></span>
+<p>Since this quantity is only dependent on how many \(A_i\)'s we are taking, we can write the inclusion-exclusion as:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+N \amp = |U| - \binom{n}{1}|A_1| + \binom{n}{2}|A_1 \cap A_2| - \cdots + (-1)^n\binom{n}{n}|A_1 \cap A_2 \cap \cdots \cap A_n|\\
+\amp = \sum_{k=0}^n (-1)^k\binom{n}{k}\dfrac{(2n-2k)!}{(2!)^{n-k}\ (n-k)!}.
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-principles.html#p-587">in-context</a></span>
 </body>
 </html>

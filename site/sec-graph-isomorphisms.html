@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-04T16:06:25-05:00       *-->
+<!--*       on 2022-08-23T17:45:36-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -171,23 +171,23 @@
 </h2>
 <article class="objectives goal-like" id="objectives-17"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-298">Define graph isomorphism and distinguish it from graph equality.</li>
-<li id="li-299">Define subgraphs and the complement of a graph. Find subgraphs of a given type in a graph; construct the complement of a graph.</li>
-<li id="li-300">Determine whether or not two graphs are isomorphic; if they are, deductively construct an adjacency-preserving bijection between their vertex sets.</li>
-<li id="li-301">Prove statements about graph structure in relation to the concepts in this chapter.</li>
+<li id="li-301">Define graph isomorphism and distinguish it from graph equality.</li>
+<li id="li-302">Define subgraphs and the complement of a graph. Find subgraphs of a given type in a graph; construct the complement of a graph.</li>
+<li id="li-303">Determine whether or not two graphs are isomorphic; if they are, deductively construct an adjacency-preserving bijection between their vertex sets.</li>
+<li id="li-304">Prove statements about graph structure in relation to the concepts in this chapter.</li>
 </ul></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-isomoprhism" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/amvh1any_UQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-883"><em class="alert">Video</em>: <em class="emphasis">Isomorphisms</em></p>
-<p id="p-884">Given any graph \(G = (V,E)\text{,}\) there is usually more than one way of representing \(G\) as a drawing. In fact, the definition of a graph (<a class="xref" data-knowl="./knowl/def-graph.html" title="Definition 5.2.1: Graph">Definition 5.2.1</a>) as a pair \((V,E)\) of vertex and edge sets makes no reference to how it is visualized as a drawing on a sheet of paper. So when we say ‘consider the following graph’ when referring to a drawing, we technically mean: ‘consider the graph that is represented by this drawing…’</p>
-<p id="p-885">In the next example it is clear that \(G_2\) and \(G_3\) are exactly the same graph. But how about \(G_1\text{?}\)</p>
+<p id="p-888"><em class="alert">Video</em>: <em class="emphasis">Isomorphisms</em></p>
+<p id="p-889">Given any graph \(G = (V,E)\text{,}\) there is usually more than one way of representing \(G\) as a drawing. In fact, the definition of a graph (<a class="xref" data-knowl="./knowl/def-graph.html" title="Definition 5.2.1: Graph">Definition 5.2.1</a>) as a pair \((V,E)\) of vertex and edge sets makes no reference to how it is visualized as a drawing on a sheet of paper. So when we say ‘consider the following graph’ when referring to a drawing, we technically mean: ‘consider the graph that is represented by this drawing…’</p>
+<p id="p-890">In the next example it is clear that \(G_2\) and \(G_3\) are exactly the same graph. But how about \(G_1\text{?}\)</p>
 <article class="example example-like" id="eg-graph-equal-isomorphic"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-graph-equal-isomorphic"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Are These the Same Graphs?</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-graph-equal-isomorphic"><article class="example example-like"><p id="p-886">Let \(G_1\text{,}\) \(G_2\text{,}\) and \(G_3\) be the following graphs:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-graph-equal-isomorphic"><article class="example example-like"><p id="p-891">Let \(G_1\text{,}\) \(G_2\text{,}\) and \(G_3\) be the following graphs:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:6.666666666666667%;margin-right:6.666666666666667%;">
 <div class="sbspanel top" style="width:23.0769230769231%;"><img src="images/img-equal-isomorphic-G1.svg" role="img" class="contained" alt=""></div>
 <div class="sbspanel top" style="width:23.0769230769231%;"><img src="images/img-equal-isomorphic-G2.svg" role="img" class="contained" alt=""></div>
 <div class="sbspanel top" style="width:23.0769230769231%;"><img src="images/img-equal-isomorphic-G3.svg" role="img" class="contained" alt=""></div>
 </div></div>
-<p id="p-887">Clearly \(G_2\) and \(G_3\) are <em class="emphasis">equal</em> as graphs—their vertex sets</p>
+<p id="p-892">Clearly \(G_2\) and \(G_3\) are <em class="emphasis">equal</em> as graphs—their vertex sets</p>
 <div class="displaymath">
 \begin{equation*}
 V = \{v_1,v_2,v_3,v_4,v_5\}
@@ -200,14 +200,14 @@ E = \{(v_1,v_2),(v_2,v_3),(v_3,v_4),(v_4,v_5),(v_5,v_1)\}
 \end{equation*}
 </div>
 <p class="continuation">are exactly the same, even if they are drawn differently on the plane.</p>
-<p id="p-888">As for \(G_1\text{,}\) it is apparent that it has the same <em class="emphasis">structure</em> as both \(G_2\) and \(G_3\text{:}\) they are all the <a class="xref" data-knowl="./knowl/def-cycle.html" title="Definition 5.3.12: Cycle">cycle graph</a> on five vertices, or \(C_5\text{,}\) even if they don't share the same vertex set (\(V(G_1) = \{a,b,c,d,e\}\)). This motivates our next definitions.</p></article></div>
+<p id="p-893">As for \(G_1\text{,}\) it is apparent that it has the same <em class="emphasis">structure</em> as both \(G_2\) and \(G_3\text{:}\) they are all the <a class="xref" data-knowl="./knowl/def-cycle.html" title="Definition 5.3.12: Cycle">cycle graph</a> on five vertices, or \(C_5\text{,}\) even if they don't share the same vertex set (\(V(G_1) = \{a,b,c,d,e\}\)). This motivates our next definitions.</p></article></div>
 <article class="definition definition-like" id="def-graph-equality"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Graph Equality.</span>
 </h6>
-<p id="p-889">Two graphs \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are said to be <dfn class="terminology">equal</dfn> if and only if both \(V_1 = V_2\) and \(E_1 = E_2\) hold.</p></article><article class="definition definition-like" id="def-graph-isomorphism"><h6 class="heading">
+<p id="p-894">Two graphs \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are said to be <dfn class="terminology">equal</dfn> if and only if both \(V_1 = V_2\) and \(E_1 = E_2\) hold.</p></article><article class="definition definition-like" id="def-graph-isomorphism"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Graph Isomorphism.</span>
 </h6>
-<p id="p-890">Two simple graphs \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are said to be <dfn class="terminology">isomorphic</dfn>, denoted by \(G_1 \cong G_2\text{,}\) if there exists a function</p>
+<p id="p-895">Two simple graphs \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are said to be <dfn class="terminology">isomorphic</dfn>, denoted by \(G_1 \cong G_2\text{,}\) if there exists a function</p>
 <div class="displaymath">
 \begin{equation*}
 f: V_1 \rightarrow V_2
@@ -220,97 +220,97 @@ f: V_1 \rightarrow V_2
 \end{equation*}
 </div>
 <p class="continuation">That is, \(f\) preserves adjacencies between vertices.</p>
-<p id="p-891">We call \(f\) an <dfn class="terminology">isomorphism</dfn> from \(G_1\) to \(G_2\text{;}\) we also say \(G_1\) is <dfn class="terminology">isomorphic to</dfn> \(G_2\text{.}\) </p></article><p id="p-892">When two graphs \(G_1\) and \(G_2\) are isomorphic, this means one can relabel the vertices of \(G_2\) to match the vertex names of \(G_1\) such that both graphs become equal. (Note that we only define isomorphisms for simple graphs at the moment.)</p>
+<p id="p-896">We call \(f\) an <dfn class="terminology">isomorphism</dfn> from \(G_1\) to \(G_2\text{;}\) we also say \(G_1\) is <dfn class="terminology">isomorphic to</dfn> \(G_2\text{.}\) </p></article><p id="p-897">When two graphs \(G_1\) and \(G_2\) are isomorphic, this means one can relabel the vertices of \(G_2\) to match the vertex names of \(G_1\) such that both graphs become equal. (Note that we only define isomorphisms for simple graphs at the moment.)</p>
 <article class="exercise exercise-like" id="ex-graph-isomorphism"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-isomorphism"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Verify and Construct Isomorphisms.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism"><article class="exercise exercise-like"><p id="p-893">Verify that in the graphs of <a class="xref" data-knowl="./knowl/eg-graph-equal-isomorphic.html" title="Example 5.4.1: Are These the Same Graphs?">Example 5.4.1</a>, the function \(f: V(G_1) \rightarrow V(G_2)\) given by</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism"><article class="exercise exercise-like"><p id="p-898">Verify that in the graphs of <a class="xref" data-knowl="./knowl/eg-graph-equal-isomorphic.html" title="Example 5.4.1: Are These the Same Graphs?">Example 5.4.1</a>, the function \(f: V(G_1) \rightarrow V(G_2)\) given by</p>
 <div class="displaymath">
 \begin{equation*}
 f(a) = v_1, f(b) = v_5, f(c) = v_4, f(d) = v_3, f(e) = v_2
 \end{equation*}
 </div>
 <p class="continuation">is an isomorphism.</p>
-<p id="p-894">Then, construct two other isomorphisms from \(G_1\) to \(G_2\text{.}\) (Yes, there can be multiple!)</p></article></div>
+<p id="p-899">Then, construct two other isomorphisms from \(G_1\) to \(G_2\text{.}\) (Yes, there can be multiple!)</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-determine-isomorphism"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-determine-isomorphism"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Which Pairs are Isomorphic?</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-determine-isomorphism"><article class="exercise exercise-like"><p id="p-895">Given the graphs \(H_1\text{,}\) \(H_2\text{,}\) \(H_3\text{,}\) and \(H_4\text{,}\) which pairs (if any) are isomorphic?</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-determine-isomorphism"><article class="exercise exercise-like"><p id="p-900">Given the graphs \(H_1\text{,}\) \(H_2\text{,}\) \(H_3\text{,}\) and \(H_4\text{,}\) which pairs (if any) are isomorphic?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5.5%;margin-right:5.5%;">
 <div class="sbspanel top" style="width:20.2247191011236%;"><img src="images/img-which-isomorphic-H1.svg" role="img" class="contained" alt=""></div>
-<div class="sbspanel top" style="width:67.4157303370787%;"><p id="p-896">\(H_2 = (V_2,E_2)\text{,}\) where \(V_2 = \{v_1,v_2,v_3,v_4,v_5\}\) and \(E_2 = \{(v_1,v_2),(v_3,v_4),(v_4,v_5),(v_5,v_3)\}\text{.}\)</p></div>
+<div class="sbspanel top" style="width:67.4157303370787%;"><p id="p-901">\(H_2 = (V_2,E_2)\text{,}\) where \(V_2 = \{v_1,v_2,v_3,v_4,v_5\}\) and \(E_2 = \{(v_1,v_2),(v_3,v_4),(v_4,v_5),(v_5,v_3)\}\text{.}\)</p></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:4.25%;margin-right:4.25%;">
-<div class="sbspanel top" style="width:65.5737704918033%;"><p id="p-897">\(H_3 = (V_3,E_3)\text{,}\) where \(V_3 = \{p,q,r,s,t\}\) and \(E_3 = \{(p,q),(p,r),(p,s),(p,t),(r,t),(s,q)\}\)</p></div>
+<div class="sbspanel top" style="width:65.5737704918033%;"><p id="p-902">\(H_3 = (V_3,E_3)\text{,}\) where \(V_3 = \{p,q,r,s,t\}\) and \(E_3 = \{(p,q),(p,r),(p,s),(p,t),(r,t),(s,q)\}\)</p></div>
 <div class="sbspanel top" style="width:25.1366120218579%;"><img src="images/img-which-isomorphic-H4.svg" role="img" class="contained" alt=""></div>
 </div></div></article></div>
-<p id="p-898">It is typically easier to prove that two graphs are <em class="emphasis">not</em> isomorphic, than to prove that they are, since two isomorphic graphs must agree on many of their structural properties. Most obviously, two isomorphic graphs must have the same number of vertices—this is an immediate consequence of the fact that the function \(f\) defining the isomorphism is a bijection.</p>
-<p id="p-899">We now prove two isomorphic graphs must have the same number of edges as well.</p>
+<p id="p-903">It is typically easier to prove that two graphs are <em class="emphasis">not</em> isomorphic, than to prove that they are, since two isomorphic graphs must agree on many of their structural properties. Most obviously, two isomorphic graphs must have the same number of vertices—this is an immediate consequence of the fact that the function \(f\) defining the isomorphism is a bijection.</p>
+<p id="p-904">We now prove two isomorphic graphs must have the same number of edges as well.</p>
 <article class="proposition theorem-like" id="prop-graph-isomorphic-edges"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphic Graphs have the Same Number of Edges.</span>
 </h6>
-<p id="p-900">If \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are isomorphic simple graphs, prove that they must have the same number of edges, or \(|E_1| = |E_2|\text{.}\)</p></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><p id="p-901">Let \(f: V_1 \rightarrow V_2\) be an isomorphism from \(G_1\) to \(G_2\text{.}\) To prove \(|E_1| = |E_2|\) we construct a bijection between these two sets.</p>
-<p id="p-902">We know from <a class="xref" data-knowl="./knowl/def-graph-isomorphism.html" title="Definition 5.4.3: Graph Isomorphism">Definition 5.4.3</a> that for any pair of vertices \(u,v \in V_1\text{,}\)</p>
+<p id="p-905">If \(G_1 = (V_1,E_1)\) and \(G_2 = (V_2,E_2)\) are isomorphic simple graphs, prove that they must have the same number of edges, or \(|E_1| = |E_2|\text{.}\)</p></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><p id="p-906">Let \(f: V_1 \rightarrow V_2\) be an isomorphism from \(G_1\) to \(G_2\text{.}\) To prove \(|E_1| = |E_2|\) we construct a bijection between these two sets.</p>
+<p id="p-907">We know from <a class="xref" data-knowl="./knowl/def-graph-isomorphism.html" title="Definition 5.4.3: Graph Isomorphism">Definition 5.4.3</a> that for any pair of vertices \(u,v \in V_1\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 (u,v) \in E_1 \Leftrightarrow (f(u),f(v)) \in E_2\text{.}
 \end{equation*}
 </div>
 <p class="continuation">So define a function \(g: E_1 \rightarrow E_2\) such that \(g\left( (u,v) \right) = \left( f(u),f(v)\right)\text{.}\)</p>
-<p id="p-903">Since \(f\) is injective, \(g\) must also be injective. Also \(g\) must be surjective since any edge \((x,y) \in E_2\) has a preimage \((f^{-1}(x),f^{-1}(y))\) in \(E_1\text{.}\) Thus \(g\) is a bijection, and \(|E_1| = |E_2|\text{.}\)</p></article></div>
+<p id="p-908">Since \(f\) is injective, \(g\) must also be injective. Also \(g\) must be surjective since any edge \((x,y) \in E_2\) has a preimage \((f^{-1}(x),f^{-1}(y))\) in \(E_1\text{.}\) Thus \(g\) is a bijection, and \(|E_1| = |E_2|\text{.}\)</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-isomorphism-degree"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-isomorphism-degree"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphic Graphs have the Same Degree Sequence.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-degree"><article class="exercise exercise-like"><p id="p-904">Prove that two isomorphic simple graphs must have the same degree sequence.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-degree"><article class="exercise exercise-like"><p id="p-909">Prove that two isomorphic simple graphs must have the same degree sequence.</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-isomorphism-degree-check"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-isomorphism-degree-check"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Check Degree Sequences.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-degree-check"><article class="exercise exercise-like"><p id="p-905">Use <a class="xref" data-knowl="./knowl/ex-graph-isomorphism-degree.html" title="Checkpoint 5.4.7: Isomorphic Graphs have the Same Degree Sequence">Checkpoint 5.4.7</a> to determine which pairs in <a class="xref" data-knowl="./knowl/ex-graph-determine-isomorphism.html" title="Checkpoint 5.4.5: Which Pairs are Isomorphic?">Checkpoint 5.4.5</a> are not isomorphic.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-degree-check"><article class="exercise exercise-like"><p id="p-910">Use <a class="xref" data-knowl="./knowl/ex-graph-isomorphism-degree.html" title="Checkpoint 5.4.7: Isomorphic Graphs have the Same Degree Sequence">Checkpoint 5.4.7</a> to determine which pairs in <a class="xref" data-knowl="./knowl/ex-graph-determine-isomorphism.html" title="Checkpoint 5.4.5: Which Pairs are Isomorphic?">Checkpoint 5.4.5</a> are not isomorphic.</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-isomorphism-degree-converse"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-isomorphism-degree-converse"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Same Degree Sequence does not imply Isomorphism.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-degree-converse"><article class="exercise exercise-like"><p id="p-906">The converse of <a class="xref" data-knowl="./knowl/ex-graph-isomorphism-degree.html" title="Checkpoint 5.4.7: Isomorphic Graphs have the Same Degree Sequence">Checkpoint 5.4.7</a> is not true. Find a counterexample, i.e. two non-isomorphic graphs with the same degree sequence.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-degree-converse"><article class="exercise exercise-like"><p id="p-911">The converse of <a class="xref" data-knowl="./knowl/ex-graph-isomorphism-degree.html" title="Checkpoint 5.4.7: Isomorphic Graphs have the Same Degree Sequence">Checkpoint 5.4.7</a> is not true. Find a counterexample, i.e. two non-isomorphic graphs with the same degree sequence.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-53" id="hint-53"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-53"><div class="hint solution-like"><p id="p-907">2, 2, 2, 1, 1</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like"><p id="p-912">2, 2, 2, 1, 1</p></div></div>
 </div></article></div>
-<p id="p-908">Another way we can prove two graphs are not isomorphic is by looking at their subgraphs, which are graphs whose vertices and edges are subsets of that of the original graph.</p>
+<p id="p-913">Another way we can prove two graphs are not isomorphic is by looking at their subgraphs, which are graphs whose vertices and edges are subsets of that of the original graph.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-subgraphs" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/1KchNM15DCQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-909"><em class="alert">Video</em>: <em class="emphasis">Subgraphs and Complements</em></p>
+<p id="p-914"><em class="alert">Video</em>: <em class="emphasis">Subgraphs and Complements</em></p>
 <article class="definition definition-like" id="def-subgraph"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Subgraph.</span>
 </h6>
-<p id="p-910">Given a graph \(G = (V,E)\text{,}\) a <dfn class="terminology">subgraph</dfn> of \(G\) is another graph \(G' = (V', E')\) where</p>
+<p id="p-915">Given a graph \(G = (V,E)\text{,}\) a <dfn class="terminology">subgraph</dfn> of \(G\) is another graph \(G' = (V', E')\) where</p>
 <ul class="disc">
-<li id="li-302">\(\displaystyle V' \subseteq V\)</li>
-<li id="li-303">\(\displaystyle E' \subseteq E\)</li>
-<li id="li-304">\((v_1,v_2) \in E' \Rightarrow v_1,v_2 \in V'\text{.}\)</li>
+<li id="li-305">\(\displaystyle V' \subseteq V\)</li>
+<li id="li-306">\(\displaystyle E' \subseteq E\)</li>
+<li id="li-307">\((v_1,v_2) \in E' \Rightarrow v_1,v_2 \in V'\text{.}\)</li>
 </ul></article><article class="example example-like" id="eg-subgraph"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-subgraph"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Subgraph Example.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-subgraph"><article class="example example-like"><p id="p-911">Suppose we label the vertices of \(K_4\) to be \(V = \{1,2,3,4\}\text{,}\) so that its edges are \(E = \{(1,2),(1,3),(1,4),(2,3),(2,4),(3,4)\}\text{.}\)</p>
-<p id="p-912">The cycle graph \(C_4\) arises as a subgraph of the complete graph \(K_4\text{,}\) by taking \(V' = \{1,2,3,4\}\) and \(E' = \{(1,2),(2,3),(3,4),(1,4)\}\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-subgraph"><article class="example example-like"><p id="p-916">Suppose we label the vertices of \(K_4\) to be \(V = \{1,2,3,4\}\text{,}\) so that its edges are \(E = \{(1,2),(1,3),(1,4),(2,3),(2,4),(3,4)\}\text{.}\)</p>
+<p id="p-917">The cycle graph \(C_4\) arises as a subgraph of the complete graph \(K_4\text{,}\) by taking \(V' = \{1,2,3,4\}\) and \(E' = \{(1,2),(2,3),(3,4),(1,4)\}\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/img-cycle-subgraph.svg" role="img" class="contained" alt=""></div></div></div></article></div>
 <article class="example example-like" id="eg-subgraph-not-isomorphic"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-subgraph-not-isomorphic"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Subgraphs for Non-isomorphism.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-subgraph-not-isomorphic"><article class="example example-like"><p id="p-913">The graphs \(H_1\) and \(H_2\) have the same degree sequence 4, 4, 4, 4, 4, 4, 4, 4 so we cannot use this to rule out isomorphism. However, \(H_2\) has a \(K_4\) subgraph, while \(H_1\) does not, which tells us that they are not isomorphic.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-subgraph-not-isomorphic"><article class="example example-like"><p id="p-918">The graphs \(H_1\) and \(H_2\) have the same degree sequence 4, 4, 4, 4, 4, 4, 4, 4 so we cannot use this to rule out isomorphism. However, \(H_2\) has a \(K_4\) subgraph, while \(H_1\) does not, which tells us that they are not isomorphic.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5.833333333333333%;margin-right:5.833333333333333%;">
 <div class="sbspanel top" style="width:22.6415094339623%;"><img src="images/img-not-isomorphic-subgraph-1.svg" role="img" class="contained" alt=""></div>
 <div class="sbspanel top" style="width:22.6415094339623%;"><img src="images/img-not-isomorphic-subgraph-2.svg" role="img" class="contained" alt=""></div>
 <div class="sbspanel top" style="width:28.3018867924528%;"><img src="images/img-not-isomorphic-subgraph-3.svg" role="img" class="contained" alt=""></div>
 </div></div>
-<p id="p-914">The reason why this is sufficient to conclude they are not isomorphic is that no matter how we try to form the bijection \(f: V(H_1) \rightarrow V(H_2)\text{,}\) we will never be able to find four vertices in \(V(H_1)\) to map to \(\{1,2,3,4\}\) in \(V(H_2)\) that also preserve adjacency relations. That is, no four vertices in \(H_1\) are all connected to one another by edges, as opposed to \(\{1,2,3,4\}\text{,}\) which are all adjacent to one another in \(H_2\text{.}\)</p></article></div>
-<p id="p-915">In the next example we explicitly construct an adjacency-preserving bijection between the vertex sets of two graphs that are isomorphic.</p>
+<p id="p-919">The reason why this is sufficient to conclude they are not isomorphic is that no matter how we try to form the bijection \(f: V(H_1) \rightarrow V(H_2)\text{,}\) we will never be able to find four vertices in \(V(H_1)\) to map to \(\{1,2,3,4\}\) in \(V(H_2)\) that also preserve adjacency relations. That is, no four vertices in \(H_1\) are all connected to one another by edges, as opposed to \(\{1,2,3,4\}\text{,}\) which are all adjacent to one another in \(H_2\text{.}\)</p></article></div>
+<p id="p-920">In the next example we explicitly construct an adjacency-preserving bijection between the vertex sets of two graphs that are isomorphic.</p>
 <article class="example example-like" id="eg-graph-construct-isomorphism"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-graph-construct-isomorphism"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.13</span><span class="period">.</span><span class="space"> </span><span class="title">Prove Graph Isomorphism.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-graph-construct-isomorphism"><article class="example example-like"><p id="p-916">The following graphs are isomorphic. To produce the bijection \(f\) explicitly we examine the degrees and adjacencies of the vertices.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-graph-construct-isomorphism"><article class="example example-like"><p id="p-921">The following graphs are isomorphic. To produce the bijection \(f\) explicitly we examine the degrees and adjacencies of the vertices.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:22%;margin-right:22%;">
 <div class="sbspanel top" style="width:35.7142857142857%;"><img src="images/img-construct-isomorphism-G.svg" role="img" class="contained" alt=""></div>
 <div class="sbspanel top" style="width:35.7142857142857%;"><img src="images/img-construct-isomorphism-H.svg" role="img" class="contained" alt=""></div>
 </div></div>
-<p id="p-917">The degree sequence of both graphs is 4, 4, 4, 3, 3, 2. So the vertex with degree 2 in \(G\) must be mapped to the vertex with degree 2 in \(H\text{;}\) this means \(3 \leftrightarrow t\) in any isomorphism.</p>
-<p id="p-918">There are two vertices of degree 3 in each: \(\{2,5\}\) in \(G\) and \(\{q,r\}\) in \(H\text{.}\) So we should map either</p>
+<p id="p-922">The degree sequence of both graphs is 4, 4, 4, 3, 3, 2. So the vertex with degree 2 in \(G\) must be mapped to the vertex with degree 2 in \(H\text{;}\) this means \(3 \leftrightarrow t\) in any isomorphism.</p>
+<p id="p-923">There are two vertices of degree 3 in each: \(\{2,5\}\) in \(G\) and \(\{q,r\}\) in \(H\text{.}\) So we should map either</p>
 <div class="displaymath">
 \begin{equation*}
 2 \leftrightarrow q \text{ and } 5 \leftrightarrow r, \quad \text{or} \quad 2 \leftrightarrow r \text{ and } 5 \leftrightarrow q\text{.}
 \end{equation*}
 </div>
 <p class="continuation">Clearly it must be the first option, since \(2\) is adjacent to \(3\) (the vertex with degree 2) in \(G\text{,}\) while \(q\) is adjacent to \(t\) in \(H\text{.}\)</p>
-<p id="p-919">Now we just need to determine how the four vertices of degree 4 \(\{1, 4, 6\}\) in \(G\) are mapped to those in \(H\text{,}\) \(\{p, s, u\}\text{.}\) Observe that we must have \(4 \leftrightarrow p\text{,}\) since they are both adjacent to the vertex of degree 2 in their graphs.</p>
-<p id="p-920">As for the others, you can check that both ways of assigning \(\{s,u\}\) to \(\{1,6\}\) will produce an isomorphism. So we see there are two isomorphisms between \(G\) and \(H\text{:}\)</p>
+<p id="p-924">Now we just need to determine how the four vertices of degree 4 \(\{1, 4, 6\}\) in \(G\) are mapped to those in \(H\text{,}\) \(\{p, s, u\}\text{.}\) Observe that we must have \(4 \leftrightarrow p\text{,}\) since they are both adjacent to the vertex of degree 2 in their graphs.</p>
+<p id="p-925">As for the others, you can check that both ways of assigning \(\{s,u\}\) to \(\{1,6\}\) will produce an isomorphism. So we see there are two isomorphisms between \(G\) and \(H\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
 <div class="sbspanel fixed-width top" style="width:44.4444444444444%;"><table class="tabular">
 <tr>
@@ -355,16 +355,16 @@ f(a) = v_1, f(b) = v_5, f(c) = v_4, f(d) = v_3, f(e) = v_2
 </div></div></article></div>
 <article class="exercise exercise-like" id="ex-graph-prove-isomorphic"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-prove-isomorphic"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Prove Graph Isomorphism.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-prove-isomorphic"><article class="exercise exercise-like"><p id="p-921">Prove the following graphs are isomorphic:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-prove-isomorphic"><article class="exercise exercise-like"><p id="p-926">Prove the following graphs are isomorphic:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;">
 <div class="sbspanel top" style="width:34.8484848484849%;"><img src="images/img-prove-isomorphic-G.svg" role="img" class="contained" alt=""></div>
 <div class="sbspanel top" style="width:40.9090909090909%;"><img src="images/img-prove-isomorphic-H.svg" role="img" class="contained" alt=""></div>
 </div></div></article></div>
-<p id="p-922">Sometimes when graphs have many edges, it is easier to look at the edges they <em class="emphasis">don't have</em>!</p>
+<p id="p-927">Sometimes when graphs have many edges, it is easier to look at the edges they <em class="emphasis">don't have</em>!</p>
 <article class="definition definition-like" id="def-complement"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Graph Complement.</span>
 </h6>
-<p id="p-923">Let \(G = (V,E)\) be a simple graph. We define its <dfn class="terminology">complement</dfn> \(\overline{G}\) to be the graph on the same vertex set \(V(G)\text{,}\) and with edge set</p>
+<p id="p-928">Let \(G = (V,E)\) be a simple graph. We define its <dfn class="terminology">complement</dfn> \(\overline{G}\) to be the graph on the same vertex set \(V(G)\text{,}\) and with edge set</p>
 <div class="displaymath">
 \begin{equation*}
 E' = \{(u,v) \in V \times V: (u,v) \not\in E\}\text{,}
@@ -372,7 +372,7 @@ E' = \{(u,v) \in V \times V: (u,v) \not\in E\}\text{,}
 </div>
 <p class="continuation">that is, \((u,v)\) is an edge in \(\overline{G}\) if and only if it was not an edge in \(G\text{.}\) </p></article><article class="example example-like" id="eg-graph-complement"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-graph-complement"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4.16</span><span class="period">.</span><span class="space"> </span><span class="title">A Graph and its Complement.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-graph-complement"><article class="example example-like"><p id="p-924">A graph \(G\) (red) and its complement \(\overline{G}\) (blue) are shown below.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-graph-complement"><article class="example example-like"><p id="p-929">A graph \(G\) (red) and its complement \(\overline{G}\) (blue) are shown below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
 <div class="sbspanel top" style="width:31.4285714285714%;"><img src="images/img-complement-G.svg" role="img" class="contained" alt=""></div>
 <div class="sbspanel top" style="width:31.4285714285714%;"><img src="images/img-complement-all.svg" role="img" class="contained" alt=""></div>
@@ -381,16 +381,16 @@ E' = \{(u,v) \in V \times V: (u,v) \not\in E\}\text{,}
 <article class="proposition theorem-like" id="prop-graph-isomorphism-complement"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Complements are Isomorphic.</span>
 </h6>
-<p id="p-925">Two graphs \(G\) and \(H\) are isomorphic if and only if their complements \(\overline{G}\) and \(\overline{H}\) are.</p></article><article class="exercise exercise-like" id="ex-graph-isomorphism-complement"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-isomorphism-complement"><h6 class="heading">
+<p id="p-930">Two graphs \(G\) and \(H\) are isomorphic if and only if their complements \(\overline{G}\) and \(\overline{H}\) are.</p></article><article class="exercise exercise-like" id="ex-graph-isomorphism-complement"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-isomorphism-complement"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.18</span><span class="period">.</span><span class="space"> </span><span class="title">Verify Proposition 5.4.17.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-complement"><article class="exercise exercise-like"><p id="p-926">Verify <a class="xref" data-knowl="./knowl/prop-graph-isomorphism-complement.html" title="Proposition 5.4.17: Complements are Isomorphic">Proposition 5.4.17</a> on <a class="xref" data-knowl="./knowl/eg-graph-construct-isomorphism.html" title="Example 5.4.13: Prove Graph Isomorphism">Example 5.4.13</a> and <a class="xref" data-knowl="./knowl/ex-graph-prove-isomorphic.html" title="Checkpoint 5.4.14: Prove Graph Isomorphism">Checkpoint 5.4.14</a>.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-isomorphism-complement"><article class="exercise exercise-like"><p id="p-931">Verify <a class="xref" data-knowl="./knowl/prop-graph-isomorphism-complement.html" title="Proposition 5.4.17: Complements are Isomorphic">Proposition 5.4.17</a> on <a class="xref" data-knowl="./knowl/eg-graph-construct-isomorphism.html" title="Example 5.4.13: Prove Graph Isomorphism">Example 5.4.13</a> and <a class="xref" data-knowl="./knowl/ex-graph-prove-isomorphic.html" title="Checkpoint 5.4.14: Prove Graph Isomorphism">Checkpoint 5.4.14</a>.</p></article></div>
 <article class="exercise exercise-like" id="ex-graph-prove-complement"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-graph-prove-complement"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.19</span><span class="period">.</span><span class="space"> </span><span class="title">Prove Proposition 5.4.17.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-prove-complement"><article class="exercise exercise-like"><p id="p-927">Prove <a class="xref" data-knowl="./knowl/prop-graph-isomorphism-complement.html" title="Proposition 5.4.17: Complements are Isomorphic">Proposition 5.4.17</a>.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-graph-prove-complement"><article class="exercise exercise-like"><p id="p-932">Prove <a class="xref" data-knowl="./knowl/prop-graph-isomorphism-complement.html" title="Proposition 5.4.17: Complements are Isomorphic">Proposition 5.4.17</a>.</p></article></div>
 <article class="remark remark-like" id="remark-isomorphism"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.4.20</span><span class="period">.</span>
 </h6>
-<p id="p-928">In general it is a difficult problem to determine whether or not two graphs are isomorphic. While algorithms exist that work well on random graphs, in the worst-case some of these still exhibit exponential-time behaviour. For some special cases this problem has efficient solutions that run in polynomial time. See <a class="external" href="https://en.wikipedia.org/wiki/Graph_Isomorphism_Problem" target="_blank">this page</a> and the references therein to read more about the problem.</p></article></section></div></main>
+<p id="p-933">In general it is a difficult problem to determine whether or not two graphs are isomorphic. While algorithms exist that work well on random graphs, in the worst-case some of these still exhibit exponential-time behaviour. For some special cases this problem has efficient solutions that run in polynomial time. See <a class="external" href="https://en.wikipedia.org/wiki/Graph_Isomorphism_Problem" target="_blank">this page</a> and the references therein to read more about the problem.</p></article></section></div></main>
 </div>
 </body>
 </html>

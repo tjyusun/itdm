@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-04T16:06:44-05:00       *-->
+<!--*       on 2022-08-23T17:45:53-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Express \(\phi(n)\) as a combination of the sets \(A_i\) and apply <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to obtain the desired formula.</p>
+<p>Given \(n \in \mathbb{N}\) and \(\{p_1,p_2,\ldots,p_k\}\) its set of prime factors, we will prove the following formula for the number of natural numbers less than \(n\) (denoted by \(\phi(n)\)) that are also relatively prime with \(n\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\phi(n) = \sum_{S \subseteq \{1,2,\ldots,k\}}(-1)^{|S|}\dfrac{n}{\prod_{i\in S} p_i}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">(This is known as <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">Euler's totient function</dfn>.)</p>
 <span class="incontext"><a href="sec-inclusion-exclusion.html#p-516">in-context</a></span>
 </body>
 </html>

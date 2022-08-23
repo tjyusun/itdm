@@ -349,6 +349,20 @@
 </exercise>
 
 <exercise>
+	<title>Winter 2021 Term Test</title>
+	<statement>
+		<p>
+			Define a sequence of digits to be <em>triangular</em> if the digits first form a nondecreasing sequence, then a nonincreasing sequence, so that the largest digit(s) is/are in between both subsequences.
+			In other words, a sequence <m> a_1,a_2,\ldots,a_n</m> is triangular if <me>a_1 \leq a_2 \leq \cdots \leq a_{k-1} \leq a_k \geq a_{k+1} \geq \cdots \geq a_{n-1} \geq a_n</me> for some <m>1 \leq k \leq n</m>.
+			For example, <m>0114765320</m> is triangular, while <m>0012431576</m> is not.
+		</p>
+		<p>
+			Count the number of triangular rearrangements of your student number.
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
 <statement>
 	<p>
 		Count the number of ways to distribute 30 identical balls into 9 different boxes so that each box is nonempty.
@@ -546,14 +560,6 @@
 <exercise>
 <statement>
 	<p>
-		<m>\displaystyle\binom{2n}{n} = 2\binom{2n-1}{n-1}</m>
-	</p>
-</statement>
-</exercise>
-
-<exercise>
-<statement>
-	<p>
 		<m>\displaystyle b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b</m>
 	</p>
 </statement>
@@ -592,6 +598,31 @@
 		<me>b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b</me>.
 	</p>
 </solution>
+</exercise>
+
+<exercise>
+	<title>Winter 2021 Term Test</title>
+	<statement>
+		<p>
+			<m>\displaystyle \sum_{k=0}^n\sum_{m=0}^{n-k} \binom{n}{k} \binom{n-k}{m} = 3^n </m>
+		</p>
+	</statement>
+</exercise>
+
+
+<exercise>
+	<statement>
+		<p>
+			<m>
+				\displaystyle \binom{k+7}{7} = \binom{k+4}{4} \binom{2}{2} + \binom{k+3}{4}\binom{3}{2} + \cdots + \binom{4}{4}\binom{k+2}{2} 
+			</m>
+		</p>
+	</statement>
+	<hint>
+		<p>
+			Count the number of <m>7</m>-element subsets of <m>\{1,2,\ldots,k+7\}</m>.
+		</p>
+	</hint>
 </exercise>
 </exercisegroup>
 

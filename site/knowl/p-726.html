@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-04T16:06:52-05:00       *-->
+<!--*       on 2022-08-23T17:46:01-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,28 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Hence, each integer \(ab_i\) is congruent modulo \(m\) to distinct elements in \(S\text{:}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-ab_1 \amp \equiv b_{j_1} \Mod{m}\\
-ab_2 \amp \equiv b_{j_2} \Mod{m}\\
-\vdots \amp\\
-ab_{\phi(m)} \amp \equiv b_{j_{\phi(m)}} \Mod{m}
-\end{align*}
-</div>
-<p class="continuation">Multiplying all the congruences together gives another congruence, where the right-hand-side is just</p>
+<p>First define the set</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\displaystyle\prod_{k=1}^{\phi(m)} b_{j_k} = \displaystyle\prod_{i=1}^{\phi(m)} b_i
+S = \{y : 1 \leq y \leq m, \gcd(y,m) = 1\}
 \end{equation*}
 </div>
-<p class="continuation">since each element of \(S\) appears exactly once. Hence,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\prod_{i=1}^{\phi(m)} ab_i \equiv \prod_{i=1}^{\phi(m)} b_i \Mod{m} \Rightarrow a^{\phi(m)} \equiv 1 \Mod{m}
-\end{equation*}
-</div>
-<p class="continuation">by an application of <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.14: Dividing both sides of a Congruence">Proposition 4.2.14</a>.</p>
+<p class="continuation">to be the set of natural numbers smaller than \(m\) and relatively prime with \(m\text{.}\) We know that there are exactly \(\phi(m)\) elements in the set \(S\text{,}\) so we can label them as \(S = \{b_1,b_2,\ldots,b_{\phi(m)}\}\text{,}\) where \(\gcd(b_i,m) = 1\) for \(i = 1,2,\ldots,\phi(m)\text{.}\)</p>
 <span class="incontext"><a href="sec-euler.html#p-726">in-context</a></span>
 </body>
 </html>

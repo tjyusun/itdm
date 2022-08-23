@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-04T16:06:42-05:00       *-->
+<!--*       on 2022-08-23T17:45:51-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,10 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>To form an ordered triple with two distinct elements,</p>
-<ul class="disc">
-<li>We first select the two elements (in \(\binom{b}{2}\) ways)—say we picked 1 and 2;</li>
-<li>We pick one of the elements to repeat (there are 2 choices)—say 1;</li>
-<li>We count all permutations (there are 3 spots to choose from to place the non-repeated element)—(1,1,2), (1,2,1), and (2,1,1) in our example.</li>
-</ul>
-<p class="continuation">Hence</p>
+<p>To form an ordered triple with all three elements distinct, we first select three elements from \(\{1,2,\ldots,b\}\) (in \(\binom{b}{3}\) ways), then generate all permutations (there are \(3! = 6\) permutations). Hence</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-|A_2| = 6\binom{b}{2}\text{.}
+|A_3| = 6\binom{b}{3}\text{.}
 \end{equation*}
 </div>
 <span class="incontext"><a href="exercises-counting.html#p-425">in-context</a></span>

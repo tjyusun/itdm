@@ -137,6 +137,15 @@
 </exercise>
 
 <exercise>
+	<title>Fall 2021 Final</title>
+	<statement>
+		If we select 20 subsets of size at least five from the set 
+		<m>U = \{2,5,8,11,14,17,20\}</m>,
+		show that two of these subsets will have the same sum.
+	</statement>
+</exercise>
+
+<exercise>
 <statement>
 	<p>
 		The Greater Toronto Area has a population of about 6 million.
@@ -259,8 +268,19 @@
 </exercise>
 
 
-
-
+<exercise>
+	<title>Winter 2022 Final</title>
+	<statement>
+		<p>
+			Count the number of five-card hands from a standard deck of cards that satisfy <em>at least one</em> of the following conditions:
+			<ul>
+				<li>The hand has only hearts or spades.</li>
+				<li>The hand has exactly one three-of-a-kind.</li>
+				<li>The hand has exactly two kings.</li>
+			</ul>
+		</p>
+	</statement>
+</exercise>
 
 
 <exercise>

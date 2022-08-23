@@ -722,6 +722,26 @@
 </exercise>
 
 <exercise>
+	<title>Fall 2020 Final</title>
+	<statement>
+		<p>
+			Let <m>n,k \in \mathbb{N}</m>, and define the family of graphs <m>G_{n,k} = (V_{n},E_{n,k})</m> on the vertex set 
+			<me>V_n = \{1,2,3,\ldots,n\}</me>
+			and with edge set 
+			<me>E_{n,k} = \{(i,j) \in V_n \times V_n: i \equiv j \Mod{k}\}</me>.
+		</p>
+		<p>
+			In other words, two vertices <m>i</m> and <m>j</m> are adjacent if they are congruent modulo <m>k</m>.
+			<ol label = "(a)">
+				<li> Draw <m>G_{4,2}</m> and <m>G_{7,3}</m> and show they are both disconnected.</li>
+				<li> Show that <m>G_{n,k}</m> is connected if and only if <m>k = 1</m>.</li>
+				<li> Show that <m>G_{n,k}</m> is the empty graph if and only if <m>n \leq k</m>.</li>
+			</ol>
+		</p>
+	</statement>
+</exercise>
+
+<exercise>
 	<statement>
 		<p>
 			Find an Eulerian trail in <m>K_{2,4}</m>.
@@ -745,7 +765,7 @@
 	</statement>
 </exercise>
 
-<exercise>
+<exercise xml:id="ex-hamiltonian-kmn">
 	<statement>
 		<p>
 			Find all pairs of natural numbers <m>(m,n)</m> for which <m>K_{m,n}</m> is Hamiltonian.
@@ -907,7 +927,13 @@
 	</hint>
 </exercise>
 
-
+<exercise>
+	<statement>
+		<p>
+			For the pairs <m>(m,n)</m> you found in <xref ref="ex-hamiltonian-kmn" />, how many different Hamiltonian cycles are contained in <m>K_{m,n}</m>?
+		</p>
+	</statement>
+</exercise>
 
 </exercises>
 

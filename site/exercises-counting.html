@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-04T16:06:21-05:00       *-->
+<!--*       on 2022-08-23T17:45:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -296,11 +296,21 @@
 <li id="li-159">Avoid the point \((3,3)\text{.}\)</li>
 <li id="li-160">Pass through the point \((2,2)\) <em class="emphasis">and</em> avoid the point <em class="emphasis">(3,3)</em>.</li>
 </ol>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="images/divex-img-lattice-paths.svg" role="img" class="contained" alt="Example of a rectangle."></div></div></div></article><article class="exercise exercise-like" id="exercise-62"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<p id="p-391">Count the number of ways to distribute 30 identical balls into 9 different boxes so that each box is nonempty.</p></article><article class="exercise exercise-like" id="exercise-63"><h6 class="heading">
-<span class="codenumber">17<span class="period">.</span></span><span class="space"> </span><span class="title">Fall 2019 Term Test.</span>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="images/divex-img-lattice-paths.svg" role="img" class="contained" alt="Example of a rectangle."></div></div></div></article><article class="exercise exercise-like" id="exercise-62"><h6 class="heading">
+<span class="codenumber">16<span class="period">.</span></span><span class="space"> </span><span class="title">Winter 2021 Term Test.</span>
 </h6>
-<p id="p-392">How many arrangements of the word ONTARIO:</p>
+<p id="p-391">Define a sequence of digits to be <em class="emphasis">triangular</em> if the digits first form a nondecreasing sequence, then a nonincreasing sequence, so that the largest digit(s) is/are in between both subsequences. In other words, a sequence \(a_1,a_2,\ldots,a_n\) is triangular if</p>
+<div class="displaymath">
+\begin{equation*}
+a_1 \leq a_2 \leq \cdots \leq a_{k-1} \leq a_k \geq a_{k+1} \geq \cdots \geq a_{n-1} \geq a_n
+\end{equation*}
+</div>
+<p class="continuation">for some \(1 \leq k \leq n\text{.}\) For example, \(0114765320\) is triangular, while \(0012431576\) is not.</p>
+<p id="p-392">Count the number of triangular rearrangements of your student number.</p></article><article class="exercise exercise-like" id="exercise-63"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-393">Count the number of ways to distribute 30 identical balls into 9 different boxes so that each box is nonempty.</p></article><article class="exercise exercise-like" id="exercise-64"><h6 class="heading">
+<span class="codenumber">18<span class="period">.</span></span><span class="space"> </span><span class="title">Fall 2019 Term Test.</span>
+</h6>
+<p id="p-394">How many arrangements of the word ONTARIO:</p>
 <ol class="lower-alpha">
 <li id="li-161">
 <em class="emphasis">do not</em> have any two vowels beside each other?</li>
@@ -308,39 +318,39 @@
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">
-<p id="p-393">(a). If no vowels can be beside each other, then the arrangement must have the pattern <em class="emphasis">vowel-consonant-vowel-consonant-vowel-consonant-vowel</em>. Hence to create an arrangement, we just need to:</p>
+<p id="p-395">(a). If no vowels can be beside each other, then the arrangement must have the pattern <em class="emphasis">vowel-consonant-vowel-consonant-vowel-consonant-vowel</em>. Hence to create an arrangement, we just need to:</p>
 <ul class="disc">
 <li id="li-163">Step 1: Arrange vowels A, I, O, O (\(4!/2!\) ways)</li>
 <li id="li-164">Step 2: Arrange consonants N, T, R (\(3!\) ways)</li>
 </ul>
 <p class="continuation">where these two steps are performed independently of each other. Hence there are \(\dfrac{4!}{2!} \cdot 3!\) arrangements that satisfy the given condition.</p>
-<p id="p-394">(b). The vowels have to be in the order AIOO from left to right, and this fixes the ordering of the vowels. Hence to create an arrangement, we need to perform the following steps:</p>
+<p id="p-396">(b). The vowels have to be in the order AIOO from left to right, and this fixes the ordering of the vowels. Hence to create an arrangement, we need to perform the following steps:</p>
 <ul class="disc">
 <li id="li-165">Step 1: Arrange consonants (\(3!\) ways)</li>
 <li id="li-166">
-<p id="p-395">Step 2: Insert the three consonants among the vowels—since consonant order has been fixed in the previous step, this is equivalent to distributing 3 indistinguishable balls into 5 distinguishable bins corresponding to the five places in</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><p id="p-396">_ A _ I _ O _ O _</p></div></div></div>
-<p id="p-397">There are \(\binom{7}{3}\) ways to do this by <a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a>.</p>
+<p id="p-397">Step 2: Insert the three consonants among the vowels—since consonant order has been fixed in the previous step, this is equivalent to distributing 3 indistinguishable balls into 5 distinguishable bins corresponding to the five places in</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><p id="p-398">_ A _ I _ O _ O _</p></div></div></div>
+<p id="p-399">There are \(\binom{7}{3}\) ways to do this by <a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a>.</p>
 </li>
 </ul>
 <p class="continuation">Hence there are \(3! \cdot \displaystyle\binom{7}{3}\) such arrangements.</p>
-<p id="p-398"><em class="alert">Note</em>: there are other (even simpler) solutions. Can you solve (b) in as many different ways as you can?</p>
+<p id="p-400"><em class="alert">Note</em>: there are other (even simpler) solutions. Can you solve (b) in as many different ways as you can?</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-64"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<p id="p-399">Count the number of ways \(2n\) people can be grouped into pairs.</p>
-<p id="p-400">For example, when \(n = 2\) and there are four people A, B, C, and D, then there are three ways to pair them up: AB/CD, AC/BD, AD/BC.</p></article><div class="exercisegroup" id="exercisegroup-1">
-<div class="introduction" id="introduction-6"><p id="p-401">Find the number of integer solutions to each system:</p></div>
+</div></article><article class="exercise exercise-like" id="exercise-65"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="p-401">Count the number of ways \(2n\) people can be grouped into pairs.</p>
+<p id="p-402">For example, when \(n = 2\) and there are four people A, B, C, and D, then there are three ways to pair them up: AB/CD, AC/BD, AD/BC.</p></article><div class="exercisegroup" id="exercisegroup-1">
+<div class="introduction" id="introduction-6"><p id="p-403">Find the number of integer solutions to each system:</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-65"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
-<p id="p-402">\(x_1 + x_2 + x_3 = 30\text{,}\) \(x_1, x_2, x_3 \geq 0\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-66"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="p-404">\(x_1 + x_2 + x_3 = 30\text{,}\) \(x_1, x_2, x_3 \geq 0\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like"><p id="p-403"><a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a> gives \({{3+30-1}\choose{30}} = 496\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-66"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
-<p id="p-404">\(x_1 + x_2 + x_3 + x_4 = 2020\text{,}\) \(x_1 \geq 30\text{,}\) \(x_2 \geq 40\text{,}\) \(x_3 \geq 50\text{,}\) \(x_4 \geq 100\)</p></article><article class="exercise exercise-like" id="exercise-67"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
-<p id="p-405">\(x_1 + x_2 + x_3 + x_4 = 2020\text{,}\) \(x_1 \geq 300\text{,}\) \(x_2 \geq 400\text{,}\) \(x_3 \geq 500\text{,}\) \(x_4 \geq 1000\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like"><p id="p-405"><a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a> gives \({{3+30-1}\choose{30}} = 496\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-67"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<p id="p-406">\(x_1 + x_2 + x_3 + x_4 = 2020\text{,}\) \(x_1 \geq 30\text{,}\) \(x_2 \geq 40\text{,}\) \(x_3 \geq 50\text{,}\) \(x_4 \geq 100\)</p></article><article class="exercise exercise-like" id="exercise-68"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p id="p-407">\(x_1 + x_2 + x_3 + x_4 = 2020\text{,}\) \(x_1 \geq 300\text{,}\) \(x_2 \geq 400\text{,}\) \(x_3 \geq 500\text{,}\) \(x_4 \geq 1000\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
-<p id="p-406">We first try simplifying the question by making the substitution \(y_i = x_i - c_i\) where \(x_i \geq c_i\) is given. We get</p>
+<p id="p-408">We first try simplifying the question by making the substitution \(y_i = x_i - c_i\) where \(x_i \geq c_i\) is given. We get</p>
 <div class="displaymath">
 \begin{equation*}
 y_1+y_2+y_3+y_4 = 2020-300-400-500-1000 = -180 \lt 0\text{.}
@@ -348,12 +358,12 @@ y_1+y_2+y_3+y_4 = 2020-300-400-500-1000 = -180 \lt 0\text{.}
 </div>
 <p class="continuation">Therefore there are no solutions.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-68"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
-<p id="p-407">\(x_1 + x_2 + x_3 = 12\text{,}\) \(3 \leq x_1 \leq 5\text{,}\) \(1 \leq x_2\text{,}\) \(1 \leq x_3 \leq 7\)</p></article>
+</div></article><article class="exercise exercise-like" id="exercise-69"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
+<p id="p-409">\(x_1 + x_2 + x_3 = 12\text{,}\) \(3 \leq x_1 \leq 5\text{,}\) \(1 \leq x_2\text{,}\) \(1 \leq x_3 \leq 7\)</p></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-69"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
-<p id="p-408">Find the number of integer solutions to</p>
+<article class="exercise exercise-like" id="exercise-70"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
+<p id="p-410">Find the number of integer solutions to</p>
 <div class="displaymath">
 \begin{equation*}
 x_1 + x_2 - x_3 = -4
@@ -361,10 +371,10 @@ x_1 + x_2 - x_3 = -4
 </div>
 <p class="continuation">such that \(x_1, x_2, x_3 \geq 0\) and \(x_3 \leq 10\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-28" id="hint-28"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-28"><div class="hint solution-like"><p id="p-409">Let \(y_3 = 10 - x_3\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-70"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
-<p id="p-410">Find the number of nonnegative integer solutions to \(x_1 + x_2 + \cdots + x_k \leq n\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-71"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
-<p id="p-411">Prove the identity</p>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-28" id="hint-28"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-28"><div class="hint solution-like"><p id="p-411">Let \(y_3 = 10 - x_3\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-71"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
+<p id="p-412">Find the number of nonnegative integer solutions to \(x_1 + x_2 + \cdots + x_k \leq n\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
+<p id="p-413">Prove the identity</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{k=0}^n \binom{n}{k}^2 = \binom{2n}{n}
@@ -373,12 +383,12 @@ x_1 + x_2 - x_3 = -4
 <p class="continuation">by counting the number of subsets of size \(n\) of the set \(\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
-<p id="p-412">The right-hand-side is exactly the number of \(n\)-element subsets of the given set \(\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}\text{.}\)</p>
-<p id="p-413">We need to show that the left-hand side counts the same collection of objects. Since there is a sum from \(k = 0\) to \(k = n\text{,}\) let's think about possible cases.</p>
-<p id="p-414">The set \(\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}\) has two types of elements: \(a_i\)'s and \(b_i\)'s. So let's take cases on how many of the \(a_i\)'s we pick when forming an $n$-element subset.</p>
-<p id="p-415">Suppose that we pick \(k\) of the \(a_i\)'s. This means we need to take \(n-k\) of the \(b_i\)'s to create an \(n\)-subset. Or equivalently, throw away \(k\) of the \(b_i\)'s and use whatever is left. By the product rule we can count this by multiplying \(\displaystyle\binom{n}{k}\binom{n}{k}\text{.}\)</p>
-<p id="p-416">For example, to include 3 of the \(a_i\)'s in our subset, we can pick them in \(\displaystyle\binom{n}{3}\) ways. Then we need to exclude 3 of the \(b_i\)'s to end up with \(n-3\) \(b_i\) elements to include in our subset and make it have \(n\) elements. There are \(\displaystyle\binom{n}{3}\binom{n}{3}\) ways to do this.</p>
-<p id="p-417">It is a partition of the collection of all \(n\)-subsets to divide them into cases by how many of the \(a_i\)'s are picked, from \(k = 0\) to \(k=n\text{.}\) Hence the sum rule gives the left-hand side:</p>
+<p id="p-414">The right-hand-side is exactly the number of \(n\)-element subsets of the given set \(\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}\text{.}\)</p>
+<p id="p-415">We need to show that the left-hand side counts the same collection of objects. Since there is a sum from \(k = 0\) to \(k = n\text{,}\) let's think about possible cases.</p>
+<p id="p-416">The set \(\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}\) has two types of elements: \(a_i\)'s and \(b_i\)'s. So let's take cases on how many of the \(a_i\)'s we pick when forming an $n$-element subset.</p>
+<p id="p-417">Suppose that we pick \(k\) of the \(a_i\)'s. This means we need to take \(n-k\) of the \(b_i\)'s to create an \(n\)-subset. Or equivalently, throw away \(k\) of the \(b_i\)'s and use whatever is left. By the product rule we can count this by multiplying \(\displaystyle\binom{n}{k}\binom{n}{k}\text{.}\)</p>
+<p id="p-418">For example, to include 3 of the \(a_i\)'s in our subset, we can pick them in \(\displaystyle\binom{n}{3}\) ways. Then we need to exclude 3 of the \(b_i\)'s to end up with \(n-3\) \(b_i\) elements to include in our subset and make it have \(n\) elements. There are \(\displaystyle\binom{n}{3}\binom{n}{3}\) ways to do this.</p>
+<p id="p-419">It is a partition of the collection of all \(n\)-subsets to divide them into cases by how many of the \(a_i\)'s are picked, from \(k = 0\) to \(k=n\text{.}\) Hence the sum rule gives the left-hand side:</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{0}\binom{n}{0} + \binom{n}{1}\binom{n}{1} + \cdots + \binom{n}{n}\binom{n}{n} = \sum_{k=0}^n \binom{n}{k}^2\text{.}
@@ -393,29 +403,28 @@ x_1 + x_2 - x_3 = -4
 <p class="continuation">holds.</p>
 </div></div>
 </div></article><div class="exercisegroup" id="exercisegroup-2">
-<div class="introduction" id="introduction-7"><p id="p-418">Prove the following identities <em class="alert">using combinatorial arguments</em>. Clearly explain which sets or objects you are counting in two ways.</p></div>
+<div class="introduction" id="introduction-7"><p id="p-420">Prove the following identities <em class="alert">using combinatorial arguments</em>. Clearly explain which sets or objects you are counting in two ways.</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
-<p id="p-419">\(\displaystyle\sum_{i=1}^n (i-1) = \binom{n}{2}\)</p></article><article class="exercise exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
-<p id="p-420">\(\displaystyle\binom{2n}{n} = 2\binom{2n-1}{n-1}\)</p></article><article class="exercise exercise-like" id="exercise-74"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
-<p id="p-421">\(\displaystyle b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b\)</p>
+<article class="exercise exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
+<p id="p-421">\(\displaystyle\sum_{i=1}^n (i-1) = \binom{n}{2}\)</p></article><article class="exercise exercise-like" id="exercise-74"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
+<p id="p-422">\(\displaystyle b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like">
-<p id="p-422">Let \(S\) be the number of ordered triples of \(\{1,2,\ldots,b\}\text{.}\) Note that \(|S| = b^3\) by the Product Rule, since there are \(b\) choices per position, and elements can be repeated.</p>
-<p id="p-423">Now define the following sets:</p>
+<p id="p-423">Let \(S\) be the number of ordered triples of \(\{1,2,\ldots,b\}\text{.}\) Note that \(|S| = b^3\) by the Product Rule, since there are \(b\) choices per position, and elements can be repeated.</p>
+<p id="p-424">Now define the following sets:</p>
 <ul class="disc">
 <li id="li-167">\(A_1 = \) the number of ordered triples that consist of only one element.</li>
 <li id="li-168">\(A_2 = \) the number of ordered triples that consist of two distinct elements.</li>
 <li id="li-169">\(A_3 = \) the number of ordered triples that consist of three distinct elements.</li>
 </ul>
 <p class="continuation">Then by the Sum Rule, \(|S| = |A_3| + |A_2| + |A_1|\text{.}\)</p>
-<p id="p-424">To form an ordered triple with all three elements distinct, we first select three elements from \(\{1,2,\ldots,b\}\) (in \(\binom{b}{3}\) ways), then generate all permutations (there are \(3! = 6\) permutations). Hence</p>
+<p id="p-425">To form an ordered triple with all three elements distinct, we first select three elements from \(\{1,2,\ldots,b\}\) (in \(\binom{b}{3}\) ways), then generate all permutations (there are \(3! = 6\) permutations). Hence</p>
 <div class="displaymath">
 \begin{equation*}
 |A_3| = 6\binom{b}{3}\text{.}
 \end{equation*}
 </div>
-<p id="p-425">To form an ordered triple with two distinct elements,</p>
+<p id="p-426">To form an ordered triple with two distinct elements,</p>
 <ul class="disc">
 <li id="li-170">We first select the two elements (in \(\binom{b}{2}\) ways)—say we picked 1 and 2;</li>
 <li id="li-171">We pick one of the elements to repeat (there are 2 choices)—say 1;</li>
@@ -427,20 +436,27 @@ x_1 + x_2 - x_3 = -4
 |A_2| = 6\binom{b}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-426">Finally,</p>
+<p id="p-427">Finally,</p>
 <div class="displaymath">
 \begin{equation*}
 |A_1| = b
 \end{equation*}
 </div>
 <p class="continuation">since there are \(b\) ordered triples of the form \((i,i,i)\) for \(i = 1,2,\ldots,b\text{.}\)</p>
-<p id="p-427">Thus the number of ordered triples \(|S|\) that can be formed from the set \(\{1,2,\ldots,b\}\) is</p>
+<p id="p-428">Thus the number of ordered triples \(|S|\) that can be formed from the set \(\{1,2,\ldots,b\}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 b^3 = 6\binom{b}{3} + 6\binom{b}{2} + b\text{.}
 \end{equation*}
 </div>
 </div></div>
+</div></article><article class="exercise exercise-like" id="exercise-75"><h6 class="heading">
+<span class="codenumber">29<span class="period">.</span></span><span class="space"> </span><span class="title">Winter 2021 Term Test.</span>
+</h6>
+<p id="p-429">\(\displaystyle \sum_{k=0}^n\sum_{m=0}^{n-k} \binom{n}{k} \binom{n-k}{m} = 3^n \)</p></article><article class="exercise exercise-like" id="exercise-76"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
+<p id="p-430">\(\displaystyle \binom{k+7}{7} = \binom{k+4}{4} \binom{2}{2} + \binom{k+3}{4}\binom{3}{2} + \cdots + \binom{4}{4}\binom{k+2}{2} \)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-29"><div class="hint solution-like"><p id="p-431">Count the number of \(7\)-element subsets of \(\{1,2,\ldots,k+7\}\text{.}\)</p></div></div>
 </div></article>
 </div>
 </div></section></div></main>
