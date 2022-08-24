@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T17:45:36-04:00       *-->
+<!--*       on 2022-08-23T22:37:49-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -171,9 +171,9 @@
 </h2>
 <article class="objectives goal-like" id="objectives-20"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-317">Define Hamiltonian cycles and graphs. Find a Hamiltonian cycle in a graph, or explain why one does not exist.</li>
-<li id="li-318">Give conditions (necessary or sufficient) for a graph to be Hamiltonian.</li>
-<li id="li-319">Solve the Traveling Salesman Problem for small instances.</li>
+<li id="li-318">Define Hamiltonian cycles and graphs. Find a Hamiltonian cycle in a graph, or explain why one does not exist.</li>
+<li id="li-319">Give conditions (necessary or sufficient) for a graph to be Hamiltonian.</li>
+<li id="li-320">Solve the Traveling Salesman Problem for small instances.</li>
 </ul></article><p id="p-1011">Recall that a graph that contains a trail that traverses all its edges is called an Eulerian graph.</p>
 <p id="p-1012">Sometimes we would like a graph to have a cycle that passes through all of its vertices in some order, without repeating any vertex. These graphs are called Hamiltonian graphs.</p>
 <article class="definition definition-like" id="def-hamiltonian"><h6 class="heading">
@@ -227,8 +227,8 @@
 <p id="p-1037">Let \(P = x_1x_2\cdots x_k\) be a longest path in \(G\) (note it has \(k-1\) edges).</p>
 <p id="p-1038">Then all vertices of \(G\) that are adjacent to \(x_1\) must already be on \(P\text{,}\) otherwise, \(P\) can be extended to a longer path. Similarly, all vertices adjacent to \(x_k\) must already be on \(P\text{.}\) Because the minimum vertex degree is \(n/2\text{,}\) this means:</p>
 <ul class="disc">
-<li id="li-320">The vertex \(x_1\) is adjacent to \(n/2\) of the vertices \(\{x_2,x_3,\ldots,x_k\}\text{;}\)</li>
-<li id="li-321">and the vertex \(x_k\) is adjacent to \(n/2\) of the vertices \(\{x_1,x_2,\ldots,x_{k-1}\}\text{.}\)</li>
+<li id="li-321">The vertex \(x_1\) is adjacent to \(n/2\) of the vertices \(\{x_2,x_3,\ldots,x_k\}\text{;}\)</li>
+<li id="li-322">and the vertex \(x_k\) is adjacent to \(n/2\) of the vertices \(\{x_1,x_2,\ldots,x_{k-1}\}\text{.}\)</li>
 </ul>
 <p id="p-1039">Since \(k \leq n\text{,}\) there must be some pair of vertices \(x_{i+1}\) and \(x_i\) such that \((x_1,x_{i+1}) \in E\) and \((x_i,x_k) \in E\text{.}\) This is because there are \(n/2\) neighbours of \(x_1\) in the set \(\{x_2,\ldots,x_k\}\text{,}\) and hence only \(k - 1 - n/2\) of the set \(\{x_1,\ldots,x_{k-1}\}\) do not precede some neighbour of \(x_1\text{.}\)</p>
 <p id="p-1040">Since \(k \leq n\text{,}\) then \(k - 1 - n/2 \leq n/2-1\text{,}\) which implies \(x_k\) must have a neighbour \(x_i\) that immediately precedes a neighbour of \(x_{1}\text{.}\)</p>

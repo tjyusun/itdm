@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T17:45:31-04:00       *-->
+<!--*       on 2022-08-23T22:37:43-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -171,8 +171,8 @@
 </h2>
 <article class="objectives goal-like" id="objectives-4"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-96">Derive the formulas for permutations and combinations with repetition (Balls in Bins Formula).</li>
-<li id="li-97">Given a counting problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
+<li id="li-97">Derive the formulas for permutations and combinations with repetition (Balls in Bins Formula).</li>
+<li id="li-98">Given a counting problem, recognize which of the above techniques is applicable, and use it to solve the problem.</li>
 </ul></article><p id="p-285">Consider the following example similar to <a class="xref" data-knowl="./knowl/eg-counting-mcq.html" title="Example 2.1.12: Multiple Choice Exam">Example 2.1.12</a>.</p>
 <article class="example example-like" id="eg-counting-mcq-again"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-counting-mcq-again"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Multiple Choice, again.</span>
@@ -182,8 +182,8 @@
 </div></article></div>
 <p id="p-288">The operation in <a class="xref" data-knowl="./knowl/eg-counting-mcq-again.html" title="Example 2.4.1: Multiple Choice, again">Example 2.4.1</a> is called a permutation where <em class="emphasis">repetition</em> or <em class="emphasis">replacement is allowed</em>, since</p>
 <ul class="disc">
-<li id="li-98">The order in which the answers are picked matters (i.e. A-B-A is different from B-A-A); and</li>
-<li id="li-99">Answers can be repeated. Imagine a bag with five balls labeled A to E; for each question we draw a ball from the bag, record the answer, and put it back.</li>
+<li id="li-99">The order in which the answers are picked matters (i.e. A-B-A is different from B-A-A); and</li>
+<li id="li-100">Answers can be repeated. Imagine a bag with five balls labeled A to E; for each question we draw a ball from the bag, record the answer, and put it back.</li>
 </ul>
 <p class="continuation">We formalize this in the next result.</p>
 <article class="proposition theorem-like" id="prop-perm-repetition"><h6 class="heading">
@@ -195,11 +195,11 @@
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Rice Advice.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-counting-rice"><article class="example example-like"><p id="p-292">Ten participants are recruited to join a focus group discussion on rice, after which they are asked to indicate their preferred type of rice among the following options:</p>
 <ul class="disc">
-<li id="li-100"><a class="external" href="https://en.wikipedia.org/wiki/Arborio_rice" target="_blank">Arborio</a></li>
-<li id="li-101"><a class="external" href="https://en.wikipedia.org/wiki/Basmati" target="_blank">Basmati</a></li>
-<li id="li-102"><a class="external" href="https://en.wikipedia.org/wiki/Jasmine_rice" target="_blank">Jasmine</a></li>
-<li id="li-103"><a class="external" href="https://en.wikipedia.org/wiki/Koshihikari" target="_blank">Koshihikari</a></li>
-<li id="li-104"><a class="external" href="https://en.wikipedia.org/wiki/Glutinous_rice" target="_blank">Malagkit</a></li>
+<li id="li-101"><a class="external" href="https://en.wikipedia.org/wiki/Arborio_rice" target="_blank">Arborio</a></li>
+<li id="li-102"><a class="external" href="https://en.wikipedia.org/wiki/Basmati" target="_blank">Basmati</a></li>
+<li id="li-103"><a class="external" href="https://en.wikipedia.org/wiki/Jasmine_rice" target="_blank">Jasmine</a></li>
+<li id="li-104"><a class="external" href="https://en.wikipedia.org/wiki/Koshihikari" target="_blank">Koshihikari</a></li>
+<li id="li-105"><a class="external" href="https://en.wikipedia.org/wiki/Glutinous_rice" target="_blank">Malagkit</a></li>
 </ul>
 <p class="continuation">The participants gave their preferences anonymously so the researchers only know how many participants responded with each option. How many combinations of answers can the researchers obtain from the study?</p>
 <p id="p-293"><em class="alert">Solution</em> Since we are only concerned with the survey results, outcomes look like the following, where we only record how many respondents picked the corresponding option:</p>
@@ -243,18 +243,18 @@
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Rice Advice Exercise.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-rice-1"><article class="exercise exercise-like"><p id="p-302">Following <a class="xref" data-knowl="./knowl/eg-counting-rice.html" title="Example 2.4.3: Rice Advice">Example 2.4.3</a>, express each survey outcome as a pattern of dots \(\bullet\) and bars \(\mid\text{,}\) or vice-versa.</p>
 <ol class="lower-alpha">
-<li id="li-105">Jasmine -- 3, Basmati -- 3, Arborio -- 1, Malagkit -- 3</li>
-<li id="li-106">Koshihikari -- 10</li>
-<li id="li-107">\(\displaystyle \bullet \ \bullet \mid \mid \bullet \bullet \bullet \bullet \bullet \ \bullet \mid \mid \bullet \ \bullet\)</li>
-<li id="li-108">\(\displaystyle \mid \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \mid \bullet \bullet \bullet \ \bullet\)</li>
+<li id="li-106">Jasmine -- 3, Basmati -- 3, Arborio -- 1, Malagkit -- 3</li>
+<li id="li-107">Koshihikari -- 10</li>
+<li id="li-108">\(\displaystyle \bullet \ \bullet \mid \mid \bullet \bullet \bullet \bullet \bullet \ \bullet \mid \mid \bullet \ \bullet\)</li>
+<li id="li-109">\(\displaystyle \mid \mid \bullet \bullet \bullet \bullet \bullet \mid \bullet \mid \bullet \bullet \bullet \ \bullet\)</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like"><p id="p-303">Make sure the bins are in the right order!</p></div></div>
 </div></article></div>
 <p id="p-304">This is called a <em class="emphasis">combination where repetition is allowed</em>, since</p>
 <ul class="disc">
-<li id="li-109">The order in which objects are picked <em class="emphasis">does not matter</em> (i.e., A-B-A is the same as B-A-A); and</li>
-<li id="li-110">Objects can be repeated.</li>
+<li id="li-110">The order in which objects are picked <em class="emphasis">does not matter</em> (i.e., A-B-A is the same as B-A-A); and</li>
+<li id="li-111">Objects can be repeated.</li>
 </ul>
 <p class="continuation">As we saw in <a class="xref" data-knowl="./knowl/eg-counting-rice.html" title="Example 2.4.3: Rice Advice">Example 2.4.3</a>, the number of \(k\)-combinations taken from a set of size \(n\) when repetition is allowed is equal to the number of ways we can distribute \(k\) balls into \(n\) bins. This gives the following formula:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-balls-in-bins" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Oj3wc56o9Ok?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
@@ -287,8 +287,8 @@
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Apples to Students.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-counting-apples"><article class="exercise exercise-like"><p id="p-309">A teacher has 20 apples that are to be handed out to 9 students.</p>
 <ol class="lower-alpha">
-<li id="li-111">How many different ways are there of distributing the apples?</li>
-<li id="li-112">How many different ways are there of distributing the apples so that <em class="emphasis">each student receives at least one apple</em>?</li>
+<li id="li-112">How many different ways are there of distributing the apples?</li>
+<li id="li-113">How many different ways are there of distributing the apples so that <em class="emphasis">each student receives at least one apple</em>?</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><p id="p-310">b. Give one apple to each student to begin, then distribute the rest.</p></div></div>
@@ -348,9 +348,9 @@ x_1 + x_2 + x_3 + x_4 = 77
 </div>
 <p class="continuation">such that:</p>
 <ol class="lower-alpha">
-<li id="li-113">\(x_1, x_2, x_3, x_4\) are nonnegative.</li>
-<li id="li-114">\(x_1 \geq 4\text{,}\) \(x_2 \geq 0\text{,}\) \(x_3 \geq 12\text{,}\) and \(x_4 \geq 9\text{.}\)</li>
-<li id="li-115">\(0 \leq x_1 \leq 30\text{,}\) and \(x_2, x_3, x_4 \geq 0\text{.}\)</li>
+<li id="li-114">\(x_1, x_2, x_3, x_4\) are nonnegative.</li>
+<li id="li-115">\(x_1 \geq 4\text{,}\) \(x_2 \geq 0\text{,}\) \(x_3 \geq 12\text{,}\) and \(x_4 \geq 9\text{.}\)</li>
+<li id="li-116">\(0 \leq x_1 \leq 30\text{,}\) and \(x_2, x_3, x_4 \geq 0\text{.}\)</li>
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><p id="p-319">b. Look at part (b) of <a class="xref" data-knowl="./knowl/ex-counting-apples.html" title="Checkpoint 2.4.7: Apples to Students">Checkpoint 2.4.7</a>.</p></div></div>

@@ -43,15 +43,19 @@
         </p>
         
         <sidebyside widths="70%">
+            <image source="figs/UTMfall.jpg"><description>A fall day at UTM. On the right, trees with green and orange leaves; the walkway is on the left. In the foreground, a blue signpost offering directions to the various buildings at UTM.</description></image>
+        </sidebyside>
+
+        <!--
+        <sidebyside widths="70%">
             <image source="figs/UTMwinter.jpg"><description>View from the third floor of Deerfield Hall on the UTM campus. Footprints on snow-covered pathways in a V shape with bare trees in the middle. </description></image>
         </sidebyside>
+        -->
     
         <p>
-            Things are slowly starting to move back to more familiar ground: classes will be in-person, and I hope 
-            (TO BE CONTINUED)
-
-
-            Regardless of what happens, whether this plan changes or not, the MAT202 teaching team would like to make a number of commitments to you:
+            Things are slowly starting to move back to more familiar ground: classes will be in-person, and we hope to be able to 
+            welcome every one of you into an energizing and enriching classroom experience.
+            The MAT202 teaching team would thus like to make a number of commitments to you:
             <ul>
                 <li>In all aspects of the course, we will be clear and organized, and reduce as many barriers to your access and learning that we can.</li>
                 <li>We will be reasonably available to help you with your learning.</li>
@@ -114,6 +118,7 @@
                 <li>Sections 5.2 and 5.5 each split into two smaller sections; paths and connectedness defined earlier in chapter;</li>
                 <li>A small number of exercises (both inline and end-of-chapter) now have solutions in the HTML version;</li>
                 <li>New appendices added that index the introduction of new notation (<xref ref="app-notation"/>), list results (<xref ref="app-definitions-theorems"/>), and compile examples and exercises (<xref ref="app-explorations"/>).</li>
+                <li>Selected questions from tests and exams up to 2022 have been included as well.</li>
             </ul>
         </p>
 

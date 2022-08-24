@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T17:45:35-04:00       *-->
+<!--*       on 2022-08-23T22:37:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -170,7 +170,7 @@
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Eulerian Graphs</span>
 </h2>
 <article class="objectives goal-like" id="objectives-16"><h6 class="heading"><span class="type">Objectives</span></h6>
-<ul class="disc"><li id="li-292">Define Eulerian graphs; determine whether a given graph is Eulerian or not. Explain how degree sequences allow us to do this.</li></ul></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-eulerian" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/MwLzeaAZP9U?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
+<ul class="disc"><li id="li-293">Define Eulerian graphs; determine whether a given graph is Eulerian or not. Explain how degree sequences allow us to do this.</li></ul></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-eulerian" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/MwLzeaAZP9U?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
 <p id="p-848"><em class="alert">Video</em>: <em class="emphasis">Eulerian Graphs</em></p>
 <p id="p-849">In the previous section we defined the degree of a vertex and proved some properties about degree sequences. We can use vertex degrees to answer the five-room problem in <a class="xref" data-knowl="./knowl/eg-graph-model-room.html" title="Example 5.1.1: The Five-Room Problem">Example 5.1.1</a> in the negative. First, we need a few more definitions.</p>
 <article class="definition definition-like" id="def-trail"><h6 class="heading">
@@ -217,8 +217,8 @@ u_0,e_0,u_1,e_1,u_2,\ldots,e_{k-1},u_k
 </h6>
 <p id="p-863">A (not necessarily simple) graph \(G\) is Eulerian <em class="emphasis">if and only if</em></p>
 <ul class="disc">
-<li id="li-293">all its vertex degrees are even, and</li>
-<li id="li-294">\(G\) is connected.</li>
+<li id="li-294">all its vertex degrees are even, and</li>
+<li id="li-295">\(G\) is connected.</li>
 </ul></article><article class="hiddenproof" id="proof-9"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-864">We first show the <em class="emphasis">only if</em> implication. Suppose \(G\) is a (not necessarily simple) Eulerian graph. Then there is a closed trail in \(G\text{,}\) say</p>
 <div class="displaymath">
 \begin{equation*}
@@ -232,17 +232,17 @@ u_0, e_0, u_1, e_1, \ldots, e_{k-1}, u_k = u_0
 <p id="p-867">The <em class="emphasis">if</em> implication is better explained by the following algorithm:</p>
 <p id="p-868">Suppose \(G\) is a graph whose vertices all have even degree, and also assume that every vertex is reachable from every other vertex. We will construct an Eulerian trail on \(G\text{.}\)</p>
 <dl id="p-869" class="description-list">
-<dt id="li-295">Step 1.</dt>
+<dt id="li-296">Step 1.</dt>
 <dd><p id="p-870">Choose any vertex \(v\) of \(G\text{,}\) and create a trail that starts and ends at \(v\text{,}\) never repeating an edge.</p></dd>
-<dt id="li-296">Step 2.</dt>
+<dt id="li-297">Step 2.</dt>
 <dd><p id="p-871">Call this trail \(C\text{.}\)</p></dd>
-<dt id="li-297">Step 3.</dt>
+<dt id="li-298">Step 3.</dt>
 <dd><p id="p-872">If \(C\) is all of \(G\text{,}\) then we are done, and we have found an Eulerian trail in \(G\text{.}\)</p></dd>
-<dt id="li-298">Step 4.</dt>
+<dt id="li-299">Step 4.</dt>
 <dd><p id="p-873">If not, then remove the edges of \(C\) from \(G\) to form a new graph \(G'\text{.}\) Since \(C\) is a closed trail, removing it reduces each vertex degree of \(G\) by an even number, so \(G'\) also has all vertex degrees even.</p></dd>
-<dt id="li-299">Step 5.</dt>
+<dt id="li-300">Step 5.</dt>
 <dd><p id="p-874">Choose a vertex \(v'\) common to \(C\) and \(G'\text{,}\) and create a trail in \(G'\) that starts and ends at \(v'\text{.}\) Call this new trail \(C'\text{.}\)</p></dd>
-<dt id="li-300">Step 6.</dt>
+<dt id="li-301">Step 6.</dt>
 <dd><p id="p-875">Combine \(C\) and \(C'\) to get a new trail \(C''\) by inserting \(C'\) where the vertex \(v'\) occurs in \(C\text{.}\) Now set \(C = C''\) and go back to Step 2.</p></dd>
 </dl>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:4.666666666666667%;margin-right:4.666666666666667%;">

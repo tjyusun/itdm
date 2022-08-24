@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T17:45:36-04:00       *-->
+<!--*       on 2022-08-23T22:37:48-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -171,9 +171,9 @@
 </h2>
 <article class="objectives goal-like" id="objectives-18"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-308">Define connectedness; determine whether a given graph is connected or disconnected.</li>
-<li id="li-309">Define trees; give necessary and sufficient conditions for a graph to be a tree.</li>
-<li id="li-310">Prove simple statements about trees and connectedness of graphs, in particular utilizing proof by contradiction and structural induction on graphs.</li>
+<li id="li-309">Define connectedness; determine whether a given graph is connected or disconnected.</li>
+<li id="li-310">Define trees; give necessary and sufficient conditions for a graph to be a tree.</li>
+<li id="li-311">Prove simple statements about trees and connectedness of graphs, in particular utilizing proof by contradiction and structural induction on graphs.</li>
 </ul></article><p id="p-934">As we mentioned in <a href="sec-graph-modeling.html" class="internal" title="Section 5.1: Modeling with Graphs">Section 5.1</a> the power of graph theory is that it allows us to abstract only the relevant details about the structure underlying a given scenario, regardless of the original context of the problem. A <em class="alert">tree</em> is a special type of graph that arises in several real-world applications. For instance, it is a prominent data type in computer science; it is seen whenever the structure being described has an underlying hierarchy or order.</p>
 <p id="p-935">We first restate some definitions you've seen before and give a bit more detail. Recall that a <a class="xref" data-knowl="./knowl/def-path.html" title="Definition 5.3.5: Path">path</a> is a trail with no repeated vertices.</p>
 <article class="definition definition-like" id="def-path-graph"><h6 class="heading">
@@ -240,8 +240,8 @@
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Find all Trees.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-nonisomorphic-trees"><article class="exercise exercise-like"><p id="p-958">Find all nonisomorphic trees on</p>
 <ol class="lower-alpha">
-<li id="li-311">four vertices;</li>
-<li id="li-312">five vertices.</li>
+<li id="li-312">four vertices;</li>
+<li id="li-313">five vertices.</li>
 </ol></article></div>
 <p id="p-959">In a sense, trees are the minimally connected graphs, since removing any edge from a tree results in a disconnected graph.</p>
 <article class="proposition theorem-like" id="prop-tree-remove-edge-disconnect"><h6 class="heading">
@@ -271,8 +271,8 @@
 <p id="p-970">Given the assumption that \(G\) has fewer than two leaves, what can we conclude about \(x_1\) and \(x_k\text{?}\) (Hint: what about their degrees?)</p></article><article class="task exercise-like" id="task-24"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-971">Show that your conclusion from (b) will inevitably lead to one of the following contradictions:</p>
 <ul class="disc">
-<li id="li-313">that the path \(P\) was not maximal after all;</li>
-<li id="li-314">that the graph \(G\) could not have been a tree to begin with.</li>
+<li id="li-314">that the path \(P\) was not maximal after all;</li>
+<li id="li-315">that the graph \(G\) could not have been a tree to begin with.</li>
 </ul></article></article><article class="exercise exercise-like" id="ex-maximal-paths"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-maximal-paths"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Maximal Paths in Graphs.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-maximal-paths"><article class="exercise exercise-like"><p id="p-972">In <a class="xref" data-knowl="./knowl/expl-tree-number-leaves.html" title="Exploration 5.5.1: Proving Lemma 5.5.13">Exploration 5.5.1</a> we claimed that we can always find a maximal path in a graph with at least one edge. Find <em class="emphasis">all</em> maximal paths in each graph below. Do maximal paths of a graph always have the same number of vertices?</p>

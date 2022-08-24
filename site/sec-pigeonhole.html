@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T17:45:32-04:00       *-->
+<!--*       on 2022-08-23T22:37:44-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -171,16 +171,14 @@
 </h2>
 <article class="objectives goal-like" id="objectives-6"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-173">State the Pigeonhole Principle and prove the generalized version.</li>
-<li id="li-174">Identify the pigeons and pigeonholes in a given problem and apply the Pigeonhole Principle to come to a conclusion.</li>
+<li id="li-174">State the Pigeonhole Principle and prove the generalized version.</li>
+<li id="li-175">Identify the pigeons and pigeonholes in a given problem and apply the Pigeonhole Principle to come to a conclusion.</li>
 </ul></article><p id="p-432">Let's kick off this chapter with a claim that seems suspect:</p>
 <p id="p-433"><em class="alert">Claim.</em> There are two people in Toronto with the exact same number of hair follicles on their head.</p>
 <p id="p-434">In your mind you're probably going ‘<em class="emphasis">Even if this were true…how would we prove it??</em>’ And yes, we wouldn't be able to actually <em class="emphasis">count</em> the number of hair follicles on anyone's head. But the beauty of the Pigeonhole Principle is that we don't need to!</p>
 <p id="p-435">I'm going to let <a class="external" href="https://twitter.com/onlinekyne" target="_blank">Kyne</a> of Canada's Drag Race Season 1 explain why this claim holds true (<a class="external" href="https://www.tiktok.com/@onlinekyne/video/6825323353256070406" target="_blank">link to video</a>).</p>
-<aside class="aside aside-like" id="aside-3"><p id="p-436"><a class="external" href="https://www.onlinekyne.com/" target="_blank">Kyne</a> was a contestant on the first season of Canada's Drag Race, and is a <a class="external" href="https://uwaterloo.ca/stories/mathematics/university-waterloos-math-student-vying-become-canadas-first" target="_blank">mathematical finance major at the University of Waterloo</a>.</p></aside><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;">
-  
-
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlinekyne/video/6825323353256070406" data-video-id="6825323353256070406" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlinekyne" href="https://www.tiktok.com/@onlinekyne">@onlinekyne</a> <p><a title="math" target="_blank" href="https://www.tiktok.com/tag/math">#</a><a title="education" target="_blank" href="https://www.tiktok.com/tag/education">#</a><a title="edutok" target="_blank" href="https://www.tiktok.com/tag/edutok">#</a><a title="drag" target="_blank" href="https://www.tiktok.com/tag/drag">#</a><a title="dragqueen" target="_blank" href="https://www.tiktok.com/tag/dragqueen">#</a></p> <a target="_blank" title="♬ original sound - onlinekyne" href="https://www.tiktok.com/music/original-sound-6825323337519024901">♬ original sound - onlinekyne</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+<aside class="aside aside-like" id="aside-3"><p id="p-436"><a class="external" href="https://www.onlinekyne.com/" target="_blank">Kyne</a> was a contestant on the first season of Canada's Drag Race, and has graduated with a <a class="external" href="https://uwaterloo.ca/stories/mathematics/university-waterloos-math-student-vying-become-canadas-first" target="_blank">mathematical finance major at the University of Waterloo</a>.</p></aside><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;">
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlinekyne/video/6825323353256070406" data-video-id="6825323353256070406" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlinekyne" href="https://www.tiktok.com/@onlinekyne">@onlinekyne</a> <p><a title="math" target="_blank" href="https://www.tiktok.com/tag/math">#</a><a title="education" target="_blank" href="https://www.tiktok.com/tag/education">#</a><a title="edutok" target="_blank" href="https://www.tiktok.com/tag/edutok">#</a><a title="drag" target="_blank" href="https://www.tiktok.com/tag/drag">#</a><a title="dragqueen" target="_blank" href="https://www.tiktok.com/tag/dragqueen">#</a></p> <a target="_blank" title="♬ original sound - onlinekyne" href="https://www.tiktok.com/music/original-sound-6825323337519024901">♬ original sound - onlinekyne</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 </div></div></div>
 <p id="p-437">As you've seen, the Pigeonhole Principle is not a <em class="emphasis">counting</em> technique <em class="emphasis">per se</em>, but a way to prove that a set of objects satisfies some existence or extremal property. Before we state the principle formally let's look at two more examples.</p>
 <article class="example example-like" id="eg-php-pizza"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-php-pizza"><h6 class="heading">
@@ -240,8 +238,8 @@ x_1 + x_2 + \cdots + x_{20} \amp \lt 160\\
 </div></article></div>
 <p id="p-457">Often it is not immediately obvious what the pigeons and pigeonholes should be when we attempt to apply <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> to a problem. Moreover one needs also to give a rule that assigns pigeons to pigeonholes, such that:</p>
 <ul class="disc">
-<li id="li-175">There are fewer pigeonholes (\(n\)) than pigeons (\(\gt kn\)).</li>
-<li id="li-176">The desired property is satisfied when more than \(k\) objects is put into any class.</li>
+<li id="li-176">There are fewer pigeonholes (\(n\)) than pigeons (\(\gt kn\)).</li>
+<li id="li-177">The desired property is satisfied when more than \(k\) objects is put into any class.</li>
 </ul>
 <p class="continuation">When using <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> one must explicitly state what the pigeons and pigeonholes are, and explain how the assignment is done.</p>
 <article class="example example-like" id="eg-php-sum-to-8"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-php-sum-to-8"><h6 class="heading">
@@ -311,13 +309,13 @@ x_1 + x_2 + \cdots + x_{20} \amp \lt 160\\
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-php-shower"><article class="exercise exercise-like"><p id="p-479">Over a two-week period (14 days), you kept track of how many showers you took. Your records show that you showered at least once every day, and that you showered a total of 17 times.</p>
 <p id="p-480">By following the steps below, prove that there was a period of consecutive days during which you showered exactly 10 times.</p>
 <ol class="lower-alpha">
-<li id="li-177">Define variables \(x_i\) to be the number of times you took a shower on day \(i\) (\(1 \leq i \leq 14\)), and define \(y_i = x_1 + x_2 + \cdots + x_i\) to be the partial sums. Explain why it suffices to prove \(y_i = y_j + 10\) for some \(i,j\text{.}\)</li>
-<li id="li-178">Explain why the set<div class="displaymath">
+<li id="li-178">Define variables \(x_i\) to be the number of times you took a shower on day \(i\) (\(1 \leq i \leq 14\)), and define \(y_i = x_1 + x_2 + \cdots + x_i\) to be the partial sums. Explain why it suffices to prove \(y_i = y_j + 10\) for some \(i,j\text{.}\)</li>
+<li id="li-179">Explain why the set<div class="displaymath">
 \begin{equation*}
 \{y_1,y_2,\ldots,y_{14},y_1+10,y_2+10,\ldots,y_{14}+10\}
 \end{equation*}
 </div>can only contain numbers from 1 to 27.</li>
-<li id="li-179">Apply <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> to prove the desired property. What are the pigeons and pigeonholes?</li>
+<li id="li-180">Apply <a class="xref" data-knowl="./knowl/thm-php.html" title="Theorem 3.1.3: Pigeonhole Principle (PHP)">Theorem 3.1.3</a> to prove the desired property. What are the pigeons and pigeonholes?</li>
 </ol></article></div></section></div></main>
 </div>
 </body>
