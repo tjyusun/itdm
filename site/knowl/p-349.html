@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T22:38:03-04:00       *-->
+<!--*       on 2023-08-21T15:44:44-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Using algebra it is a straightforward manipulation to show that</p>
+<p>Suppose that from a group of \(n\) people, we want to</p>
+<ol class="decimal">
+<li>Form a committee of \(k\) people; and</li>
+<li>Elect a chair of the committee.</li>
+</ol>
+<p class="continuation">By <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, we can count the number of ways we can do this by multiplying.</p>
+<ol class="decimal">
+<li>There are \(\binom{n}{k}\) ways to form a committee of \(k\) people from a group of \(n\text{.}\)</li>
+<li>From the \(k\) people in the committee, we need to choose a chair, and there are \(k\) choices.</li>
+</ol>
+<p class="continuation">Hence we count a total of</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-n^2 = 2\binom{n}{2} + n
+\binom{n}{k} \times k
 \end{equation*}
 </div>
-<p class="continuation">for \(n \in \mathbb{N}\text{.}\) Write a complete combinatorial proof of this statement.</p>
+<p class="continuation">ways to do this. Note that this is the left-hand side of what we're proving, <a class="xref" data-knowl="./knowl/equation-chairperson.html" title="Equation 2.5.1">(2.5.1)</a>.</p>
 <span class="incontext"><a href="sec-combinatorial-arguments.html#p-349">in-context</a></span>
 </body>
 </html>

@@ -21,7 +21,7 @@
     <preface xml:id="front-welcome">
         <title>Welcome Message</title>
         <p>
-            <alert>September 2022</alert>
+            <alert>September 2023</alert>
         </p>
         
         <sidebyside widths="70%">
@@ -38,7 +38,7 @@
             I did my PhD at <url href="https://sfu.ca">Simon Fraser University</url>, in the area of operations research.
         </p>
         <p>
-            The past two years have brought with it multiple challenges for students and faculty alike.
+            The past few years have brought with it multiple challenges for students and faculty alike.
             We have all been affected in different ways by many different events since, and it is understandable that you may not be in the optimal mindset to study. 
         </p>
         
@@ -53,7 +53,7 @@
         -->
     
         <p>
-            Things are slowly starting to move back to more familiar ground: classes will be in-person, and we hope to be able to 
+            Things are starting to move back to more familiar ground: classes will be in-person, and we hope to be able to 
             welcome every one of you into an energizing and enriching classroom experience.
             The MAT202 teaching team would thus like to make a number of commitments to you:
             <ul>
@@ -74,7 +74,7 @@
         <p>
             Moreover, there <em>will</em> be technology difficulties and failures throughout the term... 
             This is to be expected, and we will manage.
-            For the majority of you who took courses online last year, I also hope that you've learned a bit about yourselves<mdash/>your strengths, weaknesses, motivations, desires, and needs<mdash/>and that you are able to take these lessons with you in the new academic year.
+            In your time at UTM so far, I also hope that you've learned a bit about yourselves<mdash/>your strengths, weaknesses, motivations, desires, and needs<mdash/>and that you are able to take these lessons with you in the new academic year.
         </p>
         <p>
             Finally, let me reiterate that <em>we want you to succeed</em>, and we will try our best to facilitate this.
@@ -102,7 +102,7 @@
             A number of historical explorations and asides give context to some of these topics, and hopefully allow for a critical reflection on the historical and political underpinnings of the field and of mathematics as a whole.
         </p>
         <p>
-            These notes are being developed specifically for the Fall/Winter 2020-2023 offerings of MAT202: Introduction to Discrete Mathematics course at the <url href="https://www.utm.utoronto.ca/math-cs-stats/home">University of Toronto Mississauga</url>.
+            These notes are being developed specifically for the Fall/Winter 2020-2024 offerings of MAT202: Introduction to Discrete Mathematics course at the <url href="https://www.utm.utoronto.ca/math-cs-stats/home">University of Toronto Mississauga</url>.
             For the online offering of this course a number of short videos will be produced and uploaded into the HTML version of these notes, to be inline with the text and in close proximity to the topic being discussed.
             These videos will be created and uploaded throughout the term.
         </p>
@@ -116,9 +116,9 @@
                 <li>Section 1.4 removed and expanded to a new appendix on mathematical communication;</li>
                 <li>A number of historical explorations added throughout the text (there are plans for more in the future);</li>
                 <li>Sections 5.2 and 5.5 each split into two smaller sections; paths and connectedness defined earlier in chapter;</li>
-                <li>A small number of exercises (both inline and end-of-chapter) now have solutions in the HTML version;</li>
+                <li>A small number of exercises (both inline and end-of-chapter) now have solutions in the HTML version (a few are added every year);</li>
                 <li>New appendices added that index the introduction of new notation (<xref ref="app-notation"/>), list results (<xref ref="app-definitions-theorems"/>), and compile examples and exercises (<xref ref="app-explorations"/>).</li>
-                <li>Selected questions from tests and exams up to 2022 have been included as well.</li>
+                <li>Selected questions from tests and exams up to 2023 have been included as well.</li>
             </ul>
         </p>
 
@@ -159,7 +159,7 @@
 
         <colophon xml:id="colophon">
 
-        <edition>Introduction to Discrete Mathematics: Fall/Winter 2022-2023</edition>
+        <edition>Introduction to Discrete Mathematics: Fall/Winter 2023-2024</edition>
 
         <website>
             <name><c>itdm</c></name>
@@ -168,7 +168,7 @@
         </website>
 
         <copyright>
-            <year>2019<ndash/>2022</year>
+            <year>2019<ndash/>2023</year>
             <holder>Timothy Yusun</holder>
             <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
             <shortlicense>

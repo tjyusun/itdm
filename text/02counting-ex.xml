@@ -39,6 +39,11 @@
 		How many possible passwords can be created? 
 	</p>
 </statement>
+<answer>
+	<p>
+		<m>26^2 \cdot 36^6</m>.
+	</p>
+</answer>
 </exercise>
 
 <exercise>
@@ -54,6 +59,13 @@
 		How many licence plates combinations are possible that satisfy all these conditions?
 	</p>
 </statement>
+<solution>
+	<p>
+		Only 21 letters are available to pick from, so there are <m>21^2</m> possible letter combinations for A and B; and also there are <m>21^2 - 21</m> possible combinations for C and D (subtracting the 21 invalid outcomes where the same letter is picked for C and D).
+		To decide the digits, there are 9 choices for the first digit and 10 each for the other three digits.
+		Thus there are a total of <m>21^2 \cdot (21^2 - 21) \cdot (9 \cdot 10^3)</m> possible licence plate combinations.
+	</p>
+</solution>
 </exercise>
 
 
@@ -93,6 +105,36 @@
 		How many arrangements of the word AWESOME <em>do not</em> have the string ME?
 	</p>
 </statement>
+<answer>
+	<p>
+		<m>\displaystyle\frac{7!}{2!} - 6!</m>.
+	</p>
+</answer>
+</exercise>
+
+<exercise>
+	<title>
+		Fall 2022 Final Exam
+	</title>
+<statement>
+	<p>
+		Count the number of arrangements of the word WANDERER where:
+		<ul>
+			<li> the letter W appears somewhere in between the two R's (not necessarily all beside each other); and</li>
+			<li> the string READ <em>does not</em> appear.</li>
+		</ul>
+	</p>
+</statement>
+<hint>
+	<p>
+		<p>As with most combinatorial counting problems, there's more than one way to solve this; one approach is to consider the proportion of all arrangements that satisfies the first condition.</p>
+	</p>
+</hint>
+<answer>
+	<p>
+		<m>\displaystyle\frac{1}{3}\left(\dfrac{8!}{2!\ 2!} - 5!\right)</m>.
+	</p>
+</answer>
 </exercise>
 
 <exercise>
@@ -125,6 +167,22 @@
     </ol>
 	</p>
 </solution>
+</exercise>
+
+<exercise>
+	<title>
+	Fall 2022 Term Test
+	</title>
+	<statement>
+		<p>
+			Determine the coefficient of <m>\dfrac{a^5}{b^4}</m> in the expansion of <m>\left(\dfrac{a}{2} - \dfrac{3}{b^2}\right)^7</m>.
+		</p>
+	</statement>
+	<answer>
+		<p>
+			<m>\displaystyle\binom{7}{5}\dfrac{(-3)^2}{2^5}</m>.
+		</p>
+	</answer>
 </exercise>
 
 <exercise>
@@ -182,6 +240,11 @@
 <hint>
 	<p>First pick a suit, then pick cards from that suit.</p>
 </hint>
+<answer>
+	<p>
+		a. <m>\displaystyle 4 \cdot \binom{13}{5}</m>, b. <m>\displaystyle 4 \cdot 10 = 40</m>.
+	</p>
+</answer>	
 </exercise>
 
 <exercise>
@@ -202,6 +265,11 @@
 		How many five-card hands are full houses?
 	</p>
 </statement>
+<answer>
+	<p>
+		<m>\displaystyle \binom{13}{1}\binom{4}{3}\binom{12}{1}\binom{4}{2}</m> or <m>\displaystyle {}_{13}P_{2}\binom{4}{3}\binom{4}{2}</m>.
+	</p>
+</answer>
 </exercise>
 
 <exercise>
@@ -228,6 +296,23 @@
 		Hence the total is <m>\binom{36}{2} \cdot \binom{16}{1} + \binom{36}{3}</m>.
 	</p>
 </solution>
+</exercise>
+
+<exercise>
+	<statement>
+		<p>
+			From a standard deck of cards, count the number of six-card hands that contain <em>at most</em> three suits.
+		</p>
+		<p>
+			For example, the hand 4<m>\clubsuit</m> 5<m>\clubsuit</m> 8<m>\diamondsuit</m> J<m>\diamondsuit</m> K<m>\diamondsuit</m> 9<m>\heartsuit</m> is a valid hand, while
+			the hand 4<m>\clubsuit</m> 5<m>\clubsuit</m> 8<m>\diamondsuit</m> J<m>\diamondsuit</m> 5<m>\spadesuit</m> 9<m>\heartsuit</m> is invalid since it <em>does not</em> contain at most three suits.
+		</p>
+	</statement>
+	<answer>
+		<p>
+			<m>\displaystyle \binom{52}{6} - \binom{4}{3}\binom{13}{1}^2\binom{13}{3} - \binom{4}{2}\binom{13}{1}^2\binom{13}{2}^2</m>.
+		</p>
+	</answer>
 </exercise>
 
 <exercise xml:id="divex-3x3-grid">
@@ -281,6 +366,11 @@
 		Generalize <xref ref="divex-3x3-grid"/> to an <m>m \times n</m> grid.
 	</p>
 </statement>
+<answer>
+	<p>
+		<m>mn</m> rectangles.
+	</p>
+</answer>
 </exercise>
 
 <exercise>
@@ -318,6 +408,16 @@
 		</image>
 	</sidebyside>
 </statement>
+<hint>
+	<p>
+		Forming a rectangle on an <m>m \times n</m> grid can be broken down into two steps: pick two vertical lines on the grid, and then pick two horizontal lines on the grid.
+	</p>
+</hint>
+<answer>
+	<p>
+		<m>\displaystyle\binom{m+1}{2}\binom{n+1}{2}</m> rectangles.
+	</p>
+</answer>
 </exercise>
 
 
@@ -346,6 +446,11 @@
 		</image>
 	</sidebyside>
 </statement>
+<answer>
+	<p>
+		a. <m>\displaystyle\binom{4}{2}\binom{5}{2}</m>; b. <m>\displaystyle\binom{9}{5} - \binom{6}{3}\binom{3}{1}</m>; c. <m>\displaystyle\binom{4}{2}\left(\binom{5}{2} - \binom{2}{1}\binom{3}{1})</m>.
+	</p>
+</answer>
 </exercise>
 
 <exercise>
@@ -360,6 +465,11 @@
 			Count the number of triangular rearrangements of your student number.
 		</p>
 	</statement>
+	<hint>
+		<p>
+			<xref ref="thm-comb-replace"/> with two bins.
+		</p>
+	</hint>
 </exercise>
 
 <exercise>
@@ -368,6 +478,11 @@
 		Count the number of ways to distribute 30 identical balls into 9 different boxes so that each box is nonempty.
 	</p>
 </statement>
+<hint>
+	<p>
+		Similar to <xref ref="ex-counting-apples"/>.
+	</p>
+</hint>
 </exercise>
 
 <exercise>
@@ -430,6 +545,16 @@
 		For example, when <m>n = 2</m> and there are four people A, B, C, and D, then there are three ways to pair them up: AB/CD, AC/BD, AD/BC.
 	</p>
 </statement>
+<hint>
+	<p>
+		Look at small cases first (<m>n = 2, 3, 4</m>) then try generalizing.
+	</p>
+</hint>
+<answer>
+	<p>
+		<m>\displaystyle\frac{\binom{2n}{2}\binom{2n-2}{2}\cdots\binom{4}{2}\binom{2}{2}}{n! \cdot 2^n} = \frac{(2n)!}{(2!)^n}\cdot\frac{1}{n!}</m>.
+	</p>
+</answer>
 </exercise>
 
 <exercisegroup>
@@ -446,7 +571,7 @@
 </statement>
 <solution>
 	<p>
-		<xref ref="thm-comb-replace"/> gives <m>{{3+30-1}\choose{30}} = 496</m>.
+		<xref ref="thm-comb-replace"/> gives <m>{{3+30-1}\choose{30}} = \binom{32}{30}</m>.
 	</p>
 </solution>
 </exercise>
@@ -457,6 +582,11 @@
 		<m>x_1 + x_2 + x_3 + x_4 = 2020</m>, <m>x_1 \geq 30</m>, <m>x_2 \geq 40</m>, <m>x_3 \geq 50</m>, <m>x_4 \geq 100</m>
 	</p>
 </statement>
+<answer>
+	<p>
+		<m>\displaystyle\binom{1803}{1800}</m>.
+	</p>
+</answer>
 </exercise>
 
 <exercise>
@@ -500,6 +630,11 @@
 		Find the number of nonnegative integer solutions to <m>x_1 + x_2 + \cdots + x_k \leq n</m>.
 	</p>
 </statement>
+<hint>
+	<p>
+		Transform the inequality into an equation by adding another variable <m>x_{k+1}</m>.
+	</p>
+</hint>	
 </exercise>
 
 <exercise>
@@ -626,6 +761,21 @@
 </exercise>
 </exercisegroup>
 
+<exercise>
+	<title>Winter 2023 Term Test</title>
+	<statement>
+		<p>
+			Let <m>a, b, c, n \in \mathbb{N}</m> with <m>n \leq a, b, c</m>.
+			Write a combinatorial proof of the identity
+			<me> \binom{a+b+c}{n} = \sum_{k=0}^n \sum_{r=0}^{n-k} \binom{a}{k}\binom{b}{r}\binom{c}{n-k-r}</me>.
+		</p>
+	</statement>
+	<hint>
+		<p>
+			Consider the set <m>S = \{t_1,t_2,\ldots,t_a,u_1,u_2,\ldots,u_b,v_1,v_2,\ldots,v_c\}</m>, then count the number of <m>n</m>-element subsets of <m>S</m>.
+		</p>
+	</hint>
+</exercise>
 
 </exercises>
 

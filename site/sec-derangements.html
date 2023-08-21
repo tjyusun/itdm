@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T22:37:44-04:00       *-->
+<!--*       on 2023-08-21T15:44:25-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -171,32 +171,32 @@
 </h2>
 <article class="objectives goal-like" id="objectives-8"><h6 class="heading"><span class="type">Objectives</span></h6>
 <ul class="disc">
-<li id="li-194">Define derangements and use the Principle of Inclusion-Exclusion to derive a general formula for them.</li>
-<li id="li-195">Recognize scenarios where derangements apply and use them to solve problems.</li>
+<li id="li-196">Define derangements and use the Principle of Inclusion-Exclusion to derive a general formula for them.</li>
+<li id="li-197">Recognize scenarios where derangements apply and use them to solve problems.</li>
 </ul></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-derangements" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/UML9C4ECiI8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></div>
-<p id="p-529"><em class="alert">Video</em>: <em class="emphasis">Derangements</em></p>
-<p id="p-530">Recall that the permutations of a set \(S\) are the bijective functions from \(S\) to itself. We have a special name for those permutations that leave no element fixed:</p>
+<p id="p-573"><em class="alert">Video</em>: <em class="emphasis">Derangements</em></p>
+<p id="p-574">Recall that the permutations of a set \(S\) are the bijective functions from \(S\) to itself. We have a special name for those permutations that leave no element fixed:</p>
 <article class="definition definition-like" id="def-derangement"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derangement.</span>
 </h6>
-<p id="p-531">A <dfn class="terminology">derangement</dfn> is a permutation on \(\{1,2,\ldots,n\}\) such that no element is mapped to itself.</p></article><article class="example example-like" id="eg-derangement-34"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-derangement-34"><h6 class="heading">
+<p id="p-575">A <dfn class="terminology">derangement</dfn> is a permutation on \(\{1,2,\ldots,n\}\) such that no element is mapped to itself.</p></article><article class="example example-like" id="eg-derangement-34"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-derangement-34"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derangements of 3- and 4-sets.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-derangement-34"><article class="example example-like"><p id="p-532">The permutation on \(\{1,2,3\}\) that takes \(1\) to \(3\text{,}\) \(2\) to \(1\text{,}\) and \(3\) to \(2\) is a derangement; we can also denote it as the string 312.</p>
-<p id="p-533">There are only two derangements on \(\{1,2,3\}\text{:}\) 231 and 312.</p>
-<p id="p-534">The permutation 3241 on \(\{1,2,3,4\}\) is <em class="emphasis">not</em> a derangement since 2 is sent to itself. We call 2 a <dfn class="terminology">fixed point</dfn> of the permutation.</p>
-<p id="p-535">(Try listing all derangements of \(\{1,2,3,4\}\text{.}\))</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-derangement-34"><article class="example example-like"><p id="p-576">The permutation on \(\{1,2,3\}\) that takes \(1\) to \(3\text{,}\) \(2\) to \(1\text{,}\) and \(3\) to \(2\) is a derangement; we can also denote it as the string 312.</p>
+<p id="p-577">There are only two derangements on \(\{1,2,3\}\text{:}\) 231 and 312.</p>
+<p id="p-578">The permutation 3241 on \(\{1,2,3,4\}\) is <em class="emphasis">not</em> a derangement since 2 is sent to itself. We call 2 a <dfn class="terminology">fixed point</dfn> of the permutation.</p>
+<p id="p-579">(Try listing all derangements of \(\{1,2,3,4\}\text{.}\))</p></article></div>
 <article class="exploration project-like" id="expl-derangement-Dn"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Deriving \(D_n\).</span>
 </h6>
-<div class="introduction" id="introduction-9"><p id="p-536">Count the number of derangements \(D_n\) of the set \(\{1,2,\ldots,n\}\) using <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>, by following these steps: </p></div>
+<div class="introduction" id="introduction-9"><p id="p-580">Count the number of derangements \(D_n\) of the set \(\{1,2,\ldots,n\}\) using <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a>, by following these steps: </p></div>
 <article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-537">Define \(A_i\) to be the set of permutations of \(\{1,2,\ldots,n\}\) for which \(i\) is a fixed point. (There are no restrictions on the other elements; there may be other fixed points.)</p>
-<p id="p-538">Then, express \(D_n\) as the cardinality of a set involving the \(A_i\)'s.</p></article><article class="task exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-539">If \(S \subseteq \{1,2,\ldots,n\}\) with \(|S| = k\text{,}\) find a formula for \(\left|\displaystyle\bigcap_{i \in S} A_i\right|\text{.}\)</p></article><article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-540">Combine with <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to derive a formula for \(D_n\text{,}\) then fill in the statement of the result below.</p></article></article><article class="theorem theorem-like" id="thm-derangement"><h6 class="heading">
+<p id="p-581">Define \(A_i\) to be the set of permutations of \(\{1,2,\ldots,n\}\) for which \(i\) is a fixed point. (There are no restrictions on the other elements; there may be other fixed points.)</p>
+<p id="p-582">Then, express \(D_n\) as the cardinality of a set involving the \(A_i\)'s.</p></article><article class="task exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-583">If \(S \subseteq \{1,2,\ldots,n\}\) with \(|S| = k\text{,}\) find a formula for \(\left|\displaystyle\bigcap_{i \in S} A_i\right|\text{.}\)</p></article><article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-584">Combine with <a class="xref" data-knowl="./knowl/thm-pie.html" title="Theorem 3.2.6: Principle of Inclusion-Exclusion">Theorem 3.2.6</a> to derive a formula for \(D_n\text{,}\) then fill in the statement of the result below.</p></article></article><article class="theorem theorem-like" id="thm-derangement"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Number \(D_n\) of Derangements.</span>
 </h6>
-<p id="p-541">The number of derangements \(D_n\) of the set \(\{1,2,\ldots,n\}\) is</p>
+<p id="p-585">The number of derangements \(D_n\) of the set \(\{1,2,\ldots,n\}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 D_n = \underline{\hspace{9.090909090909092em}}\text{.}
@@ -204,19 +204,25 @@ D_n = \underline{\hspace{9.090909090909092em}}\text{.}
 </div></article><article class="remark remark-like" id="remark-Dn-notation"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-542">For problems where it is relevant, you may leave your answers in terms of \(D_n\text{.}\) (You don't have to compute exact values unless asked.)</p></article><article class="exercise exercise-like" id="ex-derangement-D4"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-derangement-D4"><h6 class="heading">
+<p id="p-586">For problems where it is relevant, you may leave your answers in terms of \(D_n\text{.}\) (You don't have to compute exact values unless asked.)</p></article><article class="exercise exercise-like" id="ex-derangement-D4"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-derangement-D4"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Compute \(D_4\).</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-derangement-D4"><article class="exercise exercise-like"><p id="p-543">Evaluate \(D_4\) and verify that it is the correct number by listing all derangements of \(\{1,2,3,4\}\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-derangement-D4"><article class="exercise exercise-like"><p id="p-587">Evaluate \(D_4\) and verify that it is the correct number by listing all derangements of \(\{1,2,3,4\}\text{.}\)</p></article></div>
 <article class="exercise exercise-like" id="ex-derangement-ratio"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-derangement-ratio"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Ratio \(D_n/n!\)</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-derangement-ratio"><article class="exercise exercise-like"><p id="p-544">Using a computer, evaluate the ratio</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-derangement-ratio"><article class="exercise exercise-like"><p id="p-588">Using a computer, evaluate the ratio</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{D_n}{n!}
 \end{equation*}
 </div>
 <p class="continuation">of derangements to all permutations of \(\{1,2,\ldots,n\}\) for \(n\) increasingly large.</p>
-<p id="p-545">Verify that the ratios approach the value of \(\frac{1}{e}\text{.}\)</p></article></div></section></div></main>
+<p id="p-589">Verify that the ratios approach the value of \(\frac{1}{e}\text{.}\)</p></article></div></section></div></main>
 </div>
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LSSRCMCFKV"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LSSRCMCFKV');
+</script><!--End: Google Global Site Tag code-->
 </body>
 </html>

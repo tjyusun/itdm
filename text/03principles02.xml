@@ -132,6 +132,11 @@
 				How many integers in <m>\{1,2,3,\ldots,2020\}</m> are not divisible by 7 or 11?
 			</p>
 		</statement>
+		<answer>
+			<p>
+				<m>1575</m>.
+			</p>
+		</answer>
 	</exercise>
 
 	<p>
@@ -181,6 +186,11 @@
 				How many integers in <m>\{1,2,\ldots,2020\}</m> are not divisible by 3, 7, or 11?
 			</p>
 		</statement>
+		<answer>
+			<p>
+				<m>1051</m>.
+			</p>
+		</answer>
 	</exercise>
 
 	<p>

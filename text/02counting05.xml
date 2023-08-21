@@ -273,6 +273,11 @@
 				First think what objects are counted by <m>n^2</m>. Then, break them up into two distinct cases for the right-hand side
 			</p>
 		</hint>
+		<hint>
+			<p>
+				Count the ordered pairs <m>(i,j)</m> in <m>\{1,2,\ldots,n\}^2</m>, and consider cases on whether the two coordinates <m>i</m> and <m>j</m> are equal or distinct.
+			</p>
+		</hint>
 	</exercise>
 
 	<exercise xml:id="ex-counting-comb-proof-2">
@@ -284,7 +289,7 @@
 		</statement>
 		<hint>
 			<p>
-				Partition subsets by cardinality.
+				Partition subsets by cardinality. (How many subsets have size 0? have size 1? And so on...)
 			</p>
 		</hint>
 	</exercise>

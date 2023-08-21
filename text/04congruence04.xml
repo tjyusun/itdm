@@ -22,7 +22,7 @@
     	<statement>
     		<p>
     			<term>Euler's totient function</term> (or <term>Euler's phi-function</term>) is the function <m>\phi: \mathbb{N} \rightarrow \mathbb{N}</m> defined by
-				<me> \phi(m) = \bigl|\{k \in \mathbb{N} : 1 \leq k \leq m, \gcd(k,m) = 1\}\bigr|</me>.
+				<me> \phi(n) = \bigl|\{k \in \mathbb{N} : 1 \leq k \leq n, \gcd(k,n) = 1\}\bigr|</me>.
 			<notation>
 				<usage>\phi(n)</usage>
 				<description>Euler's totient function</description>
@@ -58,24 +58,24 @@
 				Complete the table for <m>m = 11, 12, \ldots, 20</m>.
     		</p>
     		<table xml:id="table-euler-totient-values">
-    			<title>Values of <m>\phi(m)</m></title>
+    			<title>Values of <m>\phi(n)</m></title>
 			    <tabular halign="center">
 			        <row>
 			            <cell>
-			                <m>m</m>
+			                <m>n</m>
 			            </cell>
 			            <cell>
-			                integers <m>1 \leq k \leq m</m>
+			                integers <m>1 \leq k \leq n</m>
 			            </cell>
 			            <cell>
-			                <m>\phi(m)</m>
+			                <m>\phi(n)</m>
 			            </cell>
 			        </row>
 			        <row bottom="medium">
 			            <cell>
 			            </cell>
 			            <cell>
-			                such that <m>\gcd(k,m)=1</m>
+			                such that <m>\gcd(k,n)=1</m>
 			            </cell>
 			            <cell>
 			            </cell>
@@ -304,7 +304,7 @@
 		<statement>
 			<p>
 				Is the converse of the above statement true?
-				That is, if <m>m \gt 2</m> is an integer such that <m>\phi(m) = m-1</m>, does it necessarily follow that <m>m</m> is prime?
+				That is, if <m>n \gt 2</m> is an integer such that <m>\phi(n) = n-1</m>, does it necessarily follow that <m>n</m> is prime?
 			</p>
 			<p>
 				Justify your answer.
@@ -348,7 +348,7 @@
 		<title>Euler's Theorem</title>
 		<statement>
 			<p>
-				If <m>a, m \in \mathbb{N}</m> with <m>\gcd(a,m) = 1</m>, then <me>a^{\phi(m)} \equiv 1 \Mod{m}</me>.
+				If <m>a, n \in \mathbb{N}</m> with <m>\gcd(a,n) = 1</m>, then <me>a^{\phi(n)} \equiv 1 \Mod{n}</me>.
 			</p>
 		</statement>
 	</theorem>
@@ -377,7 +377,7 @@
 		<title>Example of <xref ref="thm-euler"/></title>
 		<statement>
 			<p>
-				Take <m>m = 8</m> and <m>a = 7</m> so that <m>\gcd(a,m) = 1</m>. By <xref ref="thm-euler"/> we have
+				Take <m>n = 8</m> and <m>a = 7</m> so that <m>\gcd(a,n) = 1</m>. By <xref ref="thm-euler"/> we have
 				<me> 7^{\phi(8)} \equiv 1 \Mod{8} \Rightarrow 7^4 \equiv 1 \Mod{8}</me>.
 			</p>
 		</statement>
@@ -415,18 +415,18 @@
     </exercise>
  
     <p>
-    	The idea behind the proof of <xref ref="thm-euler"/> is that for <m>a,m \in \mathbb{N}</m> relatively prime, multiplying each element of the set
-    	<me>S = \{y \in \{1,2,\ldots,m\} : \gcd(y,m) = 1\}</me>
-    	by <m>a</m> induces a permutation of the set modulo <m>m</m>.
+    	The idea behind the proof of <xref ref="thm-euler"/> is that for <m>a,n \in \mathbb{N}</m> relatively prime, multiplying each element of the set
+    	<me>S = \{y \in \{1,2,\ldots,n\} : \gcd(y,n) = 1\}</me>
+    	by <m>a</m> induces a permutation of the set modulo <m>n</m>.
     	We give first an example with numbers.
     </p>
 
 
 	<example xml:id="eg-cong-euler-proof-example">
-		<title>Why <xref ref="thm-euler"/> holds, for <m>a = 4</m> and <m>m = 9</m></title>
+		<title>Why <xref ref="thm-euler"/> holds, for <m>a = 4</m> and <m>n = 9</m></title>
 		<statement>
 			<p>
-				Let <m>a = 4</m> and <m>m = 9</m>.
+				Let <m>a = 4</m> and <m>n = 9</m>.
 				Then <m>\phi(9) = 6</m>, since the integers <m>S = \{1,2,4,5,7,8\}</m> are relatively prime with <m>9</m>.
 			</p>
 			<p>
@@ -589,43 +589,43 @@
     <p><alert>Proof of Euler's Theorem</alert></p>
 
 	<p>
-		Let <m>a,m \in \mathbb{N}</m> such that <m>\gcd(a,m) = 1</m>.
+		Let <m>a,n \in \mathbb{N}</m> such that <m>\gcd(a,n) = 1</m>.
 	</p>
 	<p>
 		First define the set
-		<me>S = \{y : 1 \leq y \leq m, \gcd(y,m) = 1\}</me>
-		to be the set of natural numbers smaller than <m>m</m> and relatively prime with <m>m</m>.
-		We know that there are exactly <m>\phi(m)</m> elements in the set <m>S</m>, so we can label them as <m>S = \{b_1,b_2,\ldots,b_{\phi(m)}\}</m>, where <m>\gcd(b_i,m) = 1</m> for <m>i = 1,2,\ldots,\phi(m)</m>.
+		<me>S = \{y : 1 \leq y \leq n, \gcd(y,n) = 1\}</me>
+		to be the set of natural numbers smaller than <m>n</m> and relatively prime with <m>n</m>.
+		We know that there are exactly <m>\phi(n)</m> elements in the set <m>S</m>, so we can label them as <m>S = \{b_1,b_2,\ldots,b_{\phi(n)}\}</m>, where <m>\gcd(b_i,n) = 1</m> for <m>i = 1,2,\ldots,\phi(n)</m>.
 	</p>
 	<p>
-		Since we have <m>\gcd(b_i,m) = 1</m> and <m>\gcd(a,m) = 1</m>, we must also have <me>\gcd(ab_i, m) = 1 \text{ for any } i = 1,2,\ldots,\phi(m)</me>.
+		Since we have <m>\gcd(b_i,n) = 1</m> and <m>\gcd(a,n) = 1</m>, we must also have <me>\gcd(ab_i, n) = 1 \text{ for any } i = 1,2,\ldots,\phi(n)</me>.
 		We invoke <xref ref="thm-division-algorithm"/> now to write <m>ab_i</m> as 
-		<me> ab_i = qm + r \text{ for some } 0 \leq r \lt m,</me>
-		which implies that <m>ab_i \equiv r \Mod{m}</m>.
+		<me> ab_i = qn + r \text{ for some } 0 \leq r \lt n,</me>
+		which implies that <m>ab_i \equiv r \Mod{n}</m>.
 	</p>
 	<p>
-		Combining with the fact that <m>\gcd(ab_i,m) = 1</m>, this implies that <m>\gcd(r,m) = 1</m>, so <m>r</m> is a natural number smaller than <m>m</m> and relatively prime with <m>m</m>.
+		Combining with the fact that <m>\gcd(ab_i,n) = 1</m>, this implies that <m>\gcd(r,n) = 1</m>, so <m>r</m> is a natural number smaller than <m>n</m> and relatively prime with <m>n</m>.
 	</p>
 	<p>
-		In other words, <m>r</m> is in the set <m>S</m>, and we can write <m>r = b_j</m> for some <m>1 \leq j \leq \phi(m)</m>. This means for each <m>1 \leq i \leq \phi(m)</m>, we have <m>ab_i \equiv b_j \Mod{m}</m> for some <m>1 \leq j \leq \phi(m)</m>.
+		In other words, <m>r</m> is in the set <m>S</m>, and we can write <m>r = b_j</m> for some <m>1 \leq j \leq \phi(n)</m>. This means for each <m>1 \leq i \leq \phi(n)</m>, we have <m>ab_i \equiv b_j \Mod{n}</m> for some <m>1 \leq j \leq \phi(n)</m>.
 	</p>
 	<p>
-		Furthermore, none of the <m>b_j</m>'s are repeated, because no two <m>ab_i</m> terms are equivalent modulo <m>m</m>.
-		(Otherwise, <m>ab_{i_1} \equiv ab_{i_2} \Mod{m} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{m}</m> by <xref ref="prop-cong-division"/>, which is a contradiction as the <m>b_i</m>'s are all distinct and smaller than <m>m</m>.)
+		Furthermore, none of the <m>b_j</m>'s are repeated, because no two <m>ab_i</m> terms are equivalent modulo <m>n</m>.
+		(Otherwise, <m>ab_{i_1} \equiv ab_{i_2} \Mod{n} \Rightarrow b_{i_1} \equiv b_{i_2} \Mod{n}</m> by <xref ref="prop-cong-division"/>, which is a contradiction as the <m>b_i</m>'s are all distinct and smaller than <m>n</m>.)
 	</p>
 	<p>
-		Hence, each integer <m>ab_i</m> is congruent modulo <m>m</m> to distinct elements in <m>S</m>:
+		Hence, each integer <m>ab_i</m> is congruent modulo <m>n</m> to distinct elements in <m>S</m>:
 		<md>
-			<mrow>ab_1 \amp \equiv b_{j_1} \Mod{m}</mrow>
-			<mrow>ab_2 \amp \equiv b_{j_2} \Mod{m}</mrow>
+			<mrow>ab_1 \amp \equiv b_{j_1} \Mod{n}</mrow>
+			<mrow>ab_2 \amp \equiv b_{j_2} \Mod{n}</mrow>
 			<mrow>\vdots \amp</mrow>
-			<mrow>ab_{\phi(m)} \amp \equiv b_{j_{\phi(m)}} \Mod{m}</mrow>
+			<mrow>ab_{\phi(n)} \amp \equiv b_{j_{\phi(n)}} \Mod{n}</mrow>
 		</md>
 		Multiplying all the congruences together gives another congruence, where the right-hand-side is just
-		<me>\displaystyle\prod_{k=1}^{\phi(m)} b_{j_k} = \displaystyle\prod_{i=1}^{\phi(m)} b_i</me>
+		<me>\displaystyle\prod_{k=1}^{\phi(n)} b_{j_k} = \displaystyle\prod_{i=1}^{\phi(n)} b_i</me>
 		since each element of <m>S</m> appears exactly once.
 		Hence,
-		<me>\prod_{i=1}^{\phi(m)} ab_i \equiv \prod_{i=1}^{\phi(m)} b_i \Mod{m} \Rightarrow a^{\phi(m)} \equiv 1 \Mod{m}</me>
+		<me>\prod_{i=1}^{\phi(n)} ab_i \equiv \prod_{i=1}^{\phi(n)} b_i \Mod{n} \Rightarrow a^{\phi(n)} \equiv 1 \Mod{n}</me>
 		by an application of <xref ref="prop-cong-division"/>. 
 	</p>
 
@@ -647,10 +647,10 @@
 		<task>
 			<statement>
 				<p>
-					Note that the converse of this statement is not true in general: Even if <m>\gcd(a,m) = 1</m> and <m>a^{m-1} \equiv 1 \Mod{m}</m>, we would not be able to conclude that <m>m</m> is prime.
+					Note that the converse of this statement is not true in general: Even if <m>\gcd(a,n) = 1</m> and <m>a^{n-1} \equiv 1 \Mod{n}</m>, we would not be able to conclude that <m>n</m> is prime.
 				</p>
 				<p>
-					Can you give examples of pairs <m>a, m</m> such that <m>\gcd(a,m) = 1</m> and <m>a^{m-1} \equiv 1 \Mod{m}</m> are both true, but <m>m</m> is not prime.
+					Can you give examples of pairs <m>a, n</m> such that <m>\gcd(a,n) = 1</m> and <m>a^{n-1} \equiv 1 \Mod{n}</m> are both true, but <m>n</m> is not prime.
 				</p>
 			</statement>
 		</task>
@@ -661,7 +661,7 @@
 				</p>
 				<sidebyside width="80%" margins="auto">
 					<p>
-						<alert>If</alert> <m>a,m \in \mathbb{N}</m>, <m>\gcd(a,m) = 1</m>, and <m> a^{m-1} \not\equiv 1 \Mod{m}</m>, <alert>then</alert> <fillin characters="25"/>.
+						<alert>If</alert> <m>a,n \in \mathbb{N}</m>, <m>\gcd(a,n) = 1</m>, and <m> a^{n-1} \not\equiv 1 \Mod{n}</m>, <alert>then</alert> <fillin characters="25"/>.
 					</p>
 				</sidebyside>
 			</statement>

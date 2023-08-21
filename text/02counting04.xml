@@ -201,6 +201,15 @@
 				b. Give one apple to each student to begin, then distribute the rest.
 			</p>
 		</hint>
+		<solution>
+			<p>
+				a. There are <m>\displaystyle\binom{9+20-1}{20} = \binom{28}{20}</m> ways to distribute the apples, via a direct application of <xref ref="thm-comb-replace"/>.
+			</p>
+			<p>
+				b. The apples are all identical, so we can start by distributing one apple to each of the nine students.
+				We therefore just need to compute the number of ways to distribute the remaining eleven apples to the students, which by <xref ref="thm-comb-replace"/> is equal to <m>\displaystyle\binom{9+11-1}{11} = \binom{19}{11}</m>.
+			</p>
+		</solution>
 	</exercise>
 
 	<p>
@@ -265,6 +274,11 @@
 				</me>
 			</p>
 		</statement>
+		<answer>
+			<p>
+				<m>\displaystyle\binom{6+15-1}{15} = \binom{20}{15}</m>.
+			</p>
+		</answer>
 	</exercise>
 
 	<exercise xml:id="ex-counting-nonnegative-2">
@@ -289,6 +303,17 @@
 				c. Solve the problem with <m>x_1 \geq 31</m> first then subtract from part (a).
 			</p>
 		</hint>
+		<answer>
+			<p>
+				a. <m>\displaystyle\binom{80}{77}</m>.
+			</p>
+			<p>
+				b. <m>\displaystyle\binom{55}{52}</m>. (Solution below.)
+			</p>
+			<p>
+				c. <m>\displaystyle\binom{80}{77} - \binom{49}{46}</m>.
+			</p>
+		</answer>
 		<solution>
 			<p>
 				b. In the context of <xref ref="ex-counting-apples"/>, <m>x_1 \geq 4</m> means that the first student must get at least 4 apples, so we start off by giving 4 to the variable <m>x_1</m>.

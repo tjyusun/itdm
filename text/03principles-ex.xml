@@ -43,6 +43,11 @@
 		Prove that any <m>(2n+1)</m>-subset of <m>\{1,2,\ldots,3n\}</m> has three consecutive numbers.
 	</p>
 </statement>
+<hint>
+	<p>
+		Construct pigeonholes so that each pigeonhole has three consecutive numbers, then apply <xref ref="thm-php"/>.
+	</p>
+</hint>	
 </exercise>
 
 <exercise>
@@ -139,11 +144,37 @@
 <exercise>
 	<title>Fall 2021 Final</title>
 	<statement>
-		If we select 20 subsets of size at least five from the set 
-		<m>U = \{2,5,8,11,14,17,20\}</m>,
-		show that two of these subsets will have the same sum.
+		<p>
+			If we select 20 subsets of size at least five from the set 
+			<m>U = \{2,5,8,11,14,17,20\}</m>,
+			show that two of these subsets will have the same sum.
+		</p>
 	</statement>
 </exercise>
+
+<exercise>
+	<title>
+		Winter 2022 Term Test
+	</title>
+	<statement>
+		<p>
+			Let <m>S = \{6,8,10,12,\ldots,30,32\}</m>. 
+			<ol>
+				<li>Show that if seven distinct integers are picked from <m>S</m>, that two of these integers will have a sum that is divisible by three.</li>
+				<li>How many distinct integers do you need to pick from <m>S</m> to guarantee that three of them sum of a multiple of three?</li>
+			</ol>
+		</p>
+	</statement>
+	<hint>
+		<p>
+			Note that part b is implicitly asking for the <em>best possible</em> answer; that is, what is the smallest number of integers for which the guarantee still holds?
+		</p>
+		<p>
+			Consider the remainders of the elements of <m>S</m> when divided by 3.
+		</p>
+	</hint>
+</exercise>
+
 
 <exercise>
 <statement>
@@ -240,6 +271,11 @@
 			5 \leq x_4 \ \ \amp \end{cases}</me>
     </p>
 </statement>
+<hint>
+	<p>
+		Deal with the lower bounds first using the same technique as in <xref ref="ex-counting-nonnegative-2"/>, then use inclusion-exclusion (<xref ref="thm-pie"/>).
+	</p>
+</hint>
 </exercise>
 
 <exercise>

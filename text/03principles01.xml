@@ -367,6 +367,11 @@
 				</ol>
 			</p>
 		</statement>
+		<hint>
+			<p>
+				In part c., you may want to use the fact that the <m>y_i</m>'s are all distinct since <m>x_i > 0</m> for all <m>i</m>.
+			</p>
+		</hint>
 	</exercise>
 
 </section>

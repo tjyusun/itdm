@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T22:38:05-04:00       *-->
+<!--*       on 2023-08-21T15:44:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,26 +16,9 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.7.26.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.7.23.1</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The right-hand-side is exactly the number of \(n\)-element subsets of the given set \(\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We need to show that the left-hand side counts the same collection of objects. Since there is a sum from \(k = 0\) to \(k = n\text{,}\) let's think about possible cases.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">The set \(\{a_1,a_2,\ldots,a_n,b_1,b_2,\ldots,b_n\}\) has two types of elements: \(a_i\)'s and \(b_i\)'s. So let's take cases on how many of the \(a_i\)'s we pick when forming an $n$-element subset.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Suppose that we pick \(k\) of the \(a_i\)'s. This means we need to take \(n-k\) of the \(b_i\)'s to create an \(n\)-subset. Or equivalently, throw away \(k\) of the \(b_i\)'s and use whatever is left. By the product rule we can count this by multiplying \(\displaystyle\binom{n}{k}\binom{n}{k}\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">For example, to include 3 of the \(a_i\)'s in our subset, we can pick them in \(\displaystyle\binom{n}{3}\) ways. Then we need to exclude 3 of the \(b_i\)'s to end up with \(n-3\) \(b_i\) elements to include in our subset and make it have \(n\) elements. There are \(\displaystyle\binom{n}{3}\binom{n}{3}\) ways to do this.</p>
-<p>It is a partition of the collection of all \(n\)-subsets to divide them into cases by how many of the \(a_i\)'s are picked, from \(k = 0\) to \(k=n\text{.}\) Hence the sum rule gives the left-hand side:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\binom{n}{0}\binom{n}{0} + \binom{n}{1}\binom{n}{1} + \cdots + \binom{n}{n}\binom{n}{n} = \sum_{k=0}^n \binom{n}{k}^2\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Therefore the equation</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\sum_{k=0}^n \binom{n}{k}^2 = \binom{2n}{n}
-\end{equation*}
-</div>
-<p class="continuation">holds.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><a class="xref" data-knowl="./knowl/thm-comb-replace.html" title="Theorem 2.4.5: Balls in Bins">Theorem 2.4.5</a> gives \({{3+30-1}\choose{30}} = \binom{32}{30}\text{.}\)</p>
 </div>
 <span class="incontext"><a href="exercises-counting.html#solution-28">in-context</a></span>
 </body>

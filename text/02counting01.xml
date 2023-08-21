@@ -40,7 +40,7 @@
         <title>First Counting Example</title>
             <statement>
             <p>
-                Three friends Andrea, Doug, and Steven are working together on a group project and they are trying to delegate the writing among themselves based on sections: introduction, literature review, and conclusion (everyone will work on the analysis).
+                Three friends Ana, Mark, and Olivia are working together on a group project and they are trying to delegate the writing among themselves based on sections: introduction, literature review, and conclusion (everyone will work on the analysis).
             </p>
             <p>
                 How many possible ways can the tasks be assigned to the three friends?
@@ -48,7 +48,7 @@
             </statement>
             <solution>
                 <p>
-                Let's abbreviate their names as A, D, and S.
+                Let's abbreviate their names as A, M, and O.
                 We can just list all possibilities to find that there are 6 ways:
                 </p>
                 <sidebyside width="60%" margins="auto">
@@ -57,27 +57,27 @@
                         <cell right="medium">Introduction</cell>
                         <cell>A</cell>
                         <cell>A</cell>
-                        <cell>D</cell>
-                        <cell>D</cell>
-                        <cell>S</cell>
-                        <cell>S</cell>
+                        <cell>M</cell>
+                        <cell>M</cell>
+                        <cell>O</cell>
+                        <cell>O</cell>
                     </row>
                     <row>
                         <cell right="medium">Lit Review</cell>
-                        <cell>D</cell>
-                        <cell>S</cell>
+                        <cell>M</cell>
+                        <cell>O</cell>
                         <cell>A</cell>
-                        <cell>S</cell>
+                        <cell>O</cell>
                         <cell>A</cell>
-                        <cell>D</cell>
+                        <cell>M</cell>
                     </row>
                     <row>
                         <cell right="medium">Conclusion</cell>
-                        <cell>S</cell>
-                        <cell>D</cell>
-                        <cell>S</cell>
+                        <cell>O</cell>
+                        <cell>M</cell>
+                        <cell>O</cell>
                         <cell>A</cell>
-                        <cell>D</cell>
+                        <cell>M</cell>
                         <cell>A</cell>
                     </row>
                 </tabular>
@@ -425,6 +425,7 @@
             </p>
         </statement>
         <hint><p>Induction on <m>k</m>.</p></hint>
+        <hint><p>Induction hypothesis: Assume the statement holds for all operations that take <m>k-1</m> steps to accomplish. Now consider an operation that takes <m>k</m> steps (<m>r_1,r_2,\ldots,r_k</m>) to accomplish. By the IH, there are <me>\prod_{i=1}^{k-1} r_i = r_1 \cdot r_2 \cdot \ldots \cdot r_{k-1}</me> ways of performing steps 1 to <m>k-1</m>. Now take cases on the <m>k</m>th step.</p></hint>
     </exercise>
     <example xml:id="eg-counting-mcq">
         <title>Multiple Choice Exam</title>
@@ -512,10 +513,14 @@
         </statement>
         <hint>
             <p> 
-               
-                A diagram would be useful.
+               A diagram would be useful.
             </p>
         </hint>
+        <answer>
+        	<p>
+        		8.
+        	</p>
+        </answer>
     </exercise>
 
 <solutions inline="solution">

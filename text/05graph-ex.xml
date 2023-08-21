@@ -719,7 +719,13 @@
 			Prove that any simple graph whose vertices all have degree at least <m>\dfrac{n-1}{2}</m> must be connected. 
 		</p>
 	</statement>
+	<hint>
+		<p>
+			Contradiction.
+		</p>
+	</hint>
 </exercise>
+
 
 <exercise>
 	<title>Fall 2020 Final</title>

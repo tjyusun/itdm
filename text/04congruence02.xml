@@ -152,7 +152,7 @@
 		This is because <m>a</m> and <m>b</m> are essentially <em>the same</em> when working modulo <m>n</m> (the remainder is all that matters), so subtracting them will give <sq>0</sq> in that framework.
 	</p>
 	<p>
-		We can perform addition and multiplication modulo $n$ as well.
+		We can perform addition and multiplication modulo <m>n</m> as well.
 	</p>
     
 	<proposition xml:id="prop-cong-modular-arithmetic">
@@ -170,10 +170,10 @@
 	</proposition>
 
 	<exercise xml:id="ex-cong-prove-modular-arithmetic">
-		<title>prove <xref ref="prop-cong-modular-arithmetic"/></title>
+		<title>Prove <xref ref="prop-cong-modular-arithmetic"/></title>
 		<statement>
 			<p>
-				Prove <xref ref="prop-cong-modular-arithmetic"/>.
+				Prove <xref ref="prop-cong-modular-arithmetic"/>, using the definition of congruence.
 			</p>
 		</statement>
 	</exercise>
@@ -190,18 +190,32 @@
 				Suppose we wanted to compute the remainder when 4133 is divided by 4.
 				We first write <m>4133 = 4000 + 100 + 30 + 3</m>, so that
 				<me> 4000 + 100 + 30 + 3 \equiv 0 + 0 + 2 + 3 \Mod{4} \equiv 1 \Mod{4}</me>.
-				Hence the remainder when 4133 is divided by 4 is 1.
+				Hence the remainder when <m>4133</m> is divided by <m>4</m> is <m>1</m>.
 			</p>
 		</statement>
 	</example>
+
+	<exercise xml:id="ex-modulo-9">
+		<title>Modulo 9</title>
+		<statement>
+			<p>
+				Show that an integer is congruent to the sum of its digits modulo 9.
+			</p>
+		</statement>
+		<hint>
+			<p>
+				The integer <m>a_ka_{k-1}\cdots a_2 a_1 a_0</m> can be expressed as <m>a_k\left(10^k\right) + a_{k-1}\left(10^{k-1}\right) + \cdots + a_1(10) + a_0</m>.
+			</p>
+		</hint>
+	</exercise>
 
 	<definition xml:id="def-cong-modulo">
 		<title>The Modulo Operation</title>
 		<statement>
 			<p>
-				Given two integers <m>a</m> and <m>m</m>, with <m>m \ne 0</m>, the <term>modulo operation</term> denoted by <me>a \mmod{m}</me>, read as <em><m>a</m> modulo <m>m</m></em>, is the remainder obtained from <xref ref="thm-division-algorithm"/> when <m>a</m> is divided by <m>m</m>.
+				Given two integers <m>a</m> and <m>n</m>, with <m>n \ne 0</m>, the <term>modulo operation</term> denoted by <me>a \mmod{n}</me>, read as <em><m>a</m> modulo <m>n</m></em>, is the remainder obtained from <xref ref="thm-division-algorithm"/> when <m>a</m> is divided by <m>n</m>.
 				<notation>
-					<usage>a \ \mathrm{\bf mod} \ m</usage>
+					<usage>a \ \mathrm{\bf mod} \ n</usage>
 					<description>modulo operation</description>
 				</notation>
 			</p>

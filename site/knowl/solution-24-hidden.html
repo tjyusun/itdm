@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T22:38:05-04:00       *-->
+<!--*       on 2023-08-21T15:44:46-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><p xmlns:svg="http://www.w3.org/2000/svg">Knowing \((0,0)\) is a vertex, by locating the opposite vertex, a unique rectangle can be formed. So this question is equivalent to <em class="emphasis">How many vertices can be chosen to form a rectangle with \((0,0)\text{?}\)</em> We can simply count that there are 9 of them in total, since any vertex besides those of the form \((0,a)\) and \((b,0)\) can be chosen to be the opposite vertex.</p></div></body>
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg">The operation of <em class="emphasis">forming a straight</em> can be broken down into the following operations:</p>
+<ul class="disc">
+<li>Pick a first card: there are 10 choices (A to 10).</li>
+<li>There is only one way to continue picking ranks. (If we start with a 6, then the next four cards must be 7, 8, 9, and 10.)</li>
+<li>Now we pick a suit for each of the cards we picked. There are four choices for each of the five cards, or a total of \(4^5\) suit combinations.</li>
+</ul>
+<p xmlns:svg="http://www.w3.org/2000/svg">Hence using <a class="xref" data-knowl="./knowl/prin-prod-rule.html" title="Principle 2.1.9: Product Rule">Principle 2.1.9</a>, we can form a total of \(10 \cdot 4^5\) straights from a standard deck.</p>
+</div></body>
 </html>

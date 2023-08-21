@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T22:38:09-04:00       *-->
+<!--*       on 2023-08-21T15:44:50-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Evaluate \(D_4\) and verify that it is the correct number by listing all derangements of \(\{1,2,3,4\}\text{.}\)</p>
-<span class="incontext"><a href="sec-derangements.html#p-543">in-context</a></span>
+<p>To summarize: (note the alternating signs)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+|(A_1 \cup A_2 \cup A_3)^c| = |U| \amp \underbrace{- |A_1| - |A_2| - |A_3|}_{\text{single sets}} \\
+\amp \underbrace{+ |A_1 \cap A_2| + |A_1 \cap A_3| + |A_2 \cap A_3|}_{\text{intersections of pairs}}\\
+\amp \underbrace{- |A_1 \cap A_2 \cap A_3|}_{\text{intersection of all three}}\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec-inclusion-exclusion.html#p-543">in-context</a></span>
 </body>
 </html>

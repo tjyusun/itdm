@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-23T22:38:19-04:00       *-->
+<!--*       on 2023-08-21T15:44:59-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,28 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Find the multiplicative inverse of each integer \(b\) modulo \(m\text{:}\)</p>
-<ol class="lower-alpha">
-<li>\(\displaystyle b = 4, m = 5\)</li>
-<li>\(\displaystyle b = 13, m = 76\)</li>
-<li>\(\displaystyle b = 33, m = 7\)</li>
-<li>\(\displaystyle b = 10, m = 9\)</li>
-<li>\(\displaystyle b = 100, m = 999\)</li>
-</ol>
-<span class="incontext"><a href="exercises-congruence.html#p-784">in-context</a></span>
+<p>Hence, each integer \(ab_i\) is congruent modulo \(n\) to distinct elements in \(S\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+ab_1 \amp \equiv b_{j_1} \Mod{n}\\
+ab_2 \amp \equiv b_{j_2} \Mod{n}\\
+\vdots \amp\\
+ab_{\phi(n)} \amp \equiv b_{j_{\phi(n)}} \Mod{n}
+\end{align*}
+</div>
+<p class="continuation">Multiplying all the congruences together gives another congruence, where the right-hand-side is just</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\displaystyle\prod_{k=1}^{\phi(n)} b_{j_k} = \displaystyle\prod_{i=1}^{\phi(n)} b_i
+\end{equation*}
+</div>
+<p class="continuation">since each element of \(S\) appears exactly once. Hence,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\prod_{i=1}^{\phi(n)} ab_i \equiv \prod_{i=1}^{\phi(n)} b_i \Mod{n} \Rightarrow a^{\phi(n)} \equiv 1 \Mod{n}
+\end{equation*}
+</div>
+<p class="continuation">by an application of <a class="xref" data-knowl="./knowl/prop-cong-division.html" title="Proposition 4.2.15: Dividing both sides of a Congruence">Proposition 4.2.15</a>.</p>
+<span class="incontext"><a href="sec-euler.html#p-784">in-context</a></span>
 </body>
 </html>

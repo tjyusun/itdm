@@ -127,17 +127,17 @@
 		<title>Multiplicative Inverse</title>
 		<statement>
 			<p>
-				Given natural numbers <m>a, m</m> such that <m>\gcd(a,m) = 1</m>, the number <m>b</m> is called a <term>multiplicative inverse</term> of <m>a</m> modulo <m>m</m> if 
-				<me> ab \equiv 1 \Mod{m}</me>.
+				Given natural numbers <m>a, n</m> such that <m>\gcd(a,n) = 1</m>, the number <m>b</m> is called a <term>multiplicative inverse</term> of <m>a</m> modulo <m>n</m> if 
+				<me> ab \equiv 1 \Mod{n}</me>.
 			</p>
 			<p>
-				We can denote this inverse as <m>a^{-1} = b</m>, or by <m>a^{-1} \Mod{m}</m> to make the modulus explicit.
+				We can denote this inverse as <m>a^{-1} = b</m>, or by <m>a^{-1} \Mod{n}</m> to make the modulus explicit.
 			</p>
 		</statement>
 	</definition>
-	
+
 	<p>
-		In <xref ref="def-multiplicative-inverse"/> we are really saying that any number in <m>[b]</m> is a multiplicative inverse of <m>a</m> modulo <m>m</m>, though we will usually be interested in finding that specific inverse that is also in the set <m>\{0,1,\ldots,m-1\}</m>.
+		In <xref ref="def-multiplicative-inverse"/> we are really saying that any number in <m>[b]</m> is a multiplicative inverse of <m>a</m> modulo <m>n</m>, though we will usually be interested in finding that specific inverse that is also in the set <m>\{0,1,\ldots,n-1\}</m>.
 		This can now be used when solving congruences of the form <me>ax \equiv b \Mod{n}</me> where <m>a \nmid b</m>.
 		Instead of dividing both sides by <m>a</m> (which can't always be done), we multiply both sides by the inverse of <m>a</m>.
 	</p>
@@ -153,17 +153,17 @@
 	</exercise>
 	
 	<p>
-		You may have noticed that in <xref ref="def-multiplicative-inverse"/> we required that <m>\gcd(a,m) = 1</m> holds.
-		Without this condition, could one still obtain an inverse of <m>a</m> modulo <m>m</m>?
-		Before expanding the next exercise try exploring this idea with pairs of values of <m>a</m> and <m>m</m> that <em>aren't</em> relatively prime.
+		You may have noticed that in <xref ref="def-multiplicative-inverse"/> we required that <m>\gcd(a,n) = 1</m> holds.
+		Without this condition, could one still obtain an inverse of <m>a</m> modulo <m>n</m>?
+		Before expanding the next exercise try exploring this idea with pairs of values of <m>a</m> and <m>n</m> that <em>aren't</em> relatively prime.
 	</p>
 
 	<exercise xml:id="ex-cong-inverse-existence">
-		<title>When does <m>a</m> have an Inverse Modulo <m>m</m>?</title>
+		<title>When does <m>a</m> have an Inverse Modulo <m>n</m>?</title>
 		<statement>
 			<p>
-				Let <m>a, m \in \mathbb{N}</m>.
-				Prove that <m>a</m> has an inverse modulo <m>m</m> if and only if <m>\gcd(a,m) = 1</m>.
+				Let <m>a, n \in \mathbb{N}</m>.
+				Prove that <m>a</m> has an inverse modulo <m>n</m> if and only if <m>\gcd(a,n) = 1</m>.
 			</p>
 		</statement>
 		<hint>
@@ -174,18 +174,28 @@
 		</hint>
 	</exercise>
 
+	<p>
+		For brevity, we make use of the following terminology for integers that have inverses under a particular modulus.
+	</p>	
+
+	<definition xml:id="def-unit">
+		<title>Unit Modulo <m>n</m></title>
+		<statement>
+			If <m>a,n \in \mathbb{N}</m> such that <m>a</m> has an inverse modulo <m>n</m>, then <m>a</m> is said to be a <term>unit modulo <m>n</m></term>.
+		</statement>
+	</definition>
 
 	<exercise xml:id="ex-cong-prove-inverse-unique">
 		<title>The Multiplicative Inverse is Unique</title>
 		<statement>
 			<p>
-				Given <m>a, m \in \mathbb{N}</m> such that <m>\gcd(a,m) = 1</m>, prove that the multiplicative inverse of <m>a</m> modulo <m>m</m> is unique (up to congruence class).
+				Given <m>a, n \in \mathbb{N}</m> such that <m>\gcd(a,n) = 1</m>, prove that the multiplicative inverse of <m>a</m> modulo <m>n</m> is unique (up to congruence class).
 			</p>
 		</statement>
 		<hint>
 			<p>
-				Assume that <m>c</m> and <m>d</m> are both multiplicative inverses of <m>a</m> modulo <m>m</m>. 
-				Show that <m>c \equiv d \Mod{m}</m>.
+				Assume that <m>c</m> and <m>d</m> are both multiplicative inverses of <m>a</m> modulo <m>n</m>. 
+				Show that <m>c \equiv d \Mod{n}</m>.
 			</p>
 		</hint>
 	</exercise>
@@ -194,10 +204,10 @@
 		<title>Uniqueness of Solutions</title>
 		<statement>
 			<p>
-				Use the previous exercise to argue that <me>ax \equiv b \Mod{m}</me> has a unique solution (up to congruence class) if <m>\gcd(a,m) = 1</m>.
+				Use the previous exercise to argue that <me>ax \equiv b \Mod{n}</me> has a unique solution (up to congruence class) if <m>\gcd(a,n) = 1</m>.
 			</p>
 			<p>
-				Does the converse hold? That is, if we know that <me>ax \equiv b \Mod{m}</me> has a unique solution, can we conclude that <m>\gcd(a,m) = 1</m>?
+				Does the converse hold? That is, if we know that <me>ax \equiv b \Mod{n}</me> has a unique solution, can we conclude that <m>\gcd(a,n) = 1</m>?
 			</p>
 		</statement>
 	</exercise>
