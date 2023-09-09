@@ -290,7 +290,7 @@
     </theorem>
 
 	<p>
-    	Observe that the proof of <xref ref="thm-binomial"/> simply counts the number of <m>n</m>-letter strings of <m>x</m>'s and <m>y</m>'s that contain <m>k</m> number of <m>x</m>'s.
+    	Observe that the proof of <xref ref="thm-binomial"/> simply counts the number of <m>n</m>-letter strings of <m>x</m>'s and <m>y</m>'s that contain <m>n-k</m> number of <m>x</m>'s.
     	This is the same thing as counting <m>n</m>-syllable forms in <xref ref="expl-pingala" />, and in fact, <xref ref="thm-binomial"/> can also be proven using the same recursive argument in <xref ref="expl-pingala" /> part (c).
     </p>
 
